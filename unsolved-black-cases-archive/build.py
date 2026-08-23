@@ -842,6 +842,11 @@ def build_home():
     from the Case Files panel, or open the full <a href="cases/index.html">Case Index</a> to search by
     timeline or location.</p>
   </div>'''
+    map_section = '''<div style="padding:4px 20px 26px;">
+    <h2 style="margin-bottom:4px;">Browse by State</h2>
+    <p style="margin-bottom:16px; font-size:.88rem;">Click a highlighted state to jump straight to its cases.</p>
+    <div id="home-map"></div>
+  </div>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth)}
@@ -850,6 +855,7 @@ def build_home():
       <div><span class="board-file-no">DASHBOARD</span><h1>Archive Overview</h1></div>
     </div>
     <div style="padding:20px 20px 0;">{featured}</div>
+    {map_section}
     {overview}
   </section>
   <aside class="panel-profile area-profile">
