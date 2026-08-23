@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Case or Tip · UBCA</title>
+<meta name="description" content="Submit a new case or documented information about an existing case.">
+<link rel="canonical" href="https://unsolved-black-cases-archive.vercel.app/submit.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UBCA">
+<meta property="og:url" content="https://unsolved-black-cases-archive.vercel.app/submit.html">
+<meta property="og:title" content="Submit a Case or Tip · UBCA">
+<meta property="og:description" content="Submit a new case or documented information about an existing case.">
+<meta property="og:image" content="https://unsolved-black-cases-archive.vercel.app/og/site.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Submit a Case or Tip · UBCA">
+<meta name="twitter:description" content="Submit a new case or documented information about an existing case.">
+<meta name="twitter:image" content="https://unsolved-black-cases-archive.vercel.app/og/site.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="top-header">
+  <div class="th-left">
+    <button class="th-btn th-menu-btn" data-menu-toggle aria-expanded="false" aria-controls="case-files-panel">≡ FILES</button>
+    <a class="th-logo" href="index.html">
+      <span class="th-monogram" aria-hidden="true">UBCA</span>
+      <span class="th-name">UNSOLVED BLACK CASES ARCHIVE<small>Case Research System</small></span>
+    </a>
+  </div>
+  <div class="th-center"><span class="dot" aria-hidden="true"></span> ARCHIVE ONLINE</div>
+  <nav class="th-right" aria-label="Utility">
+    <button class="th-btn" data-search-open>SEARCH</button>
+    <a class="th-btn hide-sm" href="cases/index.html">CASE INDEX</a>
+    <a class="th-btn hide-sm" href="about.html">ABOUT</a>
+  </nav>
+</header>
+<div class="search-overlay" role="dialog" aria-modal="true" aria-label="Search archive">
+  <div class="search-modal">
+    <label class="visually-hidden" for="global-search-input">Search victims, locations, or case details</label>
+    <input type="search" id="global-search-input" placeholder="Search victims, locations, or case details&hellip;">
+    <div class="search-results"></div>
+  </div>
+</div>
+<main id="main" class="doc-shell">
+  <div class="doc-header"><span class="label">Contribute</span><h1>Submit a Case or Tip</h1></div>
+  <div class="doc-body">
+    <h2>Guidelines before you submit</h2>
+    <ul>
+      <li>Share information you can point to a public source for wherever possible.</li>
+      <li>If you have information about an active investigation, also contact the relevant law-enforcement agency directly.</li>
+      <li>Do not submit unverified accusations against a named individual &mdash; we will not publish them.</li>
+      <li>If you are a family member, you're welcome to note that so we can prioritize sensitivity in how the case is presented.</li>
+    </ul>
+    <form class="form-grid" onsubmit="return false;" aria-label="Submit a case or tip">
+      <div class="field"><label for="case-name">Case or victim name</label><input type="text" id="case-name" required></div>
+      <div class="field"><label for="case-year">Year (approximate is fine)</label><input type="text" id="case-year"></div>
+      <div class="field"><label for="case-location">Location</label><input type="text" id="case-location"></div>
+      <div class="field"><label for="case-type">Submission type</label>
+        <select id="case-type">
+          <option>New case suggestion</option>
+          <option>Correction or update to an existing case</option>
+          <option>Source or citation to add</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="case-details">Details &amp; sources</label>
+        <textarea id="case-details" placeholder="What you know, and where it's documented (links welcome)."></textarea>
+        <p class="hint">Please avoid pasting unsourced accusations against a named individual.</p>
+      </div>
+      <div class="field"><label for="contact-email">Your email (optional)</label><input type="email" id="contact-email"></div>
+      <div class="checkbox-row"><input type="checkbox" id="family-member"><label for="family-member" style="margin:0; font-weight:400;">I am a family member of the person in this case</label></div>
+      <button class="btn-primary" type="submit">Submit</button>
+      <p class="hint">Template form &mdash; connect to a backend (Formspree, Netlify Forms, custom endpoint) before publishing.</p>
+    </form>
+  </div>
+  <div class="ad-slot">
+  <span class="ad-slot-label">Advertisement</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="0000000000"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>UBCA</h4>
+      <p style="font-size:.85rem; color:var(--text-dim); max-width:34ch;">A public-record research archive documenting unsolved cases involving Black victims.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Archive</h4>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="cases/index.html">Case Index</a></li>
+        <li><a href="cases/freeway-phantom.html">Freeway Phantom Series</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">How We Research</a></li>
+        <li><a href="updates.html">Corrections & Updates</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="submit.html">Submit a Tip</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+        <a class="btn-support small btn-cashapp" href="https://cash.app/$ColdWorldPTS" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 8.2c-.7-.7-1.8-1.1-3-1.1-2 0-3.3 1-3.3 2.4 0 1.3 1 1.9 2.6 2.3l1 .2c1.9.4 3.2 1.2 3.2 2.8 0 1.8-1.6 3-4 3-1.5 0-2.8-.5-3.6-1.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 5.6v1.4M12 17v1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Donate with Cash App</span></a><a class="btn-support small btn-youtube" href="https://youtube.com/@coldworldtone?si=KnIWozFL52ocj-TD" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.3v5.4l4.8-2.7-4.8-2.7Z" fill="currentColor"/></svg><span>Subscribe on YouTube</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; UNSOLVED BLACK CASES ARCHIVE. Public-record research archive.</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Disclaimer</a></span>
+  </div>
+</footer>
+<div class="consent-banner" id="consent-banner">
+  <p>This site uses cookies, including to serve ads personalized to your interests via Google AdSense.
+  See our <a href="privacy.html">Privacy Policy</a> for details and opt-out options.</p>
+  <div class="consent-actions">
+    <button class="consent-btn" data-consent-decline>Decline</button>
+    <button class="consent-btn primary" data-consent-accept>Accept</button>
+  </div>
+</div>
+<script src="js/cases-data.js"></script>
+<script src="js/us-states-paths.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
