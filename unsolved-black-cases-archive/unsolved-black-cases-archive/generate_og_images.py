@@ -100,7 +100,7 @@ def case_card_html(c):
     </div>
     {photo_html(c)}
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def generic_card_html(eyebrow, title, tagline):
@@ -113,7 +113,7 @@ def generic_card_html(eyebrow, title, tagline):
       <div class="tagline">{html.escape(tagline)}</div>
     </div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def freeway_phantom_html():
@@ -129,7 +129,7 @@ def freeway_phantom_html():
       </div>
     </div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def main():

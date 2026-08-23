@@ -1,7 +1,7 @@
 # Unsolved Black Cases Archive
 
 A public-record research archive documenting unsolved cases involving Black victims.
-Live site: https://unsolved-black-cases-archive.vercel.app/
+Live site: https://unsolved-black-cases-archive-jet.vercel.app/
 
 ## How this site works
 
