@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/about.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/statistics.html</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/research.html</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/resources.html</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/submit.html</loc><lastmod>2026-08-25</lastmod></url>
@@ -56,4 +57,8 @@
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/carl-hampton.html</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/lester-mitchell.html</loc><lastmod>2026-08-25</lastmod></url>
   <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/timothy-thomas.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/whitfield-and-whitney.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/will-brown.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/duluth-lynchings.html</loc><lastmod>2026-08-25</lastmod></url>
+  <url><loc>https://unsolved-black-cases-archive-jet.vercel.app/cases/wade-hampton.html</loc><lastmod>2026-08-25</lastmod></url>
 </urlset>

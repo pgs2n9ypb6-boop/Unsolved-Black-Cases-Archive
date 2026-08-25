@@ -41,6 +41,7 @@ ARCHIVE_NOTE = ("This archive summarizes publicly available information and does
 
 NAV_DOCS = [
     ("About", "about.html"),
+    ("Archive Statistics", "statistics.html"),
     ("How We Research", "research.html"),
     ("Corrections & Updates", "updates.html"),
     ("Resources", "resources.html"),
@@ -1068,6 +1069,106 @@ CASES = [
                             "https://www.washingtonpost.com/archive/politics/2001/09/27/officer-is-acquitted-in-killing-that-led-to-riots-in-cincinnati/a678d262-f020-4766-998d-d1f27eed6e3b/", True),
                         src("IAED Journal \u2014 case retrospective",
                             "https://www.iaedjournal.org/officer-involved-project", True)]),
+    dict(id="whitfield-and-whitney", caseNumber="043", name="Ed Whitfield & Earl Whitney",
+         status="unsolved", caseType="homicide", year=1919, age=None, gender="male",
+         city="Chapmanville", county="Logan", state="WV", caseSeries=None,
+         summary="Ed Whitfield and Earl Whitney, two Black coal miners employed by the Island Creek "
+                 "Colliery Company, were seized by a white mob on December 15, 1919 while being transported "
+                 "by deputies from Chapmanville to Huntington. The two had been accused of killing E.D. "
+                 "Meek, a white construction foreman. The mob took them from custody, backed them against a "
+                 "rail car, and shot them, then threw their bodies into the Guyandotte River. Logan County "
+                 "Sheriff Don Chafin \u2014 who would later organize the armed force that fought striking "
+                 "miners at the Battle of Blair Mountain in 1921 \u2014 declined to investigate the "
+                 "killings. It was the only lynching recorded in West Virginia's southern coalfields during "
+                 "the nationwide wave of racial violence in the summer and fall of 1919 known as Red "
+                 "Summer. No one was ever charged.",
+         known=["The victims' identities, occupation, and the December 15, 1919 date and circumstances, per the West Virginia Encyclopedia and multiple historical accounts.",
+                "Sheriff Don Chafin declined to investigate the killings, per the same sources; no one was ever charged."],
+         unknown=["Whether Whitfield and Whitney had any actual connection to Meek's killing was never established in any court.",
+                  "The identities of the individual mob members were never publicly documented."],
+         unanswered=["What became of the original murder investigation into E.D. Meek's death?",
+                     "What, if anything, do surviving Logan County records from December 1919 show about the case?",
+                     "Why did West Virginia authorities take no action against Sheriff Chafin for declining to investigate?"],
+         extraSources=[src("West Virginia Encyclopedia (e-WV) \u2014 \u201cAfrican American Heritage\u201d",
+                            "https://www.wvencyclopedia.org/entries/18", True),
+                        src("The Clio \u2014 \u201cWhitfield and Whitney Lynching Site\u201d",
+                            "https://theclio.com/entry/47848", True)]),
+    dict(id="will-brown", caseNumber="044", name="Will Brown",
+         status="unsolved", caseType="homicide", year=1919, age=40, gender="male",
+         city="Omaha", county="Douglas", state="NE", caseSeries=None,
+         summary="Will Brown, 40, a meatpacking plant worker later regarded by historians as innocent, was "
+                 "lynched by a mob in Omaha on the night of September 28, 1919, four days after a white "
+                 "woman accused him of assault. Brown was being held in the Douglas County Courthouse jail "
+                 "when a mob of thousands surrounded the building, set it on fire, and battled police for "
+                 "hours; when Omaha's mayor tried to intervene he was nearly lynched himself before being "
+                 "rescued. The mob eventually seized Brown, beat him, hanged him from a lamp pole outside "
+                 "the courthouse, shot his body more than one hundred times, then burned it and dragged the "
+                 "remains behind a car through the streets. A newspaper photograph of the burned body "
+                 "became one of the most widely reproduced images of the Red Summer of 1919, a nationwide "
+                 "wave of racial violence. Federal troops were called in to restore order. No one was ever "
+                 "charged in Brown's killing.",
+         known=["Victim identity, background, and the September 28, 1919 date and circumstances, per History Nebraska (the state historical society) and PBS's American Experience.",
+                "No one was ever charged or prosecuted for the lynching, per the same sources."],
+         unknown=["The underlying assault accusation against Brown was never tested in any court, and historians have since characterized him as innocent.",
+                  "The identity of at least one other Black Omaha resident reportedly killed by the same mob that night has never been established."],
+         unanswered=["What became of the original assault investigation and accusation against Brown?",
+                     "Who was the second victim some accounts describe the mob killing that same night, and what happened to any record of that death?",
+                     "What specific accountability, if any, was ever pursued against identifiable mob participants?"],
+         extraSources=[src("History Nebraska \u2014 \u201cA Horrible Lynching\u201d",
+                            "https://www.nebraskastudies.org/en/1900-1924/racial-tensions/a-horrible-lynching/", True),
+                        src("PBS American Experience \u2014 \u201cRed Summer: When Racist Mobs Ruled\u201d",
+                            "https://www.pbs.org/wgbh/americanexperience/features/t-town-red-summer-racist-mobs/", True)]),
+    dict(id="duluth-lynchings", caseNumber="045", name="Elias Clayton, Elmer Jackson & Isaac McGhie",
+         status="unsolved", caseType="homicide", year=1920, age=None, gender="male",
+         city="Duluth", county="St. Louis", state="MN", caseSeries=None,
+         summary="Elias Clayton, Elmer Jackson, and Isaac McGhie, three Black men in their early twenties "
+                 "working as laborers for a traveling circus, were lynched by a mob in Duluth on the night "
+                 "of June 15, 1920. The night before, two white teenagers claimed that Black circus workers "
+                 "had robbed them at gunpoint and raped the young woman; a doctor's examination later found "
+                 "no evidence a rape had occurred. Police arrested six Black circus workers regardless. "
+                 "That evening, a mob estimated at 5,000 to 10,000 people gathered outside the jail, seized "
+                 "three of the men, beat them, and hanged them from a light pole in downtown Duluth. The "
+                 "Minnesota National Guard arrived the next morning to protect the three men who survived. "
+                 "No one was ever charged with the lynchings themselves; three white men were later "
+                 "convicted of rioting, a lesser charge. A fourth accused man, Max Mason, was the only "
+                 "person convicted in connection with the underlying accusation and served time in prison; "
+                 "he was granted the state's first posthumous pardon in 2020, a century after the killings.",
+         known=["The victims' identities, ages, and the June 15, 1920 date and circumstances, per the Minnesota Historical Society.",
+                "A doctor's examination found no medical evidence supporting the rape accusation, and no one was ever charged with the lynchings themselves, per the same source."],
+         unknown=["The specific individuals who carried out the lynchings were never identified or charged.",
+                  "What actually occurred between the accusers and the circus workers the night before was never established beyond dispute."],
+         unanswered=["What specific evidence, if any, supported the rioting convictions of the three white men who were charged?",
+                     "What became of the three surviving arrested men after the National Guard secured the jail?",
+                     "What additional documentation survives in Duluth police and court records from 1920?"],
+         extraSources=[src("Minnesota Historical Society \u2014 \u201cThe Lynchings\u201d",
+                            "https://www.mnhs.org/duluthlynchings/lynchings", True),
+                        src("Smithsonian Magazine \u2014 case retrospective",
+                            "https://www.smithsonianmag.com/history/one-hundred-years-ago-mob-white-rioters-lynched-three-men-minnesota-180975062/", True)]),
+    dict(id="wade-hampton", caseNumber="046", name="Wade Hampton",
+         status="unsolved", caseType="homicide", year=1917, age=50, gender="male",
+         city="Rock Springs", county="Sweetwater", state="WY", caseSeries=None,
+         summary="Wade Hampton, 50, was taken from his cell at the Rock Springs city jail at gunpoint by "
+                 "three armed men shortly after midnight on December 12, 1917, and shot to death within the "
+                 "hour after an attempt to hang him from a railroad bridge failed. Hampton had been arrested "
+                 "the day before on charges of attempting to assault three women, held on $5,000 bond, and "
+                 "had appeared before a justice of the peace for a preliminary hearing \u2014 he was never "
+                 "tried. The three men broke into the jail office, took the absent jailer's keys, and led "
+                 "Hampton away in handcuffs; when the rope broke during the failed hanging, Hampton tried "
+                 "to flee along a creek bed before his captors caught up to him and shot him. A coroner's "
+                 "inquest, which heard from only two witnesses, neither of whom had been present during the "
+                 "abduction, ruled his death was caused by \u201cparty or parties unknown.\u201d Wyoming's "
+                 "acting governor personally urged the county attorney to offer a reward, and a $500 reward "
+                 "was published, but no one was ever identified or charged. Hampton was buried at the "
+                 "county's expense.",
+         known=["Victim identity, background, and the December 11\u201312, 1917 date and circumstances, per WyoHistory.org's account, drawn from the original coroner's inquest transcript and contemporary newspapers.",
+                "The coroner's inquest concluded Hampton's death came at the hands of \u201cparty or parties unknown\u201d; no one was ever charged despite a published reward.",],
+         unknown=["The identities of the three men who abducted and killed Hampton were never established.",
+                  "The underlying assault accusations against Hampton were never tested at trial, since he was killed before one could occur."],
+         unanswered=["Why did the coroner's inquest call only two witnesses, neither of whom was present during the actual abduction?",
+                     "What became of the $500 reward Wyoming's acting governor pushed the county to offer?",
+                     "What connection, if any, exists between this case and the similar unsolved 1918 lynching of Edward Woodson in the same county?"],
+         extraSources=[src("WyoHistory.org \u2014 \u201cA Lynching in Rock Springs\u201d",
+                            "https://www.wyohistory.org/encyclopedia/lynching-rock-springs", True)]),
 ]
 
 # Slug (and thus filename, cases/<slug>.html) for each named case series. Any
@@ -1770,6 +1871,94 @@ def build_about():
     {support_section()}'''
     write("about.html", page_shell("About", "Mission and scope of the archive.", depth, doc_page(depth, "About", "About the Archive", body), canonical_path="about.html"))
 
+STATE_NAMES = {
+    "AL": "Alabama", "AR": "Arkansas", "DC": "Washington, D.C.", "FL": "Florida", "GA": "Georgia",
+    "IA": "Iowa", "IL": "Illinois", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
+    "MD": "Maryland", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "NC": "North Carolina",
+    "NE": "Nebraska", "NY": "New York", "OH": "Ohio", "PA": "Pennsylvania",
+    "SC": "South Carolina", "TN": "Tennessee", "TX": "Texas", "WA": "Washington",
+    "WV": "West Virginia", "WY": "Wyoming",
+}
+
+def bar_row(label, count, max_count, extra=""):
+    pct = round((count / max_count) * 100) if max_count else 0
+    return (f'<div class="stat-row"><span class="stat-label">{html.escape(str(label))}</span>'
+            f'<span class="stat-bar-track"><span class="stat-bar-fill" style="width:{pct}%"></span></span>'
+            f'<span class="stat-count">{count}{extra}</span></div>')
+
+def build_statistics():
+    depth = 0
+    total = len(CASES)
+    states = sorted(set(c["state"] for c in CASES))
+
+    # Cases per decade, computed directly from each case's year.
+    decade_counts = {}
+    for c in CASES:
+        decade = (c["year"] // 10) * 10
+        decade_counts[decade] = decade_counts.get(decade, 0) + 1
+    decades_sorted = sorted(decade_counts.items())
+    max_decade = max(decade_counts.values())
+    decade_rows = "\n".join(bar_row(f"{d}s", n, max_decade) for d, n in decades_sorted)
+
+    # Cases per state, ranked.
+    state_counts = {}
+    for c in CASES:
+        state_counts[c["state"]] = state_counts.get(c["state"], 0) + 1
+    states_sorted = sorted(state_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    max_state = max(state_counts.values())
+    state_rows = "\n".join(bar_row(STATE_NAMES.get(s, s), n, max_state) for s, n in states_sorted)
+
+    # Case type and status breakdowns.
+    type_counts = {}
+    for c in CASES:
+        t = c.get("caseType") or "unknown"
+        type_counts[t] = type_counts.get(t, 0) + 1
+    max_type = max(type_counts.values())
+    type_rows = "\n".join(bar_row(STATUS_LABEL.get(t, t).title(), n, max_type) for t, n in sorted(type_counts.items(), key=lambda kv: -kv[1]))
+
+    # How long cases have gone unresolved, computed from each case's year to now.
+    current_year = 2026
+    years_open = [current_year - c["year"] for c in CASES]
+    avg_years = round(sum(years_open) / len(years_open))
+    oldest = min(CASES, key=lambda c: c["year"])
+    newest = max(CASES, key=lambda c: c["year"])
+
+    series_count = sum(1 for c in CASES if c.get("caseSeries"))
+
+    body = f'''<p>These figures are computed directly from the {total} cases currently documented in this
+    archive &mdash; they describe this archive's coverage, not a comprehensive accounting of every unsolved
+    case involving a Black victim in the United States. Coverage here reflects what has been researched and
+    verified so far, not the true scale of these cases nationally.</p>
+
+    <div class="overview-grid" style="padding:0; margin:20px 0;">
+      <div class="overview-card"><span class="num">{total}</span><span class="cap">Cases Documented</span></div>
+      <div class="overview-card"><span class="num">{len(states)}</span><span class="cap">States Represented</span></div>
+      <div class="overview-card"><span class="num">{avg_years}</span><span class="cap">Avg. Years Unresolved</span></div>
+      <div class="overview-card"><span class="num">{series_count}</span><span class="cap">Cases Linked to a Series</span></div>
+    </div>
+
+    <h2>Cases by Decade</h2>
+    <p>The killing or disappearance date for each case, grouped by decade.</p>
+    <div class="stat-chart">{decade_rows}</div>
+
+    <h2>Cases by State</h2>
+    <p>Where each case took place, ranked by count.</p>
+    <div class="stat-chart">{state_rows}</div>
+
+    <h2>Case Type</h2>
+    <div class="stat-chart">{type_rows}</div>
+
+    <h2>Timespan</h2>
+    <p>The earliest case currently documented is <a href="cases/{oldest["id"]}.html">{html.escape(oldest["name"])}</a>
+    ({oldest["year"]}, {STATE_NAMES.get(oldest["state"], oldest["state"])}). The most recent is
+    <a href="cases/{newest["id"]}.html">{html.escape(newest["name"])}</a> ({newest["year"]},
+    {STATE_NAMES.get(newest["state"], newest["state"])}) &mdash; a span of {newest["year"] - oldest["year"]} years.</p>
+
+    <div class="callout">These numbers update automatically as new cases are added to the archive. If you
+    notice a discrepancy, use the <a href="submit.html">Submit a Case or Tip</a> page to flag it.</div>'''
+    write("statistics.html", page_shell("Archive Statistics", f"Data and figures computed from the {total} cases currently documented in this archive.", depth,
+          doc_page(depth, "Data", "Archive Statistics", body), canonical_path="statistics.html"))
+
 def build_research():
     depth = 0
     body = '''<h2>Our standards</h2>
@@ -1910,6 +2099,22 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-08-25", case_id="duluth-lynchings",
+         text="New case added to the archive: Elias Clayton, Elmer Jackson & Isaac McGhie (Duluth, "
+              "Minnesota, 1920), sourced from the Minnesota Historical Society and Smithsonian Magazine. "
+              "This is the first Minnesota case documented in the archive."),
+    dict(date="2026-08-25", case_id="wade-hampton",
+         text="New case added to the archive: Wade Hampton (Rock Springs, Wyoming, 1917), sourced from "
+              "WyoHistory.org's account drawn from the original coroner's inquest transcript. This is the "
+              "first Wyoming case documented in the archive."),
+    dict(date="2026-08-25", case_id="whitfield-and-whitney",
+         text="New case added to the archive: Ed Whitfield & Earl Whitney (Chapmanville, West Virginia, "
+              "1919), sourced from the West Virginia Encyclopedia and The Clio. This is the first West "
+              "Virginia case documented in the archive."),
+    dict(date="2026-08-25", case_id="will-brown",
+         text="New case added to the archive: Will Brown (Omaha, Nebraska, 1919), sourced from History "
+              "Nebraska (the state historical society) and PBS's American Experience. This is the first "
+              "Nebraska case documented in the archive."),
     dict(date="2026-08-25", case_id="lester-mitchell",
          text="New case added to the archive: Lester Mitchell (Dayton, Ohio, 1966), sourced from the "
               "Dayton Daily News and BlackPast.org. This is the first Ohio case documented in the "
@@ -2142,6 +2347,7 @@ if __name__ == "__main__":
               f"google.com, {pub_id}, DIRECT, f08c47fec0942fa0\n")
     build_home()
     build_about()
+    build_statistics()
     build_research()
     build_resources()
     build_submit()

@@ -281,6 +281,19 @@ p:last-child{ margin-bottom:0; }
 .overview-card .num{ font-family:var(--serif); font-size:2rem; color:var(--text); display:block; }
 .overview-card .cap{ font-family:var(--mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); }
 
+/* Simple bar charts (Archive Statistics page) — built at render time from
+   real case data, no client-side charting library needed. */
+.stat-chart{ display:flex; flex-direction:column; gap:10px; margin:16px 0 28px; }
+.stat-row{ display:grid; grid-template-columns:120px 1fr 40px; align-items:center; gap:12px; }
+.stat-label{ font-family:var(--mono); font-size:.72rem; color:var(--text-dim); text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.stat-bar-track{ background:var(--panel-2); border:1px solid var(--border); border-radius:2px; height:16px; overflow:hidden; }
+.stat-bar-fill{ display:block; height:100%; background:linear-gradient(90deg, var(--crimson), var(--crimson-bright)); min-width:3px; }
+.stat-count{ font-family:var(--mono); font-size:.72rem; color:var(--text-faint); }
+@media (max-width:560px){
+  .stat-row{ grid-template-columns:84px 1fr 32px; gap:8px; }
+  .stat-label{ font-size:.64rem; }
+}
+
 /* Featured "Latest Case Added" module (homepage) */
 .featured-case{
   display:flex; gap:20px; align-items:flex-start; padding:22px;

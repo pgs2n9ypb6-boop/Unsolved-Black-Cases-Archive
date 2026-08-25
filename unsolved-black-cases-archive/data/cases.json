@@ -2398,5 +2398,228 @@
     ],
     "lastVerified": "2026-08-21",
     "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "whitfield-and-whitney",
+    "caseNumber": "043",
+    "name": "Ed Whitfield & Earl Whitney",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1919,
+    "age": null,
+    "gender": "male",
+    "city": "Chapmanville",
+    "county": "Logan",
+    "state": "WV",
+    "caseSeries": null,
+    "summary": "Ed Whitfield and Earl Whitney, two Black coal miners employed by the Island Creek Colliery Company, were seized by a white mob on December 15, 1919 while being transported by deputies from Chapmanville to Huntington. The two had been accused of killing E.D. Meek, a white construction foreman. The mob took them from custody, backed them against a rail car, and shot them, then threw their bodies into the Guyandotte River. Logan County Sheriff Don Chafin \u2014 who would later organize the armed force that fought striking miners at the Battle of Blair Mountain in 1921 \u2014 declined to investigate the killings. It was the only lynching recorded in West Virginia's southern coalfields during the nationwide wave of racial violence in the summer and fall of 1919 known as Red Summer. No one was ever charged.",
+    "known": [
+      "The victims' identities, occupation, and the December 15, 1919 date and circumstances, per the West Virginia Encyclopedia and multiple historical accounts.",
+      "Sheriff Don Chafin declined to investigate the killings, per the same sources; no one was ever charged."
+    ],
+    "unknown": [
+      "Whether Whitfield and Whitney had any actual connection to Meek's killing was never established in any court.",
+      "The identities of the individual mob members were never publicly documented."
+    ],
+    "unanswered": [
+      "What became of the original murder investigation into E.D. Meek's death?",
+      "What, if anything, do surviving Logan County records from December 1919 show about the case?",
+      "Why did West Virginia authorities take no action against Sheriff Chafin for declining to investigate?"
+    ],
+    "sources": [
+      {
+        "name": "West Virginia Encyclopedia (e-WV) \u2014 \u201cAfrican American Heritage\u201d",
+        "url": "https://www.wvencyclopedia.org/entries/18",
+        "verified": true
+      },
+      {
+        "name": "The Clio \u2014 \u201cWhitfield and Whitney Lynching Site\u201d",
+        "url": "https://theclio.com/entry/47848",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "will-brown",
+    "caseNumber": "044",
+    "name": "Will Brown",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1919,
+    "age": 40,
+    "gender": "male",
+    "city": "Omaha",
+    "county": "Douglas",
+    "state": "NE",
+    "caseSeries": null,
+    "summary": "Will Brown, 40, a meatpacking plant worker later regarded by historians as innocent, was lynched by a mob in Omaha on the night of September 28, 1919, four days after a white woman accused him of assault. Brown was being held in the Douglas County Courthouse jail when a mob of thousands surrounded the building, set it on fire, and battled police for hours; when Omaha's mayor tried to intervene he was nearly lynched himself before being rescued. The mob eventually seized Brown, beat him, hanged him from a lamp pole outside the courthouse, shot his body more than one hundred times, then burned it and dragged the remains behind a car through the streets. A newspaper photograph of the burned body became one of the most widely reproduced images of the Red Summer of 1919, a nationwide wave of racial violence. Federal troops were called in to restore order. No one was ever charged in Brown's killing.",
+    "known": [
+      "Victim identity, background, and the September 28, 1919 date and circumstances, per History Nebraska (the state historical society) and PBS's American Experience.",
+      "No one was ever charged or prosecuted for the lynching, per the same sources."
+    ],
+    "unknown": [
+      "The underlying assault accusation against Brown was never tested in any court, and historians have since characterized him as innocent.",
+      "The identity of at least one other Black Omaha resident reportedly killed by the same mob that night has never been established."
+    ],
+    "unanswered": [
+      "What became of the original assault investigation and accusation against Brown?",
+      "Who was the second victim some accounts describe the mob killing that same night, and what happened to any record of that death?",
+      "What specific accountability, if any, was ever pursued against identifiable mob participants?"
+    ],
+    "sources": [
+      {
+        "name": "History Nebraska \u2014 \u201cA Horrible Lynching\u201d",
+        "url": "https://www.nebraskastudies.org/en/1900-1924/racial-tensions/a-horrible-lynching/",
+        "verified": true
+      },
+      {
+        "name": "PBS American Experience \u2014 \u201cRed Summer: When Racist Mobs Ruled\u201d",
+        "url": "https://www.pbs.org/wgbh/americanexperience/features/t-town-red-summer-racist-mobs/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "duluth-lynchings",
+    "caseNumber": "045",
+    "name": "Elias Clayton, Elmer Jackson & Isaac McGhie",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1920,
+    "age": null,
+    "gender": "male",
+    "city": "Duluth",
+    "county": "St. Louis",
+    "state": "MN",
+    "caseSeries": null,
+    "summary": "Elias Clayton, Elmer Jackson, and Isaac McGhie, three Black men in their early twenties working as laborers for a traveling circus, were lynched by a mob in Duluth on the night of June 15, 1920. The night before, two white teenagers claimed that Black circus workers had robbed them at gunpoint and raped the young woman; a doctor's examination later found no evidence a rape had occurred. Police arrested six Black circus workers regardless. That evening, a mob estimated at 5,000 to 10,000 people gathered outside the jail, seized three of the men, beat them, and hanged them from a light pole in downtown Duluth. The Minnesota National Guard arrived the next morning to protect the three men who survived. No one was ever charged with the lynchings themselves; three white men were later convicted of rioting, a lesser charge. A fourth accused man, Max Mason, was the only person convicted in connection with the underlying accusation and served time in prison; he was granted the state's first posthumous pardon in 2020, a century after the killings.",
+    "known": [
+      "The victims' identities, ages, and the June 15, 1920 date and circumstances, per the Minnesota Historical Society.",
+      "A doctor's examination found no medical evidence supporting the rape accusation, and no one was ever charged with the lynchings themselves, per the same source."
+    ],
+    "unknown": [
+      "The specific individuals who carried out the lynchings were never identified or charged.",
+      "What actually occurred between the accusers and the circus workers the night before was never established beyond dispute."
+    ],
+    "unanswered": [
+      "What specific evidence, if any, supported the rioting convictions of the three white men who were charged?",
+      "What became of the three surviving arrested men after the National Guard secured the jail?",
+      "What additional documentation survives in Duluth police and court records from 1920?"
+    ],
+    "sources": [
+      {
+        "name": "Minnesota Historical Society \u2014 \u201cThe Lynchings\u201d",
+        "url": "https://www.mnhs.org/duluthlynchings/lynchings",
+        "verified": true
+      },
+      {
+        "name": "Smithsonian Magazine \u2014 case retrospective",
+        "url": "https://www.smithsonianmag.com/history/one-hundred-years-ago-mob-white-rioters-lynched-three-men-minnesota-180975062/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "wade-hampton",
+    "caseNumber": "046",
+    "name": "Wade Hampton",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1917,
+    "age": 50,
+    "gender": "male",
+    "city": "Rock Springs",
+    "county": "Sweetwater",
+    "state": "WY",
+    "caseSeries": null,
+    "summary": "Wade Hampton, 50, was taken from his cell at the Rock Springs city jail at gunpoint by three armed men shortly after midnight on December 12, 1917, and shot to death within the hour after an attempt to hang him from a railroad bridge failed. Hampton had been arrested the day before on charges of attempting to assault three women, held on $5,000 bond, and had appeared before a justice of the peace for a preliminary hearing \u2014 he was never tried. The three men broke into the jail office, took the absent jailer's keys, and led Hampton away in handcuffs; when the rope broke during the failed hanging, Hampton tried to flee along a creek bed before his captors caught up to him and shot him. A coroner's inquest, which heard from only two witnesses, neither of whom had been present during the abduction, ruled his death was caused by \u201cparty or parties unknown.\u201d Wyoming's acting governor personally urged the county attorney to offer a reward, and a $500 reward was published, but no one was ever identified or charged. Hampton was buried at the county's expense.",
+    "known": [
+      "Victim identity, background, and the December 11\u201312, 1917 date and circumstances, per WyoHistory.org's account, drawn from the original coroner's inquest transcript and contemporary newspapers.",
+      "The coroner's inquest concluded Hampton's death came at the hands of \u201cparty or parties unknown\u201d; no one was ever charged despite a published reward."
+    ],
+    "unknown": [
+      "The identities of the three men who abducted and killed Hampton were never established.",
+      "The underlying assault accusations against Hampton were never tested at trial, since he was killed before one could occur."
+    ],
+    "unanswered": [
+      "Why did the coroner's inquest call only two witnesses, neither of whom was present during the actual abduction?",
+      "What became of the $500 reward Wyoming's acting governor pushed the county to offer?",
+      "What connection, if any, exists between this case and the similar unsolved 1918 lynching of Edward Woodson in the same county?"
+    ],
+    "sources": [
+      {
+        "name": "WyoHistory.org \u2014 \u201cA Lynching in Rock Springs\u201d",
+        "url": "https://www.wyohistory.org/encyclopedia/lynching-rock-springs",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
   }
 ]
