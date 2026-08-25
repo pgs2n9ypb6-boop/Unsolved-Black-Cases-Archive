@@ -33,7 +33,7 @@ ADSENSE_ENABLED = True  # set False to strip all AdSense code out of the build
 
 # Used for canonical URLs and absolute Open Graph / Twitter Card image URLs.
 # Update this if the site ever moves to a different domain.
-SITE_URL = "https://unsolved-black-cases-archive.vercel.app"
+SITE_URL = "https://unsolved-black-cases-archive-jet.vercel.app"
 SHORT_NAME = "UBCA"
 TAGLINE = "A public-record research archive documenting unsolved cases involving Black victims."
 ARCHIVE_NOTE = ("This archive summarizes publicly available information and does not conduct "
@@ -320,7 +320,763 @@ CASES = [
                             "https://www.fbi.gov/wanted/kidnap/tionda-z.-bradley", True),
                         src("Federal Bureau of Investigation \u2014 Diamond Bradley case listing",
                             "https://www.fbi.gov/wanted/kidnap/diamond-yvette-bradley", True)]),
+    dict(id="wharlest-jackson-sr", caseNumber="014", name="Wharlest Jackson Sr.",
+         status="unsolved", caseType="homicide", year=1967, age=36, gender="male",
+         city="Natchez", county="Adams", state="MS", caseSeries="Silver Dollar Group",
+         summary="Wharlest Jackson Sr., 36, a Korean War veteran, father of five, and treasurer of the "
+                 "Natchez NAACP, was killed on February 27, 1967 when a bomb planted under his truck "
+                 "exploded, reportedly triggered by his turn signal, as he drove home from his first shift "
+                 "in a new position at the Armstrong Tire and Rubber plant \u2014 a role that had previously "
+                 "been held only by white employees. Two years earlier, NAACP president George Metcalfe had "
+                 "survived a similar car bombing at the same plant. The FBI's main suspect was Raleigh "
+                 "\"Red\" Glover, leader of a Klan offshoot known as the Silver Dollar Group; Glover was "
+                 "never charged and died in 1984. The DOJ's Civil Rights Division has since closed its "
+                 "investigation without prosecution.",
+         known=["Victim identity, role, and the February 27, 1967 date and circumstances, per the DOJ's public case file.",
+                "The FBI's identification of Raleigh \"Red\" Glover as its main suspect, per public reporting on the released FBI files; Glover was never charged."],
+         unknown=["No one was ever charged or convicted in the bombing.",
+                  "The exact type of explosive material used was never identified."],
+         unanswered=["What do the released FBI files say about why Glover was never charged despite being the lead suspect?",
+                     "What connection, if any, does this case have to the 1965 bombing of George Metcalfe?",
+                     "What became of the broader Silver Dollar Group investigation?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/wharlest-jackson", True),
+                        src("PBS FRONTLINE, \u201cAmerican Reckoning\u201d \u2014 documentary",
+                            "https://www.pbs.org/wgbh/frontline/documentary/american-reckoning/", True)]),
+    dict(id="frank-morris", caseNumber="015", name="Frank Morris",
+         status="unsolved", caseType="homicide", year=1964, age=51, gender="male",
+         city="Ferriday", county="Concordia", state="LA", caseSeries="Silver Dollar Group",
+         summary="Frank Morris, 51, the Black owner of a shoe repair shop in Ferriday that served both "
+                 "Black and white customers, was killed after two unidentified white men set fire to his "
+                 "shop in the early hours of December 10, 1964 while he slept in a back room. One of the "
+                 "men held Morris at gunpoint and forced him back inside as the fire spread. Morris escaped "
+                 "but suffered burns over 100% of his body and died four days later. He told the FBI his "
+                 "attackers were \"two white friends,\" accompanied by a third man he did not see, but he "
+                 "was never able to identify them by name. The DOJ's file states that FBI informants in "
+                 "1967 identified the attack as the work of the Silver Dollar Group, a secretive Klan cell "
+                 "formed in the Natchez\u2013Ferriday area around 1964, and named four of its members \u2014 "
+                 "E.D. Morace, Tommie Lee Jones, Thor Lee Torgersen, and James Lee Scarborough \u2014 as "
+                 "responsible; all four denied involvement when interviewed, and the FBI found no "
+                 "independent evidence to corroborate the informants' accounts. No one was ever charged, "
+                 "and the DOJ closed the case without reaching a conclusion.",
+         known=["Victim identity, age, and the December 10\u201314, 1964 timeline, per the DOJ's public case file.",
+                "The DOJ's file names four Silver Dollar Group members identified by FBI informants; all four denied involvement, and the FBI could not independently corroborate the informants' accounts."],
+         unknown=["No one was ever charged in the arson.",
+                  "The DOJ's file states it found no independent basis to confirm the informants' identification of the four named men."],
+         unanswered=["What became of the two men a friend of Morris's said he believed had been \"taken care of\" by fellow Klansmen shortly after the killing?",
+                     "What additional informant reporting, if any, remains undisclosed in the FBI's files?",
+                     "What role, if any, did local law enforcement play, as alleged by some witnesses?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/frank-morris-notice-close-file", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/frank-morris/", True)]),
+    dict(id="george-lee", caseNumber="016", name="Rev. George Lee",
+         status="unsolved", caseType="homicide", year=1955, age=51, gender="male",
+         city="Belzoni", county="Humphreys", state="MS", caseSeries=None,
+         summary="Rev. George W. Lee, 51, a Baptist minister, grocer, and co-founder of the Belzoni NAACP "
+                 "branch, was shot and killed while driving in Belzoni on the night of May 7, 1955. Lee was "
+                 "the first Black resident to register to vote in Humphreys County since Reconstruction, "
+                 "and had helped register roughly 90 other Black voters despite repeated threats. His car "
+                 "crashed after gunmen in a passing car fired into it; he died shortly after reaching a "
+                 "hospital. The local sheriff publicly claimed the lead pellets found in Lee's jaw were "
+                 "dental fillings; FBI testing later confirmed they were buckshot. No one was ever "
+                 "prosecuted. FBI files released in 2000 named two White Citizens' Council members, Peck "
+                 "Ray and Joe David Watson Sr., as suspects; both had died in the 1970s.",
+         known=["Victim identity, role, and the May 7, 1955 date and circumstances, per the DOJ's public case file.",
+                "FBI files released in 2000 named two suspects, both reported deceased, per public reporting on those files."],
+         unknown=["No one was ever charged or convicted.",
+                  "The local district attorney's specific reasons for declining to prosecute were not fully documented publicly."],
+         unanswered=["What do the released 2000 FBI files say about the evidence against the two named suspects?",
+                     "Why did the local prosecutor decline to pursue the case despite an FBI investigation?",
+                     "What connection, if any, exists between this case and the broader White Citizens' Council activity in Humphreys County at the time?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/george-lee", True),
+                        src("Southern Poverty Law Center \u2014 case summary",
+                            "https://www.splcenter.org/rev-george-lee", True)]),
+    dict(id="johnnie-mae-chappell", caseNumber="017", name="Johnnie Mae Chappell",
+         status="unsolved", caseType="homicide", year=1964, age=35, gender="female",
+         city="Jacksonville", county="Duval", state="FL", caseSeries=None,
+         summary="Johnnie Mae Chappell, 35, a domestic worker and mother of ten, was shot and killed on "
+                 "the night of March 23, 1964 while retracing her steps along New Kings Road in "
+                 "Jacksonville's Pickettville neighborhood, searching with two neighbors for a wallet she "
+                 "had dropped, during a night of racial unrest in the city. A car carrying four white men "
+                 "drove past; one of them, J.W. Rich, fired a .22-caliber pistol, fatally wounding her. The "
+                 "case went unsolved for five months until one of the men, Wayne Chessman, approached "
+                 "detectives and confessed, naming Rich as the shooter along with Elmer Kato and James Alex "
+                 "Davis. All four were indicted for first-degree murder, but only Rich stood trial; an "
+                 "all-white jury convicted him of the lesser charge of manslaughter, and he served about "
+                 "three years. The murder weapon went missing before trial. The three other men were never "
+                 "tried; Florida later granted them immunity. The DOJ's Civil Rights Division formally "
+                 "closed its file on August 18, 2014, citing insufficient federal evidence and the state's "
+                 "grant of immunity to the surviving subjects.",
+         known=["Victim identity, age, and the March 23, 1964 date and circumstances, per the DOJ's public case file and its 2014 Notice to Close File.",
+                "J.W. Rich's manslaughter conviction, and the identities of the three other men indicted but never tried, per the same records and public reporting."],
+         unknown=["What became of the murder weapon, which went missing before trial.",
+                  "The full circumstances under which Florida granted immunity to the three uncharged men."],
+         unanswered=["What specific evidence did the 2014 DOJ review weigh before closing the federal file?",
+                     "What happened to the detectives, Lee Cody and Donald Coleman Sr., who said they were pushed off the case and later lost their jobs?",
+                     "What additional documentation exists in the state's earlier reviews under Governor Jeb Bush?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/johnnie-m-chappell-notice-close-file", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/johnnie-mae-chappell/", True)]),
+    dict(id="louis-allen", caseNumber="018", name="Louis Allen",
+         status="unsolved", caseType="homicide", year=1964, age=44, gender="male",
+         city="Liberty", county="Amite", state="MS", caseSeries=None,
+         summary="Louis Allen, 44, a WWII veteran, logger, and landowner, was shot to death with a shotgun "
+                 "at his own gate in Liberty on January 31, 1964, the night before he was set to leave "
+                 "Mississippi for good. Allen had witnessed the 1961 murder of NAACP voter-registration "
+                 "activist Herbert Lee by state legislator E.H. Hurst, and after initially being coerced "
+                 "into corroborating a self-defense account, later told the FBI that Hurst had shot Lee in "
+                 "cold blood. Word spread that Allen had cooperated with federal investigators, and he was "
+                 "harassed and repeatedly jailed on false charges over the following two years by Amite "
+                 "County Sheriff Daniel Jones, who once broke Allen's jaw with a flashlight. The DOJ's "
+                 "Civil Rights Division formally closed its file on the case in 2015, naming Jones \u2014 by "
+                 "then deceased \u2014 as its subject.",
+         known=["Victim identity, background, and the January 31, 1964 date and circumstances, per the DOJ's public case file.",
+                "The DOJ's 2015 Notice to Close File names Sheriff Daniel Jones, reported deceased, as its subject."],
+         unknown=["No one was ever charged in Allen's killing.",
+                  "The exact circumstances of the ambush, including how many people were involved, were never conclusively established."],
+         unanswered=["What evidence did the DOJ's file compile against Sheriff Jones specifically before closing the case?",
+                     "What became of the federal grand jury testimony Allen gave regarding his harassment?",
+                     "What connection, if any, does this case have to the unprosecuted 1961 killing of Herbert Lee that Allen witnessed?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/louis-allen", True),
+                        src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/daniel-jones-louis-allen-deceased-notice-close-file", True)]),
+    dict(id="oneal-moore", caseNumber="019", name="Oneal Moore",
+         status="unsolved", caseType="homicide", year=1965, age=34, gender="male",
+         city="Varnado", county="Washington", state="LA", caseSeries=None,
+         summary="Oneal Moore, 34, an Army veteran and one of the first two Black deputy sheriffs in "
+                 "Washington Parish, was shot and killed while on patrol near Varnado on the night of June "
+                 "2, 1965 \u2014 one year and a day after he and partner David \"Creed\" Rogers, also Black, "
+                 "were sworn in. A pickup truck with a Confederate flag decal pulled alongside their patrol "
+                 "car and its occupants opened fire; Moore was killed instantly and Rogers was blinded in "
+                 "one eye but survived and radioed a description of the truck. About an hour later, a "
+                 "matching truck was stopped in Tylertown, Mississippi and its driver, known Klansman "
+                 "Ernest Rayford \"Ray\" McElveen, was arrested and charged with murder, but released after "
+                 "nine days on bond raised by fellow Klan members; the charge was ultimately dropped for "
+                 "lack of evidence. McElveen died in 2003. The case remains unsolved.",
+         known=["Victim identity, role, and the June 2, 1965 date and circumstances, per the DOJ's public case file.",
+                "Ernest Rayford McElveen's arrest and release, per the same file and public reporting; McElveen died in 2003."],
+         unknown=["No one was ever convicted in Moore's killing.",
+                  "The identities of any other occupants of the truck beyond McElveen were not publicly confirmed."],
+         unanswered=["Why was the murder charge against McElveen ultimately dropped?",
+                     "What did the FBI's repeated reviews (1990, 2001, 2009) each establish or fail to establish?",
+                     "What became of the firearms and rope found in McElveen's truck at the time of his arrest?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/oneal-moore", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/oneal-moore", True)]),
+    dict(id="clifton-walker", caseNumber="020", name="Clifton Walker",
+         status="unsolved", caseType="homicide", year=1964, age=37, gender="male",
+         city="Woodville", county="Wilkinson", state="MS", caseSeries=None,
+         summary="Clifton Walker, 37, a World War II veteran and father of five, was shot to death in his "
+                 "car on Poor House Road outside Woodville late on the night of February 28, 1964, while "
+                 "driving home from his late shift at the International Paper Company plant in Natchez. His "
+                 "car was ambushed and riddled with close-range shotgun blasts; he was found dead in the "
+                 "vehicle the next afternoon. The killing is believed to be among the first carried out by "
+                 "the newly formed White Knights of the Ku Klux Klan, which was responsible for several "
+                 "other Mississippi civil-rights-era murders. Mississippi Highway Patrol investigators "
+                 "recommended two suspects for arrest in 1964, but the local district attorney declined to "
+                 "prosecute, citing insufficient evidence. The DOJ's Civil Rights Division formally closed "
+                 "its file in 2013, naming three men \u2014 Prentiss Mathis, Carl Cavin, and Red Metcalf, "
+                 "all reported deceased \u2014 as subjects.",
+         known=["Victim identity, background, and the February 28\u201329, 1964 date and circumstances, per the DOJ's public case file.",
+                "The DOJ's 2013 Notice to Close File names three subjects, all reported deceased."],
+         unknown=["No one was ever charged in Walker's killing.",
+                  "The relationship, if any, between the two suspects Mississippi Highway Patrol recommended in 1964 and the three subjects later named in the DOJ's 2013 closure has not been publicly reconciled."],
+         unanswered=["Why did the local district attorney decline to prosecute despite the Highway Patrol's 1964 recommendation?",
+                     "What evidence connected each of the three subjects named in the 2013 DOJ file to the killing?",
+                     "What became of the .38 revolver found in Walker's car, and what did it indicate about the circumstances of the attack?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/clifford-clifton-walker", True),
+                        src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/clifford-clifton-walker", True)]),
+    dict(id="willie-edwards-jr", caseNumber="021", name="Willie Edwards Jr.",
+         status="unsolved", caseType="homicide", year=1957, age=24, gender="male",
+         city="Montgomery", county="Montgomery", state="AL", caseSeries=None,
+         summary="Willie Edwards Jr., 24, a Winn-Dixie truck driver and father of two, disappeared on the "
+                 "evening of January 22, 1957 after being called back to work to cover another driver's "
+                 "shift in Montgomery. Klansmen, who mistook him for a different Black man they believed "
+                 "was involved with a white woman, pulled him from his truck at gunpoint and forced him, "
+                 "under threat of being shot, to jump from the Tyler-Goodwyn Bridge into the Alabama River. "
+                 "Fishermen found his body three months later; the medical examiner could not determine a "
+                 "cause of death due to decomposition. The case sat dormant until 1976, when a witness "
+                 "named three men \u2014 Henry Alexander, Jimmy York, and Raymond Britt \u2014 as having "
+                 "forced Edwards to jump; two received immunity for their testimony, but repeated attempts "
+                 "at indictment failed. In 1997, at the family's request, Edwards's body was exhumed and "
+                 "his cause of death was reclassified as homicide by drowning; a 1999 grand jury agreed he "
+                 "was killed by Klan members but still declined to indict, citing insufficient evidence "
+                 "tied to problems in the 1970s investigation. The DOJ closed its file in 2013; all three "
+                 "named men were by then deceased.",
+         known=["Victim identity, employer, and the January 22, 1957 date and circumstances, per the DOJ's public case file.",
+                "The 1976 witness account naming Henry Alexander, Jimmy York, and Raymond Britt, and the 1997 reclassification of the cause of death as homicide, per the same file and public reporting."],
+         unknown=["No one was ever indicted or convicted.",
+                  "The identity of the man the Klansmen were actually looking for, whom Edwards was mistaken for, was never publicly confirmed."],
+         unanswered=["What specific evidence problems from the 1970s investigation caused the 1999 grand jury to decline to indict?",
+                     "What did Henry Alexander's 1993 confession add to the record?",
+                     "Why did Alabama officials decline to authorize a third prosecution attempt against the one still-living suspect before the DOJ's 2013 closure?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/willie-edwards-jr", True),
+                        src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/willie-edwards-jr-notice-close-file", True)]),
+    dict(id="isadore-banks", caseNumber="022", name="Isadore Banks",
+         status="unsolved", caseType="homicide", year=1954, age=58, gender="male",
+         city="Marion", county="Crittenden", state="AR", caseSeries=None,
+         summary="Isadore Banks, 58, a World War I veteran and one of the wealthiest Black landowners in "
+                 "the Arkansas Delta, left home on June 4, 1954 to pay his farmhands and never returned. "
+                 "Four days later, his truck was found abandoned nearby with his shotgun and coat still "
+                 "inside; his body was discovered chained to a tree in a wooded area, burned beyond "
+                 "recognition, with a wound the coroner attributed to a knife or gunshot. There was no sign "
+                 "of robbery or struggle at the scene, and the coroner believed Banks \u2014 who weighed "
+                 "nearly 300 pounds \u2014 had been killed elsewhere and his body moved, likely by more than "
+                 "one person. A Black-owned cooperative offered a $1,000 reward; no one came forward. "
+                 "Unlike most cases on this archive, no suspect was ever named by investigators at any "
+                 "point \u2014 local law enforcement conducted little investigation, and the FBI at the "
+                 "time initially declined to open a file, stating it saw no clear federal jurisdiction.",
+         known=["Victim identity, background, and the June 4\u20138, 1954 timeline, per the DOJ's public case file.",
+                "No suspect has ever been named in connection with the killing, per the same file and public reporting."],
+         unknown=["The motive for the killing was never established; several theories circulated locally but none were substantiated.",
+                  "What became of Banks's more than 1,000 acres of land after his death was not fully documented."],
+         unanswered=["What, if anything, do surviving FBI records \u2014 some reportedly destroyed by 1992 \u2014 still contain?",
+                     "Why did local authorities conduct so little investigation despite the case's extensive contemporary press coverage?",
+                     "What did the DOJ's Cold Case Initiative review conclude when it reexamined the file?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/isadore-banks", True),
+                        src("Encyclopedia of Arkansas \u2014 case summary",
+                            "https://encyclopediaofarkansas.net/entries/isadore-banks-6425/", True)]),
+    dict(id="mack-charles-parker", caseNumber="023", name="Mack Charles Parker",
+         status="unsolved", caseType="homicide", year=1959, age=23, gender="male",
+         city="Poplarville", county="Pearl River", state="MS", caseSeries=None,
+         summary="Mack Charles Parker, 23, an Army veteran and truck driver, was lynched three days before "
+                 "he was scheduled to stand trial on charges of raping a white woman \u2014 charges he "
+                 "denied in a letter written from jail, and which rested on an identification the accuser "
+                 "herself said she could not be certain of. Late on April 24, 1959, eight to ten hooded men "
+                 "broke into the Pearl River County jail in Poplarville, reportedly aided by a jailer who "
+                 "provided the keys, and dragged Parker from his cell. He was beaten, driven away, and "
+                 "shot; his body was recovered from the Pearl River on May 4, 1959. An FBI investigation "
+                 "identified more than twenty men involved, several of whom confessed and named other "
+                 "participants, and the FBI turned a full dossier over to Mississippi officials. An "
+                 "all-white county grand jury declined to indict, as did a subsequent federal grand jury, "
+                 "by a single vote. No one was ever charged. Historian Howard Smead has called it \"the "
+                 "last classic lynching in America.\"",
+         known=["Victim identity, background, and the April 24\u201325, 1959 date and circumstances, per contemporaneous FBI reporting and public records.",
+                "The FBI's investigation identified more than twenty participants through witness statements and confessions, though no state or federal grand jury returned an indictment."],
+         unknown=["No one was ever charged, tried, or convicted.",
+                  "Parker's guilt in the underlying rape accusation was never established in court; his accuser could not confirm his identity with certainty."],
+         unanswered=["What specific evidence did the FBI's dossier, handed to Mississippi officials in 1959, contain?",
+                     "Why did the federal grand jury in Biloxi fall one vote short of indicting?",
+                     "What has the DOJ's ongoing review under the Emmett Till Act, reopened in 2009, established since?"],
+         extraSources=[src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/mack-charles-parker/", True),
+                        src("Mississippi Today \u2014 case retrospective",
+                            "https://mississippitoday.org/2025/04/25/1959-mack-charles-parker-lynched-poplarville/", True)]),
+    dict(id="joseph-edwards", caseNumber="024", name="Joseph Edwards",
+         status="unsolved", caseType="missing_persons", year=1964, age=None, gender="male",
+         city="Vidalia", county="Concordia", state="LA", caseSeries="Silver Dollar Group",
+         summary="Joseph \"Joe-Ed\" Edwards, a porter at the Shamrock Motel in Vidalia in his early 20s, "
+                 "disappeared in the early morning hours of July 12, 1964. His car was found abandoned near "
+                 "a local bowling alley days later with a necktie tied into a noose on the steering wheel "
+                 "and blood inside. The FBI later concluded Edwards had likely been targeted after he was "
+                 "seen kissing a white coworker; the woman's boyfriend reported the incident to the Vidalia "
+                 "police chief, who is believed to have alerted a Klan offshoot called the Silver Dollar "
+                 "Group. A witness told the FBI he saw a car matching the group's leader's description "
+                 "stop Edwards's Buick near the bowling alley on the night he vanished. His body has never "
+                 "been found \u2014 the only Civil Rights-era case in Louisiana the FBI investigated in "
+                 "which this remains true. The DOJ's Civil Rights Division closed its file in 2013, naming "
+                 "seven subjects, including several Concordia Parish sheriff's deputies and the Silver "
+                 "Dollar Group's leader, all reported deceased.",
+         known=["Victim's identity, employer, and the July 12, 1964 disappearance date, per the DOJ's public case file.",
+                "The DOJ's 2013 Notice to Close File names seven subjects, all reported deceased, including law enforcement officers."],
+         unknown=["Edwards's body has never been recovered, and his exact cause of death is unknown.",
+                  "No one was ever charged in connection with his disappearance."],
+         unanswered=["What did the FBI's search of Deer Park Lake and other locations for Edwards's remains ultimately establish?",
+                     "What role did each of the seven named subjects play, according to the DOJ's file?",
+                     "What became of the white Oldsmobile the FBI investigation connected to a witness account of the night Edwards disappeared?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/joseph-joed-edwards", True),
+                        src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/joseph-joed-edwards-notice-close-file", True)]),
+    dict(id="samuel-oquinn", caseNumber="025", name="Samuel O'Quinn",
+         status="unsolved", caseType="homicide", year=1959, age=58, gender="male",
+         city="Centreville", county="Wilkinson", state="MS", caseSeries=None,
+         summary="Samuel O'Quinn, 58, a businessman who ran a funeral home, a cafe, and farmland in "
+                 "Centreville, was shot twice in the back with a shotgun on the night of August 14, 1959 "
+                 "as he opened the gates to his property; he died on the way to the hospital. No witnesses "
+                 "were identified, and neither state police nor the FBI's investigation at the time named a "
+                 "suspect. Local media reported at the time that O'Quinn was active with the NAACP and "
+                 "speculated his death was politically motivated; a white glove found at the scene was "
+                 "later thought by family to be a White Citizens' Council calling card. A 2012 DOJ memo "
+                 "reviewing the case reached a different conclusion, stating that the limited surviving "
+                 "investigative material \"indicates that O'Quinn may have been murdered by a person or "
+                 "persons interested in obtaining his land\" rather than for political activity \u2014 a "
+                 "reminder that even the motive behind a killing can remain genuinely disputed decades "
+                 "later. The DOJ closed its file in 2012 without identifying a suspect.",
+         known=["Victim identity, background, and the August 14, 1959 date and circumstances, per the DOJ's public case file.",
+                "No suspect was ever identified by state or federal investigators, per the same file."],
+         unknown=["The motive remains genuinely disputed: contemporary reporting pointed to O'Quinn's NAACP activity, while the DOJ's 2012 review pointed to a land dispute instead.",
+                  "A secondhand deathbed confession the family later learned of, alleging the killer was paid $500 and a car, was never independently verified."],
+         unanswered=["What specific evidence led the DOJ's 2012 review to favor a land-dispute motive over the politically-motivated account?",
+                     "What became of the white glove found at the scene?",
+                     "What, if anything, came of the two interviewees who shared secondhand information about a possible suspect during the FBI's 2008 review?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/samuel-o-quinn-notice-close-file", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/samuel-oquinn", True)]),
+    dict(id="claude-neal", caseNumber="026", name="Claude Neal",
+         status="unsolved", caseType="homicide", year=1934, age=23, gender="male",
+         city="Greenwood", county="Jackson", state="FL", caseSeries=None,
+         summary="Claude Neal, 23, a farmhand, was lynched near Marianna on the night of October 25\u201326, "
+                 "1934, days after being arrested and accused of the murder of a young white woman. Fearing "
+                 "mob violence, Sheriff Flake Chambliss moved Neal between several jails, eventually "
+                 "hiding him roughly 200 miles away in Brewton, Alabama. In the early morning hours of "
+                 "October 26, a mob broke into the Brewton jail and abducted him, driving him back to "
+                 "Jackson County on back roads to avoid law enforcement. Neal was killed hours later; his "
+                 "body was then displayed publicly, hanged from a tree at the Jackson County courthouse in "
+                 "Marianna. When the sheriff cut the body down the next morning and refused demands to "
+                 "rehang it, a mob numbering in the thousands rioted through Marianna for days, attacking "
+                 "Black residents and property; the governor deployed the National Guard to restore order. "
+                 "The lynching had been publicized in advance and drew national attention, becoming a "
+                 "catalyst for the NAACP's campaign for federal anti-lynching legislation. No one was ever "
+                 "charged; the DOJ reopened the case for review in 2011 under the Emmett Till Unsolved "
+                 "Civil Rights Crime Act, by which point all identified participants were deceased.",
+         known=["Victim identity, background, and the October 1934 timeline, per the DOJ's public case file.",
+                "The lynching was extensively documented by contemporary press and NAACP investigators, and is widely credited with advancing the national anti-lynching legislative campaign of the 1930s."],
+         unknown=["No one was ever charged, tried, or convicted.",
+                  "The full circumstances of Neal's initial confession, obtained without legal counsel present, were never independently tested in court."],
+         unanswered=["What did the FBI's 2011 review, opened under the Emmett Till Act, establish or conclude?",
+                     "What became of the NAACP's contemporaneous investigative file compiled by Walter White?",
+                     "What formal accounting, if any, has Jackson County given of the riot's estimated 200 injuries and property destruction?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Civil Rights Division case page",
+                            "https://www.justice.gov/crt/case/claude-neal", True),
+                        src("Explore Southern History \u2014 case summary",
+                            "https://www.exploresouthernhistory.com/claudeneal.html", True)]),
+    dict(id="brandon-mcclelland", caseNumber="027", name="Brandon McClelland",
+         status="unsolved", caseType="homicide", year=2008, age=24, gender="male",
+         city="Paris", county="Lamar", state="TX", caseSeries=None,
+         summary="Brandon McClelland, 24, was struck and dragged roughly 70 feet beneath a pickup truck on "
+                 "a rural road outside Paris in the early hours of September 16, 2008; his body was found "
+                 "the next morning. He had been on a late-night beer run across the Oklahoma state line "
+                 "with two white acquaintances, Shannon Finley and Charles Ryan Crostley, and an argument "
+                 "reportedly broke out on the drive back over whether Finley was too drunk to keep driving; "
+                 "McClelland got out of the vehicle to walk. A grand jury indicted both Finley and Crostley "
+                 "on murder charges, and Finley was separately indicted for evidence tampering, accused of "
+                 "washing blood from the truck's undercarriage. The case unraveled over the following year "
+                 "amid a lack of eyewitnesses and forensic evidence \u2014 no DNA tying McClelland to the "
+                 "truck was ever found \u2014 and a separate driver came forward with a sworn statement "
+                 "acknowledging he might have accidentally struck McClelland himself. Prosecutors moved to "
+                 "dismiss the murder charges in 2009, and both men were released. McClelland's family and "
+                 "local civil rights advocates have maintained the killing was a racially motivated hate "
+                 "crime, drawing comparisons to the 1998 dragging death of James Byrd Jr. in nearby Jasper, "
+                 "Texas; no one has ever been convicted.",
+         known=["Victim identity and the September 16, 2008 date and circumstances, per contemporaneous news reporting and court records.",
+                "Shannon Finley and Charles Ryan Crostley were indicted by a grand jury on murder charges, which were later formally dismissed before trial; per the same records, no one has been convicted."],
+         unknown=["Whether McClelland's death was an intentional act or the accidental result of impaired driving was never resolved in court.",
+                  "The credibility and outcome of the competing sworn statement from a gravel truck driver who said he may have struck McClelland was never fully adjudicated."],
+         unanswered=["What specific forensic findings led prosecutors to conclude the case could not proceed to trial?",
+                     "Did the Department of Justice ever formally open or close a federal civil rights review of the case, as local activists requested?",
+                     "What, if anything, has come of the case since the 2009 dismissal?"],
+         extraSources=[src("Wikipedia \u2014 \u201cDeath of Brandon McClelland\u201d, background reference",
+                            "https://en.wikipedia.org/wiki/Death_of_Brandon_McClelland", True),
+                        src("CBS News \u2014 case report on the dismissal of charges",
+                            "https://www.cbsnews.com/news/charges-dropped-in-texas-dragging-death", True)]),
+    dict(id="john-allen", caseNumber="028", name="John Allen",
+         status="unsolved", caseType="homicide", year=1864, age=None, gender="male",
+         city="Des Moines", county="Polk", state="IA", caseSeries=None,
+         summary="John Allen, an employee of the Demoine House hotel described by contemporary newspapers "
+                 "as \u201cpeaceable,\u201d was shot in the head and killed instantly on a Des Moines "
+                 "sidewalk in front of Ensign's Livery Stable on July 8, 1864. Private John McRoberts, a "
+                 "26-year-old Union soldier on furlough from the 10th Iowa Volunteer Infantry, had been "
+                 "drunk and looking for a fight; witnesses in broad daylight saw him hail Allen, who "
+                 "stopped, then moved on \u2014 at which point McRoberts drew his pistol and shot him "
+                 "without provocation. McRoberts was arrested and indicted by a grand jury for murder, but "
+                 "according to an 1898 county history, he \u201cwas never placed on trial\u201d and was "
+                 "instead quietly released and sent back to his regiment, which shipped out for Georgia "
+                 "less than a month later. McRoberts survived the Civil War, married, and lived the rest of "
+                 "his life free, dying in Idaho in 1908.",
+         known=["Victim identity, occupation, and the July 8, 1864 date and circumstances, per contemporary newspaper accounts and an 1898 county history.",
+                "The identity of the shooter, John McRoberts, who was arrested and indicted but never tried, per the same sources."],
+         unknown=["Little else is known about John Allen's life, including his birth year or burial place.",
+                  "The exact circumstances of McRoberts's release from custody were not fully documented in surviving records."],
+         unanswered=["What became of the grand jury indictment against McRoberts after his release?",
+                     "Why were military authorities able to take custody of a man indicted for murder by a civilian grand jury?",
+                     "What further records, if any, survive in Polk County court archives from 1864?"],
+         extraSources=[src("Iowa Unsolved Murders: Historic Cases \u2014 case summary by Nancy Bowers",
+                            "https://iowaunsolvedmurders.com/the-murders/the-peaceable-negro-murder-of-john-allen-1864/", True)]),
+    dict(id="nicholas-a-brown", caseNumber="029", name="Nicholas A. Brown",
+         status="unsolved", caseType="homicide", year=2021, age=33, gender="male",
+         city="Davenport", county="Scott", state="IA", caseSeries=None,
+         summary="Nicholas A. Brown, 33, was shot on January 30, 2021 after Davenport police responded to a "
+                 "report of a domestic disturbance in the 600 block of Fillmore Street. Officers found "
+                 "Brown with life-threatening gunshot wounds; he was taken to a hospital, where he later "
+                 "died of his injuries. The Iowa Attorney General's office, which tracks intimate-partner "
+                 "homicides statewide, listed Brown among the men killed in such circumstances and noted "
+                 "that no arrests had been made in the case. He was survived by eight children.",
+         known=["Victim identity and the January 30, 2021 date and circumstances, per contemporaneous news reporting.",
+                "The Iowa Attorney General's office's official tracking confirms no arrests had been made in the case as of its report."],
+         unknown=["No suspect has been publicly identified.",
+                  "The specific nature of the domestic disturbance that preceded the shooting was not detailed in available public reporting."],
+         unanswered=["What has the Davenport Police Department's investigation established since 2021?",
+                     "Has any suspect been identified or charged in the years since the shooting?",
+                     "What connection, if any, did the domestic disturbance have to Brown's own household versus a neighboring one?"],
+         extraSources=[src("Iowa Attorney General's Office \u2014 Iowa Men Killed by Their Intimate Partners report",
+                            "https://www.iowaattorneygeneral.gov/media/cms/DV_Homicide_List_93018_014CDC2E8DA89.pdf", True),
+                        src("Quad-City Times \u2014 case report",
+                            "https://qctimes.com/news/local/crime-and-courts/man-shot-during-davenport-domestic-disturbance-has-died-of-injuries/article_0c7f628b-0436-5a59-82f0-82ac71687bfe.html", True)]),
+    dict(id="isaiah-nixon", caseNumber="030", name="Isaiah Nixon",
+         status="unsolved", caseType="homicide", year=1948, age=28, gender="male",
+         city="Alston", county="Montgomery", state="GA", caseSeries=None,
+         summary="Isaiah Nixon, 28, a farmer, turpentine worker, and WWII veteran, was shot three times in "
+                 "his own front yard in Alston on the evening of September 8, 1948, in front of his wife "
+                 "and six children, hours after voting in the Georgia Democratic primary; he died two days "
+                 "later in a hospital in neighboring Laurens County. Two white brothers, Jim A. Johnson and "
+                 "Johnnie Johnson, drove to the Nixon home and ordered him to come with them; when he "
+                 "refused, Jim Johnson shot him. A local grand jury charged Jim Johnson with murder and "
+                 "Johnnie Johnson as an accessory, and the case drew national NAACP attention, but an "
+                 "all-white jury acquitted Jim Johnson, and prosecutors then dropped the case against his "
+                 "brother. The Nixon family fled to Florida after the killing, and their father's grave in "
+                 "a remote cemetery went unmarked and lost to underbrush for 67 years, until Emory "
+                 "University researchers located it in 2015 with the help of Nixon's daughter, Dorothy "
+                 "Nixon Williams, who was six years old when she witnessed her father's death.",
+         known=["Victim identity and the September 8, 1948 date and circumstances, per the Georgia Civil Rights Cold Cases Project at Emory University and the federal Civil Rights Cold Case Records Review Board.",
+                "Jim A. Johnson was tried for murder and acquitted by an all-white jury; the accessory charge against Johnnie Johnson was subsequently dropped."],
+         unknown=["No one was ever held criminally responsible for the killing.",
+                  "The full contents of the FBI's contemporaneous investigation into the case were not made public."],
+         unanswered=["What specific evidence and testimony led the all-white jury to acquit Jim Johnson?",
+                     "What became of the FBI's 1948 investigative file on the case?",
+                     "What, if anything, might a modern review of the case establish that was unavailable in 1948?"],
+         extraSources=[src("Georgia Civil Rights Cold Cases Project, Emory University \u2014 case summary",
+                            "https://coldcases.emory.edu/isaiah-nixon/", True),
+                        src("Civil Rights Cold Case Records Review Board \u2014 official case file",
+                            "https://www.coldcaserecords.gov/content/cases/1948-09-08-isaiah-nixon-and-dover-carter/", True)]),
+    dict(id="orangeburg-massacre", caseNumber="031", name="Samuel Hammond, Henry Smith & Delano Middleton",
+         status="unsolved", caseType="homicide", year=1968, age=None, gender="male",
+         city="Orangeburg", county="Orangeburg", state="SC", caseSeries=None,
+         summary="Samuel Hammond Jr., 18, Henry Smith, 18, and Delano Middleton, 17, were shot and killed "
+                 "by South Carolina Highway Patrol officers on the campus of South Carolina State College "
+                 "on the night of February 8, 1968, during the third night of student protests against the "
+                 "segregation of a local bowling alley. Officers fired shotguns loaded with buckshot into a "
+                 "crowd of roughly 200 unarmed students; 27 more were wounded, many shot in the back or "
+                 "through the soles of their feet as they fled. Middleton was a local high school student "
+                 "who had come to the campus to walk his mother, a cafeteria worker, home from work. Nine "
+                 "officers were identified and tried on federal charges of using excessive force; all nine "
+                 "were acquitted. The only person convicted in connection with the events of that week was "
+                 "Cleveland Sellers, a civil rights organizer and one of the wounded, who was convicted of "
+                 "inciting a riot and served time in prison; he received a pardon decades later. The FBI "
+                 "declined to reopen the case when asked in 2007. It is considered the first fatal shooting "
+                 "of student protesters on a U.S. college campus, predating the 1970 Kent State shootings.",
+         known=["The victims' identities, ages, and the February 8, 1968 date and circumstances, per multiple contemporaneous and historical accounts.",
+                "Nine South Carolina Highway Patrol officers were identified and tried on federal excessive-force charges; all nine were acquitted."],
+         unknown=["No officer was ever convicted in the deaths.",
+                  "Which specific officers fired the fatal shots was not conclusively established at trial."],
+         unanswered=["Why did the FBI decline to reopen the case when formally asked to in 2007?",
+                     "What became of the multiple state legislative proposals to formally investigate or compensate the victims' families, none of which passed?",
+                     "What additional documentation, if any, exists in South Carolina state archives regarding the incident?"],
+         extraSources=[src("BlackPast.org \u2014 case summary",
+                            "https://blackpast.org/african-american-history/orangeburg-massacre-1968/", True),
+                        src("Lowcountry Digital History Initiative, College of Charleston \u2014 case summary",
+                            "https://ldhi.library.cofc.edu/exhibits/show/orangeburg-massacre/oburg-intro", True)]),
+    dict(id="henry-marrow", caseNumber="032", name="Henry \"Dickie\" Marrow Jr.",
+         status="unsolved", caseType="homicide", year=1970, age=23, gender="male",
+         city="Oxford", county="Granville", state="NC", caseSeries=None,
+         summary="Henry \"Dickie\" Marrow Jr., 23, an Army veteran, walked to Robert Teel's store in Oxford "
+                 "on the evening of May 11, 1970 to buy a Coca-Cola. When Marrow spoke to a young white "
+                 "woman near the store, Teel and two other family members interpreted it as offensive, "
+                 "chased Marrow into the parking lot, beat him, and shot him; he died the next day. At "
+                 "trial that July, an all-white jury heard eyewitnesses identify Larry Teel as the shooter, "
+                 "but a defense witness, Roger Oakley, unexpectedly testified that he had fired the fatal "
+                 "shot himself, by accident. All three men \u2014 Robert Teel, Larry Teel, and Oakley \u2014 "
+                 "were acquitted on all counts; the prosecutor called the verdict \"absolutely the worst "
+                 "miscarriage of justice I have ever seen.\" The killing and acquittal set off riots and "
+                 "arson in Oxford and led to an 18-month boycott of white-owned businesses, organized by "
+                 "Marrow's cousin Benjamin Chavis, that eventually forced the desegregation of the town's "
+                 "public facilities. The case is the subject of Timothy B. Tyson's book \"Blood Done Sign "
+                 "My Name\" and its 2010 film adaptation.",
+         known=["Victim identity, background, and the May 11\u201312, 1970 date and circumstances, per the DOJ's public case file and extensive contemporaneous and historical reporting.",
+                "Robert Teel, Larry Teel, and Roger Oakley were tried on murder and related charges in July 1970 and acquitted on all counts by an all-white jury."],
+         unknown=["No one was ever convicted in the killing.",
+                  "Which of the men actually fired the fatal shot was disputed at trial and never resolved; eyewitnesses and a defendant's own testimony gave conflicting accounts."],
+         unanswered=["Why did the defense wait until the final day of trial to introduce Oakley's account of firing the fatal shot?",
+                     "What specific findings, if any, came from a DOJ review of the case under the Emmett Till Act?",
+                     "What became of the wrongful-death civil suit Marrow's widow filed against the Teels later in 1970?"],
+         extraSources=[src("U.S. Department of Justice \u2014 case file",
+                            "https://www.justice.gov/crt/case/henry-d-dickie-marrow-jr-deceased", True),
+                        src("North Carolina Department of Natural and Cultural Resources \u2014 case summary",
+                            "https://www.dncr.nc.gov/blog/2016/05/11/1970-oxford-murder-sparked-violent-protests", True)]),
+    dict(id="donna-ann-reason", caseNumber="033", name="Donna Ann Reason",
+         status="unsolved", caseType="homicide", year=1970, age=9, gender="female",
+         city="Chester", county="Delaware", state="PA", caseSeries=None,
+         summary="Donna Ann Reason, 9, was killed just after midnight on May 19, 1970 when someone threw a "
+                 "Molotov cocktail through the living room window of her family's newly purchased home in "
+                 "Chester, setting it ablaze; two of her siblings escaped through an upstairs window, but "
+                 "Donna did not survive the fire. Her parents, Gloria and Robert Reason, were a mixed-race "
+                 "couple living in an integrated neighborhood, though her father told a local newspaper he "
+                 "did not believe the family's race played a role, noting other interracial couples lived "
+                 "nearby. Police told reporters at the time that a nearby home belonging to a district "
+                 "justice of the peace, which officers had been assigned to guard, may have been the "
+                 "attack's actual intended target. A coroner's jury ordered homicide charges against "
+                 "whoever was responsible, but no one was ever charged. The FBI reviewed the case under the "
+                 "Emmett Till Unsolved Civil Rights Crime Act following a referral; the DOJ's Civil Rights "
+                 "Division closed its file in February 2025, stating it found no evidence the crime was "
+                 "racially motivated and that the statute of limitations had run on any federal hate crime "
+                 "charges in any case. A state homicide investigation reportedly remains open.",
+         known=["Victim identity and the May 19, 1970 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+                "The DOJ's 2025 closing file states it found no evidence the attack was racially motivated, and that Pennsylvania has an open state homicide investigation into the case."],
+         unknown=["No one was ever charged in the firebombing.",
+                  "Whether the attack was actually intended for the Reason home or a neighboring home, as police speculated at the time, was never resolved."],
+         unanswered=["What became of the reward fund Donna's father tried to raise for information in the case?",
+                     "What, if anything, has Pennsylvania's ongoing state homicide investigation established in the decades since?",
+                     "What specific evidence did the DOJ's 2025 review examine before concluding a racial motive could not be established?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/media/1408741/dl", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/donna-ann-reason/", True)]),
+    dict(id="elbert-williams", caseNumber="034", name="Elbert Williams",
+         status="unsolved", caseType="homicide", year=1940, age=31, gender="male",
+         city="Brownsville", county="Haywood", state="TN", caseSeries=None,
+         summary="Elbert Williams, 31, a laundry worker and charter member of the NAACP's newly formed "
+                 "Brownsville branch, was abducted from his home on the night of June 20, 1940 by Haywood "
+                 "County Sheriff Samuel \"Tip\" Hunter, along with fellow NAACP member Thomas Davis, and "
+                 "taken to the local jail for questioning about the chapter's activities \u2014 weeks after "
+                 "Williams and other members had attempted, unsuccessfully, to register to vote. Davis was "
+                 "released into a waiting mob but escaped unharmed; Williams was never seen alive again. His "
+                 "mutilated body was pulled from the Hatchie River three days later and buried in an "
+                 "unmarked grave. A six-member, all-white coroner's jury refused to return any indictments, "
+                 "and no cause of death was ever officially determined. In the following months, as many as "
+                 "40 Black families fled Brownsville under threat of violence, Black residents were barred "
+                 "from meeting even for church services, and two more Black men were beaten to death by the "
+                 "same night marshal involved in Williams's abduction; the local NAACP branch dissolved and "
+                 "did not reorganize until 1961. NAACP Special Counsel Thurgood Marshall personally "
+                 "investigated and was sharply critical of the federal government's investigation and its "
+                 "failure to prosecute. Williams is considered the first known NAACP member killed for his "
+                 "civil rights activism, and his killing is regarded as the last documented lynching in "
+                 "Tennessee history. Haywood County reopened a state investigation into the case in 2018.",
+         known=["Victim identity, background, and the June 20\u201323, 1940 timeline, per the DOJ's public case file and the Equal Justice Initiative.",
+                "The DOJ's case file states Sheriff Samuel \"Tip\" Hunter personally abducted Williams from his home; no cause of death was ever officially determined, and no indictments were ever returned."],
+         unknown=["No one was ever charged or convicted in Williams's death.",
+                  "The circumstances of his final three days, between his abduction and the recovery of his body, were never established."],
+         unanswered=["What did Thurgood Marshall's contemporaneous investigation uncover that the official inquiry did not?",
+                     "What has Haywood County's state investigation, reopened in 2018, established since?",
+                     "Why did the FBI decline the family's 2017 request to reopen a federal review, and what specifically did that decision rely on?"],
+         extraSources=[src("U.S. Department of Justice \u2014 case file",
+                            "https://www.justice.gov/crt/case/elbert-williams", True),
+                        src("BlackPast.org \u2014 case summary",
+                            "https://www.blackpast.org/african-american-history/williams-elbert-1908-1940/", True)]),
+    dict(id="eddie-cook", caseNumber="035", name="Eddie Cook",
+         status="unsolved", caseType="homicide", year=1965, age=53, gender="male",
+         city="Detroit", county="Wayne", state="MI", caseSeries=None,
+         summary="Eddie Cook, 53, a city sanitation worker, father of three, and grandfather, was shot in "
+                 "the chest before dawn on November 7, 1965, while walking near his home in midtown "
+                 "Detroit after stopping in the area for coffee. A car carrying four or five white youths "
+                 "pulled alongside and someone inside fired a shotgun blast at him before speeding away; "
+                 "Cook died at the hospital within the hour. Police at the time theorized the shooting may "
+                 "have been retaliation for an unrelated incident earlier that day, or an accidental hit "
+                 "during a fight between rival gangs. Detroit's mayor publicly condemned the killing and "
+                 "Cook's union offered a reward, and homicide detectives logged more than 1,000 "
+                 "investigative hours interviewing dozens of young people who claimed to have information "
+                 "\u2014 but by their own account, none of it led anywhere. No one was ever identified as a "
+                 "suspect, and the DOJ closed its file in 2020 without identifying who fired the shot or "
+                 "who else was in the car.",
+         known=["Victim identity, background, and the November 7, 1965 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+                "The Detroit Police Department's contemporaneous investigation did not identify a suspect, per the same records."],
+         unknown=["No suspect was ever identified in the shooting.",
+                  "Whether the shooting was a case of mistaken identity, gang retaliation, or a racially motivated attack was never conclusively determined."],
+         unanswered=["What became of the more than 1,000 hours of leads Detroit homicide detectives logged without result?",
+                     "Who were the young men interviewed by police who claimed knowledge of the shooting, and why did none of the leads hold up?",
+                     "What did the DOJ's 2020 review find, if anything, beyond the original 1965 investigation?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/eddie-cook-notice-close-file", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/eddie-cook/", True)]),
+    dict(id="lee-edward-culbreath", caseNumber="036", name="Lee Edward Culbreath",
+         status="unsolved", caseType="homicide", year=1965, age=14, gender="male",
+         city="Portland", county="Ashley", state="AR", caseSeries=None,
+         summary="Lee Edward Culbreath, 14, was shot and killed outside a caf\u00e9 in Portland on December "
+                 "5, 1965, while waiting for a friend who had gone to look at a Christmas tree at a nearby "
+                 "store. Ed Vail, a white man who had been drinking heavily with his brother James, fired "
+                 "three shots at Culbreath through the open window of their pickup truck as they drove by; "
+                 "Culbreath was struck once in the chest and managed to run inside the caf\u00e9 before "
+                 "collapsing, dying of internal bleeding. Both brothers were arrested about 20 minutes "
+                 "later at a state trooper's roadblock; troopers testified both men admitted to being Klan "
+                 "members, though both later denied it. Ed Vail was tried, and a jury of eleven white men "
+                 "and one Black man found him guilty of second-degree murder; he was sentenced to 21 years. "
+                 "Arkansas declined to prosecute James Vail the following year, and no charges were ever "
+                 "brought against him. Neither newspaper reports nor the DOJ's later review identified any "
+                 "specific reason for the attack.",
+         known=["Victim identity and the December 5, 1965 date and circumstances, per the DOJ's public case file, the Encyclopedia of Arkansas, and contemporaneous trial coverage.",
+                "Ed Vail was convicted of second-degree murder and sentenced to 21 years; Arkansas declined to prosecute his brother James, who was never charged."],
+         unknown=["No specific motive for the shooting was ever established.",
+                  "James Vail's exact role, beyond driving the truck, was never resolved in court."],
+         unanswered=["Why did Arkansas decline to prosecute James Vail in 1966 despite his arrest and initial murder charge?",
+                     "What became of the .22 revolver FBI analysis confirmed as the murder weapon?",
+                     "What did Ed Vail's own account, that he was too intoxicated to recall being in Portland that day, leave unexplained about the shooting itself?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/lee-edward-culbreath-notice-close-file", True),
+                        src("Encyclopedia of Arkansas \u2014 case summary",
+                            "https://encyclopediaofarkansas.net/entries/lee-edward-culbreath-13888/", True)]),
+    dict(id="james-powell", caseNumber="037", name="James Powell",
+         status="unsolved", caseType="homicide", year=1964, age=15, gender="male",
+         city="New York", county="New York", state="NY", caseSeries=None,
+         summary="James Powell, 15, was shot and killed on East 76th Street in Manhattan on the morning of "
+                 "July 16, 1964, by off-duty NYPD Lieutenant Thomas Gilligan. A building superintendent had "
+                 "sprayed a hose at a group of Black students, including Powell, gathered near a summer "
+                 "school; when Powell followed the superintendent into the building, Gilligan, who was "
+                 "nearby in plainclothes, intervened. Gilligan said Powell lunged at him with a knife and "
+                 "fired three shots, killing him in front of his classmates and roughly a dozen other "
+                 "witnesses; several witnesses said Powell was unarmed, and no knife matching Gilligan's "
+                 "account was recovered at the scene. A grand jury declined to indict Gilligan, who was "
+                 "cleared by the department. The shooting, and the community's outrage over it, set off six "
+                 "consecutive nights of rioting across Harlem and Bedford-Stuyvesant \u2014 one of the "
+                 "first major uprisings of the era.",
+         known=["Victim identity, age, and the July 16, 1964 date and circumstances, per extensive contemporaneous and historical reporting.",
+                "NYPD Lieutenant Thomas Gilligan was identified as the shooter; a grand jury declined to indict him, and he was never charged."],
+         unknown=["No knife matching Gilligan's account of the encounter was ever recovered.",
+                  "Whether Powell posed any actual threat to Gilligan was disputed by eyewitnesses at the time and was never resolved through prosecution."],
+         unanswered=["What specific evidence did the grand jury weigh before declining to indict Gilligan?",
+                     "What became of the building superintendent, Patrick Lynch, whose actions preceded the encounter?",
+                     "What official department review, if any, followed the riots regarding the department's own protocols?"],
+         extraSources=[src("Equal Justice Initiative \u2014 background reference",
+                            "https://eji.org/", True),
+                        src("Rutgers University \u2014 \u201cInside the Harlem Uprising of 1964\u201d",
+                            "https://www.rutgers.edu/news/inside-harlem-uprising-1964", True)]),
+    dict(id="rogers-hamilton", caseNumber="038", name="Rogers Hamilton",
+         status="unsolved", caseType="homicide", year=1957, age=18, gender="male",
+         city="Hayneville", county="Lowndes", state="AL", caseSeries=None,
+         summary="Rogers Hamilton, 18, was abducted from his home near Hayneville at about 1:30 a.m. on "
+                 "October 22, 1957. According to his mother, Beatrice Hamilton, one or two white men drove "
+                 "up in a pickup truck and called Hamilton's name several times; he went outside, spoke "
+                 "with one of the men, then got into the truck with him. His mother followed on foot and "
+                 "watched as the truck stopped a short distance away, where she said a white man standing "
+                 "outside it drew a pistol and shot her son in the face. Some accounts report Hamilton had "
+                 "recently been seen waving at a white girl in town, which relatives believe may have "
+                 "prompted the killing. The Lowndes County sheriff's office investigated but never "
+                 "identified a suspect, and a later reporter found the sheriff had privately dismissed "
+                 "Beatrice Hamilton's eyewitness account as implausible. No one was ever arrested. The DOJ "
+                 "closed its file in 2016, citing the lack of any identified subject and the destruction of "
+                 "the original Lowndes County sheriff's office records.",
+         known=["Victim identity and the October 22, 1957 date and circumstances, per the DOJ's public case file and his mother's eyewitness account.",
+                "No suspect was ever identified, and the original county investigative records were later destroyed, per the same file."],
+         unknown=["No motive for the killing was ever officially confirmed.",
+                  "The identity of the man or men who abducted Hamilton was never established."],
+         unanswered=["What did the FBI's own 1957 report, which reportedly contained additional detail on a possible motive, ultimately conclude?",
+                     "Why did the Lowndes County sheriff dismiss Beatrice Hamilton's direct eyewitness account rather than pursue it as a lead?",
+                     "What became of the original Lowndes County Sheriff's Office investigative records before their destruction?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/case-document/rogers-hamilton-notice-close-file", True),
+                        src("Alabama Reporter \u2014 \u201cRogers Hamilton: No justice for murdered Black teen\u201d",
+                            "https://www.alreporter.com/2025/04/02/rogers-hamilton-no-justice-for-murdered-black-teen/", True)]),
+    dict(id="matthew-williams", caseNumber="039", name="Matthew Williams",
+         status="unsolved", caseType="homicide", year=1931, age=23, gender="male",
+         city="Salisbury", county="Wicomico", state="MD", caseSeries=None,
+         summary="Matthew Williams, 23, a laborer at a local box factory, was lynched by a mob of more "
+                 "than 2,000 people in Salisbury on the evening of December 4, 1931. Earlier that day, "
+                 "Williams's longtime employer, Daniel J. Elliott, was shot dead in his office; Williams "
+                 "was found badly wounded nearby, and the official account at the time held that he had "
+                 "shot Elliott over a wage dispute and then tried to take his own life, though some "
+                 "contemporaries considered it more plausible that Elliott's own son had fired the shots. "
+                 "That evening, while Williams was recovering under police guard at a segregated hospital "
+                 "ward, a mob stormed the building, dragged him from his bed, and threw him from a window "
+                 "into the crowd below. He was hanged from a tree at the courthouse square, his body cut "
+                 "down and dragged through Salisbury's Black neighborhoods behind a car, and then burned; "
+                 "spectators took pieces of his body and the rope as souvenirs. In the same wave of "
+                 "violence, an unidentified Black man was separately killed nearby by members of the same "
+                 "mob. No one was ever identified or prosecuted for either killing. The Justice Department "
+                 "funded a renewed investigation into the case beginning in 2019 under the Emmett Till Act.",
+         known=["Victim identity, background, and the December 4, 1931 date and circumstances, per the Maryland State Archives and extensive contemporary press coverage.",
+                "No one was ever identified or prosecuted for the lynching, per the same records."],
+         unknown=["The circumstances of Elliott's shooting \u2014 whether Williams or Elliott's son fired the fatal shots \u2014 were never resolved.",
+                  "The identity of the second Black man killed by the mob that same night has never been publicly established."],
+         unanswered=["What has the DOJ's Emmett Till Act-funded investigation, opened in 2019, established since?",
+                     "Who was the unidentified second victim killed the same night, and what became of any records of his death?",
+                     "What role, if any, did local law enforcement play in allowing the mob access to the hospital ward?"],
+         extraSources=[src("Maryland State Archives \u2014 biography and case summary",
+                            "https://msa.maryland.gov/megafile/msa/speccol/sc3500/sc3520/013700/013749/html/13749bio.html", True),
+                        src("International Center for Transitional Justice \u2014 case summary",
+                            "https://www.ictj.org/latest-news/ghosts-racial-violence-maryland", True)]),
+    dict(id="carl-hampton", caseNumber="040", name="Carl Hampton",
+         status="unsolved", caseType="homicide", year=1970, age=21, gender="male",
+         city="Houston", county="Harris", state="TX", caseSeries=None,
+         summary="Carl Hampton, 21, founder and chairman of the People's Party II \u2014 a Houston "
+                 "organization modeled on the Black Panther Party \u2014 was shot and killed on the night of "
+                 "July 26, 1970, the tenth day of a standoff between his group and Houston police that had "
+                 "begun after officers were seen harassing a member selling the group's newspaper. Houston "
+                 "police officers, positioned with rifles on the roof of a nearby church, fired on Hampton "
+                 "and others outside the group's headquarters on Dowling Street; Hampton was hit in the "
+                 "stomach and chest and died at the hospital hours later. Police said the shooting was in "
+                 "self-defense, responding to gunfire from the headquarters; community members and later "
+                 "researchers disputed that account, and the circumstances remain contested. A Harris "
+                 "County grand jury declined to indict any of the officers involved.",
+         known=["Victim identity, role, and the July 26, 1970 date and circumstances, per multiple contemporaneous and historical accounts.",
+                "A Harris County grand jury reviewed the shooting in late 1970 and declined to indict any of the officers involved."],
+         unknown=["Who fired first has never been independently established; police and community accounts directly conflict.",
+                  "Which specific officers fired the fatal shots was not made public."],
+         unanswered=["What evidence did the grand jury weigh in declining to indict, and has that record ever been made public?",
+                     "What became of the claim, raised by community sources at the time, that a reporter present on the church roof assisted in identifying Hampton before the shooting?",
+                     "What internal HPD records, if any, survive from the ten-day standoff that preceded the shooting?"],
+         extraSources=[src("Houston Chronicle \u2014 \u201cRemembering Houston's Black Panthers\u201d",
+                            "https://www.houstonchronicle.com/local/gray-matters/article/The-Black-Panthers-The-original-Black-Lives-6833943.php", True),
+                        src("Liberation News \u2014 case summary",
+                            "https://liberationnews.org/black-liberation-leader-commemorated-52-years-after-assassination-by-houston-police/", True)]),
+    dict(id="lester-mitchell", caseNumber="041", name="Lester Mitchell",
+         status="unsolved", caseType="homicide", year=1966, age=None, gender="male",
+         city="Dayton", county="Montgomery", state="OH", caseSeries=None,
+         summary="Lester Mitchell, a West Dayton business owner, was shot in the face with a shotgun just "
+                 "after 3 a.m. on September 1, 1966, while sweeping the sidewalk outside his bar on West "
+                 "Fifth Street. Witnesses said a red car pulled up and a white man fired from inside it "
+                 "before driving off; accounts differed on whether one man or several were involved. "
+                 "Mitchell was taken to the hospital, where he later died of his wounds. The killing, in a "
+                 "city where discriminatory housing policy had crowded some 60,000 Black residents into a "
+                 "segregated west side with underfunded schools and city services, triggered one of the "
+                 "worst riots in Dayton's history; Ohio's governor deployed roughly 1,000 National "
+                 "Guardsmen, who remained in the city for five days. Months later, Dayton's police chief "
+                 "told reporters an informant had identified the shooter as a man who had since died in an "
+                 "unrelated shootout, but a retired detective who later reexamined the case found little "
+                 "evidence police had done much to confirm that account. No one was ever charged.",
+         known=["Victim identity, background, and the September 1, 1966 date and circumstances, per extensive contemporaneous and historical reporting.",
+                "No one was ever arrested or charged in the killing, per the same reporting."],
+         unknown=["The identity of the shooter, and whether one or more people were in the car, was never confirmed.",
+                  "Whether the police chief's later claim that an informant identified a (by then deceased) suspect was ever meaningfully investigated remains disputed."],
+         unanswered=["What specific evidence, if any, supported the informant's claim that the shooter had died in an unrelated shootout?",
+                     "What became of the retired detective's later re-investigation of the case?",
+                     "What police records survive from the original 1966 investigation?"],
+         extraSources=[src("Dayton Daily News \u2014 \u201cLasting Scars: the 1966 Dayton riot\u201d",
+                            "https://www.daytondailynews.com/news/lasting-scars-the-1966-dayton-riot-and-west-dayton-today/fROse29JYZcC9roAMSpqfK/", True),
+                        src("BlackPast.org \u2014 case summary",
+                            "https://blackpast.org/african-american-history/the-1966-dayton-ohio-uprising/", True)]),
+    dict(id="timothy-thomas", caseNumber="042", name="Timothy Thomas",
+         status="unsolved", caseType="homicide", year=2001, age=19, gender="male",
+         city="Cincinnati", county="Hamilton", state="OH", caseSeries=None,
+         summary="Timothy Thomas, 19, was shot and killed by Cincinnati Police Officer Stephen Roach in a "
+                 "dark alley in the Over-the-Rhine neighborhood in the early hours of April 7, 2001, while "
+                 "fleeing on foot from officers attempting to arrest him on a series of misdemeanor traffic "
+                 "warrants. Thomas was unarmed; Roach said he believed Thomas was reaching for a weapon. "
+                 "Thomas was the fifteenth Black man to die in a confrontation with Cincinnati police since "
+                 "1995, and his death set off three nights of rioting, the city's worst racial unrest since "
+                 "1968, with hundreds arrested. A grand jury indicted Roach on misdemeanor charges of "
+                 "negligent homicide and obstructing official business; at a bench trial that September, a "
+                 "judge acquitted him on both counts, ruling the shooting was a reasonable split-second "
+                 "reaction to a dangerous situation. Roach remained a police officer for years afterward.",
+         known=["Victim identity and the April 7, 2001 date and circumstances, per extensive contemporaneous news coverage and court records.",
+                "Officer Stephen Roach was identified, indicted on misdemeanor charges, and acquitted of both at a September 2001 bench trial."],
+         unknown=["Whether Thomas made a threatening movement, as Roach claimed, was disputed and never independently confirmed.",
+                  "The grand jury's specific reasoning for returning only misdemeanor charges, rather than more serious ones, was not made public."],
+         unanswered=["What did the Collaborative Agreement reforms that followed the riots ultimately change about Cincinnati policing in practice?",
+                     "What became of the broader pattern-or-practice concerns the incident raised about the department?",
+                     "What, if anything, has the city or department done since to revisit the case?"],
+         extraSources=[src("The Washington Post \u2014 \u201cOfficer Is Acquitted in Killing That Led to Riots in Cincinnati\u201d",
+                            "https://www.washingtonpost.com/archive/politics/2001/09/27/officer-is-acquitted-in-killing-that-led-to-riots-in-cincinnati/a678d262-f020-4766-998d-d1f27eed6e3b/", True),
+                        src("IAED Journal \u2014 case retrospective",
+                            "https://www.iaedjournal.org/officer-involved-project", True)]),
 ]
+
+# Slug (and thus filename, cases/<slug>.html) for each named case series. Any
+# case whose caseSeries matches a key here gets linked into that series page;
+# order here controls display order in nav links and the left panel.
+SERIES_SLUGS = {
+    "Freeway Phantom": "freeway-phantom",
+    "Silver Dollar Group": "silver-dollar-group",
+}
 
 for c in CASES:
     c["sources"] = c.pop("extraSources", []) + DEFAULT_SOURCES()
@@ -481,7 +1237,7 @@ def footer_html(depth):
       <ul>
         <li><a href="{r}index.html">Dashboard</a></li>
         <li><a href="{r}cases/index.html">Case Index</a></li>
-        <li><a href="{r}cases/freeway-phantom.html">Freeway Phantom Series</a></li>
+        {"".join(f'<li><a href="{r}cases/{SERIES_SLUGS[name]}.html">{html.escape(name)} Series</a></li>' for name in SERIES_SLUGS if any(c.get("caseSeries") == name for c in CASES))}
         {doc_links}
       </ul>
     </div>
@@ -549,6 +1305,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 {body}
 {consent_banner_html(depth)}
 <script src="{r}js/cases-data.js"></script>
+<script src="{r}js/us-states-paths.js"></script>
 <script src="{r}js/main.js"></script>
 </body>
 </html>'''
@@ -556,13 +1313,22 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 # ---------------------------------------------------------------------------
 # Left panel (Case Files)
 # ---------------------------------------------------------------------------
+def series_nav_links(r):
+    """Renders one 'Series Name →' link per distinct case series actually
+    present in CASES, in SERIES_SLUGS order, so this scales automatically
+    as more series get added — never needs a manual per-series edit here."""
+    present = [name for name in SERIES_SLUGS if any(c.get("caseSeries") == name for c in CASES)]
+    return "\n".join(
+        f'<a href="{r}cases/{SERIES_SLUGS[name]}.html">{html.escape(name)} \u2192</a>' for name in present
+    )
+
 def left_panel(depth, active_id=None):
     r = rel(depth)
     items = []
     for c in CASES:
         current = ' aria-current="page"' if c["id"] == active_id else ""
         search_blob = f'{c["name"]} {c.get("city") or ""} {c.get("state") or ""} {c["year"]}'
-        is_series = "true" if c.get("caseSeries") == "Freeway Phantom" else "false"
+        is_series = "true" if c.get("caseSeries") else "false"
         items.append(f'''<li class="pl-item" data-case-item data-case-id="{c['id']}" data-status="{c['status']}" data-case-type="{c.get('caseType') or ''}" data-series-flag="{is_series}" data-search="{html.escape(search_blob)}">
   <a href="{r}cases/{c['id']}.html"{current}>{html.escape(c['name'])}<span class="pi-meta">{c['caseNumber']} \u00b7 {c['year']} \u00b7 {STATUS_LABEL.get(c['status'],'').upper()}</span></a>
 </li>''')
@@ -580,7 +1346,7 @@ def left_panel(depth, active_id=None):
     <button class="pl-chip" aria-pressed="false" data-filter="cold">Cold Case</button>
     <button class="pl-chip" aria-pressed="false" data-filter="series">Case Series</button>
   </div>
-  <div class="pl-series-link"><a href="{r}cases/freeway-phantom.html">Freeway Phantom \u2192</a></div>
+  <div class="pl-series-link">{series_nav_links(r)}</div>
   <div class="pl-list-head">Recent Cases</div>
   <ul class="pl-list">
     {items_html}
@@ -778,11 +1544,74 @@ def build_freeway_phantom():
     write("cases/freeway-phantom.html", page_shell("The Freeway Phantom", "Series page for the six Freeway Phantom cases, Washington D.C., 1971-1972.", depth, body,
           canonical_path="cases/freeway-phantom.html", og_image="og/freeway-phantom.png", og_type="article"))
 
+def build_silver_dollar_group():
+    depth = 1
+    victims = [c for c in CASES if c.get("caseSeries") == "Silver Dollar Group"]
+    cards = "\n".join(
+        f'<a class="related-card" href="{v["id"]}.html"><span class="rc-name">{html.escape(v["name"])}</span>'
+        f'<span class="rc-meta">{v["year"]} \u00b7 AGE {v["age"] or "N/A"}</span></a>' for v in victims)
+    body = f'''{top_header(depth)}
+<div class="app-shell">
+  {left_panel(depth)}
+  <section class="panel-board area-board">
+    <div class="board-head">
+      <div>
+        <span class="board-file-no">CASE SERIES</span>
+        <h1>The Silver Dollar Group</h1>
+      </div>
+    </div>
+    <div style="padding:20px;">
+      <p>The Silver Dollar Group was a secretive Klan cell formed around 1964 at the Shamrock Motor Hotel
+      in Vidalia, Louisiana, reportedly by Raleigh Jackson "Red" Glover out of frustration that existing
+      Klan groups in the area were not violent enough. Members, estimated at ten to twenty, each carried a
+      silver dollar as a mark of identification. The group operated across Concordia Parish, Louisiana and
+      Adams County, Mississippi \u2014 the Natchez\u2013Ferriday area \u2014 roughly between 1964 and 1967,
+      and retired FBI agents have since confirmed its existence and its suspected role in a string of
+      unsolved killings and bombings in the region, including the three cases documented here. Glover died
+      in 1984 without ever being charged.</p>
+      <div class="callout warn"><strong>Disclaimer:</strong> This page summarizes publicly reported
+      information, including named subjects and suspects from official DOJ case files, for research and
+      awareness. It does not itself accuse any individual of a crime beyond what those official records
+      state, and does not claim new evidence.</div>
+      <h2 style="margin-top:24px;">Documented Victims</h2>
+      <div class="related-grid" style="margin-top:12px;">{cards}</div>
+    </div>
+  </section>
+  <aside class="panel-profile area-profile">
+    <div class="pp-head">Series Profile</div>
+    <div class="pp-grid">
+      <div class="pp-row"><span class="label">Status</span><span class="status-badge status-unsolved">Unsolved</span></div>
+      <div class="pp-row"><span class="label">Cases in Series</span><span class="value">{len(victims)}</span></div>
+      <div class="pp-row"><span class="label">Span</span><span class="value">1964&ndash;1967</span></div>
+      <div class="pp-row"><span class="label">Location</span><span class="value">Concordia Parish, LA &amp; Adams County, MS</span></div>
+    </div>
+  </aside>
+  <aside class="panel-sources area-sources">
+    <div class="pp-head">Source Records</div>
+    {source_records_html({"sources": DEFAULT_SOURCES()})}
+    <div class="last-verified"><strong>Last Verified:</strong> NOT YET VERIFIED</div>
+    <div class="archive-note">&ldquo;{ARCHIVE_NOTE}&rdquo;</div>
+  </aside>
+  <section class="panel-questions area-questions">
+    <details class="pq-details" open>
+      <summary class="pq-head">Unanswered Questions</summary>
+      <div class="pq-list">
+        <div class="pq-item">What is the complete membership of the Silver Dollar Group, and how many were ever formally investigated?</div>
+        <div class="pq-item">What connection, if any, links this group to the 1965 car bombing of George Metcalfe, who survived and is not documented as a standalone case in this archive?</div>
+        <div class="pq-item">What undisclosed FBI informant material, if any, remains in the Bureau's files on the group?</div>
+      </div>
+    </details>
+  </section>
+</div>
+{footer_html(depth)}'''
+    write("cases/silver-dollar-group.html", page_shell("The Silver Dollar Group", "Series page linking three cases in this archive to a Klan cell active in Concordia Parish, Louisiana and Adams County, Mississippi, 1964-1967.", depth, body,
+          canonical_path="cases/silver-dollar-group.html", og_image="og/silver-dollar-group.png", og_type="article"))
+
 def build_case_index():
     depth = 1
     grid_cards = "\n".join(
         f'<a class="related-card" data-case-item data-case-id="{c["id"]}" data-status="{c["status"]}" data-case-type="{c.get("caseType") or ""}" '
-        f'data-series-flag="{"true" if c.get("caseSeries")=="Freeway Phantom" else "false"}" '
+        f'data-series-flag="{"true" if c.get("caseSeries") else "false"}" '
         f'data-search="{html.escape(c["name"] + " " + (c.get("city") or "") + " " + (c.get("state") or "") + " " + str(c["year"]))}" '
         f'href="{c["id"]}.html"><span class="rc-name">{html.escape(c["name"])}</span>'
         f'<span class="rc-meta">{c["year"]} \u00b7 {STATUS_LABEL.get(c["status"],"").upper()}</span></a>' for c in CASES)
@@ -813,6 +1642,10 @@ def build_home():
     total = len(CASES)
     unsolved_ct = sum(1 for c in CASES if c["status"] in ("unsolved", "missing_persons"))
     span = f'{min(c["year"] for c in CASES)}\u2013{max(c["year"] for c in CASES)}'
+    series_present = [name for name in SERIES_SLUGS if any(c.get("caseSeries") == name for c in CASES)]
+    series_tracked_str = ", ".join(
+        f'{name} ({sum(1 for c in CASES if c.get("caseSeries") == name)} cases)' for name in series_present
+    )
     latest = latest_case()
     excerpt = latest.get("summary") or ""
     if len(excerpt) > 220:
@@ -834,7 +1667,7 @@ def build_home():
     <div class="overview-card"><span class="num">{total}</span><span class="cap">Cases Documented</span></div>
     <div class="overview-card"><span class="num">{unsolved_ct}</span><span class="cap">Unsolved / Missing</span></div>
     <div class="overview-card"><span class="num">{span}</span><span class="cap">Span of Cases</span></div>
-    <div class="overview-card"><span class="num">1</span><span class="cap">Case Series Tracked</span></div>
+    <div class="overview-card"><span class="num">{len(series_present)}</span><span class="cap">Case Series Tracked</span></div>
   </div>
   <div style="padding:0 20px 24px;">
     <p>This archive organizes publicly reported information on unsolved cases involving Black victims. It
@@ -863,7 +1696,7 @@ def build_home():
     <div class="pp-grid">
       <div class="pp-row"><span class="label">Scope</span><span class="value">Unsolved homicides &amp; missing-persons cases involving Black victims</span></div>
       <div class="pp-row"><span class="label">Method</span><span class="value">Public-record research only</span></div>
-      <div class="pp-row"><span class="label">Series Tracked</span><span class="value">Freeway Phantom (6 cases)</span></div>
+      <div class="pp-row"><span class="label">Series Tracked</span><span class="value">{series_tracked_str}</span></div>
     </div>
   </aside>
   <aside class="panel-sources area-sources">
@@ -1039,7 +1872,10 @@ def build_privacy():
     body = f'''<p><em>Placeholder policy &mdash; review with counsel before publishing.</em></p>
     <h2>What we collect</h2>
     <ol>
-      <li>Information you voluntarily submit through the Submit a Tip form.</li>
+      <li>Nothing at this time via the Submit a Tip form &mdash; it is currently a static template not
+      connected to any backend, so information entered into it is not transmitted, stored, or collected
+      anywhere. This section will be updated to describe what is collected and how it is handled once (and
+      if) the form is connected to a live submission service.</li>
       <li>Basic, aggregated site-usage data if analytics are added (none are included by default).</li>
       <li>Cookies set by third-party advertising and analytics providers, described below.</li>
     </ol>
@@ -1074,6 +1910,120 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-08-25", case_id="lester-mitchell",
+         text="New case added to the archive: Lester Mitchell (Dayton, Ohio, 1966), sourced from the "
+              "Dayton Daily News and BlackPast.org. This is the first Ohio case documented in the "
+              "archive."),
+    dict(date="2026-08-25", case_id="timothy-thomas",
+         text="New case added to the archive: Timothy Thomas (Cincinnati, Ohio, 2001), sourced from The "
+              "Washington Post and the IAED Journal's case retrospective."),
+    dict(date="2026-08-25", case_id="matthew-williams",
+         text="New case added to the archive: Matthew Williams (Salisbury, Maryland, 1931), sourced from "
+              "the Maryland State Archives and the International Center for Transitional Justice. This is "
+              "the first Maryland case documented in the archive."),
+    dict(date="2026-08-25", case_id="carl-hampton",
+         text="New case added to the archive: Carl Hampton (Houston, Texas, 1970), sourced from the "
+              "Houston Chronicle and Liberation News."),
+    dict(date="2026-08-25", case_id="james-powell",
+         text="New case added to the archive: James Powell (Manhattan, New York, 1964), sourced from "
+              "extensive contemporaneous and historical reporting on the Harlem riot of 1964. This is the "
+              "first New York case documented in the archive."),
+    dict(date="2026-08-25", case_id="rogers-hamilton",
+         text="New case added to the archive: Rogers Hamilton (Hayneville, Alabama, 1957), sourced from "
+              "the DOJ's 2016 Notice to Close File and Alabama Reporter's 2025 investigative follow-up."),
+    dict(date="2026-08-25", case_id="eddie-cook",
+         text="New case added to the archive: Eddie Cook (Detroit, Michigan, 1965), sourced from the DOJ's "
+              "2020 Notice to Close File and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary. This is "
+              "the first Michigan case documented in the archive."),
+    dict(date="2026-08-25", case_id="lee-edward-culbreath",
+         text="New case added to the archive: Lee Edward Culbreath (Portland, Arkansas, 1965), sourced "
+              "from the DOJ's 2019 Notice to Close File and the Encyclopedia of Arkansas."),
+    dict(date="2026-08-25", case_id="elbert-williams",
+         text="New case added to the archive: Elbert Williams (Brownsville, Tennessee, 1940), sourced from "
+              "the DOJ's Civil Rights Division case file and BlackPast.org. This is the first Tennessee "
+              "case documented in the archive, and the earliest case tied to formal NAACP civil rights "
+              "organizing."),
+    dict(date="2026-08-25", case_id="henry-marrow",
+         text="New case added to the archive: Henry \u201cDickie\u201d Marrow Jr. (Oxford, North Carolina, "
+              "1970), sourced from the DOJ's Civil Rights Division case file and the North Carolina "
+              "Department of Natural and Cultural Resources. This is the first North Carolina case "
+              "documented in the archive."),
+    dict(date="2026-08-25", case_id="donna-ann-reason",
+         text="New case added to the archive: Donna Ann Reason (Chester, Pennsylvania, 1970), sourced from "
+              "the DOJ's February 2025 Notice to Close File and PBS FRONTLINE's \u201cUn(re)solved\u201d "
+              "case summary. This is the first Pennsylvania case documented in the archive."),
+    dict(date="2026-08-25", case_id="isaiah-nixon",
+         text="New case added to the archive: Isaiah Nixon (Alston, Georgia, 1948), sourced from the "
+              "Georgia Civil Rights Cold Cases Project at Emory University and the federal Civil Rights "
+              "Cold Case Records Review Board. This is the first Georgia case documented in the archive."),
+    dict(date="2026-08-25", case_id="orangeburg-massacre",
+         text="New case added to the archive: Samuel Hammond, Henry Smith & Delano Middleton (Orangeburg, "
+              "South Carolina, 1968), sourced from BlackPast.org and the Lowcountry Digital History "
+              "Initiative. This is the first South Carolina case documented in the archive."),
+    dict(date="2026-08-24", case_id="frank-morris",
+         text="Expanded the case summary with detail from the DOJ's Notice to Close File: the file names "
+              "four Silver Dollar Group members \u2014 E.D. Morace, Tommie Lee Jones, Thor Lee Torgersen, "
+              "and James Lee Scarborough \u2014 identified by FBI informants, and links this case to the "
+              "same Klan cell as Wharlest Jackson Sr. and Joseph Edwards. Previously this connection was "
+              "not named."),
+    dict(date="2026-08-24", case_id="john-allen",
+         text="New case added to the archive: John Allen (Des Moines, Iowa, 1864), sourced from Iowa "
+              "Unsolved Murders: Historic Cases, drawing on contemporary newspaper accounts and an 1898 "
+              "county history. This is the first Iowa case documented in the archive."),
+    dict(date="2026-08-24", case_id="nicholas-a-brown",
+         text="New case added to the archive: Nicholas A. Brown (Davenport, Iowa, 2021), sourced from the "
+              "Iowa Attorney General's office and the Quad-City Times."),
+    dict(date="2026-08-24", case_id="brandon-mcclelland",
+         text="New case added to the archive: Brandon McClelland (Paris, Texas, 2008), sourced from "
+              "contemporaneous news reporting and court records. This is currently the most recent case "
+              "documented in the archive after Alonzo Brooks (2004), filling a gap in the archive's "
+              "1970s\u20132000s coverage."),
+    dict(date="2026-08-24", case_id="claude-neal",
+         text="New case added to the archive: Claude Neal (Greenwood, Florida, 1934), sourced from the "
+              "DOJ's Civil Rights Division case file and Explore Southern History. This is currently the "
+              "earliest case documented in the archive."),
+    dict(date="2026-08-24", case_id="samuel-oquinn",
+         text="New case added to the archive: Samuel O'Quinn (Centreville, Mississippi, 1959), sourced "
+              "from the DOJ's 2012 Notice to Close File and PBS FRONTLINE's \u201cUn(re)solved\u201d case "
+              "summary."),
+    dict(date="2026-08-24", case_id="willie-edwards-jr",
+         text="New case added to the archive: Willie Edwards Jr. (Montgomery, Alabama, 1957), sourced "
+              "from the DOJ's Civil Rights Division case file and its 2013 Notice to Close File."),
+    dict(date="2026-08-24", case_id="isadore-banks",
+         text="New case added to the archive: Isadore Banks (Marion, Arkansas, 1954), sourced from the "
+              "DOJ's Civil Rights Division case file and the Encyclopedia of Arkansas."),
+    dict(date="2026-08-24", case_id="mack-charles-parker",
+         text="New case added to the archive: Mack Charles Parker (Poplarville, Mississippi, 1959), "
+              "sourced from PBS FRONTLINE's \u201cUn(re)solved\u201d case summary and Mississippi Today."),
+    dict(date="2026-08-24", case_id="joseph-edwards",
+         text="New case added to the archive: Joseph Edwards (Vidalia, Louisiana, 1964), sourced from the "
+              "DOJ's Civil Rights Division case file and its 2013 Notice to Close File."),
+    dict(date="2026-08-24", case_id="louis-allen",
+         text="New case added to the archive: Louis Allen (Liberty, Mississippi, 1964), sourced from the "
+              "DOJ's Civil Rights Division case file and its 2015 Notice to Close File."),
+    dict(date="2026-08-24", case_id="oneal-moore",
+         text="New case added to the archive: Oneal Moore (Varnado, Louisiana, 1965), sourced from the "
+              "DOJ's Civil Rights Division case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case "
+              "summary."),
+    dict(date="2026-08-24", case_id="clifton-walker",
+         text="New case added to the archive: Clifton Walker (Woodville, Mississippi, 1964), sourced from "
+              "the DOJ's Civil Rights Division case file and its 2013 Notice to Close File."),
+    dict(date="2026-08-24", case_id="johnnie-mae-chappell",
+         text="New case added to the archive: Johnnie Mae Chappell (Jacksonville, Florida, 1964), sourced "
+              "from the DOJ's 2014 Notice to Close File and PBS FRONTLINE's \u201cUn(re)solved\u201d case "
+              "summary."),
+    dict(date="2026-08-24", case_id="wharlest-jackson-sr",
+         text="New case added to the archive: Wharlest Jackson Sr. (Natchez, Mississippi, 1967), sourced "
+              "from the DOJ's Civil Rights Division case file and PBS FRONTLINE's \u201cAmerican "
+              "Reckoning.\u201d"),
+    dict(date="2026-08-24", case_id="frank-morris",
+         text="New case added to the archive: Frank Morris (Ferriday, Louisiana, 1964), sourced from the "
+              "DOJ's Civil Rights Division case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case "
+              "summary."),
+    dict(date="2026-08-24", case_id="george-lee",
+         text="New case added to the archive: Rev. George Lee (Belzoni, Mississippi, 1955), sourced from "
+              "the DOJ's Civil Rights Division case file and the Southern Poverty Law Center's case "
+              "summary."),
     dict(date="2026-08-22", case_id="harry-and-harriette-moore",
          text="Added a verified, public-domain photograph of Harry T. Moore, sourced directly from the "
               "State Archives of Florida (Florida Memory). No verified photograph of Harriette Moore "
@@ -1203,6 +2153,7 @@ if __name__ == "__main__":
     build_updates()
     build_case_index()
     build_freeway_phantom()
+    build_silver_dollar_group()
     for c in CASES:
         build_case_page(c)
     build_404()

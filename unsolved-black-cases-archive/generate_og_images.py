@@ -100,20 +100,21 @@ def case_card_html(c):
     </div>
     {photo_html(c)}
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def generic_card_html(eyebrow, title, tagline):
     return f'''<html><head><style>{CARD_CSS}</style></head><body>
-  <div class="brand"><div class="monogram">UBCA</div><div class="brand-name">UNSOLVED BLACK CASES ARCHIVE</div></div>
-  <div class="main-row">
-    <div class="text-col">
-      <div class="eyebrow">{html.escape(eyebrow)}</div>
-      <div class="case-name" style="font-size:56px;">{html.escape(title)}</div>
-      <div class="tagline">{html.escape(tagline)}</div>
-    </div>
+  <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; flex:1; text-align:center;">
+    <div style="width:120px; height:120px; border:3px solid #b3202f; border-radius:12px;
+                background:rgba(179,32,47,0.12); display:flex; align-items:center; justify-content:center;
+                font-family:'DejaVu Sans Mono', monospace; font-size:38px; font-weight:700; color:#d43d4c;
+                margin-bottom:28px;">UBCA</div>
+    <div style="font-family:'DejaVu Sans Mono', monospace; font-size:34px; letter-spacing:6px; font-weight:700;
+                color:#ece9e4; margin-bottom:14px;">UNSOLVED BLACK CASES ARCHIVE</div>
+    <div style="font-size:24px; color:#9c9b9d; max-width:700px; line-height:1.4;">{html.escape(tagline)}</div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def freeway_phantom_html():
@@ -129,7 +130,23 @@ def freeway_phantom_html():
       </div>
     </div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
+</body></html>'''
+
+def silver_dollar_group_html():
+    return f'''<html><head><style>{CARD_CSS}</style></head><body>
+  <div class="brand"><div class="monogram">UBCA</div><div class="brand-name">UNSOLVED BLACK CASES ARCHIVE</div></div>
+  <div class="main-row">
+    <div class="text-col">
+      <div class="eyebrow">Case Series</div>
+      <div class="case-name">The Silver Dollar Group</div>
+      <div class="meta-row">
+        <span class="badge unsolved">Unsolved</span>
+        <span class="meta-text">1964\u20131967 \u00b7 Concordia Parish, LA &amp; Adams County, MS \u00b7 3 victims</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
 </body></html>'''
 
 def main():
@@ -147,6 +164,12 @@ def main():
         page.set_content(freeway_phantom_html())
         page.wait_for_timeout(150)
         out = os.path.join(ROOT, "og", "freeway-phantom.png")
+        page.screenshot(path=out)
+        print("wrote", os.path.relpath(out, ROOT))
+
+        page.set_content(silver_dollar_group_html())
+        page.wait_for_timeout(150)
+        out = os.path.join(ROOT, "og", "silver-dollar-group.png")
         page.screenshot(path=out)
         print("wrote", os.path.relpath(out, ROOT))
 

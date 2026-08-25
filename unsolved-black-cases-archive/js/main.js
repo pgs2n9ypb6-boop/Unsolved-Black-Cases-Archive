@@ -449,11 +449,10 @@
   }
 
   // ---------------------------------------------------------------------
-  // Interactive US state grid map. A "tile grid" layout (each state a
-  // clickable square, positioned to approximate its real geography) rather
-  // than a traced geographic SVG — this needs no external map data or API,
-  // stays perfectly crisp at any size, and every state (including small
-  // ones like DC and RI) gets an equally easy-to-click target.
+  // Interactive US map: real state shapes (SVG path data from
+  // window.__US_STATE_PATHS__, see js/us-states-paths.js), not an abstract
+  // grid. Clicking a highlighted state opens a small popup right at that
+  // state showing its case names, rather than a separate panel below.
   // ---------------------------------------------------------------------
   var STATE_NAMES = {
     AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -468,16 +467,7 @@
     TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia",
     WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming"
   };
-  // [row, column] on a 12-col grid, approximating true position.
-  var STATE_GRID = {
-    ME: [1, 12], WA: [3, 1], MT: [3, 3], ND: [3, 4], MN: [3, 5], WI: [3, 7],
-    VT: [2, 10], NH: [2, 11], NY: [3, 10], MA: [3, 11],
-    ID: [4, 2], WY: [4, 3], SD: [4, 4], IA: [4, 5], IL: [4, 6], MI: [4, 7], PA: [4, 9], NJ: [4, 10], CT: [4, 11], RI: [4, 12],
-    OR: [5, 1], NV: [5, 2], UT: [5, 3], CO: [5, 4], NE: [5, 5], MO: [5, 6], IN: [5, 7], OH: [5, 8], WV: [5, 9], VA: [5, 10], MD: [5, 11], DE: [5, 12],
-    CA: [6, 2], AZ: [6, 3], NM: [6, 4], KS: [6, 5], AR: [6, 6], KY: [6, 7], TN: [6, 8], NC: [6, 9], SC: [6, 10], DC: [6, 11],
-    OK: [7, 5], LA: [7, 6], MS: [7, 7], AL: [7, 8], GA: [7, 9],
-    AK: [8, 1], HI: [8, 2], TX: [8, 5], FL: [8, 10]
-  };
+  var MAP_VIEWBOX = "0 0 959 593";
 
   function stateCode(name) {
     if (!name) return null;
@@ -488,9 +478,11 @@
     return trimmed.toUpperCase();
   }
 
-  function renderMap() {
-    var host = document.getElementById("view-map");
+  function renderMap(containerId) {
+    var host = document.getElementById(containerId || "view-map");
     if (!host || host.getAttribute("data-built") === "true") return;
+    var paths = window.__US_STATE_PATHS__;
+    if (!paths) return;
     loadCases().then(function (cases) {
       var byState = {};
       cases.forEach(function (c) {
@@ -499,64 +491,106 @@
         (byState[code] = byState[code] || []).push(c);
       });
 
-      var tiles = Object.keys(STATE_GRID).map(function (code) {
-        var pos = STATE_GRID[code];
+      var svgPaths = Object.keys(paths).map(function (code) {
         var count = (byState[code] || []).length;
-        var cls = "state-tile" + (count ? " has-cases" : " empty");
-        return '<button type="button" class="' + cls + '" data-state-code="' + code + '" ' +
-          'style="grid-row:' + pos[0] + '; grid-column:' + pos[1] + ';" ' +
-          'aria-pressed="false"' + (count ? "" : " disabled") + '>' +
-          '<span class="st-code">' + code + '</span>' +
-          (count ? '<span class="st-count">' + count + '</span>' : '') +
-          '</button>';
+        var cls = count ? "has-cases" : "";
+        var name = STATE_NAMES[code] || code;
+        return '<path d="' + paths[code] + '" class="' + cls + '" data-state-code="' + code + '" ' +
+          (count ? 'tabindex="0" role="button" aria-label="' + escapeHtml(name) + ', ' + count + (count === 1 ? ' case' : ' cases') + '"' : 'aria-hidden="true"') +
+          '></path>';
       }).join("");
 
       host.innerHTML =
-        '<div class="map-note">Click a highlighted state to see its cases. Grid position approximates real ' +
-        'geography; every state \u2014 including small ones like D.C. \u2014 gets an equally easy target to tap.</div>' +
-        '<div class="state-grid-wrap">' +
-        '<div class="state-grid-scroll"><div class="state-grid">' + tiles + '</div></div>' +
-        '<div class="state-detail" id="state-detail" aria-live="polite"></div>' +
+        '<div class="map-note">Click a highlighted state to see its cases.</div>' +
+        '<div class="us-map-wrap">' +
+        '<svg class="us-map-svg" viewBox="' + MAP_VIEWBOX + '" xmlns="http://www.w3.org/2000/svg">' + svgPaths + '</svg>' +
+        '<div class="map-popup" id="map-popup-' + (containerId || "view-map") + '" aria-live="polite"></div>' +
         '</div>';
       host.setAttribute("data-built", "true");
 
-      var detail = document.getElementById("state-detail");
-      var tileEls = host.querySelectorAll(".state-tile[data-state-code]");
+      var wrap = host.querySelector(".us-map-wrap");
+      var svg = host.querySelector(".us-map-svg");
+      var popup = host.querySelector(".map-popup");
+      var stateEls = host.querySelectorAll(".us-map-svg path[data-state-code]");
+      var activeCode = null;
 
-      function showState(code) {
-        tileEls.forEach(function (t) {
-          t.setAttribute("aria-pressed", t.getAttribute("data-state-code") === code ? "true" : "false");
-        });
-        var list = byState[code] || [];
-        if (!list.length) { detail.classList.remove("open"); return; }
-        detail.innerHTML =
-          '<div class="sd-head">' +
-          '<span>' + escapeHtml(STATE_NAMES[code] || code) + ' \u2014 ' + list.length + (list.length === 1 ? ' case' : ' cases') + '</span>' +
-          '<button type="button" class="sd-close" aria-label="Close">\u00d7</button>' +
-          '</div>' +
-          '<div class="related-grid">' + list.map(caseCardHtml).join("") + '</div>';
-        // Two-step class toggle (off, then on next frame) so CSS transitions
-        // actually animate in, rather than jumping straight to the open state.
-        detail.classList.remove("open");
-        requestAnimationFrame(function () { detail.classList.add("open"); });
-        detail.querySelector(".sd-close").addEventListener("click", function () {
-          detail.classList.remove("open");
-          tileEls.forEach(function (t) { t.setAttribute("aria-pressed", "false"); });
-        });
+      function closePopup() {
+        popup.classList.remove("open");
+        stateEls.forEach(function (p) { p.classList.remove("active"); });
+        activeCode = null;
       }
 
-      tileEls.forEach(function (tile) {
-        tile.addEventListener("click", function () {
-          var code = tile.getAttribute("data-state-code");
-          var alreadyOpen = tile.getAttribute("aria-pressed") === "true";
-          if (alreadyOpen) {
-            detail.classList.remove("open");
-            tileEls.forEach(function (t) { t.setAttribute("aria-pressed", "false"); });
-          } else {
-            showState(code);
+      function openPopupFor(pathEl, code) {
+        var list = byState[code] || [];
+        if (!list.length) return;
+        stateEls.forEach(function (p) { p.classList.remove("active"); });
+        pathEl.classList.add("active");
+        activeCode = code;
+
+        var items = list.map(function (c) {
+          var meta = [c.year, c.status].filter(Boolean).join(" \u00b7 ");
+          return '<li><a href="' + rootPrefix + 'cases/' + c.id + '.html">' + escapeHtml(c.name) +
+            '<span class="mp-meta">' + escapeHtml(meta.toUpperCase()) + '</span></a></li>';
+        }).join("");
+        popup.innerHTML =
+          '<div class="mp-head"><span>' + escapeHtml(STATE_NAMES[code] || code) + ' \u2014 ' + list.length +
+          (list.length === 1 ? ' case' : ' cases') + '</span>' +
+          '<button type="button" class="mp-close" aria-label="Close">\u00d7</button></div>' +
+          '<ul class="mp-list">' + items + '</ul>';
+
+        // Position the popup at the clicked state's on-screen centroid using
+        // getBBox (SVG-space) mapped through the SVG's current CTM, so it
+        // lands in the right place at any zoom/viewport size. Then clamp to
+        // the map's own bounds so states near an edge (e.g. Washington on a
+        // narrow phone screen) never push the popup off-screen — the arrow
+        // shifts to compensate so it still points at the actual state.
+        var bbox = pathEl.getBBox();
+        var cx = bbox.x + bbox.width / 2;
+        var cy = bbox.y;
+        var pt = svg.createSVGPoint();
+        pt.x = cx; pt.y = cy;
+        var screenPt = pt.matrixTransform(pathEl.getScreenCTM());
+        var wrapRect = wrap.getBoundingClientRect();
+        var targetX = screenPt.x - wrapRect.left;
+        var targetY = screenPt.y - wrapRect.top;
+
+        popup.style.left = targetX + "px";
+        popup.style.top = Math.max(targetY, 24) + "px";
+        var popupWidth = popup.getBoundingClientRect().width || 220;
+        var margin = 8;
+        var halfWidth = popupWidth / 2;
+        var minCenter = halfWidth + margin;
+        var maxCenter = wrapRect.width - halfWidth - margin;
+        var clampedX = Math.min(Math.max(targetX, minCenter), maxCenter);
+        var arrowOffset = targetX - clampedX;
+        var maxArrowOffset = halfWidth - 14;
+        arrowOffset = Math.min(Math.max(arrowOffset, -maxArrowOffset), maxArrowOffset);
+        popup.style.left = clampedX + "px";
+        popup.style.setProperty("--arrow-offset", arrowOffset + "px");
+
+        popup.classList.remove("open");
+        requestAnimationFrame(function () { popup.classList.add("open"); });
+        popup.querySelector(".mp-close").addEventListener("click", closePopup);
+      }
+
+      stateEls.forEach(function (pathEl) {
+        var code = pathEl.getAttribute("data-state-code");
+        if (!(byState[code] || []).length) return;
+        pathEl.addEventListener("click", function () {
+          if (activeCode === code) { closePopup(); } else { openPopupFor(pathEl, code); }
+        });
+        pathEl.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            if (activeCode === code) { closePopup(); } else { openPopupFor(pathEl, code); }
           }
         });
       });
+
+      document.addEventListener("click", function (e) {
+        if (!wrap.contains(e.target)) closePopup();
+      });
+      window.addEventListener("resize", closePopup);
     });
   }
 
@@ -571,5 +605,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     initBoard();
     initArchiveViews();
+    // Homepage map renders immediately (not behind a tab, unlike the Case
+    // Index's Map view) — it's a no-op if #home-map isn't on the page.
+    renderMap("home-map");
   });
 })();
