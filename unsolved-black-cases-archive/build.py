@@ -42,6 +42,7 @@ ARCHIVE_NOTE = ("This archive summarizes publicly available information and does
 NAV_DOCS = [
     ("About", "about.html"),
     ("Archive Statistics", "statistics.html"),
+    ("Cold Case Quiz", "quiz.html"),
     ("How We Research", "research.html"),
     ("Corrections & Updates", "updates.html"),
     ("Resources", "resources.html"),
@@ -1169,6 +1170,198 @@ CASES = [
                      "What connection, if any, exists between this case and the similar unsolved 1918 lynching of Edward Woodson in the same county?"],
          extraSources=[src("WyoHistory.org \u2014 \u201cA Lynching in Rock Springs\u201d",
                             "https://www.wyohistory.org/encyclopedia/lynching-rock-springs", True)]),
+    dict(id="tulsa-race-massacre", caseNumber="047", name="Tulsa Race Massacre",
+         status="unsolved", caseType="homicide", year=1921, age=None, gender=None,
+         city="Tulsa", county="Tulsa", state="OK", caseSeries=None,
+         summary="On May 31 and June 1, 1921, a white mob of up to 10,000 people attacked Greenwood, "
+                 "Tulsa's prosperous Black district known as \u201cBlack Wall Street,\u201d in what the "
+                 "DOJ's own 2025 review called a \u201ccoordinated, military-style attack\u201d rather than "
+                 "spontaneous mob violence. As many as 300 residents were killed and more than 1,200 homes, "
+                 "businesses, schools, and churches were burned; survivors were rounded up and held in "
+                 "internment camps, and insurance companies later denied claims under \u201criot "
+                 "clause\u201d exclusions. City officials claimed at the time that only 36 people had died; "
+                 "historians have since estimated the toll at 75 to 300, and unmarked mass graves "
+                 "identified in Tulsa in recent years are still being excavated and their occupants "
+                 "identified. The Justice Department's Civil Rights Division formally reviewed the massacre "
+                 "under the Emmett Till Unsolved Civil Rights Crime Act and released a 120-plus page report "
+                 "in January 2025 \u2014 the federal government's first official accounting of the event "
+                 "\u2014 finding that the Tulsa Police Department, the Tulsa County sheriff, the Oklahoma "
+                 "National Guard, and then-Mayor T.D. Evans each played a role, either through direct "
+                 "participation or by failing to act. The report also found that federal investigative "
+                 "reports written within days of the massacre in 1921 were apparently never evaluated by "
+                 "any prosecutor. No one was ever charged, and the DOJ concluded that no avenue for "
+                 "prosecution remains today.",
+         known=["The massacre's May 31\u2013June 1, 1921 date and scope, per the DOJ's 2025 Civil Rights Division review.",
+                "The DOJ's report found the Tulsa Police Department, county sheriff, National Guard, and mayor each played a role, and that no federal prosecutor is known to have evaluated investigative reports written in 1921; no one was ever charged."],
+         unknown=["The exact death toll has never been established; estimates range from 75 to as many as 300, and unmarked mass graves are still being excavated and identified.",
+                  "Why federal reports written within days of the massacre were apparently never evaluated by any prosecutor at the time was never explained in any surviving record."],
+         unanswered=["What further identifications will ongoing mass grave excavations in Tulsa establish?",
+                     "What became of the individual insurance claims Black Tulsans filed and were denied?",
+                     "What, if anything, might further public records requests reveal about the 1921 federal investigative reports the DOJ says were never acted on?"],
+         extraSources=[src("U.S. Department of Justice, Civil Rights Division \u2014 \u201cReview and Evaluation: Tulsa Race Massacre\u201d",
+                            "https://www.justice.gov/crt/media/1383756/dl", True),
+                        src("Associated Press \u2014 case report on the DOJ's findings",
+                            "https://www.yahoo.com/news/federal-probe-1921-tulsa-race-223155119.html", True)]),
+    dict(id="john-henry-james", caseNumber="048", name="John Henry James",
+         status="unsolved", caseType="homicide", year=1898, age=None, gender="male",
+         city="Charlottesville", county="Albemarle", state="VA", caseSeries=None,
+         summary="John Henry James was lynched at Wood's Crossing outside Charlottesville on July 12, 1898, "
+                 "the day after Julia Hotopp, a white woman, reported being assaulted near her family's "
+                 "estate. James was arrested the same day and, given fears for his safety, was being "
+                 "transported by train toward a jail in Staunton when a mob of about 150 people stopped the "
+                 "train and seized him. He was hanged from a locust tree and his body was shot repeatedly. A "
+                 "coroner's jury found only that James \u201ccame to his death by the hands of persons "
+                 "unknown.\u201d A grand jury then took the unusual step of posthumously indicting the dead "
+                 "man for the assault, a charge he was never able to answer in life. That indictment stood "
+                 "on the books for 125 years until Albemarle County's prosecutor asked a circuit court to "
+                 "dismiss it; a judge did so on July 12, 2023, the anniversary of James's death. In 2019, "
+                 "Charlottesville-area residents collected soil from the lynching site as part of the Equal "
+                 "Justice Initiative's national memorial project.",
+         known=["Victim identity and the July 11\u201312, 1898 date and circumstances, per Encyclopedia Virginia.",
+                "The coroner's jury found James's killers were \u201cpersons unknown\u201d; the posthumous indictment against James himself was formally dismissed in 2023, per the same source and contemporaneous reporting."],
+         unknown=["No one involved in the lynching was ever identified or charged.",
+                  "The underlying assault allegation against James was never tested in any court during his lifetime."],
+         unanswered=["What, if any, surviving Albemarle County records document the mob's composition or planning?",
+                     "What prompted the original grand jury's decision to posthumously indict a man it knew was already dead?",
+                     "What further local reckoning, if any, has followed the 2023 dismissal of the indictment?"],
+         extraSources=[src("Encyclopedia Virginia \u2014 \u201cThe Lynching of John Henry James (1898)\u201d",
+                            "https://encyclopediavirginia.org/entries/lynching-of-john-henry-james-1898-the/", True)]),
+    dict(id="james-t-scott", caseNumber="049", name="James T. Scott",
+         status="unsolved", caseType="homicide", year=1923, age=None, gender="male",
+         city="Columbia", county="Boone", state="MO", caseSeries=None,
+         summary="James T. Scott, a World War I veteran, firefighter, and janitor at the University of "
+                 "Missouri, was lynched from Stewart Bridge in Columbia in the early hours of April 29, "
+                 "1923, in front of more than a thousand onlookers. He had been arrested a week earlier "
+                 "after Regina Almstedt, the 14-year-old daughter of a university professor, identified him "
+                 "as the man who assaulted her on the same bridge, though two white coworkers were prepared "
+                 "to testify that Scott had been working alongside them at the time of the attack. A mob "
+                 "used a blowtorch to break into his jail cell while police and county officials looked on "
+                 "without intervening by force, then hanged him. The night he died, Scott named his "
+                 "cellmate, Ollie Watson, as the actual attacker; bloodhounds had independently tracked a "
+                 "scent from the crime scene to where Watson normally parked, and Watson was separately "
+                 "found to have raped another girl the week before the Almstedt assault. A grand jury "
+                 "indicted five men suspected of leading the mob, but only one, George Barkwell, was tried; "
+                 "despite eyewitness testimony from two student journalists that they saw him push Scott "
+                 "from the bridge, a jury acquitted Barkwell after eleven minutes of deliberation, and "
+                 "charges against the other four men were dropped the same day.",
+         known=["Victim identity, background, and the April 28\u201329, 1923 date and circumstances, per the State Historical Society of Missouri.",
+                "George Barkwell was tried for murder and acquitted; charges against four other indicted men were dropped the same day, per the same source."],
+         unknown=["No one was ever convicted in Scott's killing.",
+                  "Whether Scott or his cellmate Ollie Watson actually assaulted Regina Almstedt was never resolved in any court, though contemporaneous evidence pointed toward Watson."],
+         unanswered=["Why did Columbia police and county officials decline to use force against the mob despite being present throughout the night?",
+                     "What became of Ollie Watson after Scott's death?",
+                     "What specific evidence led the grand jury to indict five men, when only one was ultimately tried?"],
+         extraSources=[src("State Historical Society of Missouri \u2014 \u201cThe Lynching of James T. Scott\u201d",
+                            "https://missouriencyclopedia.org/events/scott-james-t", True)]),
+    dict(id="george-tompkins", caseNumber="050", name="George Tompkins",
+         status="unsolved", caseType="homicide", year=1922, age=19, gender="male",
+         city="Indianapolis", county="Marion", state="IN", caseSeries=None,
+         summary="George Tompkins, 19, left his aunt and uncle's Indianapolis home on the morning of March "
+                 "16, 1922, and never returned; his body was found that afternoon hanging from a sapling in "
+                 "what is now Riverside Park, his hands tied behind his back. Marion County Coroner Dr. Paul "
+                 "Robinson examined the body and told reporters at the time that \u201cthere could be no "
+                 "question that the man had been murdered and his body then tied to the tree,\u201d and that "
+                 "Tompkins was \u201cdead or almost dead when he was hanged.\u201d Despite this, and despite "
+                 "initial police reports treating the death as a lynching, detectives reversed course two "
+                 "days later; the word \u201chomicide\u201d on the death certificate was crossed out in "
+                 "pencil and \u201csuicide\u201d written in its place, and no further investigation followed. "
+                 "Tompkins had never been accused of any crime, and no motive for his killing was ever "
+                 "established. He was buried in an unmarked grave. In March 2022, a century after his "
+                 "death, the Indiana Remembrance Coalition petitioned Marion County to review the case; "
+                 "Deputy Chief Coroner Alfie McGinty formally corrected Tompkins's manner of death to "
+                 "homicide, and a historical marker was later placed at the site where his body was found.",
+         known=["Victim identity and the March 16, 1922 date and circumstances, per the Indiana Remembrance Coalition and the original coroner's contemporaneous statement to the press.",
+                "Marion County formally corrected Tompkins's death certificate from suicide to homicide in March 2022, per multiple news organizations that covered the correction."],
+         unknown=["No one was ever arrested or charged in Tompkins's death.",
+                  "No motive for the killing was ever established, and Tompkins was never accused of any crime."],
+         unanswered=["Who altered Tompkins's death certificate from homicide to suicide two days after his death, and why?",
+                     "What became of the original 1922 police investigation records, if they survive?",
+                     "What further review, if any, might a modern homicide investigation of the case yield?"],
+         extraSources=[src("CNN \u2014 case report on the 2022 death certificate correction",
+                            "https://www.cnn.com/2022/03/16/us/lynching-victim-george-tompkins-death-indiana-homicide/index.html", True),
+                        src("Wikipedia \u2014 \u201cLynching of George Tompkins\u201d, background reference",
+                            "https://en.wikipedia.org/wiki/Lynching_of_George_Tompkins", True)]),
+    dict(id="george-white", caseNumber="051", name="George White",
+         status="unsolved", caseType="homicide", year=1903, age=24, gender="male",
+         city="Wilmington", county="New Castle", state="DE", caseSeries=None,
+         summary="George White, 24, a Black farm laborer, was arrested June 16, 1903 and accused of "
+                 "killing Helen Bishop, a white woman, near Wilmington. He denied any involvement and was "
+                 "held at the New Castle County Workhouse to await a September trial. Two lynch mobs "
+                 "attempted to abduct him from the workhouse within a week of his arrest, and on June 21 a "
+                 "local white pastor, Robert Elwood, urged a crowd to carry out swift vengeance rather than "
+                 "wait for the courts. The following night, a mob of thousands stormed the workhouse and "
+                 "seized White; he was taken to Price's Corner, tied to a stake, and burned to death on "
+                 "June 23 in front of a crowd variously estimated at several hundred to several thousand "
+                 "people, some of whom took pieces of his remains afterward. No one was ever convicted. It "
+                 "is generally regarded as the only documented lynching in Delaware's history. A state "
+                 "historical marker was dedicated at the site in 2019 after a local high school student's "
+                 "research prompted the Delaware Public Archives to install it; the marker was stolen that "
+                 "August and replaced two months later.",
+         known=["Victim identity, background, and the June 16\u201323, 1903 date and circumstances, per the Delaware Public Archives' official historical marker.",
+                "No one was ever convicted in the lynching, per the same source; a state historical marker commemorating the case was dedicated in 2019."],
+         unknown=["The identities of individual mob participants were never prosecuted despite widespread contemporary knowledge of who was involved.",
+                  "The full circumstances of Helen Bishop's death, and White's actual connection to it, were never tested in any court."],
+         unanswered=["What became of Pastor Robert Elwood after being called before the New Castle Presbytery for his role in inciting the mob?",
+                     "Why did Delaware's courts decline to move White's trial date earlier despite the escalating risk to his life?",
+                     "What further documentation, if any, survives regarding the two earlier attempts to lynch White before June 23?"],
+         extraSources=[src("Delaware Public Archives \u2014 official historical marker text",
+                            "https://archives.delaware.gov/delaware-historical-markers/the-lynching-of-george-white/", True),
+                        src("Equal Justice Initiative \u2014 case summary",
+                            "https://calendar.eji.org/racial-injustice/jun/23", True)]),
+    dict(id="preston-porter-jr", caseNumber="052", name="Preston Porter Jr.",
+         status="unsolved", caseType="homicide", year=1900, age=15, gender="male",
+         city="Limon", county="Lincoln", state="CO", caseSeries=None,
+         summary="Preston Porter Jr., 15, was burned to death by a mob near Limon on November 16, 1900. "
+                 "Porter, his father, and his brother had come to Colorado from Kansas earlier that year for "
+                 "railroad work; after an 11-year-old white girl, Louise Frost, was found murdered near "
+                 "Limon on November 8, the three were stopped and arrested on suspicion while passing "
+                 "through Denver, despite no evidence connecting them to the crime. Held for four days under "
+                 "coercive interrogation, Porter confessed after being told his father and brother would "
+                 "likely be lynched if he did not. As he was being transported by train toward the county "
+                 "jail, an armed mob stopped the train at Limon \u2014 which was not a scheduled stop \u2014 "
+                 "and removed him over the protests of the deputy escorting him. Several hundred spectators, "
+                 "some arriving by train from Denver and Colorado Springs, gathered to watch as the mob "
+                 "chained Porter to a railroad stake and burned him alive. A coroner's inquest concluded he "
+                 "died \u201cat the hands of parties unknown,\u201d despite extensive newspaper coverage that "
+                 "identified mob participants by name. No one was ever charged.",
+         known=["Victim identity, background, and the November 8\u201316, 1900 date and circumstances, per History Colorado and the Colorado Encyclopedia.",
+                "A coroner's inquest concluded Porter's death came at the hands of \u201cparties unknown\u201d despite press coverage naming mob participants; no one was ever charged, per the same sources."],
+         unknown=["Whether Porter's coerced confession bore any relationship to the actual circumstances of Louise Frost's death was never tested in any court.",
+                  "The identities of the mob members who stopped the train and carried out the killing, though reported by name in contemporary newspapers, were never formally prosecuted."],
+         unanswered=["What became of the newspaper accounts that reportedly named mob participants, and why did the coroner's inquest not act on them?",
+                     "What happened to Porter's father and brother after they left Colorado following the lynching?",
+                     "What role, if any, did the deputy escorting Porter face for failing to prevent the train from being stopped?"],
+         extraSources=[src("History Colorado \u2014 \u201cA Lynching in Limon\u201d",
+                            "https://www.historycolorado.org/lost-highways/2022/01/18/lynching-limon", True),
+                        src("Colorado Encyclopedia \u2014 case summary",
+                            "https://coloradoencyclopedia.org/article/preston-porter-jr", True)]),
+    dict(id="samuel-johnson", caseNumber="053", name="Samuel Johnson (\u201cMingo Jack\u201d)",
+         status="unsolved", caseType="homicide", year=1886, age=66, gender="male",
+         city="Eatontown", county="Monmouth", state="NJ", caseSeries=None,
+         summary="Samuel Johnson, 66, a former slave known locally as \u201cMingo Jack\u201d for his years as "
+                 "a jockey, was lynched in Eatontown on the night of March 5, 1886, hours after being "
+                 "arrested on a rape accusation. Constable Hermann Liebenthal arrested Johnson at his home "
+                 "that afternoon, then told people around town he wouldn't be surprised if Johnson were "
+                 "lynched before morning, and went home to sleep. That night, a mob of as many as 75 men "
+                 "broke into the jail, beat Johnson severely, and lynched him; a medical examiner concluded "
+                 "he had likely died from the beating before the hanging itself. At the coroner's inquest, "
+                 "ninety witnesses testified, and the prosecutor, James Steen, pursued the case despite "
+                 "being threatened with death \u2014 eliciting testimony suggesting Johnson probably was not "
+                 "the rapist at all, since witnesses placed him elsewhere and the accuser's description of "
+                 "the attacker's clothing didn't match his. Six men were eventually arrested in connection "
+                 "with the lynching; all were released on bail and never prosecuted. Two later confessions "
+                 "to the underlying rape, given years apart by different men, left the identity of the "
+                 "actual attacker unresolved. Johnson's killing is described as the first lynching in New "
+                 "Jersey since the Revolutionary War. A historical marker was dedicated at the site in 2022.",
+         known=["Victim identity, background, and the March 5, 1886 date and circumstances, per research by local historian Gary Saretzky, published by the New Jersey Social Justice Remembrance Committee.",
+                "Six men were arrested in connection with the lynching but released on bail and never prosecuted, per the same source; inquest testimony suggested Johnson was likely not the actual rapist."],
+         unknown=["No one was ever convicted in Johnson's killing.",
+                  "The identity of the man who actually assaulted Angelina Herbert was never conclusively established, despite two later, conflicting confessions from other men."],
+         unanswered=["What became of the two men, Joseph Anderson and William Kelly, who fled to New York before they could be arrested?",
+                     "Why did authorities release all six arrested men on bail without ever bringing the case to trial?",
+                     "What did the coroner's rebuke of the local newspaper editor for condoning mob violence lead to, if anything?"],
+         extraSources=[src("New Jersey Social Justice Remembrance Committee \u2014 \u201cThe Murder of Mingo Jack\u201d by Gary Saretzky",
+                            "https://www.njremembrance.org/about/the-murder-of-mingo-jack", True)]),
 ]
 
 # Slug (and thus filename, cases/<slug>.html) for each named case series. Any
@@ -1408,6 +1601,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/cases-data.js"></script>
 <script src="{r}js/us-states-paths.js"></script>
 <script src="{r}js/main.js"></script>
+<script src="{r}js/quiz.js"></script>
 </body>
 </html>'''
 
@@ -1471,7 +1665,7 @@ def profile_panel(c):
     series_row = f'''<div class="pp-row"><span class="label">Case Series</span><span class="value">{html.escape(c["caseSeries"])}</span></div>''' if c.get("caseSeries") else ""
     age_row = f'''<div class="pp-row"><span class="label">Age</span><span class="value">{c["age"]}</span></div>''' if c.get("age") is not None else ""
     case_type = CASE_TYPE_LABEL.get(c.get("caseType")) or na(c.get("caseType"), upper=True)
-    return f'''<aside class="panel-profile area-profile">
+    return f'''<aside class="panel-profile area-profile" id="case-profile">
   <div class="pp-head">Case Profile</div>
   <div class="pp-grid">
     <div class="pp-row"><span class="label">Status</span><span class="status-badge status-{c['status']}">{STATUS_LABEL.get(c['status'],'Unsolved')}</span></div>
@@ -1485,7 +1679,7 @@ def profile_panel(c):
 </aside>'''
 
 def sources_panel(c):
-    return f'''<aside class="panel-sources area-sources">
+    return f'''<aside class="panel-sources area-sources" id="case-sources">
   <div class="pp-head">Source Records</div>
   {source_records_html(c)}
   <div class="last-verified"><strong>Last Verified:</strong> {c['lastVerified'] or 'NOT YET VERIFIED'}</div>
@@ -1495,7 +1689,7 @@ def sources_panel(c):
 
 def questions_panel(c):
     items = "\n".join(f'<div class="pq-item">{html.escape(q)}</div>' for q in c.get("unanswered", []))
-    return f'''<section class="panel-questions area-questions">
+    return f'''<section class="panel-questions area-questions" id="case-questions">
   <details class="pq-details" open>
     <summary class="pq-head">Unanswered Questions</summary>
     <div class="pq-list">
@@ -1559,10 +1753,16 @@ def build_case_page(c):
   <div class="related-grid">{cards}</div>
 </section>'''
 
+    jump_nav = '''<nav class="case-jump-nav" aria-label="Jump to section">
+    <a href="#case-board">Summary</a>
+    <a href="#case-profile">Profile</a>
+    <a href="#case-sources">Sources</a>
+    <a href="#case-questions">Unanswered Questions</a>
+  </nav>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth, active_id=c["id"])}
-  <section class="panel-board area-board">
+  <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
         <span class="board-file-no">CASE FILE #{c['caseNumber']}</span>
@@ -1570,6 +1770,7 @@ def build_case_page(c):
       </div>
       {board_toolbar()}
     </div>
+    {jump_nav}
     <div class="board-viewport">
       <div class="board-canvas">
         <svg class="connectors"></svg>
@@ -1776,6 +1977,35 @@ def build_home():
     from the Case Files panel, or open the full <a href="cases/index.html">Case Index</a> to search by
     timeline or location.</p>
   </div>'''
+    recent_n = 6
+    recent_cases = sorted(CASES, key=lambda c: c["caseNumber"], reverse=True)[:recent_n]
+    recent_cards = "\n".join(
+        f'<a class="related-card" href="cases/{c["id"]}.html"><span class="rc-name">{html.escape(c["name"])}</span>'
+        f'<span class="rc-meta">{c["year"]} \u00b7 {location_str(c)}</span></a>' for c in recent_cases)
+    recent_section = f'''<div style="padding:4px 20px 26px;">
+    <h2 style="margin-bottom:4px;">Recently Added</h2>
+    <p style="margin-bottom:16px; font-size:.88rem;">The {recent_n} most recently documented cases in this archive.</p>
+    <div class="related-grid">{recent_cards}</div>
+  </div>'''
+
+    decade_buckets = {}
+    for c in CASES:
+        decade_buckets.setdefault((c["year"] // 10) * 10, []).append(c)
+    decade_blocks = []
+    for decade in sorted(decade_buckets, reverse=True):
+        cases_in_decade = sorted(decade_buckets[decade], key=lambda c: c["year"])
+        cards = "\n".join(
+            f'<a class="related-card" href="cases/{c["id"]}.html"><span class="rc-name">{html.escape(c["name"])}</span>'
+            f'<span class="rc-meta">{c["year"]} \u00b7 {location_str(c)}</span></a>' for c in cases_in_decade)
+        decade_blocks.append(f'''<details class="pq-details">
+      <summary class="pq-head">{decade}s <span style="color:var(--text-faint); text-transform:none; letter-spacing:0;">&mdash; {len(cases_in_decade)} case{"s" if len(cases_in_decade) != 1 else ""}</span></summary>
+      <div class="related-grid" style="margin-top:10px;">{cards}</div>
+    </details>''')
+    decade_section = f'''<div style="padding:4px 20px 26px;">
+    <h2 style="margin-bottom:4px;">Browse by Decade</h2>
+    <p style="margin-bottom:16px; font-size:.88rem;">Open a decade to see the cases documented from that period.</p>
+    <div style="display:flex; flex-direction:column; gap:8px;">{"".join(decade_blocks)}</div>
+  </div>'''
     map_section = '''<div style="padding:4px 20px 26px;">
     <h2 style="margin-bottom:4px;">Browse by State</h2>
     <p style="margin-bottom:16px; font-size:.88rem;">Click a highlighted state to jump straight to its cases.</p>
@@ -1789,7 +2019,9 @@ def build_home():
       <div><span class="board-file-no">DASHBOARD</span><h1>Archive Overview</h1></div>
     </div>
     <div style="padding:20px 20px 0;">{featured}</div>
+    {recent_section}
     {map_section}
+    {decade_section}
     {overview}
   </section>
   <aside class="panel-profile area-profile">
@@ -1872,11 +2104,11 @@ def build_about():
     write("about.html", page_shell("About", "Mission and scope of the archive.", depth, doc_page(depth, "About", "About the Archive", body), canonical_path="about.html"))
 
 STATE_NAMES = {
-    "AL": "Alabama", "AR": "Arkansas", "DC": "Washington, D.C.", "FL": "Florida", "GA": "Georgia",
-    "IA": "Iowa", "IL": "Illinois", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
-    "MD": "Maryland", "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi", "NC": "North Carolina",
-    "NE": "Nebraska", "NY": "New York", "OH": "Ohio", "PA": "Pennsylvania",
-    "SC": "South Carolina", "TN": "Tennessee", "TX": "Texas", "WA": "Washington",
+    "AL": "Alabama", "AR": "Arkansas", "CO": "Colorado", "DC": "Washington, D.C.", "DE": "Delaware", "FL": "Florida", "GA": "Georgia",
+    "IA": "Iowa", "IL": "Illinois", "IN": "Indiana", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
+    "MD": "Maryland", "MI": "Michigan", "MN": "Minnesota", "MO": "Missouri", "MS": "Mississippi", "NC": "North Carolina",
+    "NE": "Nebraska", "NJ": "New Jersey", "NY": "New York", "OH": "Ohio", "OK": "Oklahoma", "PA": "Pennsylvania",
+    "SC": "South Carolina", "TN": "Tennessee", "TX": "Texas", "VA": "Virginia", "WA": "Washington",
     "WV": "West Virginia", "WY": "Wyoming",
 }
 
@@ -1958,6 +2190,19 @@ def build_statistics():
     notice a discrepancy, use the <a href="submit.html">Submit a Case or Tip</a> page to flag it.</div>'''
     write("statistics.html", page_shell("Archive Statistics", f"Data and figures computed from the {total} cases currently documented in this archive.", depth,
           doc_page(depth, "Data", "Archive Statistics", body), canonical_path="statistics.html"))
+
+def build_quiz():
+    depth = 0
+    body = f'''<p>A short, self-scoring quiz about the <strong>legal system</strong> around cases like the
+    ones in this archive &mdash; not about any individual victim. Every answer here is grounded in facts
+    encountered while researching the {len(CASES)} cases documented on this site.</p>
+    <form id="quiz-form"></form>
+    <p id="quiz-result" class="quiz-result" hidden></p>
+    <div class="callout" style="margin-top:24px;">Get something wrong here? That's the point of the quiz,
+    not a flaw in it &mdash; most of these facts run against what people assume about how "cold case" review
+    actually works.</div>'''
+    write("quiz.html", page_shell("Civil Rights Cold Case Quiz", "A short quiz about the legal history and process behind civil rights cold case review \u2014 the Emmett Till Act, statutes of limitations, and what case closure actually means.", depth,
+          doc_page(depth, "Learn", "Civil Rights Cold Case Quiz", body), canonical_path="quiz.html"))
 
 def build_research():
     depth = 0
@@ -2099,6 +2344,37 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-08-25", case_id="samuel-johnson",
+         text="New case added to the archive: Samuel Johnson, known as \u201cMingo Jack\u201d (Eatontown, New "
+              "Jersey, 1886), sourced from research by local historian Gary Saretzky, published by the New "
+              "Jersey Social Justice Remembrance Committee. This is the first New Jersey case documented "
+              "in the archive."),
+    dict(date="2026-08-25", case_id="george-white",
+         text="New case added to the archive: George White (Wilmington, Delaware, 1903), sourced from "
+              "the Delaware Public Archives' official historical marker and the Equal Justice Initiative. "
+              "This is the first Delaware case documented in the archive, and is generally regarded as the "
+              "only documented lynching in the state's history."),
+    dict(date="2026-08-25", case_id="preston-porter-jr",
+         text="New case added to the archive: Preston Porter Jr. (Limon, Colorado, 1900), sourced from "
+              "History Colorado and the Colorado Encyclopedia. This is the first Colorado case documented "
+              "in the archive."),
+    dict(date="2026-08-25", case_id="james-t-scott",
+         text="New case added to the archive: James T. Scott (Columbia, Missouri, 1923), sourced from the "
+              "State Historical Society of Missouri. This is the first Missouri case documented in the "
+              "archive."),
+    dict(date="2026-08-25", case_id="george-tompkins",
+         text="New case added to the archive: George Tompkins (Indianapolis, Indiana, 1922), sourced from "
+              "CNN and Wikipedia. This is the first Indiana case documented in the archive; his death "
+              "certificate was formally corrected from suicide to homicide in 2022."),
+    dict(date="2026-08-25", case_id="tulsa-race-massacre",
+         text="New case added to the archive: Tulsa Race Massacre (Tulsa, Oklahoma, 1921), sourced from "
+              "the DOJ Civil Rights Division's January 2025 review and evaluation, released under the "
+              "Emmett Till Unsolved Civil Rights Crime Act. This is the first Oklahoma case documented in "
+              "the archive, and represents an estimated 75 to 300 victims rather than a single named "
+              "individual."),
+    dict(date="2026-08-25", case_id="john-henry-james",
+         text="New case added to the archive: John Henry James (Charlottesville, Virginia, 1898), sourced "
+              "from Encyclopedia Virginia. This is the first Virginia case documented in the archive."),
     dict(date="2026-08-25", case_id="duluth-lynchings",
          text="New case added to the archive: Elias Clayton, Elmer Jackson & Isaac McGhie (Duluth, "
               "Minnesota, 1920), sourced from the Minnesota Historical Society and Smithsonian Magazine. "
@@ -2348,6 +2624,7 @@ if __name__ == "__main__":
     build_home()
     build_about()
     build_statistics()
+    build_quiz()
     build_research()
     build_resources()
     build_submit()

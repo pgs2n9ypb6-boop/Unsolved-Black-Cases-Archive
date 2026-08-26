@@ -208,6 +208,19 @@ p:last-child{ margin-bottom:0; }
   background:rgba(179,32,47,0.1); border-left-color:var(--crimson-bright); color:var(--text);
 }
 .pl-item .pi-meta{ display:block; font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-top:2px; }
+
+/* Case page jump-nav — lets a visitor skip straight to Profile / Sources /
+   Unanswered Questions instead of scrolling, most useful on mobile where
+   those sections stack vertically. scroll-margin-top keeps the sticky
+   header from covering the target section after a jump. */
+.case-jump-nav{ display:flex; flex-wrap:wrap; gap:8px; padding:12px 20px 4px; }
+.case-jump-nav a{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px;
+}
+.case-jump-nav a:hover{ border-color:var(--crimson); color:var(--text); }
+#case-board, #case-profile, #case-sources, #case-questions{ scroll-margin-top:calc(var(--header-h) + 12px); }
 .pl-series-link{ margin:8px 8px 4px; display:flex; flex-direction:column; gap:6px; }
 .pl-series-link a{
   display:block; padding:9px 10px; border:1px dashed var(--border-strong); border-radius:2px;
@@ -240,7 +253,7 @@ p:last-child{ margin-bottom:0; }
 .bt-btn:hover{ color:var(--text); }
 .bt-btn[aria-pressed="true"]{ color:#fff; background:var(--cyan); border-color:var(--cyan); }
 
-.board-viewport{ flex:1; overflow:auto; position:relative; min-height:420px; }
+.board-viewport{ flex:1; overflow:auto; position:relative; min-height:420px; touch-action:none; }
 .board-canvas{
   position:relative; min-height:640px; min-width:100%; transform-origin:0 0;
   padding:32px;
@@ -252,7 +265,7 @@ p:last-child{ margin-bottom:0; }
   position:relative; width:238px;
   background:var(--panel); border:1px solid var(--border-strong); border-radius:2px;
   padding:13px 14px 14px; box-shadow:0 10px 24px rgba(0,0,0,0.35);
-  cursor:grab; user-select:none;
+  cursor:grab; user-select:none; touch-action:none;
 }
 .board-card:active{ cursor:grabbing; }
 .board-card.hub{ border-color:rgba(212,61,76,0.5); box-shadow:0 0 0 1px rgba(212,61,76,0.15), 0 12px 28px rgba(0,0,0,0.45); }
@@ -455,6 +468,23 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .btn-primary{ background:var(--crimson); color:#fff; border:0; padding:12px 22px; border-radius:3px; font-weight:700; cursor:pointer; align-self:flex-start; font-size:.88rem; }
 .btn-primary:hover{ background:var(--crimson-bright); }
 .callout{ border-left:2px solid var(--amber); background:rgba(185,138,61,0.06); padding:14px 16px; border-radius:0 2px 2px 0; margin:18px 0; font-size:.85rem; color:var(--text-dim); }
+
+/* Civil Rights Cold Case Quiz */
+.quiz-question{ border:1px solid var(--border-strong); border-radius:2px; padding:16px; margin:0 0 18px; background:var(--panel-2); }
+.quiz-question legend{ font-family:var(--sans); font-weight:600; font-size:.92rem; color:var(--text); padding:0 4px; }
+.quiz-options{ display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+.quiz-option{ display:flex; align-items:flex-start; gap:10px; padding:9px 10px; border:1px solid var(--border); border-radius:2px; cursor:pointer; font-size:.86rem; color:var(--text-dim); }
+.quiz-option:hover{ border-color:var(--border-strong); }
+.quiz-option input{ margin-top:3px; accent-color:var(--crimson); flex-shrink:0; }
+.quiz-option.is-correct{ border-color:var(--crimson); background:rgba(179,32,47,0.08); color:var(--text); }
+.quiz-option.is-incorrect{ border-color:var(--cyan); background:rgba(79,127,146,0.1); }
+.quiz-explanation{ margin-top:12px; padding-top:12px; border-top:1px dashed var(--border-strong); font-size:.82rem; color:var(--text-dim); }
+.quiz-submit{
+  display:block; width:100%; padding:12px; margin-top:6px; background:var(--crimson); color:var(--text);
+  border:none; border-radius:2px; font-family:var(--sans); font-weight:600; font-size:.88rem; cursor:pointer;
+}
+.quiz-submit:hover{ background:var(--crimson-bright); }
+.quiz-result{ font-family:var(--mono); font-size:.92rem; color:var(--text); background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px; padding:14px 16px; margin-top:18px; }
 .callout.warn{ border-left-color:var(--crimson); background:rgba(179,32,47,0.06); }
 
 /* ==========================================================================

@@ -205,11 +205,32 @@
 <li class="pl-item" data-case-item data-case-id="wade-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Wade Hampton Rock Springs WY 1917">
   <a href="../cases/wade-hampton.html">Wade Hampton<span class="pi-meta">046 · 1917 · UNSOLVED</span></a>
 </li>
+<li class="pl-item" data-case-item data-case-id="tulsa-race-massacre" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Tulsa Race Massacre Tulsa OK 1921">
+  <a href="../cases/tulsa-race-massacre.html">Tulsa Race Massacre<span class="pi-meta">047 · 1921 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="john-henry-james" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="John Henry James Charlottesville VA 1898">
+  <a href="../cases/john-henry-james.html">John Henry James<span class="pi-meta">048 · 1898 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="james-t-scott" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="James T. Scott Columbia MO 1923">
+  <a href="../cases/james-t-scott.html">James T. Scott<span class="pi-meta">049 · 1923 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="george-tompkins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="George Tompkins Indianapolis IN 1922">
+  <a href="../cases/george-tompkins.html">George Tompkins<span class="pi-meta">050 · 1922 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="george-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="George White Wilmington DE 1903">
+  <a href="../cases/george-white.html">George White<span class="pi-meta">051 · 1903 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="preston-porter-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Preston Porter Jr. Limon CO 1900">
+  <a href="../cases/preston-porter-jr.html">Preston Porter Jr.<span class="pi-meta">052 · 1900 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="samuel-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Samuel Johnson (“Mingo Jack”) Eatontown NJ 1886">
+  <a href="../cases/samuel-johnson.html">Samuel Johnson (“Mingo Jack”)<span class="pi-meta">053 · 1886 · UNSOLVED</span></a>
+</li>
   </ul>
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
-  <section class="panel-board area-board">
+  <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
         <span class="board-file-no">CASE FILE #032</span>
@@ -221,6 +242,12 @@
     <button class="bt-btn" data-board-reset>RESET VIEW</button>
   </div>
     </div>
+    <nav class="case-jump-nav" aria-label="Jump to section">
+    <a href="#case-board">Summary</a>
+    <a href="#case-profile">Profile</a>
+    <a href="#case-sources">Sources</a>
+    <a href="#case-questions">Unanswered Questions</a>
+  </nav>
     <div class="board-viewport">
       <div class="board-canvas">
         <svg class="connectors"></svg>
@@ -262,7 +289,7 @@
       </div>
     </div>
   </section>
-  <aside class="panel-profile area-profile">
+  <aside class="panel-profile area-profile" id="case-profile">
   <div class="pp-head">Case Profile</div>
   <div class="pp-grid">
     <div class="pp-row"><span class="label">Status</span><span class="status-badge status-unsolved">Unsolved</span></div>
@@ -274,7 +301,7 @@
     
   </div>
 </aside>
-  <aside class="panel-sources area-sources">
+  <aside class="panel-sources area-sources" id="case-sources">
   <div class="pp-head">Source Records</div>
   <div class="source-item">
   <span class="sname">U.S. Department of Justice — case file</span>
@@ -314,7 +341,7 @@
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 </aside>
-  <section class="panel-questions area-questions">
+  <section class="panel-questions area-questions" id="case-questions">
   <details class="pq-details" open>
     <summary class="pq-head">Unanswered Questions</summary>
     <div class="pq-list">
@@ -341,6 +368,7 @@
         <li><a href="../cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="../cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../statistics.html">Archive Statistics</a></li>
+        <li><a href="../quiz.html">Cold Case Quiz</a></li>
         <li><a href="../research.html">How We Research</a></li>
         <li><a href="../updates.html">Corrections & Updates</a></li>
         <li><a href="../resources.html">Resources</a></li>
@@ -372,5 +400,6 @@
 <script src="../js/cases-data.js"></script>
 <script src="../js/us-states-paths.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>
