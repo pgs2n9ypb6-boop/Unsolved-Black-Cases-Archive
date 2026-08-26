@@ -72,6 +72,50 @@
       ],
       correct: 1,
       explanation: "Several cases in this archive ended in acquittal, sometimes after very short jury deliberation. Acquittal is a legal outcome about the burden of proof at trial, not a factual finding of innocence."
+    },
+    {
+      q: "When did the United States finally pass a federal law making lynching itself a specific hate crime \u2014 something civil rights advocates had tried and failed to pass for over a century?",
+      options: [
+        "1955, the year Emmett Till was killed",
+        "2008, the same year as the Emmett Till Unsolved Civil Rights Crime Act",
+        "2022",
+        "It still hasn't happened"
+      ],
+      correct: 2,
+      explanation: "The Emmett Till Antilynching Act was signed into law on March 29, 2022 \u2014 the first federal anti-lynching law in American history, after more than 200 earlier attempts in Congress had failed over the preceding century. It's a separate, later law from the 2008 Till Act referenced above, which only created a review process for old cases."
+    },
+    {
+      q: "The federal Civil Rights Cold Case Records Review Board's own released case files are concentrated almost entirely in how many states?",
+      options: [
+        "All 50 states, roughly evenly",
+        "Roughly a dozen states, almost entirely in the Deep South",
+        "Only Mississippi",
+        "Every state except the Northeast"
+      ],
+      correct: 1,
+      explanation: "This isn't a gap in this archive's research \u2014 it's the government's own registry. Checking its own state filters directly shows its cases cluster in a small handful of Southern states, reflecting where this violence was most concentrated and documented."
+    },
+    {
+      q: "In several cases in this archive where a suspect actually stood trial, all-white juries sometimes returned a not-guilty verdict after deliberating for as little as:",
+      options: [
+        "A full week",
+        "Under two hours",
+        "Several months",
+        "Juries in these cases always deliberated for days"
+      ],
+      correct: 1,
+      explanation: "Real examples from this archive: a jury acquitted James T. Scott's accused killer after 11 minutes; another acquitted Samuel Younge Jr.'s killer after 71 minutes. Fast acquittals like these are a recurring pattern, not an exception."
+    },
+    {
+      q: "Which best describes the overall pattern across most cases in this archive?",
+      options: [
+        "The perpetrator's identity was rarely known to anyone",
+        "A suspect's identity was often known, sometimes even admitted by the person themselves, but no conviction ever followed",
+        "Nearly every case ended in a full criminal trial",
+        "Federal prosecution was the most common outcome"
+      ],
+      correct: 1,
+      explanation: "Across this archive, the recurring story isn't mystery \u2014 it's impunity. Grand juries declining to indict, confessions that went nowhere, and acquittals in minutes are far more common than genuine uncertainty about who was responsible."
     }
   ];
 

@@ -1004,7 +1004,7 @@
     "unanswered": [
       "What evidence did the DOJ's file compile against Sheriff Jones specifically before closing the case?",
       "What became of the federal grand jury testimony Allen gave regarding his harassment?",
-      "What connection, if any, does this case have to the unprosecuted 1961 killing of Herbert Lee that Allen witnessed?"
+      "What became of the other witnesses, beyond Allen, who corroborated Hurst's self-defense account at Herbert Lee's 1961 inquest \u2014 documented separately in this archive \u2014 before Allen recanted his own testimony to the FBI?"
     ],
     "sources": [
       {
@@ -1683,7 +1683,7 @@
     "unanswered": [
       "What specific evidence and testimony led the all-white jury to acquit Jim Johnson?",
       "What became of the FBI's 1948 investigative file on the case?",
-      "What, if anything, might a modern review of the case establish that was unavailable in 1948?"
+      "What connection, if any, does this case have to Maceo Snipes's killing two years earlier in nearby Taylor County, documented separately in this archive \u2014 both men killed for voting-related activity, both cases ending in acquittal, both driving their families out of the region?"
     ],
     "sources": [
       {
@@ -4136,5 +4136,893 @@
     ],
     "lastVerified": "2026-08-21",
     "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "jimmie-lee-jackson",
+    "caseNumber": "074",
+    "name": "Jimmie Lee Jackson",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1965,
+    "age": 26,
+    "gender": "male",
+    "city": "Marion",
+    "county": "Perry",
+    "state": "AL",
+    "caseSeries": null,
+    "summary": "Jimmie Lee Jackson, 26, was fatally shot in the abdomen by Alabama State Trooper James Bonard Fowler on the night of February 18, 1965, in Marion, after state troopers broke up a nighttime civil rights march and chased demonstrators into nearby businesses. Jackson had gone into a caf\u00e9 trying to protect his mother and elderly grandfather from being beaten by troopers when he was shot at close range; he died eight days later of an abdominal infection from the wound. Fowler was not charged for more than four decades, until a grand jury indicted him for murder in 2007. In 2010, he pleaded guilty to the lesser charge of manslaughter and served roughly six months in jail \u2014 the only conviction the Emmett Till Act's cold case review process has produced since the law was signed in 2008. Jackson's death directly inspired the Selma to Montgomery march that began three weeks later, which state troopers violently broke up on the Edmund Pettus Bridge in an event that became known as Bloody Sunday.",
+    "known": [
+      "Victim identity and the February 18\u201326, 1965 date and circumstances, per the DOJ's public case file and extensive contemporaneous and historical reporting.",
+      "James Bonard Fowler was indicted for murder in 2007 and pleaded guilty to manslaughter in 2010, serving roughly six months \u2014 the only conviction the Emmett Till Act's review process has produced to date."
+    ],
+    "unknown": [
+      "Why Fowler was never charged for more than four decades after the shooting was never fully explained in the public record.",
+      "The full circumstances inside the caf\u00e9 in the moments before the shooting were disputed between Fowler's account and witness statements."
+    ],
+    "unanswered": [
+      "Why did it take until 2007 for a grand jury to indict Fowler, and what specific new evidence or pressure led to that outcome?",
+      "What connection does Jackson's death have to the broader chain of events, including Bloody Sunday, that followed three weeks later?",
+      "What became of the other troopers present at the caf\u00e9 that night, and were any of them ever investigated?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/jimmie-lee-jackson-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "thomas-brewer",
+    "caseNumber": "075",
+    "name": "Dr. Thomas Brewer",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1956,
+    "age": null,
+    "gender": "male",
+    "city": "Columbus",
+    "county": "Muscogee",
+    "state": "GA",
+    "caseSeries": null,
+    "summary": "Dr. Thomas Brewer, a prominent Black physician and founder of the Columbus NAACP chapter, was fatally shot on the evening of February 18, 1956, inside the F&B Department Store owned by Luico Flowers. Tension between the two men had been building for years; Brewer had asked Flowers to report a white police officer's arrest of a Black man in front of Flowers's store as excessive force, which Flowers refused to do, and Brewer had separately threatened to organize a boycott of the store after Flowers declined to support a candidate Brewer favored in a city commission race. Flowers said he shot Brewer when Brewer reached into his pocket as though drawing a gun. The shooting was investigated locally by the Columbus Police Department and presented to a Muscogee County grand jury. No one was ever convicted.",
+    "known": [
+      "Victim identity, background, and the February 18, 1956 date and circumstances, per the DOJ's public case file.",
+      "Luico Flowers acknowledged shooting Brewer and claimed self-defense; the matter was presented to a local grand jury, per the same file."
+    ],
+    "unknown": [
+      "Whether Brewer actually reached for a weapon, as Flowers claimed, was never resolved.",
+      "The specific outcome of the Muscogee County grand jury's review of the case was not detailed in the available public record."
+    ],
+    "unanswered": [
+      "What testimony did the grand jury actually hear, and why did it not result in an indictment?",
+      "What became of the underlying police brutality complaint Brewer had asked Flowers to help report?",
+      "What connection, if any, existed between this case and the broader campaign against NAACP organizing in Georgia during the period?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/thomas-brewer-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "ernest-jells",
+    "caseNumber": "076",
+    "name": "Ernest Jells",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1963,
+    "age": 21,
+    "gender": "male",
+    "city": "Clarksdale",
+    "county": "Coahoma",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Ernest Jells, 21, was shot and killed by Clarksdale Police Department Lieutenant Henry Petty and Patrolman B.F. Moore Jr. on September 20, 1963. According to contemporaneous local newspaper coverage, Jells had been accused of trying to steal bananas from a grocery store; the store owner's son confronted him and a scuffle followed, during which officers said Jells reached back as though to grab a weapon. No one was ever charged in connection with his death. The DOJ's Civil Rights Division closed the case in 2010, after confirming both officers were deceased.",
+    "known": [
+      "Victim identity and the September 20, 1963 date and circumstances, per the DOJ's public case file, drawing on contemporaneous Clarksdale Press Register coverage.",
+      "No one was ever charged in Jells's death; both officers involved were confirmed deceased by the time of the DOJ's 2010 closure, per the same file."
+    ],
+    "unknown": [
+      "Whether Jells actually reached for a weapon, as the officers claimed, was never independently confirmed.",
+      "The full circumstances of the confrontation inside the store before Jells was shot were not fully documented beyond the officers' own account."
+    ],
+    "unanswered": [
+      "What did the store owner's son's account of the initial confrontation actually establish?",
+      "Why no formal charges were ever pursued against either officer at the time?",
+      "What additional local investigative or coroner's records, if any, survive from 1963?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/ernest-jells-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "benjamin-brown",
+    "caseNumber": "077",
+    "name": "Benjamin Brown",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1967,
+    "age": null,
+    "gender": "male",
+    "city": "Jackson",
+    "county": "Hinds",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Benjamin Brown was fatally shot during unrest connected to a civil rights protest in Jackson on May 11, 1967. Initial eyewitnesses identified Jackson Police Department Major Anthony \u201cBuddy\u201d Kane Sr. as the shooter, while other witnesses said the shooters were not in police uniform but wearing white shirts, pointing toward Mississippi Highway Safety Patrol detectives who were also on the scene that night. A later ballistics analysis found that the buckshot pellets recovered from Brown's fatal head wound and body matched ammunition used by the Highway Safety Patrol, not the type carried by Jackson police, leading investigators to conclude decades later that Brown's shooter was most likely a Highway Safety Patrol officer rather than a city officer, effectively clearing the originally accused JPD officers. No one was ever charged, and all identified subjects were confirmed deceased by the time the DOJ closed the case.",
+    "known": [
+      "Victim identity and the May 11, 1967 date and circumstances, per the DOJ's public case file.",
+      "A later ballistics analysis of the recovered buckshot pointed toward a Mississippi Highway Safety Patrol officer rather than the Jackson Police Department officer originally accused by eyewitnesses, per the same file; no one was ever charged."
+    ],
+    "unknown": [
+      "The specific individual who fired the fatal shot was never conclusively identified, despite the ballistics analysis narrowing the likely agency involved.",
+      "Why witnesses' original identification of a Jackson police officer as the shooter conflicted so directly with the later ballistics findings was never fully resolved."
+    ],
+    "unanswered": [
+      "Who were the Mississippi Highway Safety Patrol officers present at the scene the ballistics analysis pointed toward, and were any of them ever directly questioned?",
+      "What became of the original 1967 Jackson Police Department investigation before it was reopened decades later?",
+      "What broader protest or unrest was occurring in Jackson that night, and what connection did it have to the citywide tensions of the period?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/benjamin-brown-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "larry-payne",
+    "caseNumber": "078",
+    "name": "Larry Payne",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1968,
+    "age": 16,
+    "gender": "male",
+    "city": "Memphis",
+    "county": "Shelby",
+    "state": "TN",
+    "caseSeries": null,
+    "summary": "Larry Payne, 16, was fatally shot with a shotgun by a Memphis police officer on the afternoon of March 28, 1968, during widespread unrest connected to the city's sanitation workers' strike \u2014 the same strike that had brought Martin Luther King Jr. to Memphis, where he was assassinated exactly one week later. Payne had been seen removing televisions from a Sears store amid the disorder; an officer pursued him on foot to a housing complex, where Payne entered a basement boiler room. The officer said that when Payne partially opened the door, he raised one hand but kept a knife in his lowered other hand, and that he fired in self-defense, striking Payne once in the abdomen. Hours earlier, Payne had been photographed elsewhere in the city watching an officer strike his friend with a baton. A large, hostile crowd gathered at the scene of the shooting. No one was ever charged.",
+    "known": [
+      "Victim identity and the March 28, 1968 date and circumstances, per the DOJ's public case file.",
+      "No criminal charges were ever filed against the officer involved, per the same file."
+    ],
+    "unknown": [
+      "Whether Payne actually held a knife in a threatening manner, as the officer claimed, was never independently tested at trial.",
+      "The full sequence of events inside the boiler room, witnessed only by Payne and the officer, was never independently corroborated."
+    ],
+    "unanswered": [
+      "What became of the photograph taken of Payne hours before the shooting, and what broader context does it provide about that day's unrest?",
+      "What connection, if any, did local officials at the time draw between this shooting and the escalating tensions that preceded Dr. King's assassination one week later?",
+      "What internal Memphis Police Department review, if any, followed the shooting?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/larry-payne-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "herbert-lee",
+    "caseNumber": "079",
+    "name": "Herbert Lee",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1961,
+    "age": 52,
+    "gender": "male",
+    "city": "Liberty",
+    "county": "Amite",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Herbert Lee, 52, a farmer and NAACP voter-registration organizer who worked closely with SNCC activist Bob Moses, was shot and killed at Westbrook's Cotton Gin in Liberty on September 25, 1961, by Mississippi state representative E.H. Hurst. Hurst said the two men argued over a debt and that Lee swung a tire iron at him, prompting Hurst to strike him with a pistol, which discharged and killed him. A coroner's inquest, held inside the cotton gin office within an hour of the shooting, found Hurst acted in self-defense; witnesses, including Lee's friend Louis Allen, corroborated Hurst's account under oath. Two justices of the peace subsequently declined to send the case to a grand jury, and Hurst was released the same day he was charged. Louis Allen later told the FBI he had lied at the inquest out of fear, and that Lee had not actually threatened Hurst. Allen was harassed for years afterward and was murdered in 1964, shortly before he planned to leave Mississippi \u2014 a killing documented separately in this archive.",
+    "known": [
+      "Victim identity, background, and the September 25, 1961 date and circumstances, per the DOJ's public case file.",
+      "A coroner's inquest and two justices of the peace concluded Hurst acted in self-defense and declined to refer the case to a grand jury; the corroborating witness, Louis Allen, later told the FBI he had lied out of fear, per the same file."
+    ],
+    "unknown": [
+      "Whether Lee actually threatened Hurst with a tire iron, as multiple witnesses testified under oath at the time, was directly contradicted by at least one of those same witnesses years later.",
+      "No one was ever convicted in Lee's death."
+    ],
+    "unanswered": [
+      "What specifically caused Louis Allen to recant his corroborating testimony to the FBI, and what protection, if any, was he offered in exchange?",
+      "What connection exists between this case and Louis Allen's own unsolved 1964 murder, committed after he began cooperating with federal investigators?",
+      "What became of the other witnesses who testified alongside Allen at the original 1961 inquest?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/herbert-lee",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "samuel-younge-jr",
+    "caseNumber": "080",
+    "name": "Samuel Younge Jr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1966,
+    "age": 21,
+    "gender": "male",
+    "city": "Tuskegee",
+    "county": "Macon",
+    "state": "AL",
+    "caseSeries": null,
+    "summary": "Samuel Younge Jr., 21, a Navy veteran, civil rights activist, and freshman at Tuskegee Institute, was fatally shot beneath the left eye by 68-year-old gas station attendant Marvin Segrest just before midnight on January 3, 1966, after an argument over Younge's use of a whites-only restroom. Segrest was arrested the next day, indicted for second-degree murder by a Macon County grand jury, and released on $20,000 bond. His shooting set off a demonstration in Tuskegee attended by roughly 2,000 students and faculty. At trial in December 1966, forensic testimony indicated the fatal shot had been fired from several feet away, contradicting any claim of a close struggle. An all-white jury in Lee County acquitted Segrest after deliberating for 71 minutes.",
+    "known": [
+      "Victim identity, background, and the January 3, 1966 date and circumstances, per the DOJ's public case file.",
+      "Marvin Segrest was indicted for second-degree murder and tried, but was acquitted by an all-white jury after 71 minutes of deliberation in December 1966, per the same file."
+    ],
+    "unknown": [
+      "No one was ever convicted in Younge's death.",
+      "The medical examiner's finding that the fatal shot came from several feet away was never reconciled with any account of a close physical struggle."
+    ],
+    "unanswered": [
+      "What specific evidence or arguments led the jury to acquit despite the forensic distance findings?",
+      "What became of the roughly 2,000-person demonstration's broader effect on civil rights organizing at Tuskegee Institute?",
+      "What additional trial transcript detail, if any, has been preserved beyond the summary in the DOJ's file?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/marvin-l-segrest-samuel-l-younge-jr-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "isaiah-taylor",
+    "caseNumber": "081",
+    "name": "Isaiah Taylor",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1964,
+    "age": null,
+    "gender": "male",
+    "city": "Ruleville",
+    "county": "Sunflower",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Isaiah Taylor, who had a documented history of mental health problems, was shot and killed on the side of Highway 49 near Ruleville on the afternoon of June 26, 1964, by Mississippi Highway Patrol Patrolman Robert Wallace. Wallace said he and a local constable were searching for an escaped state penitentiary inmate when they came upon Taylor standing beside the road, covering his face with his hands. According to Wallace's account, when he approached and questioned him, a confrontation followed that ended in the shooting. No independent civilian witnesses to the encounter were ever identified. No charges were ever filed against Wallace, and the case was closed decades later after the DOJ determined both Wallace and the constable present were deceased.",
+    "known": [
+      "Victim identity and the June 26, 1964 date and circumstances, per the DOJ's public case file.",
+      "No independent civilian witnesses to the shooting were ever identified, and no charges were filed against Patrolman Robert Wallace, per the same file."
+    ],
+    "unknown": [
+      "The specific sequence of events between Wallace's approach and the shooting itself rests entirely on Wallace's own account.",
+      "Whether Taylor's documented mental health history played any role in the encounter was never independently examined."
+    ],
+    "unanswered": [
+      "What became of the escaped penitentiary inmate Wallace and the constable were reportedly searching for that day?",
+      "Why were no independent witnesses to the roadside encounter ever located, given the highway setting?",
+      "What internal Mississippi Highway Patrol review, if any, followed the shooting?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/file/950762/dl",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "maceo-snipes",
+    "caseNumber": "082",
+    "name": "Maceo Snipes",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1946,
+    "age": 37,
+    "gender": "male",
+    "city": "Butler",
+    "county": "Taylor",
+    "state": "GA",
+    "caseSeries": null,
+    "summary": "Maceo Snipes, 37, a World War II veteran who had fought in New Guinea, was shot in the back on July 18, 1946, one day after becoming the first and only Black resident of Taylor County to vote in that year's Georgia Democratic primary, despite explicit threats from the Ku Klux Klan and a public warning from a former governor that \u201cwise Negroes will stay away from the white folks' ballot boxes.\u201d Four white men, led by Edward Williamson, drove to the farmhouse where Snipes lived with his mother and grandfather and called him outside; Williamson shot him and the men drove away. Snipes died two days later after the hospital treating him said no blood was available for a needed transfusion. A coroner's jury acquitted Williamson on a self-defense claim, despite Snipes's own deathbed statement and his mother's witness testimony contradicting it. Fearing retaliation, the family buried him secretly at night in a grave whose location remains unknown to his surviving relatives, and much of the family fled the county. Snipes's killing, alongside the Moore's Ford lynchings that occurred in Georgia just one week later, prompted a young Morehouse College student, Martin Luther King Jr., to write a public letter condemning the state's racial violence. No one was ever held accountable.",
+    "known": [
+      "Victim identity, background, and the July 17\u201320, 1946 timeline, per the DOJ's public case file, PBS FRONTLINE's \u201cUn(re)solved\u201d case summary, and the Georgia Civil Rights Cold Cases Project at Emory University.",
+      "A coroner's jury acquitted Edward Williamson on a self-defense claim on July 29, 1946, despite contradicting deathbed and eyewitness testimony; no one was ever held accountable, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever convicted in Snipes's death.",
+      "The exact location of Snipes's grave, buried secretly at night out of fear for the family's safety, remains unknown even to his surviving relatives."
+    ],
+    "unanswered": [
+      "What did the FBI's investigation, requested by the DOJ after Williamson's acquittal, ultimately establish?",
+      "What connection, if any, exists between this case and Isaiah Nixon's killing two years later in nearby Montgomery County, documented separately in this archive \u2014 both killings tied to voting, both resulting in acquittals, both driving surviving families out of the region?",
+      "What became of the 2006 push by the NAACP and the Prison & Jail Project for a renewed federal investigation?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/maceo-snipes/",
+        "verified": true
+      },
+      {
+        "name": "Georgia Civil Rights Cold Cases Project, Emory University \u2014 case summary",
+        "url": "https://coldcases.emory.edu/maceo-snipes/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "james-earl-motley",
+    "caseNumber": "083",
+    "name": "James Earl Motley",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1966,
+    "age": 27,
+    "gender": "male",
+    "city": "Wetumpka",
+    "county": "Elmore",
+    "state": "AL",
+    "caseSeries": null,
+    "summary": "James Earl Motley, 27, died from head injuries in the Elmore County jail around 3:30 a.m. on November 20, 1966, hours after Deputy Harvey Conner stopped the car he was riding in for a traffic violation. When Motley told Conner he lacked jurisdiction because the stop had occurred in a different county, Conner ordered him out of the car; witnesses said Conner then struck Motley repeatedly in the head with a slapjack, and that state troopers who arrived as backup held Motley by the arms while he was beaten. Conner took the bleeding Motley to the county jail, where local authorities said he fell twice and struck his head before losing consciousness. An autopsy found multiple skull fractures and brain hemorrhage; a coroner concluded the fatal injury could have come from the beating, the falls, or some combination, and classified the death as \u201caccidental.\u201d A state grand jury declined to indict Conner on a homicide charge in January 1967. He was separately tried in federal court for violating Motley's civil rights; an all-white jury with one Black member returned a not-guilty verdict on April 12, 1967.",
+    "known": [
+      "Victim identity and the November 20, 1966 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "A state grand jury declined to indict Deputy Harvey Conner, and a subsequent federal jury acquitted him in April 1967; the coroner classified Motley's death as accidental, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever held criminally accountable for Motley's death.",
+      "Whether the fatal head injury resulted from the beating, the falls at the jail, or some combination was never conclusively determined."
+    ],
+    "unanswered": [
+      "What specific testimony from the two incarcerated men who carried Motley into his cell was presented at either the grand jury or the federal trial?",
+      "What became of the state troopers who reportedly held Motley by the arms during the beating?",
+      "What additional detail, if any, survives in the original 1966 Alabama Department of Public Safety investigative file?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/james-earl-motley/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/james-earl-motley-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "thad-christian",
+    "caseNumber": "084",
+    "name": "Thad Christian",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1965,
+    "age": 54,
+    "gender": "male",
+    "city": "Anniston",
+    "county": "Calhoun",
+    "state": "AL",
+    "caseSeries": null,
+    "summary": "Thad Christian, 54, was fatally shot in the abdomen with a shotgun on August 30, 1965, while fishing with a friend at a creek in the rural community of Central City, west of Anniston. Robert Haynes, 41, had earlier told the two men to leave the area without saying whether he owned the property, then returned and shot Christian as they loaded their fishing gear into their car. Haynes was arrested and charged with murder, but pleaded guilty to the lesser charge of first-degree manslaughter and was sentenced to five years at a prison camp; how much of that sentence he actually served was not documented. Haynes died in a car accident three years later, in 1968. When the FBI reopened the case decades afterward, it found most surviving local records had been damaged by water and were illegible; one salvaged 1965 file noted a claim that several other Black men had also been at the creek that afternoon, a detail never further investigated.",
+    "known": [
+      "Victim identity, background, and the August 30, 1965 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "Robert Haynes pleaded guilty to first-degree manslaughter and was sentenced to five years, a fraction of the murder charge originally filed; he died in 1968, per the same sources."
+    ],
+    "unknown": [
+      "How much of his five-year sentence Haynes actually served before his 1968 death was never documented.",
+      "The identities of the other Black men reportedly present at the creek that afternoon, referenced in a 1965 FBI file, were never established."
+    ],
+    "unanswered": [
+      "Why was a murder charge reduced to first-degree manslaughter, and what plea negotiation led to that outcome?",
+      "Who were the other men reportedly at the creek, and might any of them have left surviving accounts?",
+      "What became of the original Calhoun County court records before they were damaged beyond legibility?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/thad-christian/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/thad-christian-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "isaiah-henry",
+    "caseNumber": "085",
+    "name": "Isaiah Henry",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1954,
+    "age": 38,
+    "gender": "male",
+    "city": "Greensburg",
+    "county": "St. Helena Parish",
+    "state": "LA",
+    "caseSeries": null,
+    "summary": "Isaiah Henry, 38, a school bus driver and farmer who helped his Black neighbors prepare for voter registration tests, was found severely beaten on the side of a road in St. Helena Parish on July 28, 1954, one day after he voted in the Democratic primary. Unidentified men had called on him that morning and he left with them; he was later taken to a hospital in New Orleans. In early August 1954, sheriff's office deputies arrested a local police juror, Lester Hornsby, and a sheriff's deputy, Carl Womak, on charges of simple kidnapping and attempted murder; Womak had been the deputy assigned to the polling place where Henry voted. A contemporaneous news article quoted the assistant district attorney saying the two men were held because he believed they knew something about the beating, but no record indicates either man was ever indicted. Local jail logbooks, arrest warrants, and prosecutorial files from the case no longer exist. One of Henry's sons later said his father was likely beaten because of his political involvement.",
+    "known": [
+      "Victim identity, background, and the July 27\u201328, 1954 date and circumstances, per the DOJ's public case file, drawing on a 2007 article in The Advocate.",
+      "Lester Hornsby and Carl Womak were arrested on kidnapping and attempted murder charges in connection with the case, but no record indicates either was ever indicted, per the same file."
+    ],
+    "unknown": [
+      "No one was ever convicted in connection with Henry's beating.",
+      "The full circumstances of his abduction that morning, and what happened to him before he was found on the roadside, were never documented."
+    ],
+    "unanswered": [
+      "Why were Hornsby and Womak never indicted despite being arrested and held specifically because officials believed they knew something about the beating?",
+      "What became of the original St. Helena Parish jail logbooks and investigative files before they were lost?",
+      "What connection, if any, existed between Henry's beating and his broader work helping neighbors prepare for voter registration tests?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/isaiah-henry-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "john-earl-reese",
+    "caseNumber": "086",
+    "name": "John Earl Reese",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1955,
+    "age": 16,
+    "gender": "male",
+    "city": "Mayflower",
+    "county": "Rusk",
+    "state": "TX",
+    "caseSeries": null,
+    "summary": "John Earl Reese, 16, was shot and killed on the night of October 22, 1955, while dancing with his cousins in a caf\u00e9 in Mayflower, a small Black community near Longview. Perry Dean Ross, driving roughly 85 miles per hour, fired nine shots from a rifle into the caf\u00e9 window as his car passed; Reese was killed, and two of his cousins were wounded. The same night, gunmen fired into at least one other home in the area where Black residents lived. The attacks were tied to local anger over a bond election to build a new school for Black children following the Brown v. Board of Education decision; Ross later admitted his anger over the new school had \u201ca great deal\u201d to do with the shooting. The local sheriff initially refused to investigate, insisting Black residents were responsible for their own community's shooting. Texas Rangers eventually interviewed over 300 people and identified Ross and a second man, Joe Simpson, both of whom confessed. Simpson's charges were dropped in exchange for his testimony against Ross, who was convicted of murder in April 1957 and given a two-to-five-year sentence that was immediately suspended; Simpson later pleaded guilty to the same charge and received an identical suspended sentence. Neither man served any time in prison.",
+    "known": [
+      "Victim identity and the October 22, 1955 date and circumstances, per the DOJ's public case file and extensive contemporaneous and historical reporting.",
+      "Perry Dean Ross and Joe Simpson both confessed and were convicted, but both received fully suspended sentences and served no prison time, per the same sources."
+    ],
+    "unknown": [
+      "Whether the other shootings that same night at additional homes were connected to the same group of men was never conclusively established.",
+      "The full scope of who else may have been involved in planning the night's attacks beyond Ross and Simpson was never investigated."
+    ],
+    "unanswered": [
+      "Why did the local sheriff initially refuse to investigate despite the shooting's obvious severity?",
+      "What became of the broader dispute over the new school's location that the Texas Rangers identified as the underlying motive?",
+      "Why were fully suspended sentences considered appropriate for two confessed killers in a case the district attorney himself urged the jury to punish severely?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/john-earl-reese",
+        "verified": true
+      },
+      {
+        "name": "The Dallas Morning News \u2014 \u201cFBI takes new look at white men's killing of black teen in 1955\u201d",
+        "url": "https://www.dallasnews.com/news/crime/2010/02/09/fbi-takes-new-look-at-white-men-s-killing-of-black-teen-in-1955/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "frank-andrews",
+    "caseNumber": "087",
+    "name": "Frank Andrews",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1964,
+    "age": 27,
+    "gender": "male",
+    "city": "Lisman",
+    "county": "Choctaw County",
+    "state": "AL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-26",
+    "summary": "Frank Andrews, 27, was shot in the back and killed on November 28, 1964 outside Smith's Caf\u00e9 in Lisman, Alabama, by Quinnie Donald, a white Choctaw County sheriff's chief deputy. Donald and another deputy said they were at the caf\u00e9, which served the local Black community, investigating illegal whiskey; Donald claimed Andrews advanced on a fellow deputy with a knife, a claim disputed by witness accounts. A local grand jury declined to indict, and no one was ever prosecuted for his death.",
+    "known": [
+      "Victim identity, age, and the November 28, 1964 shooting outside Smith's Caf\u00e9 in Lisman, per the Department of Justice's Cold Case closing memorandum.",
+      "The shooter, sheriff's chief deputy Quinnie Donald, was publicly identified in the DOJ memo and in FBI records reviewed by PBS Frontline's Unresolved project.",
+      "A local grand jury declined to indict Donald in 1964, and no state or federal charges were ever brought."
+    ],
+    "unknown": [
+      "Whether Andrews in fact drew a knife, as Donald claimed, is disputed \u2014 the three eyewitnesses identified in 1964 gave factually inconsistent accounts, per the DOJ memo.",
+      "In a 2008 re-interview under the Till Act, Donald reportedly gave an account of the shooting that conflicted with what he told investigators in 1964; the full substance of that shift is not detailed in the public record."
+    ],
+    "unanswered": [
+      "What specifically changed between Donald's 1964 and 2008 accounts of the shooting, and why?",
+      "Why did the three 1964 eyewitness accounts conflict, and was that inconsistency investigated further at the time?",
+      "What led the FBI and DOJ to close the reopened case in 2013 without prosecution, given the disputed record?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice, Civil Rights Division \u2014 Frank Andrews closing memorandum",
+        "url": "https://www.justice.gov/crt/case-document/frank-andrews-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "PBS Frontline \u2014 \u201cUnresolved\u201d, Frank Andrews case profile",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/frank-andrews/",
+        "verified": true
+      },
+      {
+        "name": "Alabama Reflector \u2014 \u201cNo justice in 1964 slaying by sheriff's deputy\u201d",
+        "url": "https://www.alreporter.com/2026/06/05/no-justice-in-1964-slaying-by-sheriffs-deputy/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "alexis-patterson",
+    "caseNumber": "088",
+    "name": "Alexis Patterson",
+    "status": "unsolved",
+    "caseType": "missing_persons",
+    "year": 2002,
+    "age": 7,
+    "gender": "female",
+    "city": "Milwaukee",
+    "county": "Milwaukee County",
+    "state": "WI",
+    "caseSeries": null,
+    "dateAdded": "2026-08-26",
+    "victimPhotos": [
+      {
+        "url": "https://www.fbi.gov/wanted/kidnap/alexis-s.-patterson/@@images/image/large",
+        "caption": "Alexis S. Patterson",
+        "credit": "FBI"
+      }
+    ],
+    "summary": "Alexis Patterson, 7, disappeared on the morning of May 3, 2002 after her stepfather walked her to a crosswalk roughly half a block from Hi-Mount Community School in Milwaukee, Wisconsin, and a crossing guard escorted her across the street. She never arrived in her first-grade classroom; classmates later reported seeing her crying on the playground before and after the school day. Her disappearance prompted one of the largest search efforts in Milwaukee police history, but no arrests have ever been made and Alexis has never been found.",
+    "known": [
+      "Victim identity, age, and the May 3, 2002 disappearance near Hi-Mount Community School, per the FBI's public case listing and the Milwaukee Police Department.",
+      "Her stepfather told police he watched her cross the street toward the school playground before he walked home; the school reported she never attended class that day.",
+      "The Milwaukee County Sheriff's Office has offered a $10,000 reward for information leading to her return, and the FBI continues to list her as an open case."
+    ],
+    "unknown": [
+      "What happened to Alexis between being seen on the playground and her confirmed absence from class has never been publicly established.",
+      "No suspect has ever been officially named by police.",
+      "Full results of the searches of the Milwaukee River and other sites are not comprehensively public."
+    ],
+    "unanswered": [
+      "What, if anything, did the reported 2003 John Doe investigation \u2014 never officially confirmed by police \u2014 establish?",
+      "What has the Milwaukee Police Department's cold case unit found in its ongoing review, if anything?",
+      "Why does a documented gap remain between witness accounts of Alexis's morning and her confirmed disappearance?"
+    ],
+    "sources": [
+      {
+        "name": "Federal Bureau of Investigation \u2014 Alexis S. Patterson case listing",
+        "url": "https://www.fbi.gov/wanted/kidnap/alexis-s.-patterson",
+        "verified": true
+      },
+      {
+        "name": "Milwaukee Police Department, via Solve the Case \u2014 official case narrative",
+        "url": "https://www.solvethecase.org/case/2002-11/alexis-patterson",
+        "verified": true
+      },
+      {
+        "name": "WUWM (Milwaukee NPR) \u2014 \u201cMilwaukee Police Department is still looking for Alexis Patterson, 20 years later\u201d",
+        "url": "https://www.wuwm.com/2022-05-03/milwaukee-police-department-is-still-looking-for-alexis-patterson-20-years-later",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "nacomie-freeman",
+    "caseNumber": "089",
+    "name": "Nacomie Freeman",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2004,
+    "age": 24,
+    "gender": "female",
+    "city": "Phoenix",
+    "county": "Maricopa County",
+    "state": "AZ",
+    "caseSeries": null,
+    "dateAdded": "2026-08-26",
+    "summary": "Nacomie Freeman, 24, was shot in the stomach and pushed out of a moving truck in the 1600 block of West Denton Avenue in Phoenix, Arizona, on June 24, 2004. Witnesses reported seeing her pushed from a dark-colored, late-1990s-model short-bed truck; she was pronounced dead at the scene. The Maricopa County Sheriff's Office has said investigators developed some leads but have never made an arrest.",
+    "known": [
+      "Victim identity, age, and the June 24, 2004 date and location, per the Maricopa County Sheriff's Office and Project Cold Case's case record.",
+      "Witnesses reported the truck she was pushed from as a dark-colored, late-1990s-model short-bed truck with the partial license plate letters \u201cJ, T, L,\u201d per contemporaneous reporting."
+    ],
+    "unknown": [
+      "No arrest has ever been made.",
+      "The relationship, if any, between Freeman and the occupants of the truck has not been publicly disclosed.",
+      "The full license plate and the truck's owner or driver have never been publicly identified."
+    ],
+    "unanswered": [
+      "What specific leads have investigators developed, and why have they not resulted in an arrest?",
+      "Has the truck described by witnesses ever been located or identified?",
+      "What, if anything, has advances in forensic technology contributed to the case since 2004?"
+    ],
+    "sources": [
+      {
+        "name": "Maricopa County Sheriff's Office, via Project Cold Case \u2014 case record and spotlight",
+        "url": "https://projectcoldcase.org/victim-detail/nacomie-freeman-351/",
+        "verified": true
+      },
+      {
+        "name": "The Arizona Republic \u2014 \u201cKiller sought in death of Phoenix woman\u201d (2004)",
+        "url": "https://www.newspapers.com/article/arizona-republic/200158960/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
   }
 ]

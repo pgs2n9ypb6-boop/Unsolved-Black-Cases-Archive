@@ -602,11 +602,32 @@
   }
 
   // ---------------------------------------------------------------------
+  // Footer visit counter. Uses countapi.mileshilliard.com (a maintained,
+  // no-signup revival of the original countapi.xyz, which is dead). Every
+  // page load increments the same key, so the number reflects total page
+  // views across the whole site, not unique visitors.
+  function initVisitCounter() {
+    var el = document.getElementById("site-visit-count");
+    if (!el) return;
+    fetch("https://countapi.mileshilliard.com/api/v1/hit/unsolved-black-cases-archive-visits")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var n = data && (data.value !== undefined ? data.value : data.count);
+        if (typeof n === "number") el.textContent = n.toLocaleString();
+        else el.parentElement.style.display = "none";
+      })
+      .catch(function () {
+        // Counter service unreachable — hide the line rather than show "…" forever.
+        if (el.parentElement) el.parentElement.style.display = "none";
+      });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initBoard();
     initArchiveViews();
     // Homepage map renders immediately (not behind a tab, unlike the Case
     // Index's Map view) — it's a no-op if #home-map isn't on the page.
     renderMap("home-map");
+    initVisitCounter();
   });
 })();
