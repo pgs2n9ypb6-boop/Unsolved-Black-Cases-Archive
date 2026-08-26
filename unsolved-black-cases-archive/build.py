@@ -41,6 +41,7 @@ ARCHIVE_NOTE = ("This archive summarizes publicly available information and does
 
 NAV_DOCS = [
     ("About", "about.html"),
+    ("My Saved Cases", "saved.html"),
     ("Archive Statistics", "statistics.html"),
     ("Cold Case Quiz", "quiz.html"),
     ("How We Research", "research.html"),
@@ -1362,7 +1363,269 @@ CASES = [
                      "What did the coroner's rebuke of the local newspaper editor for condoning mob violence lead to, if anything?"],
          extraSources=[src("New Jersey Social Justice Remembrance Committee \u2014 \u201cThe Murder of Mingo Jack\u201d by Gary Saretzky",
                             "https://www.njremembrance.org/about/the-murder-of-mingo-jack", True)]),
+    dict(id="jeffery-zolliecoffer", caseNumber="054", name="Jeffery \u201cJo Jo\u201d Zolliecoffer",
+         status="unsolved", caseType="homicide", year=1989, age=23, gender="male",
+         city="Waterloo", county="Black Hawk", state="IA", caseSeries=None,
+         summary="Jeffery \u201cJo Jo\u201d Howard Zolliecoffer, 23, was last seen alive late on the evening "
+                 "of September 7, 1989, at Goodies II, a bar formerly on Sumner Street in Waterloo; "
+                 "witnesses gave conflicting accounts of whether he left on his own or was forced out by "
+                 "several men. He was reported missing on September 9. On September 15, a child playing "
+                 "along the Cedar River discovered his body, wrapped in a quilted blanket, bound with "
+                 "copper wiring, and weighted down with two cement blocks; police believe it took several "
+                 "days for the body to rise to the surface. An autopsy found Zolliecoffer had been shot "
+                 "three times, including a fatal shotgun blast to the back of the head. Investigators have "
+                 "pursued numerous leads over the years without making an arrest; Zolliecoffer's family has "
+                 "been divided over the motive, with some believing it was drug-related and others "
+                 "insisting he was firmly against drug use. A $1,500 reward remains active through Cedar "
+                 "Valley Crime Stoppers.",
+         known=["Victim identity, age, and the September 7\u201315, 1989 timeline, per Iowa Cold Cases and the Iowa Attorney General's cold case files.",
+                "No arrests have ever been made in the case, per the same sources.",
+                "A news photograph published as part of the 2015 \u201cGone Cold: Exploring Iowa's Unsolved Murders\u201d statewide newspaper project identifies Zolliecoffer."],
+         unknown=["Whether Zolliecoffer left the bar willingly or was forced out was never resolved; witness accounts conflicted.",
+                  "The motive for the killing remains disputed even within Zolliecoffer's own family."],
+         unanswered=["What became of the conflicting witness accounts of Zolliecoffer's final hours at Goodies II?",
+                     "What specific leads have Waterloo police pursued over the decades, and why has none led to an arrest?",
+                     "What forensic evidence, if any, survives from the recovered blanket, wiring, and cement blocks for modern re-testing?"],
+         extraSources=[src("Iowa Cold Cases \u2014 case summary",
+                            "https://iowacoldcases.org/case-summaries/jeffery-zolliecoffer/", True),
+                        src("Iowa Attorney General's Office \u2014 Unresolved cold case bulletin",
+                            "https://www.iowaattorneygeneral.gov/browse/files/8da497e85c2d4d698341ab118d9ab709/embed", True),
+                        src("North Platte Telegraph, reprinting \u201cGone Cold\u201d \u2014 \u201cWaterloo murder from 1989 remains unsolved\u201d",
+                            "https://nptelegraph.com/news/iowa/article_3addadcd-2852-5014-9994-d697d2bb5f43.html", True)]),
+    dict(id="darrion-carrington", caseNumber="055", name="Darrion \u201cPritz\u201d Carrington",
+         status="unsolved", caseType="homicide", year=2008, age=18, gender="male",
+         city="Boston", county="Suffolk", state="MA", caseSeries=None,
+         summary="Darrion \u201cPritz\u201d Carrington, 18, was shot multiple times at close range inside the "
+                 "lobby of the Canton House, a fast-food Chinese restaurant on Dorchester Avenue, around "
+                 "11:40 p.m. on January 7, 2008, while he waited for a late-night order and talked to a "
+                 "friend on his cellphone. He was rushed to Boston Medical Center and died of his wounds the "
+                 "next day. Carrington, raised at St. John's Missionary Baptist Church and a regular at the "
+                 "Roxbury Boys and Girls Club, had dreamed of playing basketball professionally. The Boston "
+                 "Police Department still lists his death among the city's unsolved 2008 homicides; no "
+                 "arrest has ever been made. His mother, Natasha Carrington, has since become an advocate "
+                 "for other families of unsolved homicide victims through the Louis D. Brown Peace "
+                 "Institute. A 2025 analysis by WBUR found that families of Black and Hispanic unsolved "
+                 "homicide victims in Massachusetts are more likely than others to be denied basic case "
+                 "updates by prosecutors citing open-investigation exemptions, even years after a case has "
+                 "gone cold.",
+         known=["Victim identity, age, and the January 7\u20138, 2008 date and circumstances, per the Boston Police Department's official unsolved homicides list and contemporaneous news coverage.",
+                "No arrest has ever been made in the case, per the same sources."],
+         unknown=["No suspect has ever been publicly identified.",
+                  "The motive for the shooting was never established in any public account."],
+         unanswered=["What specific leads, if any, has the Boston Police Department pursued in the 17 years since the shooting?",
+                     "Why have Carrington's family reported difficulty obtaining case updates despite repeated requests?",
+                     "What became of the other two unsolved shootings along Dorchester Avenue in the days immediately following Carrington's death?"],
+         extraSources=[src("Boston Police Department \u2014 official 2008 Unsolved Homicides list",
+                            "https://police.boston.gov/2008-unsolved-homicides/", True),
+                        src("Boston 25 News \u2014 \u201cNew England's Unsolved: Who shot and killed Darrion Carrington?\u201d",
+                            "https://www.boston25news.com/news/local/new-englands-unsolved-who-shot-killed-darrion-carrington/5KZVGMAUVVAPFA5HOJKPFLPRME/", True)]),
+    dict(id="carol-jenkins", caseNumber="056", name="Carol Jenkins",
+         status="unsolved", caseType="homicide", year=1968, age=21, gender="female",
+         city="Martinsville", county="Morgan", state="IN", caseSeries=None,
+         summary="Carol Jenkins, 21, an aspiring fashion model, was stabbed once through the heart with a "
+                 "screwdriver on East Morgan Street in Martinsville on the night of September 16, 1968, "
+                 "while selling encyclopedias door to door. Jenkins had reported being followed and "
+                 "harassed by two white men in a car and sought help at a stranger's home; police searched "
+                 "but could not find the vehicle, and Jenkins, not wanting to further inconvenience the "
+                 "family who had taken her in, continued on her route. The men returned roughly half an "
+                 "hour later; one held her while the other stabbed her. The killing, in a town with a "
+                 "longstanding reputation as a \u201csundown town,\u201d went unsolved for more than three "
+                 "decades. In 2002, an anonymous letter to police named Kenneth Clay Richmond as the "
+                 "killer; his daughter, seven years old at the time of the murder, confirmed she had "
+                 "witnessed her father stab Jenkins from the back seat of the family car while a second, "
+                 "still-unidentified man held her down, and that her father had paid her seven dollars "
+                 "never to speak of it. Richmond was arrested and charged with murder in 2002, but was "
+                 "found incompetent to stand trial due to cognitive decline; he died of cancer later that "
+                 "year, maintaining his innocence to the end. The second man was never identified.",
+         known=["Victim identity, background, and the September 16, 1968 date and circumstances, per PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+                "Kenneth Clay Richmond was identified in 2002 through his daughter's eyewitness testimony, arrested, and charged with murder, but was found incompetent to stand trial and died later that year before any trial occurred."],
+         unknown=["No one was ever convicted in Jenkins's killing.",
+                  "The identity of the second man involved in the attack was never established."],
+         unanswered=["Who was the second, unidentified man who held Jenkins down during the attack?",
+                     "What became of the private investigation Jenkins's stepfather commissioned decades before the 2002 break in the case?",
+                     "What specific cognitive decline led the court to find Richmond incompetent to stand trial in 2002?"],
+         extraSources=[src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/carol-jenkins", True),
+                        src("African American Registry \u2014 case summary",
+                            "https://aaregistry.org/story/the-murder-of-carol-m-jenkins-occurs/", True)]),
+    dict(id="john-wesley-wilder", caseNumber="057", name="John Wesley Wilder",
+         status="unsolved", caseType="homicide", year=1965, age=32, gender="male",
+         city="Ruston", county="Lincoln", state="LA", caseSeries=None,
+         summary="John Wesley Wilder, 32, was shot five times and killed by Ruston Police Officer Edward "
+                 "Nugent outside a cafe on Jones Street around 2 a.m. on July 17, 1965. Nugent said he "
+                 "stopped to question Wilder and another Black man, Billy Williams, after hearing shouting "
+                 "from the group; when Wilder allegedly refused to give his name and a struggle followed, "
+                 "Nugent drew his pistol and fired. The Ruston Police Department said Wilder had attacked "
+                 "Nugent while resisting arrest, and a coroner's inquest \u2014 which the coroner said was "
+                 "based on interviews with unidentified officers and three Black witnesses \u2014 ruled the "
+                 "shooting justifiable self-defense; no charges were ever filed. Wilder's brother Emzie "
+                 "disputed the official account, saying witnesses described only about 15 bystanders "
+                 "present, far fewer than police suggested, and warned he would seek help from the NAACP "
+                 "and CORE if Ruston authorities failed to act. A 1965 civil suit by Wilder's family did not "
+                 "succeed. The FBI reopened the case in 2008 under the Emmett Till Act; after three years, "
+                 "during which the Bureau was unable to locate some potential witnesses and others could "
+                 "not recall the incident, the case was closed again in 2011 without further action.",
+         known=["Victim identity and the July 17, 1965 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+                "Officer Edward Nugent was never charged; a coroner's inquest ruled the shooting justifiable self-defense, and the DOJ's 2011 review closed the case without further action."],
+         unknown=["Whether Wilder actually attacked Nugent, as police claimed, was disputed by his family and community witnesses at the time.",
+                  "The exact number of bystanders present, and what they told investigators, was never made fully public."],
+         unanswered=["What specific witnesses did the FBI's 2008\u20132011 review attempt to locate, and why were some unreachable?",
+                     "What became of the 1965 civil suit Wilder's family brought, and why did it not succeed?",
+                     "What records, if any, survive from the original coroner's inquest beyond the brief newspaper account?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/crt/file/892376/dl", True),
+                        src("Type Investigations \u2014 \u201cA Death Ruled \u2018Justifiable\u2019: The Killing of John Wesley Wilder\u201d",
+                            "https://www.typeinvestigations.org/investigation/2023/07/24/a-death-ruled-justifiable-the-killing-of-john-wesley-wilder/", True)]),
+    dict(id="clinton-melton", caseNumber="058", name="Clinton Melton",
+         status="unsolved", caseType="homicide", year=1955, age=33, gender="male",
+         city="Glendora", county="Tallahatchie", state="MS", caseSeries=None,
+         summary="Clinton Melton, 33, a gas station attendant and father of four, was shot and killed at "
+                 "the station where he worked in Glendora on December 3, 1955 \u2014 four months after "
+                 "Emmett Till was murdered twenty miles away, and in the same county. Melton had argued "
+                 "with a white customer, Elmer Otis Kimbell, over how much gas Kimbell had been pumped; a "
+                 "witness said Kimbell announced he was going home to get a shotgun and would return to "
+                 "kill Melton. The station owner told Melton to leave before Kimbell came back, but Kimbell "
+                 "returned first and shot Melton, who was unarmed and sitting in his own car, in the hand "
+                 "and head. Kimbell, who was using the car of his close friend J.W. Milam \u2014 one of the "
+                 "two men who had killed Till and been acquitted weeks earlier in the same courthouse "
+                 "\u2014 was tried for murder before another all-white Tallahatchie County jury and "
+                 "acquitted, despite the testimony of witnesses who saw the shooting and a doctor whose "
+                 "exam of Kimbell's own wound cast doubt on his self-defense claim. Less than three weeks "
+                 "after the shooting and just before the trial, Melton's widow Beulah drowned when her car "
+                 "went into Black Bayou with two of their children in the back seat; a family member said "
+                 "everyone in the community believed her car had been forced off the road. The DOJ's Civil "
+                 "Rights Division reviewed the case decades later and closed it, since Kimbell, by then "
+                 "deceased, had already stood trial and been acquitted at the state level.",
+         known=["Victim identity, background, and the December 3, 1955 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+                "Elmer Otis Kimbell was tried for murder and acquitted by an all-white jury; the DOJ's later review closed the case without further action since Kimbell was deceased and had already faced state trial."],
+         unknown=["No one was ever convicted in Melton's killing.",
+                  "The circumstances of Beulah Melton's fatal car crash, widely believed in the community to have been no accident, were never formally investigated as connected to her husband's case."],
+         unanswered=["What specific evidence led the community to believe Beulah Melton's car had been deliberately forced off the road?",
+                     "What did the doctor's examination of Kimbell's shoulder wound actually establish about the sequence of the shooting?",
+                     "What connection, if any, did Kimbell's presence in J.W. Milam's car that day have to the broader circle involved in Till's murder?"],
+         extraSources=[src("U.S. Department of Justice \u2014 Notice to Close File",
+                            "https://www.justice.gov/d9/144_40_2146_melton.pdf", True),
+                        src("PBS FRONTLINE Un(re)solved \u2014 case summary",
+                            "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/clinton-melton/", True)]),
+    dict(id="alonzo-tucker", caseNumber="059", name="Alonzo Tucker",
+         status="unsolved", caseType="homicide", year=1902, age=28, gender="male",
+         city="Coos Bay", county="Coos", state="OR", caseSeries=None,
+         summary="Alonzo Tucker, 28, a married boxer who ran a small gym called the School of Physical "
+                 "Culture and also worked as a boot black and mail carrier, was lynched in Marshfield "
+                 "(now Coos Bay) on September 18, 1902, the day after a white woman accused him of "
+                 "assaulting her near the 7th Street bridge. Tucker was arrested without resistance that "
+                 "evening, but as word spread, an armed mob of as many as 200 men formed. While being "
+                 "moved to keep him from the mob, Tucker escaped and spent the night hiding under the "
+                 "town's docks. He was found the next day and shot; the mob then put a noose around his "
+                 "neck and began dragging him toward the site of the alleged assault, but he died of his "
+                 "wounds along the way. His body was hanged from a light pole on the bridge in broad "
+                 "daylight before roughly 300 spectators, none of them masked. Local newspapers described "
+                 "the mob approvingly and no one was ever indicted; Coos Bay's small Black community "
+                 "largely fled the area afterward out of fear. In 1974, a local newspaper reporter located "
+                 "and interviewed three elderly men who had witnessed the lynching as boys; all three said "
+                 "they believed Tucker's relationship with his accuser had actually been consensual. It "
+                 "remains the only documented lynching of a Black person in Oregon's history. A historical "
+                 "marker was dedicated at the site in 2021 following a multi-year memorialization effort.",
+         known=["Victim identity, background, and the September 17\u201318, 1902 date and circumstances, per the Equal Justice Initiative's historical marker and the Oregon Remembrance Project.",
+                "No one was ever indicted for the lynching; three eyewitnesses interviewed in 1974 said they believed the underlying relationship had been consensual, per the same sources."],
+         unknown=["The identities of individual mob members were never formally investigated or prosecuted, despite the lynching occurring in broad daylight before hundreds of unmasked witnesses.",
+                  "What became of Tucker's accuser and her family, who left the area for California shortly after the lynching, was never documented."],
+         unanswered=["What specific testimony did the three 1974 eyewitnesses give about the night of the lynching?",
+                     "What connection, if any, exists between this case and the 1924 killing of Timothy Pettis, another Black Marshfield resident found murdered in the same bay, which prompted the NAACP to publicly declare the town \u201cinfested with the Ku Klux Klan\u201d?",
+                     "What additional documentation survives in period newspaper archives beyond the accounts already collected?"],
+         extraSources=[src("Equal Justice Initiative \u2014 historical marker, \u201cLynching in Coos County\u201d",
+                            "https://www.hmdb.org/m.asp?m=176959", True),
+                        src("Oregon Remembrance Project \u2014 case summary",
+                            "https://oregonremembrance.org/alonzo-tucker/", True)]),
+    dict(id="timothy-pettis", caseNumber="060", name="Timothy Pettis",
+         status="unsolved", caseType="homicide", year=1924, age=None, gender="male",
+         city="Coos Bay", county="Coos", state="OR", caseSeries=None,
+         summary="Timothy Pettis, a Black resident of Marshfield (now Coos Bay) and a veteran of the "
+                 "all-Black 24th Infantry Regiment, was murdered and castrated in July 1924; his body was "
+                 "left in the waters of Coos Bay, the same body of water where Alonzo Tucker had been "
+                 "lynched twenty-two years earlier. Black community members in Marshfield and Portland, "
+                 "along with members of the NAACP, believed the Ku Klux Klan was responsible and offered "
+                 "rewards for information; the Portland NAACP publicly declared that \u201cMarshfield is "
+                 "infested with the Ku Klux Klan.\u201d Oregon is believed to have had the highest "
+                 "per-capita Klan membership of any state in the country during the 1920s, with the "
+                 "organization's influence reaching into city, county, and state government and law "
+                 "enforcement. No one was ever charged in Pettis's killing.",
+         known=["Victim identity, background, and the July 1924 date and circumstances, per Oregon Historical Quarterly and OPB's \u201cOregon Experience\u201d documentary.",
+                "Black community members and the NAACP publicly attributed the killing to the Klan and offered rewards for information; no one was ever charged, per the same sources."],
+         unknown=["No suspect was ever identified or charged in Pettis's death.",
+                  "The full circumstances of how Pettis's body came to be found in the bay were not detailed in available public accounts."],
+         unanswered=["What specific evidence led Black community members and the NAACP to attribute the killing to the Klan?",
+                     "What became of the reward offered for information in the case?",
+                     "What connection, if any, exists between this case and the broader pattern of Klan-linked violence documented elsewhere in Coos County during the 1920s?"],
+         extraSources=[src("Oregon Historical Quarterly \u2014 \u201cGendering White Supremacy\u201d by Kimberly Jensen",
+                            "https://www.ohs.org/oregon-historical-quarterly/upload/Jensen-KKK_OHQ-125_1_spring-2024_web.pdf", True),
+                        src("OPB / Oregon Experience \u2014 \u201cOregon's Klan in the 1920s: The Rise of Hate\u201d",
+                            "https://www.pbs.org/video/the-rise-of-hate-oregons-klan-in-the-1920s-uotkln/", True)]),
+    dict(id="william-harvey", caseNumber="061", name="William \u201cSam Joe\u201d Harvey",
+         status="unsolved", caseType="homicide", year=1883, age=35, gender="male",
+         city="Salt Lake City", county="Salt Lake", state="UT", caseSeries=None,
+         summary="William \u201cSam Joe\u201d Harvey, about 35, an Army veteran who had recently arrived in "
+                 "Salt Lake City seeking work and set up a bootblack stand downtown, was lynched by a mob "
+                 "of up to 2,000 people on August 25, 1883, hours after his arrest. Harvey had argued with "
+                 "the owner of a restaurant over a job offer; when police arrived to investigate, Harvey "
+                 "reportedly fired a gun, killing Police Chief Andrew H. Burt and wounding another "
+                 "official. Officers took Harvey into custody and beat him severely at police headquarters "
+                 "\u2014 striking him, kicking him, and beating him with billy clubs, brass knuckles, and "
+                 "shackles \u2014 before a growing mob outside began chanting for him to be handed over. "
+                 "The Salt Lake Tribune itself reported at the time that police \u201cgave up their victim "
+                 "to the crowd, which proceeded to hang him.\u201d The mob beat Harvey further, hanged him "
+                 "from a shed's roof-beam near the jail, and when he tried to hold onto the rope to avoid "
+                 "strangling, a mob member kicked his hands loose. After he died, the mob cut down his "
+                 "body and dragged it through the streets until the mayor personally intervened and broke "
+                 "up the crowd. A coroner's jury convened that same afternoon and, despite the public, "
+                 "unmasked lynching, ruled that Harvey died \u201cby means of hanging with a rope by an "
+                 "infuriated mob whose names were to the jury unknown.\u201d No one was ever charged, "
+                 "including the officers who turned him over.",
+         known=["Victim identity, background, and the August 25, 1883 date and circumstances, per the University of Utah's Marriott Library exhibit on racial lynching in Utah, drawing on contemporaneous newspaper accounts and a 1985 academic study of the case.",
+                "A coroner's jury the same day ruled Harvey's killers \u201cunknown\u201d despite the lynching occurring in public before an unmasked mob; no one, including the complicit police officers, was ever charged."],
+         unknown=["Harvey's exact birth name and background before arriving in Salt Lake City were never reliably documented; a man identifying himself as Harvey's half-brother told a local paper his birth name was Joseph Samuels, a native of Louisiana.",
+                  "The identities of individual mob participants, though numbering close to 2,000 and unmasked, were never formally investigated."],
+         unanswered=["What became of the police officers who beat Harvey and then handed him to the mob \u2014 were any ever disciplined internally?",
+                     "What additional detail might the cited 1985 academic study by Larry Gerlach add beyond what the newspaper record shows?",
+                     "What connection, if any, exists between this case and the 1866 killing of Thomas Coleman, an earlier unsolved killing of a Black man in the same city?"],
+         extraSources=[src("University of Utah, J. Willard Marriott Library \u2014 \u201cRacial Lynching in Utah\u201d exhibit",
+                            "https://exhibits.lib.utah.edu/s/utah-lynching/page/william-sam-joe-harvey", True),
+                        src("Utah State Historical Society \u2014 \u201cAfrican Americans and Salt Lake's West Side\u201d",
+                            "https://heritageandarts.utah.gov/african-americans-and-salt-lakes-west-side/", True)]),
+    dict(id="thomas-coleman", caseNumber="062", name="Thomas Coleman",
+         status="unsolved", caseType="homicide", year=1866, age=34, gender="male",
+         city="Salt Lake City", county="Salt Lake", state="UT", caseSeries=None,
+         summary="Thomas Coleman, about 34, a formerly enslaved man who worked as an attendant at The "
+                 "Salt Lake House hotel, was murdered on the night of December 10, 1866, on a hill "
+                 "overlooking the city that is now the site of the Utah State Capitol; his body, "
+                 "bludgeoned with a large rock and cut across the throat, was found the next morning near "
+                 "the U.S. Arsenal. A local newspaper reported Coleman had been \u201cfound in company of a "
+                 "white woman\u201d and speculated he was killed in revenge by a rival for her affection, "
+                 "framing the murder as retribution for crossing racial lines. A sign left on his body was "
+                 "cited by the Daily Union Vedette, a newspaper run by soldiers at nearby Fort Douglas, as "
+                 "evidence the killing had been planned in advance; the Vedette openly criticized the "
+                 "official investigation as inadequate. A coroner's jury nonetheless concluded that "
+                 "\u201csaid murder to the jury are unknown,\u201d and no one was ever held accountable. "
+                 "Despite being a member of the church that had once enslaved him, Coleman was buried in a "
+                 "pauper's field rather than a standard cemetery plot. In 2022, the University of Utah, the "
+                 "Sema Hadithi African American Heritage and Culture Foundation, and the Equal Justice "
+                 "Initiative held a joint soil-collection ceremony at Coleman's murder site and at the site "
+                 "where William \u201cSam Joe\u201d Harvey was lynched seventeen years later in the same "
+                 "city, memorializing both men together.",
+         known=["Victim identity, background, and the December 10\u201311, 1866 date and circumstances, per the University of Utah's Marriott Library exhibits \u201cRacial Lynching in Utah\u201d and \u201cCentury of Black Mormons.\u201d",
+                "A coroner's jury concluded Coleman's killers were \u201cunknown\u201d despite a contemporary newspaper's own skepticism of the investigation; no one was ever held accountable, per the same sources."],
+         unknown=["The identity of the person or people responsible for Coleman's murder was never established.",
+                  "Whether the killing was actually motivated by a relationship with a white woman, as one contemporary newspaper speculated, or by some other cause, was never confirmed."],
+         unanswered=["What did the sign left on Coleman's body actually say, and what became of it as physical evidence?",
+                     "Why did the coroner's jury reach a conclusion of \u201cunknown\u201d despite the Daily Union Vedette's public criticism of the investigation's thoroughness?",
+                     "What connection, if any, exists between this case and the 1883 lynching of William \u201cSam Joe\u201d Harvey in the same city?"],
+         extraSources=[src("University of Utah, J. Willard Marriott Library \u2014 \u201cRacial Lynching in Utah\u201d exhibit",
+                            "https://exhibits.lib.utah.edu/s/utah-lynching/page/thomas-coleman", True),
+                        src("University of Utah, J. Willard Marriott Library \u2014 \u201cCentury of Black Mormons\u201d exhibit",
+                            "https://exhibits.lib.utah.edu/s/century-of-black-mormons/page/coleman-thomas", True)]),
 ]
+
+
 
 # Slug (and thus filename, cases/<slug>.html) for each named case series. Any
 # case whose caseSeries matches a key here gets linked into that series page;
@@ -1602,6 +1865,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/us-states-paths.js"></script>
 <script src="{r}js/main.js"></script>
 <script src="{r}js/quiz.js"></script>
+<script src="{r}js/saved-cases.js"></script>
 </body>
 </html>'''
 
@@ -1641,7 +1905,7 @@ def left_panel(depth, active_id=None):
     <button class="pl-chip" aria-pressed="false" data-filter="cold">Cold Case</button>
     <button class="pl-chip" aria-pressed="false" data-filter="series">Case Series</button>
   </div>
-  <div class="pl-series-link">{series_nav_links(r)}</div>
+  <div class="pl-series-link">{series_nav_links(r)}<a href="{r}quiz.html">\U0001F9E0 Cold Case Quiz \u2192</a></div>
   <div class="pl-list-head">Recent Cases</div>
   <ul class="pl-list">
     {items_html}
@@ -1675,6 +1939,12 @@ def profile_panel(c):
     <div class="pp-row"><span class="label">Location</span><span class="value">{location_str(c)}</span></div>
     <div class="pp-row"><span class="label">Case Type</span><span class="value">{case_type}</span></div>
     {series_row}
+  </div>
+  <div class="pp-notes">
+    <div class="pp-notes-head">Private Notes</div>
+    <p class="pp-notes-hint">Saved only in this browser \u2014 never sent anywhere, never visible to anyone else.</p>
+    <textarea data-case-note rows="4" placeholder="Jot down anything you want to remember about this case&hellip;"></textarea>
+    <div class="pp-notes-status" data-case-note-status></div>
   </div>
 </aside>'''
 
@@ -1753,11 +2023,12 @@ def build_case_page(c):
   <div class="related-grid">{cards}</div>
 </section>'''
 
-    jump_nav = '''<nav class="case-jump-nav" aria-label="Jump to section">
+    jump_nav = f'''<nav class="case-jump-nav" aria-label="Jump to section">
     <a href="#case-board">Summary</a>
     <a href="#case-profile">Profile</a>
     <a href="#case-sources">Sources</a>
     <a href="#case-questions">Unanswered Questions</a>
+    <button type="button" class="case-save-btn" data-save-case-btn="{c['id']}">\u2606 Save This Case</button>
   </nav>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
@@ -2039,6 +2310,11 @@ def build_home():
       <div class="pq-item">Open the Case Index to browse by timeline or geography.</div>
       <div class="pq-item">Select any case in the left panel to open its investigation board.</div>
     </div>
+    <a href="quiz.html" class="quiz-callout">
+      <span class="quiz-callout-eyebrow">\U0001F9E0 Test Yourself</span>
+      <span class="quiz-callout-title">Take the Cold Case Quiz</span>
+      <span class="quiz-callout-sub">6 questions on the law behind these cases &mdash; the Emmett Till Act, statutes of limitations, what &ldquo;closed&rdquo; really means.</span>
+    </a>
     {ad_slot(label="Advertisement")}
   </aside>
   <section class="panel-questions area-questions">
@@ -2106,9 +2382,9 @@ def build_about():
 STATE_NAMES = {
     "AL": "Alabama", "AR": "Arkansas", "CO": "Colorado", "DC": "Washington, D.C.", "DE": "Delaware", "FL": "Florida", "GA": "Georgia",
     "IA": "Iowa", "IL": "Illinois", "IN": "Indiana", "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
-    "MD": "Maryland", "MI": "Michigan", "MN": "Minnesota", "MO": "Missouri", "MS": "Mississippi", "NC": "North Carolina",
-    "NE": "Nebraska", "NJ": "New Jersey", "NY": "New York", "OH": "Ohio", "OK": "Oklahoma", "PA": "Pennsylvania",
-    "SC": "South Carolina", "TN": "Tennessee", "TX": "Texas", "VA": "Virginia", "WA": "Washington",
+    "MA": "Massachusetts", "MD": "Maryland", "MI": "Michigan", "MN": "Minnesota", "MO": "Missouri", "MS": "Mississippi", "NC": "North Carolina",
+    "NE": "Nebraska", "NJ": "New Jersey", "NY": "New York", "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania",
+    "SC": "South Carolina", "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VA": "Virginia", "WA": "Washington",
     "WV": "West Virginia", "WY": "Wyoming",
 }
 
@@ -2190,6 +2466,16 @@ def build_statistics():
     notice a discrepancy, use the <a href="submit.html">Submit a Case or Tip</a> page to flag it.</div>'''
     write("statistics.html", page_shell("Archive Statistics", f"Data and figures computed from the {total} cases currently documented in this archive.", depth,
           doc_page(depth, "Data", "Archive Statistics", body), canonical_path="statistics.html"))
+
+def build_saved_cases():
+    depth = 0
+    body = '''<p>Cases you\u2019ve saved for later, stored privately in this browser only. Nothing here is
+    sent anywhere or visible to anyone but you \u2014 not the site owner, not other visitors. This list (and
+    any private notes you\u2019ve added) will disappear if you clear your browser\u2019s site data, and won\u2019t
+    show up if you open this site on a different device or browser.</p>
+    <div id="saved-cases-list" class="related-grid" style="margin-top:20px;"></div>'''
+    write("saved.html", page_shell("My Saved Cases", "Cases you've bookmarked for later, stored privately in your own browser.", depth,
+          doc_page(depth, "Private", "My Saved Cases", body), canonical_path="saved.html"))
 
 def build_quiz():
     depth = 0
@@ -2344,6 +2630,46 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-08-26", case_id="thomas-coleman",
+         text="New case added to the archive: Thomas Coleman (Salt Lake City, Utah, 1866), sourced from "
+              "the University of Utah's \u201cRacial Lynching in Utah\u201d and \u201cCentury of Black "
+              "Mormons\u201d exhibits. This case is directly connected to William \u201cSam Joe\u201d "
+              "Harvey's case, documented in this archive as case #061 \u2014 both men were killed in Salt "
+              "Lake City, 17 years apart, and were jointly memorialized in a 2022 ceremony."),
+    dict(date="2026-08-26", case_id="william-harvey",
+         text="New case added to the archive: William \u201cSam Joe\u201d Harvey (Salt Lake City, Utah, "
+              "1883), sourced from the University of Utah's Marriott Library exhibit on racial lynching "
+              "in Utah and the Utah State Historical Society. This is the first Utah case documented in "
+              "the archive."),
+    dict(date="2026-08-26", case_id="timothy-pettis",
+         text="New case added to the archive: Timothy Pettis (Coos Bay, Oregon, 1924), sourced from "
+              "Oregon Historical Quarterly and OPB's \u201cOregon Experience\u201d documentary. This case "
+              "directly connects to Alonzo Tucker's case, documented in this archive as case #059 \u2014 "
+              "both men were killed in the same Coos Bay waters, twenty-two years apart."),
+    dict(date="2026-08-26", case_id="alonzo-tucker",
+         text="New case added to the archive: Alonzo Tucker (Coos Bay, Oregon, 1902), sourced from the "
+              "Equal Justice Initiative's historical marker and the Oregon Remembrance Project. This is "
+              "the first Oregon case documented in the archive, and remains the only documented lynching "
+              "of a Black person in the state's history."),
+    dict(date="2026-08-26", case_id="clinton-melton",
+         text="New case added to the archive: Clinton Melton (Glendora, Mississippi, 1955), sourced from "
+              "the DOJ's Civil Rights Division case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case "
+              "summary."),
+    dict(date="2026-08-26", case_id="carol-jenkins",
+         text="New case added to the archive: Carol Jenkins (Martinsville, Indiana, 1968), sourced from "
+              "PBS FRONTLINE's \u201cUn(re)solved\u201d case summary and the African American Registry."),
+    dict(date="2026-08-26", case_id="john-wesley-wilder",
+         text="New case added to the archive: John Wesley Wilder (Ruston, Louisiana, 1965), sourced from "
+              "the DOJ's 2011 Notice to Close File and Type Investigations' 2023 investigative report."),
+    dict(date="2026-08-26", case_id="darrion-carrington",
+         text="New case added to the archive: Darrion \u201cPritz\u201d Carrington (Boston, Massachusetts, "
+              "2008), sourced from the Boston Police Department's official unsolved homicides list and "
+              "Boston 25 News. This is the first Massachusetts case documented in the archive."),
+    dict(date="2026-08-26", case_id="jeffery-zolliecoffer",
+         text="New case added to the archive: Jeffery \u201cJo Jo\u201d Zolliecoffer (Waterloo, Iowa, 1989), "
+              "sourced from Iowa Cold Cases, the Iowa Attorney General's cold case files, and a "
+              "contemporaneous news photograph from the 2015 \u201cGone Cold: Exploring Iowa's Unsolved "
+              "Murders\u201d statewide newspaper project."),
     dict(date="2026-08-25", case_id="samuel-johnson",
          text="New case added to the archive: Samuel Johnson, known as \u201cMingo Jack\u201d (Eatontown, New "
               "Jersey, 1886), sourced from research by local historian Gary Saretzky, published by the New "
@@ -2625,6 +2951,7 @@ if __name__ == "__main__":
     build_about()
     build_statistics()
     build_quiz()
+    build_saved_cases()
     build_research()
     build_resources()
     build_submit()

@@ -380,6 +380,18 @@ p:last-child{ margin-bottom:0; }
 details.pq-details summary{ cursor:pointer; list-style:none; }
 details.pq-details summary::-webkit-details-marker{ display:none; }
 
+/* Homepage quiz callout — deliberately more visually distinct than the
+   plain Getting Started bullets, since this is meant to actually draw the
+   eye rather than blend in as one more list item. */
+.quiz-callout{
+  display:flex; flex-direction:column; gap:4px; margin-top:14px; padding:14px 16px;
+  border:1px solid var(--amber); border-radius:2px; background:rgba(185,138,61,0.08);
+}
+.quiz-callout:hover{ background:rgba(185,138,61,0.14); border-color:var(--crimson-bright); }
+.quiz-callout-eyebrow{ font-family:var(--mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--amber); }
+.quiz-callout-title{ font-family:var(--sans); font-weight:600; font-size:.94rem; color:var(--text); }
+.quiz-callout-sub{ font-size:.78rem; color:var(--text-dim); line-height:1.4; }
+
 /* ==========================================================================
    Related cases / case index / timeline / map (secondary board views)
    ========================================================================== */
@@ -485,6 +497,36 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 }
 .quiz-submit:hover{ background:var(--crimson-bright); }
 .quiz-result{ font-family:var(--mono); font-size:.92rem; color:var(--text); background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px; padding:14px 16px; margin-top:18px; }
+
+/* Save This Case button (in the case-jump-nav row) */
+.case-save-btn{
+  margin-left:auto; background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px; cursor:pointer;
+}
+.case-save-btn:hover{ border-color:var(--amber); color:var(--text); }
+.case-save-btn.is-saved{ border-color:var(--amber); background:rgba(185,138,61,0.1); color:var(--amber); }
+
+/* Private Notes (Case Profile sidebar) */
+.pp-notes{ margin-top:18px; padding-top:16px; border-top:1px solid var(--border); }
+.pp-notes-head{ font-family:var(--sans); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px; }
+.pp-notes-hint{ font-size:.72rem; color:var(--text-faint); margin-bottom:8px; }
+.pp-notes textarea{
+  width:100%; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text); font-family:var(--sans); font-size:.82rem; padding:9px 10px; resize:vertical;
+}
+.pp-notes textarea:focus{ outline:2px solid var(--amber); outline-offset:1px; }
+.pp-notes-status{ font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-top:5px; min-height:1em; }
+
+/* My Saved Cases page */
+.saved-case-card{ display:flex; flex-direction:column; }
+.saved-note{ font-size:.78rem; color:var(--text-dim); background:var(--panel-2); border-left:2px solid var(--amber); padding:8px 10px; margin-top:8px; white-space:pre-wrap; }
+.saved-remove{
+  align-self:flex-start; margin-top:10px; background:none; border:1px solid var(--border-strong); color:var(--text-faint);
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; padding:5px 9px; border-radius:2px; cursor:pointer;
+}
+.saved-remove:hover{ border-color:var(--crimson); color:var(--crimson-bright); }
+@media (max-width:640px){ .case-save-btn{ margin-left:0; } }
 .callout.warn{ border-left-color:var(--crimson); background:rgba(179,32,47,0.06); }
 
 /* ==========================================================================
