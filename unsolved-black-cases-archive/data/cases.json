@@ -5024,5 +5024,63 @@
       }
     ],
     "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "quincy-booker",
+    "caseNumber": "090",
+    "name": "Quincy Booker",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2011,
+    "age": 36,
+    "gender": "male",
+    "city": "Albuquerque",
+    "county": "Bernalillo County",
+    "state": "NM",
+    "caseSeries": null,
+    "dateAdded": "2026-08-26",
+    "summary": "Quincy Booker, 36, was shot and killed in a drive-by shooting near the intersection of Arno Avenue and Santa Fe Avenue Southeast in Albuquerque, New Mexico, on July 17, 2011. Witnesses said four men got out of a blue Dodge Neon and opened fire, hitting him more than a dozen times, next to a church filled with people on a Sunday. The attackers fled immediately, and the case has remained unsolved since.",
+    "known": [
+      "Victim identity, age, and the July 17, 2011 shooting near Arno Avenue and Santa Fe Avenue SE, per the Albuquerque Police Department's case record via Project Cold Case.",
+      "Witnesses described four men exiting a blue Dodge Neon and firing on Booker before fleeing."
+    ],
+    "unknown": [
+      "No arrest has ever been made.",
+      "The identities of the four men described by witnesses have not been publicly disclosed.",
+      "The motive for the shooting has not been made public."
+    ],
+    "unanswered": [
+      "What, if anything, connected Booker to the men who attacked him?",
+      "Has the blue Dodge Neon described by witnesses ever been identified or located?",
+      "What leads, if any, have Albuquerque police developed since 2011?"
+    ],
+    "sources": [
+      {
+        "name": "Albuquerque Police Department, via Project Cold Case \u2014 case record",
+        "url": "https://projectcoldcase.org/victim-detail/quincy-booker-1863/",
+        "verified": true
+      },
+      {
+        "name": "KOAT \u2014 \u201cMan gunned down in SE Albuquerque, police say\u201d (2011)",
+        "url": "https://www.koat.com/article/man-gunned-down-in-se-albuquerque-police-say/5036927",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
   }
 ]

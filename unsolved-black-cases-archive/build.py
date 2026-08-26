@@ -2317,6 +2317,28 @@ CASES = [
                             "https://projectcoldcase.org/victim-detail/nacomie-freeman-351/", True),
                         src("The Arizona Republic \u2014 \u201cKiller sought in death of Phoenix woman\u201d (2004)",
                             "https://www.newspapers.com/article/arizona-republic/200158960/", True)]),
+    dict(id="quincy-booker", caseNumber="090", name="Quincy Booker",
+         status="unsolved", caseType="homicide", year=2011, age=36, gender="male",
+         city="Albuquerque", county="Bernalillo County", state="NM", caseSeries=None,
+         dateAdded="2026-08-26",
+         summary="Quincy Booker, 36, was shot and killed in a drive-by shooting near the intersection of Arno "
+                 "Avenue and Santa Fe Avenue Southeast in Albuquerque, New Mexico, on July 17, 2011. Witnesses "
+                 "said four men got out of a blue Dodge Neon and opened fire, hitting him more than a dozen "
+                 "times, next to a church filled with people on a Sunday. The attackers fled immediately, and "
+                 "the case has remained unsolved since.",
+         known=["Victim identity, age, and the July 17, 2011 shooting near Arno Avenue and Santa Fe Avenue SE, "
+                "per the Albuquerque Police Department's case record via Project Cold Case.",
+                "Witnesses described four men exiting a blue Dodge Neon and firing on Booker before fleeing."],
+         unknown=["No arrest has ever been made.",
+                  "The identities of the four men described by witnesses have not been publicly disclosed.",
+                  "The motive for the shooting has not been made public."],
+         unanswered=["What, if anything, connected Booker to the men who attacked him?",
+                     "Has the blue Dodge Neon described by witnesses ever been identified or located?",
+                     "What leads, if any, have Albuquerque police developed since 2011?"],
+         extraSources=[src("Albuquerque Police Department, via Project Cold Case \u2014 case record",
+                            "https://projectcoldcase.org/victim-detail/quincy-booker-1863/", True),
+                        src("KOAT \u2014 \u201cMan gunned down in SE Albuquerque, police say\u201d (2011)",
+                            "https://www.koat.com/article/man-gunned-down-in-se-albuquerque-police-say/5036927", True)]),
 ]
 
 
@@ -2573,6 +2595,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/main.js"></script>
 <script src="{r}js/quiz.js"></script>
 <script src="{r}js/saved-cases.js"></script>
+<script src="{r}js/submit-form.js"></script>
 </body>
 </html>'''
 
@@ -2647,11 +2670,11 @@ def profile_panel(c):
     <div class="pp-row"><span class="label">Case Type</span><span class="value">{case_type}</span></div>
     {series_row}
   </div>
-  <div class="pp-notes">
-    <div class="pp-notes-head">Private Notes</div>
-    <p class="pp-notes-hint">Saved only in this browser \u2014 never sent anywhere, never visible to anyone else.</p>
-    <textarea data-case-note rows="4" placeholder="Jot down anything you want to remember about this case&hellip;"></textarea>
-    <div class="pp-notes-status" data-case-note-status></div>
+  <div class="pp-notes" id="research-notes-panel">
+    <div class="pp-notes-head">Your Research Notes</div>
+    <p class="pp-notes-hint">Saved only in this browser \u2014 never sent anywhere, never visible to anyone else. Add as many notes as you want; they'll be here next time you open this case.</p>
+    <div class="research-notes-list" data-research-notes-list="{c['id']}"></div>
+    <button type="button" class="btn-add-note" data-add-research-note="{c['id']}">+ Add a note</button>
   </div>
 </aside>'''
 
@@ -3234,6 +3257,7 @@ def build_resources():
 
 def build_submit():
     depth = 0
+    r = rel(depth)
     body = '''<h2>Guidelines before you submit</h2>
     <ul>
       <li>Share information you can point to a public source for wherever possible.</li>
@@ -3241,12 +3265,13 @@ def build_submit():
       <li>Do not submit unverified accusations against a named individual &mdash; we will not publish them.</li>
       <li>If you are a family member, you're welcome to note that so we can prioritize sensitivity in how the case is presented.</li>
     </ul>
-    <form class="form-grid" onsubmit="return false;" aria-label="Submit a case or tip">
-      <div class="field"><label for="case-name">Case or victim name</label><input type="text" id="case-name" required></div>
-      <div class="field"><label for="case-year">Year (approximate is fine)</label><input type="text" id="case-year"></div>
-      <div class="field"><label for="case-location">Location</label><input type="text" id="case-location"></div>
+    <form class="form-grid" id="tip-form" data-tip-form action="https://formspree.io/f/xnpqaddo" method="POST" aria-label="Submit a case or tip">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="field"><label for="case-name">Case or victim name</label><input type="text" id="case-name" name="case_name" required></div>
+      <div class="field"><label for="case-year">Year (approximate is fine)</label><input type="text" id="case-year" name="year"></div>
+      <div class="field"><label for="case-location">Location</label><input type="text" id="case-location" name="location"></div>
       <div class="field"><label for="case-type">Submission type</label>
-        <select id="case-type">
+        <select id="case-type" name="submission_type">
           <option>New case suggestion</option>
           <option>Correction or update to an existing case</option>
           <option>Source or citation to add</option>
@@ -3254,15 +3279,16 @@ def build_submit():
         </select>
       </div>
       <div class="field"><label for="case-details">Details &amp; sources</label>
-        <textarea id="case-details" placeholder="What you know, and where it's documented (links welcome)."></textarea>
+        <textarea id="case-details" name="details" required placeholder="What you know, and where it's documented (links welcome)."></textarea>
         <p class="hint">Please avoid pasting unsourced accusations against a named individual.</p>
       </div>
-      <div class="field"><label for="contact-email">Your email (optional)</label><input type="email" id="contact-email"></div>
-      <div class="checkbox-row"><input type="checkbox" id="family-member"><label for="family-member" style="margin:0; font-weight:400;">I am a family member of the person in this case</label></div>
-      <button class="btn-primary" type="submit">Submit</button>
-      <p class="hint">Template form &mdash; connect to a backend (Formspree, Netlify Forms, custom endpoint) before publishing.</p>
+      <div class="field"><label for="contact-email">Your email (optional)</label><input type="email" id="contact-email" name="email"></div>
+      <div class="checkbox-row"><input type="checkbox" id="family-member" name="family_member"><label for="family-member" style="margin:0; font-weight:400;">I am a family member of the person in this case</label></div>
+      <button class="btn-primary" type="submit" data-tip-submit-btn>Submit</button>
+      <div class="tip-form-status" data-tip-form-status role="status" aria-live="polite"></div>
     </form>'''
     write("submit.html", page_shell("Submit a Case or Tip", "Submit a new case or documented information about an existing case.", depth, doc_page(depth, "Contribute", "Submit a Case or Tip", body), canonical_path="submit.html"))
+
 
 def build_support():
     depth = 0

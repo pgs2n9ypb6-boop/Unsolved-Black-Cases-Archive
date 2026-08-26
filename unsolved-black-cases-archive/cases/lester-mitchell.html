@@ -334,6 +334,9 @@
 <li class="pl-item" data-case-item data-case-id="nacomie-freeman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Nacomie Freeman Phoenix AZ 2004">
   <a href="../cases/nacomie-freeman.html">Nacomie Freeman<span class="pi-meta">089 · 2004 · UNSOLVED</span></a>
 </li>
+<li class="pl-item" data-case-item data-case-id="quincy-booker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-search="Quincy Booker Albuquerque NM 2011">
+  <a href="../cases/quincy-booker.html">Quincy Booker<span class="pi-meta">090 · 2011 · UNSOLVED</span></a>
+</li>
   </ul>
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
@@ -409,11 +412,11 @@
     <div class="pp-row"><span class="label">Case Type</span><span class="value">Homicide</span></div>
     
   </div>
-  <div class="pp-notes">
-    <div class="pp-notes-head">Private Notes</div>
-    <p class="pp-notes-hint">Saved only in this browser — never sent anywhere, never visible to anyone else.</p>
-    <textarea data-case-note rows="4" placeholder="Jot down anything you want to remember about this case&hellip;"></textarea>
-    <div class="pp-notes-status" data-case-note-status></div>
+  <div class="pp-notes" id="research-notes-panel">
+    <div class="pp-notes-head">Your Research Notes</div>
+    <p class="pp-notes-hint">Saved only in this browser — never sent anywhere, never visible to anyone else. Add as many notes as you want; they'll be here next time you open this case.</p>
+    <div class="research-notes-list" data-research-notes-list="lester-mitchell"></div>
+    <button type="button" class="btn-add-note" data-add-research-note="lester-mitchell">+ Add a note</button>
   </div>
 </aside>
   <aside class="panel-sources area-sources" id="case-sources">
@@ -524,5 +527,6 @@
 <script src="../js/main.js"></script>
 <script src="../js/quiz.js"></script>
 <script src="../js/saved-cases.js"></script>
+<script src="../js/submit-form.js"></script>
 </body>
 </html>

@@ -479,6 +479,9 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .checkbox-row{ display:flex; gap:9px; align-items:flex-start; }
 .btn-primary{ background:var(--crimson); color:#fff; border:0; padding:12px 22px; border-radius:3px; font-weight:700; cursor:pointer; align-self:flex-start; font-size:.88rem; }
 .btn-primary:hover{ background:var(--crimson-bright); }
+.btn-primary:disabled{ opacity:.6; cursor:default; }
+.tip-form-status{ font-size:.82rem; color:var(--text-dim); min-height:1.2em; }
+.tip-form-status.is-error{ color:var(--crimson-bright); }
 .callout{ border-left:2px solid var(--amber); background:rgba(185,138,61,0.06); padding:14px 16px; border-radius:0 2px 2px 0; margin:18px 0; font-size:.85rem; color:var(--text-dim); }
 
 /* Civil Rights Cold Case Quiz */
@@ -517,6 +520,28 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 }
 .pp-notes textarea:focus{ outline:2px solid var(--amber); outline-offset:1px; }
 .pp-notes-status{ font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-top:5px; min-height:1em; }
+
+/* Research note boxes (multiple, addable, per-case, saved in this browser) */
+.research-notes-list{ display:flex; flex-direction:column; gap:10px; margin-bottom:10px; }
+.research-note-box{ background:var(--panel-2); border:1px solid var(--border-strong); border-left:2px solid var(--amber); border-radius:2px; padding:9px 10px; }
+.research-note-box textarea{
+  width:100%; background:none; border:none; color:var(--text); font-family:var(--sans); font-size:.82rem;
+  padding:0; resize:vertical; display:block;
+}
+.research-note-box textarea:focus{ outline:none; }
+.research-note-footer{ display:flex; align-items:center; justify-content:space-between; margin-top:6px; }
+.research-note-date{ font-family:var(--mono); font-size:.64rem; color:var(--text-faint); }
+.research-note-remove{
+  background:none; border:none; color:var(--text-faint); font-family:var(--mono); font-size:.64rem;
+  letter-spacing:.04em; text-transform:uppercase; cursor:pointer; padding:2px 4px;
+}
+.research-note-remove:hover{ color:var(--crimson-bright); }
+.btn-add-note{
+  width:100%; background:none; border:1px dashed var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.05em; text-transform:uppercase;
+  padding:8px 10px; border-radius:2px; cursor:pointer;
+}
+.btn-add-note:hover{ border-color:var(--amber); color:var(--amber); }
 
 /* My Saved Cases page */
 .saved-case-card{ display:flex; flex-direction:column; }

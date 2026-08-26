@@ -44,6 +44,18 @@ Just open `index.html` in a browser — no server needed. (Search, the case
 timeline, and the map view all read from `js/cases-data.js`, which is loaded
 via `<script src>`, so they work even opened directly from disk.)
 
+## Submit a Tip form
+
+The "Submit a Tip" page (`submit.html`) posts to
+[Formspree](https://formspree.io) — a free hosted form backend — so tips
+work without running a custom server. It's already connected to a live
+Formspree form (`build_submit()` in `build.py`, the form's `action`
+attribute). Every submission lands in that Formspree inbox for review
+before anything is published — nothing goes live on the site
+automatically. To point it at a different Formspree form later, sign up
+at formspree.io, create a form, and swap the ID in that same `action`
+attribute, then rerun `python3 build.py` and redeploy.
+
 ## Content standards
 
 See `research.html` on the live site for the full sourcing standards this

@@ -59,12 +59,13 @@
       <li>Do not submit unverified accusations against a named individual &mdash; we will not publish them.</li>
       <li>If you are a family member, you're welcome to note that so we can prioritize sensitivity in how the case is presented.</li>
     </ul>
-    <form class="form-grid" onsubmit="return false;" aria-label="Submit a case or tip">
-      <div class="field"><label for="case-name">Case or victim name</label><input type="text" id="case-name" required></div>
-      <div class="field"><label for="case-year">Year (approximate is fine)</label><input type="text" id="case-year"></div>
-      <div class="field"><label for="case-location">Location</label><input type="text" id="case-location"></div>
+    <form class="form-grid" id="tip-form" data-tip-form action="https://formspree.io/f/xnpqaddo" method="POST" aria-label="Submit a case or tip">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="field"><label for="case-name">Case or victim name</label><input type="text" id="case-name" name="case_name" required></div>
+      <div class="field"><label for="case-year">Year (approximate is fine)</label><input type="text" id="case-year" name="year"></div>
+      <div class="field"><label for="case-location">Location</label><input type="text" id="case-location" name="location"></div>
       <div class="field"><label for="case-type">Submission type</label>
-        <select id="case-type">
+        <select id="case-type" name="submission_type">
           <option>New case suggestion</option>
           <option>Correction or update to an existing case</option>
           <option>Source or citation to add</option>
@@ -72,13 +73,13 @@
         </select>
       </div>
       <div class="field"><label for="case-details">Details &amp; sources</label>
-        <textarea id="case-details" placeholder="What you know, and where it's documented (links welcome)."></textarea>
+        <textarea id="case-details" name="details" required placeholder="What you know, and where it's documented (links welcome)."></textarea>
         <p class="hint">Please avoid pasting unsourced accusations against a named individual.</p>
       </div>
-      <div class="field"><label for="contact-email">Your email (optional)</label><input type="email" id="contact-email"></div>
-      <div class="checkbox-row"><input type="checkbox" id="family-member"><label for="family-member" style="margin:0; font-weight:400;">I am a family member of the person in this case</label></div>
-      <button class="btn-primary" type="submit">Submit</button>
-      <p class="hint">Template form &mdash; connect to a backend (Formspree, Netlify Forms, custom endpoint) before publishing.</p>
+      <div class="field"><label for="contact-email">Your email (optional)</label><input type="email" id="contact-email" name="email"></div>
+      <div class="checkbox-row"><input type="checkbox" id="family-member" name="family_member"><label for="family-member" style="margin:0; font-weight:400;">I am a family member of the person in this case</label></div>
+      <button class="btn-primary" type="submit" data-tip-submit-btn>Submit</button>
+      <div class="tip-form-status" data-tip-form-status role="status" aria-live="polite"></div>
     </form>
   </div>
   <div class="ad-slot">
@@ -147,5 +148,6 @@
 <script src="js/main.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/saved-cases.js"></script>
+<script src="js/submit-form.js"></script>
 </body>
 </html>
