@@ -3524,5 +3524,617 @@
     ],
     "lastVerified": "2026-08-21",
     "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "leonard-mccowin",
+    "caseNumber": "063",
+    "name": "Leonard McCowin",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1947,
+    "age": 21,
+    "gender": "male",
+    "city": "Center",
+    "county": "Shelby",
+    "state": "TX",
+    "caseSeries": null,
+    "summary": "Leonard McCowin, 21, a World War II Army veteran who worked on a farm and at a cafe in Center, was struck with the butt of a rifle by City Marshal Bryan McCallum on November 4, 1947, and died of the injury; his death certificate recorded the cause as homicide. A contemporaneous Black newspaper reported that McCallum had likely mistaken McCowin for his brother, who had recently been beaten by a mob following an altercation with a white man. The Shelby County sheriff required only a $2,500 bond from McCallum, and a grand jury investigated but declined to indict him; an attorney representing McCowin's family reported to the NAACP that jurors felt indicting McCallum \u201cwould give the Negroes too much leeway in that community.\u201d The FBI declined to investigate. In April 1948, McCowin's father Ezekiel, represented by attorney W.N. Harkness with NAACP support, filed a wrongful death civil suit against McCallum, his bondsman, and the city; a district court judge dismissed the case that November, reportedly due to a misspelling of McCallum's name in the court filing. McCowin's descendants have since sought a historical marker at the site; his sister, who was 12 when his body was brought home, was still alive as of a 2025 news account.",
+    "known": [
+      "Victim identity, background, and the November 4, 1947 date and circumstances, per the Civil Rights Cold Case Records Review Board's official case file and contemporaneous NAACP investigative correspondence.",
+      "City Marshal Bryan McCallum was investigated by a grand jury, which declined to indict him; a subsequent civil suit against him was dismissed in 1948, per the same records and 2025 reporting by Capital B News."
+    ],
+    "unknown": [
+      "No one was ever criminally charged or held liable in McCowin's death.",
+      "Whether McCallum genuinely mistook McCowin for his brother, as contemporaneous press reported, or acted for some other reason, was never resolved."
+    ],
+    "unanswered": [
+      "What specific reasoning led the grand jury to decline an indictment, beyond the attorney's secondhand account?",
+      "Was the misspelling that led to the 1948 civil suit's dismissal an error, or a deliberate maneuver, and by whom?",
+      "What became of the campaign by McCowin's descendants to have a historical marker placed at the site of his death?"
+    ],
+    "sources": [
+      {
+        "name": "Civil Rights Cold Case Records Review Board \u2014 official case file",
+        "url": "https://www.coldcaserecords.gov/content/cases/1947-11-04-leonard-mccowin/",
+        "verified": true
+      },
+      {
+        "name": "Capital B News \u2014 \u201cTexas Man's Fight to Move a Lynching Marker Sparks New Battle for Truth\u201d",
+        "url": "https://capitalbnews.org/texas-lynching-marker-black-history/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "felix-hall",
+    "caseNumber": "064",
+    "name": "Felix Hall",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1941,
+    "age": 19,
+    "gender": "male",
+    "city": "Fort Benning",
+    "county": "Chattahoochee",
+    "state": "GA",
+    "caseSeries": null,
+    "summary": "Pvt. Felix Hall, 19, a Black soldier from rural Alabama serving in the segregated 24th Infantry Regiment, disappeared at Fort Benning on the afternoon of February 12, 1941, after finishing a shift at the base sawmill and telling two friends he was heading to the Post Exchange \u2014 the only place on the segregated base where a Black soldier could get a hot meal. He never arrived. Six weeks later, an engineer unit found his body hanging from a tree in a ravine near the Chattahoochee River, his hands tied behind his back and his feet bound with baling wire. A military doctor ruled the death a homicide, but for four months the War Department and base authorities publicly suggested to the press that Hall may have died by suicide, contradicting their own examiner's finding, until the NAACP demanded a real investigation. The FBI and War Department identified suspects, including two military men, but never charged anyone, and appear to have ignored a report that Hall's white civilian supervisor at the sawmill had threatened to kill him the day before he disappeared. It remains the only known lynching to have occurred on a U.S. military base. The case went cold until 2014, when Northeastern University students began investigating it, leading to a 2016 Washington Post expos\u00e9 built on a previously undisclosed 130-page FBI file. In 2021, the Army dedicated a memorial plaque at Fort Benning; the plaque itself states that Hall's death was among the events that helped convince President Truman to order the full integration of the U.S. armed forces in 1948.",
+    "known": [
+      "Victim identity, background, and the February 12\u2013March 28, 1941 timeline, per the Washington Post's 2016 investigation and the U.S. Army's 2021 memorial plaque text.",
+      "A military doctor ruled Hall's death a homicide; the FBI and War Department identified suspects but never charged anyone, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever charged or convicted in Hall's killing.",
+      "Why the FBI and War Department did not pursue the reported threat from Hall's civilian supervisor, or fully investigate the two military suspects identified, was never explained in the released case file."
+    ],
+    "unanswered": [
+      "What additional detail does the full 130-page FBI file, first disclosed by the Washington Post in 2016, contain that has not yet been publicly analyzed?",
+      "What became of the two military suspects the FBI identified but never charged?",
+      "What connection did Army and War Department officials at the time see, if any, between Hall's case and the broader pattern of violence against Black servicemen during the era?"
+    ],
+    "sources": [
+      {
+        "name": "The Washington Post \u2014 \u201cThe story of the only known lynching on a U.S. military base in American history\u201d",
+        "url": "https://www.washingtonpost.com/sf/national/2016/09/02/the-story-of-the-only-known-lynching-on-a-u-s-military-base/",
+        "verified": true
+      },
+      {
+        "name": "Army Times \u2014 \u201cFort Benning memorializes Black soldier lynched in 1941\u201d",
+        "url": "https://www.armytimes.com/news/your-army/2021/08/03/fort-benning-memorializes-black-soldier-lynched-80-years-ago-as-post-awaits-renaming-effort/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "dan-carter-sanders",
+    "caseNumber": "065",
+    "name": "Dan Carter Sanders",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1946,
+    "age": 26,
+    "gender": "male",
+    "city": "Cleveland Township",
+    "county": "Johnston",
+    "state": "NC",
+    "caseSeries": null,
+    "summary": "Dan Carter Sanders, 26, a married World War II veteran, was shot and killed on November 18, 1946, after a group of white men in Cleveland Township accused him and another man of stealing foxhounds from a local farm. The DOJ's file identifies the shooter as Robert \u201cBobby\u201d H. Johnson Jr., who was 16 years old at the time, and names his father, Robert H. Johnson Sr., along with three other men present, Russell Hatcher, Lester Phillips, and R.H. Stephenson, as subjects. No federal hate-crime law existed in 1946, and the statute of limitations on any potential criminal case had long since expired by the time the DOJ reviewed the case decades later; the Department also declined to refer the matter to North Carolina for state prosecution, citing the lack of any living subjects or likely surviving witnesses. All five men named in the file were deceased by the time it was closed on March 5, 2019.",
+    "known": [
+      "Victim identity, background, and the November 18, 1946 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "The DOJ's file names five subjects, including the 16-year-old shooter, all reported deceased by the time of the 2019 closure; no one was ever charged."
+    ],
+    "unknown": [
+      "No criminal charges were ever filed against anyone in Sanders's death.",
+      "Whether the underlying accusation of stealing foxhounds had any factual basis was never established."
+    ],
+    "unanswered": [
+      "What became of the local investigation, if any, conducted in 1946 at the time of the killing?",
+      "Why the DOJ's file lists five named subjects present but does not specify each individual's role in the shooting itself.",
+      "What, if any, records survive documenting how the incident was reported or discussed locally at the time?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/dan-carter-sanders/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/dan-carter-sanders-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "charles-brown",
+    "caseNumber": "066",
+    "name": "Charles Brown",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1957,
+    "age": 20,
+    "gender": "male",
+    "city": "Benton",
+    "county": "Yazoo",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Charles Brown, 20, a Black U.S. Air Force airman home on a month-long leave, was fatally shot in the heart at close range on June 18, 1957, while sitting at the dinner table of a neighboring family in Benton. He had accepted a dinner invitation from a white woman he had long known; her brother, 50-year-old farmer Raiford Walton, left the house, returned with a shotgun, and shot Brown, later telling investigators he believed Brown had gotten \u201ctoo friendly\u201d with his sister while he was out of town. Walton, who had a prior manslaughter conviction for killing his own son-in-law, called the police himself after the shooting and admitted to it; murder charges were filed, but a local grand jury declined to indict him. When the FBI reopened the case decades later under the Emmett Till Act, one witness alleged Walton had actually planned the killing in advance, luring Brown to the house after catching him \u201cin some action\u201d beforehand \u2014 though this could not be independently corroborated. Walton died in 1965, and the case was formally closed in 2010.",
+    "known": [
+      "Victim identity, background, and the June 18, 1957 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "Raiford Walton admitted to the shooting and was charged with murder, but a local grand jury declined to indict him, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever convicted in Brown's death despite the shooter's own admission.",
+      "Whether Walton planned the killing in advance, as one witness later alleged to the FBI, was never independently corroborated."
+    ],
+    "unanswered": [
+      "What specific evidence or testimony led the 1957 grand jury to decline an indictment despite Walton's admission?",
+      "What became of the witness who told the FBI decades later that Walton had planned the killing, and what more did they know?",
+      "Why did no local or state authority maintain surviving records of the case by the time of the FBI's 2008 review?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/charles-brown/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/charles-brown",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "willie-countryman",
+    "caseNumber": "067",
+    "name": "Willie Countryman",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1958,
+    "age": 32,
+    "gender": "male",
+    "city": "Dawson",
+    "county": "Terrell",
+    "state": "GA",
+    "caseSeries": null,
+    "summary": "Willie \u201cWootie\u201d Countryman, 32, a Black Army veteran and truck driver, was shot and killed in his own backyard in Dawson just after 1:30 a.m. on May 25, 1958. Dawson Police officers Weyman Cherry and Robert Hancock said they had entered Countryman's yard to investigate a noise, and claimed Countryman attacked Cherry with a knife; Cherry shot him in the stomach, and he died at the hospital. Countryman's girlfriend, who had been talking with him moments before, and other family and friends disputed the officers' account at every point. A coroner's inquest the next day acquitted Cherry, ruling he had acted in self-defense. It was Cherry's second fatal or near-fatal use of force against a Black resident within a matter of weeks \u2014 he had fatally beaten another Black man, James Brazier, about a month earlier, and would go on to serve as Dawson's police chief for a decade afterward. Terrified Black residents organized under the name \u201cLaw, Justice, Order\u201d and sent an urgent plea for outside help, writing, \u201cWe can't hold these people much longer.\u201d The FBI investigated but found no living subjects by the time of a later federal review, and the case was formally closed in 2009.",
+    "known": [
+      "Victim identity, background, and the May 25, 1958 date and circumstances, per the DOJ's public case file, the Georgia Civil Rights Cold Cases Project at Emory University, and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "A coroner's inquest acquitted Officer Weyman Cherry the day after the shooting, ruling it self-defense; the same officer had fatally beaten another Black man about a month earlier, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever criminally held accountable for Countryman's death.",
+      "Countryman's girlfriend and other community members directly disputed the officers' account of the confrontation, and that conflict was never resolved through any trial."
+    ],
+    "unanswered": [
+      "What became of the James Brazier case, the fatal beating by the same officer roughly a month earlier?",
+      "Why was Cherry permitted to remain on the force, and later become police chief, despite two fatal or near-fatal incidents with Black residents in such close succession?",
+      "What response, if any, did the FBI give to the Law, Justice, Order group's urgent 1958 appeal for help?"
+    ],
+    "sources": [
+      {
+        "name": "Georgia Civil Rights Cold Cases Project, Emory University \u2014 case summary",
+        "url": "https://coldcases.emory.edu/willie-countryman/",
+        "verified": true
+      },
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/willie-countryman",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "donald-raspberry",
+    "caseNumber": "068",
+    "name": "Donald Raspberry",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1965,
+    "age": 19,
+    "gender": "male",
+    "city": "Okolona",
+    "county": "Chickasaw",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Donald Raspberry, 19, was shot and killed inside the home of his employer, Garland H. \u201cDick\u201d Anderson, in Okolona on February 27, 1965. Anderson said he had come to suspect someone was breaking into his house and stayed home that day to catch the thief; he claimed that when Raspberry removed a window screen and entered, he shot him in self-defense. Anderson was the only known witness to the shooting. He was charged by the state, and at a preliminary hearing in Chickasaw County Justice Court a week later, he maintained his self-defense account. No further prosecution followed. The DOJ's Civil Rights Division reviewed the case decades later and closed it in 2010 after determining Anderson had since died.",
+    "known": [
+      "Victim identity and the February 27, 1965 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "Garland Anderson was charged by the state and gave a self-defense account at a preliminary hearing; no further prosecution occurred, per the same sources."
+    ],
+    "unknown": [
+      "Whether Anderson's account of Raspberry breaking into the house was accurate was never tested at trial.",
+      "Why the case did not proceed beyond the preliminary hearing stage was not fully documented in the available record."
+    ],
+    "unanswered": [
+      "What became of the case after the March 1965 preliminary hearing, and why did it not advance further?",
+      "What did the removed back porch window screen, cited as evidence of a break-in, actually indicate about the sequence of events?",
+      "What additional local investigative records, if any, survive from 1965?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/donald-raspberry/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/donald-raspberry-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "william-henry-lee",
+    "caseNumber": "069",
+    "name": "William Henry Lee",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1965,
+    "age": null,
+    "gender": "male",
+    "city": "Goshen Springs",
+    "county": "Rankin",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "William Henry Lee was last seen leaving his job at the Storkline Factory in Jackson at 11:30 p.m. on February 24, 1965, during a night of rain and snow, on his way home to Goshen Springs roughly an hour away. He never arrived; his body was found beside a road the following afternoon, fully clothed with only a small amount of blood on his lip and no other visible injury. A flashlight matching one Lee normally kept in his car was found nearby. The Rankin County Sheriff's Department moved his car before it could be examined for evidence, and his body was embalmed after only a 15-minute coroner's inquest, before any autopsy could be performed. A civil rights organization later complained that a second autopsy, conducted after embalming, listed the cause of death as strangulation, likely from inhaling gasoline \u2014 a finding that conflicted with the original examiner's report of no visible injury. The complaint also noted that Lee had attended civil rights meetings. Neither the original local investigation nor a later FBI inquiry found evidence of a civil rights violation, and the case was closed without identifying a suspect.",
+    "known": [
+      "Victim identity and the February 24\u201325, 1965 timeline, per the DOJ's public case file.",
+      "A civil rights organization's contemporaneous complaint alleged investigative failures, including the car being moved before evidence collection and embalming occurring before a full autopsy, per the same file."
+    ],
+    "unknown": [
+      "The cause of death itself is disputed between two conflicting post-mortem examinations.",
+      "No suspect was ever identified in the case."
+    ],
+    "unanswered": [
+      "Why do the two post-mortem examinations \u2014 one finding no visible injury, the other citing strangulation from gasoline inhalation \u2014 conflict so directly?",
+      "What specifically happened to Lee between leaving his job at 11:30 p.m. and his body being found the next afternoon?",
+      "What became of the Scott County Movement's April 1965 complaint requesting a federal investigation?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/william-henry-lee-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "ed-smith",
+    "caseNumber": "070",
+    "name": "Ed Smith",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1958,
+    "age": null,
+    "gender": "male",
+    "city": "State Line",
+    "county": "Wayne",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Ed Smith was fatally shot in the chest in the front yard of his own home in State Line on April 27, 1958, by his neighbor, Lawrence David Clark. Smith's wife, Daisy Bell Smith, witnessed the shooting. The NAACP's Medgar Evers personally urged prosecution. Clark was arrested, and at a preliminary hearing was released on a $5,000 bond pending a grand jury hearing. Two weeks later, a local grand jury declined to indict him. According to contemporaneous news reports, Clark later bragged openly about the shooting. He died in 1992, decades before the DOJ formally closed the file in 2009.",
+    "known": [
+      "Victim identity and the April 27, 1958 date and circumstances, per the DOJ's public case file and PBS FRONTLINE's \u201cUn(re)solved\u201d case summary.",
+      "Lawrence David Clark was arrested and released on bond, but a grand jury declined to indict him two weeks later; contemporaneous reports say he later bragged about the killing, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever convicted in Smith's death.",
+      "The specific underlying dispute between Smith and Clark, as neighbors, was never fully documented in the surviving record."
+    ],
+    "unanswered": [
+      "What specific evidence or testimony led the 1958 grand jury to decline an indictment despite an eyewitness?",
+      "What became of Medgar Evers's personal involvement in pushing for prosecution?",
+      "What did the contemporaneous reports of Clark \u201cbragging\u201d about the shooting actually describe, and who reported them?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/ed-smith/",
+        "verified": true
+      },
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/case-document/ed-smith-notice-close-file",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "lamar-smith",
+    "caseNumber": "071",
+    "name": "Lamar Smith",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1955,
+    "age": 63,
+    "gender": "male",
+    "city": "Brookhaven",
+    "county": "Lincoln",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Lamar \u201cDitney\u201d Smith, 63, a World War I veteran, farmer, and voter registration organizer with the Regional Council of Negro Leadership, was shot to death on the lawn of the Lincoln County courthouse in Brookhaven at around 10 a.m. on August 13, 1955, while helping other Black residents complete absentee ballots ahead of a runoff election. He was killed in broad daylight before dozens of witnesses, including the local sheriff, who watched a blood-covered white man walk away from the scene without arresting him; it took eight days before three white men \u2014 Noah Smith, Mack Smith, and Charles Falvey \u2014 were arrested. A state grand jury heard from as many as 75 witnesses in September 1955 but adjourned without returning any indictment, after witnesses who had stood within 30 feet of the killing told the panel they had seen nothing. Decades later, an FBI interview suggested Smith may have been deliberately lured to the courthouse. Smith's killing was cited in the NAACP's own 1955 pamphlet documenting racial violence in Mississippi, alongside the killings of Rev. George Lee and Emmett Till. The Mississippi Department of Archives and History approved a historical marker for Smith in 2026.",
+    "known": [
+      "Victim identity, background, and the August 13, 1955 date and circumstances, per the DOJ's public case file, PBS FRONTLINE's \u201cUn(re)solved\u201d case summary, and the Equal Justice Initiative.",
+      "Three men were arrested but never indicted after a September 1955 grand jury heard dozens of witnesses and adjourned without action, per the same sources."
+    ],
+    "unknown": [
+      "No one was ever convicted in Smith's killing.",
+      "Whether Smith was deliberately lured to the courthouse, as one witness later suggested to the FBI decades afterward, was never independently confirmed."
+    ],
+    "unanswered": [
+      "Why did dozens of witnesses who stood close to the killing tell the grand jury they saw nothing?",
+      "What became of the local notary public who said he was warned to stop assisting Black voters \u201clest he wind up like Ditney Smith\u201d?",
+      "What additional detail does Keith Beauchamp's documentary film on the case add beyond the official record?"
+    ],
+    "sources": [
+      {
+        "name": "PBS FRONTLINE Un(re)solved \u2014 case summary",
+        "url": "https://www.pbs.org/wgbh/frontline/interactive/unresolved/cases/lamar-smith",
+        "verified": true
+      },
+      {
+        "name": "Equal Justice Initiative \u2014 case summary",
+        "url": "https://calendar.eji.org/racial-injustice/aug/13",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "joseph-dumas",
+    "caseNumber": "072",
+    "name": "Joseph Dumas",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1962,
+    "age": 19,
+    "gender": "male",
+    "city": "Perry",
+    "county": "Taylor",
+    "state": "FL",
+    "caseSeries": null,
+    "summary": "Joseph Dumas, 19, was fatally shot by Taylor County Constable Henry Sauls during a traffic stop on May 5, 1962. Dumas's own family members, who witnessed the shooting, told investigators that Sauls shot him in the back while Dumas stood still with his hands raised. Sauls gave a different account, saying he was removing a switchblade from Dumas's pocket when Dumas lunged at him and the gun discharged accidentally. A local grand jury declined to indict Sauls later that year, but he was separately tried in federal court under the federal civil rights statute and acquitted in September 1962. Sauls died in 1974. The DOJ's Civil Rights Division reopened the case under its Cold Case Initiative in 2008 and closed it again in 2010.",
+    "known": [
+      "Victim identity and the May 5, 1962 date and circumstances, per the DOJ's public case file.",
+      "Constable Henry Sauls was tried in federal court under 18 U.S.C. \u00a7 242 and acquitted in September 1962, after a local grand jury had already declined to indict him, per the same file."
+    ],
+    "unknown": [
+      "No one was ever convicted in Dumas's death despite two separate legal proceedings.",
+      "The directly conflicting accounts \u2014 Dumas's family describing an execution-style shooting of a compliant, unarmed man, versus Sauls's claim of an accidental discharge during a struggle \u2014 were never resolved."
+    ],
+    "unanswered": [
+      "What specific evidence was presented at the 1962 federal trial that led to Sauls's acquittal?",
+      "What became of the switchblade Sauls said he was removing from Dumas's pocket at the time of the shooting?",
+      "What additional detail, if any, survives in Taylor County's own local investigative records from 1962?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/file/949606/dl",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
+  },
+  {
+    "id": "vincent-dahmon",
+    "caseNumber": "073",
+    "name": "Vincent Dahmon",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1966,
+    "age": 65,
+    "gender": "male",
+    "city": "Natchez",
+    "county": "Adams",
+    "state": "MS",
+    "caseSeries": null,
+    "summary": "Vincent Dahmon, 65, of Natchez, was shot and killed by Ku Klux Klan members during the period of the 1966 \u201cMarch Against Fear,\u201d the roughly 220-mile walk from Memphis, Tennessee to Jackson, Mississippi that James Meredith began to encourage Black voter registration and that continued after he was shot and wounded on its second day. Dahmon's killing first came to the FBI's attention not through a contemporaneous police investigation, but through a 1966 article by Lincoln Lynch, then a national director of the Congress of Racial Equality, describing it to fellow CORE members. No specific suspects were ever identified. When the DOJ's Civil Rights Division reopened the case decades later, the FBI contacted Mississippi state agencies, the Southern Poverty Law Center, the NAACP, the Mississippi Crime Laboratory, and local newspapers, and issued a public press release seeking information; nothing further surfaced, and the case was closed in 2010.",
+    "known": [
+      "Victim identity and the general 1966 timeframe of the killing, per the DOJ's public case file, drawing on a contemporaneous CORE publication.",
+      "No suspects were ever identified, despite an extensive later FBI outreach campaign including a public press release, per the same file."
+    ],
+    "unknown": [
+      "No specific date, location details, or suspects for the killing were ever documented beyond the general connection to the March Against Fear.",
+      "Why local law enforcement at the time did not generate any investigative record that survived to the DOJ's later review was never explained."
+    ],
+    "unanswered": [
+      "What additional detail, if any, does the original 1966 CORE article by Lincoln Lynch contain beyond what the DOJ's file cites?",
+      "Why did contemporaneous Natchez or Adams County authorities apparently keep no investigative record of the killing?",
+      "What connection, if any, exists between this case and the broader wave of Klan violence in the Natchez area documented elsewhere in this archive, including the Silver Dollar Group's activities in the same period?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 Notice to Close File",
+        "url": "https://www.justice.gov/crt/file/953461/dl",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21",
+    "dateAdded": "2026-08-21"
   }
 ]
