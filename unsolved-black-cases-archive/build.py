@@ -33,7 +33,7 @@ ADSENSE_ENABLED = True  # set False to strip all AdSense code out of the build
 
 # Used for canonical URLs and absolute Open Graph / Twitter Card image URLs.
 # Update this if the site ever moves to a different domain.
-SITE_URL = "https://unsolved-black-cases-archive-jet.vercel.app"
+SITE_URL = "https://www.unsolvedblackcases.com"
 SHORT_NAME = "UBCA"
 TAGLINE = "A public-record research archive documenting unsolved cases involving Black victims."
 ARCHIVE_NOTE = ("This archive summarizes publicly available information and does not conduct "

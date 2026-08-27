@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://unsolved-black-cases-archive-jet.vercel.app/sitemap.xml
+Sitemap: https://www.unsolvedblackcases.com/sitemap.xml

@@ -100,7 +100,7 @@ def case_card_html(c):
     </div>
     {photo_html(c)}
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>www.unsolvedblackcases.com</span></div>
 </body></html>'''
 
 def generic_card_html(eyebrow, title, tagline):
@@ -114,7 +114,7 @@ def generic_card_html(eyebrow, title, tagline):
                 color:#ece9e4; margin-bottom:14px;">UNSOLVED BLACK CASES ARCHIVE</div>
     <div style="font-size:24px; color:#9c9b9d; max-width:700px; line-height:1.4;">{html.escape(tagline)}</div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>www.unsolvedblackcases.com</span></div>
 </body></html>'''
 
 def freeway_phantom_html():
@@ -130,7 +130,7 @@ def freeway_phantom_html():
       </div>
     </div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>www.unsolvedblackcases.com</span></div>
 </body></html>'''
 
 def silver_dollar_group_html():
@@ -146,7 +146,7 @@ def silver_dollar_group_html():
       </div>
     </div>
   </div>
-  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>unsolved-black-cases-archive-jet.vercel.app</span></div>
+  <div class="footer-line"><span>PUBLIC-RECORD RESEARCH ARCHIVE</span><span>www.unsolvedblackcases.com</span></div>
 </body></html>'''
 
 def main():
