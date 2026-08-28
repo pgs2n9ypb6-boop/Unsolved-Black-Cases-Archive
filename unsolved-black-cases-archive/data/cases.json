@@ -5082,5 +5082,1595 @@
       }
     ],
     "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "julius-dubouse",
+    "caseNumber": "091",
+    "name": "Julius Dubouse",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1998,
+    "age": 45,
+    "gender": "male",
+    "city": "Anchorage",
+    "county": null,
+    "state": "AK",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Julius Dubouse, 45, died in Anchorage, Alaska in the early morning hours of December 3, 1998, after an accelerant was thrown through the back window of his residence. The Anchorage Police Department's Cold Case Section, whose mission is to systematically review unsolved deaths in its jurisdiction, lists his death among its open homicide investigations. No arrest has ever been made.",
+    "known": [
+      "Victim identity, age, and the December 3, 1998 date of death, per Anchorage Police Department case records.",
+      "An accelerant was thrown through the back window of his residence in the early morning hours, per those same records."
+    ],
+    "unknown": [
+      "No arrest has ever been made.",
+      "The specific circumstances connecting Dubouse to whoever targeted his residence have not been publicly disclosed.",
+      "The full APD case narrative and any named persons of interest are not publicly available beyond the case summary."
+    ],
+    "unanswered": [
+      "Why was Dubouse's residence targeted specifically?",
+      "What leads, if any, has the Anchorage Police Department's Cold Case Section developed in the 25+ years since?",
+      "Has the case been reviewed using forensic methods unavailable in 1998?"
+    ],
+    "sources": [
+      {
+        "name": "Anchorage Police Department, via Crime Solvers Central \u2014 case summary",
+        "url": "https://crimesolverscentral.com/state/alaska",
+        "verified": true
+      },
+      {
+        "name": "Anchorage Police Department \u2014 Violent Crimes / Cold Case Section",
+        "url": "https://www.anchoragepolice.com/violent-crimes",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "kierre-davies",
+    "caseNumber": "092",
+    "name": "Kierre Davies",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2022,
+    "age": 27,
+    "gender": "male",
+    "city": "Fargo",
+    "county": "Cass County",
+    "state": "ND",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Kierre Davies, 27, was shot and killed alongside his friend and fellow rapper, 28-year-old Jaquan Gatewood, in the early morning hours of November 19, 2022, outside a house near the North Dakota State University campus in Fargo. Both men were at a gathering at the home; neither lived there. Police say everyone involved knew each other and have said there is no danger to the public, but more than a year later no arrest has been made and the case remains open.",
+    "known": [
+      "Victim identity, age, and the November 19, 2022 shooting near NDSU, per Fargo Police Department statements and local news coverage.",
+      "Davies and Gatewood, both local rappers, were shot together at a gathering neither of them hosted; police say the men involved were known to each other.",
+      "A search warrant later revealed a gun was found in Gatewood's hand at the scene, and an officer noted \u201csignificant evidence\u201d was missing."
+    ],
+    "unknown": [
+      "No arrest has ever been made.",
+      "Police have not said whether Davies had a weapon near him at the scene.",
+      "The specific sequence of events \u2014 including whether the two men's deaths were connected to a rap rivalry, as some in the community speculated \u2014 has not been publicly established; police have said they don't believe rivalry played a role."
+    ],
+    "unanswered": [
+      "What was the missing \u201csignificant evidence\u201d referenced in the search warrant, and has it since been recovered?",
+      "What specific forensic results (e.g. on the weapons involved) are investigators still waiting on, as referenced in 2023 coverage?",
+      "Why did detectives conclude no one at the gathering was a stranger to the others, and does that conclusion still hold?"
+    ],
+    "sources": [
+      {
+        "name": "InForum \u2014 \u201cWarrant: Gun found in hand of slain local rapper at double-homicide scene near NDSU\u201d",
+        "url": "https://www.inforum.com/news/fargo/warrant-gun-found-in-hand-of-slain-local-rapper-at-double-homicide-scene-near-ndsu",
+        "verified": true
+      },
+      {
+        "name": "InForum \u2014 \u201cOne year later, double homicide near NDSU campus remains unsolved\u201d",
+        "url": "https://www.inforum.com/news/fargo/one-year-later-double-homicide-near-ndsu-campus-remains-unsolved",
+        "verified": true
+      },
+      {
+        "name": "City of Fargo \u2014 Fargo Police Department press conference summary",
+        "url": "https://fargond.gov/news-events/city-news-room/post-detail?id=637c02cb77e6027243d8665b",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "emmett-till",
+    "caseNumber": "093",
+    "name": "Emmett Till",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1955,
+    "age": 14,
+    "gender": "male",
+    "city": "Money",
+    "county": "Leflore County",
+    "state": "MS",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Emmett Till, 14, of Chicago, was abducted from his great-uncle's home near Money, Mississippi, on August 28, 1955, and beaten, shot, and thrown into the Tallahatchie River after Carolyn Bryant, a white woman working at a local store, accused him of grabbing her and making sexual advances. Roy Bryant and J.W. Milam, her husband and brother-in-law, were tried for murder and acquitted by an all-white jury within about an hour; months later, protected by double jeopardy, they confessed to the killing in a paid magazine interview. Neither man was ever punished, and no one has ever been convicted in the case. Till's mother's decision to hold an open-casket funeral, and photographs of his mutilated body published in Jet magazine, helped galvanize the civil rights movement.",
+    "known": [
+      "Till's abduction, the accusation by Carolyn Bryant, and the murder itself, per contemporaneous 1955 trial testimony and reporting.",
+      "Roy Bryant and J.W. Milam were tried for murder and acquitted by an all-white jury in September 1955, a verdict reached quickly.",
+      "Months after the acquittal, protected from further prosecution by double jeopardy, Bryant and Milam confessed to the killing in a paid interview with Look magazine.",
+      "The U.S. Department of Justice reopened the investigation twice (2004 and 2018) and closed it both times without new charges, most recently in December 2021, citing insufficient evidence to prove Carolyn Bryant Donham had lied to the FBI about a later-alleged recantation.",
+      "In 2022, Till family researchers discovered an unserved 1955 arrest warrant for Donham (then named as \u201cMrs. Roy Bryant\u201d) in the Leflore County courthouse basement; a Leflore County grand jury heard the case that August and declined to indict her on kidnapping or manslaughter charges.",
+      "Bryant and Milam are both dead. Donham died in Louisiana on April 25, 2023, having never been charged in the case."
+    ],
+    "unknown": [
+      "Whether Till in fact touched or spoke inappropriately to Bryant, or whether her account was accurate, has never been independently established \u2014 accounts from witnesses who were with Till that day differ from hers.",
+      "Bryant and Milam described the killing in their paid 1956 confession, but that account has never been tested by cross-examination or an actual conviction, and its full accuracy is unverified.",
+      "Whether Carolyn Bryant Donham identified Till to Bryant and Milam on the night of the abduction, as some witnesses alleged, versus attempting to intervene, as she claimed in a later unpublished memoir, was never resolved by the 2022 grand jury."
+    ],
+    "unanswered": [
+      "Why was the 1955 arrest warrant for Donham never served, when police reportedly knew her location for at least part of the time?",
+      "What specifically did the 2022 Leflore County grand jury find insufficient in the evidence against Donham, given the additional decades of investigation and the since-discovered warrant?",
+      "Were there other participants in the abduction or killing beyond Bryant, Milam, and Donham who were never identified or charged?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 closing statement on the Emmett Till investigation (2021)",
+        "url": "https://www.aljazeera.com/news/2021/12/7/us-justice-dept-closes-re-opened-emmett-till-lynching-case",
+        "verified": true
+      },
+      {
+        "name": "CNN \u2014 \u201cEmmett Till death: Grand jury declines to indict Carolyn Bryant Donham\u201d (2022)",
+        "url": "https://www.cnn.com/2022/08/09/us/emmett-till-carolyn-bryant-no-indictment-reaj/index.html",
+        "verified": true
+      },
+      {
+        "name": "Mississippi Free Press \u2014 \u201cCarolyn Bryant Donham... Dies at 88\u201d (2023)",
+        "url": "https://www.mississippifreepress.org/carolyn-bryant-donham-whose-accusations-led-to-emmett-tills-lynching-dies-at-88/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "malcolm-x",
+    "caseNumber": "094",
+    "name": "Malcolm X",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1965,
+    "age": 39,
+    "gender": "male",
+    "city": "New York",
+    "county": "New York County",
+    "state": "NY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Malcolm X, 39, was shot and killed while delivering a speech at the Audubon Ballroom in the Washington Heights neighborhood of Manhattan on February 21, 1965. Talmadge Hayer (also known as Mujahid Abdul Halim) was caught at the scene and confessed to being one of the shooters; he, along with Muhammad Aziz and Khalil Islam, were convicted of murder in 1966. Aziz and Islam always maintained their innocence, and in November 2021 a joint reinvestigation by the Manhattan District Attorney's office and the men's attorneys resulted in both convictions being vacated, citing withheld exculpatory evidence. Hayer had named four other men as participants in a 1978 affidavit, but that information was never used to reopen the case at the time, and no one beyond Hayer has ever been properly convicted of the killing.",
+    "known": [
+      "The shooting and Hayer's capture and confession at the scene, per contemporaneous 1965 police and trial records.",
+      "Aziz, Islam, and Hayer were convicted of murder in 1966.",
+      "In a 1977\u201378 affidavit, Hayer stated that Aziz and Islam were not involved and separately named four other men he said helped plan and carry out the killing; a judge at the time declined to reopen the case on that basis, per the Innocence Project.",
+      "In November 2021, the Manhattan DA's office moved to vacate Aziz's and Islam's convictions after a reinvestigation found the FBI and NYPD had withheld evidence likely to have changed the trial's outcome; both men were exonerated, Islam posthumously.",
+      "New York City and State later paid Aziz and Islam's estate a combined $36 million in settlements over the wrongful convictions."
+    ],
+    "unknown": [
+      "The identities of the men Hayer named in his 1978 affidavit beyond Hayer himself have never resulted in any prosecution.",
+      "Whether or how federal and city law enforcement's own conduct around the investigation \u2014 including withheld evidence cited in the 2021 reinvestigation \u2014 affected the outcome has not been fully accounted for publicly.",
+      "No one beyond Hayer has ever been properly convicted and had that conviction stand for the killing."
+    ],
+    "unanswered": [
+      "Why was Hayer's 1978 affidavit naming other participants never used to reopen the investigation at the time?",
+      "What specific evidence did the FBI and NYPD withhold from the original 1966 trial, and why?",
+      "Will any of the men named in Hayer's affidavit ever face investigation or charges?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cThe men exonerated in the Malcolm X killing will receive $36 million\u201d (2022)",
+        "url": "https://www.npr.org/2022/10/31/1132757141/the-men-exonerated-in-the-malcolm-x-killing-will-receive-36-million",
+        "verified": true
+      },
+      {
+        "name": "Innocence Project, via WilmerHale \u2014 \u201cJustice Overdue: Reinvestigating the Murder of Malcolm X\u201d",
+        "url": "https://www.wilmerhale.com/en/insights/blogs/in-the-public-interest/20230307-justice-overdue-reinvestigating-the-murder-of-malcolm-x",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cTwo men convicted [in the] killing of Malcolm X expected [to be] exonerated\u201d (2021)",
+        "url": "https://www.nbcnews.com/news/us-news/two-men-convicted-killing-malcom-x-expected-exonerated-rcna5891",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "fred-hampton",
+    "caseNumber": "095",
+    "name": "Fred Hampton",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1969,
+    "age": 21,
+    "gender": "male",
+    "city": "Chicago",
+    "county": "Cook County",
+    "state": "IL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Fred Hampton, 21, chairman of the Illinois chapter of the Black Panther Party, was shot and killed in his bed during a pre-dawn raid on his Chicago apartment on December 4, 1969, carried out by a tactical unit assembled by Cook County State's Attorney Edward Hanrahan in coordination with the FBI. Fellow Panther Mark Clark was also killed. A coroner's inquest initially ruled the deaths justifiable homicide, but a 13-year civil lawsuit brought by survivors and the victims' families produced evidence of FBI involvement, including an informant who supplied a floor plan of the apartment marking Hampton's bed. The case ended in a 1982 settlement, not a criminal conviction: no officer, agent, or official involved in the raid was ever criminally charged or convicted for the deaths.",
+    "known": [
+      "The raid, the deaths of Hampton and Clark, and the initial \u201cjustifiable homicide\u201d coroner's ruling, per contemporaneous 1969\u201370 records.",
+      "FBI informant William O'Neal, who had infiltrated the Chicago Black Panther Party, supplied federal agents a floor plan of the apartment that marked the location of Hampton's bed, per documents surfaced in the subsequent civil litigation and later congressional review.",
+      "The Church Committee's 1975 Senate investigation found the FBI's COINTELPRO program had used improper and, in the committee's words, dangerous tactics against domestic political organizations including the Black Panther Party.",
+      "In 1982, the City of Chicago, Cook County, and the federal government settled the survivors' and families' civil lawsuit for $1.85 million, split evenly three ways, without formally admitting wrongdoing; the plaintiffs' attorney called it an admission of a conspiracy between the FBI and Hanrahan's men.",
+      "No officer, agent, or official involved in the raid was ever criminally charged or convicted for the deaths of Hampton or Clark."
+    ],
+    "unknown": [
+      "The full extent of the FBI's direct role in planning the raid, beyond the floor plan supplied by O'Neal, has never been fully accounted for in a criminal proceeding.",
+      "Independent autopsy findings showed a dangerous level of barbiturates in Hampton's bloodstream despite initial toxicology tests finding none; how that discrepancy arose has never been resolved.",
+      "Which individual officer fired the shots described by witnesses as killing Hampton at close range after he was already down has never been established in any criminal finding."
+    ],
+    "unanswered": [
+      "Why did initial toxicology tests on Hampton's body differ from the independent autopsy's finding of barbiturates?",
+      "Why was no officer, agent, or official ever criminally charged, despite the civil case's findings?",
+      "What redactions remain in FBI files related to the raid, and what do they conceal, as attorneys for the plaintiffs have continued to allege decades later?"
+    ],
+    "sources": [
+      {
+        "name": "Encyclopaedia Britannica \u2014 \u201cFred Hampton Facts\u201d",
+        "url": "https://www.britannica.com/facts/Fred-Hampton",
+        "verified": true
+      },
+      {
+        "name": "HISTORY \u2014 \u201cThe 1969 Raid That Killed Black Panther Leader Fred Hampton\u201d",
+        "url": "https://www.history.com/articles/black-panther-fred-hampton-killing",
+        "verified": true
+      },
+      {
+        "name": "The Real News Network \u2014 interview with civil rights attorney Jeff Haas, \u201cWill it ever be held accountable?\u201d",
+        "url": "https://therealnews.com/the-government-murdered-fred-hampton-will-it-ever-be-held-accountable",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "amadou-diallo",
+    "caseNumber": "096",
+    "name": "Amadou Diallo",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 1999,
+    "age": 23,
+    "gender": "male",
+    "city": "New York",
+    "county": "Bronx County",
+    "state": "NY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Amadou Diallo, 23, an unarmed immigrant from Guinea, was shot and killed just after midnight on February 4, 1999 outside his Bronx apartment building by four plainclothes NYPD Street Crime Unit officers, who fired 41 rounds, 19 of which struck him. The officers said they believed Diallo, who was reaching for his wallet, matched the description of a rape suspect and that they mistook the wallet for a gun. A Bronx grand jury indicted all four officers on second-degree murder and other charges; the trial was moved to Albany, and on February 25, 2000, the jury acquitted all four of every charge. The Department of Justice later found insufficient evidence to bring federal charges. No one has ever been held criminally responsible for Diallo's death.",
+    "known": [
+      "The shooting, the 41 rounds fired, and the 19 that struck Diallo, per the Bronx grand jury indictment and trial record.",
+      "The four officers \u2014 Sean Carroll, Edward McMellon, Kenneth Boss, and Richard Murphy \u2014 were indicted on second-degree murder and other charges, tried in Albany after a change of venue, and acquitted of all charges on February 25, 2000.",
+      "The U.S. Department of Justice separately reviewed the case and found insufficient evidence to bring federal civil rights charges.",
+      "The city of New York settled a wrongful death lawsuit with Diallo's family for $3 million, without admitting liability.",
+      "The NYPD's Street Crime Unit, to which all four officers belonged, was disbanded in 2002 following the case."
+    ],
+    "unknown": [
+      "Whether Diallo made any movement that could reasonably have been mistaken as reaching for a weapon, versus simply retrieving his wallet as he had been asked, was disputed at trial and never resolved beyond the acquittal.",
+      "Eyewitness Sherrie Elliott testified that officers continued firing after Diallo had already fallen; that account was not accepted by the jury as sufficient to convict.",
+      "No individual officer has ever been identified as bearing greater responsibility than the others for the number of rounds fired."
+    ],
+    "unanswered": [
+      "Why did the jury \u2014 which included Black jurors \u2014 find the officers' account of mistaking a wallet for a gun sufficient to acquit on all charges, including lesser counts like reckless endangerment?",
+      "What specific evidence did the Department of Justice find insufficient for federal civil rights charges?",
+      "What became of each of the four officers' careers after the acquittal, and were any ever disciplined internally beyond retraining?"
+    ],
+    "sources": [
+      {
+        "name": "HISTORY \u2014 \u201cAmadou Diallo killed by police\u201d",
+        "url": "https://www.history.com/this-day-in-history/amadou-diallo-killed-by-police-new-york-city",
+        "verified": true
+      },
+      {
+        "name": "NY1 \u2014 \u201cMarking 25 years since the killing of Amadou Diallo\u201d (2024)",
+        "url": "https://ny1.com/nyc/all-boroughs/public-safety/2024/02/02/marking-25-years-since-the-killing-of-amadou-diallo",
+        "verified": true
+      },
+      {
+        "name": "EBSCO Research Starters \u2014 \u201cDiallo shooting\u201d",
+        "url": "https://www.ebsco.com/research-starters/history/diallo-shooting",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "sean-bell",
+    "caseNumber": "097",
+    "name": "Sean Bell",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2006,
+    "age": 23,
+    "gender": "male",
+    "city": "Queens",
+    "county": "Queens County",
+    "state": "NY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Sean Bell, 23, was shot and killed by NYPD undercover officers in Jamaica, Queens in the early morning hours of November 25, 2006 \u2014 the day he was to be married. Officers fired 50 rounds at Bell and his two friends, Trent Benefield and Joseph Guzman, as the men left Bell's bachelor party; no weapon was ever recovered from the vehicle. Detectives Gescard Isnora and Michael Oliver were charged with manslaughter and Detective Marc Cooper with reckless endangerment. In April 2008, a judge acquitted all three of every charge, ruling that prosecutors had not proven their actions were unjustified. Federal prosecutors declined to bring civil rights charges. No one has ever been held criminally responsible for Bell's death.",
+    "known": [
+      "The shooting, the 50 rounds fired, and that no weapon was found in the vehicle, per contemporaneous investigation and trial records.",
+      "Detectives Michael Oliver (31 shots), Gescard Isnora (11 shots), and Marc Cooper (4 shots) were the officers charged; two other officers who also fired were never charged, per trial testimony.",
+      "Justice Arthur Cooperman acquitted all three defendants of every charge on April 25, 2008, stating the prosecution had not proven beyond a reasonable doubt that the officers' actions were unjustified.",
+      "Federal prosecutors reviewed the case and declined to bring civil rights charges against any of the officers involved.",
+      "The city of New York settled a wrongful death lawsuit with Bell's family for $3.25 million."
+    ],
+    "unknown": [
+      "Whether Bell's car in fact struck an officer (Isnora), as the defense argued, in a manner that justified the volume of gunfire that followed remains disputed \u2014 the judge found the officers' account more credible, but the prosecution's witnesses gave a different version.",
+      "Why two additional officers who fired shots at the scene were never criminally charged has not been publicly explained in detail.",
+      "What became of the disciplinary proceedings against the involved officers, delayed for years after the acquittal, has received limited public follow-up."
+    ],
+    "unanswered": [
+      "Why did the judge find the officers' account \u201cmore credible\u201d despite conflicting witness testimony from Bell's surviving friends?",
+      "What specific findings led federal prosecutors to decline civil rights charges after the state acquittal?",
+      "What was the outcome of the long-delayed internal NYPD disciplinary trial for the involved officers?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cSean Bell Verdict Shakes New York\u201d (2008)",
+        "url": "https://www.npr.org/2008/04/28/89993589/sean-bell-verdict-shakes-new-york",
+        "verified": true
+      },
+      {
+        "name": "ABC7 New York \u2014 \u201cSean Bell shooting: NYPD Officers found Not Guilty\u201d",
+        "url": "https://abc7ny.com/archive/6101602/",
+        "verified": true
+      },
+      {
+        "name": "Democracy Now! \u2014 \u201cFollowing Acquittal of NYPD Officers in Sean Bell Killing...\u201d",
+        "url": "https://www.democracynow.org/2008/4/28/following_acquittal_of_nypd_officers_in",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "trayvon-martin",
+    "caseNumber": "098",
+    "name": "Trayvon Martin",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2012,
+    "age": 17,
+    "gender": "male",
+    "city": "Sanford",
+    "county": "Seminole County",
+    "state": "FL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Trayvon Martin, 17, was shot and killed by George Zimmerman, a neighborhood watch volunteer, inside a gated community in Sanford, Florida on February 26, 2012. Martin was unarmed, walking back from a convenience store. Zimmerman, who had called police to report Martin as suspicious before following him, claimed he acted in self-defense during a physical altercation. Charges were filed only after weeks of public pressure; a jury acquitted Zimmerman of second-degree murder and manslaughter in July 2013. The U.S. Department of Justice separately investigated and did not bring federal civil rights charges. No one has ever been held criminally responsible for Martin's death.",
+    "known": [
+      "The shooting and Martin's death, per the Sanford Police Department investigation and subsequent trial record.",
+      "Zimmerman had called police non-emergency lines to report Martin as suspicious and followed him despite being told by a dispatcher that doing so was not necessary, per the recorded call played at trial.",
+      "Zimmerman was charged with second-degree murder more than six weeks after the shooting, following public pressure and the appointment of a special prosecutor.",
+      "An all-women jury acquitted Zimmerman of both second-degree murder and manslaughter on July 13, 2013, after roughly 16 hours of deliberation.",
+      "The U.S. Department of Justice investigated separately for potential federal civil rights violations and ultimately did not bring charges."
+    ],
+    "unknown": [
+      "The specific sequence of the physical altercation between Zimmerman and Martin \u2014 including who initiated contact \u2014 was disputed at trial and never independently established beyond the acquittal.",
+      "Whether racial assumptions specifically motivated Zimmerman's decision to follow Martin has never been legally established, though it was central to public debate about the case.",
+      "Full details of the DOJ's federal civil rights review, including what evidence it considered insufficient, have not been made public in detail."
+    ],
+    "unanswered": [
+      "Why was Zimmerman not charged for over six weeks after the shooting, and what specifically changed to prompt the eventual charge?",
+      "What evidence did the Department of Justice's federal review weigh, and why did it conclude charges were not warranted?",
+      "How did Florida's \u201cStand Your Ground\u201d law shape the investigation and prosecution's strategy, even though Zimmerman's defense ultimately did not formally invoke a Stand Your Ground hearing?"
+    ],
+    "sources": [
+      {
+        "name": "CNN \u2014 \u201cGeorge Zimmerman found not guilty of murder in Trayvon Martin's death\u201d",
+        "url": "https://www.cnn.com/2013/07/13/justice/zimmerman-trial",
+        "verified": true
+      },
+      {
+        "name": "NPR \u2014 \u201cJury Acquits Zimmerman Of All Charges\u201d",
+        "url": "https://www.npr.org/sections/thetwo-way/2013/07/13/201744637/jury-in-zimmerman-trial-enters-second-day-of-deliberation",
+        "verified": true
+      },
+      {
+        "name": "Al Jazeera \u2014 \u201cZimmerman acquitted of Trayvon Martin murder\u201d",
+        "url": "https://www.aljazeera.com/news/2013/7/14/zimmerman-acquitted-of-trayvon-martin-murder",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "freddie-gray",
+    "caseNumber": "099",
+    "name": "Freddie Gray",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2015,
+    "age": 25,
+    "gender": "male",
+    "city": "Baltimore",
+    "county": null,
+    "state": "MD",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Freddie Gray, 25, suffered a fatal spinal cord injury while in the back of a Baltimore Police transport van after his arrest on April 12, 2015, and died a week later. The city medical examiner ruled his death a homicide. Six officers were criminally charged, with counts ranging from misconduct in office to second-degree \u201cdepraved heart\u201d murder. Four officers went to trial: three were acquitted by a judge and one trial ended in a hung jury. Prosecutors then dropped all remaining charges against the other officers in July 2016, securing no convictions. The U.S. Department of Justice separately reviewed the case and declined federal prosecution. No one has ever been convicted in Freddie Gray's death.",
+    "known": [
+      "Gray's arrest, the injury sustained in the police van, and his death a week later, per the Baltimore Police Department and the state's attorney's charging documents.",
+      "The city medical examiner ruled the death a homicide.",
+      "Six officers \u2014 Caesar Goodson, William Porter, Garrett Miller, Edward Nero, Brian Rice, and Alicia White \u2014 were criminally charged in May 2015.",
+      "Of the four officers who went to trial, three (Nero, Goodson, and Rice) were acquitted by Judge Barry Williams in bench trials, and one (Porter) ended in a mistrial after a hung jury.",
+      "In July 2016, Baltimore State's Attorney Marilyn Mosby dropped all remaining charges against the other officers, stating she still believed the death was a homicide but could not secure a conviction.",
+      "The U.S. Department of Justice reviewed the case for federal civil rights charges and declined to prosecute, per its own public statement."
+    ],
+    "unknown": [
+      "The specific point at which Gray's spinal injury occurred during transport, and which officer's actions or inaction caused it, was never established to a court's satisfaction in any of the trials.",
+      "Whether the failure to seatbelt Gray in the van, as prosecutors alleged, was department policy in practice versus a documented violation specific to these officers, was disputed at trial.",
+      "Full findings of the Montgomery County Police Department's internal administrative investigation, which recommended discipline for some officers, were not made fully public."
+    ],
+    "unanswered": [
+      "Why was the prosecution unable to secure a conviction on any of the six officers despite the medical examiner's homicide ruling?",
+      "What specific evidence did the Department of Justice find insufficient for federal civil rights charges?",
+      "What ultimately came of the internal disciplinary findings against individual officers, several of whom continued or advanced their careers within the department afterward?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 \u201cFederal Officials Decline Prosecution in the Death of Freddie Gray\u201d",
+        "url": "https://www.justice.gov/archives/opa/pr/federal-officials-decline-prosecution-death-freddie-gray",
+        "verified": true
+      },
+      {
+        "name": "ABC News \u2014 \u201cCharges Dismissed Against Baltimore Police Officers in Freddie Gray Case\u201d",
+        "url": "https://abcnews.com/US/charges-dismissed-baltimore-police-officers-freddie-gray-case/story?id=40922140",
+        "verified": true
+      },
+      {
+        "name": "NPR \u2014 \u201cBaltimore Police promotes Alicia White, officer involved in Freddie Gray's death\u201d (2024)",
+        "url": "https://www.npr.org/2024/02/14/1231225553/alicia-white-baltimore-police-promotion-freddie-gray-death",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "breonna-taylor",
+    "caseNumber": "100",
+    "name": "Breonna Taylor",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 26,
+    "gender": "female",
+    "city": "Louisville",
+    "county": "Jefferson County",
+    "state": "KY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Breonna Taylor, 26, an emergency room technician, was shot and killed by Louisville Metro Police officers executing a no-knock search warrant at her apartment shortly after midnight on March 13, 2020. The warrant was later found to have been based on falsified information. Taylor's boyfriend, believing intruders had broken in, fired a shot that struck an officer; police returned more than 30 rounds, killing Taylor. A local grand jury declined to charge any officer for her death. The U.S. Department of Justice later brought federal civil rights charges against four current and former officers; only one, Brett Hankison, was convicted, for firing blindly into the apartment \u2014 not for killing Taylor, since his shots never struck her. No one has ever been charged with, or convicted of, causing Taylor's death itself.",
+    "known": [
+      "The raid, the warrant, and Taylor's death, per Louisville Metro Police Department records and the subsequent federal investigation.",
+      "A Jefferson County grand jury in September 2020 declined to charge any officer with Taylor's death; one officer, Hankison, was indicted only on charges of endangering her neighbors, and was acquitted of those state charges at trial in 2022.",
+      "In 2022, the FBI arrested and the DOJ federally charged four current and former officers with civil rights violations connected to the raid and the falsified warrant.",
+      "Hankison was convicted by a federal jury in November 2024 on one count of violating Taylor's civil rights for firing 10 shots blindly through a covered window; the jury separately cleared him of a charge involving her neighbors.",
+      "The Department of Justice's own sentencing memo, filed under a later administration, stated Hankison \u201cdid not shoot Ms. Taylor and is not otherwise responsible for her death,\u201d and recommended a one-day sentence; the judge sentenced him to roughly 33 months instead.",
+      "No officer has ever been charged with or convicted of causing Taylor's death."
+    ],
+    "unknown": [
+      "Which specific officer's bullet caused Taylor's fatal wounds has never been the basis of any criminal charge.",
+      "The full extent of what individual officers knew about the falsified warrant application before the raid was disputed across the various proceedings.",
+      "The outcomes of the other federally charged officers' cases, including one whose state charges were dismissed by a federal judge in 2026, remain only partially resolved."
+    ],
+    "unanswered": [
+      "Why did the local grand jury decline to charge any officer with Taylor's death itself, and what evidence was or was not presented to it?",
+      "Why has no officer ever been charged specifically with causing Taylor's death, as opposed to endangerment or civil rights violations connected to the raid?",
+      "What accounts for the DOJ's own shift in position on the case's severity between the prosecution that secured Hankison's conviction and the sentencing memo that followed?"
+    ],
+    "sources": [
+      {
+        "name": "U.S. Department of Justice \u2014 \u201cFormer Louisville... Officer Found Guilty of Federal Civil Rights Crimes\u201d",
+        "url": "https://www.justice.gov/archives/opa/pr/former-louisville-kentucky-metro-police-officer-found-guilty-federal-civil-rights-crimes",
+        "verified": true
+      },
+      {
+        "name": "Al Jazeera \u2014 \u201cUS police officer in Breonna Taylor death sentenced to 33 months\u201d (2025)",
+        "url": "https://www.aljazeera.com/news/2025/7/21/us-police-officer-in-breonna-taylor-death-sentenced-to-33-months-in-prison",
+        "verified": true
+      },
+      {
+        "name": "PBS NewsHour / AP \u2014 \u201cEx-Louisville officer convicted of using excessive force on Breonna Taylor\u201d",
+        "url": "https://www.pbs.org/newshour/amp/nation/ex-louisville-officer-convicted-of-using-excessive-force-on-breonna-taylor-during-deadly-raid",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "rekia-boyd",
+    "caseNumber": "101",
+    "name": "Rekia Boyd",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2012,
+    "age": 22,
+    "gender": "female",
+    "city": "Chicago",
+    "county": "Cook County",
+    "state": "IL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Rekia Boyd, 22, was shot and killed by off-duty Chicago Police Detective Dante Servin near Douglas Park on the city's West Side in the early hours of March 21, 2012. Servin, in his car in a nearby alley, fired five shots over his shoulder at a group Boyd was part of, striking a man in the hand and Boyd in the back of the head; he said he believed one of the group had pulled a gun, but no weapon was ever found. Servin was charged nearly two years later with involuntary manslaughter and reckless discharge of a firearm. At his 2015 bench trial, the judge issued a directed verdict of not guilty before the defense even presented its case, ruling that Servin's conduct was intentional rather than reckless \u2014 meaning prosecutors had charged the wrong offense \u2014 while noting Servin's actions were \u201cbeyond reckless.\u201d Because of double jeopardy, he could never be retried on a more serious charge. No one has ever been convicted in Boyd's death.",
+    "known": [
+      "The shooting, the five shots fired, and Boyd's death, per Chicago Police Department records and subsequent trial testimony.",
+      "No weapon was ever recovered from the scene despite an extended police search, per contemporaneous reporting.",
+      "Servin was charged in January 2014 with involuntary manslaughter, reckless discharge of a firearm, and reckless conduct.",
+      "At an April 2015 bench trial, Cook County Judge Dennis Porter issued a directed finding of not guilty on all counts, ruling that the evidence showed Servin's firing was intentional rather than reckless \u2014 meaning it should have been charged as a more serious offense \u2014 and that the involuntary manslaughter charge as filed could not be sustained.",
+      "The judge stated Servin's conduct was \u201cbeyond reckless,\u201d but because of the specific charge filed, was legally barred from convicting him of anything greater; double jeopardy protections mean Servin can never be retried on a murder charge for Boyd's death.",
+      "The city of Chicago settled a wrongful death lawsuit with Boyd's family for $4.5 million in 2013, before the criminal trial concluded.",
+      "In 2019, a different Cook County judge declined to expunge Servin's record, citing the strength of the evidence presented at trial despite the acquittal."
+    ],
+    "unknown": [
+      "Whether a member of Boyd's group in fact possessed or displayed a weapon, as Servin claimed, was never resolved \u2014 no weapon was found, but the claim was never conclusively disproven in court either.",
+      "Why the Cook County State's Attorney's office originally filed involuntary manslaughter rather than a murder charge, given the judge's later finding that the conduct was intentional, has not been fully explained by prosecutors.",
+      "The full internal disciplinary history and departure circumstances for Servin from the Chicago Police Department following the case have not been comprehensively documented."
+    ],
+    "unanswered": [
+      "Why did prosecutors choose to charge involuntary manslaughter rather than a charge that matched what the trial judge later found the evidence showed?",
+      "What accountability mechanisms, if any, exist for cases where a charging decision itself forecloses a conviction that the evidence might otherwise support?",
+      "What became of the group Boyd was with that night, and has any of them ever spoken publicly about what happened in the moments before the shooting?"
+    ],
+    "sources": [
+      {
+        "name": "WTTW News \u2014 \u201cAftermath of Rekia Boyd Verdict\u201d (2015)",
+        "url": "https://news.wttw.com/2015/04/21/aftermath-rekia-boyd-verdict",
+        "verified": true
+      },
+      {
+        "name": "Chicago Sun-Times \u2014 \u201cDante Servin's record won't be expunged in death of Rekia Boyd\u201d (2019)",
+        "url": "https://chicago.suntimes.com/2019/11/19/20972731/dante-servin-denied-expungment-deadly-shooting-rekia-boyd",
+        "verified": true
+      },
+      {
+        "name": "Fox News / AP \u2014 \u201cOff-duty Chicago police officer acquitted of involuntary manslaughter\u201d",
+        "url": "https://www.foxnews.com/us/off-duty-chicago-police-officer-acquitted-of-involuntary-manslaughter-in-unarmed-womans-death.amp",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "eric-garner",
+    "caseNumber": "102",
+    "name": "Eric Garner",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2014,
+    "age": 43,
+    "gender": "male",
+    "city": "Staten Island",
+    "county": "Richmond County",
+    "state": "NY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Eric Garner, 43, died on July 17, 2014 after NYPD Officer Daniel Pantaleo placed him in an apparent chokehold \u2014 a maneuver banned under NYPD policy \u2014 while arresting him on suspicion of selling untaxed loose cigarettes on a Staten Island street corner. Bystander video captured Garner repeating \u201cI can't breathe\u201d eleven times before he lost consciousness. The city medical examiner ruled his death a homicide, citing the chokehold as a contributing cause. A Staten Island grand jury declined to indict Pantaleo in December 2014. The Department of Justice's five-year federal civil rights investigation ended in July 2019, one day before the fifth anniversary of Garner's death, with Attorney General William Barr declining to bring charges. Pantaleo was fired from the NYPD in an internal disciplinary proceeding later that year, but no criminal charge was ever filed against him or anyone else involved in Garner's death.",
+    "known": [
+      "The arrest, the chokehold captured on bystander video, and Garner's death, per the New York City medical examiner's office and contemporaneous reporting.",
+      "The medical examiner ruled the death a homicide, finding the chokehold, along with compression of his chest and prone positioning during the arrest, contributed to his death.",
+      "A Staten Island grand jury, composed of 15 white and 8 minority jurors, declined to indict Pantaleo on any charge in December 2014.",
+      "In July 2019, the Department of Justice concluded a five-year federal civil rights investigation and declined to bring charges, a decision made personally by Attorney General William Barr following the recommendation of Brooklyn federal prosecutors.",
+      "An NYPD internal disciplinary trial in 2019 found Pantaleo had used a prohibited chokehold; he was fired from the department later that year \u2014 an administrative outcome, not a criminal one.",
+      "New York City settled a wrongful death lawsuit with Garner's family for $5.9 million in 2015."
+    ],
+    "unknown": [
+      "Why the Staten Island grand jury, having seen the same video the medical examiner and NYPD's own disciplinary trial later relied on to find a chokehold occurred, concluded there was not probable cause to indict on any charge has never been made public \u2014 grand jury proceedings are sealed by law.",
+      "The specific evidence and legal reasoning behind the DOJ's 2019 decision not to prosecute has not been fully detailed publicly.",
+      "Why the federal investigation took five years, nearly the entire relevant statute of limitations window, has not been officially explained."
+    ],
+    "unanswered": [
+      "Why did New York State's grand jury secrecy laws prevent any public accounting of what evidence was presented and how it was weighed?",
+      "What specifically changed, if anything, in the Justice Department's assessment of the case between when career prosecutors reportedly recommended charges and the final decision not to prosecute?",
+      "Beyond Pantaleo's firing, did any other officer at the scene face any consequence, criminal or administrative, for their role in the arrest?"
+    ],
+    "sources": [
+      {
+        "name": "NBC News \u2014 \u201cNYPD officer in Eric Garner's chokehold death won't face federal charges\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/new-york-city-officer-eric-garner-s-chokehold-death-won-n1030321",
+        "verified": true
+      },
+      {
+        "name": "NBC New York \u2014 \u201cGrand Jury Declines to Indict NYPD Officer in Eric Garner Chokehold Death\u201d",
+        "url": "https://www.nbcnewyork.com/news/local/grand-jury-decision-eric-garner-staten-island-chokehold-death-nypd/1427980/",
+        "verified": true
+      },
+      {
+        "name": "NY1 \u2014 \u201cDeputy Inspector says chokehold was used\u201d (2019 disciplinary trial coverage)",
+        "url": "https://ny1.com/news/2019/05/14/eric-garner-death-daniel-pantaleo-nypd-trial-deputy-inspector-says-chokehold-was-used",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "tamir-rice",
+    "caseNumber": "103",
+    "name": "Tamir Rice",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2014,
+    "age": 12,
+    "gender": "male",
+    "city": "Cleveland",
+    "county": "Cuyahoga County",
+    "state": "OH",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Tamir Rice, 12, was shot and killed by rookie Cleveland Police Officer Timothy Loehmann on November 22, 2014, within two seconds of Loehmann's patrol car skidding to a stop beside him outside a recreation center. Rice had been playing with a pellet gun; the 911 caller told the dispatcher the gun was \u201cprobably fake\u201d and the person waving it was \u201cprobably a juvenile,\u201d but that information was never relayed to the responding officers. A grand jury declined to indict Loehmann or his partner, Frank Garmback, in December 2015, with the county prosecutor calling the shooting a \u201cperfect storm of human error\u201d rather than a crime. The Department of Justice closed a five-year federal civil rights investigation in December 2020 without charges. No one has ever been criminally charged in Tamir Rice's death.",
+    "known": [
+      "The shooting, the timing (within roughly two seconds of the patrol car's arrival), and Rice's death, per surveillance video and the Cuyahoga County prosecutor's public statements.",
+      "The 911 caller's qualifications \u2014 that the gun was probably fake and the person was probably a juvenile \u2014 were not relayed by the dispatcher to Loehmann and Garmback before they arrived, per the prosecutor's own account.",
+      "A Cuyahoga County grand jury declined to indict either officer on any charge in December 2015; prosecutor Timothy McGinty stated he had recommended against indictment.",
+      "The U.S. Department of Justice concluded a five-year federal civil rights investigation in December 2020, finding insufficient evidence to prove beyond a reasonable doubt that Rice had not been reaching for the pellet gun, and declined to bring charges.",
+      "The City of Cleveland fired Loehmann in 2017 \u2014 explicitly not for the shooting, but for omitting from his job application that a previous department had found him emotionally unfit for police work.",
+      "The city settled a wrongful death lawsuit with Rice's family for $6 million in 2016.",
+      "Loehmann was hired by at least two other police departments after his firing, each time resigning or withdrawing following public backlash led by Rice's mother, Samaria Rice."
+    ],
+    "unknown": [
+      "Whether Rice was in fact reaching for the pellet gun in his waistband, as the prosecutor characterized enhanced surveillance video as showing, versus complying with an instruction, was disputed by the family's attorneys and never tested at a trial.",
+      "Why the dispatcher did not relay the 911 caller's qualifications about the gun being probably fake has not been fully explained in any public accounting.",
+      "The specific tactical decision to drive the patrol car directly up to Rice at close range, rather than approaching from a distance, was criticized by outside police-practice experts but was not the basis for any criminal charge."
+    ],
+    "unanswered": [
+      "Why did the dispatcher fail to relay the caller's own uncertainty about the gun and Rice's age to the responding officers?",
+      "What specific tactical review, if any, changed Cleveland Police Department protocol for approaching reports of an armed person following this shooting?",
+      "Why were other police departments able to hire Loehmann in the years after his firing without his history in the Rice shooting surfacing during hiring review?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cJustice Department Declines To Prosecute Cleveland Officers In Death Of Tamir Rice\u201d",
+        "url": "https://www.npr.org/2020/12/29/951277146/justice-department-declines-to-prosecute-cleveland-officers-who-killed-tamir-ric",
+        "verified": true
+      },
+      {
+        "name": "NPR \u2014 \u201cCleveland Grand Jury Declines To Indict Police Officers In Tamir Rice Probe\u201d",
+        "url": "https://www.npr.org/2015/12/29/461352907/cleveland-grand-jury-declines-to-indict-police-officers-in-tamir-rice-probe",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cCleveland police officer who fatally shot Tamir Rice fired\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/cleveland-police-officer-who-fatally-shot-tamir-rice-fired-n766221",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "philando-castile",
+    "caseNumber": "104",
+    "name": "Philando Castile",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 32,
+    "gender": "male",
+    "city": "Falcon Heights",
+    "county": "Ramsey County",
+    "state": "MN",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Philando Castile, 32, a St. Paul-area elementary school cafeteria supervisor, was shot and killed by St. Anthony Police Officer Jeronimo Yanez during a traffic stop in Falcon Heights, Minnesota on July 6, 2016. Castile, who had a permit to carry, calmly informed Yanez he had a firearm in the car; Yanez fired seven shots, striking him five times, as Castile's girlfriend Diamond Reynolds and her 4-year-old daughter sat in the car. Reynolds began livestreaming the aftermath on Facebook within moments, and the video was viewed by millions. Yanez was charged with second-degree manslaughter and two counts of endangering Reynolds and her daughter; a jury acquitted him of all charges on June 16, 2017, after roughly 27 hours of deliberation. No one has ever been convicted in Castile's death.",
+    "known": [
+      "The traffic stop, the seven shots fired, and Castile's death, per squad-car video and trial testimony.",
+      "Castile informed Yanez he had a firearm and a permit to carry before Yanez opened fire, per the dashcam audio played at trial.",
+      "Yanez was charged with second-degree manslaughter and two counts of dangerous discharge of a firearm; a 12-member jury (two Black, ten white) acquitted him of every charge on June 16, 2017.",
+      "The City of St. Anthony announced it would dismiss Yanez from the police force the same day as the acquittal, offering him a voluntary separation rather than returning him to duty.",
+      "The City of St. Anthony and surrounding jurisdictions reached a $3 million settlement with Castile's family in 2017; St. Anthony also later disbanded its police department entirely."
+    ],
+    "unknown": [
+      "Whether Castile was reaching for his wallet, as his family and prosecutors argued, or for his firearm despite officer commands, as Yanez testified, was never resolved beyond the jury's acquittal.",
+      "Why the dashcam audio in which Castile calmly disclosed the firearm did not, in the jury's assessment, undercut Yanez's stated fear for his life has not been explained by the jury, whose deliberations are not public.",
+      "Whether a substitute teaching license later granted to Yanez, which a Minnesota appeals court ordered reconsidered, was ultimately approved or denied has not been consistently reported."
+    ],
+    "unanswered": [
+      "Why did the jury find Yanez's account of Castile's movements more credible than the dashcam audio and Reynolds's own account?",
+      "What became of St. Anthony's internal use-of-force review following the shooting, beyond the department's eventual dissolution?",
+      "Did the licensing dispute over Yanez's eligibility to substitute teach ever reach a final resolution?"
+    ],
+    "sources": [
+      {
+        "name": "CNN \u2014 \u201cOfficer who shot Philando Castile found not guilty\u201d",
+        "url": "https://www.cnn.com/2017/06/16/us/philando-castile-trial-verdict",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cOfficer Who Shot Philando Castile Acquitted of Manslaughter Charges\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/officer-who-shot-philando-castile-acquitted-manslaughter-charges-n771146",
+        "verified": true
+      },
+      {
+        "name": "MPR News \u2014 \u201cThe death of Philando Castile and the trial of Jeronimo Yanez\u201d",
+        "url": "https://www.mprnews.org/crime-law-and-justice/philandocastile",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "stephon-clark",
+    "caseNumber": "105",
+    "name": "Stephon Clark",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2018,
+    "age": 22,
+    "gender": "male",
+    "city": "Sacramento",
+    "county": "Sacramento County",
+    "state": "CA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Stephon Clark, 22, was shot and killed by Sacramento Police officers Terrence Mercadal and Jared Robinet in his grandmother's backyard on March 18, 2018, after they responded to a report of vandalism and pursued him on foot. The officers said they believed Clark was pointing a gun at them in the dark; he was holding only a cellphone. Sacramento County District Attorney Anne Marie Schubert announced in March 2019 that no criminal charges would be filed. Days later, California Attorney General Xavier Becerra's independent state review reached the same conclusion. In September 2019, federal prosecutors also declined to bring civil rights charges. Three separate reviews \u2014 county, state, and federal \u2014 each concluded independently that no charges could be sustained, and no one has ever been convicted in Clark's death.",
+    "known": [
+      "The foot pursuit, the shooting in his grandmother's backyard, and Clark's death, per the Sacramento Police Department's own investigation and subsequent reviews.",
+      "Only a cellphone, not a firearm, was recovered from the scene.",
+      "Sacramento County DA Anne Marie Schubert announced no charges on March 2, 2019, after reviewing the Sacramento Police Department's internal investigation.",
+      "California Attorney General Xavier Becerra's office conducted a separate, independent state review at the request of Sacramento's police chief and announced on March 5, 2019 that no charges could be sustained.",
+      "Federal prosecutors and the FBI announced on September 26, 2019 that they found insufficient evidence to support federal civil rights charges.",
+      "The shooting and subsequent non-charging decisions prompted sustained protests in Sacramento, and contributed to California signing a 2019 law raising the legal standard for police use of deadly force."
+    ],
+    "unknown": [
+      "Why the officers believed Clark was armed in the dark, and what specifically about his movements led both officers to fire simultaneously, has been described differently across the three reviews and the family's own account.",
+      "The exact number and sequence of shots fired, and Clark's position when struck, were disputed between the county's autopsy findings and an independent autopsy commissioned by the family.",
+      "Whether either officer faced any internal departmental discipline, separate from the criminal charging decisions, was not fully resolved in public reporting at the time."
+    ],
+    "unanswered": [
+      "Why did three separate reviewing authorities \u2014 county, state, and federal \u2014 each reach the same no-charges conclusion despite Clark being unarmed?",
+      "What specific findings from the family's independently commissioned autopsy were addressed, if at all, in the official reviews?",
+      "What internal changes, if any, did the Sacramento Police Department make to its foot-pursuit and use-of-force protocols as a direct result of this case?"
+    ],
+    "sources": [
+      {
+        "name": "California Department of Justice \u2014 \u201cAttorney General Becerra Releases Report on Independent Investigation into the Death of Stephon Clark\u201d",
+        "url": "https://oag.ca.gov/news/press-releases/attorney-general-becerra-releases-report-independent-investigation-death-stephon",
+        "verified": true
+      },
+      {
+        "name": "NPR \u2014 \u201cOfficers In Stephon Clark Shooting Won't Be Charged, Says Sacramento D.A.\u201d",
+        "url": "https://www.npr.org/2019/03/02/699719214/officers-in-stephon-clark-shooting-wont-be-charged-says-sacramento-d-a",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cFeds won't pursue charges against officers in Stephon Clark's shooting death\u201d",
+        "url": "https://www.nbcnews.com/news/nbcblk/feds-won-t-pursue-charges-against-officers-stephon-clark-s-n1059411",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "michael-brown",
+    "caseNumber": "106",
+    "name": "Michael Brown",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2014,
+    "age": 18,
+    "gender": "male",
+    "city": "Ferguson",
+    "county": "St. Louis County",
+    "state": "MO",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Michael Brown, 18, was shot and killed by Ferguson, Missouri Police Officer Darren Wilson on August 9, 2014, following a confrontation after Wilson stopped Brown and a friend for walking in the street. Brown's body remained in the street for roughly four hours afterward, which inflamed already-tense relations between the majority-Black city and its overwhelmingly white police force. A St. Louis County grand jury declined to indict Wilson in November 2014. The Department of Justice separately cleared Wilson of civil rights violations in March 2015, while issuing a scathing report finding Ferguson's police and courts had systematically targeted Black residents for revenue rather than public safety. In 2020, the county's first Black prosecutor, Wesley Bell, reopened the case at the family's request and, after a five-month independent review, announced in 2020 that he too could not prove murder or manslaughter charges. Three separate reviewing authorities have now each declined to charge Wilson, who resigned days after the grand jury decision; no one has ever been charged in Brown's death.",
+    "known": [
+      "The August 9, 2014 shooting and the roughly four hours Brown's body remained on Canfield Drive afterward, per contemporaneous reporting and the DOJ's 2015 report.",
+      "A St. Louis County grand jury of nine white and three Black jurors declined to indict Wilson on November 24, 2014; Wilson resigned from the Ferguson Police Department days later.",
+      "The DOJ's March 2015 report cleared Wilson of federal civil rights violations, concluding prosecutors could not disprove his account that he feared for his life, while a companion DOJ report found a pattern of Ferguson police and courts systematically targeting Black residents for fines and fees.",
+      "In 2020, St. Louis County's first Black prosecuting attorney, Wesley Bell, reopened the case at the family's request; after a five-month independent review, he announced he could not prove beyond a reasonable doubt that Wilson committed murder or manslaughter under Missouri law.",
+      "Autopsy results cited in the DOJ report found Brown was struck six to eight times."
+    ],
+    "unknown": [
+      "Whether Brown had his hands raised in surrender, as some witnesses said, or was moving toward Wilson, as Wilson testified and the DOJ report found more consistent with physical evidence, was never resolved in any court proceeding.",
+      "The full physical struggle at Wilson's vehicle, including whether Brown reached inside it, was reconstructed from disputed witness accounts rather than settled by any trial.",
+      "Ferguson Police Chief Tom Jackson and five other city officials resigned following the DOJ's report, but the individual scope of each resignation's connection to Brown's case specifically, versus the broader pattern-or-practice findings, was not always made explicit."
+    ],
+    "unanswered": [
+      "Why did three separate reviewing authorities \u2014 a county grand jury, the DOJ, and a reform-minded Black prosecutor conducting an independent re-investigation years later \u2014 each reach the same conclusion that charges could not be proven?",
+      "What specific reforms required under Ferguson's federal consent decree, prompted by the DOJ's pattern-or-practice findings, remain incomplete a decade later?",
+      "What became of Darren Wilson professionally and personally in the years since his resignation, a subject on which public reporting has been limited?"
+    ],
+    "sources": [
+      {
+        "name": "PBS NewsHour \u2014 \u201cProsecutor says no charges for officer in Michael Brown's death\u201d (2020)",
+        "url": "https://www.pbs.org/newshour/nation/prosecutor-says-no-charges-for-officer-in-michael-browns-death",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cDOJ Says Officer Darren Wilson, Cop in Ferguson Case, Won't Be Charged\u201d (2015)",
+        "url": "https://www.nbcnews.com/storyline/michael-brown-shooting/doj-says-officer-darren-wilson-cop-ferguson-case-wont-be-n317311",
+        "verified": true
+      },
+      {
+        "name": "CBS News \u2014 \u201cNo charges against officer who fatally shot Michael Brown\u201d (2020)",
+        "url": "https://cbsnews.com/news/michael-brown-ferguson-police-officer-no-charges-darren-wilson",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "alton-sterling",
+    "caseNumber": "107",
+    "name": "Alton Sterling",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 37,
+    "gender": "male",
+    "city": "Baton Rouge",
+    "county": "East Baton Rouge Parish",
+    "state": "LA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Alton Sterling, 37, a father of five who sold homemade CDs outside a Baton Rouge convenience store, was shot and killed by Officers Blane Salamoni and Howie Lake II on July 5, 2016, during a struggle after the two officers responded to a report of a man threatening someone with a gun. Cellphone video of the roughly 90-second encounter, showing Sterling pinned to the ground when he was shot, circulated widely and prompted nationwide protests. The Department of Justice declined to bring federal civil rights charges in May 2017. Nearly a year later, in March 2018, Louisiana's attorney general separately declined to bring state charges, calling the shooting \u201cjustifiable\u201d and citing a toxicology report showing Sterling had drugs in his system. No one has ever been criminally charged in Sterling's death.",
+    "known": [
+      "The struggle, the shooting, and Sterling's death outside the Triple S Food Mart, per cellphone video and the subsequent DOJ and state investigations.",
+      "The DOJ's Civil Rights Division and the U.S. Attorney's Office for the Middle District of Louisiana announced in May 2017 that evidence was insufficient to prove the officers had willfully used unreasonable force, the standard required under federal civil rights law.",
+      "Louisiana Attorney General Jeff Landry announced in March 2018, after reviewing the DOJ's evidence and conducting independent interviews, that his office would not bring state charges either, calling the officers' actions \u201cjustifiable.\u201d",
+      "East Baton Rouge District Attorney Hillar Moore recused his own office from the state review due to a professional relationship with one officer's parents, leaving the decision to the state attorney general.",
+      "Sterling's family filed a wrongful death lawsuit against the city, its police department, and the two officers in June 2017."
+    ],
+    "unknown": [
+      "Whether Sterling was reaching for a firearm in his pocket, as the officers stated, versus the extent to which he was still resisting being restrained at the moment of the shooting, was disputed in witness and video interpretation and never tested at trial.",
+      "The specific weight the toxicology findings cited by Attorney General Landry actually carried in the legal determination that the shooting was justifiable has been disputed by the family's attorneys and the NAACP Legal Defense Fund.",
+      "Whether either officer faced internal departmental discipline separate from the criminal charging decisions has not been comprehensively documented publicly."
+    ],
+    "unanswered": [
+      "Why did both the federal and state reviews, conducted independently and nearly a year apart, reach the same no-charges conclusion despite Sterling being restrained on the ground when shot?",
+      "What specific evidence from the officers' body-worn or dash camera footage, if any existed, factored into either review's conclusion?",
+      "What became of the Sterling family's civil wrongful-death lawsuit against the city and the officers?"
+    ],
+    "sources": [
+      {
+        "name": "Al Jazeera \u2014 \u201cAlton Sterling shooting: No criminal charges for police officers\u201d",
+        "url": "https://www.aljazeera.com/amp/news/2018/3/27/alton-sterling-shooting-no-criminal-charges-for-police-officers",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cAlton Sterling Shooting: Justice Department Announces No Federal Charges\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/alton-sterling-shooting-justice-department-announces-no-federal-charges-n754361",
+        "verified": true
+      },
+      {
+        "name": "NAACP Legal Defense Fund \u2014 statement on the DOJ's decision not to charge",
+        "url": "https://www.naacpldf.org/press-release/naacp-legal-defense-fund-statement-on-the-u-s-justice-departments-decision-not-to-charge-baton-rouge-police-officers-for-shooting-death-of-alton-sterling/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "john-crawford-iii",
+    "caseNumber": "108",
+    "name": "John Crawford III",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2014,
+    "age": 22,
+    "gender": "male",
+    "city": "Beavercreek",
+    "county": "Greene County",
+    "state": "OH",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "John Crawford III, 22, was shot and killed by Beavercreek, Ohio Police Officer Sean Williams inside a Walmart store on August 5, 2014, while talking on his cell phone and holding an unboxed BB/pellet air rifle he had picked up from a store shelf. A 911 caller, Ronald Ritchie, had told dispatchers a man was waving a gun at customers \u2014 an account store surveillance video later contradicted, showing Crawford never pointed the item at anyone. A special Greene County grand jury declined to indict Williams in September 2014, the same day the Department of Justice opened its own civil rights investigation; that federal review closed in July 2017 without charges, finding insufficient evidence that Williams had willfully violated Crawford's civil rights. No one has ever been charged in Crawford's death.",
+    "known": [
+      "The 911 call reporting a man with a gun, the shooting, and Crawford's death, per Walmart surveillance footage and the 911 audio, both later released publicly.",
+      "Surveillance video showed Crawford was not pointing the air rifle at anyone and was largely engaged in a phone call in the moments before he was shot, contradicting the 911 caller's account.",
+      "A special Greene County grand jury of nine members declined to indict Officer Williams on September 24, 2014; special prosecutor Mark Piepmeier stated Crawford \u201cdid nothing wrong.\u201d",
+      "The Department of Justice's Civil Rights Division and the U.S. Attorney's Office for Southern Ohio announced on July 11, 2017 that evidence was insufficient to prove Williams had willfully violated Crawford's federal civil rights.",
+      "A separate investigation concluded the 911 caller, Ronald Ritchie, would not be charged for his report, as prosecutors found no evidence he knowingly provided false information."
+    ],
+    "unknown": [
+      "Whether Officer Williams had a reasonable opportunity to perceive that Crawford was not an active threat before firing, given the surveillance video's contradiction of the initial 911 report, was never tested at trial.",
+      "The precise verbal commands given to Crawford immediately before the shooting, and how much time he had to respond to them, were disputed between the family's account and the responding officers' statements.",
+      "Whether internal Beavercreek Police Department training or policy changed as a direct result of the shooting has not been comprehensively documented in public reporting."
+    ],
+    "unanswered": [
+      "Why did the grand jury's and DOJ's conclusions differ so sharply from the family attorney's assessment that the surveillance video showed \u201cample evidence\u201d for charges?",
+      "What became of the Crawford family's separate civil lawsuit against Walmart and the Beavercreek Police Department?",
+      "Why was a 911 caller whose account was directly contradicted by video evidence not held to any legal accountability for that report?"
+    ],
+    "sources": [
+      {
+        "name": "NBC News \u2014 \u201cJohn Crawford III Case: Feds Announce No Charges for Officer in Fatal 2014 Shooting\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/john-crawford-iii-case-feds-announce-no-charges-officer-fatal-n782091",
+        "verified": true
+      },
+      {
+        "name": "NPR \u2014 \u201cGrand Jury Won't Indict Officers In Ohio Wal-Mart Shooting\u201d",
+        "url": "https://www.npr.org/sections/thetwo-way/2014/09/25/351422552/grand-jury-wont-indict-officers-in-ohio-wal-mart-shooting",
+        "verified": true
+      },
+      {
+        "name": "Democracy Now! \u2014 \u201cNo Charges in Ohio Police Killing of John Crawford\u201d",
+        "url": "https://www.democracynow.org/2014/9/25/no_charges_in_ohio_police_killing",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "sandra-bland",
+    "caseNumber": "109",
+    "name": "Sandra Bland",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2015,
+    "age": 28,
+    "gender": "female",
+    "city": "Prairie View",
+    "county": "Waller County",
+    "state": "TX",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Sandra Bland, 28, was found dead in her cell at the Waller County Jail in Hempstead, Texas on July 13, 2015, three days after Texas State Trooper Brian Encinia arrested her during a traffic stop in nearby Prairie View for failing to signal a lane change. Dashcam video showed the stop escalating after Bland questioned why she had to put out her cigarette, ending with Encinia drawing a Taser and pulling her from her car. Her death was ruled a suicide by asphyxiation. A Waller County grand jury found no criminal wrongdoing by jailers or the sheriff's office, but did indict Encinia on a misdemeanor perjury charge for falsely writing that he removed Bland from her car to conduct a \u201csafer traffic investigation.\u201d That charge \u2014 the only criminal charge ever filed against anyone in connection with Bland's death \u2014 was dropped in June 2017 after Encinia agreed to surrender his peace officer license and never work in law enforcement again. No one has ever been convicted of any crime related to Bland's arrest, treatment, or death.",
+    "known": [
+      "The traffic stop, its escalation, and the circumstances of the arrest, per Texas Department of Public Safety dashcam footage and a cell phone video Bland recorded herself.",
+      "Bland was found dead in her cell three days later; the Harris County Medical Examiner ruled the death a suicide by asphyxiation using a plastic garbage bag.",
+      "A Waller County grand jury found no felony had been committed by jailers or the sheriff's office, but indicted Encinia in January 2016 on a single misdemeanor perjury charge for his written account of the arrest.",
+      "Encinia was fired by the Texas Department of Public Safety in March 2016 following the indictment.",
+      "In June 2017, the sole perjury charge against Encinia was dismissed at prosecutors' request after he agreed to permanently surrender his peace officer license, never work in law enforcement again, and never seek to have the charge expunged.",
+      "Bland's family settled a wrongful death lawsuit against Waller County and the Texas Department of Public Safety for $1.9 million in September 2016.",
+      "The Texas Legislature passed the Sandra Bland Act in 2017, mandating that county jails divert people with mental health or substance abuse issues toward treatment and requiring independent investigation of jail deaths \u2014 though the bill was significantly narrowed from its original scope during the legislative process."
+    ],
+    "unknown": [
+      "Whether Bland's death was in fact a suicide, as officially ruled, continues to be disputed by her family and some outside observers, though no official investigation has overturned the medical examiner's finding.",
+      "Whether jail staff followed required cell-check protocols in the hours before Bland's death was examined by the grand jury, which found no felony conduct, but the full internal findings were not comprehensively made public.",
+      "Whether Encinia's conduct during the arrest itself, beyond the specific written misstatement charged as perjury, was ever independently assessed for criminal liability separate from the dropped charge."
+    ],
+    "unanswered": [
+      "Why was perjury \u2014 a charge about a written statement made after the arrest \u2014 the only charge ever brought, when video showed Encinia drawing a weapon and pulling Bland from her vehicle during a stop for a minor traffic violation?",
+      "What jail protocols, if any, were not followed in the three days between Bland's arrest and her death, and were any jail employees ever held accountable?",
+      "How much of the original, broader version of the Sandra Bland Act \u2014 which initially included stronger police accountability provisions \u2014 was ultimately removed before passage, and why?"
+    ],
+    "sources": [
+      {
+        "name": "NBC News \u2014 \u201cSandra Bland Case: Perjury Charge Dropped Against Ex-Trooper Brian Encinia\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/sandra-bland-case-perjury-charge-dropped-against-ex-trooper-brian-n777986",
+        "verified": true
+      },
+      {
+        "name": "The Texas Tribune \u2014 \u201cPerjury charge dropped against trooper who arrested Sandra Bland\u201d",
+        "url": "https://www.texastribune.org/2017/06/28/perjury-charge-dropped-against-trooper-who-arrested-sandra-bland/",
+        "verified": true
+      },
+      {
+        "name": "Community Impact \u2014 \u201cExperts reflect 5 years after Sandra Bland's death in Waller County jail\u201d",
+        "url": "https://communityimpact.com/houston/katy/public-safety/2020/07/23/experts-reflect-5-years-after-sandra-blands-death-in-waller-county-jail/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "terence-crutcher",
+    "caseNumber": "110",
+    "name": "Terence Crutcher",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 40,
+    "gender": "male",
+    "city": "Tulsa",
+    "county": "Tulsa County",
+    "state": "OK",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Terence Crutcher, 40, was shot and killed by Tulsa Police Officer Betty Shelby on September 16, 2016, after she encountered him beside his stalled SUV in the middle of a north Tulsa street. Video from a police helicopter piloted by Shelby's own husband and from officers' body cameras showed Crutcher walking toward his vehicle with his hands visible before Shelby fired; the helicopter pilot could be heard remarking that Crutcher \u201clooks like a bad dude.\u201d Shelby testified she believed Crutcher was reaching into the vehicle for a weapon; no weapon was found. She was charged with first-degree manslaughter and, after nine hours of jury deliberation, acquitted of all charges on May 17, 2017. Crutcher's family called the verdict an injustice; no one has ever been convicted in his death.",
+    "known": [
+      "The encounter, the shooting, and Crutcher's death, per body camera and police helicopter video that was released publicly.",
+      "No weapon was recovered from Crutcher's vehicle or person.",
+      "Tulsa County District Attorney Steve Kunzweiler charged Shelby with first-degree manslaughter less than a week after the shooting.",
+      "A 12-member jury, including three Black jurors, deliberated for nine hours before acquitting Shelby of all charges on May 17, 2017; several jurors were reported crying as the verdict was read.",
+      "Shelby was reinstated to the Tulsa Police Department in an administrative role following her acquittal, then resigned from the department in August 2017.",
+      "An autopsy found PCP in Crutcher's system at the time of the shooting, which the defense raised at trial; the family's attorneys argued this did not justify the shooting regardless."
+    ],
+    "unknown": [
+      "Whether Crutcher was in fact reaching into his vehicle, as Shelby testified, versus simply attempting to comply or retrieve documentation, was disputed by the family's attorneys based on the same video evidence and never resolved beyond the acquittal.",
+      "The full content and reasoning behind the jury's nine hours of deliberation is not public, as with all jury deliberations.",
+      "Whether the Department of Justice's separate federal civil rights review, opened after the state acquittal, reached a final public conclusion has not been consistently reported in available sources."
+    ],
+    "unanswered": [
+      "Why did the jury find Shelby's account of reaching for a weapon credible when body camera video reviewed by outside experts showed Crutcher's hands were not near the vehicle's interior at the moment of the shooting?",
+      "What became of the Department of Justice's civil rights investigation into the shooting, opened following Shelby's state acquittal?",
+      "What internal Tulsa Police Department policy changes, if any, resulted directly from this case regarding response to stalled-vehicle calls?"
+    ],
+    "sources": [
+      {
+        "name": "CNN \u2014 \u201cBetty Shelby: Tulsa officer acquitted in fatal shooting of Terence Crutcher\u201d",
+        "url": "https://www.cnn.com/2017/05/17/us/tulsa-police-shooting-trial",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cJury Acquits Tulsa Officer Betty Shelby in Shooting Death of Terence Crutcher\u201d",
+        "url": "https://nbcnews.com/news/us-news/jury-acquits-tulsa-officer-shooting-death-terence-crutcher-n761206",
+        "verified": true
+      },
+      {
+        "name": "NAACP Legal Defense Fund \u2014 \u201cCase in Point: Four Holes in Officer Betty Shelby's Defense\u201d",
+        "url": "https://www.naacpldf.org/naacp-publications/ldf-blog/case-in-point-four-holes-in-officer-betty-shelbys-defense/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "samuel-dubose",
+    "caseNumber": "111",
+    "name": "Samuel DuBose",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2015,
+    "age": 43,
+    "gender": "male",
+    "city": "Cincinnati",
+    "county": "Hamilton County",
+    "state": "OH",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Samuel DuBose, 43, was shot in the head and killed by University of Cincinnati Police Officer Ray Tensing during a traffic stop on July 19, 2015, after Tensing pulled him over for a missing front license plate. Body camera video showed a brief exchange over DuBose's license before he began to drive away; Tensing testified he was dragged by the car and feared for his life, while the county prosecutor called the shooting \u201casinine\u201d and \u201ctotally unwarranted\u201d when announcing a murder indictment less than two weeks later. Two separate juries, in trials roughly eight months apart, deadlocked and produced mistrials in 2016 and 2017. Hamilton County's prosecutor then dropped the case rather than pursue a third trial, saying jurors had told him he would never get twelve people to agree to convict a police officer. No one has ever been convicted in DuBose's death.",
+    "known": [
+      "The traffic stop, the brief struggle, and the shooting, captured on Tensing's body camera and released publicly.",
+      "Hamilton County Prosecutor Joe Deters indicted Tensing on a murder charge less than two weeks after the shooting, calling his actions \u201casinine\u201d and \u201ctotally unwarranted.\u201d",
+      "A first jury deadlocked after roughly 25 hours of deliberation in November 2016, resulting in a mistrial; prosecutors said that jury had a majority favoring conviction on the lesser voluntary manslaughter charge.",
+      "A second jury deadlocked again after roughly 31 hours of deliberation in June 2017, resulting in a second mistrial.",
+      "In July 2017, Prosecutor Deters formally dropped the murder and voluntary manslaughter charges rather than pursue a third trial; the judge dismissed the case in a manner that permanently barred retrial on those charges, while declining the defense's request to formally acquit Tensing.",
+      "The University of Cincinnati settled a wrongful death lawsuit with DuBose's family for $4.85 million and a tuition-free college scholarship for his children in 2015, and separately disbanded its own police force's traffic-stop authority off campus."
+    ],
+    "unknown": [
+      "Whether Tensing was in fact dragged by DuBose's car and reasonably feared for his life, as he testified, or whether the body camera video showed a shooting that occurred before any such danger existed, as prosecutors argued, was never resolved \u2014 two separate juries considered the same video and could not agree.",
+      "The specific numerical breakdown of each deadlocked jury's votes was reported by prosecutors as favoring conviction after the first trial, but the precise count was not made formally public.",
+      "Whether federal civil rights charges, which the U.S. Attorney's office said it would consider after the state case ended, were ever formally pursued was not confirmed in available public reporting."
+    ],
+    "unanswered": [
+      "Why did two separate juries, reviewing the same body camera footage, each fail to reach a unanimous verdict?",
+      "Did the U.S. Attorney's Office ultimately pursue or decline federal civil rights charges against Tensing after the state case was dismissed?",
+      "What specific reforms did the University of Cincinnati Police Department make to its traffic-stop authority and training as a result of this case?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cJudge Declares Mistrial, Again, In Cincinnati Police Shooting Case\u201d",
+        "url": "https://www.npr.org/sections/thetwo-way/2017/06/23/534117475/judge-declares-mistrial-again-in-cincinnati-police-shooting-case",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cRay Tensing Trial: Mistrial Declared for a Second Time\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/ray-tensing-trial-judge-declares-another-mistrial-killing-samuel-dubose-n775111",
+        "verified": true
+      },
+      {
+        "name": "Essence \u2014 \u201cCharges Dropped Against Ray Tensing Who Shot Sam DuBose\u201d",
+        "url": "https://www.essence.com/news/sam-dubose-tensing-trial/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "keith-lamont-scott",
+    "caseNumber": "112",
+    "name": "Keith Lamont Scott",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 43,
+    "gender": "male",
+    "city": "Charlotte",
+    "county": "Mecklenburg County",
+    "state": "NC",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Keith Lamont Scott, 43, a father of seven, was shot and killed by Charlotte-Mecklenburg Police Officer Brentley Vinson on September 20, 2016, in an apartment complex parking lot. Officers were at the complex to serve a warrant on someone else when they encountered Scott, who has a brain injury, sitting in his SUV; police said body-camera video showed a gun in his hand as he exited the vehicle after repeated orders to drop it, while Scott's wife, who recorded the aftermath on her phone, said he had no gun and was unarmed. A firearm was recovered at the scene with Scott's fingerprints and DNA. After a two-month investigation, Mecklenburg County District Attorney Andrew Murray announced in November 2016 that Vinson \u2014 who is also Black \u2014 had acted lawfully, a conclusion 15 prosecutors in his office reached unanimously. No charges were ever filed against Vinson or any other officer at the scene.",
+    "known": [
+      "The encounter, the shooting, and Scott's death, per police dashcam, body-worn camera, and his wife's cell phone video, all released publicly.",
+      "A handgun, reported stolen out of Gaston County, was recovered at the scene bearing Scott's fingerprints and DNA.",
+      "District Attorney Andrew Murray announced on November 30, 2016 that his office, after unanimous agreement among 15 prosecutors, would not charge Vinson, concluding the shooting was justified based on the totality of the evidence.",
+      "The North Carolina State Bureau of Investigation and the U.S. Department of Justice both separately investigated the shooting alongside the Charlotte-Mecklenburg Police Department's own review.",
+      "Scott's family filed a wrongful death lawsuit against the city and Vinson, alleging officers needlessly escalated an unconfirmed marijuana-possession stop into a fatal confrontation."
+    ],
+    "unknown": [
+      "Whether Scott in fact held the recovered handgun in his hand at the moment he was shot, as police maintained body-camera video showed, or whether he was unarmed and reading a book, as his wife stated, was never resolved by any criminal proceeding since none occurred.",
+      "The family's lawsuit alleged Scott never raised his arms or made any threatening gesture; how this account squares with the DA's conclusion that the shooting was justified was not resolved through litigation before any reported settlement.",
+      "Whether Scott's brain injury, which his family said affected his ability to communicate and comply with commands, was factored into the DA's justification analysis was not detailed in the office's public statements."
+    ],
+    "unanswered": [
+      "Why did the district attorney's office conclude the shooting was justified when the victim's own family disputed the central factual claim \u2014 that Scott was holding a weapon \u2014 underlying that conclusion?",
+      "What became of the wrongful death lawsuit Scott's family filed against the city and Officer Vinson?",
+      "What findings, if any, did the separate North Carolina SBI and DOJ investigations reach, beyond the county DA's own conclusion?"
+    ],
+    "sources": [
+      {
+        "name": "CNN \u2014 \u201cKeith Scott killing: No charges against officer\u201d",
+        "url": "https://www.cnn.com/2016/11/30/us/keith-lamont-scott-case-brentley-vinson",
+        "verified": true
+      },
+      {
+        "name": "ABC News \u2014 \u201cCop Who Shot Keith Lamont Scott 'Acted Lawfully,' DA Says\u201d",
+        "url": "https://abcnews.com/US/cop-shot-keith-lamont-scott-acted-lawfully-da/story?id=43872494",
+        "verified": true
+      },
+      {
+        "name": "NAACP Legal Defense Fund \u2014 \u201cLDF on No Charges for Officer in Death of Keith Lamont Scott\u201d",
+        "url": "https://www.naacpldf.org/press-release/ldf-on-no-charges-for-officer-in-death-of-keith-lamont-scott/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "ezell-ford",
+    "caseNumber": "113",
+    "name": "Ezell Ford",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2014,
+    "age": 25,
+    "gender": "male",
+    "city": "Los Angeles",
+    "county": "Los Angeles County",
+    "state": "CA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Ezell Ford, 25, who his family said had a serious mental illness, was shot and killed by LAPD Officers Sharlton Wampler and Antonio Villegas on August 11, 2014, during a struggle after the officers stopped him while he was walking near his South Los Angeles home. Police said Ford grabbed for Wampler's holstered weapon during the struggle; DNA evidence supported that he was on top of Wampler at the time of the shooting. The Los Angeles Police Commission ruled in June 2015 that Wampler had no legal justification to stop Ford in the first place, making the entire encounter \u2014 and by extension the shooting \u2014 out of department policy. Despite that finding, the Los Angeles County District Attorney's Office announced in January 2017, more than two years after the shooting, that neither officer would face criminal charges, concluding both had acted in lawful self-defense. No officer in Los Angeles County had been criminally charged for an on-duty shooting since 2000, and none was in Ford's case either.",
+    "known": [
+      "The stop, struggle, and shooting, per the LAPD's own investigation and the district attorney's 28-page charging decision report.",
+      "DNA evidence indicated Ford was on top of Officer Wampler and struggling for his holstered weapon at the time of the shooting, per the DA's report.",
+      "The Los Angeles Police Commission ruled in June 2015 that Wampler had no legal basis to stop and pursue Ford, making the stop itself a violation of department policy, and that this violation extended to the use of deadly force that followed; the commission found Villegas's conduct largely within policy, apart from how he drew his weapon.",
+      "The Los Angeles County District Attorney's Office announced on January 24, 2017 that both officers acted lawfully in self-defense and would not be charged, a decision reached despite the Police Commission's contrary policy finding.",
+      "The Los Angeles City Council approved a $1.5 million settlement with Ford's family in February 2017, weeks after the DA's decision.",
+      "Per a 2015 analysis, no Los Angeles County law enforcement officer had faced criminal charges for an on-duty shooting since 2000."
+    ],
+    "unknown": [
+      "How the DA's office reconciled its self-defense finding with the Police Commission's separate, contrary conclusion that the underlying stop \u2014 and by extension the encounter that led to the shooting \u2014 violated department policy has not been fully explained publicly.",
+      "Whether officers were aware of, or had reason to know of, Ford's mental illness at the time they initiated the stop was disputed between the family's account and the department's official record.",
+      "What internal discipline, if any, either officer faced as a result of the Police Commission's out-of-policy finding, separate from the criminal charging decision, was not comprehensively documented in public reporting."
+    ],
+    "unanswered": [
+      "Why did the district attorney's office reach a different conclusion than the city's own police oversight board on whether the underlying stop and shooting were justified?",
+      "Why did the criminal investigation take more than two years to conclude?",
+      "What accounts for the broader pattern the ACLU of Southern California identified \u2014 only one Southern California officer criminally charged for an on-duty shooting since 2000 \u2014 and has that pattern changed since?"
+    ],
+    "sources": [
+      {
+        "name": "CBS News \u2014 \u201cNo charges for 2 LAPD officers in killing of Ezell Ford\u201d",
+        "url": "https://www.cbsnews.com/news/no-charges-for-2-lapd-officers-in-killing-of-ezell-ford/",
+        "verified": true
+      },
+      {
+        "name": "Los Angeles County District Attorney's Office \u2014 official charging decision letter",
+        "url": "https://da.lacounty.gov/sites/default/files/press/012417_District_Attorneys_Office_Declines_to_File_Charges_Against_LAPD_Officers_in_Ezell_Ford_Shooting.pdf",
+        "verified": true
+      },
+      {
+        "name": "ACLU of Southern California \u2014 statement on the DA's decision",
+        "url": "https://www.aclusocal.org/press-releases/aclu-statement-los-angeles-das-refusal-press-charges-against-officers-responsible/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "danroy-henry-jr",
+    "caseNumber": "114",
+    "name": "Danroy Henry Jr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2010,
+    "age": 20,
+    "gender": "male",
+    "city": "Thornwood",
+    "county": "Westchester County",
+    "state": "NY",
+    "caseSeries": null,
+    "dateAdded": "2026-08-27",
+    "summary": "Danroy \u201cDJ\u201d Henry Jr., 20, a Pace University football player, was shot and killed by Pleasantville, New York Police Officer Aaron Hess on October 17, 2010, in a shopping center parking lot after officers responded to a bar disturbance following Pace's homecoming game. Henry was driving away in his car when Hess, on foot, ended up on the hood of the vehicle and fired through the windshield, saying he feared for his life; Henry's family disputed that account, saying Hess ran into the car's path. A Westchester County grand jury found no reasonable cause for an indictment in March 2011. The U.S. Department of Justice separately investigated and announced in 2015 that it would bring no federal civil rights charges. In 2023, more than a decade later, Westchester's District Attorney's office reopened the case as part of an independent review and again concluded there was no legal basis to prosecute. No one has ever been charged in Henry's death.",
+    "known": [
+      "The shooting and Henry's death in the Thornwood shopping center parking lot, per Westchester County and federal investigation records.",
+      "Officer Aaron Hess acknowledged through his attorney that he fired the shots that killed Henry, stating he was on the hood of Henry's moving car and feared for his life.",
+      "A second officer, Ronald Beckley of the Mount Pleasant police, also fired at the vehicle, apparently striking the hood.",
+      "A Westchester County grand jury found no reasonable cause for an indictment in March 2011, under then-District Attorney Janet DiFiore.",
+      "U.S. Attorney Preet Bharara announced in 2015 that the evidence did not meet the exacting standard of criminal intent required for federal civil rights charges, following the DOJ's own investigation.",
+      "In 2023, Westchester District Attorney Miriam Rocah's office conducted an independent review of past police-involved deaths, including Henry's, and again concluded there was no legal basis to bring the case to a new grand jury.",
+      "Henry's family filed a $120 million federal lawsuit against the towns of Mount Pleasant and Pleasantville."
+    ],
+    "unknown": [
+      "Whether Henry's car in fact struck Officer Hess before he fired, as Hess's attorney stated and prosecutors found credible, or whether Hess moved into the car's path, as the family's attorney alleged, was never resolved at trial since no charges were ever filed.",
+      "Witness accounts of the sequence of events differed sharply and were never reconciled through any adversarial court proceeding.",
+      "The specific new evidence or analysis, if any, that Westchester's 2023 independent review considered beyond the original 2011 and 2015 findings has not been made fully public."
+    ],
+    "unanswered": [
+      "Why did three separate reviewing authorities \u2014 a county grand jury, the DOJ, and a reform-era DA's independent re-investigation over a decade later \u2014 each reach the same no-charges conclusion despite the family's persistent and specific factual dispute?",
+      "What became of the Henry family's $120 million federal lawsuit against Mount Pleasant and Pleasantville?",
+      "What prompted Westchester's DA to select Henry's case, alongside Kenneth Chamberlain Sr.'s, for independent re-review in 2023, and what criteria determine which past cases receive that kind of second look?"
+    ],
+    "sources": [
+      {
+        "name": "ABC7 New York \u2014 \u201cProsecutor: No civil rights charges in police shooting of Pace football player\u201d",
+        "url": "https://abc7ny.com/danroy-henry-police-shooting-pleasantville-civil-rights/638887/",
+        "verified": true
+      },
+      {
+        "name": "CBS News \u2014 \u201cDanroy Henry Update: No Indictment in Police Killing of N.Y. College Football Player\u201d",
+        "url": "https://www.cbsnews.com/news/danroy-henry-update-no-indictment-in-police-killing-of-ny-college-football-player/",
+        "verified": true
+      },
+      {
+        "name": "WATD 95.9 FM \u2014 \u201cWestchester DA Says No Charges Will Be Submitted To Grand Jury In Death Of DJ Henry\u201d (2023)",
+        "url": "https://959watd.com/blog/2023/07/westchester-da-says-no-charges-will-be-submitted-to-grand-jury-in-death-of-dj-henry/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
   }
 ]

@@ -128,10 +128,12 @@
       var status = item.getAttribute("data-status");
       var caseType = item.getAttribute("data-case-type");
       var series = item.getAttribute("data-series-flag") === "true";
+      var isNew = item.getAttribute("data-new-case") === "true";
       var matchesQuery = query === "" || text.indexOf(query) !== -1;
       var matchesStatus =
         activeStatus === "all" ||
-        (activeStatus === "series" ? series :
+        (activeStatus === "new" ? isNew :
+         activeStatus === "series" ? series :
          activeStatus === "missing_persons" ? caseType === "missing_persons" :
          activeStatus === status);
       var visible = matchesQuery && matchesStatus;
@@ -410,8 +412,128 @@
         if (panel) panel.classList.add("active");
         if (target === "timeline") renderTimeline();
         if (target === "map") renderMap();
+        if (target === "connections") renderConnections();
       });
     });
+  }
+
+  // ---------------------------------------------------------------------
+  // Case Connections graph — a circular node/edge diagram of documented
+  // relationships between specific cases (a witness, a shared location, a
+  // shared source citing both) plus formal case series (Freeway Phantom,
+  // Silver Dollar Group), drawn from window.__UBCA_CONNECTIONS__. Every
+  // edge here corresponds to something already written into the relevant
+  // case files — this view doesn't assert any new connection, it just
+  // makes the ones already documented visible and clickable. Deliberately
+  // a plain deterministic circular layout (no force-directed physics, no
+  // graph library) to match the rest of the site's dependency-free JS.
+  function renderConnections() {
+    var host = document.getElementById("view-connections");
+    if (!host || host.getAttribute("data-built") === "true") return;
+    var data = window.__UBCA_CONNECTIONS__;
+    if (!data) { host.innerHTML = '<p class="no-results">Connections data unavailable.</p>'; return; }
+
+    // Build the node list: one hub per series with 2+ members, plus every
+    // case that appears either in a series or a direct link. Series
+    // members are ordered right after their hub so the circle groups
+    // related nodes together instead of interleaving them randomly.
+    var nodes = [];
+    var nodeIndex = {};
+    function addNode(id, label, kind, href) {
+      if (nodeIndex.hasOwnProperty(id)) return;
+      nodeIndex[id] = nodes.length;
+      nodes.push({ id: id, label: label, kind: kind, href: href });
+    }
+    var seriesNames = Object.keys(data.series || {}).filter(function (name) {
+      return (data.series[name] || []).length >= 2;
+    });
+    seriesNames.sort();
+    var edges = [];
+    seriesNames.forEach(function (name) {
+      var hubId = "series:" + name;
+      var slug = (data.seriesSlugs || {})[name];
+      addNode(hubId, name, "series", slug ? slug + ".html" : null);
+      (data.series[name] || []).forEach(function (caseId) {
+        var c = caseById[caseId];
+        addNode(caseId, c ? c.name : caseId, "case", caseId + ".html");
+        edges.push({ a: hubId, b: caseId, label: name + " \u2014 documented case series" });
+      });
+    });
+    (data.links || []).forEach(function (link) {
+      var ca = caseById[link.a], cb = caseById[link.b];
+      addNode(link.a, ca ? ca.name : link.a, "case", link.a + ".html");
+      addNode(link.b, cb ? cb.name : link.b, "case", link.b + ".html");
+      edges.push({ a: link.a, b: link.b, label: link.label });
+    });
+
+    if (!nodes.length) {
+      host.innerHTML = '<p class="no-results">No documented connections yet.</p>';
+      host.setAttribute("data-built", "true");
+      return;
+    }
+
+    var size = 640, cx = size / 2, cy = size / 2, r = size / 2 - 90;
+    nodes.forEach(function (n, i) {
+      var angle = (i / nodes.length) * Math.PI * 2 - Math.PI / 2;
+      n.x = cx + r * Math.cos(angle);
+      n.y = cy + r * Math.sin(angle);
+    });
+
+    function truncate(s, n) { return s && s.length > n ? s.slice(0, n - 1) + "\u2026" : s; }
+
+    var edgeSvg = edges.map(function (e) {
+      var a = nodes[nodeIndex[e.a]], b = nodes[nodeIndex[e.b]];
+      if (!a || !b) return "";
+      return '<line class="conn-edge" x1="' + a.x + '" y1="' + a.y + '" x2="' + b.x + '" y2="' + b.y +
+        '" data-edge-label="' + escAttr(e.label) + '"></line>';
+    }).join("");
+
+    var nodeSvg = nodes.map(function (n) {
+      var isSeries = n.kind === "series";
+      var radius = isSeries ? 9 : 6;
+      return '<g class="conn-node conn-node-' + n.kind + '" data-node-id="' + escAttr(n.id) + '" ' +
+        'data-href="' + escAttr(n.href || "") + '" tabindex="0" role="link" aria-label="' + escAttr(n.label) + '">' +
+        '<circle cx="' + n.x + '" cy="' + n.y + '" r="' + radius + '"></circle>' +
+        '<text x="' + n.x + '" y="' + (n.y + (n.y > cy ? 18 : -12)) + '" text-anchor="middle">' +
+        escHtml(truncate(n.label, isSeries ? 22 : 16)) + '</text>' +
+        '</g>';
+    }).join("");
+
+    host.innerHTML =
+      '<p class="conn-intro">Documented relationships between cases in this archive \u2014 a shared ' +
+      'witness, a shared location, a shared source, or a formal case series. Every connection here is ' +
+      'already written into the relevant case files; this is just a way to see them. Tap a node to open ' +
+      'that case, or a line to see how the two are connected.</p>' +
+      '<div class="conn-wrap"><svg class="conn-svg" viewBox="0 0 ' + size + ' ' + size + '" role="img" ' +
+      'aria-label="Graph of connected cases">' + edgeSvg + nodeSvg + '</svg>' +
+      '<div class="conn-tooltip" id="conn-tooltip" hidden></div></div>';
+    host.setAttribute("data-built", "true");
+
+    var tooltip = document.getElementById("conn-tooltip");
+    host.querySelectorAll(".conn-edge").forEach(function (edge) {
+      edge.addEventListener("mouseenter", function () { showTooltip(edge.getAttribute("data-edge-label")); });
+      edge.addEventListener("mouseleave", hideTooltip);
+      edge.addEventListener("click", function () { showTooltip(edge.getAttribute("data-edge-label")); });
+    });
+    function showTooltip(text) {
+      if (!tooltip) return;
+      tooltip.textContent = text;
+      tooltip.hidden = false;
+    }
+    function hideTooltip() { if (tooltip) tooltip.hidden = true; }
+
+    host.querySelectorAll(".conn-node").forEach(function (node) {
+      var href = node.getAttribute("data-href");
+      if (!href) return;
+      function go() { window.location.href = href; }
+      node.addEventListener("click", go);
+      node.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+    });
+  }
+
+  function escAttr(s) { return String(s || "").replace(/"/g, "&quot;"); }
+  function escHtml(s) {
+    return String(s || "").replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; });
   }
 
   function renderTimeline() {
