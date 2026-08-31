@@ -265,10 +265,31 @@
   // ---------------------------------------------------------------------
   // Investigation board: drag cards, pan canvas, zoom, reset
   // ---------------------------------------------------------------------
+  // Investigation board: drag cards, pan canvas, zoom, reset, and
+  // visitor-added "your own note" cards (a distinct color, saved only in
+  // this browser via localStorage — same private, no-account model as the
+  // Research Notes panel, just rendered directly on the board instead of
+  // in a list).
+  var BOARD_NOTES_KEY = "ubca_board_user_cards"; // { [caseId]: [{id, text, x, y}] }
+  function readBoardNotes(caseId) {
+    try {
+      var all = JSON.parse(localStorage.getItem(BOARD_NOTES_KEY) || "{}");
+      return all[caseId] || [];
+    } catch (e) { return []; }
+  }
+  function writeBoardNotes(caseId, list) {
+    try {
+      var all = JSON.parse(localStorage.getItem(BOARD_NOTES_KEY) || "{}");
+      if (list.length) all[caseId] = list; else delete all[caseId];
+      localStorage.setItem(BOARD_NOTES_KEY, JSON.stringify(all));
+    } catch (e) { /* storage unavailable — fail silently */ }
+  }
+
   function initBoard() {
     var viewport = document.querySelector(".board-viewport");
     var canvas = document.querySelector(".board-canvas");
     if (!viewport || !canvas) return;
+    var caseId = canvas.getAttribute("data-board-canvas");
     var cards = Array.prototype.slice.call(canvas.querySelectorAll(".board-card"));
     var svg = canvas.querySelector("svg.connectors");
     var hub = canvas.querySelector(".board-card.hub");
@@ -286,25 +307,29 @@
     // one landed, then freeze those exact coordinates — this avoids the
     // uneven gaps/overlaps a fixed row-height guess would produce when card
     // content (e.g. a long Sources list) is taller than its neighbors.
+    // User-added note cards already have a saved (x, y) and are excluded
+    // from this auto-flow pass so dragging them doesn't get undone by a
+    // later relayout (e.g. on window resize).
     function layoutCards() {
+      var autoCards = cards.filter(function (c) { return !c.classList.contains("user-card"); });
       canvas.style.display = "grid";
       canvas.style.gridTemplateColumns = "repeat(auto-fill, 250px)";
       canvas.style.gap = "20px";
       canvas.style.paddingBottom = "32px";
-      cards.forEach(function (card) {
+      autoCards.forEach(function (card) {
         card.style.position = "static";
         card.style.left = "";
         card.style.top = "";
       });
       requestAnimationFrame(function () {
         var canvasRect = canvas.getBoundingClientRect();
-        cards.forEach(function (card) {
+        autoCards.forEach(function (card) {
           var r = card.getBoundingClientRect();
           card.style.left = (r.left - canvasRect.left) + "px";
           card.style.top = (r.top - canvasRect.top) + "px";
         });
         canvas.style.display = "block";
-        cards.forEach(function (card) { card.style.position = "absolute"; });
+        autoCards.forEach(function (card) { card.style.position = "absolute"; });
         var maxBottom = 0;
         cards.forEach(function (card) {
           maxBottom = Math.max(maxBottom, card.offsetTop + card.offsetHeight);
@@ -332,14 +357,16 @@
         var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute("x1", hc.x); line.setAttribute("y1", hc.y);
         line.setAttribute("x2", cc.x); line.setAttribute("y2", cc.y);
+        if (card.classList.contains("user-card")) line.setAttribute("class", "user-connector");
         svg.appendChild(line);
       });
     }
 
     // Drag individual cards
-    cards.forEach(function (card) {
+    function attachDrag(card) {
       var dragging = false, startX, startY, origLeft, origTop;
       card.addEventListener("pointerdown", function (e) {
+        if (e.target.closest("textarea, button")) return;
         dragging = true;
         card.setPointerCapture(e.pointerId);
         startX = e.clientX; startY = e.clientY;
@@ -354,10 +381,90 @@
         card.style.top = (origTop + dy) + "px";
         drawConnectors();
       });
-      function endDrag() { dragging = false; }
+      function endDrag() {
+        if (!dragging) return;
+        dragging = false;
+        if (card.classList.contains("user-card")) saveUserCards();
+      }
       card.addEventListener("pointerup", endDrag);
       card.addEventListener("pointercancel", endDrag);
-    });
+    }
+    cards.forEach(attachDrag);
+
+    // ---- Visitor-added note cards -----------------------------------
+    function saveUserCards() {
+      if (!caseId) return;
+      var list = cards.filter(function (c) { return c.classList.contains("user-card"); }).map(function (c) {
+        return {
+          id: c.getAttribute("data-user-card-id"),
+          text: c.querySelector("textarea") ? c.querySelector("textarea").value : "",
+          x: c.offsetLeft, y: c.offsetTop
+        };
+      });
+      writeBoardNotes(caseId, list);
+    }
+
+    function buildUserCard(note) {
+      var card = document.createElement("div");
+      card.className = "board-card user-card";
+      card.setAttribute("data-user-card-id", note.id);
+      card.style.position = "absolute";
+      card.style.left = note.x + "px";
+      card.style.top = note.y + "px";
+      card.innerHTML =
+        '<span class="bc-label">Your Note</span>' +
+        '<button type="button" class="user-card-remove" aria-label="Remove this note">\u00d7</button>' +
+        '<textarea placeholder="Add your own observation\u2026"></textarea>';
+      var textarea = card.querySelector("textarea");
+      textarea.value = note.text || "";
+      var timer = null;
+      textarea.addEventListener("input", function () {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(saveUserCards, 500);
+      });
+      card.querySelector(".user-card-remove").addEventListener("click", function () {
+        cards = cards.filter(function (c) { return c !== card; });
+        card.remove();
+        saveUserCards();
+        drawConnectors();
+      });
+      attachDrag(card);
+      return card;
+    }
+
+    function addUserCard(text, x, y) {
+      var note = { id: "u" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), text: text || "", x: x, y: y };
+      var card = buildUserCard(note);
+      canvas.appendChild(card);
+      cards.push(card);
+      saveUserCards();
+      drawConnectors();
+      return card;
+    }
+
+    // Restore any previously saved user cards for this case.
+    if (caseId) {
+      readBoardNotes(caseId).forEach(function (note) {
+        var card = buildUserCard(note);
+        canvas.appendChild(card);
+        cards.push(card);
+      });
+    }
+
+    var addBtn = document.querySelector("[data-add-board-note]");
+    if (addBtn) {
+      addBtn.addEventListener("click", function () {
+        var vp = viewport.getBoundingClientRect();
+        // Drop the new card near the middle of the visible viewport,
+        // converted into canvas coordinates (accounting for current pan/zoom).
+        var x = (vp.width / 2 - panX) / scale - 110;
+        var y = (vp.height / 2 - panY) / scale - 40;
+        var card = addUserCard("", Math.max(0, x), Math.max(0, y));
+        drawConnectors();
+        var ta = card.querySelector("textarea");
+        if (ta) ta.focus();
+      });
+    }
 
     // Pan canvas when dragging empty viewport space
     var panning = false, panStartX, panStartY, startPanX, startPanY;
@@ -375,6 +482,38 @@
       applyTransform();
     });
     window.addEventListener("pointerup", function () { panning = false; viewport.style.cursor = ""; });
+
+    // Two-finger pinch drives our OWN zoom instead of the phone's native
+    // page zoom. Without this, a pinch gesture over the board zooms the
+    // whole page (including the toolbar) via the browser itself — a
+    // separate system from ours — and on some phones that can leave a
+    // visitor zoomed in with no way back, since our "− ZOOM" button only
+    // resets our canvas scale, not the browser's own zoom level. Handling
+    // touch pinch here ourselves means there's only ever one zoom system,
+    // and it's always reachable through the toolbar.
+    var pinchStartDist = null, pinchStartScale = 1;
+    function touchDist(t0, t1) {
+      var dx = t0.clientX - t1.clientX, dy = t0.clientY - t1.clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+    viewport.addEventListener("touchstart", function (e) {
+      if (e.touches.length === 2) {
+        pinchStartDist = touchDist(e.touches[0], e.touches[1]);
+        pinchStartScale = scale;
+      }
+    }, { passive: true });
+    viewport.addEventListener("touchmove", function (e) {
+      if (e.touches.length === 2) {
+        e.preventDefault(); // block native page pinch-zoom — we're handling it
+        if (pinchStartDist) {
+          var dist = touchDist(e.touches[0], e.touches[1]);
+          setScale(pinchStartScale * (dist / pinchStartDist));
+        }
+      }
+    }, { passive: false });
+    viewport.addEventListener("touchend", function (e) {
+      if (e.touches.length < 2) pinchStartDist = null;
+    }, { passive: true });
 
     // Zoom controls
     var zoomIn = document.querySelector("[data-board-zoom-in]");
@@ -744,6 +883,60 @@
       });
   }
 
+  // "Today" visit counter — same free service, same hit-per-pageview
+  // approach, but the key itself is stamped with the current date
+  // (e.g. ...-visits-2026-08-27). CountAPI has no built-in daily reset, so
+  // this is the standard workaround: a key that's never been hit before
+  // starts at 0, and since a new date makes a brand-new key, the count
+  // effectively resets itself at midnight with no cron job or backend
+  // needed. "Today" is each visitor's own local date, not a single global
+  // cutover — a visitor's browser decides what day it is for its own
+  // requests, so this is an approximation, not a precise UTC rollover.
+  function initDailyVisitCounter() {
+    var el = document.getElementById("site-visit-today-count");
+    if (!el) return;
+    var d = new Date();
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    var dateKey = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+    fetch("https://countapi.mileshilliard.com/api/v1/hit/unsolved-black-cases-archive-visits-" + dateKey)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var n = data && (data.value !== undefined ? data.value : data.count);
+        if (typeof n === "number") el.textContent = n.toLocaleString();
+        else if (el.parentElement) el.parentElement.style.display = "none";
+      })
+      .catch(function () {
+        if (el.parentElement) el.parentElement.style.display = "none";
+      });
+  }
+
+  // "Case of the Week" — homepage rotation, computed client-side so it
+  // advances every real week with no rebuild or backend needed. The week
+  // number is days-since-a-fixed-Monday-epoch divided by 7, modulo the
+  // total case count, so every case eventually gets a turn and the whole
+  // cycle repeats once every ~N weeks (N = case count). Deliberately not
+  // per-visit-random — the goal is the same case all week for everyone,
+  // so a visitor has a reason to check back next week for a new one.
+  function initCaseOfWeek() {
+    var container = document.getElementById("case-of-week");
+    if (!container) return;
+    var cases = window.__UBCA_CASES__ || [];
+    if (!cases.length) return;
+    var EPOCH = Date.UTC(2020, 0, 6); // an arbitrary fixed Monday
+    var weekIndex = Math.floor((Date.now() - EPOCH) / (7 * 24 * 60 * 60 * 1000));
+    var idx = ((weekIndex % cases.length) + cases.length) % cases.length;
+    var c = cases[idx];
+    var loc = [c.city, c.state].filter(Boolean).join(", ");
+    var locYear = [loc, c.year].filter(Boolean).join(" \u2014 ");
+    container.innerHTML =
+      '<div class="fc-body">' +
+      '<span class="fc-eyebrow">Case of the Week</span>' +
+      "<h2>" + escHtml(c.name) + "</h2>" +
+      '<div class="fc-meta"><span>' + escHtml(locYear) + "</span></div>" +
+      '<a class="fc-link" href="cases/' + c.id + '.html">Read the Case \u2192</a>' +
+      "</div>";
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initBoard();
     initArchiveViews();
@@ -751,5 +944,7 @@
     // Index's Map view) — it's a no-op if #home-map isn't on the page.
     renderMap("home-map");
     initVisitCounter();
+    initDailyVisitCounter();
+    initCaseOfWeek();
   });
 })();
