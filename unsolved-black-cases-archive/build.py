@@ -1158,6 +1158,11 @@ CASES = [
     dict(id="wade-hampton", caseNumber="046", name="Wade Hampton",
          status="unsolved", caseType="homicide", year=1917, age=50, gender="male",
          city="Rock Springs", county="Sweetwater", state="WY", caseSeries=None,
+         victimPhotos=[
+             {"url": "https://www.wyohistory.org/sites/default/files/styles/medium/public/hampton2.jpg",
+              "caption": "Wade Hampton",
+              "credit": "Montana State Prison intake photo, 1916\u20131917, via the Montana Memory Project (as reproduced by WyoHistory.org) \u2014 public domain by age"},
+         ],
          summary="Wade Hampton, 50, was taken from his cell at the Rock Springs city jail at gunpoint by "
                  "three armed men shortly after midnight on December 12, 1917, and shot to death within the "
                  "hour after an attempt to hang him from a railroad bridge failed. Hampton had been arrested "
@@ -6806,6 +6811,231 @@ CASES = [
                             "https://indianapolisrecorder.com/2020-year-in-review-police-shooting-of-dreasjon-reed-brought-protests-but-no-charges/", True),
                         src("TheGrio \u2014 \u201cIndiana grand jury decides no charges in fatal shooting of Sean Reed\u201d",
                             "https://thegrio.com/2020/11/10/indiana-grand-jury-no-charges-shooting-of-sean-reed/", True)]),
+    dict(id="kajuan-raye", caseNumber="180", name="Kajuan Raye",
+         status="unsolved", caseType="homicide", year=2016, age=19, gender="male",
+         city="Chicago", county="Cook", state="IL", caseSeries=None,
+         dateAdded="2026-08-31",
+         summary="Kajuan Raye, 19, was shot in the back and killed by Chicago Police Sergeant John Poulos "
+                 "during a foot chase in the Englewood neighborhood on November 23, 2016, after Poulos "
+                 "believed Raye matched the description of a battery suspect. Poulos said Raye twice pointed a "
+                 "gun at him during the chase; no weapon was found at the scene despite an extensive search, "
+                 "and released surveillance video does not show Raye turning toward Poulos with anything in "
+                 "his hand. Three months later, a resident reported finding a handgun in the bushes near where "
+                 "Raye was shot. Chicago's Civilian Office of Police Accountability ruled the shooting "
+                 "justified in 2019, concluding circumstantial and social media evidence made it \u201clikely "
+                 "and reasonable\u201d the gun was Raye's. No criminal charges were ever filed. It was the "
+                 "second time Poulos had fatally shot someone; he had also killed an unarmed man in 2013 and "
+                 "was cleared both times. No one has ever been criminally charged in Raye's death.",
+         known=["The foot chase, the shooting, and Raye's death from a gunshot wound to the back, per the "
+                "Independent Police Review Authority's released surveillance video and the Cook County Medical "
+                "Examiner's findings.",
+                "No gun was found at the scene despite an extensive search on the night of the shooting; a "
+                "resident reported finding a handgun in bushes near the location roughly three months later.",
+                "The released surveillance footage does not show Poulos firing or show Raye turning toward him "
+                "with a weapon, per CBS Chicago's reporting on the video.",
+                "The Civilian Office of Police Accountability concluded in a report made public in 2019 that a "
+                "combination of circumstantial, physical, testimonial, and social media evidence made it "
+                "\u201clikely and reasonable\u201d the recovered gun was in Raye's possession at the time of "
+                "the shooting, and ruled the shooting justified; no criminal charges were ever filed against "
+                "Poulos.",
+                "Poulos had fatally shot another man, 28-year-old Rickey Rozelle, in 2013 while off-duty; that "
+                "shooting was also ruled justified despite no weapon being found on or near Rozelle.",
+                "Raye's mother, Karonisha Ramsey, filed a federal civil rights lawsuit; in March 2020 a federal "
+                "jury found Poulos liable for battery and awarded the family just over $1 million, while "
+                "separately finding he had not used excessive force \u2014 a split verdict that resulted in "
+                "financial liability without a finding of excessive force.",
+                "Poulos was later promoted and, as of 2023 reporting, was running for Cook County judge."],
+         unknown=["Whether the gun found three months later in the bushes was in fact Raye's, and whether he "
+                  "pointed it at Poulos as claimed, was disputed by the family's attorney, who called the "
+                  "circumstances \u201cbeyond shady,\u201d and was never resolved by any criminal proceeding "
+                  "since none was brought.",
+                  "How a federal civil jury could find Poulos liable for battery while simultaneously finding "
+                  "he had not used excessive force has not been fully reconciled in public reporting on the "
+                  "verdict.",
+                  "The specific internal review, if any, given to the pattern of Poulos's two fatal shootings "
+                  "and their identical no-weapon-found circumstances has not been made comprehensively public."],
+         unanswered=["Why did it take three months for a gun linked to Raye to surface, and why does the "
+                     "released video not show him turning toward Poulos with anything in his hand?",
+                     "How should the public understand a jury verdict that found an officer liable for battery "
+                     "but not excessive force in the same shooting?",
+                     "Why was a pattern of two fatal shootings with no weapon initially found not sufficient "
+                     "to trigger a deeper departmental review of Poulos's conduct?"],
+         extraSources=[src("Chicago Sun-Times \u2014 \u201cLawyer rejects COPA finding that 2016 fatal shooting of Kajuan Raye was justified\u201d",
+                            "https://chicago.suntimes.com/2019/8/1/20750553/attorney-kajuan-raye-rejects-copa-finding-2016-shooting-justified", True),
+                        src("CBS News Chicago \u2014 \u201cJury Awards Family Of Kajuan Raye $1 Million; Teen Was Fatally Shot By Chicago Police Sgt. John Poulos\u201d",
+                            "https://www.cbsnews.com/chicago/news/kajuan-raye-john-poulos-verdict-shooting/", True),
+                        src("Chicago Sun-Times \u2014 \u201cJohn Poulos, Chicago cop whose fatal shootings of 2 men led to City Hall payouts, now running for Cook County judge\u201d",
+                            "https://chicago.suntimes.com/2023/12/8/23992013/john-poulos-judge-rickey-rozelle-kajuan-raye-payouts-chicago-police-department", True)]),
+    dict(id="walter-wallace-jr", caseNumber="181", name="Walter Wallace Jr.",
+         status="unsolved", caseType="homicide", year=2020, age=27, gender="male",
+         city="Philadelphia", county="Philadelphia", state="PA", caseSeries=None,
+         dateAdded="2026-08-31",
+         summary="Walter Wallace Jr., 27, a father with bipolar disorder, was shot 14 times and killed by "
+                 "Philadelphia Police Officers Sean Matarazzo and Thomas Munz outside his family's Cobbs Creek "
+                 "home on October 26, 2020, less than a minute after they arrived. His family had called 911 "
+                 "seeking an ambulance during a mental health crisis; officers instead confronted him with guns "
+                 "drawn as he held a knife, and one was heard on body camera telling the other \u201cshoot "
+                 "him\u201d roughly six seconds before both fired. His mother tried to position herself between "
+                 "her son and the officers while pleading with them not to shoot. District Attorney Larry "
+                 "Krasner personally led the investigation but never filed criminal charges against either "
+                 "officer. The city settled a wrongful death lawsuit with the family for $2.5 million in 2021. "
+                 "Wallace's own family did not call for murder charges, saying instead that officers lacked the "
+                 "training and less-lethal tools \u2014 neither carried a Taser \u2014 to handle a mental health "
+                 "crisis without killing him. No one has ever been charged in Wallace's death.",
+         known=["The 911 calls, the confrontation, and the shooting, per body-worn camera footage and 911 "
+                "recordings the city released publicly, and District Attorney Larry Krasner's own public "
+                "statements.",
+                "Officers fired a total of 14 rounds after telling Wallace to drop the knife 23 times, per "
+                "Krasner's account; body camera audio captured one officer saying \u201cshoot him\u201d "
+                "roughly six seconds before both opened fire.",
+                "Neither Matarazzo nor Munz carried a Taser; Philadelphia had roughly 2,300 Tasers for about "
+                "4,500 patrol officers at the time, department officials said.",
+                "Krasner announced he was personally leading the investigation rather than relying solely on "
+                "the police department's own review, and apologized publicly, saying \u201cgovernment "
+                "failed\u201d when Wallace was killed within a minute of officers' arrival.",
+                "No criminal charges were ever filed against either officer; both were placed on restricted or "
+                "inactive duty pending the investigation.",
+                "The Wallace family's civil attorney explicitly stated the family was not seeking murder "
+                "charges, instead calling for better crisis-intervention training and less-lethal equipment "
+                "for Philadelphia police.",
+                "The City of Philadelphia settled a wrongful death lawsuit with Wallace's family for $2.5 "
+                "million in October 2021.",
+                "Officer Thomas Munz died in an unrelated off-duty motorcycle crash in May 2022; a "
+                "department spokesperson confirmed at the time that he had never been charged in the "
+                "shooting."],
+         unknown=["Whether the officers had any less-lethal alternative genuinely available to them in the "
+                  "roughly one minute between arrival and the shooting, given neither carried a Taser, was "
+                  "raised by the family's attorney but never tested at any criminal trial.",
+                  "The specific reasoning behind Krasner's ultimate decision not to file charges, despite his "
+                  "own public apology characterizing the outcome as a government failure, was not detailed in "
+                  "a formal public charging memo comparable to those issued in some other cities' declined "
+                  "prosecutions.",
+                  "Whether Wallace's documented bipolar disorder and prior mental health treatment history was "
+                  "communicated to the responding officers before they arrived has been disputed in various "
+                  "accounts of the 911 call content."],
+         unanswered=["Why did the district attorney publicly apologize for a \u201cgovernment failure\u201d "
+                     "in Wallace's death while ultimately declining to file any criminal charges?",
+                     "Why were the responding officers not equipped with Tasers, given the department had "
+                     "committed years earlier to equipping all patrol officers with them?",
+                     "What specific mental-health-response reforms has the Philadelphia Police Department "
+                     "implemented since Wallace's death, and how have they been evaluated for effectiveness?"],
+         extraSources=[src("The Philadelphia Inquirer \u2014 \u201cWalter Wallace Jr., 27, a \u2018family man\u2019 with many mental health crises and encounters with police\u201d",
+                            "https://www.inquirer.com/news/walter-wallace-jr-philadelphia-mental-health-20201027.html", True),
+                        src("The Philadelphia Inquirer \u2014 \u201cPhilly to pay $2.5 million to Walter Wallace Jr.'s family to settle claims over his killing by police\u201d",
+                            "https://www.inquirer.com/news/walter-wallace-death-police-shooting-philadelphia-lawsuit-settlement-20211028.html", True),
+                        src("WHYY \u2014 \u201c4 Black men killed by Philly police and the officers who haven't yet faced a jury\u201d",
+                            "https://whyy.org/articles/4-black-men-killed-by-philly-police-and-the-officers-who-havent-yet-faced-a-jury/", True)]),
+    dict(id="byron-williams", caseNumber="182", name="Byron Williams",
+         status="unsolved", caseType="homicide", year=2019, age=50, gender="male",
+         city="Las Vegas", county="Clark", state="NV", caseSeries=None,
+         dateAdded="2026-08-31",
+         summary="Byron Williams, 50, died on September 5, 2019, after Las Vegas Metropolitan Police Officers "
+                 "Patrick Campbell and Benjamin Vasquez stopped him for riding his bicycle without a safety "
+                 "light near Martin Luther King Boulevard, chased him after he fled, and restrained him "
+                 "face-down on the ground with a knee on his back. Body camera footage showed Williams saying "
+                 "\u201cI can't breathe\u201d 24 times while handcuffed; when he told officers he couldn't "
+                 "breathe, one replied, \u201cbecause you're f---ing tired from running.\u201d He went limp and "
+                 "died after being transported. The Clark County Coroner's Office ruled his death a homicide, "
+                 "citing prone restraint as a contributing condition alongside methamphetamine use and "
+                 "pre-existing heart and lung disease. District Attorney Steve Wolfson declined to file "
+                 "charges against any officer in 2020. Two officers were disciplined internally, and both "
+                 "later returned to active duty. No one has ever been criminally charged in Williams's death.",
+         known=["The bicycle stop, the chase, and the restraint, per Las Vegas Metropolitan Police body camera "
+                "footage released publicly and the Clark County Coroner's Office ruling.",
+                "Williams said \u201cI can't breathe\u201d 24 times while handcuffed face-down under an "
+                "officer's knee, per body camera audio; an officer responded that he was tired from running "
+                "rather than summoning medical help at that point.",
+                "The Clark County Coroner's Office ruled the death a homicide on June 18, 2020, citing "
+                "methamphetamine overdose as the primary cause with prone restraint, hypertensive and "
+                "atherosclerotic cardiovascular disease, pulmonary fibrosis, and granulomatous lung disease as "
+                "contributing conditions.",
+                "District Attorney Steve Wolfson's office declined to file criminal charges against any "
+                "officer in 2020, a decision the family's attorneys criticized as lacking transparency.",
+                "Officers Campbell and Vasquez were placed on administrative leave immediately after the "
+                "incident but returned to active duty by November 2019; a Las Vegas Review-Journal "
+                "investigation later confirmed some internal discipline was issued, though the department did "
+                "not disclose its specifics.",
+                "Williams's family, represented by civil rights attorney Ben Crump, filed a federal civil "
+                "rights lawsuit in July 2021 against the officers, the sheriff, and Clark County; a federal "
+                "judge in 2024 allowed excessive force and battery claims to proceed to trial, rejecting "
+                "qualified immunity for the officers' handcuffing conduct specifically, while ruling in the "
+                "officers' favor on the claim that they disregarded his medical needs."],
+         unknown=["Whether the officers' restraint was itself a substantial cause of Williams's death, as the "
+                  "coroner's contributing-conditions finding suggested, or whether his underlying health "
+                  "conditions and drug use were the dominant cause, as the officers argued, was never resolved "
+                  "at any criminal trial since none was brought.",
+                  "The specific internal discipline given to the officers involved has not been fully "
+                  "disclosed by the department, beyond confirmation that some form of discipline occurred.",
+                  "Why officers did not immediately summon medical assistance when Williams first said he "
+                  "couldn't breathe, rather than after he went limp, has not been fully addressed in any "
+                  "official public accounting."],
+         unanswered=["Why did the district attorney decline to file charges given the coroner's own homicide "
+                     "ruling and body camera audio capturing Williams's repeated distress?",
+                     "What specific internal discipline did the involved officers receive, and why has the "
+                     "department not disclosed those details publicly?",
+                     "What became of the federal civil rights lawsuit's excessive force and battery claims "
+                     "after they were allowed to proceed to trial in 2024?"],
+         extraSources=[src("Las Vegas Review-Journal \u2014 \u201cByron Williams' death in Las Vegas police custody ruled homicide\u201d",
+                            "https://www.reviewjournal.com/crime/homicides/mans-death-in-las-vegas-police-custody-ruled-homicide-1872404/", True),
+                        src("Nevada Current \u2014 \u201cMetro sued in federal court over death of Byron Williams\u201d",
+                            "https://nevadacurrent.com/2021/07/16/metro-sued-in-federal-court-over-death-of-byron-williams/", True),
+                        src("Courthouse News Service \u2014 \u201cExcessive force claims survive in case of unarmed Black man killed by Las Vegas cops\u201d",
+                            "https://www.courthousenews.com/excessive-force-claims-survive-in-case-of-unarmed-black-man-killed-by-las-vegas-cops/", True)]),
+    dict(id="michael-dean", caseNumber="183", name="Michael Dean",
+         status="unsolved", caseType="homicide", year=2019, age=32, gender="male",
+         city="Temple", county="Bell", state="TX", caseSeries=None,
+         dateAdded="2026-08-31",
+         summary="Michael Dean, 32, a father of three, was shot in the head and killed by Temple, Texas Police "
+                 "Officer Carmen DeCruz during a traffic stop on December 2, 2019, after DeCruz pursued him for "
+                 "speeding. According to the arrest affidavit, Dean eventually stopped his car; DeCruz "
+                 "approached with his gun drawn and, reaching into the vehicle to grab the keys from the "
+                 "ignition, pulled the trigger. Dean was unarmed. DeCruz was charged with second-degree "
+                 "manslaughter and criminally negligent homicide. After a roughly two-week trial in February "
+                 "2023, a Bell County jury deliberated about two hours before acquitting DeCruz of both "
+                 "charges; his attorney argued Dean, who was legally intoxicated at .2 blood alcohol content, "
+                 "\u201ccaused his own death\u201d by resisting and touching the gun. Dean's family disputes "
+                 "that account. No one has ever been convicted in Dean's death.",
+         known=["The traffic stop, the pursuit, and the shooting, per the arrest affidavit and body camera "
+                "footage played at DeCruz's 2023 trial.",
+                "DeCruz reached into Dean's vehicle from the passenger side with his gun drawn and his finger "
+                "on the trigger to remove the keys from the ignition, and fired while doing so, per the "
+                "arrest affidavit.",
+                "Dean's blood alcohol content was .2 \u2014 double the legal limit \u2014 at the time of the "
+                "stop, per Dallas County Medical Examiner testimony at trial.",
+                "A Temple Police commander testified at trial that reaching into a vehicle with a weapon drawn "
+                "is not a technique the department recommends, because it endangers both the officer and the "
+                "person inside.",
+                "DeCruz did not testify in his own defense; the defense rested its case after the "
+                "prosecution's presentation.",
+                "A Bell County jury acquitted DeCruz of both second-degree manslaughter and criminally "
+                "negligent homicide on February 7, 2023, after roughly two hours of deliberation.",
+                "Dean's family filed a $10 million federal civil rights lawsuit against DeCruz and the City of "
+                "Temple in November 2021, alleging inadequate training and a pattern of excessive force "
+                "against Black residents; the city moved to dismiss that suit in September 2024.",
+                "The city has withheld release of DeCruz's body camera footage, citing ongoing civil "
+                "litigation and Texas Occupations Code provisions on peace officer records."],
+         unknown=["Whether Dean in fact touched or grabbed DeCruz's weapon, as the defense argued caused the "
+                  "gun to discharge, or whether DeCruz's own act of reaching in with his finger on the trigger "
+                  "was the cause, was the central dispute at trial and was resolved only by the jury's "
+                  "acquittal, not by any independent finding of fact.",
+                  "The full contents of DeCruz's body camera footage, which the defense itself called \u201cthe "
+                  "most important part of the evidence\u201d during closing arguments, have never been "
+                  "publicly released.",
+                  "The specific reasoning behind the jury's roughly two-hour deliberation on two separate "
+                  "charges is not public, as with all jury deliberations."],
+         unanswered=["Why has the City of Temple never publicly released DeCruz's body camera footage, given "
+                     "the defense itself pointed to it as the most important evidence in the case?",
+                     "Why did Temple police policy explicitly discourage the tactic DeCruz used \u2014 reaching "
+                     "into a vehicle with a weapon drawn \u2014 and was that policy violation ever separately "
+                     "addressed outside the criminal trial?",
+                     "What became of the Dean family's $10 million federal civil rights lawsuit against DeCruz "
+                     "and the City of Temple?"],
+         extraSources=[src("KWTX \u2014 \u201c'We can begin moving forward together': City of Temple reacts to not guilty verdict in trial of ex-cop charged in shooting death of Michael Dean\u201d",
+                            "https://www.kwtx.com/2023/02/08/city-temple-releases-statement-following-not-guilty-verdict-ex-temple-officer/", True),
+                        src("6 News (KCEN) \u2014 \u201cFormer Temple officer found not guilty in 2019 shooting death\u201d",
+                            "https://www.kcentv.com/article/news/crime/closing-arguments-begin-trial-former-temple-cop-charged-death-michael-dean/500-4617463a-9ab3-4b7a-91ee-eb05cbab335a", True),
+                        src("KWTX \u2014 \u201cCity of Temple files motion to dismiss civil lawsuit in Michael Dean case\u201d",
+                            "https://www.kwtx.com/2024/09/13/city-temple-files-motion-dismiss-civil-lawsuit-michael-dean-case/", True)]),
 ]
 
 
@@ -7197,6 +7427,7 @@ def left_panel(depth, active_id=None):
   <ul class="pl-list">
     {items_html}
   </ul>
+  <button type="button" class="pl-show-all" data-show-all-cases hidden>Show All {len(CASES)} Cases \u2193</button>
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>'''
@@ -7978,6 +8209,20 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-08-31", case_id="michael-dean",
+         text="New case added to the archive: Michael Dean (Temple, Texas, 2019), sourced from KWTX and "
+              "6 News (KCEN)'s coverage of the 2023 acquittal and the ongoing civil lawsuit."),
+    dict(date="2026-08-31", case_id="byron-williams",
+         text="New case added to the archive: Byron Williams (Las Vegas, Nevada, 2019), sourced from the "
+              "Las Vegas Review-Journal, Nevada Current, and Courthouse News Service's coverage of the "
+              "2024 civil ruling."),
+    dict(date="2026-08-31", case_id="walter-wallace-jr",
+         text="New case added to the archive: Walter Wallace Jr. (Philadelphia, Pennsylvania, 2020), "
+              "sourced from The Philadelphia Inquirer's coverage of both his life and the 2021 settlement, "
+              "and WHYY."),
+    dict(date="2026-08-31", case_id="kajuan-raye",
+         text="New case added to the archive: Kajuan Raye (Chicago, Illinois, 2016), sourced from the "
+              "Chicago Sun-Times and CBS News Chicago's coverage of the 2020 civil verdict."),
     dict(date="2026-08-31", case_id="dreasjon-reed",
          text="New case added to the archive: Dreasjon \u201cSean\u201d Reed (Indianapolis, Indiana, 2020), "
               "sourced from NPR, the Indianapolis Recorder, and TheGrio."),

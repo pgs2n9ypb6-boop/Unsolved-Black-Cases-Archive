@@ -221,6 +221,19 @@ p:last-child{ margin-bottom:0; }
 }
 .pl-item .pi-meta{ display:block; font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-top:2px; }
 
+/* "Show All N Cases" — the sidebar starts collapsed to the first 40 cases
+   (see filterLeftList in main.js) so it doesn't take forever to scroll
+   past just to reach the footer links below it. Any active search or
+   filter bypasses the cap entirely — this only governs the untouched
+   default view. */
+.pl-show-all{
+  display:block; width:calc(100% - 16px); margin:4px 8px 10px; padding:9px 10px;
+  background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text-dim); font-family:var(--mono); font-size:.7rem; letter-spacing:.03em;
+  text-transform:uppercase; text-align:center; cursor:pointer;
+}
+.pl-show-all:hover{ color:var(--text); border-color:var(--crimson); }
+
 /* Case page jump-nav — lets a visitor skip straight to Profile / Sources /
    Unanswered Questions instead of scrolling, most useful on mobile where
    those sections stack vertically. scroll-margin-top keeps the sticky

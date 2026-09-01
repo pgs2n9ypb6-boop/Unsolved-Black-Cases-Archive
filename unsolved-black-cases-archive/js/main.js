@@ -106,6 +106,10 @@
     return normalize(parts.filter(Boolean).join(" "));
   }
 
+  var plInput = document.getElementById("pl-search-input");
+  var SIDEBAR_DEFAULT_LIMIT = 40;
+  var sidebarExpanded = false;
+
   function filterLeftList() {
     var input = document.getElementById("pl-search-input");
     var items = document.querySelectorAll("[data-case-item]");
@@ -113,6 +117,13 @@
     var query = input ? normalize(input.value) : "";
     var activeChip = document.querySelector('.pl-chip[aria-pressed="true"]');
     var activeStatus = activeChip ? activeChip.getAttribute("data-filter") : "all";
+    // The "show only the first N, then Show All" collapse only applies to
+    // the sidebar's own list, only in the untouched default view (no
+    // search text, "All Cases" filter, not yet expanded) — the moment
+    // someone searches or picks a filter chip, every match should be
+    // reachable, not just the first 40 in list order.
+    var collapseSidebar = !sidebarExpanded && query === "" && activeStatus === "all";
+    var sidebarVisibleSoFar = 0;
 
     // Track a visible count per parent list/grid so each one (the sidebar
     // list and, on the Case Index, the main board grid too) can show its
@@ -137,6 +148,11 @@
          activeStatus === "missing_persons" ? caseType === "missing_persons" :
          activeStatus === status);
       var visible = matchesQuery && matchesStatus;
+      var isSidebarItem = item.parentElement && item.parentElement.classList.contains("pl-list");
+      if (visible && isSidebarItem && collapseSidebar) {
+        sidebarVisibleSoFar++;
+        if (sidebarVisibleSoFar > SIDEBAR_DEFAULT_LIMIT) visible = false;
+      }
       item.style.display = visible ? "" : "none";
       var group = item.parentElement;
       var entry = counts.filter(function (e) { return e.group === group; })[0];
@@ -149,8 +165,12 @@
       var noResults = host ? host.querySelector(".no-results") : null;
       if (noResults) noResults.style.display = entry.count === 0 ? "block" : "none";
     });
+
+    var showAllBtn = document.querySelector("[data-show-all-cases]");
+    if (showAllBtn) {
+      showAllBtn.hidden = !(collapseSidebar && sidebarVisibleSoFar > SIDEBAR_DEFAULT_LIMIT);
+    }
   }
-  var plInput = document.getElementById("pl-search-input");
   if (plInput) plInput.addEventListener("input", filterLeftList);
   document.querySelectorAll(".pl-chip").forEach(function (chip) {
     chip.addEventListener("click", function () {
@@ -159,6 +179,14 @@
       filterLeftList();
     });
   });
+  var showAllCasesBtn = document.querySelector("[data-show-all-cases]");
+  if (showAllCasesBtn) {
+    showAllCasesBtn.addEventListener("click", function () {
+      sidebarExpanded = true;
+      filterLeftList();
+    });
+  }
+  filterLeftList(); // apply the initial sidebar collapse on page load
 
   // ---------------------------------------------------------------------
   // Global search overlay
