@@ -937,6 +937,23 @@
       "</div>";
   }
 
+  // Bottom nav "active page" highlight — plain pathname comparison rather
+  // than threading an active-page flag through every page_shell() call
+  // site across the whole codebase for one small visual cue.
+  function initBottomNavActiveState() {
+    var items = document.querySelectorAll("[data-bn-path]");
+    if (!items.length) return;
+    var here = window.location.pathname;
+    var isHome = here === "/" || /\/index\.html$/.test(here) && here.replace(/index\.html$/, "").split("/").filter(Boolean).length === 0;
+    items.forEach(function (item) {
+      var target = item.getAttribute("data-bn-path").replace(/^(\.\.\/)+/, "");
+      var isTargetHome = target === "index.html";
+      if ((isTargetHome && isHome) || (!isTargetHome && here.indexOf(target) !== -1)) {
+        item.classList.add("bn-active");
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initBoard();
     initArchiveViews();
@@ -946,5 +963,6 @@
     initVisitCounter();
     initDailyVisitCounter();
     initCaseOfWeek();
+    initBottomNavActiveState();
   });
 })();

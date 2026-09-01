@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Saved Cases · UBCA</title>
-<meta name="description" content="Cases you&#x27;ve bookmarked for later, stored privately in your own browser.">
+<title>Researcher&#x27;s Dashboard · UBCA</title>
+<meta name="description" content="Your private research dashboard — saved cases, notes, sources, and topics, stored only in your own browser.">
 <link rel="canonical" href="https://www.unsolvedblackcases.com/saved.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="UBCA">
 <meta property="og:url" content="https://www.unsolvedblackcases.com/saved.html">
-<meta property="og:title" content="My Saved Cases · UBCA">
-<meta property="og:description" content="Cases you&#x27;ve bookmarked for later, stored privately in your own browser.">
+<meta property="og:title" content="Researcher&#x27;s Dashboard · UBCA">
+<meta property="og:description" content="Your private research dashboard — saved cases, notes, sources, and topics, stored only in your own browser.">
 <meta property="og:image" content="https://www.unsolvedblackcases.com/og/site.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="My Saved Cases · UBCA">
-<meta name="twitter:description" content="Cases you&#x27;ve bookmarked for later, stored privately in your own browser.">
+<meta name="twitter:title" content="Researcher&#x27;s Dashboard · UBCA">
+<meta name="twitter:description" content="Your private research dashboard — saved cases, notes, sources, and topics, stored only in your own browser.">
 <meta name="twitter:image" content="https://www.unsolvedblackcases.com/og/site.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,13 +49,40 @@
   </div>
 </div>
 <main id="main" class="doc-shell">
-  <div class="doc-header"><span class="label">Private</span><h1>My Saved Cases</h1></div>
+  <div class="doc-header"><span class="label">Private</span><h1>Researcher's Dashboard</h1></div>
   <div class="doc-body">
-    <p>Cases you’ve saved for later, stored privately in this browser only. Nothing here is
-    sent anywhere or visible to anyone but you — not the site owner, not other visitors. This list (and
-    any private notes you’ve added) will disappear if you clear your browser’s site data, and won’t
-    show up if you open this site on a different device or browser.</p>
-    <div id="saved-cases-list" class="related-grid" style="margin-top:20px;"></div>
+    <p>Your private research dashboard — saved cases, notes, sources, and topics, stored only in
+    this browser. Nothing here is sent anywhere or visible to anyone but you — not the site owner, not
+    other visitors. Everything on this page will disappear if you clear your browser’s site data, and
+    won’t show up if you open this site on a different device or browser.</p>
+    <div class="dash-stats" id="dashboard-stats">
+      <div class="dash-stat"><span class="dash-stat-eyebrow">My Research</span></div>
+      <div class="dash-stat"><span class="num" id="stat-saved-cases">…</span><span class="cap">Saved Cases</span></div>
+      <div class="dash-stat"><span class="num" id="stat-notes">…</span><span class="cap">Notes</span></div>
+      <div class="dash-stat"><span class="num" id="stat-sources">…</span><span class="cap">Sources Saved</span></div>
+      <div class="dash-stat"><span class="num" id="stat-topics">…</span><span class="cap">Research Topics</span></div>
+      <div class="dash-stat"><span class="num" id="stat-recent">…</span><span class="cap">Recently Viewed</span></div>
+    </div>
+
+    <h2 class="dash-section-head">Saved Cases</h2>
+    <div id="saved-cases-list" class="related-grid"></div>
+
+    <h2 class="dash-section-head">Saved Sources</h2>
+    <p class="dash-section-hint">Tap the ☆ next to any source on a case page to save it here for your
+    own reference list.</p>
+    <div id="saved-sources-list"></div>
+
+    <h2 class="dash-section-head">Research Topics</h2>
+    <p class="dash-section-hint">A running list of leads, patterns, or angles you want to come back to —
+    not tied to any one case.</p>
+    <div class="topic-add-row">
+      <input type="text" id="topic-input" placeholder="Add a research topic…" maxlength="140">
+      <button type="button" id="topic-add-btn">+ Add</button>
+    </div>
+    <ul id="research-topics-list" class="topics-list"></ul>
+
+    <h2 class="dash-section-head">Recently Viewed</h2>
+    <div id="recently-viewed-list" class="related-grid"></div>
   </div>
   
 </main>
@@ -72,7 +99,7 @@
         <li><a href="cases/index.html">Case Index</a></li>
         <li><a href="cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="saved.html">My Saved Cases</a></li>
+        <li><a href="saved.html">Researcher's Dashboard</a></li>
         <li><a href="statistics.html">Archive Statistics</a></li>
       </ul>
     </div>
@@ -103,6 +130,23 @@
   </div>
 </footer>
 
+<nav class="bottom-nav" aria-label="Primary mobile navigation">
+  <a class="bn-item" href="index.html" data-bn-path="index.html">
+    <span class="bn-icon" aria-hidden="true">⌂</span><span>Home</span>
+  </a>
+  <a class="bn-item" href="cases/index.html" data-bn-path="cases/index.html">
+    <span class="bn-icon" aria-hidden="true">☷</span><span>Cases</span>
+  </a>
+  <button type="button" class="bn-item bn-search" data-search-open>
+    <span class="bn-icon" aria-hidden="true">⚲</span><span>Search</span>
+  </button>
+  <a class="bn-item" href="saved.html" data-bn-path="saved.html">
+    <span class="bn-icon" aria-hidden="true">★</span><span>Saved</span>
+  </a>
+  <a class="bn-item" href="quiz.html" data-bn-path="quiz.html">
+    <span class="bn-icon" aria-hidden="true">?</span><span>Quiz</span>
+  </a>
+</nav>
 <script src="js/cases-data.js"></script>
 <script src="js/connections-data.js"></script>
 <script src="js/us-states-paths.js"></script>

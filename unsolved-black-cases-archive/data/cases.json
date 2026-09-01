@@ -2469,6 +2469,13 @@
     "county": "Douglas",
     "state": "NE",
     "caseSeries": null,
+    "victimPhotos": [
+      {
+        "url": "https://www.zinnedproject.org/wp-content/uploads/2019/02/1919-lynching-victim-William-Brown-201x300.jpg",
+        "caption": "Will Brown",
+        "credit": "Omaha World-Herald, 1919 \u2014 public domain by age; via Nebraska State Historical Society / NebraskaStudies.org"
+      }
+    ],
     "summary": "Will Brown, 40, a meatpacking plant worker later regarded by historians as innocent, was lynched by a mob in Omaha on the night of September 28, 1919, four days after a white woman accused him of assault. Brown was being held in the Douglas County Courthouse jail when a mob of thousands surrounded the building, set it on fire, and battled police for hours; when Omaha's mayor tried to intervene he was nearly lynched himself before being rescued. The mob eventually seized Brown, beat him, hanged him from a lamp pole outside the courthouse, shot his body more than one hundred times, then burned it and dragged the remains behind a car through the streets. A newspaper photograph of the burned body became one of the most widely reproduced images of the Red Summer of 1919, a nationwide wave of racial violence. Federal troops were called in to restore order. No one was ever charged in Brown's killing.",
     "known": [
       "Victim identity, background, and the September 28, 1919 date and circumstances, per History Nebraska (the state historical society) and PBS's American Experience.",
@@ -2635,6 +2642,13 @@
     "county": "Tulsa",
     "state": "OK",
     "caseSeries": null,
+    "victimPhotos": [
+      {
+        "url": "https://tile.loc.gov/storage-services/service/pnp/anrc/14700/14738v.jpg",
+        "caption": "Ruins after the Tulsa Race Massacre, June 1921",
+        "credit": "American National Red Cross Photograph Collection, Library of Congress \u2014 no known restrictions on publication"
+      }
+    ],
     "summary": "On May 31 and June 1, 1921, a white mob of up to 10,000 people attacked Greenwood, Tulsa's prosperous Black district known as \u201cBlack Wall Street,\u201d in what the DOJ's own 2025 review called a \u201ccoordinated, military-style attack\u201d rather than spontaneous mob violence. As many as 300 residents were killed and more than 1,200 homes, businesses, schools, and churches were burned; survivors were rounded up and held in internment camps, and insurance companies later denied claims under \u201criot clause\u201d exclusions. City officials claimed at the time that only 36 people had died; historians have since estimated the toll at 75 to 300, and unmarked mass graves identified in Tulsa in recent years are still being excavated and their occupants identified. The Justice Department's Civil Rights Division formally reviewed the massacre under the Emmett Till Unsolved Civil Rights Crime Act and released a 120-plus page report in January 2025 \u2014 the federal government's first official accounting of the event \u2014 finding that the Tulsa Police Department, the Tulsa County sheriff, the Oklahoma National Guard, and then-Mayor T.D. Evans each played a role, either through direct participation or by failing to act. The report also found that federal investigative reports written within days of the massacre in 1921 were apparently never evaluated by any prosecutor. No one was ever charged, and the DOJ concluded that no avenue for prosecution remains today.",
     "known": [
       "The massacre's May 31\u2013June 1, 1921 date and scope, per the DOJ's 2025 Civil Rights Division review.",
@@ -2853,6 +2867,13 @@
     "county": "New Castle",
     "state": "DE",
     "caseSeries": null,
+    "victimPhotos": [
+      {
+        "url": "https://wordinblack.com/wp-content/uploads/2022/02/George-White.png",
+        "caption": "George White",
+        "credit": "Originally published by The Morning News (Wilmington, DE) in 1903 \u2014 public domain by age; this reproduction via the Howard Center for Investigative Journalism / Word In Black"
+      }
+    ],
     "summary": "George White, 24, a Black farm laborer, was arrested June 16, 1903 and accused of killing Helen Bishop, a white woman, near Wilmington. He denied any involvement and was held at the New Castle County Workhouse to await a September trial. Two lynch mobs attempted to abduct him from the workhouse within a week of his arrest, and on June 21 a local white pastor, Robert Elwood, urged a crowd to carry out swift vengeance rather than wait for the courts. The following night, a mob of thousands stormed the workhouse and seized White; he was taken to Price's Corner, tied to a stake, and burned to death on June 23 in front of a crowd variously estimated at several hundred to several thousand people, some of whom took pieces of his remains afterward. No one was ever convicted. It is generally regarded as the only documented lynching in Delaware's history. A state historical marker was dedicated at the site in 2019 after a local high school student's research prompted the Delaware Public Archives to install it; the marker was stolen that August and replaced two months later.",
     "known": [
       "Victim identity, background, and the June 16\u201323, 1903 date and circumstances, per the Delaware Public Archives' official historical marker.",
@@ -10387,6 +10408,619 @@
       {
         "name": "AP, via Yahoo News \u2014 \u201cFeds 'examining' shooting of Black man by Georgia trooper\u201d",
         "url": "https://news.yahoo.com/feds-examining-shooting-black-man-210023796.html",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "ej-bradford-jr",
+    "caseNumber": "171",
+    "name": "Emantic \u201cE.J.\u201d Bradford Jr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2018,
+    "age": 21,
+    "gender": "male",
+    "city": "Hoover",
+    "county": "Jefferson",
+    "state": "AL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Emantic \u201cE.J.\u201d Bradford Jr., 21, was shot three times from behind and killed by Hoover, Alabama Police Officer David Alexander at the Riverchase Galleria mall on Thanksgiving night, November 22, 2018, moments after another man opened fire during an altercation, wounding an 18-year-old and a 12-year-old bystander. Bradford, who held a valid permit to carry, was seen on surveillance video running toward the wounded with his gun drawn; witnesses and his family's attorney said he was trying to help, not attack anyone. Hoover police initially publicly identified Bradford himself as the shooter, then retracted that within a day. Alabama's attorney general took over the case from the local district attorney, citing conflicts of interest, and announced in February 2019 that the officer had mistakenly believed Bradford fired the earlier shots but was still legally justified in killing him regardless. The FBI separately found no basis for federal civil rights charges. No one has ever been charged in Bradford's death.",
+    "known": [
+      "The mall altercation, the earlier gunfire that wounded two bystanders, and Bradford's shooting, per Alabama Attorney General Steve Marshall's public report and released surveillance video.",
+      "Bradford held a valid Alabama permit to carry the firearm found on him.",
+      "An independent autopsy commissioned by Bradford's family found he was struck three times from behind, in the head, neck, and back.",
+      "Hoover police publicly identified Bradford as the shooter the night of the incident, then retracted that identification, then retracted a follow-up claim that he had brandished a weapon at officers, before the actual gunman, Erron Brown, was later arrested and charged separately.",
+      "Attorney General Marshall's February 2019 report concluded the officer mistakenly believed Bradford was the shooter but was nonetheless legally justified, since Bradford was armed and the officer's duty was to \u201celiminate the threat\u201d he perceived.",
+      "The FBI reviewed the matter and found no evidence to support federal civil rights charges against the officer, per the Attorney General's office.",
+      "The shooting prompted weeks of sustained protests in Hoover, including demonstrations outside City Hall demanding release of body camera and surveillance footage."
+    ],
+    "unknown": [
+      "Whether the officer had a reasonable opportunity to identify Bradford as someone helping the wounded, rather than the shooter, before firing has been disputed by the family's attorney, Ben Crump, who called the investigation a \u201ccover-up,\u201d and was never tested at any criminal trial.",
+      "The involved officer's identity, later reported as David Alexander per Wikipedia's sourced case history, was not initially released by Hoover police or the Attorney General's office in their own public statements.",
+      "The full, unedited body camera footage from the officer who fired was not among the surveillance video the Attorney General's office released publicly."
+    ],
+    "unanswered": [
+      "Why did Hoover police publicly identify Bradford as the shooter, then retract that claim, then retract a second claim that he brandished a weapon at officers, all within days of the shooting?",
+      "Why has the officer's body camera footage, as opposed to mall surveillance video, never been made public?",
+      "What accountability, if any, exists when an officer's mistaken belief about who fired the initial shots is treated as sufficient justification for killing an unrelated armed bystander?"
+    ],
+    "sources": [
+      {
+        "name": "Alabama Attorney General's Office \u2014 official report on the Bradford investigation",
+        "url": "https://www.alabamaag.gov/attorney-general-marshall-releases-report-on-officer-involved-shooting-death-of-emantic-bradford-jr-to-hoover-police-dept-and-alabama-sbi/",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cAlabama officer's fatal shooting of 21-year-old at mall was 'justified,' state says\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/alabama-officer-fatal-mall-shooting-21-year-old-won-t-n967311",
+        "verified": true
+      },
+      {
+        "name": "CNN \u2014 \u201cAlabama attorney general takes over mall shooting cases, citing conflicts of interest\u201d",
+        "url": "https://www.cnn.com/2018/12/13/us/alabama-mall-shooting-attorney-general-emantic-bradford/index.html",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "kayla-moore",
+    "caseNumber": "172",
+    "name": "Kayla Moore",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2013,
+    "age": 41,
+    "gender": "female",
+    "city": "Berkeley",
+    "county": "Alameda",
+    "state": "CA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Kayla Moore, 41, a Black transgender woman living with schizophrenia, died in Berkeley, California police custody on February 12, 2013, after up to six officers restrained her face-down on a futon in her own apartment. Her roommate had called police asking for a mental health welfare check, not an arrest; officers instead learned of an outstanding warrant \u2014 later found to have actually been issued for a different person who shared her legal name \u2014 and moved to take her into custody. During the struggle to restrain her, Moore stopped breathing and could not be revived. A Berkeley police sergeant's internal report ruled the death accidental and the force used reasonable within three months. No criminal charges were ever sought against any officer. A federal judge dismissed the family's civil rights lawsuit in 2016, and the 9th Circuit Court of Appeals upheld that dismissal in 2020, finding the officers had not used excessive force. No one has ever been held accountable in Moore's death.",
+    "known": [
+      "The welfare-check call, the restraint, and Moore's death, per the Berkeley Police Department's own internal report and the Alameda County coroner's findings.",
+      "Moore's roommate called police specifically requesting a mental health evaluation, not an arrest, after she became agitated during a psychotic episode.",
+      "The warrant officers used to justify arresting Moore was later determined to have been issued for a different person who happened to share her legal first name, per the family's civil complaint.",
+      "Up to six officers restrained Moore face-down, applying body weight to her limbs and back; a spit hood was readied but never used before she stopped breathing.",
+      "Berkeley Police Sergeant Peter Hong's internal report, released about three months later, ruled Moore's death accidental and the force used by officers reasonable.",
+      "The Alameda County coroner found potentially toxic levels of methamphetamine and codeine in Moore's system, along with obesity and an enlarged heart, as contributing factors.",
+      "U.S. District Judge Charles Breyer granted summary judgment for the officers in 2016, finding their use of force reasonable; a separate Americans with Disabilities Act claim was dismissed in 2018 for insufficient evidence.",
+      "The 9th U.S. Circuit Court of Appeals affirmed the dismissal in January 2020, ruling that while Moore's death was a tragedy, the officers had not acted unlawfully based on the evidence presented."
+    ],
+    "unknown": [
+      "Whether officers reasonably should have recognized that restraining Moore face-down under the combined weight of up to six people risked impairing her breathing was central to the family's claims and was addressed differently by the internal police review versus the family's own expert accounts, but was never resolved by any criminal proceeding since none was brought.",
+      "The family separately alleged officers made discriminatory remarks about Moore's gender identity and declined to promptly administer CPR because of it; this claim was not specifically resolved in the courts' published rulings on the excessive-force and ADA claims.",
+      "Why the arrest proceeded on a warrant later found to belong to a different person, before that discrepancy was caught, has not been fully explained in public reporting."
+    ],
+    "unanswered": [
+      "Why was Moore arrested on a warrant that was later found to belong to someone else entirely, and what verification steps, if any, failed?",
+      "Did the responding officers' handling of Moore's care immediately after she stopped breathing meet department protocol, and was that specifically reviewed apart from the broader excessive-force finding?",
+      "What has become of Berkeley's policies for responding to mental-health-crisis calls involving transgender residents since Moore's death?"
+    ],
+    "sources": [
+      {
+        "name": "KQED \u2014 \u201cBerkeley Death in Police Custody Was Accidental, Probe Concludes\u201d",
+        "url": "https://www.kqed.org/news/96309/berkeley-death-in-police-custody-was-accidental-probe-concludes",
+        "verified": true
+      },
+      {
+        "name": "San Francisco Chronicle \u2014 \u201cBerkeley officers didn't use excessive force against transgender woman, appeals court rules\u201d",
+        "url": "https://www.sfchronicle.com/bayarea/article/Berkeley-officers-didn-t-use-excessive-force-15018287.php",
+        "verified": true
+      },
+      {
+        "name": "Courthouse News Service \u2014 \u201cJudge Clears Berkeley Police in Woman's Death\u201d",
+        "url": "https://www.courthousenews.com/judge-clears-berkeley-police-in-womans-death/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "steven-taylor",
+    "caseNumber": "173",
+    "name": "Steven Taylor",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 33,
+    "gender": "male",
+    "city": "San Leandro",
+    "county": "Alameda",
+    "state": "CA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Steven Taylor, 33, was shot and killed by San Leandro, California Police Officer Jason Fletcher inside a Walmart on April 18, 2020, after being reported for shoplifting while holding an aluminum baseball bat. Body camera video showed that within about 40 seconds of Fletcher's arrival, he Tased Taylor twice and then fired a single fatal round into his chest; Taylor's family said he was suffering a mental health crisis, not posing a deadly threat. Fletcher was charged with voluntary manslaughter in 2021, becoming a rare case of an officer criminally charged in California for an on-duty shooting. After more than five years of delays, prosecutorial turnover, and disputes over withheld evidence, Alameda County's district attorney moved to drop the charges in December 2025, and a judge dismissed the case just weeks before it was finally set to go to trial. No one has ever been convicted in Taylor's death.",
+    "known": [
+      "The shoplifting report, the confrontation, and the shooting, per San Leandro Police Department body camera footage and the Alameda County District Attorney's charging and dismissal filings.",
+      "Fletcher deployed his Taser twice against Taylor before firing a single round into his chest, all within roughly 40 seconds of arriving on scene.",
+      "Then-District Attorney Nancy O'Malley charged Fletcher with voluntary manslaughter in June 2021.",
+      "The case was delayed for years amid multiple changes in Alameda County's district attorney's office, including recalled DA Pamela Price's tenure, during which Fletcher's attorney alleged use-of-force expert opinions favorable to the defense were withheld from the case record.",
+      "A judge denied an earlier defense motion to dismiss the case in November 2025, ruling a jury should weigh the disputed evidence and allowing the case to proceed toward trial.",
+      "Weeks later, in December 2025, District Attorney Ursula Jones Dickson's office filed its own motion to drop the charges, stating prosecutors could not prove beyond a reasonable doubt that Fletcher had committed a crime or that he had not acted in lawful self-defense; a judge granted that dismissal on December 12, 2025.",
+      "Taylor's family and community advocates, including his grandmother Addie Kitchen and the Anti-Police Terror Project's Cat Brooks, publicly said Fletcher had other options, including de-escalating or waiting for personnel trained in mental health crisis response."
+    ],
+    "unknown": [
+      "Whether Taylor's continued movement with the bat after being Tased twice constituted the kind of imminent deadly threat that legally justified Fletcher's shot, or whether de-escalation and additional time remained available, was the central dispute of the case and was never resolved by a jury, since it never reached trial.",
+      "The specific use-of-force expert opinions that Fletcher's attorney alleged were withheld from the defense during a prior district attorney's tenure, and how directly they shaped the final dismissal, have been described by competing parties but not independently verified in a public record.",
+      "Whether Taylor's documented mental health history was known to responding officers before or during the encounter has not been detailed in the available public charging and dismissal filings."
+    ],
+    "unanswered": [
+      "Why did it take more than five years, and multiple changes in district attorneys, for this case to be resolved without ever reaching a jury?",
+      "What specific use-of-force expert opinions were allegedly withheld from Fletcher's defense, and by whom, during the case's years-long delay?",
+      "What has the San Leandro Police Department changed, if anything, about how officers respond to reported mental health crises since Taylor's death?"
+    ],
+    "sources": [
+      {
+        "name": "ABC7 San Francisco \u2014 \u201cJudge dismisses case against ex-police officer Jason Fletcher accused of killing man at San Leandro Walmart in 2020\u201d",
+        "url": "https://abc7news.com/post/steven-taylor-judge-dismisses-case-ex-police-officer-jason-fletcher-accused-killing-man-san-leandro-walmart-2020/18281069/",
+        "verified": true
+      },
+      {
+        "name": "San Francisco Chronicle \u2014 \u201cEx-San Leandro officer's case dismissed in fatal 2020 Walmart shooting\u201d",
+        "url": "https://www.sfchronicle.com/crime/article/steven-taylor-shooting-jason-fletcher-21240763.php",
+        "verified": true
+      },
+      {
+        "name": "CBS News San Francisco \u2014 \u201cJudge dismisses charges against former San Leandro police officer in 2020 killing of Steven Taylor\u201d",
+        "url": "https://www.cbsnews.com/sanfrancisco/news/steven-taylor-killing-manslaughter-charges-dismissed-san-leandro-jason-fletcher-2020/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "devon-bailey",
+    "caseNumber": "174",
+    "name": "De'Von Bailey",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2019,
+    "age": 19,
+    "gender": "male",
+    "city": "Colorado Springs",
+    "county": "El Paso",
+    "state": "CO",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "De'Von Bailey, 19, was shot and killed by Colorado Springs Police Officers Blake Evenson and Sgt. Alan Van't Land on August 3, 2019, while running away from officers investigating a report of an armed robbery. Body camera video, later released publicly, showed officers firing eight shots total, striking Bailey three times in the back and once in the arm as he fled; officers said he had reached for a firearm, but the released footage does not clearly show him pulling a weapon from his pocket before the shooting began. A gun was recovered at the scene. Fourth Judicial District Attorney Dan May referred the case to a grand jury rather than deciding himself, and in November 2019 the grand jury found the officers' use of force justified, declining to indict either of them. The city later paid Bailey's family nearly $3 million to settle a federal civil rights lawsuit alleging racial profiling, without admitting wrongdoing. No one has ever been charged in Bailey's death.",
+    "known": [
+      "The robbery investigation, the foot pursuit, and the shooting, per Colorado Springs Police Department body camera footage released to the public in August 2019.",
+      "Officers fired eight shots total, striking Bailey three times in the back and once in the arm as he ran; a firearm was recovered at the scene.",
+      "District Attorney Dan May referred the case to a grand jury rather than making a charging decision himself, a choice Bailey family attorney Mari Newman publicly said was designed to avoid a prosecutorial indictment.",
+      "The grand jury, whose members' identities were not disclosed, heard from the two officers and a use-of-force expert before declining to indict either officer in November 2019, releasing a public report stating Bailey's own actions led the officers to use deadly force.",
+      "Bailey's parents filed a federal civil rights lawsuit alleging officers racially profiled their son and assumed, partly because of his race, that he presented an enhanced threat.",
+      "The City of Colorado Springs settled that lawsuit for nearly $3 million in 2022, explicitly stating the settlement was not an admission of wrongdoing and noting the grand jury's earlier finding."
+    ],
+    "unknown": [
+      "Whether Bailey in fact reached for or pulled the recovered firearm before officers opened fire, as they maintained, has been disputed by the family's attorneys, who say the released video does not clearly show that action occurring before the shots were fired, and was never resolved at any criminal trial.",
+      "The specific reasoning behind the grand jury's finding, beyond its public report's general conclusion, has not been made available given Colorado's grand jury secrecy rules.",
+      "The extent to which race played a role in officers' split-second assessment of Bailey as an enhanced threat, as the family's federal complaint alleged, was never adjudicated on the merits since the case settled before trial."
+    ],
+    "unanswered": [
+      "Why does the body camera footage not clearly show Bailey drawing a weapon before officers opened fire, despite that being the central justification given for the shooting?",
+      "Why did the district attorney choose to refer the case to a grand jury rather than make an independent charging decision, and did that choice affect the outcome, as the family's attorney alleged?",
+      "What did the city's nearly $3 million settlement reflect about the racial profiling allegations in the family's lawsuit, given it explicitly disclaimed any admission of wrongdoing?"
+    ],
+    "sources": [
+      {
+        "name": "NBC News \u2014 \u201cFatal shooting of black man by Colorado police was justified, grand jury finds\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/fatal-shooting-black-man-colorado-police-was-justified-grand-jury-n1081956",
+        "verified": true
+      },
+      {
+        "name": "Colorado Public Radio \u2014 \u201cEl Paso County Grand Jury Heard From Officers, Expert, Before Calling De'Von Bailey Shooting Justified\u201d",
+        "url": "https://www.cpr.org/2019/11/14/el-paso-grand-jury-heard-from-officers-expert-before-calling-devon-bailey-shooting-justified/",
+        "verified": true
+      },
+      {
+        "name": "9NEWS (Denver) \u2014 \u201cCity of Colorado Springs settles lawsuit in fatal 2019 shooting for nearly $3M\u201d",
+        "url": "https://www.9news.com/article/news/local/colorado-springs-devon-bailey-setttlement/73-5831ac8d-b9fa-452e-97ca-8d2730144f7a",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "antwon-rose-ii",
+    "caseNumber": "175",
+    "name": "Antwon Rose II",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2018,
+    "age": 17,
+    "gender": "male",
+    "city": "East Pittsburgh",
+    "county": "Allegheny",
+    "state": "PA",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Antwon Rose II, 17, was shot three times \u2014 in the back, arm, and side of the face \u2014 and killed by East Pittsburgh, Pennsylvania Police Officer Michael Rosfeld on June 19, 2018, as he ran from a car that had been pulled over minutes after a drive-by shooting elsewhere. Rose, unarmed, fled along with another passenger while the driver was being arrested; bystander cellphone video captured the shooting. Rosfeld was charged with criminal homicide \u2014 he had been sworn in as an East Pittsburgh officer only hours before the shooting, following prior stints at other departments. At trial in March 2019, a jury that included three Black jurors deliberated fewer than four hours before acquitting Rosfeld of all charges, including first-degree murder, third-degree murder, voluntary manslaughter, and involuntary manslaughter. No one has ever been convicted in Rose's death.",
+    "known": [
+      "The traffic stop, the flight, and the shooting, per Allegheny County court records and bystander cellphone video played at trial.",
+      "Rosfeld had been sworn in as an East Pittsburgh police officer only hours before the shooting; he had previously worked at other area police departments and as a University of Pittsburgh officer.",
+      "Rose was unarmed; police reported an empty ammunition magazine was found in his pocket and gunshot residue on his hand, consistent with the earlier drive-by shooting he was suspected of being involved in, though he himself fired no weapon during the traffic stop.",
+      "Allegheny County District Attorney Stephen Zappala charged Rosfeld with criminal homicide shortly after the shooting.",
+      "A jury of seven men and five women, including three Black jurors, deliberated fewer than four hours on March 22, 2019 before acquitting Rosfeld of all four possible charges.",
+      "Gunshots were fired into the office of Rosfeld's defense attorney the night after the acquittal; no one was injured.",
+      "East Pittsburgh's borough council voted to disband its police department entirely months after the shooting, citing cost and other factors; the department's contract with a regional force took effect in late 2018.",
+      "Allegheny County later paid an $8 million settlement to Rose's family in a related civil lawsuit."
+    ],
+    "unknown": [
+      "Whether Rosfeld reasonably believed Rose posed a deadly threat as he fled unarmed was the central dispute at trial; the jury's acquittal reflects that it was not persuaded beyond a reasonable doubt of homicide, but the underlying factual dispute about what justified the shooting was never independently resolved beyond that verdict.",
+      "The specific reasoning behind the jury's under-four-hour deliberation, given the gravity of the charges, is not public, as with all jury deliberations.",
+      "Rose's own writing, including a poem publicly read by supporters after the verdict expressing his fears about how he might be perceived and treated by police, has been widely cited in public discussion of the case but is separate from the trial record itself."
+    ],
+    "unanswered": [
+      "Why was Rosfeld sworn in as an East Pittsburgh officer only hours before the shooting, and what vetting, if any, preceded that appointment given his history at multiple prior departments?",
+      "Why did the jury acquit on all four possible charges, including involuntary manslaughter, after less than four hours of deliberation?",
+      "What became of East Pittsburgh's own police department following its dissolution months after the shooting, and did that decision reflect any accountability for how the department was run?"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia \u2014 \u201cKilling of Antwon Rose Jr.\u201d (sourced case history)",
+        "url": "https://en.wikipedia.org/wiki/Killing_of_Antwon_Rose_Jr.",
+        "verified": true
+      },
+      {
+        "name": "CBS News Pittsburgh \u2014 \u201cFormer East Pittsburgh Police Officer Michael Rosfeld Found Not Guilty In Antwon Rose Shooting\u201d",
+        "url": "https://www.cbsnews.com/pittsburgh/news/michael-rosfeld-trial-antwon-rose-shooting-not-guilty/",
+        "verified": true
+      },
+      {
+        "name": "Pittsburgh's Public Source \u2014 \u201cRosfeld found not guilty on all counts of criminal homicide in Antwon Rose's death\u201d",
+        "url": "https://www.publicsource.org/rosfeld-found-not-guilty-on-all-counts-of-criminal-homicide-in-antwon-roses-death/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "crooms-and-pierce",
+    "caseNumber": "176",
+    "name": "Angelo Crooms & Sincere Pierce",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": null,
+    "gender": "male",
+    "city": "Cocoa",
+    "county": "Brevard",
+    "state": "FL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Angelo \u201cAJ\u201d Crooms, 16, and Sincere Pierce, 18, were shot and killed by Brevard County, Florida Sheriff's Deputy Jafet Santiago-Miranda on November 13, 2020, in a Cocoa driveway during an attempted stop of a car deputies believed, based on a report that later proved incorrect, had been stolen. Dashcam video showed the deputy approaching with his gun drawn, repeatedly yelling for the car to stop; Crooms, who was driving, backed up slightly then drove forward, and the deputy opened fire, killing both teens. A third occupant survived uninjured. The family's attorneys said the video showed the car moving away from the deputy, not toward him, and that deputies never confirmed the car was actually stolen before drawing weapons. Brevard County State Attorney Phil Archer announced in April 2021 \u2014 the day after Derek Chauvin's murder conviction \u2014 that no charges would be filed. No one has ever been charged in either teen's death.",
+    "known": [
+      "The attempted stop, the deputy's drawn weapon and verbal commands, and the shooting, per Brevard County Sheriff's Office dashcam video released publicly.",
+      "The car deputies pursued had been reported as possibly stolen; it was later established that report was incorrect, and the vehicle had been loaned to the teens by a family friend, per the family's attorneys.",
+      "Deputy Santiago-Miranda had previously been placed on administrative leave months earlier after allegedly threatening a person his wife was reportedly having an affair with, telling them they needed to \u201cwear a bulletproof vest,\u201d per records reviewed by Florida Today.",
+      "The Florida Department of Law Enforcement investigated and presented findings to the State Attorney's Office; State Attorney Phil Archer announced on April 21, 2021 that no criminal charges would be filed against the deputy.",
+      "Two guns were found in the car; the sheriff's office said it could not confirm who they belonged to or whether they were stolen, and the surviving third occupant was interviewed and released without charges.",
+      "Sincere Pierce's mother was accidentally shot and wounded by a 16-year-old attendee's discharging firearm during Pierce's own burial service on November 28, 2020, an unrelated tragedy that compounded the family's grief; his gravesite was separately vandalized months later."
+    ],
+    "unknown": [
+      "Whether Crooms's car was in fact accelerating toward the deputy in a manner presenting a deadly threat, as the sheriff's office maintained, or moving away as the family's attorneys argued from the same dashcam footage, was never resolved at any criminal trial.",
+      "Why deputies approached the vehicle with weapons already drawn before confirming whether it was in fact stolen has not been fully explained in any official public accounting.",
+      "The full extent of Deputy Santiago-Miranda's prior disciplinary history beyond the reported administrative leave incident has not been made comprehensively public."
+    ],
+    "unanswered": [
+      "Why did deputies approach the vehicle with guns already drawn before verifying the stolen-vehicle report that turned out to be incorrect?",
+      "Why did the State Attorney's announcement of no charges come specifically the day after a high-profile police murder conviction elsewhere, and did that timing reflect any broader pattern in how such decisions are announced?",
+      "What became of the investigation into who fired the gun that wounded Sincere Pierce's mother at his own burial?"
+    ],
+    "sources": [
+      {
+        "name": "Fox 35 Orlando \u2014 \u201cState Attorney: Criminal charges won't be filed against Brevard County deputy who fatally shot two teens\u201d",
+        "url": "https://www.fox35orlando.com/news/state-attorney-criminal-charges-wont-be-filed-against-brevard-county-deputy-who-fatally-shot-two-teens",
+        "verified": true
+      },
+      {
+        "name": "Click Orlando (WKMG) \u2014 \u201cSheriff: Brevard deputy 'forced to fire,' fatally shooting 2 teens in car\u201d",
+        "url": "https://www.clickorlando.com/news/local/2020/11/18/sheriff-brevard-deputy-forced-to-fire-fatally-shooting-2-teens-in-car/",
+        "verified": true
+      },
+      {
+        "name": "Yahoo News / AP \u2014 \u201cBenjamin Crump demands justice after a Florida deputy shot two Black teens\u201d",
+        "url": "https://news.yahoo.com/hundreds-protest-florida-deputy-shot-175215301.html",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "terrence-sterling",
+    "caseNumber": "177",
+    "name": "Terrence Sterling",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 31,
+    "gender": "male",
+    "city": "Washington",
+    "county": null,
+    "state": "DC",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Terrence Sterling, 31, was shot and killed by Metropolitan Police Department Officer Brian Trainer in Washington, D.C. in the early morning hours of September 11, 2016, after officers blocked his motorcycle with their cruiser following a high-speed chase. Trainer said Sterling revved his motorcycle and rammed it into the cruiser's door, pinning his leg, forcing him to fire twice through the window; an internal MPD investigator later testified he doubted Trainer's account, and the department's own review board found Trainer was not in danger and had no reason to draw his weapon at all. Trainer had not activated his body camera until one to three minutes after the shooting, violating department policy. Federal prosecutors declined to bring charges in August 2017. D.C.'s MPD trial board recommended firing Trainer months later for the unjustified shooting, and the police chief fired him in 2018 after his appeal was denied \u2014 an administrative outcome, not a criminal one. No one has ever been criminally charged in Sterling's death.",
+    "known": [
+      "The chase, the cruiser blocking Sterling's path, and the shooting, per the U.S. Attorney's Office's public statement and subsequent MPD internal review findings.",
+      "Sterling had been driving erratically and at high speed, reaching over 100 mph at times and running red lights, before officers caught up to him; his autopsy found a blood alcohol level twice the legal limit and marijuana in his system.",
+      "Trainer did not activate his body camera until one to three minutes after the shooting, in violation of department policy.",
+      "An MPD internal affairs investigator testified to the department's trial board that he did not believe Trainer sustained the leg injury he described from the motorcycle striking the cruiser door, instead believing it occurred while Trainer was attempting to render aid to Sterling afterward.",
+      "The U.S. Attorney's Office for the District of Columbia announced in August 2017 that there was insufficient evidence to prove Trainer had violated Sterling's civil rights with the necessary criminal intent, declining federal or D.C. charges; per a 2016 study cited by The Washington Post, no D.C. police officer had ever been criminally indicted for a fatal on-duty shooting.",
+      "MPD's own internal review, obtained by The Washington Post in December 2017, found Trainer had no reason to pull his gun and was not in danger when he fired, directly contradicting his account; a department trial board recommended his firing, and Police Chief Peter Newsham terminated him in June 2018 after denying his appeal.",
+      "The District of Columbia settled a wrongful death lawsuit with Sterling's family for $3.5 million, described at the time as the largest such payout in the city's history."
+    ],
+    "unknown": [
+      "Whether Sterling intentionally rammed the cruiser door, as Trainer maintained, or whether the collision occurred differently, was disputed by the department's own internal investigator and trial board, and was never resolved by any criminal proceeding since none was brought.",
+      "Why federal prosecutors concluded the evidence was insufficient for criminal charges when the department's own internal review reached the opposite conclusion about whether the shooting was justified has not been reconciled in any single public accounting.",
+      "The specific content of witness Howard Dorsey's account, which Trainer's attorneys and prosecutors weighed differently in reaching their respective conclusions, has been described inconsistently across public reporting."
+    ],
+    "unanswered": [
+      "Why did federal prosecutors decline charges when the police department's own internal review found the shooting unjustified and contradicted the officer's account?",
+      "What changes, if any, did MPD make to its body-camera activation enforcement following this case's documented policy violation?",
+      "Why has no D.C. police officer ever been criminally indicted for a fatal on-duty shooting, according to the city's own cited study, and has that pattern held since Sterling's case?"
+    ],
+    "sources": [
+      {
+        "name": "The Washington Post \u2014 \u201cD.C. officer who fatally shot unarmed motorcyclist was not in danger when he pulled his gun, internal review finds\u201d",
+        "url": "https://www.washingtonpost.com/local/public-safety/dc-officer-who-fatally-shot-unarmed-motorcyclist-was-not-in-danger-when-he-pulled-his-gun-internal-review-finds/2017/12/28/e038ff7a-e589-11e7-833f-155031558ff4_story.html",
+        "verified": true
+      },
+      {
+        "name": "The Washington Post \u2014 \u201cD.C. police officer will not face criminal charges in 2016 fatal shooting of motorcyclist\u201d",
+        "url": "https://www.washingtonpost.com/local/public-safety/dc-police-officer-will-not-face-charges-in-2016-fatal-shooting-of-motorcyclist/2017/08/09/23ea7424-05de-11e7-b1e9-a05d3c21f7cf_story.html",
+        "verified": true
+      },
+      {
+        "name": "WTOP News \u2014 \u201cDC Police Department terminates officer who shot and killed motorcyclist in 2016\u201d",
+        "url": "https://wtop.com/dc/2018/06/dc-police-department-terminates-officer-who-shot-and-killed-motorcyclist-in-2016/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "jamee-johnson",
+    "caseNumber": "178",
+    "name": "Jamee Johnson",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2019,
+    "age": 22,
+    "gender": "male",
+    "city": "Jacksonville",
+    "county": "Duval",
+    "state": "FL",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Jamee Johnson, 22, a Florida A&M University student, was shot and killed by Jacksonville Sheriff's Officer Josue Garriga during a traffic stop for a seatbelt violation on December 14, 2019. Body camera footage showed Johnson telling Garriga he had a legally owned handgun in the car; after Garriga asked him to step out, Johnson dove back into the vehicle, a struggle followed, and Garriga shot him four times, with video capturing Johnson begging for his life. Garriga said Johnson was reaching for the gun; the family's attorney argued the autopsy's bullet trajectories contradicted that account. Florida's State Attorney's Office concluded in July 2020 that the shooting was justified, declining to bring charges. The city later settled a federal civil lawsuit with Johnson's family for $200,000, without admitting wrongdoing. In 2024, Garriga was separately arrested and charged with child sex crimes unrelated to the shooting. No one has ever been charged in Johnson's death.",
+    "known": [
+      "The traffic stop, the struggle, and the shooting, per State Attorney's Office body camera footage and its published investigation report.",
+      "Johnson told Garriga at the start of the stop that he had a firearm in the car; he did not have a concealed carry permit.",
+      "Garriga stated Johnson dove back into the car, then began lifting the firearm toward his face during the struggle, and that he fired after freeing himself from the vehicle, fearing Johnson still had the gun.",
+      "The State Attorney's Office released its investigation report and the body camera footage publicly in July 2020, concluding the shooting was justified and declining to file charges.",
+      "The family's attorney, Harry Daniels, argued that autopsy findings showing Johnson was struck left-to-right contradicted Garriga's account of the shooting's sequence and positioning, and that video showed Johnson exiting the car with his hands raised before the fatal shots.",
+      "The City of Jacksonville settled the family's federal civil rights lawsuit for $200,000 in 2023, without admitting Garriga did anything wrong, citing the uncertainty of a trial; the family had originally sought $5 million.",
+      "In 2024, Garriga, who had since left the department, was arrested on unrelated charges of child sex crimes in Clay County, Florida \u2014 a case entirely separate from the Johnson shooting."
+    ],
+    "unknown": [
+      "Whether Johnson was in fact reaching for or holding the firearm at the moment Garriga fired, as Garriga maintained, or whether physical evidence contradicts that account, as the family's attorney argued based on the autopsy's bullet trajectories, was never tested at any criminal trial.",
+      "The specific reasoning behind the State Attorney's Office's justified-shooting finding, beyond its published report, has been publicly disputed by the family's attorney but not independently re-examined by any other authority.",
+      "Whether Garriga's later, unrelated arrest reflects anything about his conduct or character at the time of the 2019 shooting has not been established and is a separate matter the State Attorney's investigation did not address."
+    ],
+    "unanswered": [
+      "Why does the family's attorney say the autopsy's bullet trajectories contradict Garriga's account of how the shooting unfolded?",
+      "Why did the City of Jacksonville settle the family's lawsuit for a fraction of what was sought, and did that reflect any assessment of the underlying facts?",
+      "What connection, if any, exists between this case and the pattern the family and local commentators have pointed to regarding Jacksonville's use-of-force review process more broadly?"
+    ],
+    "sources": [
+      {
+        "name": "News4Jax (WJXT) \u2014 \u201cProsecutor: Jacksonville officer justified in 2019 deadly shooting of 22-year-old\u201d",
+        "url": "https://www.news4jax.com/news/local/2020/07/06/jacksonville-officer-justified-in-2019-deadly-shooting-of-22-year-old/",
+        "verified": true
+      },
+      {
+        "name": "First Coast News \u2014 \u201cFamily of Jamee Johnson files lawsuit disputing official account of 2019 police shooting death\u201d",
+        "url": "https://www.firstcoastnews.com/article/news/live_breaking/family-jamee-johnson-lawsuit-florida-famu-police-shooting-officer-death/77-3b9a7d26-dc2c-43e3-9664-ebaf3c108bee",
+        "verified": true
+      },
+      {
+        "name": "First Coast News \u2014 \u201cCity of Jacksonville to pay $200,000 to Jamee Johnson's family\u201d",
+        "url": "https://www.firstcoastnews.com/article/news/crime/city-of-jacksonville-to-pay-200000-family-of-famu-student-shot-by-police/77-c74c39aa-56a5-4927-b018-0e840de1314d",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "dreasjon-reed",
+    "caseNumber": "179",
+    "name": "Dreasjon \u201cSean\u201d Reed",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 21,
+    "gender": "male",
+    "city": "Indianapolis",
+    "county": "Marion",
+    "state": "IN",
+    "caseSeries": null,
+    "dateAdded": "2026-08-31",
+    "summary": "Dreasjon \u201cSean\u201d Reed, 21, a former U.S. Air Force airman and legal gun owner, was shot and killed by Indianapolis Metropolitan Police Department Officer Dejoure Mercer on May 6, 2020, at the end of a high-speed chase Reed livestreamed on Facebook to thousands of viewers in real time. The chase itself had been called off by IMPD's own chief for being too dangerous; Mercer, on foot, caught up to Reed after he parked and ran. The livestream's shaky camera captured the sound of a Taser and then gunshots, but never showed the shooting itself clearly, and no body camera or dashcam footage of the moment existed. Police said Reed fired at Mercer first; his family's attorney said he never had a gun in his hand at all. A detective who later walked past Reed's body was recorded joking it would be a \u201cclosed casket\u201d and was internally disciplined for it. A special grand jury declined to indict Mercer in November 2020, six months after the shooting. No one has ever been charged in Reed's death.",
+    "known": [
+      "The chase, the foot pursuit, and the shooting, per IMPD statements and Reed's own Facebook Live video, which was watched by thousands as it happened.",
+      "IMPD Deputy Chief Kendale Adams's pursuit of Reed on the interstate was called off by supervisors roughly 10 minutes in for being too dangerous; Officer Mercer separately spotted Reed's parked car and continued the pursuit on foot alone.",
+      "No body camera or dashcam footage of the shooting itself exists; the only contemporaneous recording is Reed's own Facebook Live stream, whose camera did not capture the shooting clearly.",
+      "Police said Reed and Mercer exchanged gunfire and that a gun found near Reed had likely been fired twice; the family's attorney stated at a press conference that Reed \u201cdid not shoot a gun, did not point a gun, did not brandish a gun at an officer.\u201d",
+      "A separate officer at the scene was recorded on another device joking that Reed's death would require a \u201cclosed casket\u201d; IMPD disciplined that officer following public backlash.",
+      "Special Prosecutor Rosemary Khoury convened a six-person special grand jury, which returned a \u201cno bill\u201d on November 10, 2020, finding insufficient probable cause to indict Mercer.",
+      "Reed's death was the first of three separate fatal police encounters in Indianapolis within roughly 24 hours that month, prompting sustained protests across the city.",
+      "Reed's family filed a federal civil rights lawsuit against the city, IMPD, the police chief, and the involved officers."
+    ],
+    "unknown": [
+      "Whether Reed in fact fired at or pointed a weapon toward Mercer, as police maintained, or never held a gun during the confrontation, as the family's attorney stated, was never resolved by any criminal trial, and the shooting itself was not captured on any camera.",
+      "Surveillance footage later obtained by local reporters reportedly showed Reed running with a t-shirt in one hand and cell phones in the other in the moments before the confrontation, which the family's attorney cited as inconsistent with him also holding and firing a weapon; how that footage was weighed by the grand jury is not public.",
+      "The full reasoning behind the grand jury's no-bill decision has not been made public, as Indiana grand jury proceedings are sealed."
+    ],
+    "unanswered": [
+      "Given that no body camera or dashcam footage captured the shooting itself, what specific evidence did the grand jury rely on to conclude there was insufficient probable cause to indict?",
+      "Why did an officer feel comfortable making a \u201cclosed casket\u201d joke at the scene of a shooting his own department was actively investigating, and what discipline resulted beyond an internal reprimand?",
+      "What became of the Reed family's federal civil rights lawsuit against the city and IMPD?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cIndianapolis Grand Jury Declines To Indict Officer Who Killed Dreasjon Reed\u201d",
+        "url": "https://www.npr.org/2020/11/10/933684216/indianapolis-grand-jury-declines-to-indict-officer-who-killed-dreasjon-reed",
+        "verified": true
+      },
+      {
+        "name": "Indianapolis Recorder \u2014 \u201c2020 Year in Review: Police shooting of Dreasjon Reed brought protests, but no charges\u201d",
+        "url": "https://indianapolisrecorder.com/2020-year-in-review-police-shooting-of-dreasjon-reed-brought-protests-but-no-charges/",
+        "verified": true
+      },
+      {
+        "name": "TheGrio \u2014 \u201cIndiana grand jury decides no charges in fatal shooting of Sean Reed\u201d",
+        "url": "https://thegrio.com/2020/11/10/indiana-grand-jury-no-charges-shooting-of-sean-reed/",
         "verified": true
       },
       {

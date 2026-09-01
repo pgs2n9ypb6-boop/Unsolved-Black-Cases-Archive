@@ -255,6 +255,11 @@ p:last-child{ margin-bottom:0; }
 }
 .board-head .label{ margin-bottom:8px; }
 .board-head h1{ font-size:clamp(1.3rem,2.6vw,1.9rem); margin:0; }
+@media (max-width:759.98px){
+  /* "Large victim name" — a real hero moment on the phone, not squeezed
+     to fit a header row designed for a much wider viewport. */
+  .board-head h1{ font-size:clamp(1.8rem,9vw,2.4rem); line-height:1.08; }
+}
 .board-file-no{ font-family:var(--mono); color:var(--crimson-bright); font-size:.85rem; margin-bottom:4px; display:block; }
 .board-toolbar{ display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
 .bt-btn{
@@ -329,6 +334,48 @@ p:last-child{ margin-bottom:0; }
 .overview-card .num{ font-family:var(--serif); font-size:2rem; color:var(--text); display:block; }
 .overview-card .cap{ font-family:var(--mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); }
 
+/* Researcher's Dashboard (saved.html) */
+.dash-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:20px 0 32px; }
+.dash-stat{
+  background:var(--panel); border:1px solid var(--border-strong); border-radius:2px; padding:14px 16px;
+  display:flex; flex-direction:column; justify-content:center;
+}
+.dash-stat .num{ font-family:var(--serif); font-size:1.8rem; color:var(--text); display:block; }
+.dash-stat .cap{ font-family:var(--mono); font-size:.64rem; letter-spacing:.07em; text-transform:uppercase; color:var(--text-faint); }
+.dash-stat-eyebrow{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--crimson-bright);
+  align-self:center;
+}
+.dash-section-head{ font-size:1.05rem; margin:32px 0 4px; border-top:1px solid var(--border); padding-top:20px; }
+.dash-section-hint{ font-size:.8rem; color:var(--text-faint); margin-bottom:10px; }
+
+.saved-source-item{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--panel); border:1px solid var(--border-strong); border-radius:2px; padding:10px 12px; margin-bottom:8px;
+}
+.ssi-main{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+.ssi-main a{ font-size:.84rem; color:var(--cyan); word-break:break-word; }
+.ssi-case{ font-family:var(--mono); font-size:.66rem; color:var(--text-faint); }
+.ssi-case a{ color:var(--text-faint); text-decoration:underline; }
+
+.topic-add-row{ display:flex; gap:8px; margin-bottom:14px; }
+.topic-add-row input{
+  flex:1; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text); font-family:var(--sans); font-size:.86rem; padding:9px 11px;
+}
+.topic-add-row input:focus{ outline:2px solid var(--amber); outline-offset:1px; }
+.topic-add-row button{
+  background:var(--crimson); color:#fff; border:0; border-radius:2px; padding:0 18px;
+  font-family:var(--mono); font-size:.76rem; letter-spacing:.04em; text-transform:uppercase; cursor:pointer;
+}
+.topic-add-row button:hover{ background:var(--crimson-bright); }
+.topics-list{ list-style:none; margin:0; padding:0; }
+.topic-item{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--panel); border:1px solid var(--border-strong); border-radius:2px; padding:10px 12px; margin-bottom:8px;
+  font-size:.86rem; color:var(--text);
+}
+
 /* Simple bar charts (Archive Statistics page) — built at render time from
    real case data, no client-side charting library needed. */
 .stat-chart{ display:flex; flex-direction:column; gap:10px; margin:16px 0 28px; }
@@ -371,6 +418,14 @@ p:last-child{ margin-bottom:0; }
 .avatar-photo.lg{ width:92px; height:92px; }
 .avatar-photo.sm{ width:44px; height:44px; }
 .avatar-caption{ font-family:var(--mono); font-size:.58rem; letter-spacing:.03em; text-transform:uppercase; color:var(--text-faint); text-align:center; max-width:100px; line-height:1.3; }
+@media (max-width:759.98px){
+  /* "Large photographs" — the VICTIM card's photo (the "sm" size, used
+     nowhere else) gets a real hero treatment on mobile instead of the
+     44px thumbnail sized for a busy multi-card desktop board. */
+  .avatar-placeholder.sm{ width:132px; height:132px; font-size:2.6rem; }
+  .avatar-photo.sm{ width:132px; height:132px; }
+  .avatar-caption{ max-width:150px; font-size:.64rem; }
+}
 
 /* ---------- Right panel (Case Profile / Sources) ---------- */
 .panel-profile, .panel-sources{
@@ -386,15 +441,21 @@ p:last-child{ margin-bottom:0; }
 
 .source-item{
   border:1px solid var(--border-strong); border-radius:2px; padding:11px 12px; margin-bottom:10px;
-  background:var(--panel-2);
+  background:var(--panel-2); position:relative;
 }
-.source-item .sname{ font-size:.86rem; color:var(--text); display:block; margin-bottom:6px; }
+.source-item .sname{ font-size:.86rem; color:var(--text); display:block; margin-bottom:6px; padding-right:28px; }
 .source-item .slink{
   font-family:var(--mono); font-size:.68rem; letter-spacing:.04em; text-transform:uppercase;
   color:var(--cyan); display:inline-flex; align-items:center; gap:5px;
 }
 .source-item .slink.disabled{ color:var(--text-faint); cursor:default; }
 .source-item .sverified{ font-family:var(--mono); font-size:.62rem; color:var(--text-faint); display:block; margin-top:6px; }
+.source-save-btn{
+  position:absolute; top:9px; right:10px; background:none; border:0; color:var(--text-faint);
+  font-size:1rem; line-height:1; cursor:pointer; padding:2px;
+}
+.source-save-btn.is-saved{ color:var(--amber); }
+.source-save-btn:hover{ color:var(--amber); }
 
 .archive-note{
   border-left:2px solid var(--amber); background:rgba(185,138,61,0.06); padding:10px 12px;
@@ -439,6 +500,20 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .related-card .rc-name{ font-size:.86rem; color:var(--text); display:block; }
 .related-card .rc-meta{ font-family:var(--mono); font-size:.65rem; color:var(--text-faint); margin-top:3px; display:block; }
 
+@media (max-width:759.98px){
+  /* "Swipeable related cases" — on mobile only, the Related Cases /
+     More Cases From <State> strip becomes a horizontal, snap-scrolling
+     carousel instead of a wrapping grid. Desktop keeps the grid. */
+  .related-carousel{
+    display:flex; grid-template-columns:none; gap:10px; overflow-x:auto; flex-wrap:nowrap;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    padding-bottom:6px; margin:0 -20px; padding-left:20px; padding-right:20px;
+  }
+  .related-carousel .related-card{
+    flex:0 0 76%; max-width:280px; scroll-snap-align:start;
+  }
+}
+
 .view-tabs{ display:flex; gap:6px; padding:14px 20px 0; }
 .view-panel{ display:none; padding:20px; min-width:0; }
 .view-panel.active{ display:block; }
@@ -449,6 +524,16 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
   font-family:var(--mono); font-size:.72rem; padding:8px 14px; border-radius:2px; cursor:pointer;
 }
 .decade-btn[aria-pressed="true"]{ background:var(--amber); color:#161006; border-color:var(--amber); }
+@media (max-width:759.98px){
+  /* "Easy timeline scrolling" — 17 decades wrapping across several lines
+     eats the screen before you even reach a result. A slim horizontal
+     swipe strip is a much smaller commitment on a phone. */
+  .timeline-decades{
+    flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    margin:0 -20px 18px; padding:0 20px 4px;
+  }
+  .decade-btn{ flex:none; white-space:nowrap; }
+}
 .map-groups{ display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
 .map-group{ border:1px solid var(--border-strong); border-radius:2px; padding:14px; background:var(--panel-2); }
 .map-group h3{ font-size:.95rem; margin-bottom:8px; }
@@ -661,6 +746,33 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
   background:var(--panel-2); color:var(--text-dim);
 }
 .consent-btn.primary{ background:var(--cyan); color:#0d1410; border-color:transparent; font-weight:600; }
+
+/* Bottom navigation — mobile only. A fixed bar at the very bottom of the
+   viewport, hidden once the desktop 3-column case layout kicks in at
+   1024px (the header's SEARCH button and full nav links are always
+   reachable there instead). Doubles as the "sticky search button" — the
+   Search item here fires the exact same overlay as the header's SEARCH
+   button via the shared [data-search-open] hook. */
+.bottom-nav{
+  position:fixed; left:0; right:0; bottom:0; z-index:280;
+  display:flex; background:rgba(8,9,11,0.97); backdrop-filter:blur(8px);
+  border-top:1px solid var(--border-strong);
+  padding-bottom:env(safe-area-inset-bottom, 0);
+}
+@media (min-width:1024px){ .bottom-nav{ display:none; } }
+.bn-item{
+  flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+  padding:8px 4px 7px; background:none; border:0; color:var(--text-faint); text-decoration:none;
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.03em; text-transform:uppercase; cursor:pointer;
+}
+.bn-icon{ font-size:1.15rem; line-height:1; }
+.bn-item:active{ color:var(--text); }
+.bn-item.bn-active{ color:var(--crimson-bright); }
+.bn-search .bn-icon{ color:var(--crimson-bright); }
+/* Room for the fixed bar so it never covers the last bit of page content
+   or the real footer. Desktop has no bottom-nav, so no extra padding. */
+body{ padding-bottom:58px; }
+@media (min-width:1024px){ body{ padding-bottom:0; } }
 
 /* Multi-photo avatar (two-victim cases) */
 .avatar-wrap.avatar-multi{ flex-direction:row; gap:8px; }
