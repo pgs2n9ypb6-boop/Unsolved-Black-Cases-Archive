@@ -271,6 +271,7 @@
     renderSavedSources();
     renderTopics();
     renderRecentlyViewed();
+    initCitationExport();
 
     function renderStats() {
       var el;
@@ -307,7 +308,14 @@
         var noteHtml = notes.length
           ? '<div class="saved-note">' + notes.length + (notes.length === 1 ? " research note" : " research notes") + "</div>"
           : "";
-        return caseCardHtml(c, noteHtml, true);
+        var progressHtml = "";
+        if (typeof window.UBCA_CHECKLIST_PROGRESS === "function") {
+          var p = window.UBCA_CHECKLIST_PROGRESS(c.id, c.caseType);
+          if (p && p.total) {
+            progressHtml = '<div class="saved-note saved-checklist-note">Checklist: ' + p.done + "/" + p.total + " complete</div>";
+          }
+        }
+        return caseCardHtml(c, noteHtml + progressHtml, true);
       }).join("");
       host.querySelectorAll("[data-remove-id]").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -320,13 +328,16 @@
 
     function renderSavedSources() {
       var host = document.getElementById("saved-sources-list");
+      var exportRow = document.getElementById("sources-export-row");
       if (!host) return;
       var list = getSavedSources();
       if (!list.length) {
         host.innerHTML = '<p class="quiz-result" style="display:block;">No saved sources yet. Open any ' +
           'case\u2019s Sources tab and tap \u2606 next to a citation to save it here.</p>';
+        if (exportRow) exportRow.hidden = true;
         return;
       }
+      if (exportRow) exportRow.hidden = false;
       list.sort(function (a, b) { return b.savedAt - a.savedAt; });
       host.innerHTML = list.map(function (s) {
         return (
@@ -346,6 +357,63 @@
           renderStats();
         });
       });
+    }
+
+    // Citation export — groups saved sources by the case they came from,
+    // since that's the structure the data actually has (no author or
+    // publish-date fields are captured per source, so this is a clean
+    // reference list rather than a formal academic citation style that
+    // would need data we don't collect).
+    function buildCitationText() {
+      var list = getSavedSources();
+      var byCaseId = {};
+      var order = [];
+      list.forEach(function (s) {
+        if (!byCaseId[s.caseId]) { byCaseId[s.caseId] = { name: s.caseName, sources: [] }; order.push(s.caseId); }
+        byCaseId[s.caseId].sources.push(s);
+      });
+      var lines = ["Unsolved Black Cases Archive \u2014 Saved Sources", "Exported " + formatDate(Date.now()), ""];
+      order.forEach(function (caseId) {
+        var group = byCaseId[caseId];
+        lines.push(group.name);
+        group.sources.forEach(function (s) {
+          lines.push("  " + s.sourceName);
+          lines.push("  " + s.url);
+        });
+        lines.push("");
+      });
+      return lines.join("\n");
+    }
+
+    function initCitationExport() {
+      var copyBtn = document.querySelector("[data-export-citations-copy]");
+      var downloadBtn = document.querySelector("[data-export-citations-download]");
+      var copiedMsg = document.querySelector("[data-export-copied]");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          var text = buildCitationText();
+          function done() {
+            if (copiedMsg) { copiedMsg.hidden = false; setTimeout(function () { copiedMsg.hidden = true; }, 2000); }
+          }
+          try {
+            navigator.clipboard.writeText(text).then(done, function () {
+              var ta = document.createElement("textarea");
+              ta.value = text; document.body.appendChild(ta); ta.select();
+              document.execCommand("copy"); document.body.removeChild(ta); done();
+            });
+          } catch (e) { done(); }
+        });
+      }
+      if (downloadBtn) {
+        downloadBtn.addEventListener("click", function () {
+          var blob = new Blob([buildCitationText()], { type: "text/plain" });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement("a");
+          a.href = url; a.download = "ubca-saved-sources.txt";
+          document.body.appendChild(a); a.click(); document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      }
     }
 
     function renderTopics() {

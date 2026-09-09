@@ -48,6 +48,51 @@
     <div class="search-results"></div>
   </div>
 </div>
+<div class="records-overlay" role="dialog" aria-modal="true" aria-label="Public records request generator">
+  <div class="records-modal">
+    <div class="records-modal-head">
+      <span class="label">Public Records Request Generator</span>
+      <button type="button" class="records-close" data-records-close aria-label="Close">&times;</button>
+    </div>
+    <div class="records-modal-body">
+      <p class="records-intro">Every unreleased body camera clip, sealed grand jury summary, and unpublished internal
+      review in this archive started as something a records custodian could have handed over. This generates a
+      request letter you can send yourself &mdash; edit it, copy it, or download it as a text file. This is a
+      starting template, not legal advice; confirm your state's current deadlines and any fees before sending.</p>
+      <div class="records-field" data-records-case-field>
+        <label for="records-case-select">Case</label>
+        <select id="records-case-select"></select>
+      </div>
+      <div class="records-field">
+        <label>Who to contact <span class="records-optional">(these are search links, not a stored directory &mdash; agency contacts change, so this always points you to current results instead of a number that could be stale or wrong)</span></label>
+        <ul class="records-contact-list" data-records-contact-list></ul>
+      </div>
+      <div class="records-field-row">
+        <div class="records-field">
+          <label for="records-your-name">Your name</label>
+          <input type="text" id="records-your-name" placeholder="Jane Researcher">
+        </div>
+        <div class="records-field">
+          <label for="records-your-email">Your email</label>
+          <input type="email" id="records-your-email" placeholder="[email protected]">
+        </div>
+      </div>
+      <div class="records-field">
+        <label for="records-your-address">Your mailing address <span class="records-optional">(optional &mdash; some agencies require one)</span></label>
+        <input type="text" id="records-your-address" placeholder="123 Main St, City, State ZIP">
+      </div>
+      <div class="records-field">
+        <label for="records-letter-text">Generated letter <span class="records-optional">(edit freely before sending)</span></label>
+        <textarea id="records-letter-text" rows="16"></textarea>
+      </div>
+      <div class="records-actions">
+        <button type="button" class="records-btn primary" data-records-copy>Copy to Clipboard</button>
+        <button type="button" class="records-btn" data-records-download>Download as .txt</button>
+      </div>
+      <p class="records-copied" data-records-copied hidden>Copied.</p>
+    </div>
+  </div>
+</div>
 <div class="app-shell">
   <aside class="panel-left area-left" id="case-files-panel">
   <div class="pl-head"><h2>Case Files</h2><button class="pl-close" data-drawer-close aria-label="Close case files panel">&times;</button></div>
@@ -325,17 +370,17 @@
 <li class="pl-item" data-case-item data-case-id="john-earl-reese" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Earl Reese Mayflower TX 1955">
   <a href="../cases/john-earl-reese.html">John Earl Reese<span class="pi-meta">086 · 1955 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="frank-andrews" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Frank Andrews Lisman AL 1964">
-  <a href="../cases/frank-andrews.html">Frank Andrews<span class="pi-meta">087 · 1964 · UNSOLVED</span></a>
+<li class="pl-item" data-case-item data-case-id="frank-andrews" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Frank Andrews Lisman AL 1964">
+  <a href="../cases/frank-andrews.html">Frank Andrews <span class="new-badge">NEW</span><span class="pi-meta">087 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alexis-patterson" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Alexis Patterson Milwaukee WI 2002">
-  <a href="../cases/alexis-patterson.html">Alexis Patterson<span class="pi-meta">088 · 2002 · UNSOLVED</span></a>
+<li class="pl-item" data-case-item data-case-id="alexis-patterson" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="true" data-search="Alexis Patterson Milwaukee WI 2002">
+  <a href="../cases/alexis-patterson.html">Alexis Patterson <span class="new-badge">NEW</span><span class="pi-meta">088 · 2002 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="nacomie-freeman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Nacomie Freeman Phoenix AZ 2004">
-  <a href="../cases/nacomie-freeman.html">Nacomie Freeman<span class="pi-meta">089 · 2004 · UNSOLVED</span></a>
+<li class="pl-item" data-case-item data-case-id="nacomie-freeman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Nacomie Freeman Phoenix AZ 2004">
+  <a href="../cases/nacomie-freeman.html">Nacomie Freeman <span class="new-badge">NEW</span><span class="pi-meta">089 · 2004 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="quincy-booker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Quincy Booker Albuquerque NM 2011">
-  <a href="../cases/quincy-booker.html">Quincy Booker<span class="pi-meta">090 · 2011 · UNSOLVED</span></a>
+<li class="pl-item" data-case-item data-case-id="quincy-booker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Quincy Booker Albuquerque NM 2011">
+  <a href="../cases/quincy-booker.html">Quincy Booker <span class="new-badge">NEW</span><span class="pi-meta">090 · 2011 · UNSOLVED</span></a>
 </li>
 <li class="pl-item" data-case-item data-case-id="julius-dubouse" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Julius Dubouse Anchorage AK 1998">
   <a href="../cases/julius-dubouse.html">Julius Dubouse <span class="new-badge">NEW</span><span class="pi-meta">091 · 1998 · UNSOLVED</span></a>
@@ -616,8 +661,113 @@
 <li class="pl-item" data-case-item data-case-id="michael-dean" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Michael Dean Temple TX 2019">
   <a href="../cases/michael-dean.html">Michael Dean <span class="new-badge">NEW</span><span class="pi-meta">183 · 2019 · UNSOLVED</span></a>
 </li>
+<li class="pl-item" data-case-item data-case-id="marvin-scott-iii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Marvin Scott III McKinney TX 2021">
+  <a href="../cases/marvin-scott-iii.html">Marvin Scott III <span class="new-badge">NEW</span><span class="pi-meta">184 · 2021 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="jamycheal-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Jamycheal Mitchell Portsmouth VA 2015">
+  <a href="../cases/jamycheal-mitchell.html">Jamycheal Mitchell <span class="new-badge">NEW</span><span class="pi-meta">185 · 2015 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="natasha-mckenna" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Natasha McKenna Fairfax VA 2015">
+  <a href="../cases/natasha-mckenna.html">Natasha McKenna <span class="new-badge">NEW</span><span class="pi-meta">186 · 2015 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="deon-kay" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Deon Kay Washington DC 2020">
+  <a href="../cases/deon-kay.html">Deon Kay <span class="new-badge">NEW</span><span class="pi-meta">187 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="mickel-lewis-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Mickel Lewis Sr. Mojave CA 2020">
+  <a href="../cases/mickel-lewis-sr.html">Mickel Lewis Sr. <span class="new-badge">NEW</span><span class="pi-meta">188 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="alteria-woods" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Alteria Woods Gifford FL 2017">
+  <a href="../cases/alteria-woods.html">Alteria Woods <span class="new-badge">NEW</span><span class="pi-meta">189 · 2017 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="dejuan-guillory" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="DeJuan Guillory Mamou LA 2017">
+  <a href="../cases/dejuan-guillory.html">DeJuan Guillory <span class="new-badge">NEW</span><span class="pi-meta">190 · 2017 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="tommie-mcglothen-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Tommie McGlothen Jr. Shreveport LA 2020">
+  <a href="../cases/tommie-mcglothen-jr.html">Tommie McGlothen Jr. <span class="new-badge">NEW</span><span class="pi-meta">191 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="willie-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Willie Tillman Fayetteville AR 2016">
+  <a href="../cases/willie-tillman.html">Willie Tillman <span class="new-badge">NEW</span><span class="pi-meta">192 · 2016 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="christopher-whitfield" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Christopher Whitfield Ethel LA 2019">
+  <a href="../cases/christopher-whitfield.html">Christopher Whitfield <span class="new-badge">NEW</span><span class="pi-meta">193 · 2019 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="thurman-blevins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Thurman Blevins Minneapolis MN 2018">
+  <a href="../cases/thurman-blevins.html">Thurman Blevins <span class="new-badge">NEW</span><span class="pi-meta">194 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="george-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="George Tillman III South Ozone Park NY 2016">
+  <a href="../cases/george-tillman.html">George Tillman III <span class="new-badge">NEW</span><span class="pi-meta">195 · 2016 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="charleena-lyles" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Charleena Lyles Seattle WA 2017">
+  <a href="../cases/charleena-lyles.html">Charleena Lyles <span class="new-badge">NEW</span><span class="pi-meta">196 · 2017 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="miles-jackson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Miles Jackson Westerville OH 2021">
+  <a href="../cases/miles-jackson.html">Miles Jackson <span class="new-badge">NEW</span><span class="pi-meta">197 · 2021 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="sahleem-tindle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Sahleem Tindle Oakland CA 2018">
+  <a href="../cases/sahleem-tindle.html">Sahleem Tindle <span class="new-badge">NEW</span><span class="pi-meta">198 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="aaron-bailey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Aaron Bailey Indianapolis IN 2017">
+  <a href="../cases/aaron-bailey.html">Aaron Bailey <span class="new-badge">NEW</span><span class="pi-meta">199 · 2017 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="delrawn-small" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Delrawn Small Brooklyn NY 2016">
+  <a href="../cases/delrawn-small.html">Delrawn Small <span class="new-badge">NEW</span><span class="pi-meta">200 · 2016 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="yvette-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Yvette Smith Camp Swift TX 2014">
+  <a href="../cases/yvette-smith.html">Yvette Smith <span class="new-badge">NEW</span><span class="pi-meta">201 · 2014 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="charly-keunang" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Charly “Africa” Keunang Los Angeles CA 2015">
+  <a href="../cases/charly-keunang.html">Charly “Africa” Keunang <span class="new-badge">NEW</span><span class="pi-meta">202 · 2015 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="robert-lawrence-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Robert Lawrence White Silver Spring MD 2018">
+  <a href="../cases/robert-lawrence-white.html">Robert Lawrence White <span class="new-badge">NEW</span><span class="pi-meta">203 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="oshae-terry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="O&#x27;Shae Terry Arlington TX 2018">
+  <a href="../cases/oshae-terry.html">O&#x27;Shae Terry <span class="new-badge">NEW</span><span class="pi-meta">204 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="vincent-truitt" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Vincent Truitt Marietta GA 2020">
+  <a href="../cases/vincent-truitt.html">Vincent Truitt <span class="new-badge">NEW</span><span class="pi-meta">205 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="william-green" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="William Green Landover MD 2020">
+  <a href="../cases/william-green.html">William Green <span class="new-badge">NEW</span><span class="pi-meta">206 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="anthony-lowe-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Anthony Lowe Jr. Huntington Park CA 2023">
+  <a href="../cases/anthony-lowe-jr.html">Anthony Lowe Jr. <span class="new-badge">NEW</span><span class="pi-meta">207 · 2023 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="christopher-deandre-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Christopher DeAndre Mitchell Torrance CA 2018">
+  <a href="../cases/christopher-deandre-mitchell.html">Christopher DeAndre Mitchell <span class="new-badge">NEW</span><span class="pi-meta">208 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="jordell-richardson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Jor&#x27;Dell Richardson Aurora CO 2023">
+  <a href="../cases/jordell-richardson.html">Jor&#x27;Dell Richardson <span class="new-badge">NEW</span><span class="pi-meta">209 · 2023 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="omari-cryer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Omari Cryer Louisville KY 2022">
+  <a href="../cases/omari-cryer.html">Omari Cryer <span class="new-badge">NEW</span><span class="pi-meta">210 · 2022 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="linus-phillip" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Linus Phillip Largo FL 2018">
+  <a href="../cases/linus-phillip.html">Linus Phillip <span class="new-badge">NEW</span><span class="pi-meta">211 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="kenneth-ross-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Kenneth Ross Jr. Gardena CA 2018">
+  <a href="../cases/kenneth-ross-jr.html">Kenneth Ross Jr. <span class="new-badge">NEW</span><span class="pi-meta">212 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="decynthia-clements" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="DeCynthia Clements Elgin IL 2018">
+  <a href="../cases/decynthia-clements.html">DeCynthia Clements <span class="new-badge">NEW</span><span class="pi-meta">213 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="joshua-ruffin" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Joshua Ruffin Columbia SC 2020">
+  <a href="../cases/joshua-ruffin.html">Joshua Ruffin <span class="new-badge">NEW</span><span class="pi-meta">214 · 2020 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="jeremy-mcdole" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Jeremy McDole Wilmington DE 2015">
+  <a href="../cases/jeremy-mcdole.html">Jeremy McDole <span class="new-badge">NEW</span><span class="pi-meta">215 · 2015 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="trey-pringle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Trey Pringle Seabrook SC 2018">
+  <a href="../cases/trey-pringle.html">Trey Pringle <span class="new-badge">NEW</span><span class="pi-meta">216 · 2018 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="deandre-brunston" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Deandre Brunston Compton CA 2003">
+  <a href="../cases/deandre-brunston.html">Deandre Brunston <span class="new-badge">NEW</span><span class="pi-meta">217 · 2003 · UNSOLVED</span></a>
+</li>
+<li class="pl-item" data-case-item data-case-id="omar-edwards" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Omar Edwards New York NY 2009">
+  <a href="../cases/omar-edwards.html">Omar Edwards <span class="new-badge">NEW</span><span class="pi-meta">218 · 2009 · UNSOLVED</span></a>
+</li>
   </ul>
-  <button type="button" class="pl-show-all" data-show-all-cases hidden>Show All 183 Cases ↓</button>
+  <button type="button" class="pl-show-all" data-show-all-cases hidden>Show All 218 Cases ↓</button>
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
@@ -640,6 +790,8 @@
     <a href="#case-sources">Sources</a>
     <a href="#case-questions">Unanswered Questions</a>
     <button type="button" class="case-save-btn" data-save-case-btn="william-harvey">☆ Save This Case</button>
+    <button type="button" class="case-records-btn" data-records-request-btn="william-harvey">📋 Request Public Records</button>
+    <button type="button" class="case-compare-btn" data-compare-btn="william-harvey">⚖ Add to Compare</button>
   </nav>
     <div class="board-viewport">
       <div class="board-canvas" data-board-canvas="william-harvey">
@@ -692,6 +844,12 @@
     <div class="pp-row"><span class="label">Location</span><span class="value">Salt Lake City, UT</span></div>
     <div class="pp-row"><span class="label">Case Type</span><span class="value">Homicide</span></div>
     
+  </div>
+  <div class="pp-notes" id="research-checklist-panel">
+    <div class="pp-notes-head">Research Checklist</div>
+    <p class="pp-notes-hint">Track your own progress digging into this case. Saved only in this browser.</p>
+    <div class="checklist-progress" data-checklist-progress="william-harvey"></div>
+    <ul class="research-checklist" data-checklist="william-harvey" data-checklist-type="homicide"></ul>
   </div>
   <div class="pp-notes" id="research-notes-panel">
     <div class="pp-notes-head">Your Research Notes</div>
@@ -766,12 +924,14 @@
         <li><a href="../cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="../cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
         <li><a href="../about.html">About</a></li>
         <li><a href="../saved.html">Researcher's Dashboard</a></li>
-        <li><a href="../statistics.html">Archive Statistics</a></li>
+        <li><a href="../records-request.html">Public Records Request Generator</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>More</h4>
       <ul>
+        <li><a href="../compare.html">Compare Cases</a></li>
+        <li><a href="../statistics.html">Archive Statistics</a></li>
         <li><a href="../quiz.html">Cold Case Quiz</a></li>
         <li><a href="../research.html">How We Research</a></li>
         <li><a href="../updates.html">Corrections & Updates</a></li>
@@ -819,6 +979,9 @@
 <script src="../js/main.js"></script>
 <script src="../js/quiz.js"></script>
 <script src="../js/saved-cases.js"></script>
+<script src="../js/records-request.js"></script>
+<script src="../js/compare-cases.js"></script>
+<script src="../js/research-checklist.js"></script>
 <script src="../js/submit-form.js"></script>
 </body>
 </html>

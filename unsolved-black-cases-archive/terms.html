@@ -48,6 +48,51 @@
     <div class="search-results"></div>
   </div>
 </div>
+<div class="records-overlay" role="dialog" aria-modal="true" aria-label="Public records request generator">
+  <div class="records-modal">
+    <div class="records-modal-head">
+      <span class="label">Public Records Request Generator</span>
+      <button type="button" class="records-close" data-records-close aria-label="Close">&times;</button>
+    </div>
+    <div class="records-modal-body">
+      <p class="records-intro">Every unreleased body camera clip, sealed grand jury summary, and unpublished internal
+      review in this archive started as something a records custodian could have handed over. This generates a
+      request letter you can send yourself &mdash; edit it, copy it, or download it as a text file. This is a
+      starting template, not legal advice; confirm your state's current deadlines and any fees before sending.</p>
+      <div class="records-field" data-records-case-field>
+        <label for="records-case-select">Case</label>
+        <select id="records-case-select"></select>
+      </div>
+      <div class="records-field">
+        <label>Who to contact <span class="records-optional">(these are search links, not a stored directory &mdash; agency contacts change, so this always points you to current results instead of a number that could be stale or wrong)</span></label>
+        <ul class="records-contact-list" data-records-contact-list></ul>
+      </div>
+      <div class="records-field-row">
+        <div class="records-field">
+          <label for="records-your-name">Your name</label>
+          <input type="text" id="records-your-name" placeholder="Jane Researcher">
+        </div>
+        <div class="records-field">
+          <label for="records-your-email">Your email</label>
+          <input type="email" id="records-your-email" placeholder="[email protected]">
+        </div>
+      </div>
+      <div class="records-field">
+        <label for="records-your-address">Your mailing address <span class="records-optional">(optional &mdash; some agencies require one)</span></label>
+        <input type="text" id="records-your-address" placeholder="123 Main St, City, State ZIP">
+      </div>
+      <div class="records-field">
+        <label for="records-letter-text">Generated letter <span class="records-optional">(edit freely before sending)</span></label>
+        <textarea id="records-letter-text" rows="16"></textarea>
+      </div>
+      <div class="records-actions">
+        <button type="button" class="records-btn primary" data-records-copy>Copy to Clipboard</button>
+        <button type="button" class="records-btn" data-records-download>Download as .txt</button>
+      </div>
+      <p class="records-copied" data-records-copied hidden>Copied.</p>
+    </div>
+  </div>
+</div>
 <main id="main" class="doc-shell">
   <div class="doc-header"><span class="label">Legal</span><h1>Terms of Use</h1></div>
   <div class="doc-body">
@@ -77,12 +122,14 @@
         <li><a href="cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="saved.html">Researcher's Dashboard</a></li>
-        <li><a href="statistics.html">Archive Statistics</a></li>
+        <li><a href="records-request.html">Public Records Request Generator</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>More</h4>
       <ul>
+        <li><a href="compare.html">Compare Cases</a></li>
+        <li><a href="statistics.html">Archive Statistics</a></li>
         <li><a href="quiz.html">Cold Case Quiz</a></li>
         <li><a href="research.html">How We Research</a></li>
         <li><a href="updates.html">Corrections & Updates</a></li>
@@ -130,6 +177,9 @@
 <script src="js/main.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/saved-cases.js"></script>
+<script src="js/records-request.js"></script>
+<script src="js/compare-cases.js"></script>
+<script src="js/research-checklist.js"></script>
 <script src="js/submit-form.js"></script>
 </body>
 </html>

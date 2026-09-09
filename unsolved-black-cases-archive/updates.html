@@ -48,6 +48,51 @@
     <div class="search-results"></div>
   </div>
 </div>
+<div class="records-overlay" role="dialog" aria-modal="true" aria-label="Public records request generator">
+  <div class="records-modal">
+    <div class="records-modal-head">
+      <span class="label">Public Records Request Generator</span>
+      <button type="button" class="records-close" data-records-close aria-label="Close">&times;</button>
+    </div>
+    <div class="records-modal-body">
+      <p class="records-intro">Every unreleased body camera clip, sealed grand jury summary, and unpublished internal
+      review in this archive started as something a records custodian could have handed over. This generates a
+      request letter you can send yourself &mdash; edit it, copy it, or download it as a text file. This is a
+      starting template, not legal advice; confirm your state's current deadlines and any fees before sending.</p>
+      <div class="records-field" data-records-case-field>
+        <label for="records-case-select">Case</label>
+        <select id="records-case-select"></select>
+      </div>
+      <div class="records-field">
+        <label>Who to contact <span class="records-optional">(these are search links, not a stored directory &mdash; agency contacts change, so this always points you to current results instead of a number that could be stale or wrong)</span></label>
+        <ul class="records-contact-list" data-records-contact-list></ul>
+      </div>
+      <div class="records-field-row">
+        <div class="records-field">
+          <label for="records-your-name">Your name</label>
+          <input type="text" id="records-your-name" placeholder="Jane Researcher">
+        </div>
+        <div class="records-field">
+          <label for="records-your-email">Your email</label>
+          <input type="email" id="records-your-email" placeholder="[email protected]">
+        </div>
+      </div>
+      <div class="records-field">
+        <label for="records-your-address">Your mailing address <span class="records-optional">(optional &mdash; some agencies require one)</span></label>
+        <input type="text" id="records-your-address" placeholder="123 Main St, City, State ZIP">
+      </div>
+      <div class="records-field">
+        <label for="records-letter-text">Generated letter <span class="records-optional">(edit freely before sending)</span></label>
+        <textarea id="records-letter-text" rows="16"></textarea>
+      </div>
+      <div class="records-actions">
+        <button type="button" class="records-btn primary" data-records-copy>Copy to Clipboard</button>
+        <button type="button" class="records-btn" data-records-download>Download as .txt</button>
+      </div>
+      <p class="records-copied" data-records-copied hidden>Copied.</p>
+    </div>
+  </div>
+</div>
 <main id="main" class="doc-shell">
   <div class="doc-header"><span class="label">Accountability</span><h1>Corrections & Updates</h1></div>
   <div class="doc-body">
@@ -57,7 +102,41 @@
     date, a status update, a name added or removed, a source verified. Nothing is corrected quietly.</p>
     <p>See <a href="research.html">How We Research</a> for our sourcing standards, or
     <a href="submit.html">Submit a Tip</a> to flag something that needs review.</p>
-    <h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-31</h2><ul><li><a href="cases/michael-dean.html">Case #183 — Michael Dean</a>: New case added to the archive: Michael Dean (Temple, Texas, 2019), sourced from KWTX and 6 News (KCEN)'s coverage of the 2023 acquittal and the ongoing civil lawsuit.</li>
+    <h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-08</h2><ul><li><a href="cases/omar-edwards.html">Case #218 — Omar Edwards</a>: New case added to the archive: Omar Edwards (New York, New York, 2009), sourced from NBC News and TheGrio.</li>
+<li><a href="cases/deandre-brunston.html">Case #217 — Deandre Brunston</a>: New case added to the archive: Deandre Brunston (Compton, California, 2003), sourced from Wikipedia's citation trail, the San Francisco Chronicle, and the Fatal Encounters database.</li>
+<li><a href="cases/trey-pringle.html">Case #216 — Trey Pringle</a>: New case added to the archive: Trey Pringle (Seabrook, South Carolina, 2018), sourced from WTOC, WSAV, and FITSNews's coverage of the chokehold allegation.</li>
+<li><a href="cases/jeremy-mcdole.html">Case #215 — Jeremy McDole</a>: New case added to the archive: Jeremy McDole (Wilmington, Delaware, 2015), sourced from Wikipedia's citation trail, 6abc Philadelphia, and CBS News Philadelphia.</li>
+<li><a href="cases/joshua-ruffin.html">Case #214 — Joshua Ruffin</a>: New case added to the archive: Joshua Ruffin (Columbia, South Carolina, 2020), sourced from The Post and Courier, WIS10, and AP/WLOS.</li>
+<li><a href="cases/decynthia-clements.html">Case #213 — DeCynthia Clements</a>: New case added to the archive: DeCynthia Clements (Elgin, Illinois, 2018), sourced from CNN, the Daily Herald, and Romanucci & Blandin's press release on the family's federal lawsuit.</li>
+<li><a href="cases/kenneth-ross-jr.html">Case #212 — Kenneth Ross Jr.</a>: New case added to the archive: Kenneth Ross Jr. (Gardena, California, 2018), sourced from the LA County DA's own Justice System Integrity Division report, ABC7 Los Angeles, and NBC News.</li>
+<li><a href="cases/linus-phillip.html">Case #211 — Linus Phillip</a>: New case added to the archive: Linus Phillip (Largo, Florida, 2018), sourced from the Tampa Bay Times, CBS News, and WFLA.</li>
+<li><a href="cases/omari-cryer.html">Case #210 — Omari Cryer</a>: New case added to the archive: Omari Cryer (Louisville, Kentucky, 2022), sourced from Louisville Public Media, WAVE 3 News, and WHAS11.</li>
+<li><a href="cases/jordell-richardson.html">Case #209 — Jor&#x27;Dell Richardson</a>: New case added to the archive: Jor'Dell Richardson (Aurora, Colorado, 2023), sourced from CPR News, CBS News Colorado, and 9NEWS (KUSA).</li>
+<li><a href="cases/christopher-deandre-mitchell.html">Case #208 — Christopher DeAndre Mitchell</a>: New case added to the archive: Christopher DeAndre Mitchell (Torrance, California, 2018), sourced from the LA County District Attorney's own statement, NBC Los Angeles, and FOX 11 Los Angeles's coverage of the April 2026 dismissal.</li>
+<li><a href="cases/anthony-lowe-jr.html">Case #207 — Anthony Lowe Jr.</a>: New case added to the archive: Anthony Lowe Jr. (Huntington Park, California, 2023), sourced from the Los Angeles County District Attorney's own statement, Police1, and ABC7 Los Angeles.</li>
+<li><a href="cases/william-green.html">Case #206 — William Green</a>: New case added to the archive: William Green (Landover, Maryland, 2020), sourced from The Washington Post, WUSA9, and the AFRO American Newspapers' coverage of the December 2023 acquittal.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-31</h2><ul><li><a href="cases/vincent-truitt.html">Case #205 — Vincent Truitt</a>: New case added to the archive: Vincent Truitt (Marietta, Georgia, 2020), sourced from WSB-TV, 11Alive, and 13WMAZ's coverage of the dismissed federal lawsuit.</li>
+<li><a href="cases/oshae-terry.html">Case #204 — O&#x27;Shae Terry</a>: New case added to the archive: O'Shae Terry (Arlington, Texas, 2018), sourced from KERA News, Reason, and WFAA's coverage of the 2023 deferred-adjudication plea.</li>
+<li><a href="cases/robert-lawrence-white.html">Case #203 — Robert Lawrence White</a>: New case added to the archive: Robert Lawrence White (Silver Spring, Maryland, 2018), sourced from The Washington Post, WTOP News, and CourtListener's record of the dismissed federal lawsuit.</li>
+<li><a href="cases/charly-keunang.html">Case #202 — Charly “Africa” Keunang</a>: New case added to the archive: Charly “Africa” Keunang (Los Angeles, California, 2015), sourced from LAist, CBS Los Angeles, and CBC News.</li>
+<li><a href="cases/yvette-smith.html">Case #201 — Yvette Smith</a>: New case added to the archive: Yvette Smith (Camp Swift, Texas, 2014), sourced from the Austin American-Statesman, KXAN, and Fox 7 Austin.</li>
+<li><a href="cases/delrawn-small.html">Case #200 — Delrawn Small</a>: New case added to the archive, bringing the total to 200 cases: Delrawn Small (Brooklyn, New York, 2016), sourced from ABC7 New York, NBC New York, and the NAACP Legal Defense Fund.</li>
+<li><a href="cases/aaron-bailey.html">Case #199 — Aaron Bailey</a>: New case added to the archive: Aaron Bailey (Indianapolis, Indiana, 2017), sourced from WTHR, Fox 59, and the Indianapolis Recorder.</li>
+<li><a href="cases/sahleem-tindle.html">Case #198 — Sahleem Tindle</a>: New case added to the archive: Sahleem Tindle (Oakland, California, 2018), sourced from the San Francisco Chronicle, East Bay Express, and NBC Bay Area's coverage of the 2020 civil verdict.</li>
+<li><a href="cases/miles-jackson.html">Case #197 — Miles Jackson</a>: New case added to the archive: Miles Jackson (Westerville, Ohio, 2021), sourced from 10TV (WBNS), AP/CBS News Pittsburgh, and the Franklin County Prosecutor's Office's own statement.</li>
+<li><a href="cases/charleena-lyles.html">Case #196 — Charleena Lyles</a>: New case added to the archive: Charleena Lyles (Seattle, Washington, 2017), sourced from The Seattle Times, KIRO 7, and KING 5.</li>
+<li><a href="cases/george-tillman.html">Case #195 — George Tillman III</a>: New case added to the archive: George Tillman III (South Ozone Park, New York, 2016), sourced from QNS, DNAinfo, and Jurimatic's coverage of the 2025 civil verdict.</li>
+<li><a href="cases/thurman-blevins.html">Case #194 — Thurman Blevins</a>: New case added to the archive: Thurman Blevins (Minneapolis, Minnesota, 2018), sourced from the Star Tribune, MPR News, and PBS NewsHour.</li>
+<li><a href="cases/christopher-whitfield.html">Case #193 — Christopher Whitfield</a>: New case added to the archive: Christopher Whitfield (Ethel, Louisiana, 2019), sourced from The Advocate, The Washington Times/AP, and WBRZ.</li>
+<li><a href="cases/willie-tillman.html">Case #192 — Willie Tillman</a>: New case added to the archive: Willie Tillman (Fayetteville, Arkansas, 2016), sourced from the Arkansas Democrat-Gazette and KNWA/FOX24.</li>
+<li><a href="cases/tommie-mcglothen-jr.html">Case #191 — Tommie McGlothen Jr.</a>: New case added to the archive: Tommie McGlothen Jr. (Shreveport, Louisiana, 2020), sourced from KSLA, KTBS, and Yahoo News/AP.</li>
+<li><a href="cases/dejuan-guillory.html">Case #190 — DeJuan Guillory</a>: New case added to the archive: DeJuan Guillory (Mamou, Louisiana, 2017), sourced from CNN, KLFY, and The Advocate.</li>
+<li><a href="cases/alteria-woods.html">Case #189 — Alteria Woods</a>: New case added to the archive: Alteria Woods (Gifford, Florida, 2017), sourced from CBS12, WPTV, and Vero News's coverage of the grand jury and the 2021 trial.</li>
+<li><a href="cases/mickel-lewis-sr.html">Case #188 — Mickel Lewis Sr.</a>: New case added to the archive: Mickel Lewis Sr. (Mojave, California, 2020), sourced from KGET 17 News and the Davis Vanguard's coverage of the 2025 civil verdict.</li>
+<li><a href="cases/deon-kay.html">Case #187 — Deon Kay</a>: New case added to the archive: Deon Kay (Washington, D.C., 2020), sourced from The Washington Post, WUSA9, and The Washington Informer's coverage of the 2026 settlement.</li>
+<li><a href="cases/natasha-mckenna.html">Case #186 — Natasha McKenna</a>: New case added to the archive: Natasha McKenna (Fairfax, Virginia, 2015), a jail in-custody death, sourced from Wikipedia's citation trail, WAMU, and WTOP News.</li>
+<li><a href="cases/jamycheal-mitchell.html">Case #185 — Jamycheal Mitchell</a>: New case added to the archive: Jamycheal Mitchell (Portsmouth, Virginia, 2015), a jail in-custody death, sourced from the ACLU, WAVY, and 13News Now (WVEC).</li>
+<li><a href="cases/marvin-scott-iii.html">Case #184 — Marvin Scott III</a>: New case added to the archive: Marvin Scott III (McKinney, Texas, 2021), a jail in-custody death, sourced from The Texas Tribune, CNN, and CBS News Texas.</li>
+<li><a href="cases/michael-dean.html">Case #183 — Michael Dean</a>: New case added to the archive: Michael Dean (Temple, Texas, 2019), sourced from KWTX and 6 News (KCEN)'s coverage of the 2023 acquittal and the ongoing civil lawsuit.</li>
 <li><a href="cases/byron-williams.html">Case #182 — Byron Williams</a>: New case added to the archive: Byron Williams (Las Vegas, Nevada, 2019), sourced from the Las Vegas Review-Journal, Nevada Current, and Courthouse News Service's coverage of the 2024 civil ruling.</li>
 <li><a href="cases/walter-wallace-jr.html">Case #181 — Walter Wallace Jr.</a>: New case added to the archive: Walter Wallace Jr. (Philadelphia, Pennsylvania, 2020), sourced from The Philadelphia Inquirer's coverage of both his life and the 2021 settlement, and WHYY.</li>
 <li><a href="cases/kajuan-raye.html">Case #180 — Kajuan Raye</a>: New case added to the archive: Kajuan Raye (Chicago, Illinois, 2016), sourced from the Chicago Sun-Times and CBS News Chicago's coverage of the 2020 civil verdict.</li>
@@ -251,12 +330,14 @@
         <li><a href="cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="saved.html">Researcher's Dashboard</a></li>
-        <li><a href="statistics.html">Archive Statistics</a></li>
+        <li><a href="records-request.html">Public Records Request Generator</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>More</h4>
       <ul>
+        <li><a href="compare.html">Compare Cases</a></li>
+        <li><a href="statistics.html">Archive Statistics</a></li>
         <li><a href="quiz.html">Cold Case Quiz</a></li>
         <li><a href="research.html">How We Research</a></li>
         <li><a href="updates.html">Corrections & Updates</a></li>
@@ -304,6 +385,9 @@
 <script src="js/main.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/saved-cases.js"></script>
+<script src="js/records-request.js"></script>
+<script src="js/compare-cases.js"></script>
+<script src="js/research-checklist.js"></script>
 <script src="js/submit-form.js"></script>
 </body>
 </html>

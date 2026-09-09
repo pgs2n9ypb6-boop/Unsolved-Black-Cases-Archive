@@ -666,6 +666,101 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .case-save-btn:hover{ border-color:var(--amber); color:var(--text); }
 .case-save-btn.is-saved{ border-color:var(--amber); background:rgba(185,138,61,0.1); color:var(--amber); }
 
+.case-records-btn{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px; cursor:pointer;
+}
+.case-records-btn:hover{ border-color:var(--cyan); color:var(--text); }
+
+.case-compare-btn{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px; cursor:pointer;
+}
+.case-compare-btn:hover{ border-color:var(--amber); color:var(--text); }
+.case-compare-btn.in-compare{ border-color:var(--amber); background:rgba(185,138,61,0.1); color:var(--amber); }
+
+/* Citation export row (Researcher's Dashboard, Saved Sources section) */
+.dash-export-row{ display:flex; align-items:center; gap:10px; margin:0 0 12px; }
+
+/* Compare Cases page */
+.compare-picker{ margin:18px 0 22px; max-width:360px; }
+.compare-picker label{ display:block; font-family:var(--mono); font-size:.66rem; letter-spacing:.04em; text-transform:uppercase; color:var(--text-faint); margin-bottom:5px; }
+.compare-picker select{
+  width:100%; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text); font-family:var(--sans); font-size:.84rem; padding:9px 10px;
+}
+.compare-empty-state{ color:var(--text-dim); font-size:.88rem; padding:20px; background:var(--panel); border:1px solid var(--border-strong); border-radius:4px; }
+.compare-grid{ display:flex; gap:14px; overflow-x:auto; padding-bottom:10px; align-items:flex-start; }
+.compare-col{
+  flex:0 0 300px; background:var(--panel); border:1px solid var(--border-strong); border-radius:4px;
+  padding:16px; max-height:80vh; overflow-y:auto;
+}
+.compare-col-head{ padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid var(--border); }
+.compare-col-head h3{ font-size:1.05rem; margin:0 0 4px; color:var(--text); }
+.compare-col-head a{ color:inherit; }
+.compare-meta{ display:block; font-family:var(--mono); font-size:.68rem; color:var(--text-faint); margin-bottom:2px; }
+.compare-col-head .saved-remove{ margin-top:8px; }
+.compare-section{ margin-bottom:16px; }
+.compare-section h4{ font-family:var(--mono); font-size:.66rem; letter-spacing:.05em; text-transform:uppercase; color:var(--text-faint); margin:0 0 6px; }
+.compare-section p{ font-size:.82rem; color:var(--text-dim); line-height:1.5; margin:0; }
+.compare-section ul{ margin:0; padding-left:1.1em; }
+.compare-section li{ font-size:.8rem; color:var(--text-dim); margin-bottom:6px; line-height:1.45; }
+.compare-empty{ font-size:.8rem; color:var(--text-faint); font-style:italic; margin:0; }
+@media (max-width:640px){ .compare-col{ flex-basis:82vw; } }
+
+/* Public Records Request Generator modal — same overlay pattern as search */
+.records-overlay{
+  position:fixed; inset:0; background:rgba(4,4,5,0.82); backdrop-filter:blur(3px);
+  display:none; align-items:flex-start; justify-content:center; padding:5vh 16px; z-index:400; overflow-y:auto;
+}
+.records-overlay.open{ display:flex; }
+.records-modal{
+  width:100%; max-width:640px; background:var(--panel); border:1px solid var(--border-strong);
+  border-radius:4px; box-shadow:0 30px 60px rgba(0,0,0,0.6); margin-bottom:5vh;
+}
+.records-modal-head{
+  display:flex; align-items:center; justify-content:space-between; padding:16px 20px;
+  border-bottom:1px solid var(--border);
+}
+.records-modal-head .label{ font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-dim); }
+.records-close{ background:none; border:none; color:var(--text-faint); font-size:1.4rem; line-height:1; cursor:pointer; padding:2px 6px; }
+.records-close:hover{ color:var(--text); }
+.records-modal-body{ padding:18px 20px 22px; }
+.records-intro{ font-size:.82rem; color:var(--text-dim); margin:0 0 16px; }
+.records-field{ margin-bottom:14px; }
+.records-field label{ display:block; font-family:var(--mono); font-size:.66rem; letter-spacing:.04em; text-transform:uppercase; color:var(--text-faint); margin-bottom:5px; }
+.records-optional{ text-transform:none; letter-spacing:0; }
+.records-field select, .records-field input, .records-field textarea{
+  width:100%; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text); font-family:var(--sans); font-size:.84rem; padding:9px 10px;
+}
+.records-contact-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+.records-contact-list li{
+  background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+}
+.records-contact-list a{
+  display:block; padding:9px 11px; font-size:.8rem; color:var(--cyan);
+}
+.records-contact-list a:hover{ background:var(--panel); }
+.records-field textarea{ font-family:var(--mono); font-size:.76rem; line-height:1.5; resize:vertical; }
+.records-field select:focus, .records-field input:focus, .records-field textarea:focus{ outline:2px solid var(--cyan); outline-offset:1px; }
+.records-field-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:560px){ .records-field-row{ grid-template-columns:1fr; } }
+.records-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+.records-btn{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase;
+  padding:10px 16px; border-radius:2px; cursor:pointer;
+}
+.records-btn:hover{ border-color:var(--cyan); color:var(--text); }
+.records-btn.primary{ background:var(--cyan); color:#0d1410; border-color:transparent; font-weight:600; }
+.records-btn.primary:hover{ opacity:.9; }
+.records-copied{ font-family:var(--mono); font-size:.72rem; color:var(--cyan); margin:8px 0 0; }
+
+@media (max-width:640px){ .case-save-btn{ margin-left:0; } }
+
 /* Private Notes (Case Profile sidebar) */
 .pp-notes{ margin-top:18px; padding-top:16px; border-top:1px solid var(--border); }
 .pp-notes-head{ font-family:var(--sans); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px; }
@@ -676,6 +771,19 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 }
 .pp-notes textarea:focus{ outline:2px solid var(--amber); outline-offset:1px; }
 .pp-notes-status{ font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-top:5px; min-height:1em; }
+
+/* Research Checklist (Case Profile sidebar, and its echo on saved-case
+   cards in the Researcher's Dashboard) */
+.checklist-progress{ margin-bottom:10px; }
+.checklist-progress-text{ display:block; font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-bottom:4px; }
+.checklist-progress-bar{ display:block; height:5px; background:var(--panel-2); border-radius:3px; overflow:hidden; }
+.checklist-progress-bar span{ display:block; height:100%; background:var(--amber); transition:width .2s ease; }
+.research-checklist{ list-style:none; margin:0; padding:0; }
+.checklist-item{ margin-bottom:8px; }
+.checklist-item label{ display:flex; align-items:flex-start; gap:8px; cursor:pointer; font-size:.8rem; color:var(--text-dim); line-height:1.4; }
+.checklist-item input[type="checkbox"]{ flex:none; margin-top:2px; accent-color:var(--amber); width:15px; height:15px; cursor:pointer; }
+.checklist-item input[type="checkbox"]:checked + span{ color:var(--text-faint); text-decoration:line-through; }
+.saved-checklist-note{ border-left-color:var(--cyan); }
 
 /* Research note boxes (multiple, addable, per-case, saved in this browser) */
 .research-notes-list{ display:flex; flex-direction:column; gap:10px; margin-bottom:10px; }
@@ -707,7 +815,6 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
   font-family:var(--mono); font-size:.62rem; letter-spacing:.05em; text-transform:uppercase; padding:5px 9px; border-radius:2px; cursor:pointer;
 }
 .saved-remove:hover{ border-color:var(--crimson); color:var(--crimson-bright); }
-@media (max-width:640px){ .case-save-btn{ margin-left:0; } }
 .callout.warn{ border-left-color:var(--crimson); background:rgba(179,32,47,0.06); }
 
 /* ==========================================================================

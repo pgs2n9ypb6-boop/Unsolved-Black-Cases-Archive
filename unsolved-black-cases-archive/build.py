@@ -35,6 +35,33 @@ ADSENSE_ENABLED = False  # True only once ADSENSE_CLIENT_ID below is a real Publ
                          # ads.txt entry to every live visitor — caught in an audit and turned
                          # off here. Flip back to True once you have a real ID.
 
+# ---------------------------------------------------------------------------
+# Google Analytics 4 — real per-day/per-page visitor data, not just the
+# simple hit counter in the footer. This is what you'd actually show an
+# advertiser or use to negotiate a real number, instead of guessing from
+# the footer count. Setup (free, takes about 2 minutes):
+#   1. Go to https://analytics.google.com and sign in with any Google account.
+#   2. Click Admin (gear icon) -> Create Property. Name it anything
+#      (e.g. "UBCA"), set your timezone/currency, click through the
+#      defaults.
+#   3. When it asks for a "data stream", choose Web, enter
+#      https://www.unsolvedblackcases.com as the URL, give it a name, click
+#      Create stream.
+#   4. It'll show a "Measurement ID" that looks like G-ABC123XYZ9 — copy
+#      that and paste it below as GA4_MEASUREMENT_ID, then set
+#      GA4_ENABLED = True.
+#   5. Rebuild and redeploy. Give it a day, then check
+#      analytics.google.com -> Reports -> Realtime / Life cycle -> Traffic
+#      acquisition for real numbers, including which pages get visited and
+#      where traffic is coming from (TikTok, Facebook, direct, etc.) —
+#      exactly the kind of number an advertiser would actually ask for.
+# Left off by default with a placeholder ID, same reasoning as AdSense
+# above: a fake ID would just silently fail to load rather than break
+# anything, but there's no reason to ship dead tracking code either.
+# ---------------------------------------------------------------------------
+GA4_MEASUREMENT_ID = "G-XXXXXXXXXX"
+GA4_ENABLED = False  # True only once GA4_MEASUREMENT_ID above is a real ID from analytics.google.com
+
 # Used for canonical URLs and absolute Open Graph / Twitter Card image URLs.
 # Update this if the site ever moves to a different domain.
 SITE_URL = "https://www.unsolvedblackcases.com"
@@ -46,6 +73,8 @@ ARCHIVE_NOTE = ("This archive summarizes publicly available information and does
 NAV_DOCS = [
     ("About", "about.html"),
     ("Researcher's Dashboard", "saved.html"),
+    ("Public Records Request Generator", "records-request.html"),
+    ("Compare Cases", "compare.html"),
     ("Archive Statistics", "statistics.html"),
     ("Cold Case Quiz", "quiz.html"),
     ("How We Research", "research.html"),
@@ -2248,7 +2277,7 @@ CASES = [
     dict(id="frank-andrews", caseNumber="087", name="Frank Andrews",
          status="unsolved", caseType="homicide", year=1964, age=27, gender="male",
          city="Lisman", county="Choctaw County", state="AL", caseSeries=None,
-         dateAdded="2026-08-26",
+         dateAdded="2026-09-08",
          summary="Frank Andrews, 27, was shot in the back and killed on November 28, 1964 outside Smith's "
                  "Caf\u00e9 in Lisman, Alabama, by Quinnie Donald, a white Choctaw County sheriff's chief deputy. "
                  "Donald and another deputy said they were at the caf\u00e9, which served the local Black "
@@ -2280,7 +2309,7 @@ CASES = [
     dict(id="alexis-patterson", caseNumber="088", name="Alexis Patterson",
          status="unsolved", caseType="missing_persons", year=2002, age=7, gender="female",
          city="Milwaukee", county="Milwaukee County", state="WI", caseSeries=None,
-         dateAdded="2026-08-26",
+         dateAdded="2026-09-08",
          victimPhotos=[
              {"url": "https://www.fbi.gov/wanted/kidnap/alexis-s.-patterson/@@images/image/large",
               "caption": "Alexis S. Patterson", "credit": "FBI"},
@@ -2318,7 +2347,7 @@ CASES = [
     dict(id="nacomie-freeman", caseNumber="089", name="Nacomie Freeman",
          status="unsolved", caseType="homicide", year=2004, age=24, gender="female",
          city="Phoenix", county="Maricopa County", state="AZ", caseSeries=None,
-         dateAdded="2026-08-26",
+         dateAdded="2026-09-08",
          summary="Nacomie Freeman, 24, was shot in the stomach and pushed out of a moving truck in the 1600 "
                  "block of West Denton Avenue in Phoenix, Arizona, on June 24, 2004. Witnesses reported seeing "
                  "her pushed from a dark-colored, late-1990s-model short-bed truck; she was pronounced dead at "
@@ -2344,7 +2373,7 @@ CASES = [
     dict(id="quincy-booker", caseNumber="090", name="Quincy Booker",
          status="unsolved", caseType="homicide", year=2011, age=36, gender="male",
          city="Albuquerque", county="Bernalillo County", state="NM", caseSeries=None,
-         dateAdded="2026-08-26",
+         dateAdded="2026-09-08",
          summary="Quincy Booker, 36, was shot and killed in a drive-by shooting near the intersection of Arno "
                  "Avenue and Santa Fe Avenue Southeast in Albuquerque, New Mexico, on July 17, 2011. Witnesses "
                  "said four men got out of a blue Dodge Neon and opened fire, hitting him more than a dozen "
@@ -2366,7 +2395,7 @@ CASES = [
     dict(id="julius-dubouse", caseNumber="091", name="Julius Dubouse",
          status="unsolved", caseType="homicide", year=1998, age=45, gender="male",
          city="Anchorage", county=None, state="AK", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Julius Dubouse, 45, died in Anchorage, Alaska in the early morning hours of December 3, 1998, "
                  "after an accelerant was thrown through the back window of his residence. The Anchorage Police "
                  "Department's Cold Case Section, whose mission is to systematically review unsolved deaths in "
@@ -2392,7 +2421,7 @@ CASES = [
     dict(id="kierre-davies", caseNumber="092", name="Kierre Davies",
          status="unsolved", caseType="homicide", year=2022, age=27, gender="male",
          city="Fargo", county="Cass County", state="ND", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Kierre Davies, 27, was shot and killed alongside his friend and fellow rapper, 28-year-old "
                  "Jaquan Gatewood, in the early morning hours of November 19, 2022, outside a house near the "
                  "North Dakota State University campus in Fargo. Both men were at a gathering at the home; "
@@ -2427,7 +2456,7 @@ CASES = [
     dict(id="emmett-till", caseNumber="093", name="Emmett Till",
          status="unsolved", caseType="homicide", year=1955, age=14, gender="male",
          city="Money", county="Leflore County", state="MS", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Emmett Till, 14, of Chicago, was abducted from his great-uncle's home near Money, "
                  "Mississippi, on August 28, 1955, and beaten, shot, and thrown into the Tallahatchie River "
                  "after Carolyn Bryant, a white woman working at a local store, accused him of grabbing her "
@@ -2477,7 +2506,7 @@ CASES = [
     dict(id="malcolm-x", caseNumber="094", name="Malcolm X",
          status="unsolved", caseType="homicide", year=1965, age=39, gender="male",
          city="New York", county="New York County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Malcolm X, 39, was shot and killed while delivering a speech at the Audubon Ballroom in the "
                  "Washington Heights neighborhood of Manhattan on February 21, 1965. Talmadge Hayer (also known "
                  "as Mujahid Abdul Halim) was caught at the scene and confessed to being one of the shooters; "
@@ -2519,7 +2548,7 @@ CASES = [
     dict(id="fred-hampton", caseNumber="095", name="Fred Hampton",
          status="unsolved", caseType="homicide", year=1969, age=21, gender="male",
          city="Chicago", county="Cook County", state="IL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Fred Hampton, 21, chairman of the Illinois chapter of the Black Panther Party, was shot and "
                  "killed in his bed during a pre-dawn raid on his Chicago apartment on December 4, 1969, "
                  "carried out by a tactical unit assembled by Cook County State's Attorney Edward Hanrahan in "
@@ -2565,7 +2594,7 @@ CASES = [
     dict(id="amadou-diallo", caseNumber="096", name="Amadou Diallo",
          status="unsolved", caseType="homicide", year=1999, age=23, gender="male",
          city="New York", county="Bronx County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Amadou Diallo, 23, an unarmed immigrant from Guinea, was shot and killed just after midnight "
                  "on February 4, 1999 outside his Bronx apartment building by four plainclothes NYPD Street "
                  "Crime Unit officers, who fired 41 rounds, 19 of which struck him. The officers said they "
@@ -2609,7 +2638,7 @@ CASES = [
     dict(id="sean-bell", caseNumber="097", name="Sean Bell",
          status="unsolved", caseType="homicide", year=2006, age=23, gender="male",
          city="Queens", county="Queens County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Sean Bell, 23, was shot and killed by NYPD undercover officers in Jamaica, Queens in the "
                  "early morning hours of November 25, 2006 \u2014 the day he was to be married. Officers fired "
                  "50 rounds at Bell and his two friends, Trent Benefield and Joseph Guzman, as the men left "
@@ -2653,7 +2682,7 @@ CASES = [
     dict(id="trayvon-martin", caseNumber="098", name="Trayvon Martin",
          status="unsolved", caseType="homicide", year=2012, age=17, gender="male",
          city="Sanford", county="Seminole County", state="FL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Trayvon Martin, 17, was shot and killed by George Zimmerman, a neighborhood watch volunteer, "
                  "inside a gated community in Sanford, Florida on February 26, 2012. Martin was unarmed, "
                  "walking back from a convenience store. Zimmerman, who had called police to report Martin as "
@@ -2696,7 +2725,7 @@ CASES = [
     dict(id="freddie-gray", caseNumber="099", name="Freddie Gray",
          status="unsolved", caseType="homicide", year=2015, age=25, gender="male",
          city="Baltimore", county=None, state="MD", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Freddie Gray, 25, suffered a fatal spinal cord injury while in the back of a Baltimore Police "
                  "transport van after his arrest on April 12, 2015, and died a week later. The city medical "
                  "examiner ruled his death a homicide. Six officers were criminally charged, with counts "
@@ -2740,7 +2769,7 @@ CASES = [
     dict(id="breonna-taylor", caseNumber="100", name="Breonna Taylor",
          status="unsolved", caseType="homicide", year=2020, age=26, gender="female",
          city="Louisville", county="Jefferson County", state="KY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Breonna Taylor, 26, an emergency room technician, was shot and killed by Louisville Metro "
                  "Police officers executing a no-knock search warrant at her apartment shortly after midnight "
                  "on March 13, 2020. The warrant was later found to have been based on falsified information. "
@@ -2786,7 +2815,7 @@ CASES = [
     dict(id="rekia-boyd", caseNumber="101", name="Rekia Boyd",
          status="unsolved", caseType="homicide", year=2012, age=22, gender="female",
          city="Chicago", county="Cook County", state="IL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Rekia Boyd, 22, was shot and killed by off-duty Chicago Police Detective Dante Servin near "
                  "Douglas Park on the city's West Side in the early hours of March 21, 2012. Servin, in his car "
                  "in a nearby alley, fired five shots over his shoulder at a group Boyd was part of, striking a "
@@ -2838,7 +2867,7 @@ CASES = [
     dict(id="eric-garner", caseNumber="102", name="Eric Garner",
          status="unsolved", caseType="homicide", year=2014, age=43, gender="male",
          city="Staten Island", county="Richmond County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Eric Garner, 43, died on July 17, 2014 after NYPD Officer Daniel Pantaleo placed him in an "
                  "apparent chokehold \u2014 a maneuver banned under NYPD policy \u2014 while arresting him on "
                  "suspicion of selling untaxed loose cigarettes on a Staten Island street corner. Bystander "
@@ -2887,7 +2916,7 @@ CASES = [
     dict(id="tamir-rice", caseNumber="103", name="Tamir Rice",
          status="unsolved", caseType="homicide", year=2014, age=12, gender="male",
          city="Cleveland", county="Cuyahoga County", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Tamir Rice, 12, was shot and killed by rookie Cleveland Police Officer Timothy Loehmann on "
                  "November 22, 2014, within two seconds of Loehmann's patrol car skidding to a stop beside him "
                  "outside a recreation center. Rice had been playing with a pellet gun; the 911 caller told the "
@@ -2937,7 +2966,7 @@ CASES = [
     dict(id="philando-castile", caseNumber="104", name="Philando Castile",
          status="unsolved", caseType="homicide", year=2016, age=32, gender="male",
          city="Falcon Heights", county="Ramsey County", state="MN", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Philando Castile, 32, a St. Paul-area elementary school cafeteria supervisor, was shot and "
                  "killed by St. Anthony Police Officer Jeronimo Yanez during a traffic stop in Falcon Heights, "
                  "Minnesota on July 6, 2016. Castile, who had a permit to carry, calmly informed Yanez he had a "
@@ -2982,7 +3011,7 @@ CASES = [
     dict(id="stephon-clark", caseNumber="105", name="Stephon Clark",
          status="unsolved", caseType="homicide", year=2018, age=22, gender="male",
          city="Sacramento", county="Sacramento County", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Stephon Clark, 22, was shot and killed by Sacramento Police officers Terrence Mercadal and "
                  "Jared Robinet in his grandmother's backyard on March 18, 2018, after they responded to a "
                  "report of vandalism and pursued him on foot. The officers said they believed Clark was "
@@ -3029,7 +3058,7 @@ CASES = [
     dict(id="michael-brown", caseNumber="106", name="Michael Brown",
          status="unsolved", caseType="homicide", year=2014, age=18, gender="male",
          city="Ferguson", county="St. Louis County", state="MO", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Michael Brown, 18, was shot and killed by Ferguson, Missouri Police Officer Darren Wilson "
                  "on August 9, 2014, following a confrontation after Wilson stopped Brown and a friend for "
                  "walking in the street. Brown's body remained in the street for roughly four hours afterward, "
@@ -3080,7 +3109,7 @@ CASES = [
     dict(id="alton-sterling", caseNumber="107", name="Alton Sterling",
          status="unsolved", caseType="homicide", year=2016, age=37, gender="male",
          city="Baton Rouge", county="East Baton Rouge Parish", state="LA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Alton Sterling, 37, a father of five who sold homemade CDs outside a Baton Rouge convenience "
                  "store, was shot and killed by Officers Blane Salamoni and Howie Lake II on July 5, 2016, "
                  "during a struggle after the two officers responded to a report of a man threatening someone "
@@ -3128,7 +3157,7 @@ CASES = [
     dict(id="john-crawford-iii", caseNumber="108", name="John Crawford III",
          status="unsolved", caseType="homicide", year=2014, age=22, gender="male",
          city="Beavercreek", county="Greene County", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="John Crawford III, 22, was shot and killed by Beavercreek, Ohio Police Officer Sean Williams "
                  "inside a Walmart store on August 5, 2014, while talking on his cell phone and holding an "
                  "unboxed BB/pellet air rifle he had picked up from a store shelf. A 911 caller, Ronald "
@@ -3176,7 +3205,7 @@ CASES = [
     dict(id="sandra-bland", caseNumber="109", name="Sandra Bland",
          status="unsolved", caseType="homicide", year=2015, age=28, gender="female",
          city="Prairie View", county="Waller County", state="TX", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Sandra Bland, 28, was found dead in her cell at the Waller County Jail in Hempstead, Texas "
                  "on July 13, 2015, three days after Texas State Trooper Brian Encinia arrested her during a "
                  "traffic stop in nearby Prairie View for failing to signal a lane change. Dashcam video showed "
@@ -3233,7 +3262,7 @@ CASES = [
     dict(id="terence-crutcher", caseNumber="110", name="Terence Crutcher",
          status="unsolved", caseType="homicide", year=2016, age=40, gender="male",
          city="Tulsa", county="Tulsa County", state="OK", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Terence Crutcher, 40, was shot and killed by Tulsa Police Officer Betty Shelby on September "
                  "16, 2016, after she encountered him beside his stalled SUV in the middle of a north Tulsa "
                  "street. Video from a police helicopter piloted by Shelby's own husband and from officers' "
@@ -3279,7 +3308,7 @@ CASES = [
     dict(id="samuel-dubose", caseNumber="111", name="Samuel DuBose",
          status="unsolved", caseType="homicide", year=2015, age=43, gender="male",
          city="Cincinnati", county="Hamilton County", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Samuel DuBose, 43, was shot in the head and killed by University of Cincinnati Police Officer "
                  "Ray Tensing during a traffic stop on July 19, 2015, after Tensing pulled him over for a "
                  "missing front license plate. Body camera video showed a brief exchange over DuBose's license "
@@ -3331,7 +3360,7 @@ CASES = [
     dict(id="keith-lamont-scott", caseNumber="112", name="Keith Lamont Scott",
          status="unsolved", caseType="homicide", year=2016, age=43, gender="male",
          city="Charlotte", county="Mecklenburg County", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Keith Lamont Scott, 43, a father of seven, was shot and killed by Charlotte-Mecklenburg "
                  "Police Officer Brentley Vinson on September 20, 2016, in an apartment complex parking lot. "
                  "Officers were at the complex to serve a warrant on someone else when they encountered Scott, "
@@ -3380,7 +3409,7 @@ CASES = [
     dict(id="ezell-ford", caseNumber="113", name="Ezell Ford",
          status="unsolved", caseType="homicide", year=2014, age=25, gender="male",
          city="Los Angeles", county="Los Angeles County", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Ezell Ford, 25, who his family said had a serious mental illness, was shot and killed by LAPD "
                  "Officers Sharlton Wampler and Antonio Villegas on August 11, 2014, during a struggle after "
                  "the officers stopped him while he was walking near his South Los Angeles home. Police said "
@@ -3433,7 +3462,7 @@ CASES = [
     dict(id="danroy-henry-jr", caseNumber="114", name="Danroy Henry Jr.",
          status="unsolved", caseType="homicide", year=2010, age=20, gender="male",
          city="Thornwood", county="Westchester County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Danroy \u201cDJ\u201d Henry Jr., 20, a Pace University football player, was shot and killed "
                  "by Pleasantville, New York Police Officer Aaron Hess on October 17, 2010, in a shopping "
                  "center parking lot after officers responded to a bar disturbance following Pace's homecoming "
@@ -3485,7 +3514,7 @@ CASES = [
     dict(id="kenneth-chamberlain-sr", caseNumber="115", name="Kenneth Chamberlain Sr.",
          status="unsolved", caseType="homicide", year=2011, age=68, gender="male",
          city="White Plains", county="Westchester County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Kenneth Chamberlain Sr., 68, a retired Marine and 20-year Westchester County corrections "
                  "officer with a chronic heart condition, was shot and killed in his own White Plains apartment "
                  "on November 19, 2011, after his medical alert pendant was triggered accidentally. Chamberlain "
@@ -3534,7 +3563,7 @@ CASES = [
     dict(id="jonathan-ferrell", caseNumber="116", name="Jonathan Ferrell",
          status="unsolved", caseType="homicide", year=2013, age=24, gender="male",
          city="Charlotte", county="Mecklenburg County", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jonathan Ferrell, 24, a former Florida A&M football player, was shot and killed by "
                  "Charlotte-Mecklenburg Police Officer Randall \u201cWes\u201d Kerrick on September 14, 2013, "
                  "after crawling from a wrecked car and banging on a nearby house's door seeking help; the "
@@ -3580,7 +3609,7 @@ CASES = [
     dict(id="milton-hall", caseNumber="117", name="Milton Hall",
          status="unsolved", caseType="homicide", year=2012, age=49, gender="male",
          city="Saginaw", county="Saginaw County", state="MI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Milton Hall, 49, a homeless man with a documented history of mental illness, was shot and "
                  "killed by six Saginaw, Michigan police officers on July 1, 2012, in a parking lot after a "
                  "dispute with a convenience store clerk. Eight officers formed a semicircle around Hall, who "
@@ -3633,7 +3662,7 @@ CASES = [
     dict(id="miriam-carey", caseNumber="118", name="Miriam Carey",
          status="unsolved", caseType="homicide", year=2013, age=34, gender="female",
          city="Washington", county=None, state="DC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Miriam Carey, 34, a dental hygienist from Stamford, Connecticut, was shot and killed by U.S. "
                  "Secret Service and Capitol Police officers on October 3, 2013, after a seven-minute car chase "
                  "that began when she drove into a restricted checkpoint near the White House with her 1-year-old "
@@ -3679,7 +3708,7 @@ CASES = [
     dict(id="daniel-prude", caseNumber="119", name="Daniel Prude",
          status="unsolved", caseType="homicide", year=2020, age=41, gender="male",
          city="Rochester", county="Monroe County", state="NY", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Daniel Prude, 41, a father of five visiting Rochester, New York from Chicago, died on March "
                  "30, 2020, a week after Rochester police officers restrained him naked on a snow-covered street "
                  "during a mental health crisis. Body-camera video, not made public until September 2020, "
@@ -3731,7 +3760,7 @@ CASES = [
     dict(id="manuel-ellis", caseNumber="120", name="Manuel Ellis",
          status="unsolved", caseType="homicide", year=2020, age=33, gender="male",
          city="Tacoma", county="Pierce County", state="WA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Manuel \u201cManny\u201d Ellis, 33, died in a south Tacoma, Washington intersection on March "
                  "3, 2020, after Tacoma police officers tackled, punched, shocked him with a Taser, and "
                  "restrained him face-down while he repeatedly told them he could not breathe. The Pierce "
@@ -3783,7 +3812,7 @@ CASES = [
     dict(id="relisha-rudd", caseNumber="121", name="Relisha Rudd",
          status="unsolved", caseType="missing_persons", year=2014, age=8, gender="female",
          city="Washington", county=None, state="DC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          victimPhotos=[
              {"url": "https://www.fbi.gov/wanted/kidnap/relisha-tenau-rudd/@@images/image/large",
               "caption": "Relisha Tenau Rudd", "credit": "FBI"},
@@ -3833,7 +3862,7 @@ CASES = [
     dict(id="asha-degree", caseNumber="122", name="Asha Degree",
          status="unsolved", caseType="missing_persons", year=2000, age=9, gender="female",
          city="Shelby", county="Cleveland", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          victimPhotos=[
              {"url": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2017_06/1897191/asha_degree_photo.jpg",
               "caption": "Asha Degree", "credit": "FBI, via NBC News"},
@@ -3883,7 +3912,7 @@ CASES = [
     dict(id="keeshae-jacobs", caseNumber="123", name="Keeshae Jacobs",
          status="unsolved", caseType="missing_persons", year=2016, age=21, gender="female",
          city="Richmond", county=None, state="VA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Keeshae Jacobs, 21, disappeared in Richmond, Virginia after visiting a male friend's home on "
                  "September 26, 2016. She texted her mother, Toni Jacobs, that she had arrived safely and would "
                  "see her the next day; she was never heard from again. Richmond Police publicly stated in "
@@ -3930,7 +3959,7 @@ CASES = [
     dict(id="kierra-coles", caseNumber="124", name="Kierra Coles",
          status="unsolved", caseType="missing_persons", year=2018, age=26, gender="female",
          city="Chicago", county="Cook", state="IL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Kierra Coles, 26, a U.S. Postal Service letter carrier who was three months pregnant, "
                  "disappeared from Chicago's Chatham neighborhood on October 2, 2018, after calling in sick to "
                  "work. Surveillance footage that day showed her walking near her apartment in her postal "
@@ -3978,7 +4007,7 @@ CASES = [
     dict(id="nakyla-williams", caseNumber="125", name="Nakyla Williams",
          status="unsolved", caseType="missing_persons", year=2021, age=24, gender="female",
          city="Indianapolis", county=None, state="IN", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Nakyla Williams, 24, a hairstylist who ran a salon out of her basement, disappeared in "
                  "Indianapolis, Indiana on November 8, 2021, after a doorbell camera captured her getting into "
                  "a loud, gray or white pickup truck outside her mother's home. She was later seen at a "
@@ -4020,7 +4049,7 @@ CASES = [
     dict(id="jahi-turner", caseNumber="126", name="Jahi Turner",
          status="unsolved", caseType="missing_persons", year=2002, age=2, gender="male",
          city="San Diego", county="San Diego", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jahi Turner, 2, disappeared from a Golden Hill-area playground in San Diego on April 25, "
                  "2002, while in the care of his stepfather, Tieray Jones, whose 18-year-old Navy sailor wife "
                  "was deployed at sea. Jones told police he left Jahi with a woman and other children at the "
@@ -4073,7 +4102,7 @@ CASES = [
     dict(id="anwar-green", caseNumber="127", name="Anwar Green",
          status="unsolved", caseType="missing_persons", year=2001, age=None, gender="male",
          city="Newark", county="Essex", state="NJ", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Anwar Green disappeared in Newark, New Jersey on January 19, 2001, after he and his friend "
                  "Rahim Martin cashed a civil lawsuit settlement check for over $8,000 at a bank in downtown "
                  "Newark. Surveillance footage showed Green appearing nervous and repeatedly glancing at the "
@@ -4109,7 +4138,7 @@ CASES = [
     dict(id="brown-family", caseNumber="128", name="Carolyn, Sheketah, Barry & Brandon Brown",
          status="unsolved", caseType="missing_persons", year=1985, age=None, gender=None,
          city="Port St. Lucie", county="St. Lucie", state="FL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Carolyn Denise Brown, 27, and her three children \u2014 10-year-old Sheketah, 6-year-old "
                  "Barry, and 2-year-old Brandon \u2014 disappeared from their Port St. Lucie, Florida home in "
                  "July 1985. Carolyn's mother alerted police in August after weeks without contact; officers "
@@ -4161,7 +4190,7 @@ CASES = [
     dict(id="jalesa-reynolds", caseNumber="129", name="Jalesa Chantell Reynolds",
          status="unsolved", caseType="missing_persons", year=2010, age=None, gender="female",
          city="Scotland Neck", county="Halifax", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jalesa Chantell Reynolds, a shy teenager described by loved ones as more outgoing online "
                  "than in person, disappeared from Scotland Neck, North Carolina on February 22, 2010. She had "
                  "logged onto Facebook that morning from the public library, then logged on again that "
@@ -4191,7 +4220,7 @@ CASES = [
     dict(id="tasha-wright", caseNumber="130", name="Tasha Shante Wright",
          status="unsolved", caseType="missing_persons", year=1989, age=10, gender="female",
          city="Dallas", county="Dallas", state="TX", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Tasha Shante Wright, 10, a gifted-and-talented fourth-grader, disappeared while walking a "
                  "short distance within her own apartment complex in east Dallas, Texas on October 14, 1989. "
                  "She successfully delivered a message from her mother to a neighbor's apartment, but never "
@@ -4229,7 +4258,7 @@ CASES = [
     dict(id="barbara-dreher", caseNumber="131", name="Barbara Jean Dreher",
          status="unsolved", caseType="missing_persons", year=1984, age=39, gender="female",
          city="Washington", county=None, state="DC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Barbara Jean Dreher, 39, a mother of five who had worked as a Washington, D.C. public school "
                  "secretary for fifteen years, disappeared on August 12, 1984 after dropping her two young "
                  "sons off at her adult daughter's home, telling them she was going to pick up some money and "
@@ -4272,7 +4301,7 @@ CASES = [
     dict(id="millbrook-twins", caseNumber="132", name="Dannette & Jeannette Millbrook",
          status="unsolved", caseType="missing_persons", year=1990, age=15, gender="female",
          city="Augusta", county="Richmond", state="GA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Dannette and Jeannette Millbrook, 15-year-old fraternal twins, disappeared in Augusta, "
                  "Georgia on March 18, 1990, after walking to a nearby gas station for snacks and telling "
                  "their mother a man in a van had followed part of their route earlier that day. A gas station "
@@ -4319,7 +4348,7 @@ CASES = [
     dict(id="pshara-jones", caseNumber="133", name="Pshara Marie Jones",
          status="unsolved", caseType="missing_persons", year=2015, age=20, gender="female",
          city="Claremore", county="Rogers", state="OK", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Pshara Marie Jones, 20, a pharmacy employee, left her family's home in Claremore, Oklahoma "
                  "on foot and without her phone on the evening of September 21, 2015, following an argument. "
                  "Bank records show two transactions that same night, including one at a convenience store, "
@@ -4357,7 +4386,7 @@ CASES = [
     dict(id="clinton-avenue-five", caseNumber="134", name="The Clinton Avenue Five",
          status="unsolved", caseType="missing_persons", year=1978, age=None, gender="male",
          city="Newark", county="Essex", state="NJ", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Melvin Pittman, 17, Ernest Taylor, 17, Alvin Turner, 16, Randy Johnson, 16, and Michael "
                  "McDowell, 16 \u2014 five teenagers known as the Clinton Avenue Five \u2014 vanished together "
                  "in Newark, New Jersey on August 20, 1978, after playing basketball and getting into a pickup "
@@ -4413,7 +4442,7 @@ CASES = [
     dict(id="anthony-lamar-smith", caseNumber="135", name="Anthony Lamar Smith",
          status="unsolved", caseType="homicide", year=2011, age=24, gender="male",
          city="St. Louis", county="St. Louis", state="MO", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Anthony Lamar Smith, 24, was shot and killed by St. Louis Police Officer Jason Stockley on "
                  "December 20, 2011, after a high-speed chase that began when Stockley believed he witnessed a "
                  "drug transaction outside a Church's Chicken. Dashcam audio captured Stockley telling his "
@@ -4462,7 +4491,7 @@ CASES = [
     dict(id="christian-taylor", caseNumber="136", name="Christian Taylor",
          status="unsolved", caseType="homicide", year=2015, age=19, gender="male",
          city="Arlington", county="Tarrant", state="TX", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Christian Taylor, 19, an Angelo State University football player, was shot and killed by "
                  "rookie Arlington, Texas Police Officer Brad Miller on August 7, 2015, inside a car "
                  "dealership showroom he had broken into and was vandalizing while, an autopsy later showed, "
@@ -4509,7 +4538,7 @@ CASES = [
     dict(id="kajieme-powell", caseNumber="137", name="Kajieme Powell",
          status="unsolved", caseType="homicide", year=2014, age=25, gender="male",
          city="St. Louis", county="St. Louis", state="MO", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Kajieme Powell, 25, was shot and killed by St. Louis Police Officers Nicholas Shelton and "
                  "Ellis Brown outside a convenience store on August 19, 2014 \u2014 ten days after the "
                  "shooting of Michael Brown in nearby Ferguson. Officers responding to a report of shoplifting "
@@ -4560,7 +4589,7 @@ CASES = [
     dict(id="vonderrit-myers-jr", caseNumber="138", name="VonDerrit Myers Jr.",
          status="unsolved", caseType="homicide", year=2014, age=18, gender="male",
          city="St. Louis", county="St. Louis", state="MO", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="VonDerrit Myers Jr., 18, was shot and killed by an off-duty St. Louis police officer, Jason "
                  "Flanery, working a private security patrol job on October 8, 2014, in the city's Shaw "
                  "neighborhood \u2014 exactly two months after Michael Brown's death in nearby Ferguson. Police "
@@ -4610,7 +4639,7 @@ CASES = [
     dict(id="legrier-and-jones", caseNumber="139", name="Quintonio LeGrier & Bettie Jones",
          status="unsolved", caseType="homicide", year=2015, age=None, gender=None,
          city="Chicago", county="Cook", state="IL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Quintonio LeGrier, 19, a Northern Illinois University student experiencing a mental health "
                  "crisis, and Bettie Jones, 55, his family's downstairs neighbor, were both shot and killed by "
                  "Chicago Police Officer Robert Rialmo on December 26, 2015, while responding to a domestic "
@@ -4667,7 +4696,7 @@ CASES = [
     dict(id="willie-mccoy", caseNumber="140", name="Willie McCoy",
          status="unsolved", caseType="homicide", year=2019, age=20, gender="male",
          city="Vallejo", county="Solano", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Willie McCoy, 20, a local rapper, was shot and killed by six Vallejo, California police "
                  "officers who fired 55 rounds at him in 3.5 seconds on February 9, 2019, after he was found "
                  "asleep behind the wheel of his car in a Taco Bell drive-thru with a handgun in his lap. "
@@ -4719,7 +4748,7 @@ CASES = [
     dict(id="marcus-david-peters", caseNumber="141", name="Marcus-David Peters",
          status="unsolved", caseType="homicide", year=2018, age=24, gender="male",
          city="Richmond", county=None, state="VA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Marcus-David Peters, 24, a high school biology teacher, was shot and killed by Richmond, "
                  "Virginia Police Officer Michael Nyantakyi on May 14, 2018, during a mental health crisis. "
                  "Peters struck several vehicles with his car, crashed near an Interstate 95 ramp, then emerged "
@@ -4771,7 +4800,7 @@ CASES = [
     dict(id="ronell-foster", caseNumber="142", name="Ronell Foster",
          status="unsolved", caseType="homicide", year=2018, age=33, gender="male",
          city="Vallejo", county="Solano", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Ronell Foster, 33, a father of two, was shot and killed by Vallejo, California Police "
                  "Officer Ryan McMahon on February 13, 2018, after McMahon tried to stop him for riding his "
                  "bicycle without a headlight. Foster fled on foot after a chase; McMahon Tased him twice "
@@ -4827,7 +4856,7 @@ CASES = [
     dict(id="mansur-ball-bey", caseNumber="143", name="Mansur Ball-Bey",
          status="unsolved", caseType="homicide", year=2015, age=18, gender="male",
          city="St. Louis", county="St. Louis", state="MO", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Mansur Ball-Bey, 18, was shot and killed by St. Louis Police Officers Kyle Chandler and "
                  "Ronald Vaughan while they were serving a search warrant in the Fountain Park neighborhood on "
                  "August 19, 2015. Police said Ball-Bey pointed a gun at officers as he ran out the back door "
@@ -4881,7 +4910,7 @@ CASES = [
     dict(id="stephon-watts", caseNumber="144", name="Stephon Watts",
          status="unsolved", caseType="homicide", year=2012, age=15, gender="male",
          city="Calumet City", county="Cook", state="IL", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Stephon Watts, 15, who was diagnosed with Asperger's syndrome and ADHD, was shot and killed "
                  "in his own basement by Calumet City, Illinois police officers on February 1, 2012, after his "
                  "father called the department's non-emergency line for help during an argument over school \u2014 "
@@ -4935,7 +4964,7 @@ CASES = [
     dict(id="dontre-hamilton", caseNumber="145", name="Dontre Hamilton",
          status="unsolved", caseType="homicide", year=2014, age=31, gender="male",
          city="Milwaukee", county="Milwaukee", state="WI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Dontre Hamilton, 31, who had schizophrenia, was shot 13 or 14 times and killed by Milwaukee "
                  "Police Officer Christopher Manney at Red Arrow Park on April 30, 2014, after Manney conducted "
                  "a pat-down search while responding to a call about a man sleeping in the park. Manney said "
@@ -4985,7 +5014,7 @@ CASES = [
     dict(id="jerame-reid", caseNumber="146", name="Jerame Reid",
          status="unsolved", caseType="homicide", year=2014, age=36, gender="male",
          city="Bridgeton", county="Cumberland", state="NJ", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jerame Reid, 36, was shot and killed by Bridgeton, New Jersey Police Officer Braheme Days on "
                  "December 30, 2014, moments after Reid stepped out of a car with his hands raised during a "
                  "traffic stop for running a stop sign. Dashcam video, released publicly in January 2015, "
@@ -5035,7 +5064,7 @@ CASES = [
     dict(id="jamar-clark", caseNumber="147", name="Jamar Clark",
          status="unsolved", caseType="homicide", year=2015, age=24, gender="male",
          city="Minneapolis", county="Hennepin", state="MN", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jamar Clark, 24, was shot in the head by Minneapolis Police Officer Dustin Schwarze on "
                  "November 15, 2015, during a struggle after officers responded to a report that Clark had "
                  "assaulted his girlfriend and interfered with paramedics. Witnesses at the scene told police "
@@ -5086,7 +5115,7 @@ CASES = [
     dict(id="jason-harrison", caseNumber="148", name="Jason Harrison",
          status="unsolved", caseType="homicide", year=2014, age=38, gender="male",
          city="Dallas", county="Dallas", state="TX", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jason Harrison, 38, who had bipolar disorder and schizophrenia, was shot five times and "
                  "killed by Dallas Police Officers John Rogers and Andrew Hutchins on June 14, 2014, within "
                  "seconds of appearing in his own doorway holding a screwdriver. His mother, Shirley Harrison, "
@@ -5136,7 +5165,7 @@ CASES = [
     dict(id="alfred-olango", caseNumber="149", name="Alfred Olango",
          status="unsolved", caseType="homicide", year=2016, age=38, gender="male",
          city="El Cajon", county="San Diego", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Alfred Olango, 38, a Ugandan refugee who had lived in the U.S. since childhood, was shot "
                  "and killed by El Cajon, California Police Officer Richard Gonsalves on September 27, 2016, "
                  "within about two minutes of officers arriving in response to his sister's 911 call reporting "
@@ -5186,7 +5215,7 @@ CASES = [
     dict(id="india-kager", caseNumber="150", name="India Kager",
          status="unsolved", caseType="homicide", year=2015, age=27, gender="female",
          city="Virginia Beach", county=None, state="VA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="India Kager, 27, a Navy veteran, mother, and U.S. Postal Service worker, was shot and killed "
                  "by Virginia Beach SWAT officers on September 5, 2015, when they opened fire on her car in a "
                  "7-Eleven parking lot after her passenger, Angelo Perry \u2014 the father of her four-month-"
@@ -5239,7 +5268,7 @@ CASES = [
     dict(id="jayland-walker", caseNumber="151", name="Jayland Walker",
          status="unsolved", caseType="homicide", year=2022, age=25, gender="male",
          city="Akron", county="Summit", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jayland Walker, 25, was shot and killed by eight Akron, Ohio police officers on June 27, "
                  "2022, after fleeing a traffic stop for a broken taillight, firing a single shot from his car "
                  "during the pursuit, then exiting and running on foot. Police said Walker, who was unarmed "
@@ -5286,7 +5315,7 @@ CASES = [
     dict(id="takiya-young", caseNumber="152", name="Ta'Kiya Young",
          status="unsolved", caseType="homicide", year=2023, age=21, gender="female",
          city="Blendon Township", county="Franklin", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Ta'Kiya Young, 21, seven months pregnant with her third child, was shot and killed by "
                  "Blendon Township, Ohio Police Officer Connor Grubb on August 24, 2023, in a Kroger parking "
                  "lot after being accused of shoplifting alcohol. Body camera footage showed Grubb standing in "
@@ -5334,7 +5363,7 @@ CASES = [
     dict(id="patrick-lyoya", caseNumber="153", name="Patrick Lyoya",
          status="unsolved", caseType="homicide", year=2022, age=26, gender="male",
          city="Grand Rapids", county="Kent", state="MI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Patrick Lyoya, 26, a Congolese refugee, was shot in the back of the head by Grand Rapids, "
                  "Michigan Police Officer Christopher Schurr during a traffic stop on April 4, 2022. Lyoya ran "
                  "after Schurr pulled him over for a mismatched license plate; Schurr caught him, and the two "
@@ -5384,7 +5413,7 @@ CASES = [
     dict(id="rayshard-brooks", caseNumber="154", name="Rayshard Brooks",
          status="unsolved", caseType="homicide", year=2020, age=27, gender="male",
          city="Atlanta", county="Fulton", state="GA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Rayshard Brooks, 27, was shot and killed by Atlanta Police Officer Garrett Rolfe outside a "
                  "Wendy's restaurant on June 12, 2020, after a struggle that began when officers tried to "
                  "arrest him for driving under the influence. Brooks resisted, grabbed a Taser from Officer "
@@ -5434,7 +5463,7 @@ CASES = [
     dict(id="amir-locke", caseNumber="155", name="Amir Locke",
          status="unsolved", caseType="homicide", year=2022, age=22, gender="male",
          city="Minneapolis", county="Hennepin", state="MN", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Amir Locke, 22, an aspiring hip-hop artist, was shot and killed by Minneapolis Police SWAT "
                  "Officer Mark Hanneman on February 2, 2022, within about ten seconds of officers using a key "
                  "to enter his cousin's apartment on a no-knock warrant tied to a homicide investigation in "
@@ -5485,7 +5514,7 @@ CASES = [
     dict(id="andrew-brown-jr", caseNumber="156", name="Andrew Brown Jr.",
          status="unsolved", caseType="homicide", year=2021, age=42, gender="male",
          city="Elizabeth City", county="Pasquotank", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Andrew Brown Jr., 42, a father of seven, was shot and killed by Pasquotank County, North "
                  "Carolina sheriff's deputies on April 21, 2021, while sitting in his car as they attempted to "
                  "serve felony drug arrest and search warrants at his home in Elizabeth City. Three of the "
@@ -5533,7 +5562,7 @@ CASES = [
     dict(id="aiyana-stanley-jones", caseNumber="157", name="Aiyana Stanley-Jones",
          status="unsolved", caseType="homicide", year=2010, age=7, gender="female",
          city="Detroit", county="Wayne", state="MI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Aiyana Stanley-Jones, 7, was shot in the head and killed by Detroit Police Special Response "
                  "Team Officer Joseph Weekley just after midnight on May 16, 2010, as she slept on a couch next "
                  "to her grandmother during a raid on their home in search of a murder suspect who did not "
@@ -5587,7 +5616,7 @@ CASES = [
     dict(id="aura-rosser", caseNumber="158", name="Aura Rosser",
          status="unsolved", caseType="homicide", year=2014, age=40, gender="female",
          city="Ann Arbor", county="Washtenaw", state="MI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Aura Rosser, 40, an artist and mother of three who was living with addiction, was shot and "
                  "killed by Ann Arbor, Michigan Police Officer David Ried in her home in the early morning "
                  "hours of November 10, 2014, within five to ten seconds of officers entering the house. Her "
@@ -5636,7 +5665,7 @@ CASES = [
     dict(id="terrance-kellom", caseNumber="159", name="Terrance Kellom",
          status="unsolved", caseType="homicide", year=2015, age=20, gender="male",
          city="Detroit", county="Wayne", state="MI", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Terrance Kellom, 20, was shot and killed by U.S. Immigration and Customs Enforcement Officer "
                  "Mitchell Quinn on April 27, 2015, at his father's Detroit home, in front of his family, as a "
                  "multi-agency federal fugitive task force served an arrest warrant on an armed-robbery "
@@ -5692,7 +5721,7 @@ CASES = [
     dict(id="kendrec-mcdade", caseNumber="160", name="Kendrec McDade",
          status="unsolved", caseType="homicide", year=2012, age=19, gender="male",
          city="Pasadena", county="Los Angeles", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Kendrec McDade, 19, a college student, was shot seven times and killed by Pasadena, "
                  "California Police Officers Jeffrey Newlen and Matthew Griffin on March 24, 2012, after they "
                  "chased him down a residential street responding to a 911 call describing an armed robbery. "
@@ -5748,7 +5777,7 @@ CASES = [
     dict(id="miles-hall", caseNumber="161", name="Miles Hall",
          status="unsolved", caseType="homicide", year=2019, age=23, gender="male",
          city="Walnut Creek", county="Contra Costa", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Miles Hall, 23, who had schizophrenia, was shot four times and killed by Walnut Creek, "
                  "California Police Officers KC Hsiao and Melissa Murphy on June 2, 2019, during a mental "
                  "health crisis near his home. His mother, Taun Hall, had called and left a voicemail with a "
@@ -5798,7 +5827,7 @@ CASES = [
     dict(id="jonathan-sanders", caseNumber="162", name="Jonathan Sanders",
          status="unsolved", caseType="homicide", year=2015, age=39, gender="male",
          city="Stonewall", county="Clarke", state="MS", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Jonathan Sanders, 39, a horse trainer, died on July 8, 2015 in Stonewall, Mississippi after "
                  "an encounter with police officer Kevin Herrington that witnesses said involved a chokehold "
                  "lasting as long as 20 to 30 minutes. Sanders had been riding a horse-drawn buggy near a gas "
@@ -5851,7 +5880,7 @@ CASES = [
     dict(id="tyre-king", caseNumber="163", name="Tyre King",
          status="unsolved", caseType="homicide", year=2016, age=13, gender="male",
          city="Columbus", county="Franklin", state="OH", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Tyre King, 13, was shot and killed by Columbus, Ohio Police Officer Bryan Mason on "
                  "September 14, 2016, during a foot chase after officers responded to a report of an armed "
                  "$10 robbery. Mason said King pulled a BB gun with an attached laser sight from his waistband "
@@ -5903,7 +5932,7 @@ CASES = [
     dict(id="john-neville", caseNumber="164", name="John Neville",
          status="unsolved", caseType="homicide", year=2019, age=56, gender="male",
          city="Winston-Salem", county="Forsyth", state="NC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="John Neville, 56, died on December 4, 2019, three days after Forsyth County, North Carolina "
                  "jail detention officers restrained him face-down on the floor of his cell in a \"bent-leg "
                  "prone restraint\" for nearly an hour. Body camera video showed Neville, who had fallen from "
@@ -5959,7 +5988,7 @@ CASES = [
     dict(id="ronald-greene", caseNumber="165", name="Ronald Greene",
          status="unsolved", caseType="homicide", year=2019, age=49, gender="male",
          city="Monroe", county="Union", state="LA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Ronald Greene, 49, died on May 10, 2019, following a high-speed chase and arrest by "
                  "Louisiana State Police troopers outside Monroe, Louisiana. Authorities initially told his "
                  "family he died from injuries sustained when his car crashed at the end of the chase. Body "
@@ -6022,7 +6051,7 @@ CASES = [
     dict(id="alonzo-smith", caseNumber="166", name="Alonzo Smith",
          status="unsolved", caseType="homicide", year=2015, age=27, gender="male",
          city="Washington", county=None, state="DC", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Alonzo Smith, 27, died on November 1, 2015 after being restrained and handcuffed by two "
                  "privately employed \"special police officers\" at Marbury Plaza apartments in Southeast "
                  "Washington, D.C. Neighbors reported hearing Smith, who was shirtless and barefoot, running "
@@ -6075,7 +6104,7 @@ CASES = [
     dict(id="darius-tarver", caseNumber="167", name="Darius Tarver",
          status="unsolved", caseType="homicide", year=2020, age=23, gender="male",
          city="Denton", county="Denton", state="TX", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Darius Tarver, 23, a University of North Texas criminal justice student and member of the "
                  "National Organization of Black Law Enforcement, was shot and killed by a Denton, Texas "
                  "police officer on January 21, 2020, outside his apartment. Just a week earlier, Tarver had "
@@ -6130,7 +6159,7 @@ CASES = [
     dict(id="chinedu-okobi", caseNumber="168", name="Chinedu Okobi",
          status="unsolved", caseType="homicide", year=2018, age=36, gender="male",
          city="Millbrae", county="San Mateo", state="CA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Chinedu Okobi, 36, a Morehouse College graduate and father, died on October 3, 2018 after "
                  "San Mateo County, California sheriff's deputies Tased him repeatedly, struck him with a "
                  "baton, and pepper-sprayed him during a confrontation that began when a deputy approached him "
@@ -6187,7 +6216,7 @@ CASES = [
     dict(id="osaze-osagie", caseNumber="169", name="Osaze Osagie",
          status="unsolved", caseType="homicide", year=2019, age=29, gender="male",
          city="State College", county="Centre", state="PA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Osaze Osagie, 29, who had schizophrenia and Asperger's syndrome, was shot and killed by a "
                  "State College, Pennsylvania police officer on March 20, 2019, at his apartment while three "
                  "officers attempted to serve a mental health warrant his own father had requested. Sylvester "
@@ -6249,7 +6278,7 @@ CASES = [
     dict(id="julian-lewis", caseNumber="170", name="Julian Lewis",
          status="unsolved", caseType="homicide", year=2020, age=60, gender="male",
          city="Sylvania", county="Screven", state="GA", caseSeries=None,
-         dateAdded="2026-08-27",
+         dateAdded="2026-09-08",
          summary="Julian Edward Roosevelt Lewis, 60, a semi-retired carpenter, was shot in the face and "
                  "killed by Georgia State Patrol Trooper Jacob Thompson on a rural road in Screven County, "
                  "Georgia, on August 7, 2020, after Thompson tried to stop him over a broken taillight. When "
@@ -6305,7 +6334,7 @@ CASES = [
     dict(id="ej-bradford-jr", caseNumber="171", name="Emantic \u201cE.J.\u201d Bradford Jr.",
          status="unsolved", caseType="homicide", year=2018, age=21, gender="male",
          city="Hoover", county="Jefferson", state="AL", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Emantic \u201cE.J.\u201d Bradford Jr., 21, was shot three times from behind and killed by "
                  "Hoover, Alabama Police Officer David Alexander at the Riverchase Galleria mall on "
                  "Thanksgiving night, November 22, 2018, moments after another man opened fire during an "
@@ -6361,7 +6390,7 @@ CASES = [
     dict(id="kayla-moore", caseNumber="172", name="Kayla Moore",
          status="unsolved", caseType="homicide", year=2013, age=41, gender="female",
          city="Berkeley", county="Alameda", state="CA", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Kayla Moore, 41, a Black transgender woman living with schizophrenia, died in Berkeley, "
                  "California police custody on February 12, 2013, after up to six officers restrained her "
                  "face-down on a futon in her own apartment. Her roommate had called police asking for a "
@@ -6420,7 +6449,7 @@ CASES = [
     dict(id="steven-taylor", caseNumber="173", name="Steven Taylor",
          status="unsolved", caseType="homicide", year=2020, age=33, gender="male",
          city="San Leandro", county="Alameda", state="CA", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Steven Taylor, 33, was shot and killed by San Leandro, California Police Officer Jason "
                  "Fletcher inside a Walmart on April 18, 2020, after being reported for shoplifting while "
                  "holding an aluminum baseball bat. Body camera video showed that within about 40 seconds of "
@@ -6477,7 +6506,7 @@ CASES = [
     dict(id="devon-bailey", caseNumber="174", name="De'Von Bailey",
          status="unsolved", caseType="homicide", year=2019, age=19, gender="male",
          city="Colorado Springs", county="El Paso", state="CO", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="De'Von Bailey, 19, was shot and killed by Colorado Springs Police Officers Blake Evenson "
                  "and Sgt. Alan Van't Land on August 3, 2019, while running away from officers investigating a "
                  "report of an armed robbery. Body camera video, later released publicly, showed officers "
@@ -6531,7 +6560,7 @@ CASES = [
     dict(id="antwon-rose-ii", caseNumber="175", name="Antwon Rose II",
          status="unsolved", caseType="homicide", year=2018, age=17, gender="male",
          city="East Pittsburgh", county="Allegheny", state="PA", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Antwon Rose II, 17, was shot three times \u2014 in the back, arm, and side of the face \u2014 "
                  "and killed by East Pittsburgh, Pennsylvania Police Officer Michael Rosfeld on June 19, 2018, "
                  "as he ran from a car that had been pulled over minutes after a drive-by shooting elsewhere. "
@@ -6587,7 +6616,7 @@ CASES = [
     dict(id="crooms-and-pierce", caseNumber="176", name="Angelo Crooms & Sincere Pierce",
          status="unsolved", caseType="homicide", year=2020, age=None, gender="male",
          city="Cocoa", county="Brevard", state="FL", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Angelo \u201cAJ\u201d Crooms, 16, and Sincere Pierce, 18, were shot and killed by Brevard "
                  "County, Florida Sheriff's Deputy Jafet Santiago-Miranda on November 13, 2020, in a Cocoa "
                  "driveway during an attempted stop of a car deputies believed, based on a report that later "
@@ -6640,7 +6669,7 @@ CASES = [
     dict(id="terrence-sterling", caseNumber="177", name="Terrence Sterling",
          status="unsolved", caseType="homicide", year=2016, age=31, gender="male",
          city="Washington", county=None, state="DC", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Terrence Sterling, 31, was shot and killed by Metropolitan Police Department Officer Brian "
                  "Trainer in Washington, D.C. in the early morning hours of September 11, 2016, after officers "
                  "blocked his motorcycle with their cruiser following a high-speed chase. Trainer said Sterling "
@@ -6701,7 +6730,7 @@ CASES = [
     dict(id="jamee-johnson", caseNumber="178", name="Jamee Johnson",
          status="unsolved", caseType="homicide", year=2019, age=22, gender="male",
          city="Jacksonville", county="Duval", state="FL", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Jamee Johnson, 22, a Florida A&M University student, was shot and killed by Jacksonville "
                  "Sheriff's Officer Josue Garriga during a traffic stop for a seatbelt violation on December "
                  "14, 2019. Body camera footage showed Johnson telling Garriga he had a legally owned handgun "
@@ -6757,7 +6786,7 @@ CASES = [
     dict(id="dreasjon-reed", caseNumber="179", name="Dreasjon \u201cSean\u201d Reed",
          status="unsolved", caseType="homicide", year=2020, age=21, gender="male",
          city="Indianapolis", county="Marion", state="IN", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Dreasjon \u201cSean\u201d Reed, 21, a former U.S. Air Force airman and legal gun owner, was shot "
                  "and killed by Indianapolis Metropolitan Police Department Officer Dejoure Mercer on May 6, "
                  "2020, at the end of a high-speed chase Reed livestreamed on Facebook to thousands of viewers "
@@ -6814,7 +6843,7 @@ CASES = [
     dict(id="kajuan-raye", caseNumber="180", name="Kajuan Raye",
          status="unsolved", caseType="homicide", year=2016, age=19, gender="male",
          city="Chicago", county="Cook", state="IL", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Kajuan Raye, 19, was shot in the back and killed by Chicago Police Sergeant John Poulos "
                  "during a foot chase in the Englewood neighborhood on November 23, 2016, after Poulos "
                  "believed Raye matched the description of a battery suspect. Poulos said Raye twice pointed a "
@@ -6869,7 +6898,7 @@ CASES = [
     dict(id="walter-wallace-jr", caseNumber="181", name="Walter Wallace Jr.",
          status="unsolved", caseType="homicide", year=2020, age=27, gender="male",
          city="Philadelphia", county="Philadelphia", state="PA", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Walter Wallace Jr., 27, a father with bipolar disorder, was shot 14 times and killed by "
                  "Philadelphia Police Officers Sean Matarazzo and Thomas Munz outside his family's Cobbs Creek "
                  "home on October 26, 2020, less than a minute after they arrived. His family had called 911 "
@@ -6928,7 +6957,7 @@ CASES = [
     dict(id="byron-williams", caseNumber="182", name="Byron Williams",
          status="unsolved", caseType="homicide", year=2019, age=50, gender="male",
          city="Las Vegas", county="Clark", state="NV", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Byron Williams, 50, died on September 5, 2019, after Las Vegas Metropolitan Police Officers "
                  "Patrick Campbell and Benjamin Vasquez stopped him for riding his bicycle without a safety "
                  "light near Martin Luther King Boulevard, chased him after he fled, and restrained him "
@@ -6984,7 +7013,7 @@ CASES = [
     dict(id="michael-dean", caseNumber="183", name="Michael Dean",
          status="unsolved", caseType="homicide", year=2019, age=32, gender="male",
          city="Temple", county="Bell", state="TX", caseSeries=None,
-         dateAdded="2026-08-31",
+         dateAdded="2026-09-08",
          summary="Michael Dean, 32, a father of three, was shot in the head and killed by Temple, Texas Police "
                  "Officer Carmen DeCruz during a traffic stop on December 2, 2019, after DeCruz pursued him for "
                  "speeding. According to the arrest affidavit, Dean eventually stopped his car; DeCruz "
@@ -7036,6 +7065,1995 @@ CASES = [
                             "https://www.kcentv.com/article/news/crime/closing-arguments-begin-trial-former-temple-cop-charged-death-michael-dean/500-4617463a-9ab3-4b7a-91ee-eb05cbab335a", True),
                         src("KWTX \u2014 \u201cCity of Temple files motion to dismiss civil lawsuit in Michael Dean case\u201d",
                             "https://www.kwtx.com/2024/09/13/city-temple-files-motion-dismiss-civil-lawsuit-michael-dean-case/", True)]),
+    dict(id="marvin-scott-iii", caseNumber="184", name="Marvin Scott III",
+         status="unsolved", caseType="homicide", year=2021, age=26, gender="male",
+         city="McKinney", county="Collin", state="TX", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Marvin Scott III, 26, who had schizophrenia, died in custody at the Collin County, Texas "
+                 "jail on March 14, 2021, nine months after George Floyd's murder, after detention officers "
+                 "strapped him to a restraint bed, pepper-sprayed him, and covered his face with a spit hood. "
+                 "He had been arrested that afternoon for possessing less than two ounces of marijuana and was "
+                 "medically cleared at a hospital before being taken to jail, where he began exhibiting what "
+                 "the sheriff called \u201cstrange behavior.\u201d Security video released by the county showed "
+                 "him struggling for roughly 17 minutes while restrained before going unresponsive; officers "
+                 "then removed the hood and began CPR. The county medical examiner ruled his death a homicide, "
+                 "citing \u201ca fatal acute stress response\u201d during the restraint struggle. A Collin "
+                 "County grand jury declined to indict any of the eight jailers involved in June 2021. No one "
+                 "has ever been charged in Scott's death.",
+         known=["The arrest, the restraint, and the in-custody death, per Collin County Sheriff Jim Skinner's "
+                "public statements and 41 minutes of jail security video the county released.",
+                "Scott was medically cleared by a physician roughly three hours before being taken to the "
+                "jail, where he began exhibiting erratic behavior; his family said he had been diagnosed with "
+                "schizophrenia but had not had an episode in over a year.",
+                "Officers strapped Scott to a restraint bed, pepper-sprayed him once, and placed a spit hood "
+                "over his face; released video showed him struggling for roughly 17 minutes before going "
+                "unresponsive, after which officers removed the hood and began CPR.",
+                "Collin County Medical Examiner Dr. William Rohr ruled the death a homicide in a preliminary "
+                "autopsy report, attributing it to \u201ca fatal acute stress response in an individual with "
+                "previously diagnosed schizophrenia during restraint struggle with law enforcement.\u201d",
+                "Seven of the eight involved detention officers were fired and an eighth resigned following an "
+                "internal investigation; at least one was later reinstated through the civil service process.",
+                "A Collin County grand jury, after reviewing witness testimony, video evidence, and applicable "
+                "law over several days, declined to indict any of the eight jailers \u2014 Andres Cardenas, "
+                "Alec Difatta, Blaise Mikulewicz, Rafael Paradez, Justin Patrick, James Schoelen, Christopher "
+                "Windsor, and Austin Wong \u2014 on June 22, 2021, finding no probable cause for a crime.",
+                "The grand jury separately recommended forming a group to study Scott's death and prevent "
+                "similar incidents, and District Attorney Greg Willis said he shared its concern about how "
+                "people with mental illness are treated in custody."],
+         unknown=["Whether the combined restraint, pepper spray, and spit hood constituted excessive force "
+                  "given Scott's documented mental illness, as his family's attorney argued citing the medical "
+                  "examiner's own homicide ruling, was never tested at any criminal trial.",
+                  "The specific evidence and legal reasoning behind the grand jury's no-probable-cause finding "
+                  "has not been made public, as grand jury proceedings are sealed under Texas law.",
+                  "Whether jail staff followed Collin County's own use-of-restraint policy during the "
+                  "17-minute struggle has been disputed between the sheriff's public characterization and the "
+                  "family attorney's review of the same released video."],
+         unanswered=["Why did a grand jury find no probable cause for any charge against any of the eight "
+                     "jailers, despite the county's own medical examiner ruling the death a homicide?",
+                     "What became of the study group the grand jury recommended forming to examine how people "
+                     "with mental illness are treated in Collin County's jail custody?",
+                     "Why was at least one of the fired officers reinstated through the civil service process "
+                     "despite the internal investigation's findings?"],
+         extraSources=[src("The Texas Tribune \u2014 \u201cCollin County officers won't face charges in Marvin Scott III's death\u201d",
+                            "https://www.texastribune.org/2021/06/22/marvin-scott-jail-officers/", True),
+                        src("CNN \u2014 \u201cMarvin Scott death: Grand jury declines to charge former jailers\u201d",
+                            "https://www.cnn.com/2021/06/22/us/marvin-scott-death-jailers-no-charges/index.html", True),
+                        src("CBS News Texas \u2014 \u201cCollin County Authorities Release Security Video Related To In-Custody Death Of Marvin Scott III\u201d",
+                            "https://www.cbsnews.com/texas/news/jail-security-video-in-custody-death-marvin-scott-iii/", True)]),
+    dict(id="jamycheal-mitchell", caseNumber="185", name="Jamycheal Mitchell",
+         status="unsolved", caseType="homicide", year=2015, age=24, gender="male",
+         city="Portsmouth", county=None, state="VA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Jamycheal Mitchell, 24, who had schizoaffective disorder, died on August 19, 2015 in his "
+                 "cell at the Hampton Roads Regional Jail in Portsmouth, Virginia, roughly four months after "
+                 "his arrest for allegedly stealing about $5 worth of snacks \u2014 a Mountain Dew, a Snickers "
+                 "bar, and a Zebra Cake \u2014 from a 7-Eleven. A judge twice ordered him transferred to a "
+                 "state mental hospital for competency restoration treatment; clerical errors meant his name "
+                 "was never placed on the hospital's waiting list, and the transfer never happened. He spent "
+                 "100 days in restrictive housing, was allegedly struck on the knuckles with a flashlight and "
+                 "mocked by correctional officers, and lost 46 pounds before he was found dead, in a cell "
+                 "smeared with feces, of heart failure accompanied by \u201cwasting syndrome.\u201d After a "
+                 "years-long investigation, the Portsmouth Commonwealth's Attorney's Office released a 166-page "
+                 "report in 2019 calling his death \u201ctragic and likely avoidable\u201d but concluded no "
+                 "charges could be sought due to missing information. No one has ever been charged in "
+                 "Mitchell's death.",
+         known=["The shoplifting arrest, the competency-restoration orders, and Mitchell's death, per the "
+                "Portsmouth Commonwealth's Attorney's 166-page investigative report and a Department of "
+                "Justice civil rights investigation.",
+                "A Portsmouth General District Court judge found Mitchell incompetent to stand trial on May "
+                "21, 2015 and ordered his transfer to Eastern State Hospital for treatment; that transfer never "
+                "occurred because a clerical error left him off the hospital's waiting list.",
+                "Mitchell spent 100 days in restrictive housing after refusing a tuberculosis test, classified "
+                "as \u201cadministrative restriction \u2014 unable to adapt\u201d; a fellow incarcerated person "
+                "told investigators his speech deteriorated into \u201cgibberish\u201d over his months there.",
+                "The state medical examiner ruled Mitchell died of heart failure accompanied by wasting "
+                "syndrome, having lost 46 pounds; he was found in a cell described as smeared with feces and "
+                "soaked in urine.",
+                "The jail's own internal investigation cleared employees of wrongdoing; two separate state "
+                "agency investigations were unable to determine exactly what happened.",
+                "The Portsmouth Commonwealth's Attorney's Office released a 166-page report in February 2019 "
+                "calling Mitchell's death \u201ctragic and likely avoidable\u201d but stated \u201cno charges "
+                "can be sought at this time,\u201d citing missing information needed to establish probable "
+                "cause against specific individuals.",
+                "The U.S. Department of Justice completed a civil rights investigation into the Hampton Roads "
+                "Regional Jail in December 2016, finding reasonable cause to believe it failed to provide "
+                "constitutionally adequate medical and mental health care to prisoners; the jail later operated "
+                "under a federal consent decree.",
+                "A federal judge approved a $3 million settlement for Mitchell's family in 2019, writing the "
+                "case involved \u201csome of the most appalling and inhumane allegations\u201d she had "
+                "encountered in over 30 years on the federal bench, while noting the settlement \u201cdoes not "
+                "determine any ultimate liability.\u201d"],
+         unknown=["Which specific individuals bore responsibility for the clerical error that left Mitchell "
+                  "off the state hospital's waiting list, and why that error was never corrected over four "
+                  "months, has never been publicly identified.",
+                  "The full extent of the alleged physical abuse and mockery by correctional officers, "
+                  "described by a fellow incarcerated witness, was investigated but the prosecutor's office "
+                  "said it lacked sufficient information to establish probable cause against specific people.",
+                  "Why two separate state investigations were each unable to determine exactly what happened "
+                  "inside the jail has not been fully explained in public reporting."],
+         unanswered=["Why did it take nearly four years for prosecutors to conclude their investigation, only "
+                     "to determine that no charges could be sought due to missing information?",
+                     "What specific missing information would have allowed prosecutors to establish probable "
+                     "cause, and why was that information never obtained or preserved?",
+                     "What has become of the federal consent decree governing Hampton Roads Regional Jail, and "
+                     "has it produced measurable improvements in mental health care for people held there?"],
+         extraSources=[src("ACLU \u2014 \u201cOur Criminal Justice System Failed Jamycheal Mitchell\u201d",
+                            "https://www.aclu.org/news/prisoners-rights/our-criminal-justice-system-failed-jamycheal-mitchell", True),
+                        src("WAVY \u2014 \u201cProsecutors: No charges sought in death of Jamycheal Mitchell\u201d",
+                            "https://www.wavy.com/news/prosecutors-no-charges-sought-in-death-of-jamycheal-mitchell/", True),
+                        src("13News Now (WVEC) \u2014 \u201cJudge signs off on $3 million settlement for Jamycheal Mitchell's jail death\u201d",
+                            "https://www.13newsnow.com/article/news/judge-signs-off-on-3-million-settlement-for-jamycheal-mitchell-wrongful-death-lawsuit/291-f71ccb68-2349-4e0f-8775-e2e0e20f7514", True)]),
+    dict(id="natasha-mckenna", caseNumber="186", name="Natasha McKenna",
+         status="unsolved", caseType="homicide", year=2015, age=37, gender="female",
+         city="Fairfax", county="Fairfax", state="VA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Natasha McKenna, 37, a mother diagnosed with schizophrenia and bipolar disorder, died on "
+                 "February 8, 2015, five days after six Fairfax County, Virginia sheriff's deputies in "
+                 "biohazard suits and riot gear shocked her with a Taser four times while extracting her, "
+                 "naked and shackled, from her cell at the Fairfax County Adult Detention Center. She had been "
+                 "held for over a week awaiting transfer on an outstanding warrant; video of the extraction "
+                 "captured her saying, \u201cYou promised you wouldn't kill me.\u201d She went into cardiac "
+                 "arrest during the struggle and never regained consciousness. Fairfax County's top prosecutor "
+                 "announced in September 2015 that no deputy would be charged, calling her death a \u201ctragic "
+                 "accident,\u201d and the state medical examiner ruled it accidental, attributing it to excited "
+                 "delirium linked to the restraints and stun gun. No one has ever been criminally charged in "
+                 "McKenna's death.",
+         known=["The extraction, the four Taser shocks while McKenna was shackled, and her subsequent cardiac "
+                "arrest, per a 45-minute video the Fairfax County Sheriff's Office released publicly and the "
+                "state medical examiner's report.",
+                "McKenna had been held at the jail for over a week, in solitary confinement for part of that "
+                "time, awaiting transfer to Alexandria on an outstanding warrant for assaulting an officer "
+                "weeks earlier; her mental health deteriorated during the delay.",
+                "The state medical examiner's office ruled the death accidental, attributing it to excited "
+                "delirium associated with the use of restraints and a stun gun, with her schizophrenia listed "
+                "as a contributing factor.",
+                "Commonwealth's Attorney Raymond Morrogh announced on September 2, 2015 that no deputy would "
+                "face charges, calling the death a \u201ctragic accident\u201d following a months-long "
+                "criminal investigation.",
+                "The case became the subject of a separate U.S. Department of Justice civil rights "
+                "investigation.",
+                "McKenna's family filed a $15 million federal lawsuit against Fairfax County, alleging gross "
+                "negligence and that deputies and the jail were not properly trained to handle someone in a "
+                "mental health crisis.",
+                "McKenna's death, and the video's public release, helped galvanize the early Black Lives "
+                "Matter movement's focus on deaths of Black women in police and jail custody, and led Fairfax "
+                "County to establish its Diversion First program, which redirects some people with mental "
+                "illness away from jail toward treatment."],
+         unknown=["Whether the use of a stun gun four times against a shackled, restrained woman already in "
+                  "obvious mental distress was a reasonable response, as the prosecutor's office concluded, or "
+                  "excessive force, as her family and counsel argued, was never tested at any criminal trial.",
+                  "Why McKenna's transfer to Alexandria was delayed for over a week, during which her mental "
+                  "condition deteriorated, has not been fully explained in available public reporting.",
+                  "The full findings of the Department of Justice's separate civil rights investigation into "
+                  "the case have not been comprehensively made public."],
+         unanswered=["Why did it take a week-long delay in transferring McKenna before her mental health "
+                     "crisis reached the point that six deputies in biohazard suits were called to extract her "
+                     "by force?",
+                     "What specific findings, if any, did the Department of Justice's civil rights "
+                     "investigation into the case produce?",
+                     "What measurable outcomes has Fairfax County's Diversion First program achieved in "
+                     "reducing jail deaths and encounters involving people in mental health crisis since "
+                     "McKenna's death?"],
+         extraSources=[src("Wikipedia \u2014 \u201cDeath of Natasha McKenna\u201d (sourced case history)",
+                            "https://en.wikipedia.org/wiki/Death_of_Natasha_McKenna", True),
+                        src("WAMU \u2014 \u201cNo Charges Filed Following Police Probe Of Taser Death In Fairfax County Jail\u201d",
+                            "https://wamu.org/story/15/07/22/no_charges_filed_following_taser_death_of_natasha_mckenna_in_fairfax_county_jail/", True),
+                        src("WTOP News \u2014 \u201cFamily sues sheriff's office for in-custody death of Natasha McKenna\u201d",
+                            "https://wtop.com/fairfax-county/2016/06/family-sues-sheriffs-office-for-in-custody-death-of-natasha-mckenna/", True)]),
+    dict(id="deon-kay", caseNumber="187", name="Deon Kay",
+         status="unsolved", caseType="homicide", year=2020, age=18, gender="male",
+         city="Washington", county=None, state="DC", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Deon Kay, 18, was shot and killed by Metropolitan Police Department Officer Alexander "
+                 "Alvarez in Southeast Washington, D.C. on September 2, 2020, roughly six seconds after Alvarez "
+                 "got out of his squad car pursuing a group of men reported to be brandishing guns. Body camera "
+                 "footage showed Kay running, then turning toward Alvarez with a gun in his hand a moment "
+                 "before Alvarez fired once, striking him in the chest; the gun was later found roughly 98 feet "
+                 "away, and it remains disputed whether Kay tossed it or the bullet's impact knocked it from "
+                 "his hand. Federal prosecutors declined criminal civil rights charges in November 2020, and "
+                 "the D.C. Auditor's office separately found the shooting legally justified as self-defense "
+                 "while concluding officers had \u201csquandered\u201d chances to de-escalate. Nearly five years "
+                 "later, in July 2025, a civil jury found Alvarez liable for wrongful death, negligence, and "
+                 "battery, awarding Kay's mother $655,000; the city fought to overturn or reduce that verdict "
+                 "before settling for a lesser amount in 2026. No one has ever been criminally charged in "
+                 "Kay's death.",
+         known=["The pursuit, the six-second span between Alvarez exiting his vehicle and firing, and the "
+                "shooting, per Metropolitan Police Department body camera footage released publicly.",
+                "A gun was recovered approximately 98 feet from where Kay fell; police and prosecutors said "
+                "the footage showed a gun in Kay's hand about a second before he was shot, though whether he "
+                "threw it or the bullet's impact caused it to fly from his hand remains disputed.",
+                "The U.S. Attorney's Office announced in November 2020 that it would not bring federal "
+                "criminal civil rights charges, unable to determine beyond a reasonable doubt that Alvarez "
+                "willfully violated Kay's civil rights.",
+                "A 2021 report by the Office of the D.C. Auditor concluded the shooting was legally justified "
+                "as self-defense, but that the officers involved had \u201csquandered\u201d opportunities to "
+                "de-escalate and that Alvarez had unnecessarily placed himself in the situation that led to "
+                "Kay's death.",
+                "Kay's mother, Natasha Kay, filed a wrongful death lawsuit; in July 2025, a District of "
+                "Columbia Superior Court jury found Alvarez liable on all counts \u2014 wrongful death, "
+                "negligence, and battery \u2014 and awarded $655,000 in damages.",
+                "The D.C. Attorney General's Office, representing Alvarez, moved to overturn the verdict or "
+                "reduce the damages, arguing the award exceeded typical amounts in police shooting cases; the "
+                "presiding judge expressed skepticism of that argument.",
+                "In early 2026, the city and Kay's family reached a settlement for an amount less than the "
+                "jury's $655,000 award but more than the attorney general could approve unilaterally, with "
+                "Mayor Muriel Bowser's approval, resolving the case without a further appeal."],
+         unknown=["Whether Kay threw the recovered handgun toward Alvarez before being shot, as police "
+                  "maintained, or whether the bullet's impact caused it to leave his hand, was disputed at "
+                  "both the federal review stage and in the 2025 civil trial, and was never resolved by any "
+                  "criminal proceeding since none was brought.",
+                  "The specific findings behind the D.C. Auditor's conclusion that officers squandered "
+                  "de-escalation opportunities, beyond the report's public summary, have not been fully "
+                  "detailed.",
+                  "Why the city's attorney general pursued a reduction of the civil jury's verdict rather than "
+                  "accepting it, given the judge's own stated skepticism of that position, was disputed by the "
+                  "family's attorney as an effort to avoid accountability."],
+         unanswered=["Why did federal prosecutors and a civil jury five years later reach such different "
+                     "conclusions about the same body camera footage \u2014 one finding no willful civil "
+                     "rights violation, the other finding Alvarez liable for wrongful death, negligence, and "
+                     "battery on all counts?",
+                     "What specific de-escalation opportunities did the D.C. Auditor's report identify as "
+                     "squandered, and has MPD implemented changes addressing them?",
+                     "Why did the city's attorney general pursue reducing the jury's award rather than "
+                     "accepting the verdict, and what final amount was ultimately paid in the 2026 settlement?"],
+         extraSources=[src("The Washington Post \u2014 \u201cDeon Kay's mother wins $655,000 verdict over son's death by police\u201d",
+                            "https://www.washingtonpost.com/dc-md-va/2025/08/01/deon-kay-verdict-fatally-shot-dc-police-alexander-alvarez-lawsuit/", True),
+                        src("WUSA9 \u2014 \u201cJury reaches verdict in civil suit against DC Police for deadly 2020 shooting of Deon Kay\u201d",
+                            "https://www.wusa9.com/article/news/legal/deon-kay-police-shooting-civil-suit-verdict/65-d43a05fa-9a71-4000-a5e1-a13b1a7c71b2", True),
+                        src("The Washington Informer \u2014 \u201cD.C. reaches settlement in Deon Kay wrongful death case\u201d",
+                            "https://www.washingtoninformer.com/deon-kay-settlement-finalized/", True)]),
+    dict(id="mickel-lewis-sr", caseNumber="188", name="Mickel Lewis Sr.",
+         status="unsolved", caseType="homicide", year=2020, age=39, gender="male",
+         city="Mojave", county="Kern", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Mickel Lewis Sr., 39, a father of seven, was shot and killed by Kern County, California "
+                 "Sheriff's Deputy Jason Ayala during a traffic stop in Mojave on October 2, 2020. Ayala had "
+                 "been surveilling Lewis based on a confidential informant's tip that he possessed a gun while "
+                 "on probation; a pat-down found no weapon. The sheriff's office said Lewis then ran to his car, "
+                 "reached under the seat, and charged at Ayala with his hand in his waistband, prompting Ayala "
+                 "to fire five shots, two striking Lewis in the back. No gun was found on or near Lewis; a "
+                 "handgun was later recovered behind a utility pole where a passenger from his car had been "
+                 "seen. An internal sheriff's review board found Ayala acted within department policy and "
+                 "returned him to duty within weeks. No criminal charges were ever filed. In March 2025, a "
+                 "federal jury in Fresno unanimously awarded Lewis's family $30.5 million, finding Ayala used "
+                 "excessive and unreasonable force and was negligent \u2014 the second-largest jury verdict for "
+                 "a police shooting in California history. No one has ever been criminally charged in Lewis's "
+                 "death.",
+         known=["The surveillance, the traffic stop, and the shooting, per Kern County Sheriff's Office "
+                "surveillance footage released publicly and testimony at the 2025 federal civil trial.",
+                "A pat-down search of Lewis, conducted because he was on probation, found no weapon before the "
+                "shooting occurred.",
+                "Ayala fired five shots, two of which struck Lewis in the back; no gun was found on or near "
+                "Lewis's body, though a handgun was later recovered behind a utility pole near where one of "
+                "his passengers had been seen after the shooting.",
+                "A sheriff's office review board found in November 2020 that Ayala acted within departmental "
+                "policy, and he was returned to active duty; the board's findings were submitted to the Kern "
+                "County District Attorney's office for review, but no criminal charges were ever filed.",
+                "The family's lawsuit disputed the sheriff department's account, citing an independent autopsy "
+                "showing none of the shots struck Lewis's front, which the family's attorney said contradicted "
+                "the claim that he was charging forward when shot.",
+                "A federal jury in the Eastern District of California unanimously found on March 19, 2025 that "
+                "Ayala used excessive and unreasonable force and was negligent, awarding $5 million for Lewis's "
+                "loss of life, $1 million for pre-death pain and suffering, and $24.5 million in wrongful death "
+                "damages to his seven children \u2014 a total of $30.5 million, reported as the "
+                "second-largest jury award for a police shooting in California history.",
+                "Lewis had a lengthy prior criminal record and multiple pending cases at the time of his death; "
+                "his family's attorneys argued this was used by the sheriff's department to unfairly "
+                "characterize him rather than address the specific circumstances of the shooting itself."],
+         unknown=["Whether Lewis charged at Ayala with his hand in his waistband, as the sheriff's department "
+                  "maintained, or was shot while unarmed and not charging, as the family's independent autopsy "
+                  "evidence suggested, was contested at the civil trial and never resolved by any criminal "
+                  "proceeding since none was brought.",
+                  "Whose handgun was recovered behind the utility pole, and how it related to Lewis or his "
+                  "passengers, has not been definitively established in public reporting.",
+                  "Why Ayala was returned to duty within weeks based on an internal review, before any "
+                  "independent investigation of the conflicting forensic evidence was complete, has not been "
+                  "fully explained."],
+         unanswered=["Why did a federal civil jury unanimously find excessive force and negligence when the "
+                     "department's own internal review had already cleared Ayala and returned him to duty?",
+                     "Why were less-lethal options, such as a Taser, not used given Lewis was reported to be "
+                     "unarmed based on the earlier pat-down?",
+                     "Why was this case never referred for criminal charges despite forensic evidence the "
+                     "family's attorneys said directly contradicted the deputy's account?"],
+         extraSources=[src("KGET 17 News \u2014 \u201cJury awards $30.5M to family of man killed by Kern County deputy: attorneys\u201d",
+                            "https://www.kget.com/news/local-news/jury-awards-30-5-million-to-family-of-man-killed-by-kern-county-deputy-attorneys/", True),
+                        src("Davis Vanguard \u2014 \u201c$30.5 Million Verdict Brings Justice for Family of Mickel Lewis, Sr., in Kern County Police Shooting\u201d",
+                            "https://davisvanguard.org/2025/03/30-5-million-verdict-brings-justice-for-family-of-mickel-lewis-sr-in-kern-county-police-shooting/", True),
+                        src("KGET 17 News \u2014 \u201cDeputy who fatally shot man who charged at him in Mojave acted within departmental policy, review board finds\u201d",
+                            "https://www.kget.com/news/crime-watch/man-shot-and-killed-by-deputy-in-mojave-had-lengthy-criminal-record-including-resisting-officers-and-failing-to-register-as-a-sex-offender/", True)]),
+    dict(id="alteria-woods", caseNumber="189", name="Alteria Woods",
+         status="unsolved", caseType="homicide", year=2017, age=21, gender="female",
+         city="Gifford", county="Indian River", state="FL", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Alteria Woods, 21, a pharmacy technician, was shot 10 times and killed while lying in bed "
+                 "when three Indian River County, Florida SWAT officers fired into the bedroom during a "
+                 "pre-dawn drug raid on March 19, 2017. The raid targeted her boyfriend's father; a gunfight "
+                 "broke out between her boyfriend, Andrew Coffee IV, and the officers after Coffee said he did "
+                 "not know they were law enforcement. A grand jury exonerated all three officers who fired \u2014 "
+                 "finding no probable cause to indict any of them \u2014 and instead indicted Coffee himself "
+                 "for Woods's murder, under a legal theory that his actions had caused the deadly police "
+                 "response. A jury acquitted Coffee of murder and every violent charge against him in 2021, "
+                 "convicting him only of a firearm-possession charge unrelated to the shooting itself. No one "
+                 "has ever been convicted of killing Alteria Woods.",
+         known=["The raid, the gunfight, and the shooting of Woods while she lay in bed, per Indian River "
+                "County Sheriff's Office statements and subsequent criminal and civil proceedings.",
+                "The three officers who fired \u2014 Sergeant Patrick White, Detective Christopher Reeve, and "
+                "Officer Richard Sarcinello \u2014 were identified publicly, placed on brief administrative "
+                "leave, and returned to duty before the grand jury even convened.",
+                "A grand jury in July 2017 found no probable cause to indict any of the three officers, while "
+                "separately indicting Coffee for second-degree murder of Woods, three counts of attempted "
+                "murder of a law enforcement officer, and other charges, on the theory that his gunfire caused "
+                "the deputies' fatal response.",
+                "A jury acquitted Coffee of murder and all violent charges in November 2021 after roughly 11 "
+                "hours of deliberation, finding he acted in self-defense; the same jury convicted him only of "
+                "possessing a firearm as a convicted felon, for which he was later sentenced to 10 years.",
+                "Woods's mother, Yolanda Woods, has said she still wants law enforcement held accountable for "
+                "her daughter's death and has pursued a separate federal civil lawsuit against the sheriff's "
+                "office alleging the raid was botched.",
+                "The Indian River County Sheriff's Office maintained after Coffee's acquittal that Woods's "
+                "death was a direct result of his actions, not the officers'."],
+         unknown=["Whether the deputies fired first, as Coffee and his family maintained, or whether Coffee "
+                  "fired first, as the sheriff's office maintained, was disputed at trial and left unresolved "
+                  "even after Coffee's acquittal, since the jury's self-defense finding did not require it to "
+                  "determine who fired first.",
+                  "Whether any of the three officers' specific shots were the ones that struck Woods, as "
+                  "opposed to a specific accounting of each officer's individual fire, has not been made public "
+                  "in available reporting.",
+                  "Why the grand jury found no probable cause to indict any of the three officers who fired "
+                  "into an occupied bedroom has not been explained beyond the prosecutor's brief public "
+                  "summary, since grand jury proceedings are sealed."],
+         unanswered=["Why were the three officers who fired the shots that killed Woods never indicted, while "
+                     "her own boyfriend was charged with her murder under a theory that he caused their "
+                     "response?",
+                     "What became of the Woods family's federal civil lawsuit alleging the raid itself was "
+                     "botched?",
+                     "Why did the sheriff's office return all three officers to duty before the grand jury had "
+                     "even reviewed the case?"],
+         extraSources=[src("CBS12 \u2014 \u201cGrand jury exonerates law enforcement in Alteria Woods shooting; charge boyfriend\u201d",
+                            "https://cbs12.com/news/local/grand-jury-exonerates-law-enforcement-in-alteria-woods-shooting-charge-boyfriend", True),
+                        src("WPTV \u2014 \u201cAlteria Woods: Man charged for murder of woman during SWAT raid found not guilty; mother supports jury's decision\u201d",
+                            "https://www.wptv.com/news/region-indian-river-county/alteria-woods-man-charged-for-murder-of-woman-during-swat-raid-found-not-guilty-mother-supports-jurys-decision", True),
+                        src("Vero News \u2014 \u201cGrand jury exonerates officers in drug raid, charges Andrew Coffee IV with murder\u201d",
+                            "http://veronews.com/2017/07/19/grand-jury-exonerates-officers-drug-raid-charges-andrew-coffee-iv-murder/", True)]),
+    dict(id="dejuan-guillory", caseNumber="190", name="DeJuan Guillory",
+         status="unsolved", caseType="homicide", year=2017, age=27, gender="male",
+         city="Mamou", county="Evangeline Parish", state="LA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="DeJuan Guillory, 27, was shot three times and killed by Evangeline Parish, Louisiana "
+                 "Sheriff's Deputy Paul \u2014 also reported as Holden \u2014 Lafleur on a rural road near "
+                 "Mamou on July 6, 2017, after the deputy stopped the ATV Guillory was riding with his "
+                 "girlfriend. A struggle followed the stop; the deputy said Guillory struck him and knocked him "
+                 "briefly unconscious before Guillory's girlfriend, DeQuince Brown, jumped on his back trying "
+                 "to grab his gun. Brown's attorney said Guillory was already lying face-down, being handcuffed "
+                 "with one hand behind his back, when the deputy fired the first of six shots; witnesses agree "
+                 "only two people were present to see exactly what happened. Brown was initially charged with "
+                 "attempted first-degree murder of a police officer, later reduced to lesser charges. A grand "
+                 "jury declined to indict Lafleur in December 2017. No one has ever been charged in Guillory's "
+                 "death.",
+         known=["The traffic stop, the struggle, and the shooting, per Louisiana State Police's investigative "
+                "report and contemporaneous news accounts.",
+                "The deputy fired six shots, three of which struck Guillory; the deputy said Guillory punched "
+                "him in the head, dazing him and possibly causing a brief loss of consciousness, before he drew "
+                "his weapon.",
+                "Guillory's girlfriend, DeQuince Brown, acknowledged jumping on the deputy's back and biting "
+                "him, but her attorney said this occurred only after the deputy had already shot Guillory once "
+                "while he was face-down and being handcuffed.",
+                "Brown was arrested on a charge of attempted first-degree murder of a police officer, later "
+                "reduced to battery of a police officer, aggravated assault against a peace officer, and "
+                "attempted disarming of a peace officer.",
+                "A grand jury declined to indict Deputy Lafleur on December 14, 2017, the same week it "
+                "considered charges against Brown separately.",
+                "Guillory's family filed a federal civil rights lawsuit against the sheriff's office alleging "
+                "the deputy shot him while he was already restrained and posed no threat."],
+         unknown=["Whether Guillory was already face-down and partially handcuffed at the moment the first "
+                  "shot was fired, as Brown's attorney maintained, or whether the struggle was still actively "
+                  "underway, as the deputy's account described, was disputed and never resolved by any "
+                  "criminal trial of the deputy since none occurred.",
+                  "The specific sequence connecting the initial punch, the deputy's account of losing "
+                  "consciousness, and the six shots fired has been described somewhat differently across the "
+                  "state police report and the family's civil complaint.",
+                  "The full reasoning behind the grand jury's decision not to indict Lafleur has not been made "
+                  "public, as grand jury proceedings are sealed under Louisiana law."],
+         unanswered=["Why does the family's account \u2014 that Guillory was already being handcuffed face-"
+                     "down when the first shot was fired \u2014 conflict so directly with the deputy's account "
+                     "of an ongoing struggle, and how did the grand jury resolve that conflict?",
+                     "What became of DeQuince Brown's reduced charges, and were they ultimately dismissed, "
+                     "tried, or resolved by plea?",
+                     "What became of the Guillory family's federal civil rights lawsuit against the Evangeline "
+                     "Parish Sheriff's Office?"],
+         extraSources=[src("CNN \u2014 \u201cShooting by deputy leaves man dead, girlfriend charged, questions unanswered\u201d",
+                            "https://www.cnn.com/2017/07/14/us/louisiana-fatal-police-shooting/index.html", True),
+                        src("KLFY \u2014 \u201cEvangeline Parish deputy not indicted in the shooting death of Dejuan Guillory\u201d",
+                            "https://www.klfy.com/local/evangeline-parish-deputy-not-indicted-in-the-shooting-death-of-dejuan-guillory/", True),
+                        src("The Advocate \u2014 \u201cGirlfriend of man slain by Evangeline deputy pleads not guilty to reduced charges\u201d",
+                            "https://www.theadvocate.com/acadiana/news/crime_police/article_9c6afa0c-f16c-11e7-8b45-c707dedcb652.html", True)]),
+    dict(id="tommie-mcglothen-jr", caseNumber="191", name="Tommie McGlothen Jr.",
+         status="unsolved", caseType="homicide", year=2020, age=44, gender="male",
+         city="Shreveport", county="Caddo Parish", state="LA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Tommie McGlothen Jr., 44, who had a documented mental health condition, died in the "
+                 "backseat of a Shreveport, Louisiana police vehicle on April 5, 2020, following the third of "
+                 "three encounters with officers that day. Cellphone and body camera video showed officers "
+                 "striking McGlothen, including an elbow blow to his neck, and using a Taser and pepper spray "
+                 "on him before forcing him, limp, into the back of a patrol car; witnesses said he then sat "
+                 "unattended for roughly 40 to 48 minutes before paramedics checked on him. The Caddo Parish "
+                 "coroner ruled the death natural but \u201cpossibly preventable\u201d due to the delay in "
+                 "medical attention. Four officers were indicted on negligent homicide and malfeasance "
+                 "charges; all four waived a jury and were acquitted by a judge in June 2022 after the "
+                 "defense's motion for a directed verdict was granted when the prosecution rested its case. No "
+                 "one has ever been convicted in McGlothen's death.",
+         known=["The three encounters with police, the force used during the final one, and McGlothen's death "
+                "in the patrol car, per cellphone video, body camera footage, and trial testimony.",
+                "Video showed an officer striking McGlothen twice after he spat on her, and another officer "
+                "following with an elbow strike to his neck; witnesses said officers used a Taser and pepper "
+                "spray on him as well.",
+                "Multiple witnesses testified McGlothen was left in the back of the patrol car for "
+                "approximately 40 to 45 minutes before an ambulance arrived, and that arriving EMS personnel "
+                "did not immediately check on him.",
+                "The Caddo Parish Coroner's Office ruled the death was from natural causes but described it as "
+                "\u201cpossibly preventable,\u201d citing the delay in providing medical attention.",
+                "A Caddo Parish grand jury indicted four officers \u2014 Brian Ross, James LeClare, Treona "
+                "McCarter, and D'Marea Johnson \u2014 on charges of negligent homicide and malfeasance in "
+                "office in September 2020.",
+                "All four officers waived their right to a jury trial; a Caddo Parish District Court judge "
+                "granted a directed verdict of acquittal for all four in June 2022, after defense attorneys "
+                "argued the prosecution had not proven its case once the state rested.",
+                "A separate federal wrongful death lawsuit filed by McGlothen's family, alleging officers "
+                "failed to account for signs of excited delirium syndrome, continued in civil court after the "
+                "criminal acquittals."],
+         unknown=["Whether the combined force used \u2014 strikes, a neck elbow blow, Tasing, and pepper spray "
+                  "\u2014 caused or substantially contributed to McGlothen's death, as the family's civil suit "
+                  "argued, or whether his death was purely from natural causes unrelated to the encounter, as "
+                  "the coroner's ruling and the officers' defense maintained, was never resolved by the "
+                  "criminal case since it ended in a directed acquittal before a full verdict on the merits.",
+                  "Why arriving EMS personnel did not immediately check on McGlothen despite witness accounts "
+                  "of a prolonged delay has not been fully explained in available public reporting.",
+                  "The specific legal reasoning behind the judge's directed verdict, beyond finding the "
+                  "prosecution had not met its burden, has not been detailed in a public written opinion "
+                  "reviewed for this summary."],
+         unanswered=["Why did the coroner call McGlothen's death \u201cpossibly preventable\u201d due to a "
+                     "delay in medical care, and why did that delay reportedly last as long as it did?",
+                     "Why did the judge grant a directed verdict for all four officers before the defense "
+                     "presented any evidence of its own?",
+                     "What became of the McGlothen family's federal civil lawsuit alleging the officers "
+                     "disregarded signs of a mental health crisis?"],
+         extraSources=[src("KSLA \u2014 \u201cTrial for 4 officers accused in violent death of Tommie McGlothen Jr. begins June 13\u201d",
+                            "https://www.ksla.com/2022/06/12/trial-4-officers-accused-violent-death-tommie-mcglothen-jr-begins-june-13/", True),
+                        src("KTBS \u2014 \u201cSPD officers acquitted in McGlothen death\u201d",
+                            "https://www.ktbs.com/news/spd-officers-acquitted-in-mcglothen-death/article_92775204-ee3b-11ec-9b70-b7d56b8a73ca.html", True),
+                        src("Yahoo News / AP \u2014 \u201cJudge to rule on dismissing charges against Shreveport officers indicted for in-custody death\u201d",
+                            "https://news.yahoo.com/shreveport-police-officers-charged-tommie-224730058.html", True)]),
+    dict(id="willie-tillman", caseNumber="192", name="Willie Tillman",
+         status="unsolved", caseType="homicide", year=2016, age=33, gender="male",
+         city="Fayetteville", county="Washington", state="AR", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Willie Sherman Tillman, 33, a father of three, died on May 9, 2016, eighteen days after "
+                 "being shot four times by Fayetteville, Arkansas Police Officer Brandon Jones during a "
+                 "traffic stop that turned into a struggle inside Tillman's moving vehicle. Police said Tillman "
+                 "re-entered his car after being asked to step out, and that officers used Tasers on him "
+                 "without effect before the car began moving with Officer Jones still inside; police "
+                 "characterized Tillman's driving as having dragged the two officers, justifying the shooting. "
+                 "Both the Fayetteville Police Department's internal investigation and the Washington County "
+                 "prosecutor concluded the shooting was justified, lawful, and within department policy. Jones "
+                 "returned to duty after three weeks of paid leave. Tillman was the second Black man in "
+                 "recent memory shot and killed by Fayetteville police, following the earlier fatal shooting of "
+                 "a white man in an unrelated incident that the department also ruled justified. No one has "
+                 "ever been charged in Tillman's death.",
+         known=["The traffic stop, the struggle inside the vehicle, and the shooting, per Fayetteville Police "
+                "Department and Washington County Prosecutor Matthew Durrett's investigative findings.",
+                "Officers Brandon Jones and Cpl. Patrick Hanby used Tasers on Tillman without effect before his "
+                "car began moving with Jones inside it; police said this constituted Tillman using the vehicle "
+                "as a deadly weapon against the officers.",
+                "The Fayetteville Police Department's internal investigation, completed May 11, 2016, found "
+                "both officers' actions justified, lawful, and within department policy.",
+                "Washington County Prosecutor Matthew Durrett separately reviewed the case and reached the "
+                "same conclusion, declining to bring any charges.",
+                "Officer Jones returned to work after roughly three weeks of paid administrative leave; "
+                "Corporal Hanby was never placed on leave at all.",
+                "Tillman's death prompted community protests and a petition calling for an independent, "
+                "external investigation, given both reviewing bodies (the department and the county "
+                "prosecutor who works closely with it) were seen by some community members as insufficiently "
+                "independent."],
+         unknown=["Whether Tillman's movement of the vehicle was a deliberate attempt to harm the officers, as "
+                  "police characterized it, or a panicked reaction while an officer was still partially inside "
+                  "the car, as his family's advocates suggested, was never tested in any criminal or civil "
+                  "trial that reached a public resolution.",
+                  "The specific reasoning behind both the department's and the prosecutor's parallel "
+                  "conclusions, beyond their public statements that the shooting was \u201cjustified, lawful "
+                  "and proper,\u201d has not been made available in a detailed public report.",
+                  "Why Corporal Hanby was never placed on administrative leave at all, unlike Officer Jones, "
+                  "has not been explained in available public reporting."],
+         unanswered=["Why did the county prosecutor's independent review reach the identical conclusion as the "
+                     "police department's own internal investigation, given community concerns about "
+                     "institutional closeness between the two offices?",
+                     "Why was Corporal Hanby never placed on administrative leave, unlike Officer Jones, "
+                     "despite both being involved in the same struggle?",
+                     "What became of community calls for an independent, external review of Fayetteville "
+                     "Police Department's use-of-force pattern following this and a prior fatal shooting?"],
+         extraSources=[src("Arkansas Democrat-Gazette \u2014 \u201cPolice clear officers involved in Tillman shooting, residents protest\u201d",
+                            "https://www.arkansasonline.com/news/2016/may/12/police-clear-officers-involved-in-tillm/", True),
+                        src("KNWA/FOX24 \u2014 \u201cOfficer-Involved Shooting of Willie Tillman Justified\u201d",
+                            "https://www.nwahomepage.com/news/officer-involved-shooting-of-willie-tillman-justified/", True),
+                        src("KNWA/FOX24 \u2014 \u201cWillie Tillman's Family Speaks\u201d",
+                            "https://www.nwahomepage.com/news/willie-tillmans-family-speaks/", True)]),
+    dict(id="christopher-whitfield", caseNumber="193", name="Christopher Whitfield",
+         status="unsolved", caseType="homicide", year=2019, age=31, gender="male",
+         city="Ethel", county="East Feliciana Parish", state="LA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Christopher Lee Whitfield, 31, who had schizophrenia, was shot and killed by East Feliciana "
+                 "Parish, Louisiana Deputy Glenn Sims Sr. outside a gas station in Ethel on October 14, 2019, "
+                 "after Whitfield allegedly took raw chicken and a carton of eggs from an outdoor cooler and "
+                 "fled on foot. Sims fired a warning shot into the ground during the chase, then caught "
+                 "Whitfield and scuffled with him on the ground; the sheriff's office said Sims's gun "
+                 "discharged accidentally during the struggle, striking Whitfield in the lower back and "
+                 "killing him. Days later, Sheriff Jeff Travis publicly acknowledged Sims had a prior criminal "
+                 "record including illegal discharge of a firearm, simple battery, and resisting an officer, "
+                 "none of which had been known to him. A grand jury twice considered the case and, on its "
+                 "second sitting in March 2020, declined to indict Sims on second-degree murder. Sims remained "
+                 "a commissioned deputy years afterward despite not returning to active duty. No one has ever "
+                 "been charged in Whitfield's death.",
+         known=["The theft report, the foot chase, and the shooting, per the East Feliciana Parish Sheriff's "
+                "Office's own public statements and subsequent grand jury proceedings.",
+                "Sims fired a warning shot into the ground before catching Whitfield; the sheriff's office "
+                "said Sims's weapon discharged accidentally as the two struggled on the ground, striking "
+                "Whitfield in the lower back.",
+                "Sheriff Jeff Travis publicly disclosed days after the shooting that Sims had at least three "
+                "prior criminal convictions, including illegal discharge of a firearm, simple battery, and "
+                "resisting an officer, and said he had been unaware of this history because it predated his "
+                "own tenure as sheriff.",
+                "The East Feliciana Parish Sheriff's Office led the investigation into its own deputy's "
+                "shooting, rather than referring it to Louisiana State Police, a decision an attorney "
+                "consulted by local media said was legally permissible but that the community could perceive "
+                "as a conflict of interest.",
+                "A first grand jury proceeding was delayed because some jurors were related to either Sims or "
+                "Whitfield; a second 12-person grand jury returned a \u201cno true bill\u201d in March 2020, "
+                "declining to indict Sims on second-degree murder.",
+                "The NAACP called for the U.S. Department of Justice to independently investigate the "
+                "sheriff's office following the shooting.",
+                "As of at least May 2025 reporting, more than five years after the shooting, Sims remained a "
+                "commissioned East Feliciana Parish deputy despite not having returned to active patrol duty."],
+         unknown=["Whether the discharge that killed Whitfield was in fact accidental, as the sheriff's office "
+                  "maintained from the outset, or resulted from Sims's own handling of the weapon during the "
+                  "struggle, was never independently tested at a criminal trial since the grand jury declined "
+                  "to indict.",
+                  "Why the sheriff's office chose to lead the investigation into its own deputy rather than "
+                  "refer it to Louisiana State Police has not been fully explained beyond the sheriff's stated "
+                  "confidence in his own department's ability to handle it fairly.",
+                  "Why Sims's extensive prior criminal history was not known to the sheriff or apparently "
+                  "considered before his continued employment as a deputy has not been fully addressed in "
+                  "public reporting."],
+         unanswered=["Why did the East Feliciana Parish Sheriff's Office investigate its own deputy rather "
+                     "than referring the case to an outside agency, given the obvious conflict of interest?",
+                     "Why was Deputy Sims's criminal history, including a prior conviction for illegal "
+                     "discharge of a firearm, seemingly not considered before he continued in his role?",
+                     "Why has Sims remained a commissioned deputy years after the shooting despite not "
+                     "returning to active duty, and what is his final employment status?"],
+         extraSources=[src("The Advocate \u2014 \u201cGrand jury declines to charge East Feliciana deputy who fatally shot man stealing chicken, family heartbroken\u201d",
+                            "https://www.theadvocate.com/baton_rouge/news/communities/east_feliciana/article_4a614f6e-f9b6-11e9-b097-5f5251659c80.html", True),
+                        src("The Washington Times / AP \u2014 \u201cJury declines charge against deputy for fatal shooting\u201d",
+                            "https://www.washingtontimes.com/news/2020/mar/10/jury-declines-charge-against-deputy-for-fatal-shoo/", True),
+                        src("WBRZ \u2014 \u201cDeputy cleared by grand jury in shooting death still out of work, but remains commissioned\u201d",
+                            "https://www.wbrz.com/news/deputy-cleared-by-grand-jury-in-shooting-death-still-out-of-work-but-remains-commissioned/", True)]),
+    dict(id="thurman-blevins", caseNumber="194", name="Thurman Blevins",
+         status="unsolved", caseType="homicide", year=2018, age=31, gender="male",
+         city="Minneapolis", county="Hennepin", state="MN", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Thurman Blevins, 31, was shot and killed by Minneapolis Police Officers Justin Schmidt and "
+                 "Ryan Kelly on June 23, 2018, at the end of a roughly 40-second foot chase in a north "
+                 "Minneapolis alley. A 911 caller had reported a man matching Blevins's description firing a "
+                 "handgun into the air and the ground; officers spotted him with a gun in his waistband, and "
+                 "he ran when they approached. Officers said Blevins pulled the gun from his pocket and turned "
+                 "toward them during the chase, prompting them to fire 14 shots, four of which struck him. "
+                 "Hennepin County Attorney Mike Freeman announced in July 2018, after a five-week "
+                 "investigation, that the shooting was legally authorized and declined to bring charges "
+                 "against either officer. Body camera video of the shooting was released to the public only "
+                 "the night before that announcement. No one has ever been charged in Blevins's death.",
+         known=["The 911 report, the foot chase, and the shooting, per Hennepin County Attorney Mike Freeman's "
+                "public charging decision and body camera footage released the night before that "
+                "announcement.",
+                "Officers fired a total of 14 shots, four of which struck Blevins.",
+                "Freeman's office stated that witness testimony, body camera video, and forensic testing "
+                "showed Blevins had a 9mm semi-automatic handgun in his hand and had refused multiple commands "
+                "to drop it during the chase.",
+                "Freeman concluded the officers' use of deadly force was authorized under Minnesota law "
+                "because Blevins represented a danger to their lives, and announced no charges would be filed "
+                "against Officers Schmidt or Kelly.",
+                "Freeman's news conference was interrupted by Blevins's family and community members, who "
+                "disputed that Blevins posed a threat to anyone in the community.",
+                "Both officers remained on paid administrative leave during the department's internal "
+                "investigation following the county attorney's decision."],
+         unknown=["Whether Blevins's motion turning toward the officers while holding the gun, as described in "
+                  "the county attorney's account, constituted him aiming or threatening them specifically, "
+                  "versus another interpretation of the same body camera footage, was disputed by family "
+                  "members and community activists but never tested at any criminal trial.",
+                  "The specific reasoning behind the timing of the body camera footage's release \u2014 the "
+                  "night before the charging announcement, rather than promptly after the shooting \u2014 has "
+                  "not been fully explained by the department.",
+                  "The outcome of the Minneapolis Police Department's own internal review of the officers' "
+                  "conduct, separate from the county attorney's criminal charging decision, has not been made "
+                  "comprehensively public."],
+         unanswered=["Why was body camera footage of the shooting withheld from the public for over a month, "
+                     "until the night before the charging decision was announced?",
+                     "What specific internal department review, if any, followed the county attorney's "
+                     "decision not to prosecute, and what were its findings regarding officers Schmidt and "
+                     "Kelly?",
+                     "What became of the relationship between this case and Minneapolis's broader pattern of "
+                     "police shootings that would culminate, two years later, in the killing of George Floyd "
+                     "just a few miles away?"],
+         extraSources=[src("Star Tribune \u2014 \u201cNo charges against Minneapolis officers who fatally shot Blevins\u201d",
+                            "https://www.startribune.com/no-charges-against-minneapolis-officers-who-fatally-shot-blevins/489514381", True),
+                        src("MPR News \u2014 \u201cFreeman: No charges against Minneapolis cops in Blevins shooting\u201d",
+                            "https://www.mprnews.org/story/2018/07/30/thurman-blevins-police-shooting-charging-announcement", True),
+                        src("PBS NewsHour \u2014 \u201cThe Minneapolis officers who fatally shot Thurman Blevins won't be charged. Here's what we know\u201d",
+                            "https://www.pbs.org/newshour/nation/the-minneapolis-officers-who-fatally-shot-thurman-blevins-wont-be-charged-heres-what-we-know", True)]),
+    dict(id="george-tillman", caseNumber="195", name="George Tillman III",
+         status="unsolved", caseType="homicide", year=2016, age=32, gender="male",
+         city="South Ozone Park", county="Queens", state="NY", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="George Homer Tillman III, 32, a licensed electrician and father of five visiting family from "
+                 "Maryland, was shot and killed by NYPD officers in South Ozone Park, Queens, on April 17, "
+                 "2016, after being approached over an open container of alcohol outside a double-parked "
+                 "vehicle. Tillman complied by handing off the bottle, but police said he then ran when "
+                 "officers moved to question him, and that he pointed a loaded .40-caliber pistol at an "
+                 "officer during the chase; four of five pursuing officers opened fire, striking him "
+                 "approximately 13 times. Queens District Attorney Richard Brown cleared the officers of any "
+                 "wrongdoing in October 2016 after a six-month, 71-page investigation, finding Tillman's DNA "
+                 "on the recovered gun. No non-police witness ever corroborated that Tillman was armed, and a "
+                 "companion who was present was held in police custody for 12 hours without charge and without "
+                 "access to an attorney. In 2025, nine years after the shooting, a federal jury found NYPD "
+                 "officers liable in the family's wrongful death lawsuit and awarded $6.3 million. No one has "
+                 "ever been criminally charged in Tillman's death.",
+         known=["The encounter over the open container, the foot chase, and the shooting, per Queens District "
+                "Attorney Richard Brown's 71-page report and subsequent federal civil trial testimony.",
+                "Officers fired a total of 11 rounds; Tillman was struck multiple times, including a fatal "
+                "shot to his left temple, according to the DA's report.",
+                "The recovered .40-caliber pistol was found in Tillman's right hand and bore his DNA on the "
+                "grip, magazine, and slide, per the DA's investigation; no evidence of any other person having "
+                "handled the weapon with bare hands was found.",
+                "DA Brown's October 2016 report concluded Tillman pointed the pistol at an officer and ignored "
+                "commands to drop it, and that officers acted in lawful self-defense; no criminal charges were "
+                "filed.",
+                "A companion who was with Tillman at the time was taken into police custody and held for 12 "
+                "hours after the shooting without being charged or given access to an attorney, according to "
+                "the family's attorney.",
+                "The Tillman family filed a federal wrongful death and civil rights lawsuit; in 2025, a jury "
+                "found NYPD officers liable and awarded the family $6.3 million in damages."],
+         unknown=["Whether Tillman in fact possessed and pointed the recovered pistol, as the DA's forensic "
+                  "findings concluded, or never had a weapon at all, as his family and their attorney "
+                  "maintained from the outset, was disputed throughout the civil proceedings and never tested "
+                  "in a criminal trial since none was brought.",
+                  "Why the companion held with Tillman at the time of the shooting was detained for 12 hours "
+                  "without charge or attorney access has not been explained in any official public "
+                  "accounting.",
+                  "The specific basis for the 2025 federal jury's liability finding, which arrived at a "
+                  "different conclusion than the district attorney's 2016 criminal review of largely the same "
+                  "underlying events, has not been reconciled in a single public record."],
+         unanswered=["Why did the criminal investigation and the 2025 federal civil trial, examining "
+                     "substantially the same shooting, reach such different conclusions about the officers' "
+                     "liability?",
+                     "Why was Tillman's companion held for 12 hours without charge or access to counsel "
+                     "immediately after the shooting?",
+                     "What specific evidence presented to the 2025 federal jury led it to find NYPD officers "
+                     "liable, and how did that evidence differ from what the Queens DA reviewed in 2016?"],
+         extraSources=[src("QNS \u2014 \u201cCops were justified in fatally shooting an armed man during a South Ozone Park pursuit: DA report\u201d",
+                            "https://qns.com/2016/10/cops-justified-fatally-shooting-armed-man-south-ozone-park-pursuit-da-report/", True),
+                        src("DNAinfo \u2014 \u201cNYPD Cleared in April Shooting of a Maryland Man by Queens DA\u201d",
+                            "https://www.dnainfo.com/new-york/20161007/south-ozone-park/george-tillman-queens-district-attorney-fatal-police-shooting/", True),
+                        src("Jurimatic \u2014 \u201cJury Awards $6.3M in NYPD Wrongful Death Shooting Case\u201d",
+                            "https://jurimatic.com/jury-finds-nypd-officers-liable-in-wrongful-death-of-george-homer-tillman-iii-and-awards-6-3-million/", True)]),
+    dict(id="charleena-lyles", caseNumber="196", name="Charleena Lyles",
+         status="unsolved", caseType="homicide", year=2017, age=30, gender="female",
+         city="Seattle", county="King", state="WA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Charleena Lyles, 30, a pregnant mother of four, was shot seven times and killed by Seattle "
+                 "Police Officers Jason Anderson and Steven McNew inside her Magnuson Park apartment on Father's "
+                 "Day, June 18, 2017, after she called 911 herself to report a burglary. Officers said Lyles's "
+                 "demeanor suddenly shifted and she produced a knife, lunging at Anderson and missing his "
+                 "stomach by inches, prompting both officers to open fire; neither carried a Taser at the "
+                 "time. A King County inquest jury unanimously found the shooting justified in 2022, though it "
+                 "also found the officers had not followed department policy on using a stun gun. King County "
+                 "Prosecutor Dan Satterberg declined to file charges weeks later, citing insufficient evidence "
+                 "to disprove justifiable homicide, while acknowledging the case \u201cdoes not mean "
+                 "everything was done right.\u201d The city settled a wrongful death lawsuit with Lyles's "
+                 "family for $3.5 million in 2021. No one has ever been charged in Lyles's death.",
+         known=["The 911 call, the confrontation, and the shooting, per King County inquest testimony, "
+                "surveillance video, and the officers' own statements.",
+                "Lyles had a caution flag attached to her name in police records from a prior incident in "
+                "which she reportedly threatened law enforcement.",
+                "Neither Anderson nor McNew carried a Taser at the time, despite McNew being a certified "
+                "crisis intervention officer; three of Lyles's young children were in the apartment during "
+                "the shooting.",
+                "Video evidence introduced at the 2022 inquest contradicted Officer Anderson's sworn recollection "
+                "that the apartment's front door was closed when he backed away from Lyles; the footage showed "
+                "him backing through an open doorway into the hallway as the shots were fired.",
+                "The inquest jury unanimously found in July 2022 that the officers had no reasonably effective "
+                "alternative to deadly force and that the level of force used was reasonable, while separately "
+                "finding they did not comply with department policy regarding stun-gun use.",
+                "King County Prosecutor Dan Satterberg announced two weeks later that his office would not "
+                "file criminal charges, citing insufficient evidence to disprove the officers acted in "
+                "justifiable self-defense under the \u201cmalice\u201d and \u201cgood faith\u201d legal standard "
+                "in effect in 2017.",
+                "The City of Seattle settled a wrongful death civil lawsuit with Lyles's family for $3.5 "
+                "million in 2021.",
+                "Lyles's case, along with a pattern of other 2017 King County police shootings and inquests "
+                "criticized as favoring law enforcement, prompted county officials to overhaul the entire "
+                "inquest process, including giving victims' families their own attorney."],
+         unknown=["Whether Lyles's advance with the knife, occurring in a small kitchen area with her young "
+                  "children nearby, left the officers with genuinely no other option, as the inquest jury "
+                  "concluded, or whether de-escalation remained possible, as her family's attorney argued citing "
+                  "the contradicted testimony about the apartment door, was never resolved by any criminal "
+                  "trial.",
+                  "Why officers were not equipped with Tasers at the time, despite one being a certified "
+                  "crisis intervention officer, has not been fully explained beyond department equipment "
+                  "policy discussions that followed the shooting.",
+                  "The full reasoning connecting the inquest jury's simultaneous findings \u2014 that the "
+                  "shooting was reasonable but that stun-gun policy was violated \u2014 has not been reconciled "
+                  "in a single public accounting."],
+         unanswered=["How can a shooting be found reasonable and justified while the same inquest jury "
+                     "concluded officers violated department policy on using less-lethal options first?",
+                     "Why did an officer's sworn recollection about a closed apartment door directly conflict "
+                     "with surveillance video, and how did that discrepancy factor into the prosecutor's "
+                     "declination decision?",
+                     "What specific outcomes has King County's overhauled inquest process, prompted partly by "
+                     "this case, produced in the years since?"],
+         extraSources=[src("The Seattle Times \u2014 \u201cProsecutor: No charges against Seattle police officers in fatal 2017 shooting of Charleena Lyles\u201d",
+                            "https://www.seattletimes.com/seattle-news/law-justice/prosecutor-no-charges-against-seattle-police-officers-in-fatal-2017-shooting-of-charleena-lyles/", True),
+                        src("KIRO 7 \u2014 \u201cCharleena Lyles inquest: Jury finds officers used reasonable force in deadly 2017 shooting\u201d",
+                            "https://www.kiro7.com/news/local/charleena-lyles-inquest-jury-finds-officers-used-reasonable-force-deadly-2017-shooting/5IUGEKR5UJB6LG67U7YJIAKNZ4/", True),
+                        src("KING 5 \u2014 \u201cKing County prosecutor will not file charges against the officers who shot, killed Charleena Lyles\u201d",
+                            "https://www.king5.com/article/news/local/seattle/no-charges-officers-charleena-lyles/281-d2b573ce-47b2-4ae6-af0a-72d141d9c3ea", True)]),
+    dict(id="miles-jackson", caseNumber="197", name="Miles Jackson",
+         status="unsolved", caseType="homicide", year=2021, age=27, gender="male",
+         city="Westerville", county="Franklin", state="OH", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Miles Jackson, 27, was shot 20 times and killed inside an emergency room at Mount Carmel "
+                 "St. Ann's Hospital in Westerville, Ohio on April 12, 2021, during a struggle with Columbus "
+                 "police officers who had come to arrest him on outstanding warrants after he was brought in "
+                 "for a suspected overdose. An earlier pat-down by Westerville police had missed a handgun "
+                 "concealed in his pants pocket; when Columbus officers attempted their own search, "
+                 "prosecutors said Jackson fired the weapon, and a roughly five-minute standoff followed "
+                 "involving more than 90 commands and a stun gun before officers and hospital security opened "
+                 "fire, striking him in the head, chest, abdomen, buttocks, and thighs. A Franklin County grand "
+                 "jury declined to indict any of the Columbus police officers or Mount Carmel security "
+                 "personnel involved in October 2022. No one has ever been charged in Jackson's death.",
+         known=["The overdose call, the initial pat-down that missed a concealed handgun, and the shooting, "
+                "per the Franklin County Prosecutor's Office and Ohio Attorney General's investigative "
+                "findings.",
+                "Jackson had been treated earlier the same day for an overdose, given Narcan, and left the "
+                "hospital against medical advice before being returned there in police custody hours later on "
+                "outstanding warrants.",
+                "Prosecutors said forensic testing matched three spent shell casings at the scene to the gun "
+                "Jackson possessed, and multiple officers reported hearing him fire during the encounter.",
+                "Officers gave more than 90 verbal commands over roughly five minutes and used a stun gun "
+                "before ultimately opening fire; six individuals in total \u2014 Columbus police and Mount "
+                "Carmel security \u2014 discharged their weapons.",
+                "A coroner's report found Jackson was struck 20 times, with a toxicology report showing "
+                "fentanyl and norfentanyl in his system.",
+                "A Franklin County grand jury returned a \u201cno bill\u201d decision in October 2022, declining "
+                "to indict any officer or security guard involved; Prosecutor Gary Tyack announced the decision "
+                "without further comment.",
+                "No officers, hospital staff, or physicians were injured in the shootout, though one bullet "
+                "passed through an officer's uniform sleeve."],
+         unknown=["Whether Jackson fired the number of times and in the manner prosecutors described, versus "
+                  "an alternative account of the encounter, was based substantially on officer testimony and "
+                  "forensic matching, and was never independently tested at a criminal trial since none was "
+                  "brought.",
+                  "Why the initial Westerville police pat-down failed to detect the concealed handgun has been "
+                  "acknowledged as a lapse but not addressed through any public accountability measure beyond "
+                  "the prosecutor noting the officer had previously been cautioned for rushing his duties.",
+                  "The specific reasoning behind the grand jury's decision, beyond the prosecutor's public "
+                  "summary of the evidence, has not been made available, as Ohio grand jury proceedings are "
+                  "sealed."],
+         unanswered=["Why did the Westerville officer's pat-down fail to find the handgun, and had that "
+                     "officer's prior pattern of \u201crushing his duties\u201d ever been addressed before this "
+                     "case?",
+                     "Why did the confrontation escalate to 20 gunshot wounds despite roughly five minutes of "
+                     "commands and a stun gun deployment first?",
+                     "What became of Jackson's father's public statements that his son was a \u201cgood "
+                     "man\u201d who \u201cjust needed help,\u201d in terms of any policy change to how hospitals "
+                     "and police jointly handle patients with outstanding warrants?"],
+         extraSources=[src("10TV (WBNS) \u2014 \u201cNo charges to be filed against officers in Miles Jackson's death\u201d",
+                            "https://www.10tv.com/article/news/local/shooting-mount-carmel-st-anns-miles-jackson/530-363fc378-b399-4129-8040-d72215521b5d", True),
+                        src("AP, via CBS News Pittsburgh \u2014 \u201cOfficers cleared in shooting of man in Ohio emergency room\u201d",
+                            "https://www.cbsnews.com/pittsburgh/news/officers-cleared-in-shooting-of-man-in-ohio-emergency-room/", True),
+                        src("Franklin County Prosecutor's Office \u2014 official statement on the grand jury decision",
+                            "https://prosecutor.franklincountyohio.gov/press-releases/1532", True)]),
+    dict(id="sahleem-tindle", caseNumber="198", name="Sahleem Tindle",
+         status="unsolved", caseType="homicide", year=2018, age=28, gender="male",
+         city="Oakland", county="Alameda", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Sahleem Tindle, 28, a father of two, was shot three times in the back and killed by Bay "
+                 "Area Rapid Transit Police Officer Joseph Mateu on January 3, 2018, on a sidewalk across from "
+                 "the West Oakland BART station. Tindle had been walking to the station with his fiancee and "
+                 "children when he got into an altercation with another man, and the two ended up wrestling "
+                 "over a handgun after shots were fired. Mateu, responding on foot to the sound of gunfire, "
+                 "found the two men grappling and shot Tindle three times without having established who "
+                 "fired the earlier shots or possessed the gun. Alameda County District Attorney Nancy "
+                 "O'Malley cleared Mateu of criminal wrongdoing in October 2018, concluding he reasonably "
+                 "believed he was acting in self-defense and defense of others. In March 2020, a federal jury "
+                 "found Mateu used excessive force and was negligent, awarding Tindle's family $6.3 million. "
+                 "No one has ever been criminally charged in Tindle's death.",
+         known=["The altercation, the struggle over the handgun, and the shooting, per Officer Mateu's body-"
+                "worn camera footage and the Alameda County District Attorney's 48-page investigative report.",
+                "Mateu ran toward the sound of gunfire from inside the BART station and, upon arriving, found "
+                "Tindle and another, unidentified man grappling over a handgun; he fired three shots at "
+                "Tindle without first determining who had fired the earlier shots or who owned the weapon.",
+                "The DA's October 2018 report concluded Mateu \u201cactually and reasonably believed\u201d he "
+                "was acting in self-defense and defense of others, and declined to bring criminal charges.",
+                "Body camera video released to Tindle's family and later to the public showed conflicting "
+                "interpretations: BART's police chief said it showed Tindle had not raised his hands until "
+                "after being shot, while Tindle's mother said it showed his back was turned toward the other "
+                "man and away from any threat when Mateu fired.",
+                "Mateu was placed on paid administrative leave for approximately two weeks before returning "
+                "to duty.",
+                "A federal jury in March 2020, after a two-week trial, found Mateu had used excessive force in "
+                "violation of Tindle's constitutional rights and had acted negligently, awarding $5.7 million "
+                "to Tindle's estate for the constitutional violation and $608,000 to his two children for "
+                "Mateu's negligence, a combined $6.3 million against BART."],
+         unknown=["Whether Tindle himself had fired a weapon or was simply defending himself when Mateu shot "
+                  "him, given the officer acknowledged not knowing who fired the initial shots or possessed "
+                  "the gun before opening fire, was disputed throughout both the criminal review and the "
+                  "civil trial and was never resolved by any criminal proceeding since none was brought.",
+                  "The identity of the other man Tindle was grappling with, described in the DA's report only "
+                  "as an unnamed witness whom most other witnesses believed was not the aggressor, has not "
+                  "been made public.",
+                  "Why the district attorney's conclusion that the shooting was justified diverged so sharply "
+                  "from the federal civil jury's finding of excessive force and negligence, examining "
+                  "substantially the same body camera footage, has not been reconciled in any single public "
+                  "record."],
+         unanswered=["Why did Officer Mateu fire on Tindle without first determining who had fired the "
+                     "earlier shots or who possessed the weapon in the struggle?",
+                     "Why did the federal civil jury reach the opposite conclusion from the district attorney "
+                     "about whether Mateu's use of force was justified, examining much of the same evidence?",
+                     "What became of the unnamed man Tindle was grappling with, and was he ever identified or "
+                     "questioned about the origin of the gun and the earlier gunshots?"],
+         extraSources=[src("San Francisco Chronicle \u2014 \u201cBART officer cleared in West Oakland shooting of Sahleem Tindle\u201d",
+                            "https://www.sfchronicle.com/crime/article/BART-officer-cleared-in-West-Oakland-shooting-of-13330146.php", True),
+                        src("East Bay Express \u2014 \u201cDistrict Attorney Clears BART Police Officer in Fatal West Oakland Shooting of Sahleem Tindle\u201d",
+                            "https://eastbayexpress.com/district-attorney-clears-bart-police-officer-in-fatal-west-oakland-shooting-of-sahleem-tindle-2-1/", True),
+                        src("NBC Bay Area \u2014 \u201cJury Awards $6.3M to Family of Man Fatally Shot by BART Officer\u201d",
+                            "https://www.nbcbayarea.com/news/local/jury-awards-6-3m-to-family-of-man-fatally-shot-by-bart-officer/2253895/", True)]),
+    dict(id="aaron-bailey", caseNumber="199", name="Aaron Bailey",
+         status="unsolved", caseType="homicide", year=2017, age=45, gender="male",
+         city="Indianapolis", county="Marion", state="IN", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Aaron Bailey, 45, was shot four times in the back and killed by Indianapolis Metropolitan "
+                 "Police Officers Michal Dinnsen and Carlton Howard on June 29, 2017, moments after crashing "
+                 "his car into a tree at the end of a brief nighttime pursuit. Officers said Bailey ignored "
+                 "commands to show his hands and reached into the center console, where they feared a gun "
+                 "might be stored; no weapon was ever found in the car. Officers fired 11 shots into the back "
+                 "and side of the vehicle. A special prosecutor declined to bring criminal charges in October "
+                 "2017, and federal investigators separately found insufficient evidence for civil rights "
+                 "charges. In a rare turn, IMPD's own police chief concluded the shooting was not justified "
+                 "and recommended both officers be fired \u2014 but Indianapolis's Civilian Police Merit Board "
+                 "voted 5-2 in May 2018 to clear them of any policy violation, allowing them to keep their "
+                 "jobs. No one has ever been held criminally or departmentally accountable for Bailey's death.",
+         known=["The traffic stop, the pursuit, the crash, and the shooting, per special prosecutor Kenneth "
+                "Cotter's 16-page report and subsequent Civilian Police Merit Board hearing testimony.",
+                "Officers Dinnsen and Howard fired a total of 11 shots into the back and side of Bailey's "
+                "vehicle after it crashed; four struck Bailey, and no weapon was found on him or in the car.",
+                "Special Prosecutor Kenneth Cotter determined in October 2017 that the officers reasonably "
+                "feared for their lives, citing Bailey's failure to cooperate, his reported nervousness, and "
+                "his movement toward the center console after the crash, and declined to bring charges.",
+                "IMPD's own Firearms Review Board and Police Chief Bryan Roach, who took office in January "
+                "2017, both concluded the officers violated department training and policy; Roach suspended "
+                "both officers without pay and formally recommended their termination.",
+                "The seven-member Civilian Police Merit Board voted 5-2 in May 2018, after a three-day "
+                "hearing, to clear Dinnsen and Howard of any policy violation, overturning the police chief's "
+                "own recommendation and allowing both officers to keep their jobs.",
+                "The U.S. Department of Justice announced in April 2019 that an independent federal review, "
+                "incorporating the special prosecutor's report, the merit board record, and an FBI "
+                "investigation, found insufficient evidence to prove a willful federal civil rights violation.",
+                "The City of Indianapolis settled with Bailey's estate for $650,000, without admitting "
+                "wrongdoing, as part of an agreement in which the family dismissed its civil lawsuit."],
+         unknown=["Whether Bailey's movement toward the center console reflected an actual attempt to retrieve "
+                  "a weapon, as officers believed, or an innocuous motion given that no gun was ever found, "
+                  "was disputed by the family and was never resolved by any criminal trial since none was "
+                  "brought.",
+                  "Why the Civilian Police Merit Board reached a conclusion directly opposite to that of the "
+                  "police department's own Firearms Review Board and chief, examining the same underlying "
+                  "conduct, has not been fully explained beyond board members' general statements about being "
+                  "persuaded by hearing testimony.",
+                  "The Bailey family raised specific questions about whether all evidence presented to the "
+                  "merit board was complete and accurate; what, if anything, that concern turned up has not "
+                  "been made public."],
+         unanswered=["Why did an independent civilian merit board overturn the police chief's own well-"
+                     "reasoned termination recommendation, based on the department's own internal Firearms "
+                     "Review Board findings?",
+                     "What specific evidence did Bailey's family believe was incomplete or inaccurate in the "
+                     "record presented to the merit board, and was that concern ever formally addressed?",
+                     "What reforms, if any, did Indianapolis make to its Civilian Police Merit Board process "
+                     "following the sustained public criticism of this outcome, including from the mayor "
+                     "himself?"],
+         extraSources=[src("WTHR \u2014 \u201cJustice Department won't pursue civil rights charges in Aaron Bailey case\u201d",
+                            "https://www.wthr.com/article/news/local/justice-department-wont-pursue-civil-rights-charges-aaron-bailey-case/531-7f6db42c-3579-4eb2-9604-0d56411b384c", True),
+                        src("Fox 59 \u2014 \u201cMerit Board decides not to terminate officers in fatal shooting of Aaron Bailey\u201d",
+                            "http://fox59.com/2018/05/10/impd-merit-board-decides-not-to-terminate-officers-in-fatal-shooting-of-aaron-bailey/", True),
+                        src("Indianapolis Recorder \u2014 \u201cYear in Review: Officers kept jobs after killing Aaron Bailey\u201d",
+                            "https://indianapolisrecorder.com/1ef7e782-0f5d-11e9-8df0-e3141bb980cd/", True)]),
+    dict(id="delrawn-small", caseNumber="200", name="Delrawn Small",
+         status="unsolved", caseType="homicide", year=2016, age=37, gender="male",
+         city="Brooklyn", county="Kings", state="NY", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Delrawn Small, 37, a father of three, was shot and killed by off-duty NYPD Officer Wayne "
+                 "Isaacs on July 4, 2016, in East New York, Brooklyn, after the two men were involved in a "
+                 "traffic dispute that authorities said continued for several blocks. Small got out of his car "
+                 "and approached Isaacs's vehicle at a stoplight; Isaacs shot him through the driver's-side "
+                 "window, then briefly got out, looked toward Small as he collapsed, and drove away without "
+                 "identifying himself as police or rendering aid. Isaacs testified Small had punched him and "
+                 "that he feared for his life, but surveillance video played at trial appeared to contradict "
+                 "that account, showing Small shot almost immediately upon reaching the car. New York's "
+                 "Attorney General, appointed special prosecutor under a new state policy for police killings "
+                 "of unarmed civilians, charged Isaacs with second-degree murder. A Brooklyn jury acquitted him "
+                 "of all charges in November 2017. No one has ever been convicted in Small's death.",
+         known=["The traffic dispute, the shooting, and Isaacs's departure from the scene, per surveillance "
+                "video played at trial and the New York Attorney General's prosecution.",
+                "Isaacs was off duty and driving his personal vehicle; he shot Small three times through the "
+                "driver's-side window without, according to witnesses, ever identifying himself as a police "
+                "officer.",
+                "This was the first trial prosecuted under an executive order Governor Andrew Cuomo signed "
+                "appointing the New York Attorney General as special prosecutor in cases where unarmed "
+                "civilians are killed by police officers.",
+                "Isaacs testified Small punched him in the face and that he feared for his life, and an EMT "
+                "testified she treated him for facial swelling after the incident; prosecutors argued the "
+                "surveillance video showed Small was shot almost immediately after reaching the car, "
+                "undermining the officer's account of an extended physical struggle.",
+                "A Brooklyn jury acquitted Isaacs of second-degree murder and first-degree manslaughter in "
+                "November 2017, following his own testimony in his defense.",
+                "Isaacs, who is also Black, remained on the police force on non-enforcement duty without his "
+                "service weapon pending an internal NYPD investigation following the acquittal.",
+                "The NAACP Legal Defense and Educational Fund publicly called on the NYPD to conduct a "
+                "thorough investigation and impose discipline, including termination, following the acquittal."],
+         unknown=["Whether Small in fact struck Isaacs with enough force and intent to justify lethal force, "
+                  "as Isaacs testified and the jury ultimately credited, or whether the surveillance video's "
+                  "near-immediate shooting contradicted that account, as prosecutors and Small's family argued, "
+                  "was the central dispute at trial and was resolved only by the jury's acquittal, not by any "
+                  "independent finding of fact.",
+                  "Why Isaacs did not identify himself as a police officer before or immediately after the "
+                  "shooting, and why he drove away rather than rendering aid, was raised at trial but not "
+                  "specifically addressed in the acquittal.",
+                  "The outcome of the NYPD's internal disciplinary investigation into Isaacs following the "
+                  "acquittal, which the department stated was ongoing, has not been made comprehensively "
+                  "public."],
+         unanswered=["Why did the jury credit Isaacs's account of an extended physical altercation when "
+                     "surveillance video appeared to show Small was shot almost immediately upon reaching the "
+                     "car?",
+                     "Why did Isaacs leave the scene without identifying himself as an officer or rendering "
+                     "aid to Small before he collapsed?",
+                     "What was the final outcome of NYPD's internal disciplinary investigation into Isaacs "
+                     "following his criminal acquittal?"],
+         extraSources=[src("ABC7 New York \u2014 \u201cVerdict: NYPD officer not guilty in apparent Brooklyn road rage shooting\u201d",
+                            "https://abc7ny.com/post/nypd-officer-not-guilty-in-apparent-road-rage-shooting/2609751/", True),
+                        src("NBC New York \u2014 \u201cOff-Duty NYPD Cop Acquitted in Deadly Road Rage Shooting\u201d",
+                            "https://www.nbcnewyork.com/news/local/nypd-cop-acquitted-murder-deadly-road-rage-shooting-brooklyn/333522/", True),
+                        src("NAACP Legal Defense Fund \u2014 \u201cLDF Statement on Acquittal of NYPD Officer Wayne Isaacs for Delrawn Small's Death\u201d",
+                            "https://www.naacpldf.org/press-release/ldf-statement-on-acquittal-of-nypd-officer-wayne-isaacs-for-delrawn-smalls-death-2/", True)]),
+    dict(id="yvette-smith", caseNumber="201", name="Yvette Smith",
+         status="unsolved", caseType="homicide", year=2014, age=47, gender="female",
+         city="Camp Swift", county="Bastrop", state="TX", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Yvette Smith, 47, a mother of two who had survived cancer, was shot twice and killed by "
+                 "Bastrop County, Texas Sheriff's Deputy Daniel Willis on February 16, 2014, moments after she "
+                 "opened the front door of her Camp Swift home. Smith had called 911 herself to report her "
+                 "boyfriend and his son fighting over a shotgun; by the time deputies arrived, she had already "
+                 "persuaded them to unload the gun and put it away. A dispatcher nonetheless told Willis "
+                 "someone inside had a gun, and he retrieved an AR-15 from his patrol car. Dashcam video showed "
+                 "no deputy gave any command before Willis fired the moment Smith appeared in the doorway; she "
+                 "was unarmed. Willis was charged with murder and fired from the department. His first trial "
+                 "ended in a hung jury deadlocked 8-4 toward conviction; at his retrial, Willis waived a jury "
+                 "and was acquitted by a judge in April 2016. No one has ever been convicted in Smith's death.",
+         known=["The 911 call, the dispatch information relayed to Willis, and the shooting, per Bastrop "
+                "County Sheriff's Office dashcam footage and testimony from both criminal trials.",
+                "Smith herself called 911 to report a domestic disturbance and had defused it by convincing "
+                "her boyfriend's son to unload the shotgun and set it on a table before deputies arrived.",
+                "Dashcam video showed Willis retrieved an AR-15-style rifle from his patrol vehicle and fired "
+                "twice within roughly 3.5 seconds of Smith opening the front door, without any deputy having "
+                "given a verbal command.",
+                "The Bastrop County Sheriff's Office initially stated publicly that Smith had been "
+                "\u201cdisplaying a firearm\u201d and ignored commands; officials later acknowledged she was "
+                "unarmed and that no commands were given before the shooting.",
+                "Willis was indicted for murder and fired from the sheriff's office in June 2014.",
+                "His first trial in September 2015 ended in a mistrial after the jury deliberated nearly 20 "
+                "hours over three days and remained deadlocked 8-4 in favor of conviction.",
+                "At his 2016 retrial, Willis waived his right to a jury; Visiting Judge Albert McCaig Jr. "
+                "found him not guilty of murder in April 2016, stating the domestic dispute between Smith's "
+                "boyfriend and his son was the true cause of the tragedy.",
+                "Bastrop County separately settled a wrongful death and negligent-hiring lawsuit with Smith's "
+                "family for $1.2 million in 2015, the largest settlement in the county's history at the time."],
+         unknown=["Whether Willis's belief that Smith might be armed, based solely on outdated dispatch "
+                  "information, was objectively reasonable given the roughly 3.5-second window before he fired "
+                  "was the central legal question and was resolved only by a single judge's ruling after a "
+                  "jury had already deadlocked in the opposite direction.",
+                  "Why Willis retrieved a rifle rather than waiting for further information or attempting "
+                  "verbal contact, given deputies were already on scene and no immediate threat had been "
+                  "confirmed, has not been fully explained beyond the defense's self-defense argument.",
+                  "Why the sheriff's office's initial public account \u2014 that Smith was armed and had "
+                  "ignored commands \u2014 differed so completely from what the department's own dashcam "
+                  "footage later showed has not been addressed in any official public accounting."],
+         unanswered=["Why did a judge acquit Willis after a jury had already deadlocked 8-4 in favor of "
+                     "conviction on largely the same evidence?",
+                     "Why did the Bastrop County Sheriff's Office's initial public statement claim Smith was "
+                     "armed and had ignored commands, when the department's own dashcam footage showed "
+                     "neither was true?",
+                     "What became of Willis professionally after his acquittal, and did any law enforcement "
+                     "agency subsequently employ him?"],
+         extraSources=[src("Austin American-Statesman \u2014 \u201cDaniel Willis found not guilty in shooting death of unarmed woman\u201d",
+                            "https://www.statesman.com/story/news/2016/08/13/daniel-willis-found-not-guilty-in-shooting-death-of-unarmed-woman/9910759007/", True),
+                        src("KXAN \u2014 \u201cFired deputy Daniel Willis found not guilty of murder\u201d",
+                            "https://www.kxan.com/news/fired-deputy-daniel-willis-found-not-guilty-of-murder/", True),
+                        src("Fox 7 Austin \u2014 \u201cBastrop Co. Fmr. Deputy Willis found not guilty\u201d",
+                            "https://www.fox7austin.com/news/bastrop-co-fmr-deputy-willis-found-not-guilty", True)]),
+    dict(id="charly-keunang", caseNumber="202", name="Charly \u201cAfrica\u201d Keunang",
+         status="unsolved", caseType="homicide", year=2015, age=43, gender="male",
+         city="Los Angeles", county="Los Angeles", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Charly Leundeu Keunang, 43, a Cameroonian national living homeless on Skid Row and known "
+                 "locally as \u201cAfrica,\u201d was shot five times and killed by three Los Angeles Police "
+                 "officers on March 1, 2015, during a struggle that began when officers tried to arrest him on "
+                 "suspicion of robbery. A bystander's cellphone video of the daylight shooting was viewed "
+                 "millions of times worldwide and sparked days of protest under the banner \u201cJustice For "
+                 "Africa.\u201d Police said Keunang grabbed a rookie officer's holstered gun during the "
+                 "struggle, but the family's attorney later showed his DNA was never found on the weapon, "
+                 "despite the police chief's initial public claim that it had been. The LAPD Police Commission "
+                 "ruled the shooting justified in 2016, and the Los Angeles County District Attorney declined "
+                 "to bring charges later that year. A federal jury nonetheless found two officers liable in "
+                 "2018, and the city settled with Keunang's family for $1.95 million. No one has ever been "
+                 "criminally charged in Keunang's death.",
+         known=["The confrontation, the struggle over the officer's holstered gun, and the shooting, per "
+                "police body camera footage obtained by the Los Angeles Times and the district attorney's "
+                "22-page investigative report.",
+                "Keunang was shot five times by three officers \u2014 Sergeant Chand Syed and Officers "
+                "Francisco Martinez and Daniel Torres \u2014 after a struggle that began when officers "
+                "attempted to remove him from his tent on suspicion of robbing another homeless person.",
+                "Police Chief Charlie Beck stated shortly after the shooting that Keunang's DNA had been found "
+                "on the gun; attorney Dan Stormer, representing Keunang's family in a civil suit, later "
+                "presented evidence that Keunang's DNA was not in fact found on the weapon.",
+                "The LAPD Police Commission unanimously ruled in February 2016 that the officers were within "
+                "policy on the use of deadly force, following an 11-month investigation, while separately "
+                "finding a rookie officer had used improper tactics.",
+                "The Los Angeles County District Attorney's Office announced in December 2016 that the "
+                "officers \u201cacted lawfully in self-defense and in defense of others\u201d and declined to "
+                "bring criminal charges.",
+                "A federal jury in May 2018 found two of the officers liable in Keunang's death; the city "
+                "subsequently settled the family's civil lawsuit for $1.95 million.",
+                "A bystander, Trishawn Cardessa Carey, who briefly picked up a baton an officer dropped during "
+                "the struggle, was separately charged with assault with a deadly weapon, facing 25 years to "
+                "life under California's three-strikes law for that act alone."],
+         unknown=["Whether Keunang in fact grabbed or nearly gained control of an officer's holstered gun, as "
+                  "police maintained and as justified the department's and DA's conclusions, or whether that "
+                  "account was undermined by the absence of his DNA on the weapon, as the family's civil "
+                  "attorney argued, was never resolved by any criminal trial since none was brought.",
+                  "Why the police chief's early public statement about DNA evidence on the gun differed from "
+                  "what was later presented in civil litigation has not been addressed in any official public "
+                  "accounting.",
+                  "The specific reasoning connecting the Police Commission's and district attorney's "
+                  "justified-shooting findings with the federal civil jury's contrary liability finding, "
+                  "examining much of the same video evidence, has not been reconciled in a single public "
+                  "record."],
+         unanswered=["Why did the police chief's initial public claim about DNA on the recovered gun differ "
+                     "from what was presented as evidence in the family's civil lawsuit?",
+                     "Why did LAPD wait nearly three years to release the officers' body camera footage of the "
+                     "shooting to the public?",
+                     "What accounts for the stark disparity between the officers facing no criminal "
+                     "consequences at all and a bystander who merely touched a dropped baton facing a "
+                     "25-years-to-life charge?"],
+         extraSources=[src("LAist \u2014 \u201cDistrict Attorney Says 2015 LAPD Shooting Of Homeless Man Was Justified\u201d",
+                            "https://laist.com/news/da-office-keunang", True),
+                        src("CBS Los Angeles \u2014 \u201cLA Approves Nearly $2M Lawsuit Settlement In Fatal LAPD Shooting Of Charly 'Africa' Keunang On Skid Row\u201d",
+                            "https://www.cbsnews.com/losangeles/news/charly-africa-keunang-skid-row-lapd-shooting-settlement/", True),
+                        src("CBC News \u2014 \u201cLos Angeles police officers cleared in fatal skid row shooting\u201d",
+                            "https://www.cbc.ca/news/world/lapd-shooting-keunang-justified-1.3877957", True)]),
+    dict(id="robert-lawrence-white", caseNumber="203", name="Robert Lawrence White",
+         status="unsolved", caseType="homicide", year=2018, age=41, gender="male",
+         city="Silver Spring", county="Montgomery", state="MD", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Robert Lawrence White, 41, a man with cognitive impairments, was shot and killed by "
+                 "Montgomery County, Maryland Police Officer Anand Badgujar in a Silver Spring parking lot on "
+                 "June 11, 2018. White was simply walking alone near his home when Badgujar, who had just "
+                 "finished an unrelated call, noticed a rip in his jacket and moved his hand toward his "
+                 "pocket, and began following him. The encounter escalated into a physical struggle in which "
+                 "White allegedly knocked the officer down; Badgujar, heard on his own radio describing the "
+                 "situation as a possible \u201csuicide by cop type thing,\u201d fired eight rounds, striking "
+                 "White multiple times. No weapon was found on White. The Howard County State's Attorney's "
+                 "Office, brought in for an independent review, unanimously cleared Badgujar of criminal "
+                 "wrongdoing in July 2018, and Montgomery County's own internal review reached the same "
+                 "conclusion in 2019. A federal lawsuit alleging White was targeted because he was Black was "
+                 "dismissed in 2023. No one has ever been charged in White's death.",
+         known=["The initial stop, the escalating struggle, and the shooting, per Montgomery County Police "
+                "body camera footage released publicly and the Howard County State's Attorney's independent "
+                "review.",
+                "Badgujar began following White after noticing him walking with a torn jacket and moving his "
+                "hand toward his pocket; White was not the subject of any specific complaint or suspected of "
+                "any particular crime at the time.",
+                "Badgujar was recorded on his own police radio describing the unfolding situation as "
+                "potentially a \u201csuicide by cop type thing\u201d before the shooting occurred.",
+                "Police said White physically assaulted Badgujar twice, at one point knocking him to the "
+                "ground and gaining a position where he could have taken the officer's firearm; Badgujar fired "
+                "eight rounds, and no weapon was found on White.",
+                "The Howard County State's Attorney's Office, brought in specifically to provide an "
+                "independent review separate from Montgomery County's own department, unanimously concluded "
+                "in July 2018 that Badgujar's actions were legally justified.",
+                "A subsequent Montgomery County Police administrative review, completed in March 2019, "
+                "reached the identical conclusion that the shooting was lawful and justified, finding Badgujar "
+                "was \u201cin grave danger.\u201d",
+                "White's siblings filed a federal lawsuit alleging Badgujar targeted White because he was "
+                "Black, in violation of the Equal Protection Clause; a federal judge dismissed the case in "
+                "2023, ruling White was not legally \u201cseized\u201d until the moment he was shot, which "
+                "defeated the unreasonable-seizure and excessive-force claims as pleaded."],
+         unknown=["Whether Badgujar's initial decision to follow and stop White \u2014 someone not suspected "
+                  "of any specific crime, based only on a torn jacket and a hand movement \u2014 was itself "
+                  "reasonable, and whether that decision set the entire escalation in motion, was raised by "
+                  "the family but not the basis on which the courts or reviewing prosecutors resolved the "
+                  "case.",
+                  "Whether White's cognitive impairments affected his ability to understand or respond to the "
+                  "officer's commands during the encounter has not been directly addressed in the available "
+                  "public reviews.",
+                  "The full reasoning behind the federal court's procedural dismissal, turning on the legal "
+                  "definition of when a \u201cseizure\u201d began rather than on the reasonableness of the "
+                  "officer's conduct throughout the encounter, has been criticized by civil rights attorneys "
+                  "as avoiding the substance of the family's discrimination claim."],
+         unanswered=["Why did Officer Badgujar begin following and questioning White, who was not suspected of "
+                     "any specific crime, based only on a torn jacket and a hand movement toward his pocket?",
+                     "Why did Badgujar's own radio call describing a possible \u201csuicide by cop\u201d "
+                     "scenario not prompt a different, more cautious response before the encounter turned "
+                     "physical?",
+                     "Did White's cognitive impairments play any role in the encounter's escalation, and was "
+                     "that ever specifically investigated?"],
+         extraSources=[src("The Washington Post \u2014 \u201cMaryland prosecutors clear officer who killed unarmed man during chaotic parking lot encounter\u201d",
+                            "https://www.washingtonpost.com/local/public-safety/maryland-prosecutors-clear-police-officer-who-killed-unarmed-man-during-chaotic-parking-lot-encounter/2018/07/30/aab89674-93eb-11e8-80e1-00e80e1fdf43_story.html", True),
+                        src("WTOP News \u2014 \u201cMontgomery Co. police review finds 2018 shooting, killing of unarmed man justified\u201d",
+                            "https://wtop.com/montgomery-county/2019/04/montgomery-co-police-review-finds-2018-shooting-killing-of-unarmed-man-justified/", True),
+                        src("CourtListener \u2014 Thompson v. Badgujar, memorandum opinion",
+                            "https://www.courtlistener.com/opinion/9742532/thompson-v-badgujar/", True)]),
+    dict(id="oshae-terry", caseNumber="204", name="O'Shae Terry",
+         status="unsolved", caseType="homicide", year=2018, age=24, gender="male",
+         city="Arlington", county="Tarrant", state="TX", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="O'Shae Terry, 24, was shot four times and killed by Arlington, Texas Police Officer Bau "
+                 "Tran on September 1, 2018, during a traffic stop for an expired registration tag. After "
+                 "officers said they smelled marijuana, Terry began rolling up his windows and started the "
+                 "engine to drive away; Tran, who had climbed onto the SUV's running board, drew his weapon "
+                 "and fired five rounds through the window as the vehicle began moving, striking Terry four "
+                 "times. A Tarrant County grand jury indicted Tran on criminally negligent homicide eight "
+                 "months later, a rare criminal charge against a police officer in the county. In May 2023, "
+                 "nearly five years after the shooting, Tran pleaded guilty \u2014 but received deferred "
+                 "adjudication, meaning he served no jail time and, if he completes probation, will have no "
+                 "conviction on his record at all. A separate federal civil rights lawsuit was dismissed on "
+                 "qualified immunity grounds. No one has ever been convicted in Terry's death.",
+         known=["The traffic stop, the escalation as Terry attempted to leave, and the shooting, per body "
+                "camera footage and the 5th U.S. Circuit Court of Appeals's detailed recounting of the "
+                "incident.",
+                "Tran climbed onto the SUV's running board and reached through the window with his right hand "
+                "before resting it on his holstered pistol; when Terry started the engine and the car began to "
+                "move, Tran drew his weapon and fired five rounds, striking Terry four times.",
+                "Terry's passenger, Terrence Harmon, was uninjured; the force of the SUV striking a curb "
+                "afterward knocked Tran off the vehicle and onto the street.",
+                "A Tarrant County grand jury indicted Tran on criminally negligent homicide in May 2019, "
+                "described by legal observers as a rare criminal prosecution of a police officer in that "
+                "county; Tran had a disciplinary record prosecutors characterized as reflecting \u201cbad "
+                "character,\u201d including a prior off-duty incident where he allegedly pulled a knife on "
+                "someone while identifying himself as an officer.",
+                "The federal Fifth Circuit Court of Appeals nonetheless granted Tran qualified immunity in the "
+                "Terry family's civil rights lawsuit, dismissing the case; the Cato Institute filed an amicus "
+                "brief arguing Tran's conduct should be ruled unconstitutional regardless.",
+                "In May 2023, nearly five years after the shooting and just before trial, Tran pleaded guilty "
+                "to the felony charge but received six years of deferred adjudication community supervision "
+                "and a $600 fine \u2014 no prison time \u2014 with the conviction to be wiped from his record "
+                "entirely if he completes probation without violation.",
+                "Attorney Lee Merritt, representing Terry's mother and Harmon, publicly called the deferred "
+                "adjudication outcome \u201ca denial of accountability\u201d and \u201ca dereliction of "
+                "justice.\u201d"],
+         unknown=["Whether Tran reasonably perceived an imminent threat to his life in the roughly one-second "
+                  "window between the car's engine starting and his shots being fired \u2014 the central "
+                  "question in both the criminal case and the qualified-immunity analysis \u2014 was never "
+                  "resolved by any court ruling on the merits, since the criminal case ended in a plea and the "
+                  "civil case was dismissed on immunity grounds without reaching that question.",
+                  "The specific contents of Tran's prior disciplinary record beyond the incidents described in "
+                  "court filings have not been made comprehensively public.",
+                  "Why prosecutors agreed to a deferred adjudication plea deal nearly five years after "
+                  "indictment, rather than proceeding to the scheduled trial, has not been fully explained "
+                  "publicly."],
+         unanswered=["Why did prosecutors agree to a plea deal carrying no jail time and an erasable "
+                     "conviction, nearly five years after the original indictment and shortly before trial?",
+                     "Why did the Fifth Circuit grant qualified immunity in the civil case despite an amicus "
+                     "brief specifically arguing the officer's conduct was clearly unconstitutional?",
+                     "What did Officer Tran's prior disciplinary record, cited by prosecutors as evidence of "
+                     "\u201cbad character,\u201d actually consist of, and why did it not result in earlier "
+                     "intervention?"],
+         extraSources=[src("KERA News \u2014 \u201cFormer Arlington police officer could face no prison time after pleading guilty to 2018 shooting\u201d",
+                            "https://www.keranews.org/criminal-justice/2023-06-02/arlington-police-officer-shooting-deferred-adjudication", True),
+                        src("Reason \u2014 \u201cA Cop Was Indicted for Homicide After Shooting a Fleeing Driver. He Still Got Qualified Immunity.\u201d",
+                            "https://reason.com/2021/11/09/cop-indicted-homicide-shooting-driver-qualified-immunity-bau-tran-arlington-texas/", True),
+                        src("WFAA \u2014 \u201cFormer Arlington officer who shot, killed man during 2018 traffic stop won't serve prison time\u201d",
+                            "https://www.wfaa.com/article/news/local/former-arlington-officer-no-prison-time-shooting/287-59aede3f-0fa7-4db0-bd75-fb72095eaf80", True)]),
+    dict(id="vincent-truitt", caseNumber="205", name="Vincent Truitt",
+         status="unsolved", caseType="homicide", year=2020, age=17, gender="male",
+         city="Marietta", county="Cobb", state="GA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Vincent Truitt, 17, was shot twice in the back and killed by a Cobb County, Georgia Police "
+                 "officer on July 13, 2020, after fleeing on foot from a car that had been reported stolen. "
+                 "Truitt was the front-seat passenger; after the driver jumped out and was caught, Truitt also "
+                 "ran, and an officer chased him roughly two seconds \u2014 with no verbal commands given, "
+                 "according to released video \u2014 before firing. Police said Truitt had a gun and pointed "
+                 "it at the officer during the chase, though the officer's own body camera footage of that "
+                 "moment was reportedly too blurry to clearly confirm it. A Cobb County grand jury deliberated "
+                 "roughly eight hours in February 2021 before ruling the shooting justified. The family's "
+                 "$150 million federal lawsuit, which attorneys called the largest ever filed in a Georgia "
+                 "police shooting case, was later dismissed on qualified immunity grounds. No one has ever "
+                 "been charged in Truitt's death.",
+         known=["The stolen-vehicle pursuit, the foot chase, and the shooting, per Cobb County Police body "
+                "camera and dashcam footage released publicly alongside the grand jury announcement.",
+                "Video showed the driver of the reported stolen vehicle was apprehended first; Truitt, the "
+                "passenger, then exited and began running, with an officer chasing him on foot for roughly two "
+                "seconds \u2014 during which no verbal commands were given, per 11Alive's review of the "
+                "footage \u2014 before firing two shots that struck him in the back.",
+                "Cobb County Police Chief Tim Cox and the district attorney's office maintained that Truitt "
+                "was armed and pointed a gun at the pursuing officer during the chase; a .40-caliber handgun "
+                "was recovered feet from his body, though the officer's own body camera video of the moment he "
+                "said he saw the weapon was reportedly too blurry to independently confirm it.",
+                "A Cobb County grand jury deliberated for approximately eight hours in February 2021 before "
+                "determining the officer's use of force was authorized and recommending no further action.",
+                "Truitt's parents filed a $150 million federal civil rights lawsuit against the officer and "
+                "Cobb County in January 2022, which their attorneys described as the largest ever filed in a "
+                "Georgia police shooting case; the suit was later dismissed on qualified immunity grounds.",
+                "Truitt's family and the Georgia NAACP publicly disputed the grand jury's finding, with family "
+                "attorney Gerald Griggs stating the video showed Truitt never posed an immediate or deadly "
+                "threat to the officer."],
+         unknown=["Whether Truitt in fact pointed a firearm at the officer during the brief chase, as police "
+                  "maintained, or whether the blurry body camera footage left that central claim genuinely "
+                  "unconfirmed, as the family's attorneys argued, was never tested at any criminal trial since "
+                  "the grand jury declined to indict.",
+                  "The full grand jury proceedings and the specific evidence weighed most heavily in reaching "
+                  "its conclusion have not been made public beyond the announced outcome, as is standard under "
+                  "grand jury secrecy.",
+                  "Why the officer had only approximately two seconds to assess the situation and gave no "
+                  "verbal commands before firing has not been directly addressed beyond police's general "
+                  "characterization of the threat."],
+         unanswered=["Why did the confrontation between the officer and a fleeing 17-year-old escalate to "
+                     "gunfire within approximately two seconds of the foot chase beginning, with no commands "
+                     "given?",
+                     "If the officer's own body camera video was too blurry to clearly show a weapon in "
+                     "Truitt's hand, what specific additional evidence led the grand jury to conclude he was "
+                     "armed and threatening beyond doubt?",
+                     "What became of the driver of the reported stolen vehicle, who was apprehended without "
+                     "incident moments before Truitt was shot?"],
+         extraSources=[src("WSB-TV \u2014 \u201cGrand jury clears Cobb County officer in deadly shooting of 17-year-old\u201d",
+                            "https://www.wsbtv.com/news/local/cobb-county/grand-jury-clears-officer-deadly-shooting-cobb-county-teen-attorneys-say/KGEXTISRMBBPLBKAOTV3ZQ5PFA/", True),
+                        src("11Alive \u2014 \u201cNewly-released video shows what led up to shooting of Vincent Truitt by Cobb County police\u201d",
+                            "https://www.11alive.com/article/news/crime/vincent-truitt-cobb-county-shooting-body-camera/85-c1806be4-fcfe-4fab-93eb-fe04c5a38abb", True),
+                        src("13WMAZ \u2014 \u201cVincent Truitt death lawsuit against Cobb County dismissed\u201d",
+                            "https://www.13wmaz.com/article/news/crime/vincent-truitt-death-lawsuit-cobb-county-dismissed/85-91a1b64a-3621-4fb8-aae5-73d43346c28e", True)]),
+    dict(id="william-green", caseNumber="206", name="William Green",
+         status="unsolved", caseType="homicide", year=2020, age=43, gender="male",
+         city="Landover", county="Prince George's", state="MD", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="William Green, 43, was shot six times and killed by Prince George's County, Maryland Police "
+                 "Corporal Michael Owen Jr. while handcuffed in the front seat of Owen's patrol car on January "
+                 "27, 2020. Owen had found Green asleep in his own vehicle after a series of traffic crashes, "
+                 "apparently under the influence of an unknown substance, handcuffed him, and placed him in the "
+                 "cruiser's passenger seat. Owen, who was not wearing a body camera, testified Green "
+                 "body-slammed him and grabbed for his gun during a struggle inside the car; prosecutors argued "
+                 "there was no evidence Green ever touched the weapon. Owen was fired and charged with second-"
+                 "degree murder within days, becoming the first officer in county history charged with murder "
+                 "for an on-duty killing. After nearly four years of delay, a jury acquitted him of all four "
+                 "charges in December 2023 following roughly two hours of deliberation. No one has ever been "
+                 "convicted in Green's death.",
+         known=["The traffic crash response, the handcuffing, and the shooting inside Owen's cruiser, per "
+                "trial testimony and the Prince George's County Police Department's own account.",
+                "Owen was not wearing a body camera during the encounter; his account of Green body-slamming "
+                "him and reaching for his gun was corroborated only by his own testimony and a fellow officer "
+                "who recalled Owen telling him afterward that Green had gone for the weapon.",
+                "Owen was fired and charged with second-degree murder, first-degree assault, voluntary "
+                "manslaughter, and misconduct in office within days of the shooting.",
+                "The trial was delayed nearly four years; the presiding judge rejected a proposed plea deal "
+                "that would have reduced the charge to voluntary manslaughter and publicly rebuked "
+                "prosecutors for failing to exchange required evidence with the defense in time for the "
+                "original trial date.",
+                "A Prince George's County jury deliberated less than two hours before acquitting Owen of all "
+                "four charges on December 6, 2023; Owen remained suspended without pay pending an internal "
+                "administrative review, per the department's own statement.",
+                "Prince George's County settled a wrongful death lawsuit with Green's family for $20 million "
+                "in September 2020, months after the shooting and years before the criminal trial concluded, "
+                "reported as the highest such payout on record at the time.",
+                "State's Attorney Aisha Braveboy stated after the verdict that she did not personally believe "
+                "Owen's account, calling his testimony \u201coutrageous and certainly implausible,\u201d but "
+                "acknowledged the jury could still find reasonable doubt in it."],
+         unknown=["Whether Green in fact grabbed for Owen's gun during the struggle, as Owen testified, or "
+                  "whether no such struggle over the weapon occurred, as prosecutors argued citing an absence "
+                  "of corroborating evidence, was the central dispute at trial and was resolved only by the "
+                  "jury's acquittal, not by any independent finding of fact.",
+                  "Why Owen was not equipped with a body camera at the time, despite the department having "
+                  "equipment available to at least some officers, has not been fully explained in public "
+                  "reporting.",
+                  "The specific evidence-exchange failures that led the judge to reject the proposed plea deal "
+                  "and delay the original trial date have not been detailed beyond the judge's public rebuke "
+                  "of the prosecutor's office."],
+         unanswered=["Why did it take nearly four years for this case to reach trial, and what specific role "
+                     "did the prosecution's own evidence-handling failures play in that delay?",
+                     "Why was Corporal Owen not wearing a body camera during an encounter that began as a "
+                     "routine welfare check on a man asleep in his car?",
+                     "What was the outcome of Prince George's County Police Department's internal "
+                     "administrative review of Owen's conduct, separate from the criminal case?"],
+         extraSources=[src("The Washington Post \u2014 \u201cPrince George's officer acquitted in fatal shooting of handcuffed man\u201d",
+                            "https://www.washingtonpost.com/dc-md-va/2023/12/06/owen-verdict-police-shooting-prince-georges-not-guilty/", True),
+                        src("WUSA9 \u2014 \u201cJury verdict trial former Prince George's County police officer charged murder Michael Owen Jr. William Green\u201d",
+                            "https://www.wusa9.com/article/news/local/maryland/jury-verdict-trial-former-prince-georges-county-police-officer-charged-murder-michael-owen-jr-william-green/65-6da9cf86-e0d9-4e9b-8a9b-39e98d7caf9d", True),
+                        src("AFRO American Newspapers \u2014 \u201cPrince George's Police Officer acquitted after shooting death of William Green\u201d",
+                            "https://afro.com/prince-georges-police-officer-acquitted-after-shooting-death-of-william-green/", True)]),
+    dict(id="anthony-lowe-jr", caseNumber="207", name="Anthony Lowe Jr.",
+         status="unsolved", caseType="homicide", year=2023, age=36, gender="male",
+         city="Huntington Park", county="Los Angeles", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Anthony Lowe Jr., 36, a double amputee who used a wheelchair, was shot roughly 10 times and "
+                 "killed by two Huntington Park, California police officers on January 26, 2023, moments after "
+                 "he moved away from his wheelchair while holding a knife. Officers had responded to a report "
+                 "that Lowe stabbed a man in the chest; police said he ignored commands to drop the knife and "
+                 "threatened to throw it after Tasers failed to stop him. Cellphone video showed him on the "
+                 "sidewalk moving away from the wheelchair as officers approached. Los Angeles County District "
+                 "Attorney Nathan Hochman's office announced in December 2025, nearly three years after the "
+                 "shooting, that it would not file charges, concluding in a 28-page report that Lowe "
+                 "\u201cdespite his physical limitations, presented an imminent deadly threat.\u201d No one has "
+                 "ever been charged in Lowe's death.",
+         known=["The stabbing report, the confrontation, and the shooting, per the Los Angeles County District "
+                "Attorney's 28-page investigative report and surveillance video cited in it.",
+                "Surveillance video showed Lowe stab a man in the chest, causing a collapsed lung and two "
+                "broken ribs, in the block before police encountered him.",
+                "Officers Paul Munoz and Joshua Volasgis fired approximately 10 rounds at Lowe after Tasers "
+                "failed to stop him and he refused to drop a roughly 10-inch butcher's knife, per the DA's "
+                "report.",
+                "The District Attorney's Office, after an investigation by the Los Angeles County Sheriff's "
+                "Department reviewing surveillance video, 911 recordings, witness interviews, and medical "
+                "records, announced on December 30, 2025 that it would not file charges, concluding the "
+                "officers reasonably believed deadly force was necessary.",
+                "The DA's report separately acknowledged Lowe may have been experiencing a mental health "
+                "crisis, describing him as \u201cpossibly suicidal,\u201d while stating that did not change the "
+                "legal analysis of the officers' actions.",
+                "Lowe's family filed a wrongful death lawsuit; their attorney publicly questioned the DA's "
+                "seriousness about police accountability, noting the same office had separately declined to "
+                "charge officers in another high-profile 2023 shooting, that of Christopher Deandre Mitchell."],
+         unknown=["Whether Lowe's physical limitations meaningfully changed the level of threat he could "
+                  "actually pose in the moments before the shooting, as his family's attorney argued given his "
+                  "inability to move on his own without the wheelchair he had left behind, was addressed in "
+                  "the DA's report but never tested at any criminal trial since none was brought.",
+                  "The specific distance between Lowe and the officers at the moment they opened fire, and "
+                  "whether that distance left room for less-lethal alternatives beyond the Tasers already "
+                  "attempted, has not been made fully clear in public reporting.",
+                  "Why the District Attorney's charging decision took nearly three years to reach has not been "
+                  "explained beyond the office's general description of a thorough investigation."],
+         unanswered=["Why did it take nearly three years for the district attorney's office to announce a "
+                     "charging decision in a case with extensive surveillance video already available?",
+                     "Given Lowe's physical limitations and the officers' own Taser deployment, why were "
+                     "further less-lethal options not attempted before resorting to roughly 10 gunshots?",
+                     "What became of the Lowe family's wrongful death lawsuit against the City of Huntington "
+                     "Park?"],
+         extraSources=[src("Los Angeles County District Attorney's Office \u2014 official statement declining to file charges",
+                            "https://da.lacounty.gov/media/news/district-attorney-s-office-declines-file-charges-2023-fatal-shooting-anthony-lowe", True),
+                        src("Police1 \u2014 \u201cCalif. officers won't face charges in 2023 fatal OIS of knife-wielding amputee, D.A. says\u201d",
+                            "https://www.police1.com/investigations/calif-officers-wont-face-charges-in-2023-fatal-ois-of-knife-wielding-amputee-d-a-says", True),
+                        src("ABC7 Los Angeles \u2014 \u201cHuntington Park police officers who shot double amputee holding knife will not face charges, prosecutors say\u201d",
+                            "https://abc7.com/post/huntington-park-police-officers-shot-double-amputee-holding-knife-face-charges-prosecutors-say/18335068/", True)]),
+    dict(id="christopher-deandre-mitchell", caseNumber="208", name="Christopher DeAndre Mitchell",
+         status="unsolved", caseType="homicide", year=2018, age=23, gender="male",
+         city="Torrance", county="Los Angeles", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Christopher DeAndre Mitchell, 23, was shot and killed by Torrance, California Police "
+                 "Officers Matthew Concannon and Anthony Chavez on December 9, 2018, within seconds of them "
+                 "approaching a parked car matching a stolen-vehicle report. Officers said they saw Mitchell "
+                 "reach toward what turned out to be an altered air rifle wedged between his legs and that he "
+                 "failed to comply with commands; his family maintained he was asleep and never given a chance "
+                 "to surrender. Then-District Attorney Jackie Lacey's office declined to file charges in 2019, "
+                 "finding the shooting justified. After George Gasc\u00f3n took office pledging to revisit police "
+                 "shootings, his office reopened the case in 2023 and secured a grand jury indictment for "
+                 "voluntary manslaughter \u2014 the same year it was publicly revealed that both officers had "
+                 "exchanged racist text messages. In November 2025, under a new district attorney, prosecutors "
+                 "moved to dismiss the case, and a judge granted that dismissal in April 2026, citing "
+                 "insufficient evidence to prove guilt beyond a reasonable doubt. No one has ever been "
+                 "convicted in Mitchell's death.",
+         known=["The stolen-vehicle report, the parking lot encounter, and the shooting within roughly 12 to "
+                "15 seconds of officers' arrival, per Los Angeles County District Attorney records and grand "
+                "jury indictment materials.",
+                "Mitchell was found in the driver's seat of a black Honda Civic reported stolen, with an "
+                "altered air rifle positioned between his legs; officers said they believed he was reaching "
+                "for it.",
+                "Then-DA Jackie Lacey's office reviewed the case and declined to file charges in 2019, "
+                "concluding the officers were legally justified.",
+                "In 2021, it was revealed that numerous Torrance police officers, including both Concannon and "
+                "Chavez to varying degrees, had exchanged racist text messages; Mitchell's family's attorney "
+                "cited this as evidence of potential racial bias in the shooting.",
+                "District Attorney George Gasc\u00f3n's office reopened the investigation and secured a grand "
+                "jury indictment against both officers for voluntary manslaughter in April 2023, more than "
+                "four years after the shooting.",
+                "Special Prosecutor Michael Gennaco, a nationally recognized use-of-force expert retained by "
+                "the DA's office, produced a 26-page memo concluding the case could not be proven beyond a "
+                "reasonable doubt, given the 12-second window officers had to assess the situation.",
+                "Los Angeles County Superior Court Judge Samuel Ohta dismissed the indictment in a 34-page "
+                "opinion in April 2026, finding no evidence prosecutors sought dismissal in bad faith, and "
+                "stating explicitly that the case was not a civil rights matter but a voluntary manslaughter "
+                "case bound by that charge's evidentiary standard."],
+         unknown=["Whether Mitchell was in fact reaching for the air rifle, as officers maintained, or was "
+                  "asleep and given no real opportunity to comply, as his family argued, was never resolved at "
+                  "any criminal trial since the case was dismissed before reaching one.",
+                  "The specific content of the racist text messages exchanged by the officers, and how "
+                  "directly connected they were to this particular shooting as opposed to reflecting broader "
+                  "department culture, was described as difficult to conclusively link by the special "
+                  "prosecutor's own analysis.",
+                  "Why the original 2019 charging decision and the 2023 reopened investigation, examining "
+                  "substantially the same evidence years apart, produced such different initial conclusions "
+                  "before the case was ultimately dismissed regardless.",],
+         unanswered=["Why did the case take a dismissal after reopening and indictment, rather than proceeding "
+                     "to trial where a jury could weigh the same evidence the special prosecutor found "
+                     "insufficient?",
+                     "What role did the revealed racist text messages among Torrance officers play in either "
+                     "the original 2019 declination or the eventual 2026 dismissal, given prosecutors "
+                     "themselves called the connection difficult to establish?",
+                     "What accountability, if any, have Officers Concannon and Chavez faced departmentally, "
+                     "separate from the criminal case's outcome?"],
+         extraSources=[src("Los Angeles County District Attorney's Office \u2014 official statement on the case's dismissal",
+                            "https://da.lacounty.gov/media/news/judge-dismisses-case-against-two-torrance-police-officers-charged-killing-man-who", True),
+                        src("NBC Los Angeles \u2014 \u201cDA asks charges to be dropped against Torrance police officers for 2018 on-duty killing\u201d",
+                            "https://www.nbclosangeles.com/investigations/charges-dropped-against-torrance-police-officers-for-2018-on-duty-killing/3807398/", True),
+                        src("FOX 11 Los Angeles \u2014 \u201cCharges dismissed against former Torrance officers in fatal shooting of Christopher DeAndre Mitchell\u201d",
+                            "https://www.foxla.com/news/torrance-police-shooting-mitchell-charges-dismissed-2026", True)]),
+    dict(id="jordell-richardson", caseNumber="209", name="Jor'Dell Richardson",
+         status="unsolved", caseType="homicide", year=2023, age=14, gender="male",
+         city="Aurora", county="Arapahoe", state="CO", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Jor'Dell Richardson, 14, was shot and killed by Aurora, Colorado Police Officer Roch "
+                 "Gruszeczka on June 1, 2023, seconds after being tackled at the end of a foot chase following "
+                 "a suspected robbery of a convenience store. Body camera video showed Richardson reaching "
+                 "toward his waistband as officers chased him into an alley; Officer James Snapp tackled him, "
+                 "and five seconds later Gruszeczka fired a single shot into his upper abdomen while shouting "
+                 "\u201cGun, gun. Let go of the [expletive] gun.\u201d The weapon turned out to be a pellet-gun "
+                 "replica of a 9mm pistol. Richardson pleaded for help and lost consciousness within moments; "
+                 "he was pronounced dead at a hospital. The 18th Judicial District Attorney's Office announced "
+                 "in September 2023, three months later, that Gruszeczka was legally justified and would face "
+                 "no charges. No one has ever been charged in Richardson's death.",
+         known=["The robbery report, the foot chase, and the shooting, per body-worn camera video from both "
+                "officers and the district attorney's public report of findings.",
+                "A group of teenagers, including Richardson, allegedly robbed a convenience store of vape "
+                "cartridges; a store employee said Richardson displayed what he believed was a gun by lifting "
+                "his sweatshirt.",
+                "Officer Snapp tackled Richardson in an alley as he fled; roughly five seconds later, Officer "
+                "Gruszeczka fired a single shot into Richardson's upper abdomen while yelling commands about a "
+                "gun.",
+                "The recovered weapon was a pellet-gun replica of a 9mm pistol, not a functioning firearm.",
+                "Officers began CPR and called an ambulance; Richardson was taken to University Hospital in "
+                "Aurora, where he was pronounced dead at 5:05 p.m.",
+                "The 18th Judicial District Attorney's Office, following review by its Critical Incident "
+                "Response Team, concluded in a report released September 6, 2023 that Gruszeczka \u201cwas "
+                "legally justified in using deadly physical force\u201d and separately cleared Officer Snapp of "
+                "any criminal liability for the tackle.",
+                "Aurora Police Department's own internal affairs bureau conducted a separate review "
+                "alongside the district attorney's investigation; its findings were not made public in the "
+                "same release."],
+         unknown=["Whether Richardson's motion toward his waistband, in the roughly five seconds after being "
+                  "tackled, presented the kind of imminent deadly threat that legally justified the shot, "
+                  "given the weapon turned out to be a pellet-gun replica, was the central dispute the "
+                  "district attorney's report addressed but that was never tested at any criminal trial.",
+                  "The specific findings of Aurora Police Department's own internal affairs investigation, run "
+                  "in parallel with the district attorney's review, have not been made comprehensively public.",
+                  "Whether officers had any realistic opportunity to identify the pellet gun as a replica "
+                  "before firing, given the entire encounter from tackle to gunshot lasted about five seconds, "
+                  "was not directly addressed beyond the report's general finding of legal justification."],
+         unanswered=["Why did the confrontation escalate to a fatal gunshot within roughly five seconds of a "
+                     "14-year-old being tackled to the ground?",
+                     "What specific de-escalation options, if any, existed once Richardson was already "
+                     "physically restrained by a second officer at the moment of the shooting?",
+                     "What became of Aurora Police Department's own internal affairs review of the officers' "
+                     "conduct, separate from the district attorney's criminal charging decision?"],
+         extraSources=[src("CPR News \u2014 \u201cNo charges filed against Aurora Police officer who shot and killed Jor'Dell Richardson\u201d",
+                            "https://www.cpr.org/2023/09/06/jordell-richardson-aurora-police-shooting/", True),
+                        src("CBS News Colorado \u2014 \u201cDA confirms no criminal charges for Aurora police in Jor'Dell Richardson's death\u201d",
+                            "https://www.cbsnews.com/colorado/news/da-confirms-no-criminal-charges-aurora-police-jordell-richardsons-death/", True),
+                        src("9NEWS (KUSA) \u2014 \u201cDA will not file charges in police shooting of Jor'Dell Richardson, source says\u201d",
+                            "https://www.9news.com/article/news/local/no-charges-jordell-richardson-police-fatal-shooting/73-cb8713dc-a6bb-484d-92ae-d737867a440f", True)]),
+    dict(id="omari-cryer", caseNumber="210", name="Omari Cryer",
+         status="unsolved", caseType="homicide", year=2022, age=25, gender="male",
+         city="Louisville", county="Jefferson", state="KY", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Omari Cryer, 25, a father, was shot twice and killed by a deputy U.S. Marshal on May 20, "
+                 "2022, in Louisville's Chickasaw neighborhood while a federal task force attempted to serve a "
+                 "domestic violence arrest warrant. Body camera video showed Cryer running from officers, "
+                 "hopping a fence, and pulling a handgun from his waistband before falling; a marshal fired "
+                 "two rounds, striking him in the front. No other officer discharged a weapon. Nearly a year "
+                 "later, Cryer's family said the Jefferson County Commonwealth's Attorney's Office told them "
+                 "it did not have enough evidence to indict anyone in his death. In 2023, a complaint to "
+                 "Louisville's Office of Inspector General alleged the arrest warrant used to justify the "
+                 "operation itself contained false statements; LMPD's chief publicly denied that allegation. No "
+                 "one has ever been charged in Cryer's death, and the identity of the marshal who fired has "
+                 "never been publicly released.",
+         known=["The warrant service, the foot chase, and the shooting, per LMPD body camera footage released "
+                "publicly and the Jefferson County Coroner's Office.",
+                "Cryer was wanted on a state arrest warrant alleging domestic violence, strangulation, "
+                "terroristic threatening, and assault against a woman with whom he had a child.",
+                "Body camera footage showed Cryer running, hopping a chain-link fence, and pulling a handgun "
+                "from his waistband as he fell; a deputy U.S. Marshal fired two rounds, striking him in the "
+                "front. No other officer at the scene fired a weapon.",
+                "The Jefferson County Coroner's Office ruled the cause and manner of death \u201cgunshot "
+                "wounds/homicide.\u201d",
+                "LMPD's Public Integrity Unit investigated the shooting at the request of the U.S. Marshals "
+                "Service; as of March 2023, Cryer's family said the Commonwealth's Attorney's Office told them "
+                "it lacked sufficient evidence to indict anyone.",
+                "A complaint filed with Louisville's Office of Inspector General in 2023 alleged the state "
+                "arrest warrant used to justify the operation contained false statements, and separately "
+                "alleged abuse of police authority and excessive force; LMPD Chief Jacquelyn Gwinn-Villaroel "
+                "publicly stated the involved officers had not lied.",
+                "The identity of the specific deputy U.S. Marshal who fired the fatal shots has never been "
+                "publicly released."],
+         unknown=["Whether Cryer pointed or aimed the recovered handgun at pursuing officers, as opposed to "
+                  "simply holding it while running and falling, was disputed by his family's attorney, who "
+                  "said body camera footage showed he \u201cnever turned, he never pointed that weapon,\u201d "
+                  "and was never resolved by any criminal proceeding since none was brought.",
+                  "The specific findings of the Office of Inspector General's investigation into whether the "
+                  "underlying arrest warrant contained false statements have not been made comprehensively "
+                  "public.",
+                  "Why the identity of the marshal who fired the fatal shots has never been publicly disclosed, "
+                  "unlike the practice for LMPD officers in comparable local shootings, has not been explained."],
+         unanswered=["Why has the identity of the marshal who shot and killed Cryer never been publicly "
+                     "released?",
+                     "What did the Office of Inspector General's investigation into the arrest warrant's "
+                     "underlying statements ultimately conclude?",
+                     "Why did the Commonwealth's Attorney's Office determine there was insufficient evidence to "
+                     "indict anyone, given body camera video captured the entire encounter?"],
+         extraSources=[src("Louisville Public Media (LPM) \u2014 \u201cExperts weigh in on video evidence in shooting of Omari Cryer\u201d",
+                            "https://www.lpm.org/news/2022-05-27/experts-weigh-in-on-video-evidence-in-shooting-of-omari-cryer", True),
+                        src("WAVE 3 News \u2014 \u201cFamily still looking for answers nearly 1 year after Omari Cryer was shot, killed by US Marshal\u201d",
+                            "https://www.wave3.com/2023/03/14/family-still-looking-answers-nearly-1-year-after-omari-cryer-was-shot-killed-by-us-marshal/", True),
+                        src("WHAS11 \u2014 \u201c'Those officers didn't lie': LMPD chief denies allegations of misconduct leading to 2022 death\u201d",
+                            "https://www.whas11.com/article/news/local/omari-cryer-lmpd-marshal-office-of-inspector-general-shooting-2022-louisville-kentucky/417-c9ccc811-1456-483e-84ba-c8db4bdd18c9", True)]),
+    dict(id="linus-phillip", caseNumber="211", name="Linus Phillip",
+         status="unsolved", caseType="homicide", year=2018, age=30, gender="male",
+         city="Largo", county="Pinellas", state="FL", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Linus F. Phillip, 30, was shot four times and killed by Largo, Florida Police Officer "
+                 "Matthew Steiner at a Wawa gas station on March 23, 2018, after a traffic stop for illegally "
+                 "tinted windows. Officers said they smelled marijuana and moved to detain Phillip; he got back "
+                 "into his car and reversed, with Steiner partly inside the vehicle. Police said Steiner, being "
+                 "dragged and pinned between the car and gas pumps, fired in self-defense. Investigators later "
+                 "acknowledged that surveillance footage from the gas station did not actually capture the "
+                 "shooting itself. Weeks later, Largo detectives traveled to the funeral home holding Phillip's "
+                 "body and pressed his finger to his phone in an attempt to unlock it, a move his family called "
+                 "a violation. The State Attorney's Office ruled the shooting justifiable homicide in April "
+                 "2018. No one has ever been charged in Phillip's death.",
+         known=["The traffic stop, the struggle as Phillip attempted to drive away, and the shooting, per "
+                "Largo Police Department statements and the State Attorney's Office's investigative findings.",
+                "Officer Steiner fired four shots after being partially inside the reversing vehicle and, "
+                "police said, pinned between the car and nearby gas pumps and concrete stanchions.",
+                "Investigators reviewed multiple surveillance camera angles from the Wawa station but "
+                "acknowledged the available footage was limited and did not capture the moment of the "
+                "shooting itself.",
+                "The State Attorney's Office for the 6th Judicial Circuit ruled on April 13, 2018 that the "
+                "shooting was justifiable homicide under Florida Statute 776.012, finding Steiner acted in "
+                "lawful self-defense.",
+                "Roughly a month after the shooting, two Largo detectives went to the funeral home holding "
+                "Phillip's body and held his hand up to his cellphone's fingerprint sensor in an attempt to "
+                "unlock it as part of the ongoing investigation; the phone did not unlock, and Phillip's "
+                "fiancee said she felt violated by the act.",
+                "Phillip's family, through attorney John Trevena, disputed the official account and requested "
+                "an independent second autopsy, saying the released videos did not tell \u201ca full "
+                "tale.\u201d"],
+         unknown=["Whether Phillip's vehicle in fact pinned or dragged Steiner in a manner presenting a deadly "
+                  "threat, as police maintained, or whether a different account was possible, given no "
+                  "surveillance footage captured the shooting itself, was disputed by the family and never "
+                  "resolved by any criminal proceeding since none was brought.",
+                  "Why Largo police pursued unlocking Phillip's phone at his funeral home rather than through "
+                  "another investigative avenue, and what specific evidence they believed the phone might "
+                  "contain, has not been fully explained in public reporting.",
+                  "The outcome of the independent second autopsy the family sought funding for has not been "
+                  "reported publicly."],
+         unanswered=["Why did none of the available surveillance camera footage capture the shooting itself, "
+                     "despite multiple camera angles at the gas station?",
+                     "Why did detectives choose to attempt unlocking Phillip's phone at his funeral home using "
+                     "his fingerprint, rather than pursuing the device through other legal means before the "
+                     "body was released for burial?",
+                     "What specific injuries did Officer Steiner sustain during the encounter, and how did "
+                     "they factor into the State Attorney's justifiable-homicide finding?"],
+         extraSources=[src("Tampa Bay Times \u2014 \u201cLargo police release video as State Attorney clears officer in shooting\u201d",
+                            "https://www.tampabay.com/news/publicsafety/Largo-police-release-video-as-State-Attorney-clears-officer-in-shooting_167445286/", True),
+                        src("CBS News \u2014 \u201cLargo, Florida police use finger of late Linus Phillip to try to unlock his cellphone\u201d",
+                            "https://www.cbsnews.com/news/police-use-dead-mans-finger-to-try-to-unlock-his-cellphone/", True),
+                        src("WFLA \u2014 \u201cFamily of man killed by Largo police question official version of events\u201d",
+                            "https://www.wfla.com/news/pinellas-county/family-of-man-killed-by-largo-police-question-official-version-of-events/amp/", True)]),
+    dict(id="kenneth-ross-jr", caseNumber="212", name="Kenneth Ross Jr.",
+         status="unsolved", caseType="homicide", year=2018, age=25, gender="male",
+         city="Gardena", county="Los Angeles", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Kenneth Ross Jr., 25, was shot in the back and shoulder and killed by Gardena, California "
+                 "Police Officer Michael Robbins with a rifle on April 11, 2018, as Ross ran away from officers "
+                 "responding to a report of a man firing a weapon in Rowley Memorial Park. Body and dash camera "
+                 "video reviewed by the family's attorney showed Ross running with his hands empty and his "
+                 "back to police when Robbins fired two shots from an AR-15. Robbins told investigators he "
+                 "believed Ross was reaching for a gun and feared for his life; a handgun was later recovered "
+                 "from Ross's shorts, which his family disputes he was carrying at the moment he was shot. The "
+                 "Los Angeles County District Attorney's Office cleared Robbins of criminal wrongdoing in June "
+                 "2019, finding he acted in lawful self-defense. Robbins had been involved in three prior "
+                 "shootings before this one and retired from the department in 2020. No one has ever been "
+                 "charged in Ross's death.",
+         known=["The shots-fired call, the foot pursuit, and the shooting, per the Los Angeles County District "
+                "Attorney's Justice System Integrity Division report and body/dash camera footage described by "
+                "the family's attorney.",
+                "Officer Robbins fired two rounds from a rifle, striking Ross in the back and shoulder as Ross "
+                "ran away from him with his hands empty, according to the family's attorney's description of "
+                "the footage; a handgun was later found in Ross's shorts.",
+                "The DA's report concluded that when Ross's left arm moved in a way not visible to the camera "
+                "as he ran past Robbins, it was reasonable for Robbins to believe Ross was drawing the weapon, "
+                "and that the law did not require Robbins to visually confirm the gun before firing.",
+                "The Los Angeles County District Attorney's Office announced on June 12, 2019 that Robbins "
+                "acted in lawful self-defense and declined to bring any charges.",
+                "Robbins had been involved in three prior officer-involved shootings before killing Ross, and "
+                "retired from the Gardena Police Department in 2020.",
+                "The City of Gardena settled federal civil lawsuits with Ross's mother, father, and young son "
+                "for a combined total exceeding $1.3 million, without admitting wrongdoing.",
+                "Ross's death directly prompted California Governor Gavin Newsom to sign the Kenneth Ross Jr. "
+                "Police Decertification Act of 2021 (SB 2), a statewide law allowing California to strip the "
+                "certification of officers convicted of serious misconduct or found to have engaged in bias, "
+                "signed near the site of Ross's death."],
+         unknown=["Whether Ross was in fact carrying and reaching for the recovered handgun at the specific "
+                  "moment Robbins fired, as the DA's report concluded was reasonable to believe based on an arm "
+                  "movement not fully visible on camera, or whether he was unarmed and merely fleeing, as his "
+                  "family maintained, was never resolved by any criminal trial since none was brought.",
+                  "The specific nature and outcomes of Officer Robbins's three prior officer-involved "
+                  "shootings, and whether any departmental review considered that pattern before this fourth "
+                  "shooting, has not been made comprehensively public.",
+                  "Whether Ross was in fact experiencing a mental health crisis at the time, as the DA's own "
+                  "statement suggested, and how that would have changed the appropriate police response, was "
+                  "not resolved through any independent review beyond the self-defense finding."],
+         unanswered=["Why was an officer with three prior shootings on his record still armed with a rifle and "
+                     "responding to this call, and did any departmental review examine that pattern before "
+                     "Ross's death?",
+                     "Why did the district attorney conclude Robbins reasonably believed Ross was drawing a "
+                     "weapon based on an arm movement the DA's own report acknowledged was \u201cnever "
+                     "visible\u201d on camera?",
+                     "What measurable impact has the statewide decertification law that resulted from Ross's "
+                     "death had in the years since it was signed?"],
+         extraSources=[src("Los Angeles County District Attorney's Office \u2014 official Justice System Integrity Division report",
+                            "https://da.lacounty.gov/sites/default/files/pdf/JSID-OIS-05-2019-Ross.pdf", True),
+                        src("ABC7 Los Angeles \u2014 \u201cFamily, activists demand criminal charges against officer who fatally shot man in Gardena\u201d",
+                            "https://abc7.com/kenneth-ross-jr-gardena-police-shooting-ois-michael-robbins/5872326/", True),
+                        src("NBC News \u2014 \u201cSon of Black man fatally shot by California police to receive $1.3 million in lawsuit settlement\u201d",
+                            "https://www.nbcnews.com/news/us-news/son-black-man-fatally-shot-california-police-settles-lawsuit-13-millio-rcna5977", True)]),
+    dict(id="decynthia-clements", caseNumber="213", name="DeCynthia Clements",
+         status="unsolved", caseType="homicide", year=2018, age=34, gender="female",
+         city="Elgin", county="Kane", state="IL", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="DeCynthia Clements, 34, was shot three times and killed by Elgin, Illinois Police "
+                 "Lieutenant Christian Jensen on Interstate 90 on March 12, 2018, at the end of an hour-long "
+                 "roadside standoff during which she appeared to be in mental distress and set her own car on "
+                 "fire. As smoke filled the vehicle, she opened the door and stepped out; police said she was "
+                 "holding a knife, though it is not clearly visible in released video. Jensen fired despite "
+                 "other officers on scene being equipped with a stun gun and rubber-bullet-firing weapon, "
+                 "telling investigators he could not wait to see if less-lethal options would work given how "
+                 "close officers were standing. A medical examiner found cocaine in her system. The Cook County "
+                 "State's Attorney's Office declined to file charges in February 2019, a decision a separate "
+                 "state appellate prosecutor's review upheld. No one has ever been charged in Clements's "
+                 "death.",
+         known=["The traffic stop, the hour-long roadside standoff, and the shooting, per roughly 30 hours of "
+                "Elgin Police body and dash camera footage the department released publicly.",
+                "Clements set something on fire inside her car during the standoff; as smoke filled the "
+                "vehicle, she opened the door and exited, at which point Jensen fired three shots, striking "
+                "her twice in the head and once in the chest.",
+                "Other officers on scene were equipped with a stun gun and a launcher for rubber bullets; "
+                "Jensen told investigators he believed deadly force was the only option because officers were "
+                "too close to wait and see if a Taser would be effective.",
+                "The Cook County Medical Examiner's office found cocaine and a cocaine metabolite in "
+                "Clements's bloodstream.",
+                "The Cook County State's Attorney's Office announced on February 22, 2019 that the evidence "
+                "was insufficient to support criminal charges against Jensen; a separate review by the office "
+                "of the state appellate prosecutor reached the same conclusion.",
+                "Elgin Police Chief Ana Lalley commissioned an independent professional standards "
+                "investigation by an outside firm, Hillard Heintze, to separately review whether Jensen and "
+                "other officers violated department policy.",
+                "Clements's family filed a federal civil rights lawsuit against Jensen and the City of Elgin, "
+                "alleging the department had non-lethal options available \u2014 including Tasers, barricades, "
+                "and shields \u2014 that were not used before deadly force was applied."],
+         unknown=["Whether Clements in fact held a knife at the moment she was shot, given the object is not "
+                  "clearly visible in the released video, and whether that object presented an imminent threat "
+                  "justifying lethal force over the less-lethal options already staged nearby, was disputed by "
+                  "her family and was never resolved by any criminal proceeding since none was brought.",
+                  "The specific findings of the independent Hillard Heintze professional standards "
+                  "investigation into whether department policy was violated have not been fully detailed in "
+                  "available public reporting.",
+                  "Why officers negotiated with Clements for over an hour, suggesting recognition of a mental "
+                  "health crisis, but the situation still ended in gunfire rather than a coordinated non-lethal "
+                  "response, has not been fully explained beyond Jensen's own account of the final moments."],
+         unanswered=["Why did Lieutenant Jensen use his firearm when fellow officers on scene were already "
+                     "equipped with a stun gun and less-lethal launcher specifically for this kind of "
+                     "encounter?",
+                     "Why does the object police describe as a knife remain unclear in the extensive body and "
+                     "dash camera footage that was released?",
+                     "What specific findings did the independent Hillard Heintze review of department policy "
+                     "and use-of-force procedures produce, and what changes followed from it?"],
+         extraSources=[src("CNN \u2014 \u201cDecynthia Clements: Video shows fatal police shooting\u201d",
+                            "https://www.cnn.com/2018/03/23/us/decynthia-clements-police-shooting-illinois/index.html", True),
+                        src("Daily Herald \u2014 \u201cNo criminal charges by Cook County in fatal Elgin police shooting\u201d",
+                            "https://www.dailyherald.com/news/20190222/no-criminal-charges-by-cook-county-in-fatal-elgin-police-shooting/", True),
+                        src("Romanucci & Blandin, LLC \u2014 \u201cFederal Civil Rights Lawsuit Filed Against Elgin Police Officer, City of Elgin for Unjustified Fatal Shooting of DeCynthia Clements\u201d",
+                            "https://www.rblaw.net/pressrelease-federal-civil-rights-lawsuit-filed-against-elgin-police-officer-city-of-elgin-for-unjustified-fatal-shooting-of-decynthia-clements", True)]),
+    dict(id="joshua-ruffin", caseNumber="214", name="Joshua Ruffin",
+         status="unsolved", caseType="homicide", year=2020, age=17, gender="male",
+         city="Columbia", county="Richland", state="SC", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Joshua \u201cJosh\u201d Dariandre Ruffin, 17, was shot and killed by Columbia, South Carolina "
+                 "Police Officer Kevin Davis on April 8, 2020, after Davis noticed him during a patrol "
+                 "responding to reports of car break-ins and neighborhood suspicious activity during COVID-19 "
+                 "lockdown hours. Ruffin ran when Davis tried to stop him; during the roughly 30-second, "
+                 "557-foot chase, Davis said Ruffin stopped, pulled a .45-caliber handgun from a bag, and "
+                 "pointed it at him, prompting Davis to fire 10 shots, one striking Ruffin in the forehead. "
+                 "Fifth Circuit Solicitor Byron Gipson, who is also Black, announced in June 2020 that Davis "
+                 "would not be charged, openly acknowledging \u201ca racial dynamic\u201d to the case before "
+                 "concluding it played no role in his decision. The Ruffin family's attorney said the released "
+                 "body camera footage was too blurry to actually confirm Ruffin pointed the gun at Davis. No "
+                 "one has ever been charged in Ruffin's death.",
+         known=["The patrol, the foot chase, and the shooting near Eau Claire High School, per Solicitor "
+                "Byron Gipson's public presentation of body camera footage and the South Carolina Law "
+                "Enforcement Division's investigation.",
+                "Davis chased Ruffin for approximately 30 seconds and 557 feet with his gun not drawn; Gipson "
+                "said the footage showed Ruffin stop, crouch, and pull a .45-caliber pistol from a bag before "
+                "Davis fired 10 shots, one striking Ruffin in the forehead.",
+                "Solicitor Gipson stated at a lengthy public press conference in June 2020 that he "
+                "acknowledged \u201ca racial dynamic\u201d to the case, since Ruffin was Black and Davis is "
+                "white, but concluded after reviewing the evidence that race played no role in his charging "
+                "decision.",
+                "The Ruffin family's attorney, state Representative Todd Rutherford, reviewed the same body "
+                "camera footage and said the video was too blurry to actually confirm Ruffin pointed the "
+                "weapon at Davis, rather than simply holding it.",
+                "The recovered handgun was later reported stolen; Gipson's office concluded Ruffin was likely "
+                "in unlawful possession of it as a minor, though the bag he carried contained no other stolen "
+                "items.",
+                "The Racial Justice Network and other community organizations later called on the U.S. "
+                "Department of Justice to reopen the case for an independent federal investigation; no "
+                "subsequent public announcement of federal charges has been reported.",
+                "Officer Davis remained on paid administrative leave pending a separate internal department "
+                "review of whether he violated any Columbia Police Department policy."],
+         unknown=["Whether Ruffin in fact pointed the recovered handgun at Davis, as the solicitor's office "
+                  "concluded from body camera footage, or whether he was simply holding it without aiming, as "
+                  "the family's attorney argued the blurry video left genuinely unclear, was never resolved by "
+                  "any criminal trial since none was brought.",
+                  "The outcome of Columbia Police Department's internal review of whether Davis's tactics or "
+                  "decision to pursue alone violated department policy has not been made comprehensively "
+                  "public.",
+                  "Whether the Department of Justice ever formally responded to or acted on the Racial Justice "
+                  "Network's request for a federal civil rights investigation has not been reported in "
+                  "available public sources."],
+         unanswered=["Why does the body camera footage remain too blurry, by the family attorney's own "
+                     "account, to conclusively establish the central fact the entire justification for the "
+                     "shooting rests on?",
+                     "What became of Columbia Police Department's internal review of Officer Davis's tactical "
+                     "decisions during the pursuit?",
+                     "Did the U.S. Department of Justice ever respond to the Racial Justice Network's request "
+                     "for a federal civil rights investigation into Ruffin's death?"],
+         extraSources=[src("The Post and Courier \u2014 \u201cSC prosecutor declines to charge officer who fatally shot Columbia teen\u201d",
+                            "https://www.postandcourier.com/news/sc-prosecutor-declines-to-charge-officer-who-fatally-shot-columbia-teen/article_60d1c3e0-b56e-11ea-bc79-3fafaeea42e1.html", True),
+                        src("WIS10 \u2014 \u201cCPD officer in Joshua Ruffin case will not face charges\u201d",
+                            "https://www.wistv.com/2020/06/24/cpd-officer-joshua-ruffin-case-will-not-face-charges/", True),
+                        src("AP, via WLOS \u2014 \u201cProsecutor: SC officer who shot black teen was justified, no charges filed\u201d",
+                            "https://wlos.com/news/local/officer-kevin-davis-josh-ruffin-shooting-black-teen-columbia-car-break-ins-south-carolina", True)]),
+    dict(id="jeremy-mcdole", caseNumber="215", name="Jeremy McDole",
+         status="unsolved", caseType="homicide", year=2015, age=28, gender="male",
+         city="Wilmington", county="New Castle", state="DE", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Jeremy \u201cBam Bam\u201d McDole, 28, a paraplegic who used a wheelchair, was shot and killed "
+                 "by four Wilmington, Delaware police officers on September 23, 2015, after a 911 caller "
+                 "falsely reported he had a gun and had shot himself; the caller later recanted the claim and "
+                 "was never penalized for it. Bystander cellphone video showed officers surrounding McDole in "
+                 "his wheelchair, repeatedly ordering him to drop a weapon and raise his hands, before Officer "
+                 "Joseph Dellose opened fire as McDole's hands moved near his waist; no gun was ever visible in "
+                 "any released footage, and evidence photos purporting to show the recovered weapon did not "
+                 "surface publicly until six years later. Delaware's Department of Justice cleared all four "
+                 "officers of criminal wrongdoing in 2016, while finding Dellose's conduct \u201cextraordinarily "
+                 "poor\u201d; a 2020 review reached the identical conclusion. No one has ever been charged in "
+                 "McDole's death.",
+         known=["The false 911 report, the confrontation, and the shooting, per Delaware Department of "
+                "Justice investigative reports and bystander cellphone video that circulated publicly.",
+                "The 911 caller who reported McDole had a gun and had shot himself later recanted that "
+                "account; she was never charged or otherwise penalized for the false report that prompted the "
+                "police response.",
+                "Video showed officers ordering McDole, seated in his wheelchair, to drop a weapon and raise "
+                "his hands; Officer Dellose fired as McDole's hands moved toward his waist area, though no "
+                "firearm is visible in any footage from the scene.",
+                "The Delaware Department of Justice's 2016 report concluded Officers Silva, Lynch, and MacColl "
+                "were legally justified, while separately finding Dellose's decision to immediately confront "
+                "McDole alone, rather than coordinate with officers already on scene, constituted "
+                "\u201cextraordinarily poor\u201d police work; prosecutors nonetheless declined to charge him "
+                "criminally.",
+                "A subsequent independent review in 2020 by Delaware's Department of Justice reached the same "
+                "conclusion, again declining to bring charges against any of the four officers.",
+                "Evidence photographs purporting to document the handgun police said was recovered from the "
+                "scene were not made publicly available until approximately six years after the shooting.",
+                "The City of Wilmington settled a wrongful death lawsuit filed by McDole's family for $1.5 "
+                "million."],
+         unknown=["Whether McDole in fact possessed a weapon at the time he was shot, given no gun is visible "
+                  "in any released video and evidence photographs of the recovered firearm were withheld from "
+                  "public view for roughly six years, was disputed by his family and was never resolved by any "
+                  "criminal proceeding since none was brought.",
+                  "Why evidence photographs central to the department's own justification for the shooting "
+                  "were not released for six years has not been explained in available public reporting.",
+                  "Why the 911 caller whose false report initiated the fatal encounter faced no legal "
+                  "consequence has not been addressed in any official public accounting."],
+         unanswered=["Why did it take approximately six years for evidence photographs of the alleged weapon "
+                     "to become publicly available, given they were central to justifying the shooting from "
+                     "the outset?",
+                     "Why did the 911 caller who falsely reported McDole was armed and had shot himself face no "
+                     "legal consequence for that false report?",
+                     "Why did prosecutors conclude Officer Dellose's conduct was \u201cextraordinarily "
+                     "poor\u201d and yet still not criminally chargeable?"],
+         extraSources=[src("Wikipedia \u2014 \u201cKilling of Jeremy McDole\u201d (sourced case history)",
+                            "https://en.wikipedia.org/wiki/Killing_of_Jeremy_McDole", True),
+                        src("6abc Philadelphia \u2014 \u201cNo charges for Wilmington cops in killing of man in wheelchair\u201d",
+                            "https://6abc.com/wilmington-delaware-lawsuit-police-involved/1335446/", True),
+                        src("CBS News Philadelphia \u2014 \u201cOfficials Announce No Charges For Wilmington Officers Who Fatally Shot Man In Wheelchair\u201d",
+                            "https://cbsnews.com/philadelphia/news/officials-announce-no-charges-for-wilmington-officers-who-fatally-shot-man-in-wheelchair", True)]),
+    dict(id="trey-pringle", caseNumber="216", name="Trey Pringle",
+         status="unsolved", caseType="homicide", year=2018, age=24, gender="male",
+         city="Seabrook", county="Beaufort", state="SC", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Trey Pringle, 24, a man with a documented history of mental illness, died three days after "
+                 "Beaufort County, South Carolina sheriff's deputies Tased him multiple times during a welfare "
+                 "check at his family's home on February 17, 2018. His family called 911 specifically "
+                 "requesting medical assistance. The situation escalated inside the home; deputies said "
+                 "Pringle struck and kicked them before he was Tased repeatedly and restrained, and a "
+                 "firefighter assisting on scene, Brandon Corey Thomsen, was separately accused in a wrongful "
+                 "death lawsuit of placing Pringle in a chokehold. Pringle suffered cardiac arrest and was "
+                 "taken to Beaufort Memorial Hospital, where he died three days later. Medical examiners at "
+                 "the Medical University of South Carolina ruled the death a homicide. After an eight-month "
+                 "investigation, 14th Circuit Solicitor Duffie Stone announced in February 2019 that no "
+                 "criminal charges would be filed against anyone involved. No one has ever been charged in "
+                 "Pringle's death.",
+         known=["The welfare-check call, the struggle inside the home, and the Taser deployments, per dash "
+                "camera footage and audio the Solicitor's office released publicly.",
+                "Pringle's family called 911 specifically to have him evaluated for medical and mental health "
+                "assistance.",
+                "Deputies told their captain afterward that Pringle struck one of them in the face three times "
+                "and kicked another in the face before he was Tased and restrained.",
+                "A wrongful death lawsuit separately accused Beaufort firefighter Brandon Corey Thomsen, who "
+                "was assisting deputies on scene, of placing Pringle in a chokehold before he went into "
+                "cardiac arrest.",
+                "Medical examiners at the Medical University of South Carolina ruled Pringle's manner of death "
+                "a homicide on his death certificate.",
+                "The South Carolina Law Enforcement Division conducted an eight-month investigation, including "
+                "30 interviews, roughly 33 hours of audio and dash camera footage, and approximately 500 "
+                "photographs.",
+                "14th Circuit Solicitor Duffie Stone announced in February 2019 that no one involved would "
+                "face criminal charges, stating Pringle's death was \u201ca tragedy, but not the result of a "
+                "crime,\u201d and his office publicly released nearly two hours of the underlying video and "
+                "audio evidence.",
+                "In 2020, Thomsen was separately wanted on unrelated child sex crime charges; Beaufort "
+                "community members publicly noted he had never faced any charge in connection with Pringle's "
+                "death despite the chokehold allegation."],
+         unknown=["Whether the chokehold a lawsuit specifically attributed to firefighter Thomsen, as opposed "
+                  "to the Taser deployments alone, caused or substantially contributed to Pringle's cardiac "
+                  "arrest and the homicide ruling on his death certificate was never independently tested at "
+                  "any criminal trial since none was brought.",
+                  "Why a death certified as homicide by medical examiners did not result in criminal charges "
+                  "against anyone present has not been fully reconciled in the Solicitor's public statements "
+                  "beyond his general finding of no criminal conduct.",
+                  "What specific crisis-intervention training, if any, the responding deputies and assisting "
+                  "firefighter had before encountering a call explicitly described in advance as a mental "
+                  "health welfare check has not been detailed in available public reporting."],
+         unanswered=["Why did a death officially ruled a homicide by medical examiners not result in criminal "
+                     "charges against any deputy or the firefighter accused of using a chokehold?",
+                     "Why was firefighter Brandon Corey Thomsen, accused specifically of a chokehold in a "
+                     "wrongful death lawsuit, never criminally charged in connection with Pringle's death?",
+                     "What specific crisis-intervention or mental-health-response training did the responding "
+                     "deputies have, and has Beaufort County changed that training since Pringle's death?"],
+         extraSources=[src("WTOC \u2014 \u201cDeputies not facing charges after man died following struggle with Beaufort County officers\u201d",
+                            "https://www.wtoc.com/2019/02/15/deputies-not-facing-charges-after-man-died-following-struggle-with-beaufort-county-officers/", True),
+                        src("WSAV \u2014 \u201cDash camera video, audio sheds new light on Trey Pringle's death\u201d",
+                            "https://www.wsav.com/crime-safety/dash-camera-video-audio-sheds-new-light-on-trey-pringles-death/", True),
+                        src("FITSNews \u2014 \u201cBeaufort Firefighter Accused Of Chokehold In Trey Pringle Death Wanted [for child sex crimes]\u201d",
+                            "https://www.fitsnews.com/2020/12/04/sc-firefighter-accused-of-chokehold-in-mans-controversial-death-now-wanted-for-child-sex-crimes/", True)]),
+    dict(id="deandre-brunston", caseNumber="217", name="Deandre Brunston",
+         status="unsolved", caseType="homicide", year=2003, age=24, gender="male",
+         city="Compton", county="Los Angeles", state="CA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Deandre \u201cTrey\u201d Brunston, 24, was shot 22 times and killed after Los Angeles County "
+                 "Sheriff's deputies fired 81 rounds at him in a doorway in Compton on August 24, 2003, "
+                 "following a 30-minute standoff after his girlfriend called police over a domestic dispute. "
+                 "Brunston falsely claimed to be armed and wanted for murder in an apparent effort to avoid "
+                 "returning to prison on a probation violation; deputies released a K-9 unit toward him "
+                 "despite the on-scene K-9 handler having judged the situation \u201cnon-deployable\u201d and "
+                 "objecting to the order, which was given by a supervising lieutenant later found to have been "
+                 "drinking at a party when he issued it. Brunston dropped the object in his hand \u2014 a "
+                 "sandal, not a weapon \u2014 as the dog reached him, but deputies had already begun firing. No "
+                 "gun was ever found on or near him. No criminal charges were ever filed against any deputy. "
+                 "The wounded police dog was airlifted to a veterinary hospital while Brunston was left on the "
+                 "concrete steps.",
+         known=["The domestic dispute call, the standoff, and the shooting, per contemporaneous Los Angeles "
+                "Times reporting and video of the incident that circulated publicly.",
+                "Brunston falsely told deputies during negotiations that he was armed and wanted for murder; "
+                "neither claim was true, and no weapon was ever recovered from the scene.",
+                "The K-9 handler on scene, Sergeant Earnest Burwell, judged the situation "
+                "\u201cnon-deployable\u201d and objected to releasing the dog; the order to deploy the K-9 was "
+                "given by phone by Lieutenant Patrick Maxwell, who was reported to have been drinking at a "
+                "party at the time.",
+                "Ten Los Angeles County Sheriff's deputies discharged a combined 81 rounds within roughly five "
+                "seconds, striking Brunston 22 times; the police dog was also fatally struck by deputy "
+                "gunfire.",
+                "The wounded police dog received an emergency helicopter airlift to a veterinary hospital, "
+                "where it later died, while Brunston remained on the concrete steps before receiving medical "
+                "attention; he died of his injuries.",
+                "No criminal charges were ever filed against any of the deputies involved.",
+                "Brunston's family filed a wrongful death lawsuit; a Los Angeles judge allowed the negligence "
+                "claims, including allegations of inadequate training and supervision, to proceed, and the "
+                "family settled with Los Angeles County for $340,000 in 2006."],
+         unknown=["Whether Brunston's dropping of the sandal in his hand, occurring as the dog reached him, "
+                  "came before or essentially simultaneous with deputies opening fire has been described "
+                  "differently across various accounts, and the precise sequence was never resolved by any "
+                  "criminal proceeding since none was brought.",
+                  "The full extent of Lieutenant Maxwell's documented prior use-of-force history, referenced "
+                  "in contemporaneous reporting as including at least two other in-custody deaths before this "
+                  "incident, has not been comprehensively detailed in a single public record reviewed for "
+                  "this summary.",
+                  "Why ten deputies collectively fired 81 rounds within roughly five seconds, rather than a "
+                  "more limited response, has not been addressed in any public disciplinary or criminal "
+                  "finding."],
+         unanswered=["Why did the K-9 deployment order come from a supervising lieutenant reported to have "
+                     "been drinking at a party, overriding the on-scene handler's own judgment that the "
+                     "situation was not appropriate for a dog release?",
+                     "Why did the wounded police dog receive an emergency helicopter airlift while Brunston, "
+                     "also critically wounded, did not receive comparably urgent medical attention at the "
+                     "scene?",
+                     "Why did ten deputies fire a combined 81 rounds in roughly five seconds at a man who, by "
+                     "the department's own account, never possessed an actual weapon?"],
+         extraSources=[src("Wikipedia \u2014 \u201cKilling of Deandre Brunston\u201d (sourced case history)",
+                            "https://en.wikipedia.org/wiki/Killing_of_Deandre_Brunston", True),
+                        src("San Francisco Chronicle \u2014 \u201cLA judge allows negligence suit in case of man killed by deputies\u201d",
+                            "https://www.sfgate.com/news/article/LA-judge-allows-negligence-suit-in-case-of-man-2521098.php", True),
+                        src("Fatal Encounters database \u2014 case record for Deondre \u201cTrey\u201d Brunston",
+                            "https://fatalencounters.org/view/person-csv/csv/?pagenum=120&letter=i", True)]),
+    dict(id="omar-edwards", caseNumber="218", name="Omar Edwards",
+         status="unsolved", caseType="homicide", year=2009, age=25, gender="male",
+         city="New York", county="New York", state="NY", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Omar Edwards, 25, an off-duty NYPD officer, was shot and killed by a fellow officer, "
+                 "Sergeant Andrew Dunton, in East Harlem on May 28, 2009, moments after Edwards had chased a "
+                 "man who broke into his personal car. Edwards, in plainclothes with his badge not visible, "
+                 "ran toward Dunton's unmarked car with his own service weapon drawn while pursuing the "
+                 "suspect; Dunton, believing Edwards was a threat, fired six times, striking him in the arm, "
+                 "hip, and back. No witness reported hearing Edwards identify himself as a police officer "
+                 "before the shooting, and he never fired his own weapon. A Manhattan grand jury, after "
+                 "hearing from 20 witnesses and reviewing 68 documents, declined to indict Dunton in September "
+                 "2009. Civil rights leaders questioned whether the outcome would have been different had the "
+                 "officers' races been reversed. No one has ever been criminally charged in Edwards's death.",
+         known=["The car break-in, the foot chase, and the shooting, per Manhattan District Attorney Robert "
+                "Morgenthau's public account of the grand jury proceedings.",
+                "Edwards, off duty and in plainclothes, chased a man who had smashed his car window; Dunton "
+                "and other plainclothes officers on anti-crime patrol encountered the pursuit and ordered the "
+                "men to halt.",
+                "Witnesses said Edwards turned toward the officers with his service weapon in hand as Dunton "
+                "fired six shots from behind his car door, striking Edwards in the left arm, hip, and back; "
+                "the fatal wound entered from the side of his back before reaching his heart and lung.",
+                "Edwards never fired his own weapon, and no witness reported hearing him identify himself as "
+                "a police officer before he was shot.",
+                "A Manhattan grand jury heard from 20 witnesses and examined 68 documents before declining to "
+                "indict Dunton on any charge in September 2009.",
+                "The Reverend Al Sharpton and other civil rights leaders publicly renewed calls for the New "
+                "York governor to authorize a special prosecutor for police shooting cases in the wake of the "
+                "decision.",
+                "Dunton remained on administrative duty following the shooting pending a separate internal "
+                "NYPD disciplinary review."],
+         unknown=["Whether Edwards, an on-the-job trained officer himself, had any real opportunity to "
+                  "identify himself before Dunton fired, given the encounter unfolded in seconds on a dark "
+                  "street, was central to both the grand jury's review and the public debate that followed, "
+                  "and was never resolved by any criminal trial since none was brought.",
+                  "Whether the fact that Edwards was Black and Dunton is white affected the split-second "
+                  "assessment of threat, as Edwards's mother and civil rights leaders publicly suggested, was "
+                  "raised repeatedly in public commentary but not something the grand jury's process was "
+                  "designed to determine.",
+                  "The outcome of NYPD's own internal disciplinary review of Dunton's conduct, separate from "
+                  "the grand jury's declination, has not been made comprehensively public."],
+         unanswered=["Why did the encounter between two on-duty-trained officers escalate to gunfire within "
+                     "seconds, with no verbal identification exchanged?",
+                     "Would the outcome have been different had the races of the two officers been reversed, "
+                     "as civil rights leaders publicly questioned at the time?",
+                     "What specific reforms, if any, did the NYPD implement regarding plainclothes and "
+                     "off-duty officer identification protocols following Edwards's death?"],
+         extraSources=[src("NBC News \u2014 \u201cNo charges in NYC friendly fire police shooting\u201d",
+                            "https://www.nbcnews.com/news/amp/wbna32406860", True),
+                        src("Fox News \u2014 \u201cNYPD Probes Killing of Black Cop by Fellow Officer\u201d",
+                            "https://www.foxnews.com/story/nypd-probes-killing-of-black-cop-by-fellow-officer.amp", True),
+                        src("The Grio \u2014 \u201cWhite cop evades criminal charges in death of Omar Edwards\u201d",
+                            "https://thegrio.com/2009/08/14/white-cop-evades-criminal-charges-in-murder-of-omar-edwards/", True)]),
 ]
 
 
@@ -7132,6 +9150,21 @@ def adsense_head_tag():
         return ""
     return (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
             f'?client={ADSENSE_CLIENT_ID}" crossorigin="anonymous"></script>\n')
+
+def ga4_head_tag():
+    """Google Analytics 4 — real visitor/traffic data (see the setup
+    comment above GA4_MEASUREMENT_ID near the top of this file). Renders
+    nothing until a real Measurement ID is dropped in and GA4_ENABLED is
+    flipped to True, same safe-by-default pattern as AdSense above."""
+    if not GA4_ENABLED:
+        return ""
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>\n'
+            f'<script>\n'
+            f'  window.dataLayer = window.dataLayer || [];\n'
+            f'  function gtag(){{ dataLayer.push(arguments); }}\n'
+            f'  gtag("js", new Date());\n'
+            f'  gtag("config", "{GA4_MEASUREMENT_ID}");\n'
+            f'</script>\n')
 
 def ad_slot(slot_id=None, label="Advertisement"):
     """A single clearly-labeled ad placement. Renders nothing visible beyond
@@ -7233,6 +9266,51 @@ def top_header(depth, active=""):
     <label class="visually-hidden" for="global-search-input">Search victims, locations, or case details</label>
     <input type="search" id="global-search-input" placeholder="Search victims, locations, or case details&hellip;">
     <div class="search-results"></div>
+  </div>
+</div>
+<div class="records-overlay" role="dialog" aria-modal="true" aria-label="Public records request generator">
+  <div class="records-modal">
+    <div class="records-modal-head">
+      <span class="label">Public Records Request Generator</span>
+      <button type="button" class="records-close" data-records-close aria-label="Close">&times;</button>
+    </div>
+    <div class="records-modal-body">
+      <p class="records-intro">Every unreleased body camera clip, sealed grand jury summary, and unpublished internal
+      review in this archive started as something a records custodian could have handed over. This generates a
+      request letter you can send yourself &mdash; edit it, copy it, or download it as a text file. This is a
+      starting template, not legal advice; confirm your state's current deadlines and any fees before sending.</p>
+      <div class="records-field" data-records-case-field>
+        <label for="records-case-select">Case</label>
+        <select id="records-case-select"></select>
+      </div>
+      <div class="records-field">
+        <label>Who to contact <span class="records-optional">(these are search links, not a stored directory &mdash; agency contacts change, so this always points you to current results instead of a number that could be stale or wrong)</span></label>
+        <ul class="records-contact-list" data-records-contact-list></ul>
+      </div>
+      <div class="records-field-row">
+        <div class="records-field">
+          <label for="records-your-name">Your name</label>
+          <input type="text" id="records-your-name" placeholder="Jane Researcher">
+        </div>
+        <div class="records-field">
+          <label for="records-your-email">Your email</label>
+          <input type="email" id="records-your-email" placeholder="[email protected]">
+        </div>
+      </div>
+      <div class="records-field">
+        <label for="records-your-address">Your mailing address <span class="records-optional">(optional &mdash; some agencies require one)</span></label>
+        <input type="text" id="records-your-address" placeholder="123 Main St, City, State ZIP">
+      </div>
+      <div class="records-field">
+        <label for="records-letter-text">Generated letter <span class="records-optional">(edit freely before sending)</span></label>
+        <textarea id="records-letter-text" rows="16"></textarea>
+      </div>
+      <div class="records-actions">
+        <button type="button" class="records-btn primary" data-records-copy>Copy to Clipboard</button>
+        <button type="button" class="records-btn" data-records-download>Download as .txt</button>
+      </div>
+      <p class="records-copied" data-records-copied hidden>Copied.</p>
+    </div>
   </div>
 </div>'''
 
@@ -7352,7 +9430,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{r}css/style.css">
-{adsense_head_tag()}</head>
+{ga4_head_tag()}{adsense_head_tag()}</head>
 <body data-root="{dr}">
 {body}
 {consent_banner_html(depth)}
@@ -7363,6 +9441,9 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/main.js"></script>
 <script src="{r}js/quiz.js"></script>
 <script src="{r}js/saved-cases.js"></script>
+<script src="{r}js/records-request.js"></script>
+<script src="{r}js/compare-cases.js"></script>
+<script src="{r}js/research-checklist.js"></script>
 <script src="{r}js/submit-form.js"></script>
 </body>
 </html>'''
@@ -7462,6 +9543,12 @@ def profile_panel(c):
     <div class="pp-row"><span class="label">Location</span><span class="value">{location_str(c)}</span></div>
     <div class="pp-row"><span class="label">Case Type</span><span class="value">{case_type}</span></div>
     {series_row}
+  </div>
+  <div class="pp-notes" id="research-checklist-panel">
+    <div class="pp-notes-head">Research Checklist</div>
+    <p class="pp-notes-hint">Track your own progress digging into this case. Saved only in this browser.</p>
+    <div class="checklist-progress" data-checklist-progress="{c['id']}"></div>
+    <ul class="research-checklist" data-checklist="{c['id']}" data-checklist-type="{c.get('caseType') or 'homicide'}"></ul>
   </div>
   <div class="pp-notes" id="research-notes-panel">
     <div class="pp-notes-head">Your Research Notes</div>
@@ -7568,6 +9655,8 @@ def build_case_page(c):
     <a href="#case-sources">Sources</a>
     <a href="#case-questions">Unanswered Questions</a>
     <button type="button" class="case-save-btn" data-save-case-btn="{c['id']}">\u2606 Save This Case</button>
+    <button type="button" class="case-records-btn" data-records-request-btn="{c['id']}">\U0001F4CB Request Public Records</button>
+    <button type="button" class="case-compare-btn" data-compare-btn="{c['id']}">\u2696 Add to Compare</button>
   </nav>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
@@ -8016,6 +10105,23 @@ def build_statistics():
     write("statistics.html", page_shell("Archive Statistics", f"Data and figures computed from the {total} cases currently documented in this archive.", depth,
           doc_page(depth, "Data", "Archive Statistics", body), canonical_path="statistics.html"))
 
+def build_compare_page():
+    depth = 0
+    body = '''<p>Read enough of these cases and the individual details start to rhyme with each other &mdash;
+    the same kind of grand jury language, the same gap between what a coroner found and what a prosecutor
+    concluded, the same pattern of a settlement paid without any admission. This puts cases side by side so
+    that pattern is something you can actually see, not just sense.</p>
+    <p>Tap \u201c\u2696 Add to Compare\u201d on any case page (up to four at a time), or add cases directly
+    below.</p>
+    <div class="compare-picker">
+      <label for="compare-add-select">Add a case</label>
+      <select id="compare-add-select"><option value="">Choose a case\u2026</option></select>
+    </div>
+    <div id="compare-grid" class="compare-grid"></div>
+    <script>document.body.setAttribute("data-compare-standalone-page", "true");</script>'''
+    write("compare.html", page_shell("Compare Cases", "Compare unsolved cases side by side \u2014 outcomes, unanswered questions, and documented patterns across the archive.", depth,
+          doc_page(depth, "Tools", "Compare Cases", body), canonical_path="compare.html"))
+
 def build_saved_cases():
     depth = 0
     body = '''<p>Your private research dashboard \u2014 saved cases, notes, sources, and topics, stored only in
@@ -8037,6 +10143,11 @@ def build_saved_cases():
     <h2 class="dash-section-head">Saved Sources</h2>
     <p class="dash-section-hint">Tap the \u2606 next to any source on a case page to save it here for your
     own reference list.</p>
+    <div class="dash-export-row" id="sources-export-row" hidden>
+      <button type="button" class="records-btn" data-export-citations-copy>Copy Citation List</button>
+      <button type="button" class="records-btn" data-export-citations-download>Download as .txt</button>
+      <span class="records-copied" data-export-copied hidden>Copied.</span>
+    </div>
     <div id="saved-sources-list"></div>
 
     <h2 class="dash-section-head">Research Topics</h2>
@@ -8052,6 +10163,27 @@ def build_saved_cases():
     <div id="recently-viewed-list" class="related-grid"></div>'''
     write("saved.html", page_shell("Researcher's Dashboard", "Your private research dashboard \u2014 saved cases, notes, sources, and topics, stored only in your own browser.", depth,
           doc_page(depth, "Private", "Researcher's Dashboard", body), canonical_path="saved.html"))
+
+def build_records_request_page():
+    depth = 0
+    body = '''<p>Look through this archive and a pattern shows up again and again: <em>body camera footage never
+    released</em>, <em>internal review never made public</em>, <em>grand jury proceedings sealed</em>. Most of
+    that isn\u2019t actually secret by law \u2014 it\u2019s just never been formally requested. Every state has a
+    public records law that gives you, personally, the right to ask.</p>
+    <p>This tool writes that request for you. Pick a case, add your name and email, and it generates a letter
+    citing the correct state law, addressed to the right kind of records custodian, asking for exactly the
+    records that case\u2019s file identifies as never having surfaced. Copy it, edit it, and send it \u2014 by
+    email or mail, however the agency accepts requests.</p>
+    <div class="callout">This is a starting template, not legal advice. Public records laws vary in their
+    response deadlines, fee structures, and exemptions \u2014 confirm your state\u2019s current rules, and the
+    correct agency and address, before sending. Nothing you type here is saved anywhere but your own
+    browser.</div>
+    <p style="margin-top:24px;">
+      <button type="button" class="records-btn primary" data-records-open-standalone>Open the Request Generator</button>
+    </p>
+    <script>document.body.setAttribute("data-records-standalone-page", "true");</script>'''
+    write("records-request.html", page_shell("Public Records Request Generator", "Generate a public records request letter for any case in the archive, citing the correct state open-records law.", depth,
+          doc_page(depth, "Tools", "Public Records Request Generator", body), canonical_path="records-request.html"))
 
 def build_quiz():
     depth = 0
@@ -8168,8 +10300,21 @@ def build_privacy():
       <li>On your first visit, a banner lets you accept or decline non-essential cookies; your choice is stored in your browser only, not on our servers.</li>
       <li>Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the internet, in line with <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's Partner Sites policy</a>.</li>
     </ul>''' if ADSENSE_ENABLED else ""
-    body = f'''<p><em>Placeholder policy &mdash; review with counsel before publishing.</em></p>
-    <h2>What we collect</h2>
+    analytics_section = '''<h2>Analytics</h2>
+    <p>This site uses Google Analytics to understand aggregate traffic patterns &mdash; for example, how many
+    people visit, which case pages are read most, and roughly how visitors found the site (a search engine,
+    a social platform, a direct link). Google Analytics does this using cookies and similar technology, and
+    the resulting data is sent to and processed by Google in line with the
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+    <ul>
+      <li>We do not use this data to individually identify visitors, and we do not combine it with any
+      information submitted through this site's forms.</li>
+      <li>You can opt out of Google Analytics tracking across all websites using the
+      <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+      <li>On your first visit, a banner lets you accept or decline non-essential cookies; your choice is
+      stored in your browser only, not on our servers.</li>
+    </ul>''' if GA4_ENABLED else ""
+    body = f'''<h2>What we collect</h2>
     <ol>
       <li>Nothing at this time via the Submit a Tip form &mdash; it is currently a static template not
       connected to any backend, so information entered into it is not transmitted, stored, or collected
@@ -8183,6 +10328,7 @@ def build_privacy():
       <li>We do not sell or share submitted information with third parties.</li>
       <li>We do not publish a submitter's contact information without permission.</li>
     </ol>
+    {analytics_section}
     {ad_section}
     <h2>Third-party links</h2>
     <p>This site links to third-party services (including Cash App, YouTube, Google AdSense, and the source databases referenced on case pages) that have their own privacy practices.</p>'''
@@ -8209,6 +10355,121 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-09-08", case_id="omar-edwards",
+         text="New case added to the archive: Omar Edwards (New York, New York, 2009), sourced from NBC "
+              "News and TheGrio."),
+    dict(date="2026-09-08", case_id="deandre-brunston",
+         text="New case added to the archive: Deandre Brunston (Compton, California, 2003), sourced "
+              "from Wikipedia's citation trail, the San Francisco Chronicle, and the Fatal Encounters "
+              "database."),
+    dict(date="2026-09-08", case_id="trey-pringle",
+         text="New case added to the archive: Trey Pringle (Seabrook, South Carolina, 2018), sourced "
+              "from WTOC, WSAV, and FITSNews's coverage of the chokehold allegation."),
+    dict(date="2026-09-08", case_id="jeremy-mcdole",
+         text="New case added to the archive: Jeremy McDole (Wilmington, Delaware, 2015), sourced from "
+              "Wikipedia's citation trail, 6abc Philadelphia, and CBS News Philadelphia."),
+    dict(date="2026-09-08", case_id="joshua-ruffin",
+         text="New case added to the archive: Joshua Ruffin (Columbia, South Carolina, 2020), sourced "
+              "from The Post and Courier, WIS10, and AP/WLOS."),
+    dict(date="2026-09-08", case_id="decynthia-clements",
+         text="New case added to the archive: DeCynthia Clements (Elgin, Illinois, 2018), sourced from "
+              "CNN, the Daily Herald, and Romanucci & Blandin's press release on the family's federal "
+              "lawsuit."),
+    dict(date="2026-09-08", case_id="kenneth-ross-jr",
+         text="New case added to the archive: Kenneth Ross Jr. (Gardena, California, 2018), sourced from "
+              "the LA County DA's own Justice System Integrity Division report, ABC7 Los Angeles, and NBC "
+              "News."),
+    dict(date="2026-09-08", case_id="linus-phillip",
+         text="New case added to the archive: Linus Phillip (Largo, Florida, 2018), sourced from the "
+              "Tampa Bay Times, CBS News, and WFLA."),
+    dict(date="2026-09-08", case_id="omari-cryer",
+         text="New case added to the archive: Omari Cryer (Louisville, Kentucky, 2022), sourced from "
+              "Louisville Public Media, WAVE 3 News, and WHAS11."),
+    dict(date="2026-09-08", case_id="jordell-richardson",
+         text="New case added to the archive: Jor'Dell Richardson (Aurora, Colorado, 2023), sourced from "
+              "CPR News, CBS News Colorado, and 9NEWS (KUSA)."),
+    dict(date="2026-09-08", case_id="christopher-deandre-mitchell",
+         text="New case added to the archive: Christopher DeAndre Mitchell (Torrance, California, 2018), "
+              "sourced from the LA County District Attorney's own statement, NBC Los Angeles, and FOX 11 "
+              "Los Angeles's coverage of the April 2026 dismissal."),
+    dict(date="2026-09-08", case_id="anthony-lowe-jr",
+         text="New case added to the archive: Anthony Lowe Jr. (Huntington Park, California, 2023), "
+              "sourced from the Los Angeles County District Attorney's own statement, Police1, and ABC7 "
+              "Los Angeles."),
+    dict(date="2026-09-08", case_id="william-green",
+         text="New case added to the archive: William Green (Landover, Maryland, 2020), sourced from "
+              "The Washington Post, WUSA9, and the AFRO American Newspapers' coverage of the December "
+              "2023 acquittal."),
+    dict(date="2026-08-31", case_id="vincent-truitt",
+         text="New case added to the archive: Vincent Truitt (Marietta, Georgia, 2020), sourced from "
+              "WSB-TV, 11Alive, and 13WMAZ's coverage of the dismissed federal lawsuit."),
+    dict(date="2026-08-31", case_id="oshae-terry",
+         text="New case added to the archive: O'Shae Terry (Arlington, Texas, 2018), sourced from KERA "
+              "News, Reason, and WFAA's coverage of the 2023 deferred-adjudication plea."),
+    dict(date="2026-08-31", case_id="robert-lawrence-white",
+         text="New case added to the archive: Robert Lawrence White (Silver Spring, Maryland, 2018), "
+              "sourced from The Washington Post, WTOP News, and CourtListener's record of the dismissed "
+              "federal lawsuit."),
+    dict(date="2026-08-31", case_id="charly-keunang",
+         text="New case added to the archive: Charly \u201cAfrica\u201d Keunang (Los Angeles, California, "
+              "2015), sourced from LAist, CBS Los Angeles, and CBC News."),
+    dict(date="2026-08-31", case_id="yvette-smith",
+         text="New case added to the archive: Yvette Smith (Camp Swift, Texas, 2014), sourced from the "
+              "Austin American-Statesman, KXAN, and Fox 7 Austin."),
+    dict(date="2026-08-31", case_id="delrawn-small",
+         text="New case added to the archive, bringing the total to 200 cases: Delrawn Small (Brooklyn, "
+              "New York, 2016), sourced from ABC7 New York, NBC New York, and the NAACP Legal Defense "
+              "Fund."),
+    dict(date="2026-08-31", case_id="aaron-bailey",
+         text="New case added to the archive: Aaron Bailey (Indianapolis, Indiana, 2017), sourced from "
+              "WTHR, Fox 59, and the Indianapolis Recorder."),
+    dict(date="2026-08-31", case_id="sahleem-tindle",
+         text="New case added to the archive: Sahleem Tindle (Oakland, California, 2018), sourced from "
+              "the San Francisco Chronicle, East Bay Express, and NBC Bay Area's coverage of the 2020 "
+              "civil verdict."),
+    dict(date="2026-08-31", case_id="miles-jackson",
+         text="New case added to the archive: Miles Jackson (Westerville, Ohio, 2021), sourced from "
+              "10TV (WBNS), AP/CBS News Pittsburgh, and the Franklin County Prosecutor's Office's own "
+              "statement."),
+    dict(date="2026-08-31", case_id="charleena-lyles",
+         text="New case added to the archive: Charleena Lyles (Seattle, Washington, 2017), sourced from "
+              "The Seattle Times, KIRO 7, and KING 5."),
+    dict(date="2026-08-31", case_id="george-tillman",
+         text="New case added to the archive: George Tillman III (South Ozone Park, New York, 2016), "
+              "sourced from QNS, DNAinfo, and Jurimatic's coverage of the 2025 civil verdict."),
+    dict(date="2026-08-31", case_id="thurman-blevins",
+         text="New case added to the archive: Thurman Blevins (Minneapolis, Minnesota, 2018), sourced "
+              "from the Star Tribune, MPR News, and PBS NewsHour."),
+    dict(date="2026-08-31", case_id="christopher-whitfield",
+         text="New case added to the archive: Christopher Whitfield (Ethel, Louisiana, 2019), sourced "
+              "from The Advocate, The Washington Times/AP, and WBRZ."),
+    dict(date="2026-08-31", case_id="willie-tillman",
+         text="New case added to the archive: Willie Tillman (Fayetteville, Arkansas, 2016), sourced "
+              "from the Arkansas Democrat-Gazette and KNWA/FOX24."),
+    dict(date="2026-08-31", case_id="tommie-mcglothen-jr",
+         text="New case added to the archive: Tommie McGlothen Jr. (Shreveport, Louisiana, 2020), "
+              "sourced from KSLA, KTBS, and Yahoo News/AP."),
+    dict(date="2026-08-31", case_id="dejuan-guillory",
+         text="New case added to the archive: DeJuan Guillory (Mamou, Louisiana, 2017), sourced from "
+              "CNN, KLFY, and The Advocate."),
+    dict(date="2026-08-31", case_id="alteria-woods",
+         text="New case added to the archive: Alteria Woods (Gifford, Florida, 2017), sourced from "
+              "CBS12, WPTV, and Vero News's coverage of the grand jury and the 2021 trial."),
+    dict(date="2026-08-31", case_id="mickel-lewis-sr",
+         text="New case added to the archive: Mickel Lewis Sr. (Mojave, California, 2020), sourced from "
+              "KGET 17 News and the Davis Vanguard's coverage of the 2025 civil verdict."),
+    dict(date="2026-08-31", case_id="deon-kay",
+         text="New case added to the archive: Deon Kay (Washington, D.C., 2020), sourced from The "
+              "Washington Post, WUSA9, and The Washington Informer's coverage of the 2026 settlement."),
+    dict(date="2026-08-31", case_id="natasha-mckenna",
+         text="New case added to the archive: Natasha McKenna (Fairfax, Virginia, 2015), a jail "
+              "in-custody death, sourced from Wikipedia's citation trail, WAMU, and WTOP News."),
+    dict(date="2026-08-31", case_id="jamycheal-mitchell",
+         text="New case added to the archive: Jamycheal Mitchell (Portsmouth, Virginia, 2015), a jail "
+              "in-custody death, sourced from the ACLU, WAVY, and 13News Now (WVEC)."),
+    dict(date="2026-08-31", case_id="marvin-scott-iii",
+         text="New case added to the archive: Marvin Scott III (McKinney, Texas, 2021), a jail in-custody "
+              "death, sourced from The Texas Tribune, CNN, and CBS News Texas."),
     dict(date="2026-08-31", case_id="michael-dean",
          text="New case added to the archive: Michael Dean (Temple, Texas, 2019), sourced from KWTX and "
               "6 News (KCEN)'s coverage of the 2023 acquittal and the ongoing civil lawsuit."),
@@ -8952,6 +11213,8 @@ if __name__ == "__main__":
     build_statistics()
     build_quiz()
     build_saved_cases()
+    build_records_request_page()
+    build_compare_page()
     build_research()
     build_resources()
     build_submit()
