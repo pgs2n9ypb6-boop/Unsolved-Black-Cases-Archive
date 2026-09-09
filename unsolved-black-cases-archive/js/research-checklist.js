@@ -49,6 +49,12 @@
     return { done: done, total: items.length };
   }
   window.UBCA_CHECKLIST_PROGRESS = progressFor;
+  // Also expose the item list itself (with human-readable labels) and the
+  // raw per-case checked-state, so other tools — specifically the Case
+  // Research Packet export — can build a readable checklist without
+  // duplicating this item list and risking it drifting out of sync.
+  window.UBCA_CHECKLIST_ITEMS_FOR = itemsFor;
+  window.UBCA_CHECKLIST_STATE_FOR = function (caseId) { return readState()[caseId] || {}; };
 
   function initCaseChecklist() {
     var lists = document.querySelectorAll("[data-checklist]");

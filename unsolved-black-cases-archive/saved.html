@@ -107,9 +107,14 @@
       <div class="dash-stat"><span class="num" id="stat-sources">…</span><span class="cap">Sources Saved</span></div>
       <div class="dash-stat"><span class="num" id="stat-topics">…</span><span class="cap">Research Topics</span></div>
       <div class="dash-stat"><span class="num" id="stat-recent">…</span><span class="cap">Recently Viewed</span></div>
+      <div class="dash-stat dash-stat-updated"><span class="num" id="stat-updated">…</span><span class="cap">Updated Since Saved</span></div>
     </div>
 
+    <div id="updated-cases-banner" class="updated-cases-banner" hidden></div>
+
     <h2 class="dash-section-head">Saved Cases</h2>
+    <input type="search" id="saved-cases-search" class="saved-search-input" placeholder="Search your saved cases…" hidden>
+    <div id="saved-cases-filter" class="status-filter-row" hidden></div>
     <div id="saved-cases-list" class="related-grid"></div>
 
     <h2 class="dash-section-head">Saved Sources</h2>
@@ -193,7 +198,7 @@
     <span class="bn-icon" aria-hidden="true">⚲</span><span>Search</span>
   </button>
   <a class="bn-item" href="saved.html" data-bn-path="saved.html">
-    <span class="bn-icon" aria-hidden="true">★</span><span>Saved</span>
+    <span class="bn-icon" aria-hidden="true">★</span><span>Research</span>
   </a>
   <a class="bn-item" href="quiz.html" data-bn-path="quiz.html">
     <span class="bn-icon" aria-hidden="true">?</span><span>Quiz</span>
@@ -201,6 +206,7 @@
 </nav>
 <script src="js/cases-data.js"></script>
 <script src="js/connections-data.js"></script>
+<script src="js/corrections-data.js"></script>
 <script src="js/us-states-paths.js"></script>
 <script src="js/main.js"></script>
 <script src="js/quiz.js"></script>
@@ -208,6 +214,7 @@
 <script src="js/records-request.js"></script>
 <script src="js/compare-cases.js"></script>
 <script src="js/research-checklist.js"></script>
+<script src="js/research-packet.js"></script>
 <script src="js/submit-form.js"></script>
 </body>
 </html>

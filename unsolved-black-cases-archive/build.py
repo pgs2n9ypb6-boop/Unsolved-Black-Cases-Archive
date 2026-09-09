@@ -9054,6 +9054,77 @@ CASES = [
                             "https://www.foxnews.com/story/nypd-probes-killing-of-black-cop-by-fellow-officer.amp", True),
                         src("The Grio \u2014 \u201cWhite cop evades criminal charges in death of Omar Edwards\u201d",
                             "https://thegrio.com/2009/08/14/white-cop-evades-criminal-charges-in-murder-of-omar-edwards/", True)]),
+    dict(id="moores-ford-lynchings", caseNumber="219", name="Roger Malcom, Dorothy Malcom, George Dorsey & Mae Murray Dorsey",
+         status="unsolved", caseType="homicide", year=1946, age=None, gender=None,
+         city="Monroe", county="Walton", state="GA", caseSeries=None,
+         dateAdded="2026-09-08",
+         summary="Roger Malcom, 24, his wife Dorothy Malcom, 20, and another sharecropper couple, World War "
+                 "II veteran George Dorsey, 28, and his wife Mae Murray Dorsey, 24, were shot and killed by a "
+                 "mob of 20 to 25 white men at Moore's Ford Bridge near Monroe, Georgia on July 25, 1946, in "
+                 "what became known as \u201cthe last mass lynching in America.\u201d Roger Malcom had stabbed a "
+                 "white farmer, Barnett Hester, in a dispute eleven days earlier and was released on bond that "
+                 "afternoon; their employer, Loy Harrison, was driving the two couples home when the car was "
+                 "stopped at the bridge by an armed mob who dragged all four out, tied them up, and shot them "
+                 "so many times the bodies were difficult to identify. The killings prompted President Harry "
+                 "Truman to push for federal civil rights legislation and create the President's Committee on "
+                 "Civil Rights, but a 1946 federal grand jury failed to indict anyone, concluding only that the "
+                 "four died \u201cat the hands of persons unknown.\u201d Despite renewed state and federal "
+                 "investigations in 2001 and 2008 that recovered Ku Klux Klan membership records and firearms "
+                 "from a suspect's property, the FBI and Georgia Bureau of Investigation formally closed the "
+                 "case on January 29, 2018 \u2014 72 years later \u2014 without ever charging anyone.",
+         known=["The stabbing dispute, the mob ambush at the bridge, and the shootings, per the FBI and "
+                "Georgia Bureau of Investigation's released case file and Loy Harrison's own 1946 statements "
+                "to investigators, as he was the only witness who ever spoke to authorities about what "
+                "happened at the bridge.",
+                "Harrison told investigators the mob's leader identified Roger Malcom and, mistaking another "
+                "passenger for a different man they sought, ultimately took all four sharecroppers; when one "
+                "of the women began identifying mob members by name, the leader ordered the women seized as "
+                "well \u2014 \u201cthey know too much.\u201d",
+                "A federal grand jury convened in Athens, Georgia in December 1946 heard testimony but failed "
+                "to return any indictment, concluding the four had died \u201cat the hands of persons "
+                "unknown\u201d after six months of investigation met with what one retired FBI agent described "
+                "as total non-cooperation from the community.",
+                "Georgia Governor Ellis Arnall initially offered a reward that grew to $30,000 and stated 15 "
+                "to 20 mob members were known by name, but the reward was never paid and Arnall lost his "
+                "re-election bid to a segregationist candidate who had campaigned in Walton County shortly "
+                "before the killings.",
+                "A 2008 search of a deceased Klan gunsmith's former property, prompted by a confidential "
+                "informant's tip, recovered a Klan membership roster \u2014 including the local funeral home "
+                "owner who had received the victims' bodies, listed as the chapter's \u201cExalted "
+                "Cyclops\u201d \u2014 along with a pre-1931 shotgun investigators could not conclusively link "
+                "to the killings.",
+                "Georgia's governor formally reopened the case in 2001, and the FBI reviewed it again in the "
+                "mid-2000s; investigators repeatedly identified as many as 20 possible suspects over the "
+                "decades but found that most had died and the survivors would not give statements.",
+                "The FBI and Georgia Bureau of Investigation officially and permanently closed the "
+                "investigation on January 29, 2018, stating all known investigative leads had been exhausted, "
+                "without ever charging or convicting anyone in the four deaths."],
+         unknown=["The full membership of the mob that carried out the killings has never been conclusively "
+                  "established; investigators identified as many as 20 possible suspects across seven decades "
+                  "of investigation but were never able to build a prosecutable case against any of them "
+                  "before they died or the case was closed.",
+                  "Whether the Ku Klux Klan roster and firearm recovered from a suspect's property in 2008 "
+                  "were directly connected to the killings, as a tip to investigators alleged, was never "
+                  "conclusively established; the recovered shotgun could not be forensically linked to the "
+                  "shootings.",
+                  "Long-presumed-lost transcripts from the 1946 federal grand jury were located decades later "
+                  "in the National Archives and their release was litigated in federal court; what they "
+                  "reveal about why the grand jury failed to indict anyone despite named suspects has been the "
+                  "subject of historical research but was not fully resolved in the case file's public "
+                  "release."],
+         unanswered=["Why did a federal grand jury, told 15 to 20 mob members were known by name, fail to "
+                     "indict anyone in 1946?",
+                     "What specifically motivated the 2018 decision to permanently close the case rather than "
+                     "continue pursuing the handful of leads still theoretically available, given new forensic "
+                     "techniques existed that hadn't existed in earlier decades?",
+                     "What do the located 1946 federal grand jury transcripts, once presumed lost and later "
+                     "found in the National Archives, ultimately reveal about the grand jury's reasoning?"],
+         extraSources=[src("Southern Poverty Law Center \u2014 \u201cAnswers to last mass lynching in U.S. die when investigators close case after 72 years\u201d",
+                            "https://www.splcenter.org/resources/hatewatch/answers-last-mass-lynching-us-die-when-investigators-close-case-after-72-years/", True),
+                        src("Wikipedia \u2014 \u201cMoore's Ford lynchings\u201d (sourced case history)",
+                            "https://en.wikipedia.org/wiki/Moore%27s_Ford_lynchings", True),
+                        src("NBC News \u2014 \u201cFBI reviewing 1946 Georgia lynching case\u201d",
+                            "https://www.nbcnews.com/id/wbna12306053", True)]),
 ]
 
 
@@ -9390,7 +9461,7 @@ def bottom_nav_html(depth):
     <span class="bn-icon" aria-hidden="true">\u26B2</span><span>Search</span>
   </button>
   <a class="bn-item" href="{r}saved.html" data-bn-path="{r}saved.html">
-    <span class="bn-icon" aria-hidden="true">\u2605</span><span>Saved</span>
+    <span class="bn-icon" aria-hidden="true">\u2605</span><span>Research</span>
   </a>
   <a class="bn-item" href="{r}quiz.html" data-bn-path="{r}quiz.html">
     <span class="bn-icon" aria-hidden="true">?</span><span>Quiz</span>
@@ -9437,6 +9508,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 {bottom_nav_html(depth)}
 <script src="{r}js/cases-data.js"></script>
 <script src="{r}js/connections-data.js"></script>
+<script src="{r}js/corrections-data.js"></script>
 <script src="{r}js/us-states-paths.js"></script>
 <script src="{r}js/main.js"></script>
 <script src="{r}js/quiz.js"></script>
@@ -9444,6 +9516,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/records-request.js"></script>
 <script src="{r}js/compare-cases.js"></script>
 <script src="{r}js/research-checklist.js"></script>
+<script src="{r}js/research-packet.js"></script>
 <script src="{r}js/submit-form.js"></script>
 </body>
 </html>'''
@@ -9657,6 +9730,7 @@ def build_case_page(c):
     <button type="button" class="case-save-btn" data-save-case-btn="{c['id']}">\u2606 Save This Case</button>
     <button type="button" class="case-records-btn" data-records-request-btn="{c['id']}">\U0001F4CB Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="{c['id']}">\u2696 Add to Compare</button>
+    <button type="button" class="case-packet-btn" data-packet-export-btn="{c['id']}">\U0001F4E6 Export Research Packet</button>
   </nav>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
@@ -9682,6 +9756,23 @@ def build_case_page(c):
   {questions_panel(c)}
 </div>
 {related_html}
+<section class="continue-research">
+  <div class="continue-research-inner">
+    <h2>Continue Your Research</h2>
+    <p>Reading is the first step. Everything below is private to your own browser \u2014 nothing here is sent anywhere.</p>
+    <div class="continue-research-actions">
+      <button type="button" class="case-save-btn" data-save-case-btn="{c['id']}">\u2606 Save This Case</button>
+      <button type="button" class="case-records-btn" data-records-request-btn="{c['id']}">\U0001F4CB Request Public Records</button>
+      <button type="button" class="case-compare-btn" data-compare-btn="{c['id']}">\u2696 Add to Compare</button>
+      <button type="button" class="case-packet-btn" data-packet-export-btn="{c['id']}">\U0001F4E6 Export Research Packet</button>
+    </div>
+    <div class="continue-research-links">
+      <a href="#research-checklist-panel">\u2191 Start your research checklist for this case</a>
+      <a href="#research-notes-panel">\u2191 Add a note on this case</a>
+      <a href="{rel(depth)}saved.html">Open your Researcher's Dashboard \u2192</a>
+    </div>
+  </div>
+</section>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">\u2190 Return to Case Board</a></p>
 {footer_html(depth)}'''
     html_out = page_shell(c["name"], f"Unsolved case: {c['name']}, {c['year']}, {location_str(c)}.", depth, body,
@@ -10135,9 +10226,14 @@ def build_saved_cases():
       <div class="dash-stat"><span class="num" id="stat-sources">\u2026</span><span class="cap">Sources Saved</span></div>
       <div class="dash-stat"><span class="num" id="stat-topics">\u2026</span><span class="cap">Research Topics</span></div>
       <div class="dash-stat"><span class="num" id="stat-recent">\u2026</span><span class="cap">Recently Viewed</span></div>
+      <div class="dash-stat dash-stat-updated"><span class="num" id="stat-updated">\u2026</span><span class="cap">Updated Since Saved</span></div>
     </div>
 
+    <div id="updated-cases-banner" class="updated-cases-banner" hidden></div>
+
     <h2 class="dash-section-head">Saved Cases</h2>
+    <input type="search" id="saved-cases-search" class="saved-search-input" placeholder="Search your saved cases\u2026" hidden>
+    <div id="saved-cases-filter" class="status-filter-row" hidden></div>
     <div id="saved-cases-list" class="related-grid"></div>
 
     <h2 class="dash-section-head">Saved Sources</h2>
@@ -10355,6 +10451,11 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-09-08", case_id="moores-ford-lynchings",
+         text="New case added to the archive: the Moore's Ford lynchings \u2014 Roger Malcom, Dorothy "
+              "Malcom, George Dorsey & Mae Murray Dorsey (Monroe, Georgia, 1946), known as \u201cthe last "
+              "mass lynching in America.\u201d Sourced from the Southern Poverty Law Center, Wikipedia's "
+              "citation trail, and NBC News."),
     dict(date="2026-09-08", case_id="omar-edwards",
          text="New case added to the archive: Omar Edwards (New York, New York, 2009), sourced from NBC "
               "News and TheGrio."),
@@ -11197,6 +11298,12 @@ if __name__ == "__main__":
     # fetch() so it also works when the site is opened straight from disk.
     write("js/cases-data.js", "window.__UBCA_CASES__ = " + CASES_JSON + ";")
     write("js/connections-data.js", "window.__UBCA_CONNECTIONS__ = " + CONNECTIONS_JSON + ";")
+    # Flat {date, caseId} list for the "updated since you saved it" feature
+    # on the Researcher's Dashboard. The one grouped case_id=None backfill
+    # entry (covering five launch-batch cases at once) is left out since it
+    # doesn't map to a single case.
+    corrections_for_js = [{"date": c["date"], "caseId": c["case_id"], "text": c["text"]} for c in CORRECTIONS if c.get("case_id")]
+    write("js/corrections-data.js", "window.__UBCA_CORRECTIONS__ = " + json.dumps(corrections_for_js) + ";")
     if ADSENSE_ENABLED:
         # AdSense requires ads.txt at the site root once you have a real
         # Publisher ID (Settings -> Account information in AdSense), in the

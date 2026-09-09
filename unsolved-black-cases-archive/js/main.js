@@ -105,6 +105,12 @@
     ];
     return normalize(parts.filter(Boolean).join(" "));
   }
+  // Exposed so other tools — specifically the Saved Cases search on the
+  // Researcher's Dashboard — match the exact same "what counts as a match"
+  // definition as the sidebar and global search, rather than a second,
+  // possibly-drifting copy of this logic.
+  window.UBCA_CASE_FULL_TEXT = caseFullText;
+  window.UBCA_NORMALIZE = normalize;
 
   var plInput = document.getElementById("pl-search-input");
   var SIDEBAR_DEFAULT_LIMIT = 40;

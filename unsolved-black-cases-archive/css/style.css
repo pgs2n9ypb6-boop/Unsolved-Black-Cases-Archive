@@ -362,6 +362,19 @@ p:last-child{ margin-bottom:0; }
 .dash-section-head{ font-size:1.05rem; margin:32px 0 4px; border-top:1px solid var(--border); padding-top:20px; }
 .dash-section-hint{ font-size:.8rem; color:var(--text-faint); margin-bottom:10px; }
 
+.dash-stat-updated .num{ color:var(--crimson-bright); }
+.updated-cases-banner{
+  background:rgba(179,32,47,0.08); border:1px solid var(--crimson); border-radius:4px;
+  padding:16px 18px; margin-bottom:28px;
+}
+.updated-cases-head{ font-family:var(--mono); font-size:.78rem; letter-spacing:.03em; text-transform:uppercase; color:var(--crimson-bright); margin-bottom:10px; }
+.updated-case-item{ padding:10px 0; border-top:1px solid rgba(179,32,47,0.2); }
+.updated-case-item:first-of-type{ border-top:0; padding-top:0; }
+.updated-case-item a{ font-size:.9rem; color:var(--text); font-weight:600; }
+.updated-case-item a:hover{ color:var(--crimson-bright); }
+.updated-case-date{ font-family:var(--mono); font-size:.66rem; color:var(--text-faint); margin-left:8px; }
+.updated-case-text{ font-size:.8rem; color:var(--text-dim); margin:4px 0 0; line-height:1.5; }
+
 .saved-source-item{
   display:flex; align-items:center; justify-content:space-between; gap:12px;
   background:var(--panel); border:1px solid var(--border-strong); border-radius:2px; padding:10px 12px; margin-bottom:8px;
@@ -480,6 +493,16 @@ p:last-child{ margin-bottom:0; }
 /* ---------- Bottom panel (Unanswered Questions) ---------- */
 .panel-questions{ background:var(--panel-2); border-top:1px solid var(--border); padding:16px 20px 22px; }
 .pq-head{ font-family:var(--sans); font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; color:var(--text); }
+
+/* "Continue Your Research" panel at the bottom of every case page */
+.continue-research{ border-top:1px solid var(--border); background:var(--panel); padding:32px 20px; }
+.continue-research-inner{ max-width:640px; margin:0 auto; text-align:center; }
+.continue-research h2{ font-size:1.15rem; margin:0 0 6px; }
+.continue-research p{ font-size:.84rem; color:var(--text-dim); margin:0 0 18px; }
+.continue-research-actions{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:16px; }
+.continue-research-links{ display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:center; font-family:var(--mono); font-size:.72rem; }
+.continue-research-links a{ color:var(--cyan); }
+.continue-research-links a:hover{ text-decoration:underline; }
 .pq-list{ display:grid; gap:10px; grid-template-columns:1fr; }
 @media (min-width:760px){ .pq-list{ grid-template-columns:repeat(3,1fr); } }
 .pq-item{
@@ -681,6 +704,13 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .case-compare-btn:hover{ border-color:var(--amber); color:var(--text); }
 .case-compare-btn.in-compare{ border-color:var(--amber); background:rgba(185,138,61,0.1); color:var(--amber); }
 
+.case-packet-btn{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px; cursor:pointer;
+}
+.case-packet-btn:hover{ border-color:var(--cyan); color:var(--text); }
+
 /* Citation export row (Researcher's Dashboard, Saved Sources section) */
 .dash-export-row{ display:flex; align-items:center; gap:10px; margin:0 0 12px; }
 
@@ -809,6 +839,27 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 
 /* My Saved Cases page */
 .saved-case-card{ display:flex; flex-direction:column; }
+
+/* Status filter chips + per-card status selector (Saved Cases section) */
+.saved-search-input{
+  display:block; width:100%; max-width:360px; background:var(--panel-2); border:1px solid var(--border-strong);
+  border-radius:2px; color:var(--text); font-family:var(--sans); font-size:.84rem; padding:9px 11px; margin-bottom:12px;
+}
+.saved-search-input:focus{ outline:2px solid var(--cyan); outline-offset:1px; }
+.status-filter-row{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.status-filter-chip{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.05em; text-transform:uppercase;
+  padding:6px 10px; border-radius:2px; cursor:pointer;
+}
+.status-filter-chip[aria-pressed="true"]{ color:#fff; background:var(--crimson); border-color:var(--crimson); }
+.status-select{
+  margin-top:8px; width:100%; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px;
+  color:var(--text-dim); font-family:var(--mono); font-size:.68rem; letter-spacing:.02em; padding:6px 8px; cursor:pointer;
+}
+.status-select-to-review{ border-left:3px solid var(--text-faint); }
+.status-select-researching{ border-left:3px solid var(--amber); color:var(--amber); }
+.status-select-reviewed{ border-left:3px solid var(--cyan); color:var(--cyan); }
 .saved-note{ font-size:.78rem; color:var(--text-dim); background:var(--panel-2); border-left:2px solid var(--amber); padding:8px 10px; margin-top:8px; white-space:pre-wrap; }
 .saved-remove{
   align-self:flex-start; margin-top:10px; background:none; border:1px solid var(--border-strong); color:var(--text-faint);

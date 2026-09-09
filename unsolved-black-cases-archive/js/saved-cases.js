@@ -9,6 +9,9 @@
   "use strict";
 
   var SAVED_KEY = "ubca_saved_cases";          // { [caseId]: true }
+  var STATUS_KEY = "ubca_case_status";          // { [caseId]: "to-review" | "researching" | "reviewed" }
+  var STATUS_LABELS = { "to-review": "To Review", "researching": "Actively Researching", "reviewed": "Reviewed" };
+  var STATUS_ORDER = ["to-review", "researching", "reviewed"];
   var LEGACY_NOTES_KEY = "ubca_case_notes";     // { [caseId]: "note text" } — old single-note format
   var RESEARCH_KEY = "ubca_research_notes";     // { [caseId]: [{id, text, createdAt}, ...] }
   var BOARD_NOTES_KEY = "ubca_board_user_cards"; // { [caseId]: [{id, text, x, y}, ...] } — set by main.js's board feature
@@ -37,10 +40,56 @@
   function isSaved(caseId) { return !!readJSON(SAVED_KEY)[caseId]; }
   function toggleSaved(caseId) {
     var saved = readJSON(SAVED_KEY);
-    if (saved[caseId]) delete saved[caseId];
-    else saved[caseId] = true;
+    if (saved[caseId]) {
+      delete saved[caseId];
+    } else {
+      saved[caseId] = Date.now(); // when saved, not just whether — powers "updated since you saved it"
+      var statuses = readJSON(STATUS_KEY);
+      if (!statuses[caseId]) { statuses[caseId] = "to-review"; writeJSON(STATUS_KEY, statuses); }
+    }
     writeJSON(SAVED_KEY, saved);
     return !!saved[caseId];
+  }
+  function getCaseStatus(caseId) { return readJSON(STATUS_KEY)[caseId] || "to-review"; }
+  function setCaseStatus(caseId, status) {
+    var statuses = readJSON(STATUS_KEY);
+    statuses[caseId] = status;
+    writeJSON(STATUS_KEY, statuses);
+  }
+  // A case saved before this feature existed has a legacy `true` value
+  // instead of a timestamp. Treating that as 0 (earliest possible time)
+  // means any correction on record will correctly show as "since you
+  // saved it" for those cases too, rather than silently missing updates
+  // that happened well before this feature could have tracked them.
+  function getSavedAt(caseId) {
+    var v = readJSON(SAVED_KEY)[caseId];
+    return typeof v === "number" ? v : (v ? 0 : null);
+  }
+
+  // ---- "Updated since you saved it" ------------------------------------
+
+  function getLatestCorrection(caseId) {
+    var corrections = window.__UBCA_CORRECTIONS__ || [];
+    var latest = null;
+    corrections.forEach(function (c) {
+      if (c.caseId === caseId && (!latest || c.date > latest.date)) latest = c;
+    });
+    return latest; // { date: "YYYY-MM-DD", caseId, text } or null
+  }
+  function findUpdatedSavedCases() {
+    var savedIds = Object.keys(readJSON(SAVED_KEY));
+    var updated = [];
+    savedIds.forEach(function (id) {
+      var savedAt = getSavedAt(id);
+      var correction = getLatestCorrection(id);
+      if (savedAt == null || !correction) return;
+      // savedAt is a millisecond timestamp; correction dates are "YYYY-MM-DD".
+      // Comparing a formatted date string against a Date built from savedAt
+      // keeps this simple without a date-parsing library.
+      var savedDateStr = new Date(savedAt).toISOString().slice(0, 10);
+      if (correction.date > savedDateStr) updated.push(correction);
+    });
+    return updated;
   }
 
   // ---- Research notes (multiple boxes per case) -----------------------
@@ -168,18 +217,22 @@
   // ---- Case-page wiring ---------------------------------------------
 
   function initCaseToggle() {
-    var btn = document.querySelector("[data-save-case-btn]");
-    if (!btn) return;
-    var caseId = btn.getAttribute("data-save-case-btn");
+    var buttons = document.querySelectorAll("[data-save-case-btn]");
+    if (!buttons.length) return;
+    var caseId = buttons[0].getAttribute("data-save-case-btn");
     trackRecentlyViewed(caseId); // this element only exists on a real case page, so this is a reliable "case page viewed" signal
 
     function render() {
       var saved = isSaved(caseId);
-      btn.textContent = saved ? "\u2605 Saved to My Cases" : "\u2606 Save This Case";
-      btn.classList.toggle("is-saved", saved);
+      buttons.forEach(function (btn) {
+        btn.textContent = saved ? "\u2605 Saved to My Cases" : "\u2606 Save This Case";
+        btn.classList.toggle("is-saved", saved);
+      });
     }
     render();
-    btn.addEventListener("click", function () { toggleSaved(caseId); render(); });
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { toggleSaved(caseId); render(); });
+    });
   }
 
   function initResearchNotes() {
@@ -271,6 +324,7 @@
     renderSavedSources();
     renderTopics();
     renderRecentlyViewed();
+    renderUpdatedBanner();
     initCitationExport();
 
     function renderStats() {
@@ -280,6 +334,31 @@
       el = document.getElementById("stat-sources"); if (el) el.textContent = getSavedSources().length;
       el = document.getElementById("stat-topics"); if (el) el.textContent = getTopics().length;
       el = document.getElementById("stat-recent"); if (el) el.textContent = getRecentlyViewed().length;
+      el = document.getElementById("stat-updated"); if (el) el.textContent = findUpdatedSavedCases().length;
+    }
+
+    function renderUpdatedBanner() {
+      var host = document.getElementById("updated-cases-banner");
+      if (!host) return;
+      var updates = findUpdatedSavedCases();
+      if (!updates.length) { host.hidden = true; host.innerHTML = ""; return; }
+      host.hidden = false;
+      var heading = updates.length === 1
+        ? "1 saved case has been updated since you saved it"
+        : updates.length + " saved cases have been updated since you saved them";
+      host.innerHTML =
+        '<div class="updated-cases-head">' + heading + "</div>" +
+        updates.map(function (u) {
+          var c = byId[u.caseId];
+          if (!c) return "";
+          return (
+            '<div class="updated-case-item">' +
+            '<a href="cases/' + c.id + '.html">' + escapeHtml(c.name) + "</a>" +
+            '<span class="updated-case-date">' + formatDate(new Date(u.date).getTime()) + "</span>" +
+            '<p class="updated-case-text">' + escapeHtml(u.text) + "</p>" +
+            "</div>"
+          );
+        }).join("");
     }
 
     function caseCardHtml(c, extraHtml, removeAttr) {
@@ -293,17 +372,72 @@
       );
     }
 
+    var savedFilter = "all"; // ephemeral — resets on reload, which is fine for a filter control
+    var savedSearchQuery = "";
+
     function renderSavedCases() {
       var host = document.getElementById("saved-cases-list");
+      var filterHost = document.getElementById("saved-cases-filter");
+      var searchInput = document.getElementById("saved-cases-search");
       if (!host) return;
       var savedIds = Object.keys(readJSON(SAVED_KEY));
       var found = savedIds.map(function (id) { return byId[id]; }).filter(Boolean);
+
+      if (searchInput && !searchInput.dataset.wired) {
+        searchInput.dataset.wired = "true";
+        searchInput.hidden = found.length === 0;
+        searchInput.addEventListener("input", function () {
+          savedSearchQuery = searchInput.value;
+          renderSavedCases();
+        });
+      } else if (searchInput) {
+        searchInput.hidden = found.length === 0;
+      }
+
+      if (filterHost) {
+        if (!found.length) {
+          filterHost.hidden = true;
+        } else {
+          filterHost.hidden = false;
+          var counts = { all: found.length };
+          STATUS_ORDER.forEach(function (s) { counts[s] = 0; });
+          found.forEach(function (c) { var s = getCaseStatus(c.id); counts[s] = (counts[s] || 0) + 1; });
+          var chipDefs = [["all", "All"]].concat(STATUS_ORDER.map(function (s) { return [s, STATUS_LABELS[s]]; }));
+          filterHost.innerHTML = chipDefs.map(function (pair) {
+            var key = pair[0], label = pair[1];
+            return '<button type="button" class="status-filter-chip" data-status-filter="' + key + '" ' +
+              'aria-pressed="' + (savedFilter === key ? "true" : "false") + '">' + label + " (" + (counts[key] || 0) + ")</button>";
+          }).join("");
+          filterHost.querySelectorAll("[data-status-filter]").forEach(function (chip) {
+            chip.addEventListener("click", function () {
+              savedFilter = chip.getAttribute("data-status-filter");
+              renderSavedCases();
+            });
+          });
+        }
+      }
+
+      var visible = savedFilter === "all" ? found : found.filter(function (c) { return getCaseStatus(c.id) === savedFilter; });
+      var trimmedQuery = savedSearchQuery.trim();
+      if (trimmedQuery) {
+        var normalizedQuery = typeof window.UBCA_NORMALIZE === "function" ? window.UBCA_NORMALIZE(trimmedQuery) : trimmedQuery.toLowerCase();
+        visible = visible.filter(function (c) {
+          var text = typeof window.UBCA_CASE_FULL_TEXT === "function" ? window.UBCA_CASE_FULL_TEXT(c) : (c.name || "").toLowerCase();
+          return text.indexOf(normalizedQuery) !== -1;
+        });
+      }
+
       if (found.length === 0) {
         host.innerHTML = '<p class="quiz-result" style="display:block;">You haven\u2019t saved any cases yet. ' +
           'Open any case file and click \u201c\u2606 Save This Case\u201d \u2014 it\u2019ll show up here, in this browser only.</p>';
         return;
       }
-      host.innerHTML = found.map(function (c) {
+      if (visible.length === 0) {
+        host.innerHTML = '<p class="quiz-result" style="display:block;">No saved cases match ' +
+          (trimmedQuery ? "\u201c" + escapeHtml(trimmedQuery) + "\u201d" : "that status") + " yet.</p>";
+        return;
+      }
+      host.innerHTML = visible.map(function (c) {
         var notes = getResearchNotes(c.id);
         var noteHtml = notes.length
           ? '<div class="saved-note">' + notes.length + (notes.length === 1 ? " research note" : " research notes") + "</div>"
@@ -315,13 +449,26 @@
             progressHtml = '<div class="saved-note saved-checklist-note">Checklist: ' + p.done + "/" + p.total + " complete</div>";
           }
         }
-        return caseCardHtml(c, noteHtml + progressHtml, true);
+        var currentStatus = getCaseStatus(c.id);
+        var statusHtml = '<select class="status-select status-select-' + currentStatus + '" data-status-select="' + c.id + '">' +
+          STATUS_ORDER.map(function (s) {
+            return '<option value="' + s + '"' + (s === currentStatus ? " selected" : "") + ">" + STATUS_LABELS[s] + "</option>";
+          }).join("") + "</select>";
+        return caseCardHtml(c, statusHtml + noteHtml + progressHtml, true);
       }).join("");
+      host.querySelectorAll("[data-status-select]").forEach(function (select) {
+        select.addEventListener("change", function () {
+          setCaseStatus(select.getAttribute("data-status-select"), select.value);
+          select.className = "status-select status-select-" + select.value;
+          renderSavedCases(); // re-render so the filter counts and current filter view stay accurate
+        });
+      });
       host.querySelectorAll("[data-remove-id]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           toggleSaved(btn.getAttribute("data-remove-id"));
           renderSavedCases();
           renderStats();
+          renderUpdatedBanner();
         });
       });
     }
