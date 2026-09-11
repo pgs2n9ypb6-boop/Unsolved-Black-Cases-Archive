@@ -496,6 +496,27 @@ p:last-child{ margin-bottom:0; }
 
 /* "Continue Your Research" panel at the bottom of every case page */
 .continue-research{ border-top:1px solid var(--border); background:var(--panel); padding:32px 20px; }
+
+/* Homepage "Your Research" widget — bottom of index.html */
+.homepage-research{ border-top:1px solid var(--border); background:var(--panel); padding:32px 20px 40px; }
+.homepage-research-inner{ max-width:640px; margin:0 auto; text-align:center; }
+.homepage-research-inner h2{ font-size:1.15rem; margin:0 0 16px; }
+.homepage-research-empty{ font-size:.86rem; color:var(--text-dim); line-height:1.55; margin:0 0 16px; }
+.homepage-research-stats{ display:flex; justify-content:center; gap:22px; margin-bottom:18px; font-size:.86rem; color:var(--text-dim); }
+.homepage-research-stats strong{ color:var(--text); font-family:var(--serif); font-size:1.1rem; display:block; }
+.homepage-research-list{ list-style:none; margin:0 0 18px; padding:0; text-align:left; max-width:420px; margin-left:auto; margin-right:auto; }
+.homepage-research-list li{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding:9px 12px; background:var(--panel-2); border:1px solid var(--border-strong); border-radius:2px; margin-bottom:6px;
+}
+.homepage-research-list a{ font-size:.85rem; color:var(--text); }
+.homepage-research-status{ font-family:var(--mono); font-size:.62rem; letter-spacing:.04em; text-transform:uppercase; color:var(--text-faint); white-space:nowrap; }
+.homepage-research-cta{
+  display:inline-block; background:var(--cyan); color:#0d1410; font-weight:600;
+  font-family:var(--mono); font-size:.76rem; letter-spacing:.03em; text-transform:uppercase;
+  padding:10px 20px; border-radius:2px;
+}
+.homepage-research-cta:hover{ opacity:.9; }
 .continue-research-inner{ max-width:640px; margin:0 auto; text-align:center; }
 .continue-research h2{ font-size:1.15rem; margin:0 0 6px; }
 .continue-research p{ font-size:.84rem; color:var(--text-dim); margin:0 0 18px; }

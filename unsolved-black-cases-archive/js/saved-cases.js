@@ -607,7 +607,49 @@
     }
   }
 
-  function init() { initCaseToggle(); initResearchNotes(); initSourceSaveButtons(); initDashboard(); }
+  // ---- Homepage "Your Research" widget --------------------------------
+
+  function initHomepageWidget() {
+    var host = document.getElementById("homepage-research-widget");
+    if (!host) return;
+    var allCases = window.__UBCA_CASES__ || [];
+    var byId = {};
+    allCases.forEach(function (c) { byId[c.id] = c; });
+
+    var savedIds = Object.keys(readJSON(SAVED_KEY));
+    var found = savedIds.map(function (id) { return byId[id]; }).filter(Boolean);
+
+    if (!found.length) {
+      host.innerHTML =
+        '<p class="homepage-research-empty">Save cases, take notes, request public records, and track your ' +
+        'own progress \u2014 everything stays private to this browser, nothing is sent anywhere. Open any case ' +
+        'file and click \u201c\u2606 Save This Case\u201d to get started.</p>' +
+        '<a class="homepage-research-cta" href="saved.html">Open Your Researcher\u2019s Dashboard \u2192</a>';
+      return;
+    }
+
+    var noteCount = totalNotesCount();
+    var researchingCount = found.filter(function (c) { return getCaseStatus(c.id) === "researching"; }).length;
+    var recent = found.slice().sort(function (a, b) {
+      return getSavedAt(b.id) - getSavedAt(a.id);
+    }).slice(0, 5);
+
+    host.innerHTML =
+      '<div class="homepage-research-stats">' +
+      '<span><strong>' + found.length + '</strong> saved</span>' +
+      '<span><strong>' + noteCount + '</strong> notes</span>' +
+      '<span><strong>' + researchingCount + '</strong> actively researching</span>' +
+      '</div>' +
+      '<ul class="homepage-research-list">' +
+      recent.map(function (c) {
+        return '<li><a href="cases/' + c.id + '.html">' + escapeHtml(c.name) + '</a>' +
+          '<span class="homepage-research-status">' + escapeHtml(STATUS_LABELS[getCaseStatus(c.id)]) + '</span></li>';
+      }).join("") +
+      '</ul>' +
+      '<a class="homepage-research-cta" href="saved.html">View Full Dashboard \u2192</a>';
+  }
+
+  function init() { initCaseToggle(); initResearchNotes(); initSourceSaveButtons(); initDashboard(); initHomepageWidget(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();

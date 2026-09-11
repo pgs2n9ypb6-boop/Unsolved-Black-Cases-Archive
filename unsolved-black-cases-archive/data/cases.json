@@ -13763,5 +13763,143 @@
       }
     ],
     "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "winston-smith-jr",
+    "caseNumber": "220",
+    "name": "Winston Boogie Smith Jr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2021,
+    "age": 32,
+    "gender": "male",
+    "city": "Minneapolis",
+    "county": "Hennepin",
+    "state": "MN",
+    "caseSeries": null,
+    "dateAdded": "2026-09-08",
+    "summary": "Winston \u201cBoogie\u201d Smith Jr., 32, a father of three and local comedian, was shot and killed by members of a U.S. Marshals Service fugitive task force in an Uptown Minneapolis parking ramp on June 3, 2021, while sitting in an SUV with a woman he had been on a lunch date with. Task force members had watched the couple for over an hour before boxing in Smith's vehicle and announcing an arrest on an outstanding firearms warrant; officials said he refused to comply and produced a handgun, and task force members fired. No body camera, dashcam, or surveillance footage of the shooting exists \u2014 the Marshals Service had not yet implemented a body camera policy change in Minnesota specifically, despite the change taking effect elsewhere months earlier. His companion's attorneys said she never saw Smith holding a gun, and investigators never took gunshot residue samples from his hands because his body had already been washed by the medical examiner. Crow Wing County Attorney Donald Ryan declined to charge any task force member in October 2021. No one has ever been charged in Smith's death.",
+    "known": [
+      "The hour-long surveillance, the vehicle stop, and the shooting, per Crow Wing County Attorney Donald Ryan's public findings and the Minnesota Bureau of Criminal Apprehension's investigation.",
+      "No body camera, dashcam, or surveillance video of the shooting itself exists; officers assigned to the task force had body cameras but were told by the U.S. Marshals Service not to use them, even after an October 2020 Department of Justice policy change permitting local task force members to wear them during arrest operations \u2014 a policy that did not take effect in Minnesota until the day after Smith's death.",
+      "Attorney Ryan's letter stated task force members watched Smith and his companion, Norhan Askar, share a rooftop lunch date and walk to his vehicle before officers boxed the car in with their own and announced an arrest.",
+      "Askar's attorneys said she never saw Smith holding a weapon, and that officers never identified themselves as law enforcement before surrounding the car; they said this contributed to the confusion of the encounter.",
+      "Investigators did not collect gunshot residue samples from Smith's hands because the medical examiner had already washed his body before the request was made, according to Askar's attorneys, who said such evidence could have helped establish what actually happened.",
+      "A firearm was recovered from underneath the seat of the vehicle Smith arrived in, not immediately on his person; he was prohibited from possessing a gun due to a prior felony conviction.",
+      "Crow Wing County Attorney Donald Ryan, brought in because Twin Cities-area prosecutors had conflicts of interest, announced in October 2021 that task force members were legally justified and would not be charged, a decision the Hennepin County Attorney's Office publicly announced on his behalf.",
+      "The names of the task force members who fired have never been publicly released."
+    ],
+    "unknown": [
+      "Whether Smith actually drew and fired a weapon, as officials maintained, or whether the official account itself shifted over the investigation's early days \u2014 from an initial claim he \u201cfired first\u201d to a later, more limited claim he \u201cpulled out a gun\u201d \u2014 was never resolved by any independent evidence, since no video exists and gunshot residue was never tested.",
+      "Why officers were instructed not to use body cameras in Minnesota specifically, when the policy permitting their use elsewhere had already changed months earlier, has not been fully explained beyond acknowledgment of the delay.",
+      "The identities of the task force members who fired the fatal shots have never been publicly disclosed."
+    ],
+    "unanswered": [
+      "Why were task force members in Minnesota specifically still barred from using body cameras months after a federal policy change permitted it elsewhere?",
+      "Why did investigators never collect gunshot residue evidence that could have independently confirmed or contradicted whether Smith fired a weapon?",
+      "Why have the identities of the task force members involved in the shooting never been publicly released?"
+    ],
+    "sources": [
+      {
+        "name": "NPR \u2014 \u201cNo charges will be filed against officers who fatally shot Winston Smith in Minn.\u201d",
+        "url": "https://www.npr.org/2021/10/11/1045084433/no-charges-will-be-filed-against-officers-who-fatally-shot-winston-smith-in-minn",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cOfficers didn't identify themselves in fatal Minneapolis shooting of Winston Boogie Smith, attorney says\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/officers-didn-t-id-selves-fatal-minneapolis-shooting-winston-boogie-n1273011",
+        "verified": true
+      },
+      {
+        "name": "Star Tribune \u2014 \u201cAttorney for Winston Smith's family calls for independent investigation\u201d",
+        "url": "https://www.startribune.com/attorney-for-winston-smith-s-family-calls-for-independent-investigation/600107002",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "frederick-cox-jr",
+    "caseNumber": "221",
+    "name": "Frederick Cox Jr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 18,
+    "gender": "male",
+    "city": "High Point",
+    "county": "Davidson",
+    "state": "NC",
+    "caseSeries": null,
+    "dateAdded": "2026-09-08",
+    "summary": "Frederick Rodriquez Smith Cox Jr., 18, was shot and killed by a plainclothes Davidson County, North Carolina sheriff's detective outside a funeral at Living Water Baptist Church in High Point on November 8, 2020, after gunfire broke out in the parking lot as mourners were leaving. Witnesses said Cox was helping people get to safety when Detective Michael Shane Hill, who was attending the funeral of a separate homicide victim he had been investigating, shot him multiple times. Hill said he saw Cox holding a handgun, and a gun was found near his body afterward, but Cox's autopsy found no gunshot residue on his hands, meaning he had not fired a weapon. The state medical examiner ruled his death a homicide. A Guilford County grand jury declined to indict Hill in June 2021, seven months after the shooting. No one has ever been charged in Cox's death.",
+    "known": [
+      "The funeral, the outbreak of gunfire in the parking lot, and the shooting, per the North Carolina State Bureau of Investigation's report and the Office of the Chief Medical Examiner's autopsy findings.",
+      "Detective Hill was attending the funeral of Jonas Tramone Thompson Jr., a homicide victim he was actively investigating, at the request of Thompson's family, when gunfire broke out among other funeral attendees in the parking lot.",
+      "Hill reported seeing Cox holding a handgun at the moment he fired, and a gun was found near Cox's body after the shooting; multiple witnesses told reporters they never saw Cox with a firearm and disputed the account.",
+      "Cox's autopsy, performed November 10, 2020 and released the following March, found he was shot four times \u2014 in the neck, shoulder, back, and thigh \u2014 with no gunshot residue present on either hand, indicating he had not fired a weapon.",
+      "The state medical examiner classified the manner of death as homicide, with cause of death listed as multiple gunshot wounds.",
+      "A Guilford County grand jury reviewed two possible charges, voluntary manslaughter and felony assault with a deadly weapon inflicting serious injury, and declined to indict Hill on either on June 1, 2021, finding insufficient evidence to support criminal charges.",
+      "High Point police separately released information describing Cox as having gang affiliations; his mother and friends publicly disputed that characterization, saying he had posted repeatedly on social media against gang violence.",
+      "Cox's family filed a federal lawsuit against the Davidson County Sheriff's Office and Detective Hill, which settled for $4 million in early 2025, more than four years after his death."
+    ],
+    "unknown": [
+      "Whether Cox was in fact holding a firearm at the moment Hill fired, as Hill's account maintained, or whether the gun recovered near his body ended up there through some other means, given the absence of gun residue on his hands directly contradicted the justification for the shooting, was never resolved by any criminal trial since the grand jury declined to indict.",
+      "Why witnesses' accounts describing Cox helping others to safety, rather than participating in the gunfire, differed so sharply from the detective's account has not been reconciled in any public record.",
+      "The specific reasoning behind the grand jury's insufficient-evidence finding, given the autopsy's own physical findings, has not been made public, as grand jury proceedings are sealed under North Carolina law."
+    ],
+    "unanswered": [
+      "How could a grand jury find insufficient evidence for criminal charges when the victim's own autopsy directly contradicted the central justification given for the shooting \u2014 that he had been holding and possibly firing a gun?",
+      "Why did it take four years and a $4 million settlement before any accountability was reached in this case, given the detective was never criminally charged?",
+      "Why did High Point police publicize unverified gang-affiliation claims about Cox after his death, and did that framing affect how his case was reviewed?"
+    ],
+    "sources": [
+      {
+        "name": "WFMY News 2 \u2014 \u201cGrand Jury: No charges for Davidson County detective who SBI says shot 18-year-old Fred Cox at a funeral\u201d",
+        "url": "https://www.wfmynews2.com/article/news/local/grand-jury-no-charges-for-davidson-county-detective-who-sbi-says-shot-18-year-old-fred-cox-at-a-funeral/83-c02619ad-f324-46c2-9f61-5aa24d8a0f7a",
+        "verified": true
+      },
+      {
+        "name": "FOX8 WGHP \u2014 \u201cNo indictment for Davidson County deputy after 18-year-old Frederick Cox Jr. shot, killed at funeral in High Point; family will file civil suit\u201d",
+        "url": "https://myfox8.com/news/grand-jury-will-not-indict-high-point/",
+        "verified": true
+      },
+      {
+        "name": "FOX8 WGHP \u2014 \u201cFamily speaks after settlement in lawsuit against Davidson County Sheriff's Office on behalf of Fred Cox Jr.\u201d",
+        "url": "https://myfox8.com/news/north-carolina/piedmont-triad/family-speaks-after-settlement-in-lawsuit-against-davidson-county-sheriffs-office-on-behalf-of-fred-cox-jr/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
   }
 ]
