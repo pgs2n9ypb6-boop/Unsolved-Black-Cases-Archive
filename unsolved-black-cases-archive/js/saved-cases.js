@@ -321,11 +321,135 @@
 
     renderStats();
     renderSavedCases();
+    renderAllNotes();
     renderSavedSources();
     renderTopics();
     renderRecentlyViewed();
     renderUpdatedBanner();
     initCitationExport();
+    initStatPopups();
+
+    function flattenAllNotes() {
+      var allNotesRaw = readJSON(RESEARCH_KEY); // { [caseId]: [{id, text, createdAt}, ...] }
+      var flat = [];
+      Object.keys(allNotesRaw).forEach(function (caseId) {
+        (allNotesRaw[caseId] || []).forEach(function (n) {
+          if (n.text && n.text.trim()) flat.push({ caseId: caseId, text: n.text, createdAt: n.createdAt });
+        });
+      });
+      flat.sort(function (a, b) { return (b.createdAt || 0) - (a.createdAt || 0); });
+      return flat;
+    }
+
+    function renderAllNotes() {
+      var host = document.getElementById("all-notes-list");
+      if (!host) return;
+      var flat = flattenAllNotes();
+      if (!flat.length) {
+        host.innerHTML = '<p class="quiz-result" style="display:block;">No notes yet. Open any saved case ' +
+          'and click \u201c+ Add a note\u201d \u2014 it\u2019ll show up here too, across every case.</p>';
+        return;
+      }
+      host.innerHTML = flat.map(function (n) {
+        var c = byId[n.caseId];
+        var caseName = c ? c.name : n.caseId;
+        return (
+          '<div class="all-notes-item">' +
+          '<div class="all-notes-item-head">' +
+          '<a href="cases/' + n.caseId + '.html">' + escapeHtml(caseName) + "</a>" +
+          '<span class="all-notes-date">' + formatDate(n.createdAt) + "</span>" +
+          "</div>" +
+          '<p class="all-notes-text">' + escapeHtml(n.text) + "</p>" +
+          "</div>"
+        );
+      }).join("");
+    }
+
+    // Clicking a stat opens an immediate inline list right there in the
+    // stats row, rather than requiring a scroll to a section further down
+    // the page — clicking the same stat again closes it; clicking a
+    // different one swaps the content in place.
+    function initStatPopups() {
+      var popup = document.getElementById("stat-popup");
+      if (!popup) return;
+      var openKind = null;
+
+      function emptyRow(text) { return '<p class="stat-popup-empty">' + text + "</p>"; }
+      function caseLinkRow(c, meta) {
+        return '<a class="stat-popup-row" href="cases/' + c.id + '.html"><span>' + escapeHtml(c.name) + "</span>" +
+          (meta ? '<span class="stat-popup-meta">' + escapeHtml(meta) + "</span>" : "") + "</a>";
+      }
+
+      function buildContent(kind) {
+        if (kind === "saved-cases") {
+          var savedIds = Object.keys(readJSON(SAVED_KEY));
+          var found = savedIds.map(function (id) { return byId[id]; }).filter(Boolean);
+          if (!found.length) return emptyRow("No saved cases yet.");
+          return found.map(function (c) { return caseLinkRow(c, STATUS_LABELS[getCaseStatus(c.id)]); }).join("");
+        }
+        if (kind === "notes") {
+          var flat = flattenAllNotes();
+          if (!flat.length) return emptyRow("No notes yet.");
+          return flat.map(function (n) {
+            var c = byId[n.caseId];
+            var excerpt = n.text.length > 80 ? n.text.slice(0, 77) + "\u2026" : n.text;
+            return '<a class="stat-popup-row stat-popup-row-note" href="cases/' + n.caseId + '.html">' +
+              '<span class="stat-popup-note-case">' + escapeHtml(c ? c.name : n.caseId) + "</span>" +
+              '<span class="stat-popup-note-text">' + escapeHtml(excerpt) + "</span></a>";
+          }).join("");
+        }
+        if (kind === "sources") {
+          var sources = getSavedSources();
+          if (!sources.length) return emptyRow("No sources saved yet.");
+          return sources.map(function (s) {
+            return '<a class="stat-popup-row" href="' + s.url + '" target="_blank" rel="noopener noreferrer">' +
+              '<span>' + escapeHtml(s.sourceName) + "</span>" +
+              '<span class="stat-popup-meta">' + escapeHtml(s.caseName) + "</span></a>";
+          }).join("");
+        }
+        if (kind === "topics") {
+          var topics = getTopics();
+          if (!topics.length) return emptyRow("No research topics yet.");
+          return topics.map(function (t) { return '<div class="stat-popup-row stat-popup-row-static"><span>' + escapeHtml(t.text) + "</span></div>"; }).join("");
+        }
+        if (kind === "recently-viewed") {
+          var recent = getRecentlyViewed().map(function (id) { return byId[id]; }).filter(Boolean);
+          if (!recent.length) return emptyRow("No cases viewed yet this browser.");
+          return recent.map(function (c) { return caseLinkRow(c, c.year + " \u00b7 " + (c.city || "")); }).join("");
+        }
+        if (kind === "updated") {
+          var updates = findUpdatedSavedCases();
+          if (!updates.length) return emptyRow("Nothing updated since you saved it \u2014 yet.");
+          return updates.map(function (u) {
+            var c = byId[u.caseId];
+            if (!c) return "";
+            return '<a class="stat-popup-row stat-popup-row-note" href="cases/' + c.id + '.html">' +
+              '<span class="stat-popup-note-case">' + escapeHtml(c.name) + "</span>" +
+              '<span class="stat-popup-note-text">' + escapeHtml(u.text) + "</span></a>";
+          }).join("");
+        }
+        return emptyRow("Nothing here yet.");
+      }
+
+      document.querySelectorAll(".dash-stat-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          var kind = link.getAttribute("data-stat-kind");
+          document.querySelectorAll(".dash-stat-link").forEach(function (l) { l.classList.remove("dash-stat-open"); });
+          if (openKind === kind) {
+            // same stat clicked again — close it
+            popup.hidden = true;
+            popup.innerHTML = "";
+            openKind = null;
+            return;
+          }
+          openKind = kind;
+          link.classList.add("dash-stat-open");
+          popup.innerHTML = buildContent(kind);
+          popup.hidden = false;
+        });
+      });
+    }
 
     function renderStats() {
       var el;

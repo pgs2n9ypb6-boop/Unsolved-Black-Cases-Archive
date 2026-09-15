@@ -10354,22 +10354,34 @@ def build_saved_cases():
     won\u2019t show up if you open this site on a different device or browser.</p>
     <div class="dash-stats" id="dashboard-stats">
       <div class="dash-stat"><span class="dash-stat-eyebrow">My Research</span></div>
-      <div class="dash-stat"><span class="num" id="stat-saved-cases">\u2026</span><span class="cap">Saved Cases</span></div>
-      <div class="dash-stat"><span class="num" id="stat-notes">\u2026</span><span class="cap">Notes</span></div>
-      <div class="dash-stat"><span class="num" id="stat-sources">\u2026</span><span class="cap">Sources Saved</span></div>
-      <div class="dash-stat"><span class="num" id="stat-topics">\u2026</span><span class="cap">Research Topics</span></div>
-      <div class="dash-stat"><span class="num" id="stat-recent">\u2026</span><span class="cap">Recently Viewed</span></div>
-      <div class="dash-stat dash-stat-updated"><span class="num" id="stat-updated">\u2026</span><span class="cap">Updated Since Saved</span></div>
+      <a class="dash-stat dash-stat-link" href="#section-saved-cases" data-stat-kind="saved-cases"><span class="num" id="stat-saved-cases">\u2026</span><span class="cap">Saved Cases</span></a>
+      <a class="dash-stat dash-stat-link" href="#section-notes" data-stat-kind="notes"><span class="num" id="stat-notes">\u2026</span><span class="cap">Notes</span></a>
+      <a class="dash-stat dash-stat-link" href="#section-saved-sources" data-stat-kind="sources"><span class="num" id="stat-sources">\u2026</span><span class="cap">Sources Saved</span></a>
+      <a class="dash-stat dash-stat-link" href="#section-topics" data-stat-kind="topics"><span class="num" id="stat-topics">\u2026</span><span class="cap">Research Topics</span></a>
+      <a class="dash-stat dash-stat-link" href="#section-recently-viewed" data-stat-kind="recently-viewed"><span class="num" id="stat-recent">\u2026</span><span class="cap">Recently Viewed</span></a>
+      <a class="dash-stat dash-stat-link dash-stat-updated" href="#section-saved-cases" data-stat-kind="updated"><span class="num" id="stat-updated">\u2026</span><span class="cap">Updated Since Saved</span></a>
     </div>
+    <div id="stat-popup" class="stat-popup" hidden></div>
 
     <div id="updated-cases-banner" class="updated-cases-banner" hidden></div>
 
-    <h2 class="dash-section-head">Saved Cases</h2>
+    <h2 class="dash-section-head" id="section-saved-cases">Saved Cases</h2>
     <input type="search" id="saved-cases-search" class="saved-search-input" placeholder="Search your saved cases\u2026" hidden>
     <div id="saved-cases-filter" class="status-filter-row" hidden></div>
     <div id="saved-cases-list" class="related-grid"></div>
 
-    <h2 class="dash-section-head">Saved Sources</h2>
+    <h2 class="dash-section-head" id="section-records-request">Request Public Records</h2>
+    <p class="dash-section-hint">Body camera footage never released, an internal review never made public,
+    a grand jury summary that stayed sealed \u2014 most of that isn\u2019t secret by law, it\u2019s just never
+    been formally requested. Generate a letter citing the correct state law for any case, addressed to the
+    right kind of records custodian.</p>
+    <button type="button" class="records-btn primary" data-records-open-standalone>\U0001F4CB Open the Request Generator</button>
+
+    <h2 class="dash-section-head" id="section-notes">Your Notes</h2>
+    <p class="dash-section-hint">Every note you\u2019ve written, across every case, in one place.</p>
+    <div id="all-notes-list"></div>
+
+    <h2 class="dash-section-head" id="section-saved-sources">Saved Sources</h2>
     <p class="dash-section-hint">Tap the \u2606 next to any source on a case page to save it here for your
     own reference list.</p>
     <div class="dash-export-row" id="sources-export-row" hidden>
@@ -10379,7 +10391,7 @@ def build_saved_cases():
     </div>
     <div id="saved-sources-list"></div>
 
-    <h2 class="dash-section-head">Research Topics</h2>
+    <h2 class="dash-section-head" id="section-topics">Research Topics</h2>
     <p class="dash-section-hint">A running list of leads, patterns, or angles you want to come back to \u2014
     not tied to any one case.</p>
     <div class="topic-add-row">
@@ -10388,7 +10400,7 @@ def build_saved_cases():
     </div>
     <ul id="research-topics-list" class="topics-list"></ul>
 
-    <h2 class="dash-section-head">Recently Viewed</h2>
+    <h2 class="dash-section-head" id="section-recently-viewed">Recently Viewed</h2>
     <div id="recently-viewed-list" class="related-grid"></div>'''
     write("saved.html", page_shell("Researcher's Dashboard", "Your private research dashboard \u2014 saved cases, notes, sources, and topics, stored only in your own browser.", depth,
           doc_page(depth, "Private", "Researcher's Dashboard", body), canonical_path="saved.html"))
