@@ -318,6 +318,8 @@
     var allCases = window.__UBCA_CASES__ || [];
     var byId = {};
     allCases.forEach(function (c) { byId[c.id] = c; });
+    var savedFilter = "all"; // ephemeral — resets on reload, which is fine for a filter control
+    var savedSearchQuery = "";
 
     renderStats();
     renderSavedCases();
@@ -495,9 +497,6 @@
         "</div>"
       );
     }
-
-    var savedFilter = "all"; // ephemeral — resets on reload, which is fine for a filter control
-    var savedSearchQuery = "";
 
     function renderSavedCases() {
       var host = document.getElementById("saved-cases-list");
