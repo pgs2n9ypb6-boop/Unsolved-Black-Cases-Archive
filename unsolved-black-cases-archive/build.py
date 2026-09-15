@@ -9641,6 +9641,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/records-request.js"></script>
 <script src="{r}js/compare-cases.js"></script>
 <script src="{r}js/research-checklist.js"></script>
+<script src="{r}js/case-map.js"></script>
 <script src="{r}js/research-packet.js"></script>
 <script src="{r}js/submit-form.js"></script>
 </body>
@@ -10399,6 +10400,14 @@ def build_saved_cases():
       <button type="button" id="topic-add-btn">+ Add</button>
     </div>
     <ul id="research-topics-list" class="topics-list"></ul>
+
+    <h2 class="dash-section-head" id="section-case-map">Your Case Map</h2>
+    <p class="dash-section-hint">Draw your own connections between the cases you\u2019ve saved \u2014 a shared
+    detail, a pattern you noticed, a hunch worth tracking. <strong>These are your own private notes, not
+    documented facts.</strong> They\u2019re never shown to anyone else, never asserted as verified by this
+    archive, and live only in this browser \u2014 completely separate from the site\u2019s own documented
+    Case Connections graph.</p>
+    <div id="case-map-widget"></div>
 
     <h2 class="dash-section-head" id="section-recently-viewed">Recently Viewed</h2>
     <div id="recently-viewed-list" class="related-grid"></div>'''

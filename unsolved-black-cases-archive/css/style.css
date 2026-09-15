@@ -656,6 +656,29 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
   padding:8px 10px; font-size:.78rem; color:var(--text); pointer-events:none;
 }
 
+/* Your Case Map — a private, personal version of the graph above. The
+   dashed cyan lines are deliberately a different visual language from the
+   documented graph's solid crimson/amber, so a user's own private theory
+   never reads as a verified fact at a glance. */
+.case-map-wrap{ position:relative; max-width:520px; margin:14px auto; }
+.case-map-svg{ width:100%; height:auto; display:block; }
+.case-map-edge{ stroke:var(--cyan); stroke-width:1.6; stroke-dasharray:5 4; opacity:.75; }
+.case-map-node circle{ fill:var(--panel-2); stroke:var(--cyan); stroke-width:1.6; cursor:pointer; }
+.case-map-node:hover circle{ fill:var(--cyan); }
+.case-map-node-selected circle{ fill:var(--amber); stroke:var(--amber); }
+.case-map-node text{
+  font-family:var(--mono); font-size:9px; fill:var(--text-dim); text-transform:uppercase; letter-spacing:.02em;
+  pointer-events:none;
+}
+.case-map-conn-list{ margin-top:14px; }
+.case-map-conn-item{
+  background:var(--panel); border:1px solid var(--border-strong); border-left:2px solid var(--cyan);
+  border-radius:2px; padding:10px 12px; margin-bottom:8px;
+}
+.case-map-conn-item span{ font-size:.85rem; color:var(--text); }
+.case-map-conn-note{ font-size:.78rem; color:var(--text-dim); margin:5px 0 0; font-style:italic; }
+.case-map-empty{ font-size:.82rem; color:var(--text-faint); font-style:italic; margin:14px 0 0; }
+
 /* ==========================================================================
    Search overlay
    ========================================================================== */
