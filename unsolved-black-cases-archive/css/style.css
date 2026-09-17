@@ -86,6 +86,7 @@ p:last-child{ margin-bottom:0; }
 }
 .status-badge::before{ content:""; width:6px; height:6px; border-radius:50%; background:currentColor; }
 .status-badge.status-unsolved{ color:var(--crimson-bright); border-color:rgba(212,61,76,0.4); background:rgba(179,32,47,0.08); }
+.status-badge.status-unresolved{ color:#a794cf; border-color:rgba(138,116,181,0.4); background:rgba(138,116,181,0.1); }
 .status-badge.status-cold{ color:var(--cyan); border-color:rgba(79,127,146,0.4); background:rgba(79,127,146,0.08); }
 .status-badge.status-missing{ color:var(--amber); border-color:rgba(185,138,61,0.4); background:rgba(185,138,61,0.08); }
 
