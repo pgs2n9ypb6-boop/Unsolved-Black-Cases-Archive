@@ -944,6 +944,51 @@
       });
   }
 
+  // "Active now" — this is a static site with no server to track real
+  // concurrent connections (that needs WebSockets or a session-tracking
+  // backend, neither of which exists here), so this is an honest
+  // approximation built on the same free hit-counter service as the other
+  // two counters: each page load hits a key stamped with the *current
+  // minute*, and we separately read (not hit, so this read itself doesn't
+  // inflate the count) that bucket plus the two minutes before it and sum
+  // them. That gives a rough "distinct page loads in the last ~3 minutes"
+  // figure — a fair proxy for "people here right now," but not a literal
+  // live connection count, which is why the label uses "active now" with
+  // a hover tooltip explaining the approximation rather than claiming
+  // precision the technique can't back up.
+  function initLiveVisitors() {
+    var el = document.getElementById("site-live-count");
+    if (!el) return;
+    var BASE = "https://countapi.mileshilliard.com/api/v1/";
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    function minuteKey(d) {
+      return "ubca-live-" + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + "-" +
+        pad(d.getHours()) + pad(d.getMinutes());
+    }
+    var now = new Date();
+    var currentKey = minuteKey(now);
+    var priorKeys = [1, 2].map(function (mins) { return minuteKey(new Date(now.getTime() - mins * 60000)); });
+
+    // Register this page load, then read the small sliding window.
+    fetch(BASE + "hit/" + currentKey)
+      .then(function () {
+        return Promise.all([currentKey].concat(priorKeys).map(function (key) {
+          return fetch(BASE + "get/" + key)
+            .then(function (res) { return res.json(); })
+            .then(function (data) { return (data && typeof data.value === "number") ? data.value : 0; })
+            .catch(function () { return 0; });
+        }));
+      })
+      .then(function (counts) {
+        var total = counts.reduce(function (sum, n) { return sum + n; }, 0);
+        if (total > 0) el.textContent = total.toLocaleString();
+        else if (el.parentElement) el.parentElement.style.display = "none";
+      })
+      .catch(function () {
+        if (el.parentElement) el.parentElement.style.display = "none";
+      });
+  }
+
   // "Case of the Week" — homepage rotation, computed client-side so it
   // advances every real week with no rebuild or backend needed. The week
   // number is days-since-a-fixed-Monday-epoch divided by 7, modulo the
@@ -996,6 +1041,7 @@
     renderMap("home-map");
     initVisitCounter();
     initDailyVisitCounter();
+    initLiveVisitors();
     initCaseOfWeek();
     initBottomNavActiveState();
   });

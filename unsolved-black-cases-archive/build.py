@@ -355,7 +355,11 @@ CASES = [
          extraSources=[src("Federal Bureau of Investigation \u2014 Tionda Bradley case listing",
                             "https://www.fbi.gov/wanted/kidnap/tionda-z.-bradley", True),
                         src("Federal Bureau of Investigation \u2014 Diamond Bradley case listing",
-                            "https://www.fbi.gov/wanted/kidnap/diamond-yvette-bradley", True)]),
+                            "https://www.fbi.gov/wanted/kidnap/diamond-yvette-bradley", True),
+                        src("NamUs \u2014 Missing Person Case #MP2394 (Tionda Z. Bradley)",
+                            "https://namus.nij.ojp.gov/case/MP2394", True),
+                        src("NamUs \u2014 Missing Person Case #MP2419 (Diamond Yvette Bradley)",
+                            "https://namus.nij.ojp.gov/case/MP2419", True)]),
     dict(id="wharlest-jackson-sr", caseNumber="014", name="Wharlest Jackson Sr.",
          status="unsolved", caseType="homicide", year=1967, age=36, gender="male",
          city="Natchez", county="Adams", state="MS", caseSeries="Silver Dollar Group",
@@ -2343,7 +2347,9 @@ CASES = [
                             "https://www.solvethecase.org/case/2002-11/alexis-patterson", True),
                         src("WUWM (Milwaukee NPR) \u2014 \u201cMilwaukee Police Department is still looking for "
                             "Alexis Patterson, 20 years later\u201d",
-                            "https://www.wuwm.com/2022-05-03/milwaukee-police-department-is-still-looking-for-alexis-patterson-20-years-later", True)]),
+                            "https://www.wuwm.com/2022-05-03/milwaukee-police-department-is-still-looking-for-alexis-patterson-20-years-later", True),
+                        src("NamUs \u2014 Missing Person Case #MP3071",
+                            "https://namus.nij.ojp.gov/case/MP3071", True)]),
     dict(id="nacomie-freeman", caseNumber="089", name="Nacomie Freeman",
          status="unsolved", caseType="homicide", year=2004, age=24, gender="female",
          city="Phoenix", county="Maricopa County", state="AZ", caseSeries=None,
@@ -3868,7 +3874,9 @@ CASES = [
                         src("Metropolitan Police Department (DC), via Solve the Case \u2014 official case narrative",
                             "https://www.solvethecase.org/case/2014-2/relisha-tenau-rudd", True),
                         src("WTOP News \u2014 \u201cSearch continues for DC girl who went missing 10 years ago\u201d",
-                            "https://wtop.com/dc/2024/03/somebody-out-there-knows-something-search-continues-for-dc-girl-who-went-missing-10-years-ago/", True)]),
+                            "https://wtop.com/dc/2024/03/somebody-out-there-knows-something-search-continues-for-dc-girl-who-went-missing-10-years-ago/", True),
+                        src("NamUs \u2014 Missing Person Case #MP23937",
+                            "https://namus.nij.ojp.gov/case/MP23937", True)]),
     dict(id="asha-degree", caseNumber="122", name="Asha Degree",
          status="unsolved", caseType="missing_persons", year=2000, age=9, gender="female",
          city="Shelby", county="Cleveland", state="NC", caseSeries=None,
@@ -3918,7 +3926,9 @@ CASES = [
                         src("ABC11 Raleigh-Durham \u2014 \u201cSearch continues 25 years after girl vanished\u201d",
                             "https://abc11.com/post/asha-degree-nc-girl-disappears-missing-25-years-shelby-cleveland-co-fbi-sbi-search/15885590/", True),
                         src("CrimeOnline \u2014 \u201cWhere Is Asha Degree? Questions Loom Decades After Girl's Suspicious 2000 Disappearance\u201d",
-                            "https://www.crimeonline.com/2026/02/10/where-is-asha-degree-questions-loom-decades-after-girls-suspicious-2000-disappearance/", True)]),
+                            "https://www.crimeonline.com/2026/02/10/where-is-asha-degree-questions-loom-decades-after-girls-suspicious-2000-disappearance/", True),
+                        src("NamUs \u2014 Missing Person Case #MP2316",
+                            "https://namus.nij.ojp.gov/case/MP2316", True)]),
     dict(id="keeshae-jacobs", caseNumber="123", name="Keeshae Jacobs",
          status="unsolved", caseType="missing_persons", year=2016, age=21, gender="female",
          city="Richmond", county=None, state="VA", caseSeries=None,
@@ -3965,7 +3975,9 @@ CASES = [
                         src("WWBT NBC12 \u2014 \u201c\u2018I just want justice\u2019: Investigation continues into disappearance of Keeshae Jacobs\u201d",
                             "https://www.12onyourside.com/2023/09/26/i-just-want-justice-investigation-continues-into-disappearance-keeshae-jacobs/", True),
                         src("CBS News \u2014 \u201cThese families want help finding Keeshae Jacobs, Mary Johnson, Alicia Navarro and hundreds of other missing people\u201d",
-                            "https://www.cbsnews.com/news/gabby-petito-keeshae-jacobs-mary-johnson-alicia-navarro-missing-people/", True)]),
+                            "https://www.cbsnews.com/news/gabby-petito-keeshae-jacobs-mary-johnson-alicia-navarro-missing-people/", True),
+                        src("NamUs \u2014 Missing Person Case #MP35792",
+                            "https://namus.nij.ojp.gov/case/MP35792", True)]),
     dict(id="kierra-coles", caseNumber="124", name="Kierra Coles",
          status="unsolved", caseType="missing_persons", year=2018, age=26, gender="female",
          city="Chicago", county="Cook", state="IL", caseSeries=None,
@@ -4013,7 +4025,9 @@ CASES = [
                         src("ABC News \u2014 \u201cFoul play suspected in disappearance of pregnant postal worker Kierra Coles\u201d",
                             "https://abcnews.com/US/pregnant-postal-worker-missing-weeks-police-suspect-foul/story?id=58582518", True),
                         src("Chicago Sun-Times \u2014 \u201c$250,000 reward offered for information in 2018 disappearance of pregnant postal worker\u201d",
-                            "https://chicago.suntimes.com/news/2026/08/18/250-000-reward-offered-for-information-in-2018-disappearance-of-pregnant-postal-worker", True)]),
+                            "https://chicago.suntimes.com/news/2026/08/18/250-000-reward-offered-for-information-in-2018-disappearance-of-pregnant-postal-worker", True),
+                        src("NamUs \u2014 Missing Person Case #MP56098",
+                            "https://namus.nij.ojp.gov/case/MP56098", True)]),
     dict(id="nakyla-williams", caseNumber="125", name="Nakyla Williams",
          status="unsolved", caseType="missing_persons", year=2021, age=24, gender="female",
          city="Indianapolis", county=None, state="IN", caseSeries=None,
@@ -4108,7 +4122,11 @@ CASES = [
                         src("KPBS \u2014 \u201cJudge Dismisses Charge Against Tieray Jones In Murder Of 2-Year-Old Stepson\u201d",
                             "https://www.kpbs.org/news/public-safety/2018/03/21/judge-dismisses-murder-charge-against-tieray-jones", True),
                         src("ABC7 Los Angeles \u2014 \u201cJury deadlocks in murder trial of stepfather accused of killing 2-year-old Jahi Turner\u201d",
-                            "https://abc7.com/post/mistrial-declared-in-jahi-turner-murder-case/3225743/", True)]),
+                            "https://abc7.com/post/mistrial-declared-in-jahi-turner-murder-case/3225743/", True),
+                        src("City of San Diego Police Department \u2014 official cold case record",
+                            "https://www.sandiego.gov/police/news-center/cold-cases/jahi-turner", True),
+                        src("NamUs \u2014 Missing Person Case #MP6751",
+                            "https://namus.nij.ojp.gov/case/MP6751", True)]),
     dict(id="anwar-green", caseNumber="127", name="Anwar Green",
          status="unsolved", caseType="missing_persons", year=2001, age=None, gender="male",
          city="Newark", county="Essex", state="NJ", caseSeries=None,
@@ -10118,6 +10136,273 @@ CASES = [
                             "http://www.al.com/news/anniston-gadsden/index.ssf/2016/12/im_so_proud_of_my_city_right_n.html", True),
                         src("The Gadsden Times \u2014 \u201cProgress Through Recognition: Marker for Lynching Victim Dedicated\u201d",
                             "http://www.gadsdentimes.com/news/20161213/progress-through-recognition-marker-for-lynching-victim-dedicated", True)]),
+    dict(id="colfax-massacre", caseNumber="236", name="The Colfax Massacre",
+         status="unresolved", caseType="homicide", year=1873, age=None, gender="male",
+         city="Colfax", county="Grant Parish", state="LA", caseSeries=None,
+         dateAdded="2026-09-17",
+         summary="On Easter Sunday, April 13, 1873, a mob of armed white men, including former Confederate "
+                 "soldiers and Ku Klux Klan members, attacked the Grant Parish Courthouse in Colfax, "
+                 "Louisiana, where Black freedmen and state militia had gathered to defend the results of a "
+                 "disputed election. The mob, numbering as many as 150 to 300 and equipped with a small "
+                 "cannon, set the courthouse ablaze; most of the Black men inside were shot as they fled the "
+                 "flames or after they had already surrendered, and nearly 50 more were murdered later that "
+                 "night after being held as prisoners for hours. Estimates of the death toll vary "
+                 "significantly across sources, ranging from roughly 62 to as many as 150 or more Black men "
+                 "killed; only three of the white attackers died. Federal prosecutors indicted 97 people and "
+                 "brought nine to trial; a jury convicted three men under the Enforcement Act of 1870, but the "
+                 "U.S. Supreme Court unanimously overturned every conviction in United States v. Cruikshank "
+                 "(1876), ruling the federal government lacked power to prosecute private individuals for "
+                 "violating civil rights. No one was ever held accountable for what remains the deadliest "
+                 "single incident of racial violence during Reconstruction.",
+         known=["The disputed 1872 Louisiana gubernatorial election, the courthouse occupation, and the "
+                "massacre itself, per multiple academic histories including Charles Lane's \u201cThe Day "
+                "Freedom Died,\u201d the Equal Justice Initiative's documentation, and the U.S. Supreme Court "
+                "Historical Society's own case record.",
+                "Following Louisiana's contested 1872 election, which produced rival claims to the "
+                "governorship, Black freedmen and Republican state militia occupied the Grant Parish "
+                "Courthouse in Colfax to defend the results certifying a Republican victory.",
+                "A mob of white men, reported at anywhere from 150 to 300, surrounded the courthouse on April "
+                "13, 1873, brought a small cannon, and set the building on fire; men fleeing the flames were "
+                "shot, and most of those who surrendered were killed rather than taken prisoner.",
+                "Nearly 50 additional Black men who had been held as prisoners were murdered later that same "
+                "night, according to multiple historical accounts, including testimony later presented at "
+                "federal trial.",
+                "U.S. Attorney James Beckwith federally indicted 97 members of the mob; only nine ultimately "
+                "stood trial, facing charges under the Enforcement Act of 1870 (also called the Ku Klux Klan "
+                "Act) rather than murder charges, since federal prosecutors believed those charges offered the "
+                "clearest path to conviction.",
+                "After an initial mistrial, a jury convicted three defendants, including William J. "
+                "Cruikshank; the U.S. Supreme Court unanimously overturned all convictions in United States v. "
+                "Cruikshank (1876), ruling the Fourteenth Amendment restricted only state action, not the "
+                "conduct of private individuals, and that the federal indictments were therefore invalid.",
+                "The Cruikshank decision severely curtailed the federal government's ability to prosecute "
+                "racial violence for the remainder of Reconstruction and beyond, shifting responsibility to "
+                "state courts that routinely declined to prosecute such crimes, and is widely cited by "
+                "historians as a key legal foundation enabling the unchecked racial terrorism of the Jim Crow "
+                "era.",
+                "A Louisiana state historical marker erected in 1950 described the event as the \u201cColfax "
+                "Riot\u201d and stated it marked \u201cthe end of carpetbag misrule in the South,\u201d "
+                "language that remained in place until 2021; a separate monument in the Colfax cemetery "
+                "memorializes the three white attackers who died as \u201cheroes\u2026who fell fighting for "
+                "white supremacy.\u201d"],
+         unknown=["The precise number of Black men killed has never been conclusively established; estimates "
+                  "across contemporary and modern sources range from roughly 62 to over 150, and the "
+                  "overwhelming majority of victims were never individually identified or named in the "
+                  "surviving historical record.",
+                  "The full list of participants in the mob, despite 97 people being federally indicted, was "
+                  "never conclusively established at trial, and only nine individuals were ever actually "
+                  "prosecuted.",
+                  "Why the Supreme Court's reasoning in Cruikshank \u2014 that federal civil rights "
+                  "protections applied only to state action \u2014 was applied specifically to overturn "
+                  "convictions in a case involving organized private mob violence has been the subject of "
+                  "extensive legal-historical critique but was never revisited by the Supreme Court itself in "
+                  "a way that restored the original convictions."],
+         unanswered=["Why does the death toll remain so uncertain more than 150 years later, despite the "
+                     "massacre being investigated by federal authorities within days?",
+                     "Why did the U.S. Supreme Court's unanimous ruling in United States v. Cruikshank "
+                     "effectively end federal prosecution of racial terrorism for decades, and what would "
+                     "Reconstruction-era civil rights enforcement have looked like had the convictions stood?",
+                     "Why did an official Louisiana state historical marker describe this massacre in "
+                     "celebratory terms for 71 years, from 1950 until 2021?"],
+         extraSources=[src("BlackPast.org \u2014 \u201cThe Colfax Massacre (1873)\u201d",
+                            "https://blackpast.org/african-american-history/colfax-massacre-1873/", True),
+                        src("64 Parishes \u2014 \u201cColfax Massacre\u201d",
+                            "https://64parishes.org/entry/colfax-massacre-adaptation", True),
+                        src("Supreme Court Historical Society \u2014 \u201cUnited States v. Cruikshank\u201d",
+                            "https://civics.supremecourthistory.org/article/united-states-v-cruikshank/", True)]),
+    dict(id="frank-tyson", caseNumber="237", name="Frank Tyson",
+         status="unresolved", caseType="homicide", year=2024, age=53, gender="male",
+         city="Canton", county="Stark", state="OH", caseSeries=None,
+         dateAdded="2026-09-17",
+         summary="Frank Tyson, 53, died in the custody of Canton, Ohio police officers Camden Burch and Beau "
+                 "Schoenegge on April 18, 2024, after they restrained him face-down on the floor of a veterans "
+                 "hall he had entered following a car crash. Body camera video showed Tyson repeatedly telling "
+                 "officers \u201cThey're trying to kill me\u201d and, after being handcuffed with an officer's "
+                 "knee on his upper body, \u201cI can't breathe\u201d; an officer told him \u201cYou're fine. "
+                 "Shut the [expletive] up.\u201d Tyson was left motionless and unattended for roughly seven "
+                 "minutes before officers checked on him. The Stark County coroner ruled his death a homicide. "
+                 "A grand jury indicted both officers on felony reckless homicide charges in November 2024, "
+                 "making Tyson's case one of the rare instances to reach that point. Nearly two years later, "
+                 "on the day jury selection began for their trial, both officers instead pleaded guilty to "
+                 "unrelated misdemeanor charges \u2014 failure to report a crime and dereliction of duty \u2014 "
+                 "neither of which addresses causing Tyson's death, and the original reckless homicide charges "
+                 "were dropped. No one has ever been convicted of causing Tyson's death.",
+         known=["The vehicle crash, the encounter at the AMVETS post, and Tyson's death in custody, per body "
+                "camera footage released publicly and Stark County Prosecutor Kyle Stone's public statements.",
+                "Tyson had crashed his car into a utility pole and walked into a nearby veterans hall, where "
+                "someone called police; when officers arrived, Tyson became distressed and repeatedly said "
+                "\u201cThey're trying to kill me\u201d and \u201cCall the sheriff\u201d as they moved to "
+                "restrain him.",
+                "Body camera video showed officers taking Tyson to the floor face-down and handcuffing him "
+                "while one officer's knee was on his upper body; Tyson repeatedly said \u201cI can't "
+                "breathe,\u201d and an officer responded \u201cYou're fine. Shut the [expletive] up.\u201d",
+                "After Tyson was handcuffed, officers left him motionless and unattended on the floor for "
+                "roughly seven minutes before checking on him, administering Narcan, and beginning CPR.",
+                "The Stark County Coroner's Office ruled Tyson's death a homicide in August 2024, also citing "
+                "a heart condition and cocaine and alcohol intoxication as contributing factors.",
+                "A Stark County grand jury indicted both Burch and Schoenegge on one felony count each of "
+                "reckless homicide in November 2024, a rare instance of officers facing homicide charges for "
+                "an in-custody death.",
+                "The case was delayed roughly two years through multiple continuances and a change of "
+                "prosecutor and judge; on August 10, 2026, the day jury selection began for their trial, both "
+                "officers pleaded guilty instead to unrelated reduced misdemeanor charges \u2014 Burch to "
+                "failure to report a crime, and Schoenegge to dereliction of duty \u2014 carrying maximum "
+                "sentences of 30 and 90 days respectively, and both resigned from the department as part of "
+                "the deal.",
+                "Neither misdemeanor charge Burch or Schoenegge pleaded guilty to addresses causing Tyson's "
+                "death; the original reckless homicide charges, which did, were dismissed as part of the plea "
+                "agreement. Tyson's family separately filed a $13 million federal lawsuit against the city and "
+                "the officers."],
+         unknown=["Whether the restraint techniques used on Tyson, including the knee placed on his upper "
+                  "body while he repeatedly said he could not breathe, directly caused his death, or whether "
+                  "his underlying heart condition and intoxication were the primary cause, as the coroner's "
+                  "report characterized as contributing factors alongside the restraint itself, was never "
+                  "resolved by a jury, since the case ended in a plea agreement before trial testimony began.",
+                  "Why prosecutors agreed to drop felony reckless homicide charges entirely, rather than "
+                  "seeking any plea to a lesser charge that would have still addressed causing Tyson's death, "
+                  "has not been fully explained in available public reporting beyond the general dynamics of "
+                  "a negotiated plea on the eve of trial.",
+                  "The specific sentences ultimately imposed on Burch and Schoenegge, scheduled for a later "
+                  "sentencing hearing, were not confirmed in the sources reviewed for this summary."],
+         unanswered=["Why did a case that reached a rare felony indictment for officers ultimately resolve "
+                     "with guilty pleas to misdemeanors that don't address causing Tyson's death at all?",
+                     "Why did it take roughly two years and multiple case delays to reach a resolution that "
+                     "ultimately avoided any trial testimony on the central facts of what happened to Tyson?",
+                     "What specific consequences, beyond resignation and the misdemeanor sentences, will Burch "
+                     "and Schoenegge face, and will either ever work in law enforcement again?"],
+         extraSources=[src("CBS News \u2014 \u201c2 Ohio police officers involved in Frank Tyson's in-custody death charged with reckless homicide\u201d",
+                            "https://www.cbsnews.com/news/frank-tyson-death-ohio-police-officers-charged-with-reckless-homicide/", True),
+                        src("Ideastream Public Media \u2014 \u201cCanton police officers plead guilty to lesser charges in man's death\u201d",
+                            "https://www.ideastream.org/law-justice/2026-08-10/canton-police-officers-plead-guilty-to-lesser-charges-in-mans-death", True),
+                        src("Yahoo News / The Repository \u2014 \u201cFormer Canton police officers to be sentenced Sept. 24 in Frank Tyson death case\u201d",
+                            "https://www.yahoo.com/news/us/articles/former-canton-police-officers-sentenced-163401707.html", True)]),
+    dict(id="roshad-mcintosh", caseNumber="238", name="Roshad McIntosh",
+         status="unsolved", caseType="homicide", year=2014, age=19, gender="male",
+         city="Chicago", county="Cook", state="IL", caseSeries=None,
+         dateAdded="2026-09-17",
+         summary="Roshad McIntosh, 19, was shot and killed by Chicago Police Officer Robert Slechter on "
+                 "August 24, 2014, after being chased into the yard of a residence in the North Lawndale "
+                 "neighborhood. Police said McIntosh pointed a gun at Slechter, who fired three shots; a "
+                 "loaded pistol was recovered at the scene, though no usable fingerprints were ever identified "
+                 "on it. Witnesses told McIntosh's family he was actually kneeling on the ground with his "
+                 "hands raised, unarmed, when he was shot, and his family's attorneys have alleged the gun was "
+                 "planted after the fact. Chicago's Independent Police Review Authority cleared Slechter in "
+                 "2015; after the agency was replaced by the Civilian Office of Police Accountability, the "
+                 "case was reopened at the family's request and, after a two-year investigation, COPA again "
+                 "found the shooting justified. A separate officer at the scene was recommended for firing "
+                 "after his account was contradicted by surveillance footage, but he retired before the Police "
+                 "Board acted. The City of Chicago moved to settle the family's federal lawsuit for $2.25 "
+                 "million a decade after the shooting. No one has ever been charged in McIntosh's death.",
+         known=["The chase, the shooting, and the recovery of a firearm at the scene, per the Independent "
+                "Police Review Authority's original 2015 report and the Chicago Sun-Times's reporting on the "
+                "case's history.",
+                "Police confronted a group of people, including McIntosh, on West Polk Street after receiving "
+                "a tip about armed men; McIntosh ran, and Officer Robert Slechter pursued him into the yard of "
+                "a nearby two-flat before firing three shots.",
+                "A loaded pistol was found on the front porch of the house after the shooting, but "
+                "investigators were unable to identify any usable fingerprints on it, according to a 2017 "
+                "Chicago Tribune report.",
+                "Witnesses told McIntosh's family he had already surrendered, kneeling on the ground with his "
+                "hands raised and unarmed, when he was shot; his family's attorneys have alleged police "
+                "planted the recovered firearm after the fact.",
+                "The Independent Police Review Authority closed its investigation in October 2015, finding the "
+                "shooting justified or \u201cwithin policy,\u201d and the Cook County State's Attorney's Office "
+                "did not file criminal charges.",
+                "The case was reopened in 2017 at the family's request after IPRA was replaced by the Civilian "
+                "Office of Police Accountability; several officers at the scene had changed their initial "
+                "accounts after being shown surveillance video that contradicted their original statements.",
+                "COPA's renewed investigation again found Slechter's actions justified; the agency separately "
+                "recommended that another officer at the scene, Saharat Sampim, be fired for giving an initial "
+                "account contradicted by surveillance footage, but Sampim retired while that firing was still "
+                "pending before the Police Board.",
+                "A City Council committee considered a proposed $2.25 million settlement of the family's "
+                "federal lawsuit in March 2025, nearly eleven years after the shooting."],
+         unknown=["Whether McIntosh was in fact armed and pointed a weapon at Slechter, as police maintained, "
+                  "or was unarmed and already surrendering, as witnesses told his family, was disputed from "
+                  "the outset and was never resolved by any criminal trial since none was brought, and the "
+                  "absence of usable fingerprints on the recovered gun did not resolve the question either "
+                  "way.",
+                  "Whether the firearm recovered at the scene was placed there after the shooting, as the "
+                  "family's attorneys have alleged, was never independently confirmed or disproven through any "
+                  "public accounting reviewed for this summary.",
+                  "The full content of the surveillance footage that led multiple officers to change their "
+                  "initial accounts, and what it specifically showed about the shooting itself as opposed to "
+                  "officers' conduct afterward, has not been made comprehensively public."],
+         unanswered=["Why were no usable fingerprints found on a gun police said McIntosh pointed at an "
+                     "officer moments before being shot?",
+                     "Why did multiple officers at the scene change their initial statements only after being "
+                     "shown surveillance footage that contradicted them, and what did that footage actually "
+                     "show?",
+                     "Why was Officer Saharat Sampim able to retire and avoid the firing COPA had recommended, "
+                     "simply by leaving the department before the Police Board acted?"],
+         extraSources=[src("Chicago Sun-Times \u2014 \u201cFamily of teen killed in fatal foot chase could get $2.25 million from city to settle lawsuit\u201d",
+                            "https://chicago.suntimes.com/city-hall/2024/03/14/fatal-shooting-chicago-police-foot-chase-cpd-policy-roshad-mcintosh", True),
+                        src("CNN \u2014 \u201cHer son was killed by Chicago police. Five years later, a judge's ruling could bring her closer to getting answers\u201d",
+                            "https://www.cnn.com/2019/06/27/us/roshad-mcintosh-wrongful-death-lawsuit/index.html", True),
+                        src("People's Law Office \u2014 press release on the family's federal civil rights lawsuit",
+                            "https://peopleslawoffice.com/family-of-roshad-mcintosh-a-young-black-male-fatally-shot-by-chicago-police-officers-files-lawsuit-against-city-of-chicago/", True)]),
+    dict(id="kevin-peterson-jr", caseNumber="239", name="Kevin Peterson Jr.",
+         status="unsolved", caseType="homicide", year=2020, age=21, gender="male",
+         city="Vancouver", county="Clark", state="WA", caseSeries=None,
+         dateAdded="2026-09-17",
+         summary="Kevin Peterson Jr., 21, a new father, was shot 34 times and killed by three Clark County, "
+                 "Washington Sheriff's deputies on October 29, 2020, after he ran from a drug sting in a bank "
+                 "parking lot near Vancouver. Clark County's sheriff publicly stated the day after the "
+                 "shooting that Peterson had fired at deputies; an independent multi-agency investigation "
+                 "concluded roughly two weeks later that he never fired his weapon at all, though he had one "
+                 "on him. Surveillance video showed Peterson was shot from behind while running away. His body "
+                 "was left in the parking lot for roughly eleven hours before being removed. An independent "
+                 "prosecutor from a neighboring county found the shooting justified in August 2021, concluding "
+                 "Peterson had \u201cample opportunity\u201d to drop his gun and declining to charge any of the "
+                 "three deputies. The family's federal wrongful death lawsuit settled for $1.25 million in "
+                 "late 2024. No one has ever been charged in Peterson's death.",
+         known=["The drug sting, the foot pursuit, and the shooting, per the Southwest Washington "
+                "Independent Investigative Response Team's findings and Pierce County Prosecutor Mary "
+                "Robnett's public declination letter.",
+                "Deputies approached Peterson believing he was involved in selling prescription pills during "
+                "an undercover operation; he ran when deputies moved to arrest him.",
+                "Clark County Sheriff Chuck Atkins told reporters the day after the shooting that Peterson had "
+                "fired at deputies; an independent investigation released roughly two weeks later concluded "
+                "there was no evidence he had ever discharged his weapon, though a handgun was recovered near "
+                "his body.",
+                "Surveillance video released by investigators showed Peterson was shot from behind while "
+                "running away from deputies, not while facing them.",
+                "Witnesses and Peterson's family said his body remained in the U.S. Bank parking lot for "
+                "roughly eleven to twelve hours after the shooting before being removed.",
+                "Because Clark County prosecutors had a conflict of interest, the charging decision was "
+                "referred to Pierce County Prosecutor Mary Robnett, who concluded in August 2021 that the "
+                "deputies were legally justified, writing that Peterson had \u201cample opportunity\u201d to "
+                "drop the gun he was carrying and that officers were not required to let him fire first before "
+                "defending themselves.",
+                "Peterson's family, represented by civil rights attorney Ben Crump and the Herrmann Law Group, "
+                "filed a federal wrongful death lawsuit alleging Clark County had a \u201cpolicy, custom and "
+                "established practice\u201d of permitting deputies to use deadly force unlawfully; a federal "
+                "judge approved a $1.25 million settlement of that suit in December 2024, with part of the "
+                "funds set aside for Peterson's young daughter as a legal requirement given her status as a "
+                "minor beneficiary."],
+         unknown=["Whether Peterson's possession of a handgun, without evidence he ever fired or pointed it at "
+                  "deputies, justified 34 rounds fired by three officers as he ran away was the central "
+                  "dispute the family's civil case raised and was never tested at any criminal trial since "
+                  "none was brought.",
+                  "Why the sheriff's initial public statement that Peterson had fired at deputies was made "
+                  "before any investigation had concluded, and why it took roughly two weeks for that claim to "
+                  "be publicly corrected, has not been fully explained in available public reporting.",
+                  "The specific reasoning behind the roughly eleven-hour delay in removing Peterson's body from "
+                  "the scene has not been addressed in any official public accounting reviewed for this "
+                  "summary."],
+         unanswered=["Why did the Clark County Sheriff publicly state Peterson had fired at deputies before "
+                     "any investigation had been completed, when investigators later found no evidence he ever "
+                     "discharged his weapon?",
+                     "Why did three deputies fire a combined 34 rounds at a man shot from behind while running "
+                     "away, rather than pursuing him or using less-lethal options?",
+                     "Why was Peterson's body left in the parking lot for roughly eleven hours before it was "
+                     "removed?"],
+         extraSources=[src("OPB \u2014 \u201cProsecutors find fatal police shooting of Kevin Peterson Jr. justified\u201d",
+                            "https://www.opb.org/article/2021/08/16/prosecutors-rule-fatal-police-shooting-of-kevin-peterson-jr-justified/?outputType=amp", True),
+                        src("KATU \u2014 \u201cVIDEO: New details released in case of Black man shot, killed by Clark Co. deputies\u201d",
+                            "https://katu.com/news/local/investigators-release-more-details-on-moments-before-the-shooting-of-kevin-peterson-jr", True),
+                        src("FOX 13 Seattle \u2014 \u201cFederal judge approves $1.25M settlement in deputy killing of WA Black man\u201d",
+                            "https://www.fox13seattle.com/news/federal-judge-settlement-deputy-killing-wa-black-man", True)]),
 ]
 
 
@@ -10419,6 +10704,7 @@ def footer_html(depth):
     <span><a href="{r}privacy.html">Privacy Policy</a> \u00b7 <a href="{r}terms.html">Terms of Use</a> \u00b7 <a href="{r}disclaimer.html">Disclaimer</a></span>
     <span id="site-visit-counter" style="color:var(--text-dim); font-size:.8rem;">Site visits: <span id="site-visit-count">\u2026</span></span>
     <span id="site-visit-today-counter" style="color:var(--text-dim); font-size:.8rem;">Today: <span id="site-visit-today-count">\u2026</span></span>
+    <span id="site-live-counter" style="color:var(--text-dim); font-size:.8rem;" title="An estimate, not an exact real-time count &mdash; based on page loads in the last few minutes">\u25cf <span id="site-live-count">\u2026</span> active now</span>
   </div>
 </footer>'''
 
@@ -11476,6 +11762,23 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-09-17", case_id="kevin-peterson-jr",
+         text="New case added to the archive: Kevin Peterson Jr. (Vancouver, Washington, 2020), sourced "
+              "from OPB, KATU, and FOX 13 Seattle."),
+    dict(date="2026-09-17", case_id="roshad-mcintosh",
+         text="New case added to the archive: Roshad McIntosh (Chicago, Illinois, 2014), sourced from the "
+              "Chicago Sun-Times, CNN, and the People's Law Office's press release on the family's federal "
+              "lawsuit."),
+    dict(date="2026-09-17", case_id="frank-tyson",
+         text="New case added to the archive: Frank Tyson (Canton, Ohio, 2024), sourced from CBS News, "
+              "Ideastream Public Media, and Yahoo News/The Repository's coverage of the August 2026 plea "
+              "deals."),
+    dict(date="2026-09-17", case_id="colfax-massacre",
+         text="New case added to the archive: The Colfax Massacre (Colfax, Louisiana, 1873), the deadliest "
+              "single incident of racial violence during Reconstruction, whose resulting Supreme Court case "
+              "(United States v. Cruikshank) overturned real convictions and curtailed federal civil rights "
+              "enforcement for decades. Sourced from BlackPast.org, 64 Parishes, and the Supreme Court "
+              "Historical Society."),
     dict(date="2026-09-15", case_id="bunk-richardson",
          text="New case added to the archive: Bunk Richardson (Gadsden, Alabama, 1906), lynched despite "
               "never being charged with any crime. Sourced from the Equal Justice Initiative's own account, "
