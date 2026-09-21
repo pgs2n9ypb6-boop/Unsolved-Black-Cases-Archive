@@ -8,6 +8,44 @@
 (function () {
   "use strict";
 
+  // Shared focus trap for modal dialogs — keeps Tab/Shift+Tab cycling
+  // within the modal while it's open (rather than escaping to whatever's
+  // behind it, which is a core WCAG requirement for dialog widgets), and
+  // returns focus to whatever triggered the modal when it closes, so a
+  // keyboard user lands back where they were instead of at the top of the
+  // page. Exposed globally so any modal built in any file (not just this
+  // one) can use the same behavior instead of a slightly different
+  // reimplementation per feature.
+  function trapFocus(container, triggerEl) {
+    var focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    function getFocusable() {
+      return Array.prototype.filter.call(container.querySelectorAll(focusableSelector), function (el) {
+        return el.offsetParent !== null; // skip hidden elements
+      });
+    }
+    function handleKeydown(e) {
+      if (e.key !== "Tab") return;
+      var focusable = getFocusable();
+      if (!focusable.length) return;
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first || !container.contains(document.activeElement)) {
+          e.preventDefault(); last.focus();
+        }
+      } else {
+        if (document.activeElement === last || !container.contains(document.activeElement)) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    }
+    container.addEventListener("keydown", handleKeydown);
+    return function release() {
+      container.removeEventListener("keydown", handleKeydown);
+      if (triggerEl && typeof triggerEl.focus === "function") triggerEl.focus();
+    };
+  }
+  window.UBCA_TRAP_FOCUS = trapFocus;
+
   var DATA_URL = (document.body.getAttribute("data-root") || "") + "data/cases.json";
   var casesCache = null;
 
@@ -201,19 +239,22 @@
   var searchInput = document.getElementById("global-search-input");
   var searchResults = document.querySelector(".search-results");
   var rootPrefix = document.body.getAttribute("data-root") || "";
+  var releaseSearchFocusTrap = null;
 
-  function openSearch() {
+  function openSearch(triggerEl) {
     if (!searchOverlay) return;
     searchOverlay.classList.add("open");
     if (searchInput) { searchInput.value = ""; searchInput.focus(); }
     renderSearchResults("");
+    releaseSearchFocusTrap = trapFocus(searchOverlay, triggerEl || document.activeElement);
   }
   function closeSearch() {
     if (!searchOverlay) return;
     searchOverlay.classList.remove("open");
+    if (releaseSearchFocusTrap) { releaseSearchFocusTrap(); releaseSearchFocusTrap = null; }
   }
   document.querySelectorAll("[data-search-open]").forEach(function (btn) {
-    btn.addEventListener("click", openSearch);
+    btn.addEventListener("click", function () { openSearch(btn); });
   });
   if (searchOverlay) {
     searchOverlay.addEventListener("click", function (e) {

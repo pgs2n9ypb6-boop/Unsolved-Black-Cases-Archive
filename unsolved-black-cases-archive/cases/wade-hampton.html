@@ -857,6 +857,7 @@
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
+  <main id="main" style="display:contents">
   <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
@@ -879,6 +880,7 @@
     <button type="button" class="case-records-btn" data-records-request-btn="wade-hampton">📋 Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="wade-hampton">⚖ Add to Compare</button>
     <button type="button" class="case-packet-btn" data-packet-export-btn="wade-hampton">📦 Export Research Packet</button>
+    <button type="button" class="case-share-btn" data-share-btn="wade-hampton">📤 Share This Case</button>
   </nav>
     <div class="board-viewport">
       <div class="board-canvas" data-board-canvas="wade-hampton">
@@ -886,7 +888,7 @@
         <div class="board-card hub">
   <span class="bc-label">Victim</span>
   <h3 class="bc-title">Wade Hampton</h3>
-  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" src="https://www.wyohistory.org/sites/default/files/styles/medium/public/hampton2.jpg" alt="Photo of Wade Hampton"><span class="avatar-credit">Montana State Prison intake photo, 1916–1917, via the Montana Memory Project (as reproduced by WyoHistory.org) — public domain by age</span></div></div><p class="bc-body">1917 · Age 50 · Rock Springs, WY</p>
+  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" loading="lazy" src="https://www.wyohistory.org/sites/default/files/styles/medium/public/hampton2.jpg" alt="Photo of Wade Hampton"><span class="avatar-credit">Montana State Prison intake photo, 1916–1917, via the Montana Memory Project (as reproduced by WyoHistory.org) — public domain by age</span></div></div><p class="bc-body">1917 · Age 50 · Rock Springs, WY</p>
 </div>
 <div class="board-card">
   <span class="bc-label">Last Known Information</span>
@@ -985,6 +987,7 @@
     </div>
   </details>
 </section>
+  </main>
 </div>
 
 <section class="continue-research">
@@ -996,6 +999,7 @@
       <button type="button" class="case-records-btn" data-records-request-btn="wade-hampton">📋 Request Public Records</button>
       <button type="button" class="case-compare-btn" data-compare-btn="wade-hampton">⚖ Add to Compare</button>
       <button type="button" class="case-packet-btn" data-packet-export-btn="wade-hampton">📦 Export Research Packet</button>
+      <button type="button" class="case-share-btn" data-share-btn="wade-hampton">📤 Share This Case</button>
     </div>
     <div class="continue-research-links">
       <a href="#research-checklist-panel">↑ Start your research checklist for this case</a>
@@ -1004,7 +1008,8 @@
     </div>
   </div>
 </section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wade Hampton — Case #046", "description": "Unsolved case: Wade Hampton, 1917, Rock Springs, WY.", "datePublished": "2026-08-21", "dateModified": "2026-08-21", "url": "https://www.unsolvedblackcases.com/cases/wade-hampton.html", "image": "https://www.unsolvedblackcases.com/og/cases/wade-hampton.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.unsolvedblackcases.com/cases/wade-hampton.html"}, "author": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "publisher": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "about": {"@type": "Person", "name": "Wade Hampton", "deathDate": "1917", "deathPlace": {"@type": "Place", "name": "Rock Springs, WY"}}}</script>
+<div id="share-fallback-menu" class="stat-popup share-fallback-menu" hidden></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wade Hampton — Case #046","description":"Unsolved case: Wade Hampton, 1917, Rock Springs, WY.","datePublished":"2026-08-21","dateModified":"2026-08-21","url":"https://www.unsolvedblackcases.com/cases/wade-hampton.html","image":"https://www.unsolvedblackcases.com/og/cases/wade-hampton.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.unsolvedblackcases.com/cases/wade-hampton.html"},"author":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"publisher":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"about":{"@type":"Person","name":"Wade Hampton","deathDate":"1917","deathPlace":{"@type":"Place","name":"Rock Springs, WY"}}}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">← Return to Case Board</a></p>
 <footer class="site-footer">
   <div class="footer-top">
@@ -1083,6 +1088,7 @@
 <script src="../js/research-checklist.js"></script>
 <script src="../js/case-map.js"></script>
 <script src="../js/research-packet.js"></script>
+<script src="../js/share-case.js"></script>
 <script src="../js/submit-form.js"></script>
 </body>
 </html>

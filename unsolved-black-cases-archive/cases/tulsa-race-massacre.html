@@ -857,6 +857,7 @@
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
+  <main id="main" style="display:contents">
   <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
@@ -879,6 +880,7 @@
     <button type="button" class="case-records-btn" data-records-request-btn="tulsa-race-massacre">📋 Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="tulsa-race-massacre">⚖ Add to Compare</button>
     <button type="button" class="case-packet-btn" data-packet-export-btn="tulsa-race-massacre">📦 Export Research Packet</button>
+    <button type="button" class="case-share-btn" data-share-btn="tulsa-race-massacre">📤 Share This Case</button>
   </nav>
     <div class="board-viewport">
       <div class="board-canvas" data-board-canvas="tulsa-race-massacre">
@@ -886,7 +888,7 @@
         <div class="board-card hub">
   <span class="bc-label">Victim</span>
   <h3 class="bc-title">Tulsa Race Massacre</h3>
-  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" src="https://tile.loc.gov/storage-services/service/pnp/anrc/14700/14738v.jpg" alt="Photo of Ruins after the Tulsa Race Massacre, June 1921"><span class="avatar-credit">American National Red Cross Photograph Collection, Library of Congress — no known restrictions on publication</span></div></div><p class="bc-body">1921 · Tulsa, OK</p>
+  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" loading="lazy" src="https://tile.loc.gov/storage-services/service/pnp/anrc/14700/14738v.jpg" alt="Photo of Ruins after the Tulsa Race Massacre, June 1921"><span class="avatar-credit">American National Red Cross Photograph Collection, Library of Congress — no known restrictions on publication</span></div></div><p class="bc-body">1921 · Tulsa, OK</p>
 </div>
 <div class="board-card">
   <span class="bc-label">Last Known Information</span>
@@ -991,6 +993,7 @@
     </div>
   </details>
 </section>
+  </main>
 </div>
 <section class="panel-questions" style="border-top:1px solid var(--border);">
   <div class="pq-head">More Cases From OK</div>
@@ -1006,6 +1009,7 @@
       <button type="button" class="case-records-btn" data-records-request-btn="tulsa-race-massacre">📋 Request Public Records</button>
       <button type="button" class="case-compare-btn" data-compare-btn="tulsa-race-massacre">⚖ Add to Compare</button>
       <button type="button" class="case-packet-btn" data-packet-export-btn="tulsa-race-massacre">📦 Export Research Packet</button>
+      <button type="button" class="case-share-btn" data-share-btn="tulsa-race-massacre">📤 Share This Case</button>
     </div>
     <div class="continue-research-links">
       <a href="#research-checklist-panel">↑ Start your research checklist for this case</a>
@@ -1014,7 +1018,8 @@
     </div>
   </div>
 </section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tulsa Race Massacre — Case #047", "description": "Unsolved case: Tulsa Race Massacre, 1921, Tulsa, OK.", "datePublished": "2026-08-21", "dateModified": "2026-08-21", "url": "https://www.unsolvedblackcases.com/cases/tulsa-race-massacre.html", "image": "https://www.unsolvedblackcases.com/og/cases/tulsa-race-massacre.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.unsolvedblackcases.com/cases/tulsa-race-massacre.html"}, "author": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "publisher": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "about": {"@type": "Person", "name": "Tulsa Race Massacre", "deathDate": "1921", "deathPlace": {"@type": "Place", "name": "Tulsa, OK"}}}</script>
+<div id="share-fallback-menu" class="stat-popup share-fallback-menu" hidden></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Tulsa Race Massacre — Case #047","description":"Unsolved case: Tulsa Race Massacre, 1921, Tulsa, OK.","datePublished":"2026-08-21","dateModified":"2026-08-21","url":"https://www.unsolvedblackcases.com/cases/tulsa-race-massacre.html","image":"https://www.unsolvedblackcases.com/og/cases/tulsa-race-massacre.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.unsolvedblackcases.com/cases/tulsa-race-massacre.html"},"author":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"publisher":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"about":{"@type":"Person","name":"Tulsa Race Massacre","deathDate":"1921","deathPlace":{"@type":"Place","name":"Tulsa, OK"}}}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">← Return to Case Board</a></p>
 <footer class="site-footer">
   <div class="footer-top">
@@ -1093,6 +1098,7 @@
 <script src="../js/research-checklist.js"></script>
 <script src="../js/case-map.js"></script>
 <script src="../js/research-packet.js"></script>
+<script src="../js/share-case.js"></script>
 <script src="../js/submit-form.js"></script>
 </body>
 </html>

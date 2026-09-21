@@ -857,6 +857,7 @@
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
+  <main id="main" style="display:contents">
   <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
@@ -879,6 +880,7 @@
     <button type="button" class="case-records-btn" data-records-request-btn="will-brown">📋 Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="will-brown">⚖ Add to Compare</button>
     <button type="button" class="case-packet-btn" data-packet-export-btn="will-brown">📦 Export Research Packet</button>
+    <button type="button" class="case-share-btn" data-share-btn="will-brown">📤 Share This Case</button>
   </nav>
     <div class="board-viewport">
       <div class="board-canvas" data-board-canvas="will-brown">
@@ -886,7 +888,7 @@
         <div class="board-card hub">
   <span class="bc-label">Victim</span>
   <h3 class="bc-title">Will Brown</h3>
-  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" src="https://www.zinnedproject.org/wp-content/uploads/2019/02/1919-lynching-victim-William-Brown-201x300.jpg" alt="Photo of Will Brown"><span class="avatar-credit">Omaha World-Herald, 1919 — public domain by age; via Nebraska State Historical Society / NebraskaStudies.org</span></div></div><p class="bc-body">1919 · Age 40 · Omaha, NE</p>
+  <div class="avatar-wrap avatar-multi"><div class="avatar-photo-item"><img class="avatar-photo sm" loading="lazy" src="https://www.zinnedproject.org/wp-content/uploads/2019/02/1919-lynching-victim-William-Brown-201x300.jpg" alt="Photo of Will Brown"><span class="avatar-credit">Omaha World-Herald, 1919 — public domain by age; via Nebraska State Historical Society / NebraskaStudies.org</span></div></div><p class="bc-body">1919 · Age 40 · Omaha, NE</p>
 </div>
 <div class="board-card">
   <span class="bc-label">Last Known Information</span>
@@ -991,6 +993,7 @@
     </div>
   </details>
 </section>
+  </main>
 </div>
 
 <section class="continue-research">
@@ -1002,6 +1005,7 @@
       <button type="button" class="case-records-btn" data-records-request-btn="will-brown">📋 Request Public Records</button>
       <button type="button" class="case-compare-btn" data-compare-btn="will-brown">⚖ Add to Compare</button>
       <button type="button" class="case-packet-btn" data-packet-export-btn="will-brown">📦 Export Research Packet</button>
+      <button type="button" class="case-share-btn" data-share-btn="will-brown">📤 Share This Case</button>
     </div>
     <div class="continue-research-links">
       <a href="#research-checklist-panel">↑ Start your research checklist for this case</a>
@@ -1010,7 +1014,8 @@
     </div>
   </div>
 </section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Will Brown — Case #044", "description": "Unsolved case: Will Brown, 1919, Omaha, NE.", "datePublished": "2026-08-21", "dateModified": "2026-08-21", "url": "https://www.unsolvedblackcases.com/cases/will-brown.html", "image": "https://www.unsolvedblackcases.com/og/cases/will-brown.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.unsolvedblackcases.com/cases/will-brown.html"}, "author": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "publisher": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "about": {"@type": "Person", "name": "Will Brown", "deathDate": "1919", "deathPlace": {"@type": "Place", "name": "Omaha, NE"}}}</script>
+<div id="share-fallback-menu" class="stat-popup share-fallback-menu" hidden></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Will Brown — Case #044","description":"Unsolved case: Will Brown, 1919, Omaha, NE.","datePublished":"2026-08-21","dateModified":"2026-08-21","url":"https://www.unsolvedblackcases.com/cases/will-brown.html","image":"https://www.unsolvedblackcases.com/og/cases/will-brown.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.unsolvedblackcases.com/cases/will-brown.html"},"author":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"publisher":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"about":{"@type":"Person","name":"Will Brown","deathDate":"1919","deathPlace":{"@type":"Place","name":"Omaha, NE"}}}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">← Return to Case Board</a></p>
 <footer class="site-footer">
   <div class="footer-top">
@@ -1089,6 +1094,7 @@
 <script src="../js/research-checklist.js"></script>
 <script src="../js/case-map.js"></script>
 <script src="../js/research-packet.js"></script>
+<script src="../js/share-case.js"></script>
 <script src="../js/submit-form.js"></script>
 </body>
 </html>

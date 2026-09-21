@@ -10876,7 +10876,7 @@ def latest_case():
 # guarantees they work whether the site is opened directly or served over
 # HTTP. /data/cases.json is still written as a portable copy of the same
 # data for anyone who wants to consume it separately (e.g. a future backend).
-CASES_JSON = json.dumps(CASES)
+CASES_JSON = json.dumps(CASES, separators=(",", ":"))
 
 # ---------------------------------------------------------------------------
 # Case Connections — direct, documented relationships between specific cases
@@ -10918,7 +10918,7 @@ CONNECTIONS_JSON = json.dumps({
     "links": CASE_CONNECTIONS,
     "series": case_series_groups(),
     "seriesSlugs": SERIES_SLUGS,
-})
+}, separators=(",", ":"))
 
 STATUS_LABEL = {"unsolved": "Unsolved", "unresolved": "Unresolved \u2014 No Conviction", "cold": "Cold Case", "missing_persons": "Missing Persons"}
 CASE_TYPE_LABEL = {"homicide": "Homicide", "missing_persons": "Missing Persons", None: None}
@@ -10994,7 +10994,7 @@ def avatar_block(c, size_class="lg"):
     photos = c.get("victimPhotos") or ([{"url": c["victimPhoto"]}] if c.get("victimPhoto") else [])
     if photos:
         imgs = "".join(
-            f'<div class="avatar-photo-item"><img class="avatar-photo {size_class}" '
+            f'<div class="avatar-photo-item"><img class="avatar-photo {size_class}" loading="lazy" '
             f'src="{html.escape(p["url"])}" alt="Photo of {html.escape(p.get("caption") or c["name"])}">'
             + (f'<span class="avatar-credit">{html.escape(p["credit"])}</span>' if p.get("credit") else "")
             + '</div>'
@@ -11236,6 +11236,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <script src="{r}js/research-checklist.js"></script>
 <script src="{r}js/case-map.js"></script>
 <script src="{r}js/research-packet.js"></script>
+<script src="{r}js/share-case.js"></script>
 <script src="{r}js/submit-form.js"></script>
 </body>
 </html>'''
@@ -11452,7 +11453,7 @@ def case_structured_data(c):
         "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL},
         "about": about,
     }
-    return json.dumps(data, ensure_ascii=False)
+    return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
 def build_case_page(c):
     depth = 1
@@ -11492,10 +11493,12 @@ def build_case_page(c):
     <button type="button" class="case-records-btn" data-records-request-btn="{c['id']}">\U0001F4CB Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="{c['id']}">\u2696 Add to Compare</button>
     <button type="button" class="case-packet-btn" data-packet-export-btn="{c['id']}">\U0001F4E6 Export Research Packet</button>
+    <button type="button" class="case-share-btn" data-share-btn="{c['id']}">\U0001F4E4 Share This Case</button>
   </nav>'''
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth, active_id=c["id"])}
+  <main id="main" style="display:contents">
   <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
@@ -11515,6 +11518,7 @@ def build_case_page(c):
   {profile_panel(c)}
   {sources_panel(c)}
   {questions_panel(c)}
+  </main>
 </div>
 {related_html}
 <section class="continue-research">
@@ -11526,6 +11530,7 @@ def build_case_page(c):
       <button type="button" class="case-records-btn" data-records-request-btn="{c['id']}">\U0001F4CB Request Public Records</button>
       <button type="button" class="case-compare-btn" data-compare-btn="{c['id']}">\u2696 Add to Compare</button>
       <button type="button" class="case-packet-btn" data-packet-export-btn="{c['id']}">\U0001F4E6 Export Research Packet</button>
+      <button type="button" class="case-share-btn" data-share-btn="{c['id']}">\U0001F4E4 Share This Case</button>
     </div>
     <div class="continue-research-links">
       <a href="#research-checklist-panel">\u2191 Start your research checklist for this case</a>
@@ -11534,6 +11539,7 @@ def build_case_page(c):
     </div>
   </div>
 </section>
+<div id="share-fallback-menu" class="stat-popup share-fallback-menu" hidden></div>
 <script type="application/ld+json">{case_structured_data(c)}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">\u2190 Return to Case Board</a></p>
 {footer_html(depth)}'''
@@ -11550,6 +11556,7 @@ def build_freeway_phantom():
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth)}
+  <main id="main" style="display:contents">
   <section class="panel-board area-board">
     <div class="board-head">
       <div>
@@ -11593,6 +11600,7 @@ def build_freeway_phantom():
       </div>
     </details>
   </section>
+  </main>
 </div>
 {footer_html(depth)}'''
     write("cases/freeway-phantom.html", page_shell("The Freeway Phantom", "Series page for the six Freeway Phantom cases, Washington D.C., 1971-1972.", depth, body,
@@ -11607,6 +11615,7 @@ def build_silver_dollar_group():
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth)}
+  <main id="main" style="display:contents">
   <section class="panel-board area-board">
     <div class="board-head">
       <div>
@@ -11656,6 +11665,7 @@ def build_silver_dollar_group():
       </div>
     </details>
   </section>
+  </main>
 </div>
 {footer_html(depth)}'''
     write("cases/silver-dollar-group.html", page_shell("The Silver Dollar Group", "Series page linking three cases in this archive to a Klan cell active in Concordia Parish, Louisiana and Adams County, Mississippi, 1964-1967.", depth, body,
@@ -11674,6 +11684,7 @@ def build_case_index():
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth)}
+  <main id="main" style="display:contents">
   <section class="panel-board area-board span-right">
     <div class="board-head">
       <div><span class="board-file-no">ARCHIVE</span><h1>Case Index</h1></div>
@@ -11690,6 +11701,7 @@ def build_case_index():
     <div class="view-panel" id="view-map"></div>
     <div class="view-panel" id="view-connections"></div>
   </section>
+  </main>
 </div>
 {footer_html(depth)}'''
     write("cases/index.html", page_shell("Case Index", "Search, browse by timeline, or view cases geographically.", depth, body,
@@ -11776,6 +11788,7 @@ def build_home():
     body = f'''{top_header(depth)}
 <div class="app-shell">
   {left_panel(depth)}
+  <main id="main" style="display:contents">
   <section class="panel-board area-board">
     <div class="board-head">
       <div><span class="board-file-no">DASHBOARD</span><h1>Archive Overview</h1></div>
@@ -11818,6 +11831,7 @@ def build_home():
       </div>
     </details>
   </section>
+  </main>
 </div>
 <section class="homepage-research">
   <div class="homepage-research-inner">
@@ -13336,7 +13350,7 @@ if __name__ == "__main__":
     # entry (covering five launch-batch cases at once) is left out since it
     # doesn't map to a single case.
     corrections_for_js = [{"date": c["date"], "caseId": c["case_id"], "text": c["text"]} for c in CORRECTIONS if c.get("case_id")]
-    write("js/corrections-data.js", "window.__UBCA_CORRECTIONS__ = " + json.dumps(corrections_for_js) + ";")
+    write("js/corrections-data.js", "window.__UBCA_CORRECTIONS__ = " + json.dumps(corrections_for_js, separators=(",", ":")) + ";")
     if ADSENSE_ENABLED:
         # AdSense requires ads.txt at the site root once you have a real
         # Publisher ID (Settings -> Account information in AdSense), in the

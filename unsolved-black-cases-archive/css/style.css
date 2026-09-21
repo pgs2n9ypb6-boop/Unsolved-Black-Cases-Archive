@@ -326,7 +326,7 @@ p:last-child{ margin-bottom:0; }
   width:100%; min-height:70px; background:none; border:none; resize:vertical;
   color:var(--text); font-family:var(--sans); font-size:.8rem; padding:0; cursor:text;
 }
-.board-card.user-card textarea:focus{ outline:none; }
+.board-card.user-card textarea:focus{ outline:2px solid var(--cyan); outline-offset:2px; }
 .user-card-remove{
   position:absolute; top:8px; right:8px; width:18px; height:18px; line-height:16px; text-align:center;
   background:none; border:1px solid var(--border-strong); border-radius:50%; color:var(--text-faint);
@@ -646,6 +646,7 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
 .conn-node-series circle{ fill:rgba(185,138,61,0.15); stroke:var(--amber); }
 .conn-node:hover circle, .conn-node:focus circle{ fill:var(--crimson-bright); stroke:var(--crimson-bright); }
 .conn-node-series:hover circle, .conn-node-series:focus circle{ fill:var(--amber); stroke:var(--amber); }
+.conn-node:focus circle, .conn-node-series:focus circle{ stroke-width:3.5; }
 .conn-node text{
   font-family:var(--sans); font-size:9px; fill:var(--text-dim); pointer-events:none;
 }
@@ -696,7 +697,7 @@ details.pq-details summary::-webkit-details-marker{ display:none; }
   width:100%; background:transparent; border:0; border-bottom:1px solid var(--border);
   color:var(--text); font-size:1.05rem; padding:18px 20px; font-family:var(--sans);
 }
-.search-modal input:focus{ outline:none; }
+.search-modal input:focus{ outline:2px solid var(--cyan); outline-offset:-2px; }
 .search-results{ max-height:50vh; overflow-y:auto; padding:8px; }
 .search-results .sr-empty{ padding:20px; color:var(--text-faint); font-family:var(--mono); font-size:.75rem; }
 .sr-item{ display:block; padding:11px 12px; border-radius:2px; }
@@ -799,6 +800,18 @@ code{ font-family:var(--mono); font-size:.9em; background:var(--panel-2); paddin
   padding:7px 10px; border-radius:2px; cursor:pointer;
 }
 .case-packet-btn:hover{ border-color:var(--cyan); color:var(--text); }
+
+.case-share-btn{
+  background:var(--panel-2); border:1px solid var(--border-strong); color:var(--text-dim);
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase;
+  padding:7px 10px; border-radius:2px; cursor:pointer; position:relative;
+}
+.case-share-btn:hover{ border-color:var(--amber); color:var(--text); }
+.share-fallback-menu{
+  position:fixed; bottom:20px; right:20px; left:auto; top:auto; width:220px; z-index:500;
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+}
+@media (max-width:640px){ .share-fallback-menu{ right:12px; left:12px; width:auto; } }
 
 /* Citation export row (Researcher's Dashboard, Saved Sources section) */
 .dash-export-row{ display:flex; align-items:center; gap:10px; margin:0 0 12px; }
@@ -911,7 +924,7 @@ code{ font-family:var(--mono); font-size:.9em; background:var(--panel-2); paddin
   width:100%; background:none; border:none; color:var(--text); font-family:var(--sans); font-size:.82rem;
   padding:0; resize:vertical; display:block;
 }
-.research-note-box textarea:focus{ outline:none; }
+.research-note-box textarea:focus{ outline:2px solid var(--cyan); outline-offset:2px; }
 .research-note-footer{ display:flex; align-items:center; justify-content:space-between; margin-top:6px; }
 .research-note-date{ font-family:var(--mono); font-size:.64rem; color:var(--text-faint); }
 .research-note-remove{

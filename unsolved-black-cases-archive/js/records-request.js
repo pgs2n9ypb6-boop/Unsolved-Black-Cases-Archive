@@ -220,25 +220,28 @@
       });
     });
     caseSelect.addEventListener("change", regenerate);
+    var releaseRecordsFocusTrap = null;
 
-    function openFor(caseId, lockCase) {
+    function openFor(caseId, lockCase, triggerEl) {
       if (caseId && byId[caseId]) caseSelect.value = caseId;
       caseField.hidden = !!lockCase;
       regenerate();
       overlay.classList.add("open");
       if (!nameInput.value) nameInput.focus();
+      if (window.UBCA_TRAP_FOCUS) releaseRecordsFocusTrap = window.UBCA_TRAP_FOCUS(overlay.querySelector(".records-modal") || overlay, triggerEl || document.activeElement);
     }
     function close() {
       overlay.classList.remove("open");
+      if (releaseRecordsFocusTrap) { releaseRecordsFocusTrap(); releaseRecordsFocusTrap = null; }
     }
 
     document.querySelectorAll("[data-records-request-btn]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        openFor(btn.getAttribute("data-records-request-btn"), true);
+        openFor(btn.getAttribute("data-records-request-btn"), true, btn);
       });
     });
     document.querySelectorAll("[data-records-open-standalone]").forEach(function (btn) {
-      btn.addEventListener("click", function () { openFor(caseSelect.value || (sortedCases[0] && sortedCases[0].id), false); });
+      btn.addEventListener("click", function () { openFor(caseSelect.value || (sortedCases[0] && sortedCases[0].id), false, btn); });
     });
     overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
     document.querySelectorAll("[data-records-close]").forEach(function (btn) { btn.addEventListener("click", close); });

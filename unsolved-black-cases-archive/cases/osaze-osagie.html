@@ -857,6 +857,7 @@
   <p class="no-results" style="display:none; padding:0 16px 16px; font-size:.8rem;">No matching cases.</p>
 </aside>
 <div class="panel-scrim"></div>
+  <main id="main" style="display:contents">
   <section class="panel-board area-board" id="case-board">
     <div class="board-head">
       <div>
@@ -879,6 +880,7 @@
     <button type="button" class="case-records-btn" data-records-request-btn="osaze-osagie">📋 Request Public Records</button>
     <button type="button" class="case-compare-btn" data-compare-btn="osaze-osagie">⚖ Add to Compare</button>
     <button type="button" class="case-packet-btn" data-packet-export-btn="osaze-osagie">📦 Export Research Packet</button>
+    <button type="button" class="case-share-btn" data-share-btn="osaze-osagie">📤 Share This Case</button>
   </nav>
     <div class="board-viewport">
       <div class="board-canvas" data-board-canvas="osaze-osagie">
@@ -997,6 +999,7 @@
     </div>
   </details>
 </section>
+  </main>
 </div>
 <section class="panel-questions" style="border-top:1px solid var(--border);">
   <div class="pq-head">More Cases From PA</div>
@@ -1014,6 +1017,7 @@
       <button type="button" class="case-records-btn" data-records-request-btn="osaze-osagie">📋 Request Public Records</button>
       <button type="button" class="case-compare-btn" data-compare-btn="osaze-osagie">⚖ Add to Compare</button>
       <button type="button" class="case-packet-btn" data-packet-export-btn="osaze-osagie">📦 Export Research Packet</button>
+      <button type="button" class="case-share-btn" data-share-btn="osaze-osagie">📤 Share This Case</button>
     </div>
     <div class="continue-research-links">
       <a href="#research-checklist-panel">↑ Start your research checklist for this case</a>
@@ -1022,7 +1026,8 @@
     </div>
   </div>
 </section>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Osaze Osagie — Case #169", "description": "Unsolved case: Osaze Osagie, 2019, State College, PA.", "datePublished": "2026-09-08", "dateModified": "2026-09-08", "url": "https://www.unsolvedblackcases.com/cases/osaze-osagie.html", "image": "https://www.unsolvedblackcases.com/og/cases/osaze-osagie.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.unsolvedblackcases.com/cases/osaze-osagie.html"}, "author": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "publisher": {"@type": "Organization", "name": "UNSOLVED BLACK CASES ARCHIVE", "url": "https://www.unsolvedblackcases.com"}, "about": {"@type": "Person", "name": "Osaze Osagie", "deathDate": "2019", "deathPlace": {"@type": "Place", "name": "State College, PA"}}}</script>
+<div id="share-fallback-menu" class="stat-popup share-fallback-menu" hidden></div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Osaze Osagie — Case #169","description":"Unsolved case: Osaze Osagie, 2019, State College, PA.","datePublished":"2026-09-08","dateModified":"2026-09-08","url":"https://www.unsolvedblackcases.com/cases/osaze-osagie.html","image":"https://www.unsolvedblackcases.com/og/cases/osaze-osagie.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.unsolvedblackcases.com/cases/osaze-osagie.html"},"author":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"publisher":{"@type":"Organization","name":"UNSOLVED BLACK CASES ARCHIVE","url":"https://www.unsolvedblackcases.com"},"about":{"@type":"Person","name":"Osaze Osagie","deathDate":"2019","deathPlace":{"@type":"Place","name":"State College, PA"}}}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">← Return to Case Board</a></p>
 <footer class="site-footer">
   <div class="footer-top">
@@ -1101,6 +1106,7 @@
 <script src="../js/research-checklist.js"></script>
 <script src="../js/case-map.js"></script>
 <script src="../js/research-packet.js"></script>
+<script src="../js/share-case.js"></script>
 <script src="../js/submit-form.js"></script>
 </body>
 </html>

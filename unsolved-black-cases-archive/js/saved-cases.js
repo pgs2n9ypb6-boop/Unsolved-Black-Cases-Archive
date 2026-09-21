@@ -451,6 +451,15 @@
           popup.hidden = false;
         });
       });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && openKind) {
+          popup.hidden = true;
+          popup.innerHTML = "";
+          openKind = null;
+          document.querySelectorAll(".dash-stat-link").forEach(function (l) { l.classList.remove("dash-stat-open"); });
+        }
+      });
     }
 
     function renderStats() {
