@@ -15594,5 +15594,74 @@
       }
     ],
     "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "patrick-warren-sr",
+    "caseNumber": "246",
+    "name": "Patrick Warren Sr.",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2021,
+    "age": 52,
+    "gender": "male",
+    "city": "Killeen",
+    "county": "Bell",
+    "state": "TX",
+    "caseSeries": null,
+    "dateAdded": "2026-09-17",
+    "summary": "Patrick Lynn Warren Sr., 52, was shot and killed by Killeen, Texas Police Officer Reynaldo Contreras on January 10, 2021, after officers responded to a 911 call specifically requesting a mental health check. Contreras first deployed his Taser, which had no effect on Warren, who was described as emotionally distressed and yelling in his own front yard; when Warren continued to advance, Contreras drew his firearm and fired. Body camera video released by the family's attorney, civil rights lawyer Lee Merritt, captured a bystander repeatedly saying, \u201cI told you, don't use a gun.\u201d Warren's family disputed the department's account, alleging Contreras briefly redirected his weapon toward Warren's wife before returning it to Warren and continuing to fire. A Bell County grand jury declined to indict Contreras in May 2021, four months after the shooting. No one has ever been charged in Warren's death.",
+    "known": [
+      "The mental health welfare-check call, the Taser deployment, and the shooting, per Killeen Police Department statements and body camera footage the department released publicly.",
+      "Officers were dispatched specifically in response to a 911 call requesting a psychiatric welfare check; upon arrival, Contreras encountered Warren in visible emotional distress outside his home.",
+      "Contreras first used his Taser, which had no effect on Warren; when Warren continued to advance toward him despite commands to stop, Contreras drew his duty weapon and fired.",
+      "Body camera video released by the family's attorney captured a bystander repeatedly telling the officer afterward, \u201cI told you, don't use a gun.\u201d",
+      "Warren's family, represented by civil rights attorney Lee Merritt, alleged Contreras \u201credirected his weapon towards Patrick's wife\u201d after the first shot before turning back to Warren and continuing to fire; Killeen Police Chief Charles Kimble publicly disputed this account as \u201csignificantly false\u201d and released the department's full unedited video in response.",
+      "The Texas Rangers independently investigated the shooting alongside a separate Killeen Police Department internal affairs review.",
+      "A Bell County grand jury reviewed the Texas Rangers' investigation and declined to indict Contreras on May 19, 2021, four months after the shooting; Contreras had already returned to administrative duty in April.",
+      "Warren's family publicly stated their intention to pursue federal civil rights charges following the grand jury's decision not to indict."
+    ],
+    "unknown": [
+      "Whether Contreras's account of Warren continuing to advance despite commands, and the family's disputed account of the weapon being briefly redirected toward Warren's wife, can both be reconciled with the same underlying video, given each side characterized the same footage differently, was never resolved by any criminal trial since the grand jury declined to indict.",
+      "The specific findings of Killeen Police Department's separate internal affairs investigation, distinct from the Texas Rangers' criminal investigation, have not been made comprehensively public.",
+      "Whether federal civil rights charges were ever formally pursued following the family's stated intention to seek them has not been confirmed in the sources reviewed for this summary."
+    ],
+    "unanswered": [
+      "Why did a call specifically requesting a mental health welfare check end in gunfire within minutes of officers arriving?",
+      "Why do the family's and the department's accounts of the same body camera footage directly conflict regarding whether the officer's weapon was briefly aimed at Warren's wife?",
+      "What became of Warren's family's stated intention to pursue federal civil rights charges after the state grand jury declined to indict?"
+    ],
+    "sources": [
+      {
+        "name": "KWTX \u2014 \u201cGrand jury clears officer who shot unarmed Central Texas man with mental health issues\u201d",
+        "url": "https://www.kwtx.com/2021/05/21/grand-jury-clears-officer-who-shot-unarmed-central-texas-man-with-mental-health-issues/",
+        "verified": true
+      },
+      {
+        "name": "Law & Crime \u2014 \u201cNo State Charges Against Reynaldo Contreras in Death of Patrick Lynn Warren Sr.\u201d",
+        "url": "https://lawandcrime.com/crime/no-state-charges-for-officer-who-shot-and-killed-man-during-mental-health-crisis/",
+        "verified": true
+      },
+      {
+        "name": "KXXV \u2014 \u201c'There's a protocol that he did not follow': Warren family pursuing federal charges after KPD officer not indicted by a Bell County Grand Jury\u201d",
+        "url": "https://www.kxxv.com/hometown/bell-county/theres-a-protocol-that-he-did-not-follow-warren-family-pursuing-federal-charges-after-kpd-officer-not-indicted-by-a-bell-county-grand-jury",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
   }
 ]

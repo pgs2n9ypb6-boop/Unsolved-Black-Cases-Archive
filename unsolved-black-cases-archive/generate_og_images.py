@@ -18,7 +18,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CASES = json.load(open(os.path.join(ROOT, "data", "cases.json")))
-STATUS_LABEL = {"unsolved": "Unsolved", "cold": "Cold Case", "missing_persons": "Missing Persons"}
+STATUS_LABEL = {"unsolved": "Unsolved", "unresolved": "Unresolved \u2014 No Conviction", "cold": "Cold Case", "missing_persons": "Missing Persons"}
 
 CARD_CSS = '''
 *{box-sizing:border-box;margin:0;padding:0;}

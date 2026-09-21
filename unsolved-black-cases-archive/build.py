@@ -6,7 +6,7 @@ Single source of truth: the CASES list below. Running this script:
   2. Renders every HTML page (dashboard shell + document pages)
 Run: python3 build.py
 """
-import os, json, html, datetime
+import os, json, html, datetime, csv, io
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = ROOT
@@ -75,6 +75,7 @@ NAV_DOCS = [
     ("Researcher's Dashboard", "saved.html"),
     ("Public Records Request Generator", "records-request.html"),
     ("Compare Cases", "compare.html"),
+    ("Data & Downloads", "data.html"),
     ("Archive Statistics", "statistics.html"),
     ("Cold Case Quiz", "quiz.html"),
     ("How We Research", "research.html"),
@@ -10781,6 +10782,65 @@ CASES = [
                             "http://www.chicagotribune.com/news/local/breaking/ct-paul-oneal-autopsy-20160817-story.html", True),
                         src("CBS News Chicago \u2014 \u201cPolice Board Orders 2 Officers Fired In 2016 Shooting That Killed Paul O'Neal\u201d",
                             "https://www.cbsnews.com/chicago/news/police-board-orders-2-officers-fired-in-2016-shooting-that-killed-paul-oneal/", True)]),
+    dict(id="patrick-warren-sr", caseNumber="246", name="Patrick Warren Sr.",
+         status="unsolved", caseType="homicide", year=2021, age=52, gender="male",
+         city="Killeen", county="Bell", state="TX", caseSeries=None,
+         dateAdded="2026-09-17",
+         summary="Patrick Lynn Warren Sr., 52, was shot and killed by Killeen, Texas Police Officer Reynaldo "
+                 "Contreras on January 10, 2021, after officers responded to a 911 call specifically requesting "
+                 "a mental health check. Contreras first deployed his Taser, which had no effect on Warren, who "
+                 "was described as emotionally distressed and yelling in his own front yard; when Warren "
+                 "continued to advance, Contreras drew his firearm and fired. Body camera video released by the "
+                 "family's attorney, civil rights lawyer Lee Merritt, captured a bystander repeatedly saying, "
+                 "\u201cI told you, don't use a gun.\u201d Warren's family disputed the department's account, "
+                 "alleging Contreras briefly redirected his weapon toward Warren's wife before returning it to "
+                 "Warren and continuing to fire. A Bell County grand jury declined to indict Contreras in May "
+                 "2021, four months after the shooting. No one has ever been charged in Warren's death.",
+         known=["The mental health welfare-check call, the Taser deployment, and the shooting, per Killeen "
+                "Police Department statements and body camera footage the department released publicly.",
+                "Officers were dispatched specifically in response to a 911 call requesting a psychiatric "
+                "welfare check; upon arrival, Contreras encountered Warren in visible emotional distress "
+                "outside his home.",
+                "Contreras first used his Taser, which had no effect on Warren; when Warren continued to "
+                "advance toward him despite commands to stop, Contreras drew his duty weapon and fired.",
+                "Body camera video released by the family's attorney captured a bystander repeatedly telling "
+                "the officer afterward, \u201cI told you, don't use a gun.\u201d",
+                "Warren's family, represented by civil rights attorney Lee Merritt, alleged Contreras "
+                "\u201credirected his weapon towards Patrick's wife\u201d after the first shot before turning "
+                "back to Warren and continuing to fire; Killeen Police Chief Charles Kimble publicly disputed "
+                "this account as \u201csignificantly false\u201d and released the department's full unedited "
+                "video in response.",
+                "The Texas Rangers independently investigated the shooting alongside a separate Killeen Police "
+                "Department internal affairs review.",
+                "A Bell County grand jury reviewed the Texas Rangers' investigation and declined to indict "
+                "Contreras on May 19, 2021, four months after the shooting; Contreras had already returned to "
+                "administrative duty in April.",
+                "Warren's family publicly stated their intention to pursue federal civil rights charges "
+                "following the grand jury's decision not to indict."],
+         unknown=["Whether Contreras's account of Warren continuing to advance despite commands, and the "
+                  "family's disputed account of the weapon being briefly redirected toward Warren's wife, can "
+                  "both be reconciled with the same underlying video, given each side characterized the same "
+                  "footage differently, was never resolved by any criminal trial since the grand jury declined "
+                  "to indict.",
+                  "The specific findings of Killeen Police Department's separate internal affairs "
+                  "investigation, distinct from the Texas Rangers' criminal investigation, have not been made "
+                  "comprehensively public.",
+                  "Whether federal civil rights charges were ever formally pursued following the family's "
+                  "stated intention to seek them has not been confirmed in the sources reviewed for this "
+                  "summary."],
+         unanswered=["Why did a call specifically requesting a mental health welfare check end in gunfire "
+                     "within minutes of officers arriving?",
+                     "Why do the family's and the department's accounts of the same body camera footage "
+                     "directly conflict regarding whether the officer's weapon was briefly aimed at Warren's "
+                     "wife?",
+                     "What became of Warren's family's stated intention to pursue federal civil rights charges "
+                     "after the state grand jury declined to indict?"],
+         extraSources=[src("KWTX \u2014 \u201cGrand jury clears officer who shot unarmed Central Texas man with mental health issues\u201d",
+                            "https://www.kwtx.com/2021/05/21/grand-jury-clears-officer-who-shot-unarmed-central-texas-man-with-mental-health-issues/", True),
+                        src("Law & Crime \u2014 \u201cNo State Charges Against Reynaldo Contreras in Death of Patrick Lynn Warren Sr.\u201d",
+                            "https://lawandcrime.com/crime/no-state-charges-for-officer-who-shot-and-killed-man-during-mental-health-crisis/", True),
+                        src("KXXV \u2014 \u201c'There's a protocol that he did not follow': Warren family pursuing federal charges after KPD officer not indicted by a Bell County Grand Jury\u201d",
+                            "https://www.kxxv.com/hometown/bell-county/theres-a-protocol-that-he-did-not-follow-warren-family-pursuing-federal-charges-after-kpd-officer-not-indicted-by-a-bell-county-grand-jury", True)]),
 ]
 
 
@@ -11153,6 +11213,7 @@ def page_shell(title, description, depth, body, data_root_depth=None, canonical_
 <title>{full_title}</title>
 <meta name="description" content="{html.escape(description)}">
 <link rel="canonical" href="{canonical_url}">
+<link rel="alternate" type="application/rss+xml" title="{SITE_NAME} — Corrections &amp; Updates" href="{SITE_URL}/feed.xml">
 <link rel="icon" type="image/svg+xml" href="{r}favicon.svg">
 {og_tags}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11352,6 +11413,47 @@ def board_toolbar(case_id):
     <button class="bt-btn bt-btn-accent" data-add-board-note="{case_id}">+ ADD YOUR OWN NOTE</button>
   </div>'''
 
+def case_structured_data(c):
+    # JSON-LD structured data, one per case page, so search engines can
+    # understand each page as documenting a real, named person's death or
+    # disappearance rather than just parsing it as unstructured text. Kept
+    # deliberately narrow: no property here asserts anything the case file
+    # itself doesn't already state as fact, and missing-persons cases never
+    # get a deathDate/deathPlace, since that would assert something the
+    # site does not know to be true.
+    loc = location_str(c)
+    about = {"@type": "Person", "name": c["name"]}
+    if c["caseType"] == "homicide":
+        if c.get("year"):
+            about["deathDate"] = str(c["year"])
+        if loc:
+            about["deathPlace"] = {"@type": "Place", "name": loc}
+    url = f"{SITE_URL}/cases/{c['id']}.html"
+    # dateModified should never predate datePublished — lastVerified is a
+    # broadly shared field, not a true per-case timestamp, so on any case
+    # added after its own lastVerified date (which happens whenever a case
+    # is added after the archive's last mass-verification pass), fall back
+    # to dateAdded rather than publish a logically backwards date.
+    date_published = c.get("dateAdded")
+    date_modified = c.get("lastVerified") or date_published
+    if date_published and date_modified and date_modified < date_published:
+        date_modified = date_published
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": f"{c['name']} \u2014 Case #{c['caseNumber']}",
+        "description": f"Unsolved case: {c['name']}, {c['year']}, {loc}.",
+        "datePublished": date_published,
+        "dateModified": date_modified,
+        "url": url,
+        "image": f"{SITE_URL}/og/cases/{c['id']}.png",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "author": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL},
+        "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL},
+        "about": about,
+    }
+    return json.dumps(data, ensure_ascii=False)
+
 def build_case_page(c):
     depth = 1
     by_id = {x["id"]: x for x in CASES}
@@ -11432,6 +11534,7 @@ def build_case_page(c):
     </div>
   </div>
 </section>
+<script type="application/ld+json">{case_structured_data(c)}</script>
 <p style="text-align:center; padding:18px;"><a href="index.html" style="font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--cyan);">\u2190 Return to Case Board</a></p>
 {footer_html(depth)}'''
     html_out = page_shell(c["name"], f"Unsolved case: {c['name']}, {c['year']}, {location_str(c)}.", depth, body,
@@ -11947,6 +12050,56 @@ def build_saved_cases():
     write("saved.html", page_shell("Researcher's Dashboard", "Your private research dashboard \u2014 saved cases, notes, sources, and topics, stored only in your own browser.", depth,
           doc_page(depth, "Private", "Researcher's Dashboard", body), canonical_path="saved.html"))
 
+def build_data_page():
+    depth = 0
+    body = f'''<p>Every case in this archive, in one file, for anyone who wants to use it outside this
+    website \u2014 a researcher doing counts across years or jurisdictions, a journalist checking a claim, a
+    student building on this data for a class project, another archive that wants to cross-reference. This
+    is the same data the site itself is built from, not a separate or reduced copy.</p>
+    <div class="continue-research-actions" style="margin:20px 0;">
+      <a class="records-btn primary" href="data/cases.json" download>\U0001F4E5 Download JSON ({len(CASES)} cases)</a>
+      <a class="records-btn" href="data/cases.csv" download>\U0001F4E5 Download CSV ({len(CASES)} cases)</a>
+    </div>
+    <h2>Which format to use</h2>
+    <p><strong>JSON</strong> (<code>/data/cases.json</code>) is the complete record for every case: everything
+    on the case page itself \u2014 the full summary, every \u201cKnown,\u201d \u201cUnknown,\u201d and
+    \u201cUnanswered Question\u201d entry, and every cited source with its own name and URL. Use this if
+    you\u2019re writing code against the data or want the full text, not just the metadata.</p>
+    <p><strong>CSV</strong> (<code>/data/cases.csv</code>) is a flattened, spreadsheet-friendly summary \u2014
+    one row per case, opens directly in Excel, Google Sheets, or any tool that reads CSV. It deliberately
+    leaves out the long-form prose fields, since flattening paragraphs into spreadsheet cells serves neither
+    format well; use the JSON export or the case pages themselves for the full narrative.</p>
+    <h2>Fields</h2>
+    <table class="data-fields-table">
+      <tr><th>Field</th><th>Meaning</th></tr>
+      <tr><td><code>caseNumber</code></td><td>The sequential case number used throughout the archive</td></tr>
+      <tr><td><code>id</code></td><td>URL slug \u2014 the case page lives at <code>/cases/&lt;id&gt;.html</code></td></tr>
+      <tr><td><code>name</code></td><td>Victim name(s) as documented</td></tr>
+      <tr><td><code>status</code></td><td><code>unsolved</code> (no charges were ever filed) or <code>unresolved</code>
+      (charges were filed and a trial or plea occurred, but no conviction resulted) \u2014 see
+      <a href="research.html">How We Research</a> for the distinction</td></tr>
+      <tr><td><code>caseType</code></td><td><code>homicide</code> or <code>missing_persons</code></td></tr>
+      <tr><td><code>year</code>, <code>age</code>, <code>gender</code></td><td>As documented; left blank in the
+      source record rather than guessed where unknown</td></tr>
+      <tr><td><code>city</code>, <code>county</code>, <code>state</code></td><td>Location of the case</td></tr>
+      <tr><td><code>summary</code>, <code>known</code>, <code>unknown</code>, <code>unanswered</code></td><td>
+      Case narrative (JSON only)</td></tr>
+      <tr><td><code>sources</code></td><td>Every cited source, with name and URL where one exists (JSON only;
+      the CSV export includes only a <code>sourceCount</code>)</td></tr>
+      <tr><td><code>dateAdded</code></td><td>When the case was added to this archive</td></tr>
+      <tr><td><code>lastVerified</code></td><td>When the case file was last reviewed</td></tr>
+    </table>
+    <h2>Using this data</h2>
+    <p>Use it freely \u2014 for research, journalism, classroom work, or your own archive. We\u2019d ask two
+    things in return: attribute the archive when you publish something built on it, and don\u2019t present
+    the data as more certain than it is \u2014 a blank field here means the fact isn\u2019t documented, not
+    that it doesn\u2019t exist.</p>
+    <p>The dataset updates every time a case is added or corrected. To track those changes over time rather
+    than re-downloading and diffing, follow the <a href="feed.xml">RSS feed</a> or watch
+    <a href="updates.html">Corrections &amp; Updates</a>.</p>'''
+    write("data.html", page_shell("Data & Downloads", f"Download the full {SITE_NAME.title()} dataset as JSON or CSV \u2014 {len(CASES)} cases, free to use with attribution.", depth,
+          doc_page(depth, "Tools", "Data & Downloads", body), canonical_path="data.html"))
+
 def build_records_request_page():
     depth = 0
     body = '''<p>Look through this archive and a pattern shows up again and again: <em>body camera footage never
@@ -12140,6 +12293,9 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-09-17", case_id="patrick-warren-sr",
+         text="New case added to the archive: Patrick Warren Sr. (Killeen, Texas, 2021), sourced from "
+              "KWTX, Law & Crime, and KXXV."),
     dict(date="2026-09-17", case_id="paul-oneal",
          text="New case added to the archive: Paul O'Neal (Chicago, Illinois, 2016), sourced from the "
               "Chicago Tribune and CBS News Chicago."),
@@ -13036,6 +13192,54 @@ CORRECTIONS = [
               "amount ($10,000), previously described only as \u201ca reward.\u201d"),
 ]
 
+def build_rss_feed():
+    # A plain RSS 2.0 feed of the Corrections & Updates log, so someone can
+    # follow the archive passively (a feed reader, an email-digest service
+    # built on RSS, etc.) instead of needing to remember to come back and
+    # check the site themselves.
+    import email.utils
+    case_by_id = {c["id"]: c for c in CASES}
+
+    def rfc822(date_str):
+        # CORRECTIONS dates are "YYYY-MM-DD" with no time; midnight UTC is
+        # an honest choice since no more precise time is actually known.
+        y, m, d = (int(x) for x in date_str.split("-"))
+        return email.utils.format_datetime(datetime.datetime(y, m, d, tzinfo=datetime.timezone.utc))
+
+    items = []
+    for i, e in enumerate(CORRECTIONS):
+        if e.get("case_id") and e["case_id"] in case_by_id:
+            c = case_by_id[e["case_id"]]
+            title = f'{c["name"]} \u2014 Case #{c["caseNumber"]}'
+            link = f'{SITE_URL}/cases/{c["id"]}.html'
+        else:
+            title = f'Archive update, {e["date"]}'
+            link = f'{SITE_URL}/updates.html'
+        guid = f'{SITE_URL}/updates.html#{e["date"]}-{e.get("case_id") or i}'
+        items.append(f'''  <item>
+    <title>{html.escape(title)}</title>
+    <link>{html.escape(link)}</link>
+    <guid isPermaLink="false">{html.escape(guid)}</guid>
+    <pubDate>{rfc822(e["date"])}</pubDate>
+    <description>{html.escape(e["text"])}</description>
+  </item>''')
+
+    latest_date = CORRECTIONS[0]["date"] if CORRECTIONS else datetime.date.today().isoformat()
+    feed = f'''<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{html.escape(SITE_NAME)} \u2014 Corrections &amp; Updates</title>
+  <link>{SITE_URL}/updates.html</link>
+  <description>A dated public record of substantive corrections and new cases added to the Unsolved Black Cases Archive.</description>
+  <language>en-us</language>
+  <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>{rfc822(latest_date)}</lastBuildDate>
+{chr(10).join(items)}
+</channel>
+</rss>
+'''
+    write("feed.xml", feed)
+
 def build_updates():
     depth = 0
     case_by_id = {c["id"]: c for c in CASES}
@@ -13061,6 +13265,8 @@ def build_updates():
     date, a status update, a name added or removed, a source verified. Nothing is corrected quietly.</p>
     <p>See <a href="research.html">How We Research</a> for our sourcing standards, or
     <a href="submit.html">Submit a Tip</a> to flag something that needs review.</p>
+    <p><a href="feed.xml">\U0001F4E1 Subscribe via RSS</a> \u2014 follow new cases and corrections in a feed
+    reader without needing to check back here yourself.</p>
     {"".join(sections)}'''
     write("updates.html", page_shell("Corrections & Updates", "A dated public record of substantive corrections made to case files.", depth,
           doc_page(depth, "Accountability", "Corrections & Updates", body), canonical_path="updates.html", og_image="og/updates.png"))
@@ -13101,6 +13307,24 @@ def build_404():
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
     write("data/cases.json", json.dumps(CASES, indent=2))
+    # A flat, spreadsheet-friendly companion to the JSON above — for anyone
+    # who wants counts and filters in a tool like Excel or Sheets rather
+    # than writing code against nested JSON. Deliberately limited to the
+    # genuinely tabular fields; the qualitative known/unknown/unanswered
+    # lists stay in the JSON export and the case pages themselves, since
+    # flattening prose into CSV cells serves neither format well.
+    csv_buf = io.StringIO()
+    csv_writer = csv.writer(csv_buf)
+    csv_writer.writerow(["caseNumber", "id", "name", "status", "caseType", "year", "age", "gender",
+                          "city", "county", "state", "dateAdded", "lastVerified", "sourceCount", "caseUrl", "summary"])
+    for c in sorted(CASES, key=lambda x: x["caseNumber"]):
+        csv_writer.writerow([
+            c["caseNumber"], c["id"], c["name"], c["status"], c["caseType"], c.get("year") or "",
+            c.get("age") or "", c.get("gender") or "", c.get("city") or "", c.get("county") or "",
+            c.get("state") or "", c.get("dateAdded") or "", c.get("lastVerified") or "",
+            len(c.get("sources", [])), f'{SITE_URL}/cases/{c["id"]}.html', c.get("summary") or "",
+        ])
+    write("data/cases.csv", csv_buf.getvalue())
     # Shared, browser-cacheable copy for the actual UI to read (see the
     # comment above CASES_JSON) — loaded via <script src> rather than
     # duplicated inline on every page, and via <script src> rather than
@@ -13130,6 +13354,7 @@ if __name__ == "__main__":
     build_quiz()
     build_saved_cases()
     build_records_request_page()
+    build_data_page()
     build_compare_page()
     build_research()
     build_resources()
@@ -13140,6 +13365,7 @@ if __name__ == "__main__":
     build_terms()
     build_disclaimer()
     build_updates()
+    build_rss_feed()
     build_case_index()
     build_freeway_phantom()
     build_silver_dollar_group()
