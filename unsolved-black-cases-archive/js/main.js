@@ -161,12 +161,22 @@
     var query = input ? normalize(input.value) : "";
     var activeChip = document.querySelector('.pl-chip[aria-pressed="true"]');
     var activeStatus = activeChip ? activeChip.getAttribute("data-filter") : "all";
+    var stateSelect = document.getElementById("pl-state-filter");
+    var activeState = stateSelect ? stateSelect.value : "";
+    var yearFromInput = document.getElementById("pl-year-from");
+    var yearToInput = document.getElementById("pl-year-to");
+    var yearFrom = yearFromInput && yearFromInput.value ? parseInt(yearFromInput.value, 10) : null;
+    var yearTo = yearToInput && yearToInput.value ? parseInt(yearToInput.value, 10) : null;
+    var activeTags = Array.prototype.map.call(
+      document.querySelectorAll("[data-tag-filter]:checked"),
+      function (cb) { return cb.value; }
+    );
     // The "show only the first N, then Show All" collapse only applies to
     // the sidebar's own list, only in the untouched default view (no
-    // search text, "All Cases" filter, not yet expanded) — the moment
-    // someone searches or picks a filter chip, every match should be
-    // reachable, not just the first 40 in list order.
-    var collapseSidebar = !sidebarExpanded && query === "" && activeStatus === "all";
+    // search text, "All Cases" filter, no state/year/tag filter set, not
+    // yet expanded) — the moment someone narrows the list any way, every
+    // match should be reachable, not just the first 40 in list order.
+    var collapseSidebar = !sidebarExpanded && query === "" && activeStatus === "all" && !activeState && yearFrom === null && yearTo === null && activeTags.length === 0;
     var sidebarVisibleSoFar = 0;
 
     // Track a visible count per parent list/grid so each one (the sidebar
@@ -184,6 +194,9 @@
       var caseType = item.getAttribute("data-case-type");
       var series = item.getAttribute("data-series-flag") === "true";
       var isNew = item.getAttribute("data-new-case") === "true";
+      var itemState = item.getAttribute("data-state");
+      var itemYear = parseInt(item.getAttribute("data-year"), 10);
+      var itemTags = (item.getAttribute("data-tags") || "").split("|").filter(Boolean);
       var matchesQuery = query === "" || text.indexOf(query) !== -1;
       var matchesStatus =
         activeStatus === "all" ||
@@ -191,7 +204,12 @@
          activeStatus === "series" ? series :
          activeStatus === "missing_persons" ? caseType === "missing_persons" :
          activeStatus === status);
-      var visible = matchesQuery && matchesStatus;
+      var matchesState = !activeState || itemState === activeState;
+      var matchesYear =
+        (yearFrom === null || (!isNaN(itemYear) && itemYear >= yearFrom)) &&
+        (yearTo === null || (!isNaN(itemYear) && itemYear <= yearTo));
+      var matchesTags = activeTags.length === 0 || activeTags.some(function (t) { return itemTags.indexOf(t) !== -1; });
+      var visible = matchesQuery && matchesStatus && matchesState && matchesYear && matchesTags;
       var isSidebarItem = item.parentElement && item.parentElement.classList.contains("pl-list");
       if (visible && isSidebarItem && collapseSidebar) {
         sidebarVisibleSoFar++;
@@ -222,6 +240,15 @@
       chip.setAttribute("aria-pressed", "true");
       filterLeftList();
     });
+  });
+  var plStateSelect = document.getElementById("pl-state-filter");
+  if (plStateSelect) plStateSelect.addEventListener("change", filterLeftList);
+  var plYearFrom = document.getElementById("pl-year-from");
+  var plYearTo = document.getElementById("pl-year-to");
+  if (plYearFrom) plYearFrom.addEventListener("input", filterLeftList);
+  if (plYearTo) plYearTo.addEventListener("input", filterLeftList);
+  document.querySelectorAll("[data-tag-filter]").forEach(function (cb) {
+    cb.addEventListener("change", filterLeftList);
   });
   var showAllCasesBtn = document.querySelector("[data-show-all-cases]");
   if (showAllCasesBtn) {
@@ -942,15 +969,29 @@
   // no-signup revival of the original countapi.xyz, which is dead). Every
   // page load increments the same key, so the number reflects total page
   // views across the whole site, not unique visitors.
+  // Site visits (lifetime) — deduplicated per browser. Without this, every
+  // refresh or page navigation would hit the counter again, which is
+  // exactly the bug this was fixed for: a "visits" number should reflect
+  // distinct visitors, not total page loads. A localStorage flag records
+  // that this browser has already been counted once, ever; only a browser
+  // that has never set that flag actually increments the counter — every
+  // return visit (or refresh) after that just reads the current total.
   function initVisitCounter() {
     var el = document.getElementById("site-visit-count");
     if (!el) return;
-    fetch("https://countapi.mileshilliard.com/api/v1/hit/unsolved-black-cases-archive-visits")
+    var FLAG_KEY = "ubca_counted_lifetime";
+    var BASE = "https://countapi.mileshilliard.com/api/v1/";
+    var alreadyCounted = false;
+    try { alreadyCounted = localStorage.getItem(FLAG_KEY) === "1"; } catch (e) { /* localStorage unavailable — fall through and count every time */ }
+    var url = BASE + (alreadyCounted ? "get/" : "hit/") + "unsolved-black-cases-archive-visits";
+    fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         var n = data && (data.value !== undefined ? data.value : data.count);
-        if (typeof n === "number") el.textContent = n.toLocaleString();
-        else el.parentElement.style.display = "none";
+        if (typeof n === "number") {
+          el.textContent = n.toLocaleString();
+          if (!alreadyCounted) { try { localStorage.setItem(FLAG_KEY, "1"); } catch (e) { /* ignore */ } }
+        } else el.parentElement.style.display = "none";
       })
       .catch(function () {
         // Counter service unreachable — hide the line rather than show "…" forever.
@@ -958,13 +999,15 @@
       });
   }
 
-  // "Today" visit counter — same free service, same hit-per-pageview
-  // approach, but the key itself is stamped with the current date
-  // (e.g. ...-visits-2026-08-27). CountAPI has no built-in daily reset, so
-  // this is the standard workaround: a key that's never been hit before
-  // starts at 0, and since a new date makes a brand-new key, the count
-  // effectively resets itself at midnight with no cron job or backend
-  // needed. "Today" is each visitor's own local date, not a single global
+  // "Today" visit counter — same free service, same daily-key workaround
+  // as before (a key stamped with today's date effectively self-resets at
+  // midnight, since a new date is a brand-new key), but now also
+  // deduplicated per browser per day: a localStorage flag records the
+  // last date this browser was counted, so refreshing the page or
+  // browsing to a different page today reads today's total instead of
+  // incrementing it again. A new day naturally clears the match, so
+  // tomorrow's first visit from the same browser counts normally.
+  // "Today" is each visitor's own local date, not a single global
   // cutover — a visitor's browser decides what day it is for its own
   // requests, so this is an approximation, not a precise UTC rollover.
   function initDailyVisitCounter() {
@@ -973,12 +1016,19 @@
     var d = new Date();
     function pad(n) { return n < 10 ? "0" + n : "" + n; }
     var dateKey = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
-    fetch("https://countapi.mileshilliard.com/api/v1/hit/unsolved-black-cases-archive-visits-" + dateKey)
+    var FLAG_KEY = "ubca_counted_date";
+    var BASE = "https://countapi.mileshilliard.com/api/v1/";
+    var alreadyCounted = false;
+    try { alreadyCounted = localStorage.getItem(FLAG_KEY) === dateKey; } catch (e) { /* ignore */ }
+    var url = BASE + (alreadyCounted ? "get/" : "hit/") + "unsolved-black-cases-archive-visits-" + dateKey;
+    fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         var n = data && (data.value !== undefined ? data.value : data.count);
-        if (typeof n === "number") el.textContent = n.toLocaleString();
-        else if (el.parentElement) el.parentElement.style.display = "none";
+        if (typeof n === "number") {
+          el.textContent = n.toLocaleString();
+          if (!alreadyCounted) { try { localStorage.setItem(FLAG_KEY, dateKey); } catch (e) { /* ignore */ } }
+        } else if (el.parentElement) el.parentElement.style.display = "none";
       })
       .catch(function () {
         if (el.parentElement) el.parentElement.style.display = "none";
@@ -989,14 +1039,18 @@
   // concurrent connections (that needs WebSockets or a session-tracking
   // backend, neither of which exists here), so this is an honest
   // approximation built on the same free hit-counter service as the other
-  // two counters: each page load hits a key stamped with the *current
-  // minute*, and we separately read (not hit, so this read itself doesn't
-  // inflate the count) that bucket plus the two minutes before it and sum
-  // them. That gives a rough "distinct page loads in the last ~3 minutes"
-  // figure — a fair proxy for "people here right now," but not a literal
-  // live connection count, which is why the label uses "active now" with
-  // a hover tooltip explaining the approximation rather than claiming
-  // precision the technique can't back up.
+  // two counters: each *distinct browser tab* hits a key stamped with the
+  // current minute at most once (deduplicated below — repeated refreshes
+  // within the same minute don't re-hit it), and we separately read (not
+  // hit, so reading itself never inflates the count) that bucket plus the
+  // two minutes before it and sum them. That gives a rough "distinct tabs
+  // active in the last ~3 minutes" figure — a fair proxy for "people here
+  // right now," but not a literal live connection count, which is why the
+  // label uses "active now" with a hover tooltip explaining the
+  // approximation rather than claiming precision the technique can't back
+  // up. sessionStorage (not localStorage) is deliberate here: it clears
+  // when the tab closes, so a visitor who leaves and comes back later is
+  // correctly free to register presence again.
   function initLiveVisitors() {
     var el = document.getElementById("site-live-count");
     if (!el) return;
@@ -1009,9 +1063,21 @@
     var now = new Date();
     var currentKey = minuteKey(now);
     var priorKeys = [1, 2].map(function (mins) { return minuteKey(new Date(now.getTime() - mins * 60000)); });
+    var FLAG_KEY = "ubca_counted_minute";
+    var alreadyCountedThisMinute = false;
+    try { alreadyCountedThisMinute = sessionStorage.getItem(FLAG_KEY) === currentKey; } catch (e) { /* ignore */ }
 
-    // Register this page load, then read the small sliding window.
-    fetch(BASE + "hit/" + currentKey)
+    // Register this tab's presence for the current minute (skipped if
+    // this exact tab already has, this minute), then read the small
+    // sliding window regardless, so the displayed number always reflects
+    // the current shared total.
+    var registerPromise = alreadyCountedThisMinute
+      ? Promise.resolve()
+      : fetch(BASE + "hit/" + currentKey).then(function () {
+          try { sessionStorage.setItem(FLAG_KEY, currentKey); } catch (e) { /* ignore */ }
+        });
+
+    registerPromise
       .then(function () {
         return Promise.all([currentKey].concat(priorKeys).map(function (key) {
           return fetch(BASE + "get/" + key)

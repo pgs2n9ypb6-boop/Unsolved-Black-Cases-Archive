@@ -6,7 +6,7 @@ Single source of truth: the CASES list below. Running this script:
   2. Renders every HTML page (dashboard shell + document pages)
 Run: python3 build.py
 """
-import os, json, html, datetime, csv, io
+import os, json, html, datetime, csv, io, re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = ROOT
@@ -11269,16 +11269,48 @@ def is_new_case(c):
         return False
     return (datetime.date.today() - added).days <= NEW_CASE_WINDOW_DAYS
 
+# Auto-detected topical tags, computed from each case's own summary/known
+# text at build time (not stored per-case by hand, and not computed live
+# in the browser) so the actual matches are inspectable and testable
+# before they ship, rather than a client-side heuristic no one can audit.
+# Kept deliberately small: these patterns were validated case-by-case
+# against real matches before being finalized, and any tag that produced
+# a wrong match during that check was tightened or dropped rather than
+# shipped — a "No-Knock / Warrant" tag was cut entirely because it kept
+# matching warrants unrelated to the death itself (an unserved 1955
+# warrant discovered decades later, an investigative search warrant
+# executed years after a disappearance), which is a materially different
+# thing from a warrant-execution death like Breonna Taylor's.
+TAG_KEYWORDS = {
+    "Traffic Stop": [r"traffic stop", r"pulled over for", r"speeding (violation|stop)"],
+    "Custody / Restraint Death": [r"in custody", r"holding cell", r"died in jail", r"restrained (him|her|them)", r"\btased\b.{0,40}(died|death)", r"in-custody death"],
+    "Mental Health Crisis": [r"welfare check", r"mental health (crisis|check|call|episode)", r"psychiatric (crisis|episode|call)", r"crisis intervention"],
+    "Vehicle Pursuit": [r"car chase", r"high-speed chase", r"vehicle pursuit", r"police pursuit", r"fled in (his|her|their|a) (car|vehicle)", r"chase that (began|ended) (in|with)"],
+}
+
+def tags_for(c):
+    text = ((c.get("summary") or "") + " " + " ".join(c.get("known") or [])).lower()
+    return [tag for tag, patterns in TAG_KEYWORDS.items() if any(re.search(p, text) for p in patterns)]
+
 def left_panel(depth, active_id=None):
     r = rel(depth)
     items = []
+    all_states = sorted(set(c["state"] for c in CASES if c.get("state")))
+    state_options = "\n      ".join(f'<option value="{s}">{s}</option>' for s in all_states)
+    all_years = [c["year"] for c in CASES if c.get("year")]
+    min_year, max_year = min(all_years), max(all_years)
+    tag_checkboxes = "\n      ".join(
+        f'<label class="pl-tag-check"><input type="checkbox" data-tag-filter value="{html.escape(t)}"> {html.escape(t)}</label>'
+        for t in TAG_KEYWORDS
+    )
     for c in CASES:
         current = ' aria-current="page"' if c["id"] == active_id else ""
         search_blob = f'{c["name"]} {c.get("city") or ""} {c.get("state") or ""} {c["year"]}'
         is_series = "true" if c.get("caseSeries") else "false"
         new_flag = "true" if is_new_case(c) else "false"
         new_badge = ' <span class="new-badge">NEW</span>' if is_new_case(c) else ""
-        items.append(f'''<li class="pl-item" data-case-item data-case-id="{c['id']}" data-status="{c['status']}" data-case-type="{c.get('caseType') or ''}" data-series-flag="{is_series}" data-new-case="{new_flag}" data-search="{html.escape(search_blob)}">
+        case_tags = "|".join(tags_for(c))
+        items.append(f'''<li class="pl-item" data-case-item data-case-id="{c['id']}" data-status="{c['status']}" data-case-type="{c.get('caseType') or ''}" data-series-flag="{is_series}" data-new-case="{new_flag}" data-state="{c.get('state') or ''}" data-year="{c.get('year') or ''}" data-tags="{html.escape(case_tags)}" data-search="{html.escape(search_blob)}">
   <a href="{r}cases/{c['id']}.html"{current}>{html.escape(c['name'])}{new_badge}<span class="pi-meta">{c['caseNumber']} \u00b7 {c['year']} \u00b7 {STATUS_LABEL.get(c['status'],'').upper()}</span></a>
 </li>''')
     items_html = "\n".join(items)
@@ -11296,6 +11328,23 @@ def left_panel(depth, active_id=None):
     <button class="pl-chip" aria-pressed="false" data-filter="missing_persons">Missing Persons</button>
     <button class="pl-chip" aria-pressed="false" data-filter="cold">Cold Case</button>
     <button class="pl-chip" aria-pressed="false" data-filter="series">Case Series</button>
+  </div>
+  <div class="pl-advanced-filters">
+    <label class="label" for="pl-state-filter">State</label>
+    <select id="pl-state-filter">
+      <option value="">All States</option>
+      {state_options}
+    </select>
+    <label class="label" for="pl-year-from">Year Range</label>
+    <div class="pl-year-range">
+      <input type="number" id="pl-year-from" placeholder="From" min="{min_year}" max="{max_year}" aria-label="From year">
+      <span aria-hidden="true">&ndash;</span>
+      <input type="number" id="pl-year-to" placeholder="To" min="{min_year}" max="{max_year}" aria-label="To year">
+    </div>
+    <fieldset class="pl-tag-filters">
+      <legend class="label">Circumstances <span class="pl-tag-hint" title="Auto-detected from each case&#39;s own summary text, not manually assigned">(auto-detected)</span></legend>
+      {tag_checkboxes}
+    </fieldset>
   </div>
   <div class="pl-series-link">{series_nav_links(r)}<a href="{r}quiz.html">\U0001F9E0 Cold Case Quiz \u2192</a></div>
   <div class="pl-list-head">Recent Cases</div>
@@ -11678,6 +11727,7 @@ def build_case_index():
     grid_cards = "\n".join(
         f'<a class="related-card" data-case-item data-case-id="{c["id"]}" data-status="{c["status"]}" data-case-type="{c.get("caseType") or ""}" '
         f'data-series-flag="{"true" if c.get("caseSeries") else "false"}" data-new-case="{"true" if is_new_case(c) else "false"}" '
+        f'data-state="{c.get("state") or ""}" data-year="{c.get("year") or ""}" data-tags="{html.escape("|".join(tags_for(c)))}" '
         f'data-search="{html.escape(c["name"] + " " + (c.get("city") or "") + " " + (c.get("state") or "") + " " + str(c["year"]))}" '
         f'href="{c["id"]}.html"><span class="rc-name">{html.escape(c["name"])}{_new_badge_span(c)}</span>'
         f'<span class="rc-meta">{c["year"]} \u00b7 {STATUS_LABEL.get(c["status"],"").upper()}</span></a>' for c in CASES)

@@ -110,746 +110,807 @@
     <button class="pl-chip" aria-pressed="false" data-filter="cold">Cold Case</button>
     <button class="pl-chip" aria-pressed="false" data-filter="series">Case Series</button>
   </div>
+  <div class="pl-advanced-filters">
+    <label class="label" for="pl-state-filter">State</label>
+    <select id="pl-state-filter">
+      <option value="">All States</option>
+      <option value="AK">AK</option>
+      <option value="AL">AL</option>
+      <option value="AR">AR</option>
+      <option value="AZ">AZ</option>
+      <option value="CA">CA</option>
+      <option value="CO">CO</option>
+      <option value="DC">DC</option>
+      <option value="DE">DE</option>
+      <option value="FL">FL</option>
+      <option value="GA">GA</option>
+      <option value="IA">IA</option>
+      <option value="IL">IL</option>
+      <option value="IN">IN</option>
+      <option value="KS">KS</option>
+      <option value="KY">KY</option>
+      <option value="LA">LA</option>
+      <option value="MA">MA</option>
+      <option value="MD">MD</option>
+      <option value="MI">MI</option>
+      <option value="MN">MN</option>
+      <option value="MO">MO</option>
+      <option value="MS">MS</option>
+      <option value="NC">NC</option>
+      <option value="ND">ND</option>
+      <option value="NE">NE</option>
+      <option value="NJ">NJ</option>
+      <option value="NM">NM</option>
+      <option value="NV">NV</option>
+      <option value="NY">NY</option>
+      <option value="OH">OH</option>
+      <option value="OK">OK</option>
+      <option value="OR">OR</option>
+      <option value="PA">PA</option>
+      <option value="SC">SC</option>
+      <option value="TN">TN</option>
+      <option value="TX">TX</option>
+      <option value="UT">UT</option>
+      <option value="VA">VA</option>
+      <option value="WA">WA</option>
+      <option value="WI">WI</option>
+      <option value="WV">WV</option>
+      <option value="WY">WY</option>
+    </select>
+    <label class="label" for="pl-year-from">Year Range</label>
+    <div class="pl-year-range">
+      <input type="number" id="pl-year-from" placeholder="From" min="1864" max="2026" aria-label="From year">
+      <span aria-hidden="true">&ndash;</span>
+      <input type="number" id="pl-year-to" placeholder="To" min="1864" max="2026" aria-label="To year">
+    </div>
+    <fieldset class="pl-tag-filters">
+      <legend class="label">Circumstances <span class="pl-tag-hint" title="Auto-detected from each case&#39;s own summary text, not manually assigned">(auto-detected)</span></legend>
+      <label class="pl-tag-check"><input type="checkbox" data-tag-filter value="Traffic Stop"> Traffic Stop</label>
+      <label class="pl-tag-check"><input type="checkbox" data-tag-filter value="Custody / Restraint Death"> Custody / Restraint Death</label>
+      <label class="pl-tag-check"><input type="checkbox" data-tag-filter value="Mental Health Crisis"> Mental Health Crisis</label>
+      <label class="pl-tag-check"><input type="checkbox" data-tag-filter value="Vehicle Pursuit"> Vehicle Pursuit</label>
+    </fieldset>
+  </div>
   <div class="pl-series-link"><a href="../cases/freeway-phantom.html">Freeway Phantom →</a>
 <a href="../cases/silver-dollar-group.html">Silver Dollar Group →</a><a href="../quiz.html">🧠 Cold Case Quiz →</a></div>
   <div class="pl-list-head">Recent Cases</div>
   <ul class="pl-list">
-    <li class="pl-item" data-case-item data-case-id="carol-denise-spinks" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Carol Denise Spinks Washington DC 1971">
+    <li class="pl-item" data-case-item data-case-id="carol-denise-spinks" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1971" data-tags="" data-search="Carol Denise Spinks Washington DC 1971">
   <a href="../cases/carol-denise-spinks.html">Carol Denise Spinks<span class="pi-meta">001 · 1971 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="darlenia-denise-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Darlenia Denise Johnson Washington DC 1971">
+<li class="pl-item" data-case-item data-case-id="darlenia-denise-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1971" data-tags="" data-search="Darlenia Denise Johnson Washington DC 1971">
   <a href="../cases/darlenia-denise-johnson.html">Darlenia Denise Johnson<span class="pi-meta">002 · 1971 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="brenda-faye-crockett" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Brenda Faye Crockett Washington DC 1971">
+<li class="pl-item" data-case-item data-case-id="brenda-faye-crockett" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1971" data-tags="" data-search="Brenda Faye Crockett Washington DC 1971">
   <a href="../cases/brenda-faye-crockett.html">Brenda Faye Crockett<span class="pi-meta">003 · 1971 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="nenomoshia-yates" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Nenomoshia Yates Washington DC 1971">
+<li class="pl-item" data-case-item data-case-id="nenomoshia-yates" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1971" data-tags="" data-search="Nenomoshia Yates Washington DC 1971">
   <a href="../cases/nenomoshia-yates.html">Nenomoshia Yates<span class="pi-meta">004 · 1971 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="brenda-denise-woodard" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Brenda Denise Woodard Washington DC 1971">
+<li class="pl-item" data-case-item data-case-id="brenda-denise-woodard" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1971" data-tags="" data-search="Brenda Denise Woodard Washington DC 1971">
   <a href="../cases/brenda-denise-woodard.html">Brenda Denise Woodard<span class="pi-meta">005 · 1971 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="diane-denise-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Diane Denise Williams Washington DC 1972">
+<li class="pl-item" data-case-item data-case-id="diane-denise-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="DC" data-year="1972" data-tags="" data-search="Diane Denise Williams Washington DC 1972">
   <a href="../cases/diane-denise-williams.html">Diane Denise Williams<span class="pi-meta">006 · 1972 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="harry-and-harriette-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Harry T. Moore &amp; Harriette Moore Mims FL 1951">
+<li class="pl-item" data-case-item data-case-id="harry-and-harriette-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="1951" data-tags="" data-search="Harry T. Moore &amp; Harriette Moore Mims FL 1951">
   <a href="../cases/harry-and-harriette-moore.html">Harry T. Moore &amp; Harriette Moore<span class="pi-meta">007 · 1951 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="roman-ducksworth-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Roman Ducksworth Jr. Taylorsville MS 1962">
+<li class="pl-item" data-case-item data-case-id="roman-ducksworth-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1962" data-tags="" data-search="Roman Ducksworth Jr. Taylorsville MS 1962">
   <a href="../cases/roman-ducksworth-jr.html">Roman Ducksworth Jr.<span class="pi-meta">008 · 1962 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="hattie-debardelaben" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Hattie DeBardelaben Autaugaville AL 1945">
+<li class="pl-item" data-case-item data-case-id="hattie-debardelaben" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1945" data-tags="" data-search="Hattie DeBardelaben Autaugaville AL 1945">
   <a href="../cases/hattie-debardelaben.html">Hattie DeBardelaben<span class="pi-meta">009 · 1945 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="edwin-pratt" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Edwin Pratt Shoreline WA 1969">
+<li class="pl-item" data-case-item data-case-id="edwin-pratt" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WA" data-year="1969" data-tags="" data-search="Edwin Pratt Shoreline WA 1969">
   <a href="../cases/edwin-pratt.html">Edwin Pratt<span class="pi-meta">010 · 1969 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alberta-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alberta Jones Louisville KY 1965">
+<li class="pl-item" data-case-item data-case-id="alberta-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="KY" data-year="1965" data-tags="" data-search="Alberta Jones Louisville KY 1965">
   <a href="../cases/alberta-jones.html">Alberta Jones<span class="pi-meta">011 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alonzo-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alonzo Brooks La Cygne KS 2004">
+<li class="pl-item" data-case-item data-case-id="alonzo-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="KS" data-year="2004" data-tags="" data-search="Alonzo Brooks La Cygne KS 2004">
   <a href="../cases/alonzo-brooks.html">Alonzo Brooks<span class="pi-meta">012 · 2004 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="diamond-and-tionda-bradley" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Diamond and Tionda Bradley Chicago IL 2001">
+<li class="pl-item" data-case-item data-case-id="diamond-and-tionda-bradley" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2001" data-tags="" data-search="Diamond and Tionda Bradley Chicago IL 2001">
   <a href="../cases/diamond-and-tionda-bradley.html">Diamond and Tionda Bradley<span class="pi-meta">013 · 2001 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="wharlest-jackson-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Wharlest Jackson Sr. Natchez MS 1967">
+<li class="pl-item" data-case-item data-case-id="wharlest-jackson-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="MS" data-year="1967" data-tags="" data-search="Wharlest Jackson Sr. Natchez MS 1967">
   <a href="../cases/wharlest-jackson-sr.html">Wharlest Jackson Sr.<span class="pi-meta">014 · 1967 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="frank-morris" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-search="Frank Morris Ferriday LA 1964">
+<li class="pl-item" data-case-item data-case-id="frank-morris" data-status="unsolved" data-case-type="homicide" data-series-flag="true" data-new-case="false" data-state="LA" data-year="1964" data-tags="" data-search="Frank Morris Ferriday LA 1964">
   <a href="../cases/frank-morris.html">Frank Morris<span class="pi-meta">015 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="george-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Rev. George Lee Belzoni MS 1955">
+<li class="pl-item" data-case-item data-case-id="george-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1955" data-tags="" data-search="Rev. George Lee Belzoni MS 1955">
   <a href="../cases/george-lee.html">Rev. George Lee<span class="pi-meta">016 · 1955 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="johnnie-mae-chappell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Johnnie Mae Chappell Jacksonville FL 1964">
+<li class="pl-item" data-case-item data-case-id="johnnie-mae-chappell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="1964" data-tags="" data-search="Johnnie Mae Chappell Jacksonville FL 1964">
   <a href="../cases/johnnie-mae-chappell.html">Johnnie Mae Chappell<span class="pi-meta">017 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="louis-allen" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Louis Allen Liberty MS 1964">
+<li class="pl-item" data-case-item data-case-id="louis-allen" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1964" data-tags="" data-search="Louis Allen Liberty MS 1964">
   <a href="../cases/louis-allen.html">Louis Allen<span class="pi-meta">018 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="oneal-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Oneal Moore Varnado LA 1965">
+<li class="pl-item" data-case-item data-case-id="oneal-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="1965" data-tags="" data-search="Oneal Moore Varnado LA 1965">
   <a href="../cases/oneal-moore.html">Oneal Moore<span class="pi-meta">019 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="clifton-walker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Clifton Walker Woodville MS 1964">
+<li class="pl-item" data-case-item data-case-id="clifton-walker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1964" data-tags="" data-search="Clifton Walker Woodville MS 1964">
   <a href="../cases/clifton-walker.html">Clifton Walker<span class="pi-meta">020 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="willie-edwards-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Willie Edwards Jr. Montgomery AL 1957">
+<li class="pl-item" data-case-item data-case-id="willie-edwards-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1957" data-tags="" data-search="Willie Edwards Jr. Montgomery AL 1957">
   <a href="../cases/willie-edwards-jr.html">Willie Edwards Jr.<span class="pi-meta">021 · 1957 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="isadore-banks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Isadore Banks Marion AR 1954">
+<li class="pl-item" data-case-item data-case-id="isadore-banks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AR" data-year="1954" data-tags="" data-search="Isadore Banks Marion AR 1954">
   <a href="../cases/isadore-banks.html">Isadore Banks<span class="pi-meta">022 · 1954 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="mack-charles-parker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Mack Charles Parker Poplarville MS 1959">
+<li class="pl-item" data-case-item data-case-id="mack-charles-parker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1959" data-tags="" data-search="Mack Charles Parker Poplarville MS 1959">
   <a href="../cases/mack-charles-parker.html">Mack Charles Parker<span class="pi-meta">023 · 1959 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="joseph-edwards" data-status="unsolved" data-case-type="missing_persons" data-series-flag="true" data-new-case="false" data-search="Joseph Edwards Vidalia LA 1964">
+<li class="pl-item" data-case-item data-case-id="joseph-edwards" data-status="unsolved" data-case-type="missing_persons" data-series-flag="true" data-new-case="false" data-state="LA" data-year="1964" data-tags="" data-search="Joseph Edwards Vidalia LA 1964">
   <a href="../cases/joseph-edwards.html">Joseph Edwards<span class="pi-meta">024 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="samuel-oquinn" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Samuel O&#x27;Quinn Centreville MS 1959">
+<li class="pl-item" data-case-item data-case-id="samuel-oquinn" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1959" data-tags="" data-search="Samuel O&#x27;Quinn Centreville MS 1959">
   <a href="../cases/samuel-oquinn.html">Samuel O&#x27;Quinn<span class="pi-meta">025 · 1959 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="claude-neal" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Claude Neal Greenwood FL 1934">
+<li class="pl-item" data-case-item data-case-id="claude-neal" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="1934" data-tags="" data-search="Claude Neal Greenwood FL 1934">
   <a href="../cases/claude-neal.html">Claude Neal<span class="pi-meta">026 · 1934 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="brandon-mcclelland" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Brandon McClelland Paris TX 2008">
+<li class="pl-item" data-case-item data-case-id="brandon-mcclelland" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2008" data-tags="" data-search="Brandon McClelland Paris TX 2008">
   <a href="../cases/brandon-mcclelland.html">Brandon McClelland<span class="pi-meta">027 · 2008 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-allen" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Allen Des Moines IA 1864">
+<li class="pl-item" data-case-item data-case-id="john-allen" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IA" data-year="1864" data-tags="" data-search="John Allen Des Moines IA 1864">
   <a href="../cases/john-allen.html">John Allen<span class="pi-meta">028 · 1864 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="nicholas-a-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Nicholas A. Brown Davenport IA 2021">
+<li class="pl-item" data-case-item data-case-id="nicholas-a-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IA" data-year="2021" data-tags="" data-search="Nicholas A. Brown Davenport IA 2021">
   <a href="../cases/nicholas-a-brown.html">Nicholas A. Brown<span class="pi-meta">029 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="isaiah-nixon" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Isaiah Nixon Alston GA 1948">
+<li class="pl-item" data-case-item data-case-id="isaiah-nixon" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1948" data-tags="" data-search="Isaiah Nixon Alston GA 1948">
   <a href="../cases/isaiah-nixon.html">Isaiah Nixon<span class="pi-meta">030 · 1948 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="orangeburg-massacre" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Samuel Hammond, Henry Smith &amp; Delano Middleton Orangeburg SC 1968">
+<li class="pl-item" data-case-item data-case-id="orangeburg-massacre" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="SC" data-year="1968" data-tags="" data-search="Samuel Hammond, Henry Smith &amp; Delano Middleton Orangeburg SC 1968">
   <a href="../cases/orangeburg-massacre.html">Samuel Hammond, Henry Smith &amp; Delano Middleton<span class="pi-meta">031 · 1968 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="henry-marrow" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Henry &quot;Dickie&quot; Marrow Jr. Oxford NC 1970">
+<li class="pl-item" data-case-item data-case-id="henry-marrow" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="1970" data-tags="" data-search="Henry &quot;Dickie&quot; Marrow Jr. Oxford NC 1970">
   <a href="../cases/henry-marrow.html">Henry &quot;Dickie&quot; Marrow Jr.<span class="pi-meta">032 · 1970 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="donna-ann-reason" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Donna Ann Reason Chester PA 1970">
+<li class="pl-item" data-case-item data-case-id="donna-ann-reason" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="PA" data-year="1970" data-tags="" data-search="Donna Ann Reason Chester PA 1970">
   <a href="../cases/donna-ann-reason.html">Donna Ann Reason<span class="pi-meta">033 · 1970 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="elbert-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Elbert Williams Brownsville TN 1940">
+<li class="pl-item" data-case-item data-case-id="elbert-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TN" data-year="1940" data-tags="" data-search="Elbert Williams Brownsville TN 1940">
   <a href="../cases/elbert-williams.html">Elbert Williams<span class="pi-meta">034 · 1940 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="eddie-cook" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Eddie Cook Detroit MI 1965">
+<li class="pl-item" data-case-item data-case-id="eddie-cook" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="1965" data-tags="" data-search="Eddie Cook Detroit MI 1965">
   <a href="../cases/eddie-cook.html">Eddie Cook<span class="pi-meta">035 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="lee-edward-culbreath" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Lee Edward Culbreath Portland AR 1965">
+<li class="pl-item" data-case-item data-case-id="lee-edward-culbreath" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AR" data-year="1965" data-tags="" data-search="Lee Edward Culbreath Portland AR 1965">
   <a href="../cases/lee-edward-culbreath.html">Lee Edward Culbreath<span class="pi-meta">036 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="james-powell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="James Powell New York NY 1964">
+<li class="pl-item" data-case-item data-case-id="james-powell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="1964" data-tags="" data-search="James Powell New York NY 1964">
   <a href="../cases/james-powell.html">James Powell<span class="pi-meta">037 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="rogers-hamilton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Rogers Hamilton Hayneville AL 1957">
+<li class="pl-item" data-case-item data-case-id="rogers-hamilton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1957" data-tags="" data-search="Rogers Hamilton Hayneville AL 1957">
   <a href="../cases/rogers-hamilton.html">Rogers Hamilton<span class="pi-meta">038 · 1957 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="matthew-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Matthew Williams Salisbury MD 1931">
+<li class="pl-item" data-case-item data-case-id="matthew-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MD" data-year="1931" data-tags="" data-search="Matthew Williams Salisbury MD 1931">
   <a href="../cases/matthew-williams.html">Matthew Williams<span class="pi-meta">039 · 1931 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="carl-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Carl Hampton Houston TX 1970">
+<li class="pl-item" data-case-item data-case-id="carl-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="1970" data-tags="" data-search="Carl Hampton Houston TX 1970">
   <a href="../cases/carl-hampton.html">Carl Hampton<span class="pi-meta">040 · 1970 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="lester-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Lester Mitchell Dayton OH 1966">
+<li class="pl-item" data-case-item data-case-id="lester-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="1966" data-tags="" data-search="Lester Mitchell Dayton OH 1966">
   <a href="../cases/lester-mitchell.html">Lester Mitchell<span class="pi-meta">041 · 1966 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="timothy-thomas" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Timothy Thomas Cincinnati OH 2001">
+<li class="pl-item" data-case-item data-case-id="timothy-thomas" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2001" data-tags="" data-search="Timothy Thomas Cincinnati OH 2001">
   <a href="../cases/timothy-thomas.html">Timothy Thomas<span class="pi-meta">042 · 2001 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="whitfield-and-whitney" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ed Whitfield &amp; Earl Whitney Chapmanville WV 1919">
+<li class="pl-item" data-case-item data-case-id="whitfield-and-whitney" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WV" data-year="1919" data-tags="" data-search="Ed Whitfield &amp; Earl Whitney Chapmanville WV 1919">
   <a href="../cases/whitfield-and-whitney.html">Ed Whitfield &amp; Earl Whitney<span class="pi-meta">043 · 1919 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="will-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Will Brown Omaha NE 1919">
+<li class="pl-item" data-case-item data-case-id="will-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NE" data-year="1919" data-tags="" data-search="Will Brown Omaha NE 1919">
   <a href="../cases/will-brown.html">Will Brown<span class="pi-meta">044 · 1919 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="duluth-lynchings" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Elias Clayton, Elmer Jackson &amp; Isaac McGhie Duluth MN 1920">
+<li class="pl-item" data-case-item data-case-id="duluth-lynchings" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="1920" data-tags="" data-search="Elias Clayton, Elmer Jackson &amp; Isaac McGhie Duluth MN 1920">
   <a href="../cases/duluth-lynchings.html">Elias Clayton, Elmer Jackson &amp; Isaac McGhie<span class="pi-meta">045 · 1920 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="wade-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Wade Hampton Rock Springs WY 1917">
+<li class="pl-item" data-case-item data-case-id="wade-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WY" data-year="1917" data-tags="" data-search="Wade Hampton Rock Springs WY 1917">
   <a href="../cases/wade-hampton.html">Wade Hampton<span class="pi-meta">046 · 1917 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tulsa-race-massacre" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Tulsa Race Massacre Tulsa OK 1921">
+<li class="pl-item" data-case-item data-case-id="tulsa-race-massacre" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OK" data-year="1921" data-tags="" data-search="Tulsa Race Massacre Tulsa OK 1921">
   <a href="../cases/tulsa-race-massacre.html">Tulsa Race Massacre<span class="pi-meta">047 · 1921 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-henry-james" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Henry James Charlottesville VA 1898">
+<li class="pl-item" data-case-item data-case-id="john-henry-james" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="VA" data-year="1898" data-tags="" data-search="John Henry James Charlottesville VA 1898">
   <a href="../cases/john-henry-james.html">John Henry James<span class="pi-meta">048 · 1898 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="james-t-scott" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="James T. Scott Columbia MO 1923">
+<li class="pl-item" data-case-item data-case-id="james-t-scott" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="1923" data-tags="" data-search="James T. Scott Columbia MO 1923">
   <a href="../cases/james-t-scott.html">James T. Scott<span class="pi-meta">049 · 1923 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="george-tompkins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="George Tompkins Indianapolis IN 1922">
+<li class="pl-item" data-case-item data-case-id="george-tompkins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="1922" data-tags="" data-search="George Tompkins Indianapolis IN 1922">
   <a href="../cases/george-tompkins.html">George Tompkins<span class="pi-meta">050 · 1922 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="george-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="George White Wilmington DE 1903">
+<li class="pl-item" data-case-item data-case-id="george-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DE" data-year="1903" data-tags="" data-search="George White Wilmington DE 1903">
   <a href="../cases/george-white.html">George White<span class="pi-meta">051 · 1903 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="preston-porter-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Preston Porter Jr. Limon CO 1900">
+<li class="pl-item" data-case-item data-case-id="preston-porter-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CO" data-year="1900" data-tags="" data-search="Preston Porter Jr. Limon CO 1900">
   <a href="../cases/preston-porter-jr.html">Preston Porter Jr.<span class="pi-meta">052 · 1900 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="samuel-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Samuel Johnson (“Mingo Jack”) Eatontown NJ 1886">
+<li class="pl-item" data-case-item data-case-id="samuel-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NJ" data-year="1886" data-tags="" data-search="Samuel Johnson (“Mingo Jack”) Eatontown NJ 1886">
   <a href="../cases/samuel-johnson.html">Samuel Johnson (“Mingo Jack”)<span class="pi-meta">053 · 1886 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jeffery-zolliecoffer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jeffery “Jo Jo” Zolliecoffer Waterloo IA 1989">
+<li class="pl-item" data-case-item data-case-id="jeffery-zolliecoffer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IA" data-year="1989" data-tags="" data-search="Jeffery “Jo Jo” Zolliecoffer Waterloo IA 1989">
   <a href="../cases/jeffery-zolliecoffer.html">Jeffery “Jo Jo” Zolliecoffer<span class="pi-meta">054 · 1989 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="darrion-carrington" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Darrion “Pritz” Carrington Boston MA 2008">
+<li class="pl-item" data-case-item data-case-id="darrion-carrington" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MA" data-year="2008" data-tags="" data-search="Darrion “Pritz” Carrington Boston MA 2008">
   <a href="../cases/darrion-carrington.html">Darrion “Pritz” Carrington<span class="pi-meta">055 · 2008 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="carol-jenkins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Carol Jenkins Martinsville IN 1968">
+<li class="pl-item" data-case-item data-case-id="carol-jenkins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="1968" data-tags="" data-search="Carol Jenkins Martinsville IN 1968">
   <a href="../cases/carol-jenkins.html">Carol Jenkins<span class="pi-meta">056 · 1968 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-wesley-wilder" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Wesley Wilder Ruston LA 1965">
+<li class="pl-item" data-case-item data-case-id="john-wesley-wilder" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="1965" data-tags="" data-search="John Wesley Wilder Ruston LA 1965">
   <a href="../cases/john-wesley-wilder.html">John Wesley Wilder<span class="pi-meta">057 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="clinton-melton" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Clinton Melton Glendora MS 1955">
+<li class="pl-item" data-case-item data-case-id="clinton-melton" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1955" data-tags="" data-search="Clinton Melton Glendora MS 1955">
   <a href="../cases/clinton-melton.html">Clinton Melton<span class="pi-meta">058 · 1955 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alonzo-tucker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alonzo Tucker Coos Bay OR 1902">
+<li class="pl-item" data-case-item data-case-id="alonzo-tucker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OR" data-year="1902" data-tags="" data-search="Alonzo Tucker Coos Bay OR 1902">
   <a href="../cases/alonzo-tucker.html">Alonzo Tucker<span class="pi-meta">059 · 1902 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="timothy-pettis" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Timothy Pettis Coos Bay OR 1924">
+<li class="pl-item" data-case-item data-case-id="timothy-pettis" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OR" data-year="1924" data-tags="" data-search="Timothy Pettis Coos Bay OR 1924">
   <a href="../cases/timothy-pettis.html">Timothy Pettis<span class="pi-meta">060 · 1924 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="william-harvey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="William “Sam Joe” Harvey Salt Lake City UT 1883">
+<li class="pl-item" data-case-item data-case-id="william-harvey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="UT" data-year="1883" data-tags="" data-search="William “Sam Joe” Harvey Salt Lake City UT 1883">
   <a href="../cases/william-harvey.html">William “Sam Joe” Harvey<span class="pi-meta">061 · 1883 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="thomas-coleman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Thomas Coleman Salt Lake City UT 1866">
+<li class="pl-item" data-case-item data-case-id="thomas-coleman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="UT" data-year="1866" data-tags="" data-search="Thomas Coleman Salt Lake City UT 1866">
   <a href="../cases/thomas-coleman.html">Thomas Coleman<span class="pi-meta">062 · 1866 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="leonard-mccowin" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Leonard McCowin Center TX 1947">
+<li class="pl-item" data-case-item data-case-id="leonard-mccowin" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="1947" data-tags="" data-search="Leonard McCowin Center TX 1947">
   <a href="../cases/leonard-mccowin.html">Leonard McCowin<span class="pi-meta">063 · 1947 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="felix-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Felix Hall Fort Benning GA 1941">
+<li class="pl-item" data-case-item data-case-id="felix-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1941" data-tags="" data-search="Felix Hall Fort Benning GA 1941">
   <a href="../cases/felix-hall.html">Felix Hall<span class="pi-meta">064 · 1941 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="dan-carter-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Dan Carter Sanders Cleveland Township NC 1946">
+<li class="pl-item" data-case-item data-case-id="dan-carter-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="1946" data-tags="" data-search="Dan Carter Sanders Cleveland Township NC 1946">
   <a href="../cases/dan-carter-sanders.html">Dan Carter Sanders<span class="pi-meta">065 · 1946 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="charles-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Charles Brown Benton MS 1957">
+<li class="pl-item" data-case-item data-case-id="charles-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1957" data-tags="" data-search="Charles Brown Benton MS 1957">
   <a href="../cases/charles-brown.html">Charles Brown<span class="pi-meta">066 · 1957 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="willie-countryman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Willie Countryman Dawson GA 1958">
+<li class="pl-item" data-case-item data-case-id="willie-countryman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1958" data-tags="" data-search="Willie Countryman Dawson GA 1958">
   <a href="../cases/willie-countryman.html">Willie Countryman<span class="pi-meta">067 · 1958 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="donald-raspberry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Donald Raspberry Okolona MS 1965">
+<li class="pl-item" data-case-item data-case-id="donald-raspberry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1965" data-tags="" data-search="Donald Raspberry Okolona MS 1965">
   <a href="../cases/donald-raspberry.html">Donald Raspberry<span class="pi-meta">068 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="william-henry-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="William Henry Lee Goshen Springs MS 1965">
+<li class="pl-item" data-case-item data-case-id="william-henry-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1965" data-tags="" data-search="William Henry Lee Goshen Springs MS 1965">
   <a href="../cases/william-henry-lee.html">William Henry Lee<span class="pi-meta">069 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ed-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ed Smith State Line MS 1958">
+<li class="pl-item" data-case-item data-case-id="ed-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1958" data-tags="" data-search="Ed Smith State Line MS 1958">
   <a href="../cases/ed-smith.html">Ed Smith<span class="pi-meta">070 · 1958 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="lamar-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Lamar Smith Brookhaven MS 1955">
+<li class="pl-item" data-case-item data-case-id="lamar-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1955" data-tags="" data-search="Lamar Smith Brookhaven MS 1955">
   <a href="../cases/lamar-smith.html">Lamar Smith<span class="pi-meta">071 · 1955 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="joseph-dumas" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Joseph Dumas Perry FL 1962">
+<li class="pl-item" data-case-item data-case-id="joseph-dumas" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="1962" data-tags="Traffic Stop" data-search="Joseph Dumas Perry FL 1962">
   <a href="../cases/joseph-dumas.html">Joseph Dumas<span class="pi-meta">072 · 1962 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="vincent-dahmon" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Vincent Dahmon Natchez MS 1966">
+<li class="pl-item" data-case-item data-case-id="vincent-dahmon" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1966" data-tags="" data-search="Vincent Dahmon Natchez MS 1966">
   <a href="../cases/vincent-dahmon.html">Vincent Dahmon<span class="pi-meta">073 · 1966 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jimmie-lee-jackson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jimmie Lee Jackson Marion AL 1965">
+<li class="pl-item" data-case-item data-case-id="jimmie-lee-jackson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1965" data-tags="" data-search="Jimmie Lee Jackson Marion AL 1965">
   <a href="../cases/jimmie-lee-jackson.html">Jimmie Lee Jackson<span class="pi-meta">074 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="thomas-brewer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Dr. Thomas Brewer Columbus GA 1956">
+<li class="pl-item" data-case-item data-case-id="thomas-brewer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1956" data-tags="" data-search="Dr. Thomas Brewer Columbus GA 1956">
   <a href="../cases/thomas-brewer.html">Dr. Thomas Brewer<span class="pi-meta">075 · 1956 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ernest-jells" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ernest Jells Clarksdale MS 1963">
+<li class="pl-item" data-case-item data-case-id="ernest-jells" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1963" data-tags="" data-search="Ernest Jells Clarksdale MS 1963">
   <a href="../cases/ernest-jells.html">Ernest Jells<span class="pi-meta">076 · 1963 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="benjamin-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Benjamin Brown Jackson MS 1967">
+<li class="pl-item" data-case-item data-case-id="benjamin-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1967" data-tags="" data-search="Benjamin Brown Jackson MS 1967">
   <a href="../cases/benjamin-brown.html">Benjamin Brown<span class="pi-meta">077 · 1967 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="larry-payne" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Larry Payne Memphis TN 1968">
+<li class="pl-item" data-case-item data-case-id="larry-payne" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TN" data-year="1968" data-tags="" data-search="Larry Payne Memphis TN 1968">
   <a href="../cases/larry-payne.html">Larry Payne<span class="pi-meta">078 · 1968 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="herbert-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Herbert Lee Liberty MS 1961">
+<li class="pl-item" data-case-item data-case-id="herbert-lee" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1961" data-tags="" data-search="Herbert Lee Liberty MS 1961">
   <a href="../cases/herbert-lee.html">Herbert Lee<span class="pi-meta">079 · 1961 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="samuel-younge-jr" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Samuel Younge Jr. Tuskegee AL 1966">
+<li class="pl-item" data-case-item data-case-id="samuel-younge-jr" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1966" data-tags="" data-search="Samuel Younge Jr. Tuskegee AL 1966">
   <a href="../cases/samuel-younge-jr.html">Samuel Younge Jr.<span class="pi-meta">080 · 1966 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="isaiah-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Isaiah Taylor Ruleville MS 1964">
+<li class="pl-item" data-case-item data-case-id="isaiah-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1964" data-tags="" data-search="Isaiah Taylor Ruleville MS 1964">
   <a href="../cases/isaiah-taylor.html">Isaiah Taylor<span class="pi-meta">081 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="maceo-snipes" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Maceo Snipes Butler GA 1946">
+<li class="pl-item" data-case-item data-case-id="maceo-snipes" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1946" data-tags="" data-search="Maceo Snipes Butler GA 1946">
   <a href="../cases/maceo-snipes.html">Maceo Snipes<span class="pi-meta">082 · 1946 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="james-earl-motley" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="James Earl Motley Wetumpka AL 1966">
+<li class="pl-item" data-case-item data-case-id="james-earl-motley" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1966" data-tags="" data-search="James Earl Motley Wetumpka AL 1966">
   <a href="../cases/james-earl-motley.html">James Earl Motley<span class="pi-meta">083 · 1966 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="thad-christian" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Thad Christian Anniston AL 1965">
+<li class="pl-item" data-case-item data-case-id="thad-christian" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1965" data-tags="" data-search="Thad Christian Anniston AL 1965">
   <a href="../cases/thad-christian.html">Thad Christian<span class="pi-meta">084 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="isaiah-henry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Isaiah Henry Greensburg LA 1954">
+<li class="pl-item" data-case-item data-case-id="isaiah-henry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="1954" data-tags="" data-search="Isaiah Henry Greensburg LA 1954">
   <a href="../cases/isaiah-henry.html">Isaiah Henry<span class="pi-meta">085 · 1954 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-earl-reese" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Earl Reese Mayflower TX 1955">
+<li class="pl-item" data-case-item data-case-id="john-earl-reese" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="1955" data-tags="" data-search="John Earl Reese Mayflower TX 1955">
   <a href="../cases/john-earl-reese.html">John Earl Reese<span class="pi-meta">086 · 1955 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="frank-andrews" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Frank Andrews Lisman AL 1964">
+<li class="pl-item" data-case-item data-case-id="frank-andrews" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1964" data-tags="" data-search="Frank Andrews Lisman AL 1964">
   <a href="../cases/frank-andrews.html">Frank Andrews<span class="pi-meta">087 · 1964 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alexis-patterson" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Alexis Patterson Milwaukee WI 2002">
+<li class="pl-item" data-case-item data-case-id="alexis-patterson" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="WI" data-year="2002" data-tags="" data-search="Alexis Patterson Milwaukee WI 2002">
   <a href="../cases/alexis-patterson.html">Alexis Patterson<span class="pi-meta">088 · 2002 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="nacomie-freeman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Nacomie Freeman Phoenix AZ 2004">
+<li class="pl-item" data-case-item data-case-id="nacomie-freeman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AZ" data-year="2004" data-tags="" data-search="Nacomie Freeman Phoenix AZ 2004">
   <a href="../cases/nacomie-freeman.html">Nacomie Freeman<span class="pi-meta">089 · 2004 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="quincy-booker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Quincy Booker Albuquerque NM 2011">
+<li class="pl-item" data-case-item data-case-id="quincy-booker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NM" data-year="2011" data-tags="" data-search="Quincy Booker Albuquerque NM 2011">
   <a href="../cases/quincy-booker.html">Quincy Booker<span class="pi-meta">090 · 2011 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="julius-dubouse" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Julius Dubouse Anchorage AK 1998">
+<li class="pl-item" data-case-item data-case-id="julius-dubouse" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AK" data-year="1998" data-tags="" data-search="Julius Dubouse Anchorage AK 1998">
   <a href="../cases/julius-dubouse.html">Julius Dubouse<span class="pi-meta">091 · 1998 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kierre-davies" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kierre Davies Fargo ND 2022">
+<li class="pl-item" data-case-item data-case-id="kierre-davies" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="ND" data-year="2022" data-tags="" data-search="Kierre Davies Fargo ND 2022">
   <a href="../cases/kierre-davies.html">Kierre Davies<span class="pi-meta">092 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="emmett-till" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Emmett Till Money MS 1955">
+<li class="pl-item" data-case-item data-case-id="emmett-till" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="1955" data-tags="" data-search="Emmett Till Money MS 1955">
   <a href="../cases/emmett-till.html">Emmett Till<span class="pi-meta">093 · 1955 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="malcolm-x" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Malcolm X New York NY 1965">
+<li class="pl-item" data-case-item data-case-id="malcolm-x" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="1965" data-tags="" data-search="Malcolm X New York NY 1965">
   <a href="../cases/malcolm-x.html">Malcolm X<span class="pi-meta">094 · 1965 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="fred-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Fred Hampton Chicago IL 1969">
+<li class="pl-item" data-case-item data-case-id="fred-hampton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="1969" data-tags="" data-search="Fred Hampton Chicago IL 1969">
   <a href="../cases/fred-hampton.html">Fred Hampton<span class="pi-meta">095 · 1969 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="amadou-diallo" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Amadou Diallo New York NY 1999">
+<li class="pl-item" data-case-item data-case-id="amadou-diallo" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="1999" data-tags="" data-search="Amadou Diallo New York NY 1999">
   <a href="../cases/amadou-diallo.html">Amadou Diallo<span class="pi-meta">096 · 1999 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="sean-bell" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Sean Bell Queens NY 2006">
+<li class="pl-item" data-case-item data-case-id="sean-bell" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2006" data-tags="" data-search="Sean Bell Queens NY 2006">
   <a href="../cases/sean-bell.html">Sean Bell<span class="pi-meta">097 · 2006 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="trayvon-martin" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Trayvon Martin Sanford FL 2012">
+<li class="pl-item" data-case-item data-case-id="trayvon-martin" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="2012" data-tags="" data-search="Trayvon Martin Sanford FL 2012">
   <a href="../cases/trayvon-martin.html">Trayvon Martin<span class="pi-meta">098 · 2012 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="freddie-gray" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Freddie Gray Baltimore MD 2015">
+<li class="pl-item" data-case-item data-case-id="freddie-gray" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MD" data-year="2015" data-tags="" data-search="Freddie Gray Baltimore MD 2015">
   <a href="../cases/freddie-gray.html">Freddie Gray<span class="pi-meta">099 · 2015 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="breonna-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Breonna Taylor Louisville KY 2020">
+<li class="pl-item" data-case-item data-case-id="breonna-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="KY" data-year="2020" data-tags="" data-search="Breonna Taylor Louisville KY 2020">
   <a href="../cases/breonna-taylor.html">Breonna Taylor<span class="pi-meta">100 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="rekia-boyd" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Rekia Boyd Chicago IL 2012">
+<li class="pl-item" data-case-item data-case-id="rekia-boyd" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2012" data-tags="" data-search="Rekia Boyd Chicago IL 2012">
   <a href="../cases/rekia-boyd.html">Rekia Boyd<span class="pi-meta">101 · 2012 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="eric-garner" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Eric Garner Staten Island NY 2014">
+<li class="pl-item" data-case-item data-case-id="eric-garner" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2014" data-tags="" data-search="Eric Garner Staten Island NY 2014">
   <a href="../cases/eric-garner.html">Eric Garner<span class="pi-meta">102 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tamir-rice" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Tamir Rice Cleveland OH 2014">
+<li class="pl-item" data-case-item data-case-id="tamir-rice" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2014" data-tags="" data-search="Tamir Rice Cleveland OH 2014">
   <a href="../cases/tamir-rice.html">Tamir Rice<span class="pi-meta">103 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="philando-castile" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Philando Castile Falcon Heights MN 2016">
+<li class="pl-item" data-case-item data-case-id="philando-castile" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2016" data-tags="Traffic Stop" data-search="Philando Castile Falcon Heights MN 2016">
   <a href="../cases/philando-castile.html">Philando Castile<span class="pi-meta">104 · 2016 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="stephon-clark" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Stephon Clark Sacramento CA 2018">
+<li class="pl-item" data-case-item data-case-id="stephon-clark" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Stephon Clark Sacramento CA 2018">
   <a href="../cases/stephon-clark.html">Stephon Clark<span class="pi-meta">105 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="michael-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Michael Brown Ferguson MO 2014">
+<li class="pl-item" data-case-item data-case-id="michael-brown" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="2014" data-tags="" data-search="Michael Brown Ferguson MO 2014">
   <a href="../cases/michael-brown.html">Michael Brown<span class="pi-meta">106 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alton-sterling" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alton Sterling Baton Rouge LA 2016">
+<li class="pl-item" data-case-item data-case-id="alton-sterling" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="2016" data-tags="" data-search="Alton Sterling Baton Rouge LA 2016">
   <a href="../cases/alton-sterling.html">Alton Sterling<span class="pi-meta">107 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-crawford-iii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Crawford III Beavercreek OH 2014">
+<li class="pl-item" data-case-item data-case-id="john-crawford-iii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2014" data-tags="" data-search="John Crawford III Beavercreek OH 2014">
   <a href="../cases/john-crawford-iii.html">John Crawford III<span class="pi-meta">108 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="sandra-bland" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Sandra Bland Prairie View TX 2015">
+<li class="pl-item" data-case-item data-case-id="sandra-bland" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2015" data-tags="Traffic Stop" data-search="Sandra Bland Prairie View TX 2015">
   <a href="../cases/sandra-bland.html">Sandra Bland<span class="pi-meta">109 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="terence-crutcher" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Terence Crutcher Tulsa OK 2016">
+<li class="pl-item" data-case-item data-case-id="terence-crutcher" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OK" data-year="2016" data-tags="" data-search="Terence Crutcher Tulsa OK 2016">
   <a href="../cases/terence-crutcher.html">Terence Crutcher<span class="pi-meta">110 · 2016 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="samuel-dubose" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Samuel DuBose Cincinnati OH 2015">
+<li class="pl-item" data-case-item data-case-id="samuel-dubose" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2015" data-tags="Traffic Stop" data-search="Samuel DuBose Cincinnati OH 2015">
   <a href="../cases/samuel-dubose.html">Samuel DuBose<span class="pi-meta">111 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="keith-lamont-scott" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Keith Lamont Scott Charlotte NC 2016">
+<li class="pl-item" data-case-item data-case-id="keith-lamont-scott" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2016" data-tags="" data-search="Keith Lamont Scott Charlotte NC 2016">
   <a href="../cases/keith-lamont-scott.html">Keith Lamont Scott<span class="pi-meta">112 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ezell-ford" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ezell Ford Los Angeles CA 2014">
+<li class="pl-item" data-case-item data-case-id="ezell-ford" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2014" data-tags="" data-search="Ezell Ford Los Angeles CA 2014">
   <a href="../cases/ezell-ford.html">Ezell Ford<span class="pi-meta">113 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="danroy-henry-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Danroy Henry Jr. Thornwood NY 2010">
+<li class="pl-item" data-case-item data-case-id="danroy-henry-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2010" data-tags="" data-search="Danroy Henry Jr. Thornwood NY 2010">
   <a href="../cases/danroy-henry-jr.html">Danroy Henry Jr.<span class="pi-meta">114 · 2010 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kenneth-chamberlain-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kenneth Chamberlain Sr. White Plains NY 2011">
+<li class="pl-item" data-case-item data-case-id="kenneth-chamberlain-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2011" data-tags="" data-search="Kenneth Chamberlain Sr. White Plains NY 2011">
   <a href="../cases/kenneth-chamberlain-sr.html">Kenneth Chamberlain Sr.<span class="pi-meta">115 · 2011 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jonathan-ferrell" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jonathan Ferrell Charlotte NC 2013">
+<li class="pl-item" data-case-item data-case-id="jonathan-ferrell" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2013" data-tags="" data-search="Jonathan Ferrell Charlotte NC 2013">
   <a href="../cases/jonathan-ferrell.html">Jonathan Ferrell<span class="pi-meta">116 · 2013 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="milton-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Milton Hall Saginaw MI 2012">
+<li class="pl-item" data-case-item data-case-id="milton-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2012" data-tags="" data-search="Milton Hall Saginaw MI 2012">
   <a href="../cases/milton-hall.html">Milton Hall<span class="pi-meta">117 · 2012 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="miriam-carey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Miriam Carey Washington DC 2013">
+<li class="pl-item" data-case-item data-case-id="miriam-carey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DC" data-year="2013" data-tags="Vehicle Pursuit" data-search="Miriam Carey Washington DC 2013">
   <a href="../cases/miriam-carey.html">Miriam Carey<span class="pi-meta">118 · 2013 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="daniel-prude" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Daniel Prude Rochester NY 2020">
+<li class="pl-item" data-case-item data-case-id="daniel-prude" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2020" data-tags="Custody / Restraint Death|Mental Health Crisis" data-search="Daniel Prude Rochester NY 2020">
   <a href="../cases/daniel-prude.html">Daniel Prude<span class="pi-meta">119 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="manuel-ellis" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Manuel Ellis Tacoma WA 2020">
+<li class="pl-item" data-case-item data-case-id="manuel-ellis" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WA" data-year="2020" data-tags="Custody / Restraint Death" data-search="Manuel Ellis Tacoma WA 2020">
   <a href="../cases/manuel-ellis.html">Manuel Ellis<span class="pi-meta">120 · 2020 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="relisha-rudd" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Relisha Rudd Washington DC 2014">
+<li class="pl-item" data-case-item data-case-id="relisha-rudd" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="DC" data-year="2014" data-tags="" data-search="Relisha Rudd Washington DC 2014">
   <a href="../cases/relisha-rudd.html">Relisha Rudd<span class="pi-meta">121 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="asha-degree" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Asha Degree Shelby NC 2000">
+<li class="pl-item" data-case-item data-case-id="asha-degree" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2000" data-tags="" data-search="Asha Degree Shelby NC 2000">
   <a href="../cases/asha-degree.html">Asha Degree<span class="pi-meta">122 · 2000 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="keeshae-jacobs" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Keeshae Jacobs Richmond VA 2016">
+<li class="pl-item" data-case-item data-case-id="keeshae-jacobs" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="VA" data-year="2016" data-tags="" data-search="Keeshae Jacobs Richmond VA 2016">
   <a href="../cases/keeshae-jacobs.html">Keeshae Jacobs<span class="pi-meta">123 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kierra-coles" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Kierra Coles Chicago IL 2018">
+<li class="pl-item" data-case-item data-case-id="kierra-coles" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2018" data-tags="" data-search="Kierra Coles Chicago IL 2018">
   <a href="../cases/kierra-coles.html">Kierra Coles<span class="pi-meta">124 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="nakyla-williams" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Nakyla Williams Indianapolis IN 2021">
+<li class="pl-item" data-case-item data-case-id="nakyla-williams" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="IN" data-year="2021" data-tags="" data-search="Nakyla Williams Indianapolis IN 2021">
   <a href="../cases/nakyla-williams.html">Nakyla Williams<span class="pi-meta">125 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jahi-turner" data-status="unresolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Jahi Turner San Diego CA 2002">
+<li class="pl-item" data-case-item data-case-id="jahi-turner" data-status="unresolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2002" data-tags="" data-search="Jahi Turner San Diego CA 2002">
   <a href="../cases/jahi-turner.html">Jahi Turner<span class="pi-meta">126 · 2002 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="anwar-green" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Anwar Green Newark NJ 2001">
+<li class="pl-item" data-case-item data-case-id="anwar-green" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="NJ" data-year="2001" data-tags="" data-search="Anwar Green Newark NJ 2001">
   <a href="../cases/anwar-green.html">Anwar Green<span class="pi-meta">127 · 2001 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="brown-family" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Carolyn, Sheketah, Barry &amp; Brandon Brown Port St. Lucie FL 1985">
+<li class="pl-item" data-case-item data-case-id="brown-family" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="FL" data-year="1985" data-tags="" data-search="Carolyn, Sheketah, Barry &amp; Brandon Brown Port St. Lucie FL 1985">
   <a href="../cases/brown-family.html">Carolyn, Sheketah, Barry &amp; Brandon Brown<span class="pi-meta">128 · 1985 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jalesa-reynolds" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Jalesa Chantell Reynolds Scotland Neck NC 2010">
+<li class="pl-item" data-case-item data-case-id="jalesa-reynolds" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2010" data-tags="" data-search="Jalesa Chantell Reynolds Scotland Neck NC 2010">
   <a href="../cases/jalesa-reynolds.html">Jalesa Chantell Reynolds<span class="pi-meta">129 · 2010 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tasha-wright" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Tasha Shante Wright Dallas TX 1989">
+<li class="pl-item" data-case-item data-case-id="tasha-wright" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="TX" data-year="1989" data-tags="" data-search="Tasha Shante Wright Dallas TX 1989">
   <a href="../cases/tasha-wright.html">Tasha Shante Wright<span class="pi-meta">130 · 1989 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="barbara-dreher" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Barbara Jean Dreher Washington DC 1984">
+<li class="pl-item" data-case-item data-case-id="barbara-dreher" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="DC" data-year="1984" data-tags="" data-search="Barbara Jean Dreher Washington DC 1984">
   <a href="../cases/barbara-dreher.html">Barbara Jean Dreher<span class="pi-meta">131 · 1984 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="millbrook-twins" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Dannette &amp; Jeannette Millbrook Augusta GA 1990">
+<li class="pl-item" data-case-item data-case-id="millbrook-twins" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1990" data-tags="" data-search="Dannette &amp; Jeannette Millbrook Augusta GA 1990">
   <a href="../cases/millbrook-twins.html">Dannette &amp; Jeannette Millbrook<span class="pi-meta">132 · 1990 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="pshara-jones" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="Pshara Marie Jones Claremore OK 2015">
+<li class="pl-item" data-case-item data-case-id="pshara-jones" data-status="unsolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="OK" data-year="2015" data-tags="" data-search="Pshara Marie Jones Claremore OK 2015">
   <a href="../cases/pshara-jones.html">Pshara Marie Jones<span class="pi-meta">133 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="clinton-avenue-five" data-status="unresolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-search="The Clinton Avenue Five Newark NJ 1978">
+<li class="pl-item" data-case-item data-case-id="clinton-avenue-five" data-status="unresolved" data-case-type="missing_persons" data-series-flag="false" data-new-case="false" data-state="NJ" data-year="1978" data-tags="" data-search="The Clinton Avenue Five Newark NJ 1978">
   <a href="../cases/clinton-avenue-five.html">The Clinton Avenue Five<span class="pi-meta">134 · 1978 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="anthony-lamar-smith" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Anthony Lamar Smith St. Louis MO 2011">
+<li class="pl-item" data-case-item data-case-id="anthony-lamar-smith" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="2011" data-tags="Vehicle Pursuit" data-search="Anthony Lamar Smith St. Louis MO 2011">
   <a href="../cases/anthony-lamar-smith.html">Anthony Lamar Smith<span class="pi-meta">135 · 2011 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="christian-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Christian Taylor Arlington TX 2015">
+<li class="pl-item" data-case-item data-case-id="christian-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2015" data-tags="" data-search="Christian Taylor Arlington TX 2015">
   <a href="../cases/christian-taylor.html">Christian Taylor<span class="pi-meta">136 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kajieme-powell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kajieme Powell St. Louis MO 2014">
+<li class="pl-item" data-case-item data-case-id="kajieme-powell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="2014" data-tags="Mental Health Crisis" data-search="Kajieme Powell St. Louis MO 2014">
   <a href="../cases/kajieme-powell.html">Kajieme Powell<span class="pi-meta">137 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="vonderrit-myers-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="VonDerrit Myers Jr. St. Louis MO 2014">
+<li class="pl-item" data-case-item data-case-id="vonderrit-myers-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="2014" data-tags="" data-search="VonDerrit Myers Jr. St. Louis MO 2014">
   <a href="../cases/vonderrit-myers-jr.html">VonDerrit Myers Jr.<span class="pi-meta">138 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="legrier-and-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Quintonio LeGrier &amp; Bettie Jones Chicago IL 2015">
+<li class="pl-item" data-case-item data-case-id="legrier-and-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2015" data-tags="Mental Health Crisis" data-search="Quintonio LeGrier &amp; Bettie Jones Chicago IL 2015">
   <a href="../cases/legrier-and-jones.html">Quintonio LeGrier &amp; Bettie Jones<span class="pi-meta">139 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="willie-mccoy" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Willie McCoy Vallejo CA 2019">
+<li class="pl-item" data-case-item data-case-id="willie-mccoy" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2019" data-tags="" data-search="Willie McCoy Vallejo CA 2019">
   <a href="../cases/willie-mccoy.html">Willie McCoy<span class="pi-meta">140 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="marcus-david-peters" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Marcus-David Peters Richmond VA 2018">
+<li class="pl-item" data-case-item data-case-id="marcus-david-peters" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="VA" data-year="2018" data-tags="Mental Health Crisis" data-search="Marcus-David Peters Richmond VA 2018">
   <a href="../cases/marcus-david-peters.html">Marcus-David Peters<span class="pi-meta">141 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ronell-foster" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ronell Foster Vallejo CA 2018">
+<li class="pl-item" data-case-item data-case-id="ronell-foster" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Ronell Foster Vallejo CA 2018">
   <a href="../cases/ronell-foster.html">Ronell Foster<span class="pi-meta">142 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="mansur-ball-bey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Mansur Ball-Bey St. Louis MO 2015">
+<li class="pl-item" data-case-item data-case-id="mansur-ball-bey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MO" data-year="2015" data-tags="" data-search="Mansur Ball-Bey St. Louis MO 2015">
   <a href="../cases/mansur-ball-bey.html">Mansur Ball-Bey<span class="pi-meta">143 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="stephon-watts" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Stephon Watts Calumet City IL 2012">
+<li class="pl-item" data-case-item data-case-id="stephon-watts" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2012" data-tags="" data-search="Stephon Watts Calumet City IL 2012">
   <a href="../cases/stephon-watts.html">Stephon Watts<span class="pi-meta">144 · 2012 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="dontre-hamilton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Dontre Hamilton Milwaukee WI 2014">
+<li class="pl-item" data-case-item data-case-id="dontre-hamilton" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WI" data-year="2014" data-tags="Mental Health Crisis" data-search="Dontre Hamilton Milwaukee WI 2014">
   <a href="../cases/dontre-hamilton.html">Dontre Hamilton<span class="pi-meta">145 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jerame-reid" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jerame Reid Bridgeton NJ 2014">
+<li class="pl-item" data-case-item data-case-id="jerame-reid" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NJ" data-year="2014" data-tags="Traffic Stop" data-search="Jerame Reid Bridgeton NJ 2014">
   <a href="../cases/jerame-reid.html">Jerame Reid<span class="pi-meta">146 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jamar-clark" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jamar Clark Minneapolis MN 2015">
+<li class="pl-item" data-case-item data-case-id="jamar-clark" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2015" data-tags="" data-search="Jamar Clark Minneapolis MN 2015">
   <a href="../cases/jamar-clark.html">Jamar Clark<span class="pi-meta">147 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jason-harrison" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jason Harrison Dallas TX 2014">
+<li class="pl-item" data-case-item data-case-id="jason-harrison" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2014" data-tags="" data-search="Jason Harrison Dallas TX 2014">
   <a href="../cases/jason-harrison.html">Jason Harrison<span class="pi-meta">148 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alfred-olango" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alfred Olango El Cajon CA 2016">
+<li class="pl-item" data-case-item data-case-id="alfred-olango" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2016" data-tags="" data-search="Alfred Olango El Cajon CA 2016">
   <a href="../cases/alfred-olango.html">Alfred Olango<span class="pi-meta">149 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="india-kager" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="India Kager Virginia Beach VA 2015">
+<li class="pl-item" data-case-item data-case-id="india-kager" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="VA" data-year="2015" data-tags="" data-search="India Kager Virginia Beach VA 2015">
   <a href="../cases/india-kager.html">India Kager<span class="pi-meta">150 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jayland-walker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jayland Walker Akron OH 2022">
+<li class="pl-item" data-case-item data-case-id="jayland-walker" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2022" data-tags="Traffic Stop|Vehicle Pursuit" data-search="Jayland Walker Akron OH 2022">
   <a href="../cases/jayland-walker.html">Jayland Walker<span class="pi-meta">151 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="takiya-young" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ta&#x27;Kiya Young Blendon Township OH 2023">
+<li class="pl-item" data-case-item data-case-id="takiya-young" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2023" data-tags="" data-search="Ta&#x27;Kiya Young Blendon Township OH 2023">
   <a href="../cases/takiya-young.html">Ta&#x27;Kiya Young<span class="pi-meta">152 · 2023 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="patrick-lyoya" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Patrick Lyoya Grand Rapids MI 2022">
+<li class="pl-item" data-case-item data-case-id="patrick-lyoya" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2022" data-tags="Traffic Stop" data-search="Patrick Lyoya Grand Rapids MI 2022">
   <a href="../cases/patrick-lyoya.html">Patrick Lyoya<span class="pi-meta">153 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="rayshard-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Rayshard Brooks Atlanta GA 2020">
+<li class="pl-item" data-case-item data-case-id="rayshard-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="2020" data-tags="" data-search="Rayshard Brooks Atlanta GA 2020">
   <a href="../cases/rayshard-brooks.html">Rayshard Brooks<span class="pi-meta">154 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="amir-locke" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Amir Locke Minneapolis MN 2022">
+<li class="pl-item" data-case-item data-case-id="amir-locke" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2022" data-tags="" data-search="Amir Locke Minneapolis MN 2022">
   <a href="../cases/amir-locke.html">Amir Locke<span class="pi-meta">155 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="andrew-brown-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Andrew Brown Jr. Elizabeth City NC 2021">
+<li class="pl-item" data-case-item data-case-id="andrew-brown-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2021" data-tags="" data-search="Andrew Brown Jr. Elizabeth City NC 2021">
   <a href="../cases/andrew-brown-jr.html">Andrew Brown Jr.<span class="pi-meta">156 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="aiyana-stanley-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Aiyana Stanley-Jones Detroit MI 2010">
+<li class="pl-item" data-case-item data-case-id="aiyana-stanley-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2010" data-tags="" data-search="Aiyana Stanley-Jones Detroit MI 2010">
   <a href="../cases/aiyana-stanley-jones.html">Aiyana Stanley-Jones<span class="pi-meta">157 · 2010 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="aura-rosser" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Aura Rosser Ann Arbor MI 2014">
+<li class="pl-item" data-case-item data-case-id="aura-rosser" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2014" data-tags="" data-search="Aura Rosser Ann Arbor MI 2014">
   <a href="../cases/aura-rosser.html">Aura Rosser<span class="pi-meta">158 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="terrance-kellom" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Terrance Kellom Detroit MI 2015">
+<li class="pl-item" data-case-item data-case-id="terrance-kellom" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2015" data-tags="" data-search="Terrance Kellom Detroit MI 2015">
   <a href="../cases/terrance-kellom.html">Terrance Kellom<span class="pi-meta">159 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kendrec-mcdade" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kendrec McDade Pasadena CA 2012">
+<li class="pl-item" data-case-item data-case-id="kendrec-mcdade" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2012" data-tags="" data-search="Kendrec McDade Pasadena CA 2012">
   <a href="../cases/kendrec-mcdade.html">Kendrec McDade<span class="pi-meta">160 · 2012 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="miles-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Miles Hall Walnut Creek CA 2019">
+<li class="pl-item" data-case-item data-case-id="miles-hall" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2019" data-tags="Mental Health Crisis" data-search="Miles Hall Walnut Creek CA 2019">
   <a href="../cases/miles-hall.html">Miles Hall<span class="pi-meta">161 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jonathan-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jonathan Sanders Stonewall MS 2015">
+<li class="pl-item" data-case-item data-case-id="jonathan-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MS" data-year="2015" data-tags="Custody / Restraint Death" data-search="Jonathan Sanders Stonewall MS 2015">
   <a href="../cases/jonathan-sanders.html">Jonathan Sanders<span class="pi-meta">162 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tyre-king" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Tyre King Columbus OH 2016">
+<li class="pl-item" data-case-item data-case-id="tyre-king" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2016" data-tags="" data-search="Tyre King Columbus OH 2016">
   <a href="../cases/tyre-king.html">Tyre King<span class="pi-meta">163 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="john-neville" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="John Neville Winston-Salem NC 2019">
+<li class="pl-item" data-case-item data-case-id="john-neville" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2019" data-tags="Custody / Restraint Death" data-search="John Neville Winston-Salem NC 2019">
   <a href="../cases/john-neville.html">John Neville<span class="pi-meta">164 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ronald-greene" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ronald Greene Monroe LA 2019">
+<li class="pl-item" data-case-item data-case-id="ronald-greene" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="2019" data-tags="Vehicle Pursuit" data-search="Ronald Greene Monroe LA 2019">
   <a href="../cases/ronald-greene.html">Ronald Greene<span class="pi-meta">165 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alonzo-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alonzo Smith Washington DC 2015">
+<li class="pl-item" data-case-item data-case-id="alonzo-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DC" data-year="2015" data-tags="" data-search="Alonzo Smith Washington DC 2015">
   <a href="../cases/alonzo-smith.html">Alonzo Smith<span class="pi-meta">166 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="darius-tarver" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Darius Tarver Denton TX 2020">
+<li class="pl-item" data-case-item data-case-id="darius-tarver" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2020" data-tags="" data-search="Darius Tarver Denton TX 2020">
   <a href="../cases/darius-tarver.html">Darius Tarver<span class="pi-meta">167 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="chinedu-okobi" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Chinedu Okobi Millbrae CA 2018">
+<li class="pl-item" data-case-item data-case-id="chinedu-okobi" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Chinedu Okobi Millbrae CA 2018">
   <a href="../cases/chinedu-okobi.html">Chinedu Okobi<span class="pi-meta">168 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="osaze-osagie" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Osaze Osagie State College PA 2019">
+<li class="pl-item" data-case-item data-case-id="osaze-osagie" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="PA" data-year="2019" data-tags="Mental Health Crisis" data-search="Osaze Osagie State College PA 2019">
   <a href="../cases/osaze-osagie.html">Osaze Osagie<span class="pi-meta">169 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="julian-lewis" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Julian Lewis Sylvania GA 2020">
+<li class="pl-item" data-case-item data-case-id="julian-lewis" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="2020" data-tags="Traffic Stop" data-search="Julian Lewis Sylvania GA 2020">
   <a href="../cases/julian-lewis.html">Julian Lewis<span class="pi-meta">170 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ej-bradford-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Emantic “E.J.” Bradford Jr. Hoover AL 2018">
+<li class="pl-item" data-case-item data-case-id="ej-bradford-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="2018" data-tags="" data-search="Emantic “E.J.” Bradford Jr. Hoover AL 2018">
   <a href="../cases/ej-bradford-jr.html">Emantic “E.J.” Bradford Jr.<span class="pi-meta">171 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kayla-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kayla Moore Berkeley CA 2013">
+<li class="pl-item" data-case-item data-case-id="kayla-moore" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2013" data-tags="Custody / Restraint Death|Mental Health Crisis" data-search="Kayla Moore Berkeley CA 2013">
   <a href="../cases/kayla-moore.html">Kayla Moore<span class="pi-meta">172 · 2013 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="steven-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Steven Taylor San Leandro CA 2020">
+<li class="pl-item" data-case-item data-case-id="steven-taylor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2020" data-tags="Mental Health Crisis" data-search="Steven Taylor San Leandro CA 2020">
   <a href="../cases/steven-taylor.html">Steven Taylor<span class="pi-meta">173 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="devon-bailey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="De&#x27;Von Bailey Colorado Springs CO 2019">
+<li class="pl-item" data-case-item data-case-id="devon-bailey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CO" data-year="2019" data-tags="" data-search="De&#x27;Von Bailey Colorado Springs CO 2019">
   <a href="../cases/devon-bailey.html">De&#x27;Von Bailey<span class="pi-meta">174 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="antwon-rose-ii" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Antwon Rose II East Pittsburgh PA 2018">
+<li class="pl-item" data-case-item data-case-id="antwon-rose-ii" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="PA" data-year="2018" data-tags="Traffic Stop" data-search="Antwon Rose II East Pittsburgh PA 2018">
   <a href="../cases/antwon-rose-ii.html">Antwon Rose II<span class="pi-meta">175 · 2018 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="crooms-and-pierce" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Angelo Crooms &amp; Sincere Pierce Cocoa FL 2020">
+<li class="pl-item" data-case-item data-case-id="crooms-and-pierce" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="2020" data-tags="" data-search="Angelo Crooms &amp; Sincere Pierce Cocoa FL 2020">
   <a href="../cases/crooms-and-pierce.html">Angelo Crooms &amp; Sincere Pierce<span class="pi-meta">176 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="terrence-sterling" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Terrence Sterling Washington DC 2016">
+<li class="pl-item" data-case-item data-case-id="terrence-sterling" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DC" data-year="2016" data-tags="Vehicle Pursuit" data-search="Terrence Sterling Washington DC 2016">
   <a href="../cases/terrence-sterling.html">Terrence Sterling<span class="pi-meta">177 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jamee-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jamee Johnson Jacksonville FL 2019">
+<li class="pl-item" data-case-item data-case-id="jamee-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="2019" data-tags="Traffic Stop" data-search="Jamee Johnson Jacksonville FL 2019">
   <a href="../cases/jamee-johnson.html">Jamee Johnson<span class="pi-meta">178 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="dreasjon-reed" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Dreasjon “Sean” Reed Indianapolis IN 2020">
+<li class="pl-item" data-case-item data-case-id="dreasjon-reed" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="2020" data-tags="Vehicle Pursuit" data-search="Dreasjon “Sean” Reed Indianapolis IN 2020">
   <a href="../cases/dreasjon-reed.html">Dreasjon “Sean” Reed<span class="pi-meta">179 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kajuan-raye" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kajuan Raye Chicago IL 2016">
+<li class="pl-item" data-case-item data-case-id="kajuan-raye" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2016" data-tags="" data-search="Kajuan Raye Chicago IL 2016">
   <a href="../cases/kajuan-raye.html">Kajuan Raye<span class="pi-meta">180 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="walter-wallace-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Walter Wallace Jr. Philadelphia PA 2020">
+<li class="pl-item" data-case-item data-case-id="walter-wallace-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="PA" data-year="2020" data-tags="Mental Health Crisis" data-search="Walter Wallace Jr. Philadelphia PA 2020">
   <a href="../cases/walter-wallace-jr.html" aria-current="page">Walter Wallace Jr.<span class="pi-meta">181 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="byron-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Byron Williams Las Vegas NV 2019">
+<li class="pl-item" data-case-item data-case-id="byron-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NV" data-year="2019" data-tags="Custody / Restraint Death" data-search="Byron Williams Las Vegas NV 2019">
   <a href="../cases/byron-williams.html">Byron Williams<span class="pi-meta">182 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="michael-dean" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Michael Dean Temple TX 2019">
+<li class="pl-item" data-case-item data-case-id="michael-dean" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2019" data-tags="Traffic Stop" data-search="Michael Dean Temple TX 2019">
   <a href="../cases/michael-dean.html">Michael Dean<span class="pi-meta">183 · 2019 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="marvin-scott-iii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Marvin Scott III McKinney TX 2021">
+<li class="pl-item" data-case-item data-case-id="marvin-scott-iii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2021" data-tags="Custody / Restraint Death" data-search="Marvin Scott III McKinney TX 2021">
   <a href="../cases/marvin-scott-iii.html">Marvin Scott III<span class="pi-meta">184 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jamycheal-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jamycheal Mitchell Portsmouth VA 2015">
+<li class="pl-item" data-case-item data-case-id="jamycheal-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="VA" data-year="2015" data-tags="" data-search="Jamycheal Mitchell Portsmouth VA 2015">
   <a href="../cases/jamycheal-mitchell.html">Jamycheal Mitchell<span class="pi-meta">185 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="natasha-mckenna" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Natasha McKenna Fairfax VA 2015">
+<li class="pl-item" data-case-item data-case-id="natasha-mckenna" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="VA" data-year="2015" data-tags="Mental Health Crisis" data-search="Natasha McKenna Fairfax VA 2015">
   <a href="../cases/natasha-mckenna.html">Natasha McKenna<span class="pi-meta">186 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="deon-kay" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Deon Kay Washington DC 2020">
+<li class="pl-item" data-case-item data-case-id="deon-kay" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DC" data-year="2020" data-tags="" data-search="Deon Kay Washington DC 2020">
   <a href="../cases/deon-kay.html">Deon Kay<span class="pi-meta">187 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="mickel-lewis-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Mickel Lewis Sr. Mojave CA 2020">
+<li class="pl-item" data-case-item data-case-id="mickel-lewis-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2020" data-tags="Traffic Stop" data-search="Mickel Lewis Sr. Mojave CA 2020">
   <a href="../cases/mickel-lewis-sr.html">Mickel Lewis Sr.<span class="pi-meta">188 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="alteria-woods" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Alteria Woods Gifford FL 2017">
+<li class="pl-item" data-case-item data-case-id="alteria-woods" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="2017" data-tags="" data-search="Alteria Woods Gifford FL 2017">
   <a href="../cases/alteria-woods.html">Alteria Woods<span class="pi-meta">189 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="dejuan-guillory" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="DeJuan Guillory Mamou LA 2017">
+<li class="pl-item" data-case-item data-case-id="dejuan-guillory" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="2017" data-tags="Traffic Stop" data-search="DeJuan Guillory Mamou LA 2017">
   <a href="../cases/dejuan-guillory.html">DeJuan Guillory<span class="pi-meta">190 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tommie-mcglothen-jr" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Tommie McGlothen Jr. Shreveport LA 2020">
+<li class="pl-item" data-case-item data-case-id="tommie-mcglothen-jr" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="2020" data-tags="" data-search="Tommie McGlothen Jr. Shreveport LA 2020">
   <a href="../cases/tommie-mcglothen-jr.html">Tommie McGlothen Jr.<span class="pi-meta">191 · 2020 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="willie-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Willie Tillman Fayetteville AR 2016">
+<li class="pl-item" data-case-item data-case-id="willie-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AR" data-year="2016" data-tags="Traffic Stop" data-search="Willie Tillman Fayetteville AR 2016">
   <a href="../cases/willie-tillman.html">Willie Tillman<span class="pi-meta">192 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="christopher-whitfield" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Christopher Whitfield Ethel LA 2019">
+<li class="pl-item" data-case-item data-case-id="christopher-whitfield" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="LA" data-year="2019" data-tags="" data-search="Christopher Whitfield Ethel LA 2019">
   <a href="../cases/christopher-whitfield.html">Christopher Whitfield<span class="pi-meta">193 · 2019 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="thurman-blevins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Thurman Blevins Minneapolis MN 2018">
+<li class="pl-item" data-case-item data-case-id="thurman-blevins" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2018" data-tags="" data-search="Thurman Blevins Minneapolis MN 2018">
   <a href="../cases/thurman-blevins.html">Thurman Blevins<span class="pi-meta">194 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="george-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="George Tillman III South Ozone Park NY 2016">
+<li class="pl-item" data-case-item data-case-id="george-tillman" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2016" data-tags="" data-search="George Tillman III South Ozone Park NY 2016">
   <a href="../cases/george-tillman.html">George Tillman III<span class="pi-meta">195 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="charleena-lyles" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Charleena Lyles Seattle WA 2017">
+<li class="pl-item" data-case-item data-case-id="charleena-lyles" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="WA" data-year="2017" data-tags="Mental Health Crisis" data-search="Charleena Lyles Seattle WA 2017">
   <a href="../cases/charleena-lyles.html">Charleena Lyles<span class="pi-meta">196 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="miles-jackson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Miles Jackson Westerville OH 2021">
+<li class="pl-item" data-case-item data-case-id="miles-jackson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2021" data-tags="" data-search="Miles Jackson Westerville OH 2021">
   <a href="../cases/miles-jackson.html">Miles Jackson<span class="pi-meta">197 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="sahleem-tindle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Sahleem Tindle Oakland CA 2018">
+<li class="pl-item" data-case-item data-case-id="sahleem-tindle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Sahleem Tindle Oakland CA 2018">
   <a href="../cases/sahleem-tindle.html">Sahleem Tindle<span class="pi-meta">198 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="aaron-bailey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Aaron Bailey Indianapolis IN 2017">
+<li class="pl-item" data-case-item data-case-id="aaron-bailey" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="2017" data-tags="Traffic Stop" data-search="Aaron Bailey Indianapolis IN 2017">
   <a href="../cases/aaron-bailey.html">Aaron Bailey<span class="pi-meta">199 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="delrawn-small" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Delrawn Small Brooklyn NY 2016">
+<li class="pl-item" data-case-item data-case-id="delrawn-small" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2016" data-tags="" data-search="Delrawn Small Brooklyn NY 2016">
   <a href="../cases/delrawn-small.html">Delrawn Small<span class="pi-meta">200 · 2016 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="yvette-smith" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Yvette Smith Camp Swift TX 2014">
+<li class="pl-item" data-case-item data-case-id="yvette-smith" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2014" data-tags="" data-search="Yvette Smith Camp Swift TX 2014">
   <a href="../cases/yvette-smith.html">Yvette Smith<span class="pi-meta">201 · 2014 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="charly-keunang" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Charly “Africa” Keunang Los Angeles CA 2015">
+<li class="pl-item" data-case-item data-case-id="charly-keunang" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2015" data-tags="" data-search="Charly “Africa” Keunang Los Angeles CA 2015">
   <a href="../cases/charly-keunang.html">Charly “Africa” Keunang<span class="pi-meta">202 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="robert-lawrence-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Robert Lawrence White Silver Spring MD 2018">
+<li class="pl-item" data-case-item data-case-id="robert-lawrence-white" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MD" data-year="2018" data-tags="" data-search="Robert Lawrence White Silver Spring MD 2018">
   <a href="../cases/robert-lawrence-white.html">Robert Lawrence White<span class="pi-meta">203 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="oshae-terry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="O&#x27;Shae Terry Arlington TX 2018">
+<li class="pl-item" data-case-item data-case-id="oshae-terry" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2018" data-tags="Traffic Stop" data-search="O&#x27;Shae Terry Arlington TX 2018">
   <a href="../cases/oshae-terry.html">O&#x27;Shae Terry<span class="pi-meta">204 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="vincent-truitt" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Vincent Truitt Marietta GA 2020">
+<li class="pl-item" data-case-item data-case-id="vincent-truitt" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="2020" data-tags="Vehicle Pursuit" data-search="Vincent Truitt Marietta GA 2020">
   <a href="../cases/vincent-truitt.html">Vincent Truitt<span class="pi-meta">205 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="william-green" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="William Green Landover MD 2020">
+<li class="pl-item" data-case-item data-case-id="william-green" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MD" data-year="2020" data-tags="" data-search="William Green Landover MD 2020">
   <a href="../cases/william-green.html">William Green<span class="pi-meta">206 · 2020 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="anthony-lowe-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Anthony Lowe Jr. Huntington Park CA 2023">
+<li class="pl-item" data-case-item data-case-id="anthony-lowe-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2023" data-tags="Mental Health Crisis" data-search="Anthony Lowe Jr. Huntington Park CA 2023">
   <a href="../cases/anthony-lowe-jr.html">Anthony Lowe Jr.<span class="pi-meta">207 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="christopher-deandre-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Christopher DeAndre Mitchell Torrance CA 2018">
+<li class="pl-item" data-case-item data-case-id="christopher-deandre-mitchell" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Christopher DeAndre Mitchell Torrance CA 2018">
   <a href="../cases/christopher-deandre-mitchell.html">Christopher DeAndre Mitchell<span class="pi-meta">208 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jordell-richardson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jor&#x27;Dell Richardson Aurora CO 2023">
+<li class="pl-item" data-case-item data-case-id="jordell-richardson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CO" data-year="2023" data-tags="" data-search="Jor&#x27;Dell Richardson Aurora CO 2023">
   <a href="../cases/jordell-richardson.html">Jor&#x27;Dell Richardson<span class="pi-meta">209 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="omari-cryer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Omari Cryer Louisville KY 2022">
+<li class="pl-item" data-case-item data-case-id="omari-cryer" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="KY" data-year="2022" data-tags="" data-search="Omari Cryer Louisville KY 2022">
   <a href="../cases/omari-cryer.html">Omari Cryer<span class="pi-meta">210 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="linus-phillip" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Linus Phillip Largo FL 2018">
+<li class="pl-item" data-case-item data-case-id="linus-phillip" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="FL" data-year="2018" data-tags="Traffic Stop" data-search="Linus Phillip Largo FL 2018">
   <a href="../cases/linus-phillip.html">Linus Phillip<span class="pi-meta">211 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kenneth-ross-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kenneth Ross Jr. Gardena CA 2018">
+<li class="pl-item" data-case-item data-case-id="kenneth-ross-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2018" data-tags="" data-search="Kenneth Ross Jr. Gardena CA 2018">
   <a href="../cases/kenneth-ross-jr.html">Kenneth Ross Jr.<span class="pi-meta">212 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="decynthia-clements" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="DeCynthia Clements Elgin IL 2018">
+<li class="pl-item" data-case-item data-case-id="decynthia-clements" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2018" data-tags="Traffic Stop" data-search="DeCynthia Clements Elgin IL 2018">
   <a href="../cases/decynthia-clements.html">DeCynthia Clements<span class="pi-meta">213 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="joshua-ruffin" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Joshua Ruffin Columbia SC 2020">
+<li class="pl-item" data-case-item data-case-id="joshua-ruffin" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="SC" data-year="2020" data-tags="" data-search="Joshua Ruffin Columbia SC 2020">
   <a href="../cases/joshua-ruffin.html">Joshua Ruffin<span class="pi-meta">214 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jeremy-mcdole" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jeremy McDole Wilmington DE 2015">
+<li class="pl-item" data-case-item data-case-id="jeremy-mcdole" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="DE" data-year="2015" data-tags="" data-search="Jeremy McDole Wilmington DE 2015">
   <a href="../cases/jeremy-mcdole.html">Jeremy McDole<span class="pi-meta">215 · 2015 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="trey-pringle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Trey Pringle Seabrook SC 2018">
+<li class="pl-item" data-case-item data-case-id="trey-pringle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="SC" data-year="2018" data-tags="Custody / Restraint Death|Mental Health Crisis" data-search="Trey Pringle Seabrook SC 2018">
   <a href="../cases/trey-pringle.html">Trey Pringle<span class="pi-meta">216 · 2018 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="deandre-brunston" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Deandre Brunston Compton CA 2003">
+<li class="pl-item" data-case-item data-case-id="deandre-brunston" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="CA" data-year="2003" data-tags="" data-search="Deandre Brunston Compton CA 2003">
   <a href="../cases/deandre-brunston.html">Deandre Brunston<span class="pi-meta">217 · 2003 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="omar-edwards" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Omar Edwards New York NY 2009">
+<li class="pl-item" data-case-item data-case-id="omar-edwards" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NY" data-year="2009" data-tags="" data-search="Omar Edwards New York NY 2009">
   <a href="../cases/omar-edwards.html">Omar Edwards<span class="pi-meta">218 · 2009 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="moores-ford-lynchings" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Roger Malcom, Dorothy Malcom, George Dorsey &amp; Mae Murray Dorsey Monroe GA 1946">
+<li class="pl-item" data-case-item data-case-id="moores-ford-lynchings" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1946" data-tags="" data-search="Roger Malcom, Dorothy Malcom, George Dorsey &amp; Mae Murray Dorsey Monroe GA 1946">
   <a href="../cases/moores-ford-lynchings.html">Roger Malcom, Dorothy Malcom, George Dorsey &amp; Mae Murray Dorsey<span class="pi-meta">219 · 1946 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="winston-smith-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Winston Boogie Smith Jr. Minneapolis MN 2021">
+<li class="pl-item" data-case-item data-case-id="winston-smith-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2021" data-tags="" data-search="Winston Boogie Smith Jr. Minneapolis MN 2021">
   <a href="../cases/winston-smith-jr.html">Winston Boogie Smith Jr.<span class="pi-meta">220 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="frederick-cox-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Frederick Cox Jr. High Point NC 2020">
+<li class="pl-item" data-case-item data-case-id="frederick-cox-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2020" data-tags="" data-search="Frederick Cox Jr. High Point NC 2020">
   <a href="../cases/frederick-cox-jr.html">Frederick Cox Jr.<span class="pi-meta">221 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="najee-seabrooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Najee Seabrooks Paterson NJ 2023">
+<li class="pl-item" data-case-item data-case-id="najee-seabrooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NJ" data-year="2023" data-tags="Mental Health Crisis" data-search="Najee Seabrooks Paterson NJ 2023">
   <a href="../cases/najee-seabrooks.html">Najee Seabrooks<span class="pi-meta">222 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="daquain-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Da&#x27;Quain Johnson Grand Rapids MI 2026">
+<li class="pl-item" data-case-item data-case-id="daquain-johnson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MI" data-year="2026" data-tags="" data-search="Da&#x27;Quain Johnson Grand Rapids MI 2026">
   <a href="../cases/daquain-johnson.html">Da&#x27;Quain Johnson<span class="pi-meta">223 · 2026 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jalen-randle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Jalen Randle Houston TX 2022">
+<li class="pl-item" data-case-item data-case-id="jalen-randle" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="2022" data-tags="Vehicle Pursuit" data-search="Jalen Randle Houston TX 2022">
   <a href="../cases/jalen-randle.html">Jalen Randle<span class="pi-meta">224 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="luke-stewart" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Luke Stewart Euclid OH 2017">
+<li class="pl-item" data-case-item data-case-id="luke-stewart" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="OH" data-year="2017" data-tags="" data-search="Luke Stewart Euclid OH 2017">
   <a href="../cases/luke-stewart.html">Luke Stewart<span class="pi-meta">225 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="ricky-cobb-ii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Ricky Cobb II Minneapolis MN 2023">
+<li class="pl-item" data-case-item data-case-id="ricky-cobb-ii" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="MN" data-year="2023" data-tags="Traffic Stop" data-search="Ricky Cobb II Minneapolis MN 2023">
   <a href="../cases/ricky-cobb-ii.html">Ricky Cobb II<span class="pi-meta">226 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="shipp-and-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Thomas Shipp &amp; Abram Smith Marion IN 1930">
+<li class="pl-item" data-case-item data-case-id="shipp-and-smith" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="1930" data-tags="" data-search="Thomas Shipp &amp; Abram Smith Marion IN 1930">
   <a href="../cases/shipp-and-smith.html">Thomas Shipp &amp; Abram Smith<span class="pi-meta">227 · 1930 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="david-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="David Jones Philadelphia PA 2017">
+<li class="pl-item" data-case-item data-case-id="david-jones" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="PA" data-year="2017" data-tags="Traffic Stop" data-search="David Jones Philadelphia PA 2017">
   <a href="../cases/david-jones.html">David Jones<span class="pi-meta">228 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kemonte-cobbs" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Kemonte Cobbs Gary IN 2017">
+<li class="pl-item" data-case-item data-case-id="kemonte-cobbs" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IN" data-year="2017" data-tags="" data-search="Kemonte Cobbs Gary IN 2017">
   <a href="../cases/kemonte-cobbs.html">Kemonte Cobbs<span class="pi-meta">229 · 2017 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="darryl-tyree-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Darryl Tyree Williams Raleigh NC 2023">
+<li class="pl-item" data-case-item data-case-id="darryl-tyree-williams" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2023" data-tags="Custody / Restraint Death" data-search="Darryl Tyree Williams Raleigh NC 2023">
   <a href="../cases/darryl-tyree-williams.html">Darryl Tyree Williams<span class="pi-meta">230 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="james-lanier" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="James Lanier Wallace NC 2023">
+<li class="pl-item" data-case-item data-case-id="james-lanier" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="NC" data-year="2023" data-tags="" data-search="James Lanier Wallace NC 2023">
   <a href="../cases/james-lanier.html">James Lanier<span class="pi-meta">231 · 2023 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="mary-and-hayes-turner" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Mary Turner &amp; Hayes Turner Barney GA 1918">
+<li class="pl-item" data-case-item data-case-id="mary-and-hayes-turner" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="GA" data-year="1918" data-tags="" data-search="Mary Turner &amp; Hayes Turner Barney GA 1918">
   <a href="../cases/mary-and-hayes-turner.html">Mary Turner &amp; Hayes Turner<span class="pi-meta">232 · 1918 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="allen-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Allen Brooks Dallas TX 1910">
+<li class="pl-item" data-case-item data-case-id="allen-brooks" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="TX" data-year="1910" data-tags="" data-search="Allen Brooks Dallas TX 1910">
   <a href="../cases/allen-brooks.html">Allen Brooks<span class="pi-meta">233 · 1910 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="dexter-reed" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Dexter Reed Chicago IL 2024">
+<li class="pl-item" data-case-item data-case-id="dexter-reed" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="IL" data-year="2024" data-tags="Traffic Stop" data-search="Dexter Reed Chicago IL 2024">
   <a href="../cases/dexter-reed.html">Dexter Reed<span class="pi-meta">234 · 2024 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="bunk-richardson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-search="Bunk Richardson Gadsden AL 1906">
+<li class="pl-item" data-case-item data-case-id="bunk-richardson" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="false" data-state="AL" data-year="1906" data-tags="" data-search="Bunk Richardson Gadsden AL 1906">
   <a href="../cases/bunk-richardson.html">Bunk Richardson<span class="pi-meta">235 · 1906 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="colfax-massacre" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="The Colfax Massacre Colfax LA 1873">
+<li class="pl-item" data-case-item data-case-id="colfax-massacre" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="LA" data-year="1873" data-tags="" data-search="The Colfax Massacre Colfax LA 1873">
   <a href="../cases/colfax-massacre.html">The Colfax Massacre <span class="new-badge">NEW</span><span class="pi-meta">236 · 1873 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="frank-tyson" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Frank Tyson Canton OH 2024">
+<li class="pl-item" data-case-item data-case-id="frank-tyson" data-status="unresolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="OH" data-year="2024" data-tags="Custody / Restraint Death" data-search="Frank Tyson Canton OH 2024">
   <a href="../cases/frank-tyson.html">Frank Tyson <span class="new-badge">NEW</span><span class="pi-meta">237 · 2024 · UNRESOLVED — NO CONVICTION</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="roshad-mcintosh" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Roshad McIntosh Chicago IL 2014">
+<li class="pl-item" data-case-item data-case-id="roshad-mcintosh" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="IL" data-year="2014" data-tags="" data-search="Roshad McIntosh Chicago IL 2014">
   <a href="../cases/roshad-mcintosh.html">Roshad McIntosh <span class="new-badge">NEW</span><span class="pi-meta">238 · 2014 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="kevin-peterson-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Kevin Peterson Jr. Vancouver WA 2020">
+<li class="pl-item" data-case-item data-case-id="kevin-peterson-jr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="WA" data-year="2020" data-tags="" data-search="Kevin Peterson Jr. Vancouver WA 2020">
   <a href="../cases/kevin-peterson-jr.html">Kevin Peterson Jr. <span class="new-badge">NEW</span><span class="pi-meta">239 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="damian-daniels" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Damian Daniels San Antonio TX 2020">
+<li class="pl-item" data-case-item data-case-id="damian-daniels" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="TX" data-year="2020" data-tags="Mental Health Crisis" data-search="Damian Daniels San Antonio TX 2020">
   <a href="../cases/damian-daniels.html">Damian Daniels <span class="new-badge">NEW</span><span class="pi-meta">240 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="donnie-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Donnie Sanders Kansas City MO 2020">
+<li class="pl-item" data-case-item data-case-id="donnie-sanders" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="MO" data-year="2020" data-tags="Traffic Stop|Vehicle Pursuit" data-search="Donnie Sanders Kansas City MO 2020">
   <a href="../cases/donnie-sanders.html">Donnie Sanders <span class="new-badge">NEW</span><span class="pi-meta">241 · 2020 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="tyrea-pryor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Tyrea Pryor Independence MO 2022">
+<li class="pl-item" data-case-item data-case-id="tyrea-pryor" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="MO" data-year="2022" data-tags="Vehicle Pursuit" data-search="Tyrea Pryor Independence MO 2022">
   <a href="../cases/tyrea-pryor.html">Tyrea Pryor <span class="new-badge">NEW</span><span class="pi-meta">242 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="xzavier-hill" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Xzavier Hill Goochland VA 2021">
+<li class="pl-item" data-case-item data-case-id="xzavier-hill" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="VA" data-year="2021" data-tags="Traffic Stop|Vehicle Pursuit" data-search="Xzavier Hill Goochland VA 2021">
   <a href="../cases/xzavier-hill.html">Xzavier Hill <span class="new-badge">NEW</span><span class="pi-meta">243 · 2021 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="jaheim-mcmillan" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Jaheim McMillan Gulfport MS 2022">
+<li class="pl-item" data-case-item data-case-id="jaheim-mcmillan" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="MS" data-year="2022" data-tags="" data-search="Jaheim McMillan Gulfport MS 2022">
   <a href="../cases/jaheim-mcmillan.html">Jaheim McMillan <span class="new-badge">NEW</span><span class="pi-meta">244 · 2022 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="paul-oneal" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Paul O&#x27;Neal Chicago IL 2016">
+<li class="pl-item" data-case-item data-case-id="paul-oneal" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="IL" data-year="2016" data-tags="" data-search="Paul O&#x27;Neal Chicago IL 2016">
   <a href="../cases/paul-oneal.html">Paul O&#x27;Neal <span class="new-badge">NEW</span><span class="pi-meta">245 · 2016 · UNSOLVED</span></a>
 </li>
-<li class="pl-item" data-case-item data-case-id="patrick-warren-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-search="Patrick Warren Sr. Killeen TX 2021">
+<li class="pl-item" data-case-item data-case-id="patrick-warren-sr" data-status="unsolved" data-case-type="homicide" data-series-flag="false" data-new-case="true" data-state="TX" data-year="2021" data-tags="Mental Health Crisis" data-search="Patrick Warren Sr. Killeen TX 2021">
   <a href="../cases/patrick-warren-sr.html">Patrick Warren Sr. <span class="new-badge">NEW</span><span class="pi-meta">246 · 2021 · UNSOLVED</span></a>
 </li>
   </ul>
