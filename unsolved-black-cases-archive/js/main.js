@@ -1042,15 +1042,22 @@
   // two counters: each *distinct browser tab* hits a key stamped with the
   // current minute at most once (deduplicated below — repeated refreshes
   // within the same minute don't re-hit it), and we separately read (not
-  // hit, so reading itself never inflates the count) that bucket plus the
-  // two minutes before it and sum them. That gives a rough "distinct tabs
-  // active in the last ~3 minutes" figure — a fair proxy for "people here
-  // right now," but not a literal live connection count, which is why the
-  // label uses "active now" with a hover tooltip explaining the
-  // approximation rather than claiming precision the technique can't back
-  // up. sessionStorage (not localStorage) is deliberate here: it clears
-  // when the tab closes, so a visitor who leaves and comes back later is
-  // correctly free to register presence again.
+  // hit, so reading itself never inflates the count) that same single
+  // bucket. Deliberately just the one current-minute bucket, not a sum
+  // across several minutes: summing multiple buckets sounds like it would
+  // give a broader, more forgiving "active recently" window, but it
+  // actually double- and triple-counts anyone who simply stays on the
+  // page for more than a minute — completely normal behavior — since
+  // their tab registers presence in one new bucket every minute as time
+  // passes, and a sum of three buckets then adds all of those together as
+  // if they were three different people. Reading only the single current
+  // bucket avoids that inflation entirely, at the honest cost of a
+  // narrower (~60 second) window rather than a multi-minute one. "Active
+  // now" with a hover tooltip explaining the approximation is the
+  // accurate framing here, not a literal live connection count.
+  // sessionStorage (not localStorage) is deliberate: it clears when the
+  // tab closes, so a visitor who leaves and comes back later is correctly
+  // free to register presence again.
   function initLiveVisitors() {
     var el = document.getElementById("site-live-count");
     if (!el) return;
@@ -1060,17 +1067,15 @@
       return "ubca-live-" + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + "-" +
         pad(d.getHours()) + pad(d.getMinutes());
     }
-    var now = new Date();
-    var currentKey = minuteKey(now);
-    var priorKeys = [1, 2].map(function (mins) { return minuteKey(new Date(now.getTime() - mins * 60000)); });
+    var currentKey = minuteKey(new Date());
     var FLAG_KEY = "ubca_counted_minute";
     var alreadyCountedThisMinute = false;
     try { alreadyCountedThisMinute = sessionStorage.getItem(FLAG_KEY) === currentKey; } catch (e) { /* ignore */ }
 
     // Register this tab's presence for the current minute (skipped if
-    // this exact tab already has, this minute), then read the small
-    // sliding window regardless, so the displayed number always reflects
-    // the current shared total.
+    // this exact tab already has, this minute), then read that same
+    // single bucket regardless, so the displayed number always reflects
+    // the current shared total for this one-minute window.
     var registerPromise = alreadyCountedThisMinute
       ? Promise.resolve()
       : fetch(BASE + "hit/" + currentKey).then(function () {
@@ -1079,15 +1084,12 @@
 
     registerPromise
       .then(function () {
-        return Promise.all([currentKey].concat(priorKeys).map(function (key) {
-          return fetch(BASE + "get/" + key)
-            .then(function (res) { return res.json(); })
-            .then(function (data) { return (data && typeof data.value === "number") ? data.value : 0; })
-            .catch(function () { return 0; });
-        }));
+        return fetch(BASE + "get/" + currentKey)
+          .then(function (res) { return res.json(); })
+          .then(function (data) { return (data && typeof data.value === "number") ? data.value : 0; })
+          .catch(function () { return 0; });
       })
-      .then(function (counts) {
-        var total = counts.reduce(function (sum, n) { return sum + n; }, 0);
+      .then(function (total) {
         if (total > 0) el.textContent = total.toLocaleString();
         else if (el.parentElement) el.parentElement.style.display = "none";
       })
