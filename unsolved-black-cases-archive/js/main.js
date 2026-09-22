@@ -976,14 +976,26 @@
   // that this browser has already been counted once, ever; only a browser
   // that has never set that flag actually increments the counter — every
   // return visit (or refresh) after that just reads the current total.
+  //
+  // The counter key and the flag key were both changed (from
+  // "...-visits" / "ubca_counted_lifetime" to the "-v2" / "-v2" versions
+  // below) on 2026-09-22, the same day the dedup logic above shipped, so
+  // the number starts clean at zero and only reflects genuinely
+  // deduplicated visits going forward — not the inflated total the old
+  // per-pageload counter had already accumulated. Changing the flag name
+  // too, not just the counter name, matters here: a returning visitor's
+  // browser already had the *old* flag set, and without a new flag name
+  // that old flag would have permanently stopped their browser from ever
+  // registering against the new counter, since it would look
+  // "already counted" for a counter it had in fact never touched.
   function initVisitCounter() {
     var el = document.getElementById("site-visit-count");
     if (!el) return;
-    var FLAG_KEY = "ubca_counted_lifetime";
+    var FLAG_KEY = "ubca_counted_lifetime_v2";
     var BASE = "https://countapi.mileshilliard.com/api/v1/";
     var alreadyCounted = false;
     try { alreadyCounted = localStorage.getItem(FLAG_KEY) === "1"; } catch (e) { /* localStorage unavailable — fall through and count every time */ }
-    var url = BASE + (alreadyCounted ? "get/" : "hit/") + "unsolved-black-cases-archive-visits";
+    var url = BASE + (alreadyCounted ? "get/" : "hit/") + "unsolved-black-cases-archive-visits-v2";
     fetch(url)
       .then(function (res) { return res.json(); })
       .then(function (data) {
