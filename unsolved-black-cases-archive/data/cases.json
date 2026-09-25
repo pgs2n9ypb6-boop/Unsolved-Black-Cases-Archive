@@ -7466,6 +7466,11 @@
         "verified": true
       },
       {
+        "name": "NamUs \u2014 Missing Person Case #MP107987",
+        "url": "https://namus.nij.ojp.gov/case/MP107987",
+        "verified": true
+      },
+      {
         "name": "Project Cold Case",
         "url": "",
         "verified": false
@@ -7599,6 +7604,11 @@
         "verified": true
       },
       {
+        "name": "NamUs \u2014 Missing Person Case #MP788",
+        "url": "https://namus.nij.ojp.gov/case/MP788",
+        "verified": true
+      },
+      {
         "name": "Project Cold Case",
         "url": "",
         "verified": false
@@ -7620,7 +7630,7 @@
     "id": "brown-family",
     "caseNumber": "128",
     "name": "Carolyn, Sheketah, Barry & Brandon Brown",
-    "status": "unsolved",
+    "status": "unresolved",
     "caseType": "missing_persons",
     "year": 1985,
     "age": null,
@@ -7658,6 +7668,26 @@
       {
         "name": "The Doe Network \u2014 Sheketah Michele Brown case record",
         "url": "https://www.doenetwork.org/cases/250dffl.html",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP10492 (Carolyn Denise Brown)",
+        "url": "https://namus.nij.ojp.gov/case/MP10492",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP5887 (Sheketah Brown)",
+        "url": "https://namus.nij.ojp.gov/case/MP5887",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP5885 (Barry Brown)",
+        "url": "https://namus.nij.ojp.gov/case/MP5885",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP5886 (Brandon Brown)",
+        "url": "https://namus.nij.ojp.gov/case/MP5886",
         "verified": true
       },
       {
@@ -7713,6 +7743,11 @@
       {
         "name": "The Charley Project \u2014 Jalesa Chantell Reynolds case record",
         "url": "https://charleyproject.org/case/jalesa-chantell-reynolds",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP10109",
+        "url": "https://namus.nij.ojp.gov/case/MP10109",
         "verified": true
       },
       {
@@ -7781,6 +7816,11 @@
         "verified": true
       },
       {
+        "name": "NamUs \u2014 Missing Person Case #MP9889",
+        "url": "https://namus.nij.ojp.gov/case/MP9889",
+        "verified": true
+      },
+      {
         "name": "Project Cold Case",
         "url": "",
         "verified": false
@@ -7812,22 +7852,23 @@
     "state": "DC",
     "caseSeries": null,
     "dateAdded": "2026-09-08",
-    "summary": "Barbara Jean Dreher, 39, a mother of five who had worked as a Washington, D.C. public school secretary for fifteen years, disappeared on August 12, 1984 after dropping her two young sons off at her adult daughter's home, telling them she was going to pick up some money and would return shortly. Days later, her son spotted her burgundy Oldsmobile being driven by an unfamiliar man; he followed the car, called police, and identified the driver at the scene. Because the car had not been reported stolen, the man was released without arrest, though a ski mask, gloves, and rope were found inside the impounded vehicle. In 2018, D.C. police's cold case squad examined whether skeletal remains found in a Southeast D.C. apartment crawl space could be Dreher's, using DNA comparison; no match has been publicly confirmed. No one has ever been charged, and Barbara has never been found.",
+    "summary": "Barbara Jean Dreher, 39, a mother of five who had worked as a Washington, D.C. public school secretary for fifteen years, disappeared on August 12, 1984 after dropping her two young sons off at her adult daughter's home, telling them she was going to pick up some money and would return shortly. Days later, her son spotted her burgundy Oldsmobile being driven by an unfamiliar man; he followed the car, called police, and identified the driver at the scene. Because the car had not been reported stolen, the man was released without arrest, though a ski mask, gloves, and rope were found inside the impounded vehicle. In 2018, D.C. police's cold case squad examined whether skeletal remains found in a Southeast D.C. apartment crawl space could be Dreher's; those remains were later identified as three unrelated women who had disappeared in 2006, ruling out a connection to Dreher's case. No one has ever been charged, and Barbara has never been found.",
     "known": [
       "Barbara's identity, age, and the August 12, 1984 disappearance, per the Metropolitan Police Department's missing person record and family accounts.",
       "Her son spotted and followed her Oldsmobile days after her disappearance, called police, and identified the man driving it at the scene; that man denied knowing Dreher or having driven the car.",
       "A ski mask, gloves, and rope were found inside the impounded vehicle, though the identified driver was released without arrest since the car had not been reported stolen at that point.",
-      "D.C. police's Cold Case squad, which reviews difficult older missing-person files, was examining a potential DNA match between Dreher and skeletal remains found in a Southeast D.C. apartment crawl space as of 2018; the department has offered a reward of up to $25,000 for information leading to an arrest and conviction."
+      "The Washington Post reported the identified driver had a documented history of violence: as a teenager he had pleaded guilty to the stabbing deaths of a 23-year-old man and a 16-year-old girl, who was also gang-raped before being killed; he received a short sentence for his role. A year after Dreher's disappearance, he was separately charged with abducting and raping another woman, though those charges were later dismissed.",
+      "D.C. police's Cold Case squad examined a potential DNA match between Dreher and skeletal remains found in a Southeast D.C. apartment crawl space in 2018; those remains were identified that August as Jewel Marquita King, Verdell Jefferson, and Dorothy Jean Butts, three women unconnected to Dreher who had all disappeared from the same Southeast D.C. neighborhood in 2006, ruling out any connection between that discovery and Dreher's case.",
+      "The department has offered a reward of up to $25,000 for information leading to an arrest and conviction in Dreher's case."
     ],
     "unknown": [
       "The identity of the man found driving Dreher's car, and why he was released without arrest despite the items found inside the vehicle, has never been fully explained publicly.",
-      "Whether the 2018 DNA comparison to the Southeast D.C. crawl space remains ultimately confirmed or excluded a match to Dreher has not been made public.",
       "Original case evidence was reportedly mishandled or lost early in the investigation, per family and podcast reporting, though the full extent of what was lost is unclear."
     ],
     "unanswered": [
-      "Why was the man identified driving Dreher's car released without arrest, given the items found inside the vehicle?",
-      "What was the outcome of the 2018 DNA comparison between Dreher and the Southeast D.C. crawl space remains?",
-      "What specific case evidence was lost or mishandled in the investigation's early days, and has that affected the case's prospects for resolution?"
+      "Why was the man identified driving Dreher's car released without arrest, given the items found inside the vehicle and his separate documented history of violence?",
+      "What specific case evidence was lost or mishandled in the investigation's early days, and has that affected the case's prospects for resolution?",
+      "With the 2018 crawl-space remains now identified as unrelated to her case, what investigative leads, if any, remain open in Dreher's own file today?"
     ],
     "sources": [
       {
@@ -7843,6 +7884,16 @@
       {
         "name": "The Deck (podcast) \u2014 \u201cBarbara Dreher, King of Hearts, Washington DC\u201d",
         "url": "https://thedeckpodcast.com/barbara-dreher/",
+        "verified": true
+      },
+      {
+        "name": "The Washington Post \u2014 \u201cPolice connect remains to three women who vanished in Southeast Washington in 2006\u201d",
+        "url": "https://www.washingtonpost.com/local/public-safety/police-identify-remains-of-three-skeletons-found-buried-in-southeast-washington/2018/08/15/7c1cfe32-a09c-11e8-8e87-c869fe70a721_story.html",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP7962",
+        "url": "https://namus.nij.ojp.gov/case/MP7962",
         "verified": true
       },
       {
@@ -7877,24 +7928,31 @@
     "state": "GA",
     "caseSeries": null,
     "dateAdded": "2026-09-08",
-    "summary": "Dannette and Jeannette Millbrook, 15-year-old fraternal twins, disappeared in Augusta, Georgia on March 18, 1990, after walking to a nearby gas station for snacks and telling their mother a man in a van had followed part of their route earlier that day. A gas station clerk was the last person to see them; nothing further is known about the man in the van. The Richmond County Sheriff's Office concluded the girls were runaways based on hearsay and closed the case in 1991, despite their mother's insistence they would not have left voluntarily. The case sat effectively unworked for over two decades until a newly elected sheriff reopened it in 2013; investigators have since interviewed witnesses, canvassed the area, and collected DNA samples from family members, but the case remains unsolved. Their case is believed to be one of the only unresolved disappearances of twins in American history.",
+    "summary": "Dannette and Jeannette Millbrook, 15-year-old fraternal twins, disappeared in Augusta, Georgia on March 18, 1990, after walking to a nearby gas station for snacks and telling their mother a man in a van had followed part of their route earlier that day. A gas station clerk was the last person to see them; nothing further is known about the man in the van. The Richmond County Sheriff's Office concluded the girls were runaways based on hearsay and closed the case in 1991, despite their mother's insistence they would not have left voluntarily. The case sat effectively unworked for over two decades until a newly elected sheriff reopened it in 2013; investigators have since interviewed witnesses, canvassed the area, and collected DNA samples from family members. Investigators have since examined a possible connection to convicted serial killer Joseph Patrick Washington, who had ties to the twins' own father and was separately convicted of murdering, kidnapping, and sexually assaulting Black women in the area during the 1990s; as of January 2026, DNA from the twins' family was being compared against unidentified remains found in Louisiana in 1993. Their case is believed to be one of the only unresolved disappearances of twins in American history.",
     "known": [
       "The twins' identities, ages, and the March 18, 1990 disappearance after visiting a Pump-N-Shop gas station, per the Richmond County Sheriff's Office and Wikipedia's sourced case record.",
       "The twins told their mother a man in a van had followed part of their route earlier that day; investigators never identified this man.",
       "The Richmond County Sheriff's Office closed the case in 1991, having concluded based on hearsay that the girls were runaways, over their mother's objections.",
       "The case was reopened in 2013 after a newly elected sheriff, Richard Roundtree, took office; investigators have since collected DNA from family members and conducted new interviews and area canvasses.",
       "A witness account relayed years later to investigators and journalists alleged violence against one of the twins at a specific location in Augusta, though this account has not been independently confirmed or resulted in any charge.",
+      "Local television investigators reported ties between convicted serial killer Joseph Patrick Washington, charged with murders, kidnapping, and sexual assaults of Black women in the Augusta area during the 1990s, and the twins' father, John Millbrook, who has himself been separately linked to unrelated Richmond County crimes dating to that era.",
+      "The family submitted DNA in 2017 for comparison against unidentified remains believed connected to Washington's other victims; as of a January 2026 update, DNA from the family was being newly compared against a separate set of unidentified remains found in Louisiana in 1993, described by local reporters as a potential first major break in the case.",
+      "The twins' sister, Shanta Sturgis, has continued public advocacy for the case, including a dedicated tip website and a reward that stood at $50,000 as of 2023, with a stated reduction to $11,000 if the case remained unresolved past that August.",
+      "A 2017 investigative podcast examining the case is credited by local reporters with pushing the family's first-ever in-person meeting with Sheriff Roundtree to discuss the investigation's handling.",
       "No arrest has ever been made and neither twin has ever been found."
     ],
     "unknown": [
       "What happened to the twins after they were last seen at the gas station has never been established.",
       "The identity of the man in the van the twins described to their mother has never been confirmed.",
-      "Whether the unverified witness account describing violence against one twin at a specific Augusta location is accurate has not been independently confirmed by investigators."
+      "Whether the unverified witness account describing violence against one twin at a specific Augusta location is accurate has not been independently confirmed by investigators.",
+      "Whether either twin was in fact a victim of Joseph Patrick Washington has never been confirmed; the connection remains a working theory investigators and journalists have pursued, not an established fact.",
+      "The outcome of the DNA comparison against the 1993 Louisiana remains, ongoing as of January 2026, was not yet known as of the sources reviewed for this summary."
     ],
     "unanswered": [
       "Why did the original 1990\u201391 investigation conclude the twins were runaways based on hearsay, over their mother's direct objections?",
       "What did the DNA samples collected from family members after the 2013 reopening ultimately contribute to the investigation?",
-      "Has the unverified account alleging violence against one twin at a specific location ever been formally investigated, and if so, what did it yield?"
+      "Has the unverified account alleging violence against one twin at a specific location ever been formally investigated, and if so, what did it yield?",
+      "What is the outcome of the January 2026 DNA comparison against the unidentified Louisiana remains, and has it been resolved one way or the other?"
     ],
     "sources": [
       {
@@ -7910,6 +7968,21 @@
       {
         "name": "WFXG \u2014 \u201c35 years since the Millbrook twins went missing, family still looking for answers\u201d",
         "url": "https://www.wfxg.com/news/35-years-since-the-millbrook-twins-went-missing-family-still-looking-for-answers/article_5490666e-0464-11f0-a99f-fb6a75488013.html",
+        "verified": true
+      },
+      {
+        "name": "WRDW/WAGT \u2014 \u201cNew DNA comparison offers hope in 36-year-old Millbrook twins case\u201d",
+        "url": "https://www.wrdw.com/2026/01/21/new-dna-comparison-offers-hope-36-year-old-millbrook-twins-case/",
+        "verified": true
+      },
+      {
+        "name": "WRDW/WAGT \u2014 \u201cI-TEAM UPDATE: After TV documentary, Sheriff Richard Roundtree reacts, talks leads in Millbrook twins case\u201d",
+        "url": "https://www.wrdw.com/content/news/I-TEAM-UPDATE-After-TV-documentary-Sheriff-Richard-Roundtree-seeks-new-leads-in-Millbrook-twins-case-565746392.html",
+        "verified": true
+      },
+      {
+        "name": "NamUs \u2014 Missing Person Case #MP20497 (Dannette Latonia Millbrook)",
+        "url": "https://namus.nij.ojp.gov/case/MP20497",
         "verified": true
       },
       {
@@ -16057,6 +16130,695 @@
       {
         "name": "LSU Cold Case Project \u2014 \u201cA man the FBI thought was dead recalls details of 1960 murders\u201d",
         "url": "https://lsucoldcaseproject.com/a-man-the-fbi-thought-was-dead-recalls-details-of-1960-murders/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "ariane-mccree",
+    "caseNumber": "253",
+    "name": "Ariane McCree",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2019,
+    "age": 28,
+    "gender": "male",
+    "city": "Chester",
+    "county": "Chester County",
+    "state": "SC",
+    "caseSeries": null,
+    "dateAdded": "2026-09-22",
+    "summary": "Ariane McCree, 28, was shot and killed by a Chester, South Carolina police officer working off-duty security in a Walmart parking lot on November 23, 2019, after being detained for shoplifting a $46 door handle. Officers said McCree, handcuffed behind his back, assaulted an officer, ran to his car, retrieved a gun, and pointed it at officers before they fired roughly two dozen shots; McCree's family disputed this account, saying he was still handcuffed with his hands behind his back when he was killed. The officer who fired was working security off-duty and was not wearing a body camera, and no store surveillance footage captured the shooting itself. The South Carolina Attorney General's Office cleared the officers of state charges in March 2020, and a subsequent federal civil rights review closed without any charges being announced. The involved officers' names were never publicly released, specifically because they were never criminally charged. No one has ever been charged in McCree's death.",
+    "known": [
+      "The shoplifting detention, the alleged escape, and the shooting, per the South Carolina Attorney General's Office's public findings and body camera footage the Chester Police Department released roughly six months after the shooting.",
+      "A Walmart cashier told investigators McCree took a $46 door handle without paying for it and left, then returned to the store later that morning, where off-duty Chester officers working store security detained and handcuffed him behind his back for shoplifting.",
+      "The Attorney General's Office stated McCree assaulted the detaining officer, ran to his vehicle, and retrieved a firearm despite being handcuffed, then pointed it at the officer, who fired several shots; a second officer arriving to transport McCree to jail also fired after hearing shots and radioed reports of a gun.",
+      "The officer who fired the initial shots was working off-duty as store security and was not wearing a body camera; no Walmart surveillance footage captured the shooting confrontation itself, and investigators relied primarily on officer and witness statements.",
+      "McCree's family and civil rights advocates publicly disputed the official account, maintaining he was still handcuffed with his hands behind his back at the moment he was shot.",
+      "The South Carolina Attorney General's Office announced in March 2020 that its review found the officers acted in self-defense and cleared them of state charges; the officers' names were never publicly released, which the department said was because they faced no criminal charges.",
+      "South Carolina's attorney general separately requested a federal civil rights review by the U.S. Attorney's Office; reporting by the Post and Courier in late 2020 found prosecutors had gone silent on the review's findings, a silence the paper's investigation said suggested the officers would not be federally charged either.",
+      "One of the two officers, later identified in reporting as Harris, was internally disciplined only for failing to activate his body camera during the encounter, not for the shooting itself; both officers remained with the department, and McCree's family filed a federal civil rights lawsuit against the department."
+    ],
+    "unknown": [
+      "Whether McCree was still handcuffed at the moment he was shot, as his family has maintained, or had freed himself and retrieved a weapon, as the officers stated, was never resolved by any independent video evidence, since no body camera or store surveillance footage captured the shooting itself, and was never tested at any criminal trial since none was brought.",
+      "The specific findings of the federal civil rights review referenced by South Carolina's attorney general have never been made public, and reporters were unable to obtain a formal statement of its outcome beyond an inference drawn from prosecutors' silence.",
+      "The full internal disciplinary record for both officers, beyond the one body-camera violation publicly reported, has not been made comprehensively available."
+    ],
+    "unanswered": [
+      "Why were no body cameras or store surveillance cameras capturing the actual shooting, despite one officer being on duty and the incident occurring inside a major retail chain's parking lot?",
+      "Why have the involved officers' names never been publicly released, and why did the department's disciplinary review address only a body-camera policy violation rather than the shooting itself?",
+      "What became of the federal civil rights review South Carolina's own attorney general requested, given prosecutors never issued a public statement of its conclusion?"
+    ],
+    "sources": [
+      {
+        "name": "South Carolina Attorney General's Office \u2014 \u201cOfficers cleared in Chester Walmart shooting last November\u201d",
+        "url": "https://www.scag.gov/about-the-office/news/officers-cleared-in-chester-walmart-shooting-last-november/",
+        "verified": true
+      },
+      {
+        "name": "The Post and Courier \u2014 \u201cProsecutors silent on federal review of Chester police shooting\u201d",
+        "url": "https://www.postandcourier.com/news/prosecutors-silent-on-federal-review-of-chester-police-shooting/article_a912a894-2464-11eb-a103-6314ed86612b.html",
+        "verified": true
+      },
+      {
+        "name": "WCNC Charlotte \u2014 \u201cChester Police Chief aims for transparency in fatal officer-involved shooting\u201d",
+        "url": "https://www.wcnc.com/article/news/investigations/chester-police-chief-aims-for-transparency-in-fatal-officer-involved-shooting/275-193e4c9d-6eb6-413e-bfe4-f5ed382616db",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "terrance-franklin",
+    "caseNumber": "254",
+    "name": "Terrance Franklin",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2013,
+    "age": 22,
+    "gender": "male",
+    "city": "Minneapolis",
+    "county": "Hennepin",
+    "state": "MN",
+    "caseSeries": null,
+    "dateAdded": "2026-09-22",
+    "summary": "Terrance Franklin, 22, was shot ten times, including five times in the head, by Minneapolis SWAT officers in the basement of a South Side home on May 10, 2013, after a roughly 90-minute police chase that began with a burglary report. Police said Franklin fought officers and a K9 in the darkened basement, wrestled a submachine gun from one officer, and shot and wounded two others before the remaining officers returned fire; Franklin's family has long maintained he had surrendered. No body camera footage existed, and the only witnesses to the shooting itself were the five officers involved. A grand jury declined to indict any officer in September 2013, and an internal police investigation cleared them as well. In 2021, Hennepin County Attorney Mike Freeman said newly analyzed video evidence warranted reopening the case, but the Minnesota Bureau of Criminal Apprehension declined to reinvestigate, finding no new evidence requiring it. No one has ever been charged in Franklin's death.",
+    "known": [
+      "The burglary report, the chase, and the shooting, per the Minneapolis Police Department's own investigation, grand jury proceedings, and later reporting including a 2021 TIME magazine investigation and a Minnesota Bureau of Criminal Apprehension letter declining reinvestigation.",
+      "Officers responding to a report of a burglary suspect pursued Franklin's vehicle after he drove around an officer and struck a squad car door; during the roughly 90-minute chase that followed, a motorcyclist was separately struck and killed by a police squad car pursuing Franklin.",
+      "Franklin fled on foot and hid in the basement of a house on Bryant Avenue South; five SWAT officers \u2014 Andrew Stender, Ricardo Muro, Mark Durand, Michael Meath, and Lucas Peterson \u2014 entered the basement and released a police dog on him.",
+      "Police said Franklin gained control of a submachine gun during a struggle in the confined basement and shot and wounded two officers before the remaining officers returned fire, striking Franklin ten times, five of them to the head; the department's account described the entire fatal encounter as lasting only seconds.",
+      "No body camera footage existed of the shooting itself; a bystander's cell phone video captured only the aftermath, beginning after officers said Franklin was already dead, and Franklin's family's investigators say officers can be heard on that recording using a racial slur.",
+      "A Hennepin County grand jury declined to indict any officer in September 2013, and a separate internal Minneapolis Police Department investigation concluded the officers had acted appropriately; Police Chief Janee Harteau publicly stated she \u201cfully support[ed]\u201d the officers' actions.",
+      "The City of Minneapolis reached a $795,000 settlement with Franklin's family in a federal wrongful death lawsuit in 2020, without admitting wrongdoing.",
+      "In 2021, Hennepin County Attorney Mike Freeman said expert analysis of the bystander video not previously considered warranted a new review by the Minnesota Bureau of Criminal Apprehension; the BCA responded that it found no new evidence requiring reinvestigation and returned the matter to the county attorney's office, where it has not been reopened.",
+      "One of the five officers, Lucas Peterson, went on to serve as a field training officer for several Minneapolis officers, including Derek Chauvin, who was later convicted of murdering George Floyd."
+    ],
+    "unknown": [
+      "Whether Franklin gained control of an officer's weapon and fired on officers, as police maintained, or had already surrendered, as his family has long stated, was never independently established, since no body camera footage existed and the only witnesses to the shooting itself were the officers involved; the question was never tested at any criminal trial, since the grand jury declined to indict.",
+      "The specific content of the expert video analysis that led Hennepin County Attorney Mike Freeman to call for reopening the case in 2021 has not been made fully public, nor has the Bureau of Criminal Apprehension's own reasoning for declining to act on it beyond its brief letter.",
+      "The full extent of any racial language used by officers during the encounter, as alleged by the family's hired investigators based on the bystander video, has not been independently verified or addressed in any official public accounting."
+    ],
+    "unanswered": [
+      "Why did a county attorney's own public statement that new video evidence warranted reopening the case in 2021 not result in any actual reinvestigation?",
+      "Why did the only account of what happened in that basement come entirely from the five officers involved, with no independent recording of the shooting itself?",
+      "What does it mean for the Minneapolis Police Department's own use-of-force training legacy that one of the officers who killed Franklin went on to train Derek Chauvin?"
+    ],
+    "sources": [
+      {
+        "name": "TIME \u2014 \u201cMinneapolis Police Were Cleared in the 2013 Killing of Terrance Franklin. A Video Complicates the Story\u2014and Now the Case May Be Reopened\u201d",
+        "url": "https://time.com/6075094/terrance-franklin-shooting/",
+        "verified": true
+      },
+      {
+        "name": "MPR News \u2014 \u201cNo charges against Minneapolis police officers in Franklin case\u201d",
+        "url": "https://www.mprnews.org/story/2013/09/19/no-charges-against-minneapolis-police-officers-in-franklin-case",
+        "verified": true
+      },
+      {
+        "name": "CBS News Minnesota (WCCO) \u2014 \u201cTerrance Franklin Killing: BCA Says It Won't Investigate Deadly 2013 Minneapolis Police Shooting\u201d",
+        "url": "https://www.cbsnews.com/amp/minnesota/news/terrence-franklin-killing-minneapolis-police-investigation-bca-hennepin-county-attorney",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "bobby-james-brown",
+    "caseNumber": "255",
+    "name": "Bobby James Brown",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2022,
+    "age": 41,
+    "gender": "male",
+    "city": "Jacksonville",
+    "county": "Duval",
+    "state": "FL",
+    "caseSeries": null,
+    "dateAdded": "2026-09-22",
+    "summary": "Bobby James Brown, 41, was shot and killed by a Jacksonville, Florida police officer on July 30, 2022, at the end of an hour-long standoff at a relative's home after Brown, reportedly under the influence of drugs, had been banging on neighbors' doors while holding two knives. Officers used a Taser on Brown as he emerged from a bathroom still holding the knives, and one officer fired a single shot, striking him in the chest. Roughly five months later, the State Attorney's Office announced its review had determined the shot was the result of an \u201cunintentional firearm discharge\u201d by the officer \u2014 not an intentional use of deadly force \u2014 and that the discharge was not criminal. No charges were filed. No one has ever been charged in Brown's death.",
+    "known": [
+      "The standoff, the Taser deployment, and the shooting, per Jacksonville Sheriff's Office statements and the State Attorney's Office's letter to JSO leadership announcing its findings.",
+      "Officers responded around 4:30 a.m. to reports of a man, later identified as Brown, banging on doors in a Northwest Jacksonville neighborhood while armed with two knives and appearing to be under the influence of drugs.",
+      "Brown made his way to a relative's home, was allowed inside, then threatened to harm himself and others in the house before locking himself in a bathroom; officers safely evacuated the rest of the household and spent 45 to 60 minutes trying to talk him out.",
+      "When Brown emerged still holding the knives and came within roughly 25 feet of officers, two used a Taser on him while a third officer fired a single shot, striking him in the chest; officers performed emergency first aid before he was taken to a hospital, where he died.",
+      "The officer who fired was placed on administrative leave pending the State Attorney's Office's independent review, a standard practice for officer-involved shootings in the jurisdiction.",
+      "In a letter to Jacksonville Sheriff's Office Chief Paul Restivo roughly five months after the shooting, Assistant State Attorney Mark Caliel stated the office's review had \u201cdetermined Mr. Brown's death was the result of an unintentional firearm discharge by the shooting officer\u201d and that \u201cthe discharge of the firearm was not criminal,\u201d resulting in no charges.",
+      "Body-worn camera footage of the shooting exists and, per the State Attorney's letter, its release would not compromise the review, though the footage's full contents beyond the office's summary were not made part of widely available public reporting."
+    ],
+    "unknown": [
+      "The specific mechanism by which the officer's firearm discharged unintentionally, as opposed to being fired as a deliberate response to Brown's approach, was described only in summary form in the State Attorney's letter and was never tested at any public hearing or trial, since no charges were filed.",
+      "Whether an unintentional discharge in these circumstances \u2014 during an active Taser deployment against a man holding knives \u2014 reflects a training or equipment-handling issue distinct from a deliberate use-of-force decision has not been addressed in any public departmental review located in the sources reviewed for this summary.",
+      "The full contents of the body-worn camera footage referenced in the State Attorney's letter have not been made comprehensively available in public reporting."
+    ],
+    "unanswered": [
+      "What specifically caused the officer's firearm to discharge \u201cunintentionally\u201d during an active Taser deployment, and what does that finding mean for the department's own firearms-handling training?",
+      "Why did the review take roughly five months to conclude, and what specific evidence led investigators to the unintentional-discharge finding rather than treating the shot as a deliberate use of force?",
+      "Has the body-worn camera footage of the incident ever been released publicly in full, and if so, does it corroborate the unintentional-discharge account?"
+    ],
+    "sources": [
+      {
+        "name": "Action News Jax (WJAX) \u2014 \u201cJacksonville officer's gun firing was \u2018unintentional\u2019 in July shooting that killed man, SAO finds\u201d",
+        "url": "https://news.yahoo.com/jacksonville-officer-gun-firing-unintentional-215415499.html",
+        "verified": true
+      },
+      {
+        "name": "The Florida Times-Union (via Yahoo News) \u2014 \u201cSAO: It was an \u2018unintentional\u2019 gunshot by Jacksonville police that killed suspect on July 30\u201d",
+        "url": "https://news.yahoo.com/sao-unintentional-gunshot-jacksonville-police-173816338.html?fr=sycsrp_catchall",
+        "verified": true
+      },
+      {
+        "name": "The Florida Times-Union (via Yahoo News) \u2014 \u201cJacksonville police shoot, kill man officers say came at them armed with knives Saturday morning\u201d",
+        "url": "https://news.yahoo.com/jacksonville-police-shoot-kill-man-161445676.html",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "dante-kittrell",
+    "caseNumber": "256",
+    "name": "Dante Kittrell",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2022,
+    "age": 51,
+    "gender": "male",
+    "city": "South Bend",
+    "county": "St. Joseph County",
+    "state": "IN",
+    "caseSeries": null,
+    "dateAdded": "2026-09-22",
+    "summary": "Dante Kittrell, 51, was shot three times and killed by South Bend, Indiana police officers on July 29, 2022, during a roughly 45-minute standoff near Coquillard Elementary School after a school employee called 911 to report an armed man threatening to commit suicide. Kittrell, in the midst of what his family's attorney described as a mental health crisis, repeatedly told officers things like \u201cI'm ready to die\u201d and \u201cif I point my weapon at you, you have to do your job, right?\u201d before pulling out what appeared to be a handgun; four of the 18 responding officers opened fire. The object was later found to be a highly detailed replica of a Glock 19. The St. Joseph County Prosecutor's Office ruled the shooting a justifiable homicide in August 2022, finding it could not prove beyond a reasonable doubt that officers had not acted in self-defense. No one has ever been charged in Kittrell's death.",
+    "known": [
+      "The 911 call, the standoff, and the shooting, per the St. Joseph County Prosecutor's Office's public findings and body and in-car camera footage the South Bend Police Department released publicly.",
+      "A Coquillard School employee called 911 at 11:36 a.m. reporting an armed man threatening suicide near the school's baseball fields; officers arrived within four minutes but did not initially see a weapon, and two crisis negotiators were requested to the scene.",
+      "Over roughly 45 minutes, Kittrell told officers he wanted to die and made statements including \u201cend this,\u201d \u201cfire it,\u201d and asking whether officers would be forced to act if he pointed his weapon at them, before pulling out what appeared to be a handgun at 12:29 p.m.",
+      "Four of the 18 officers who responded \u2014 Randall Goering, Joseph Mitchell, Anthony Dertz, and Neil Graber \u2014 fired their weapons, striking Kittrell three times: a graze wound to the head, a wound to the torso, and a wound to the hip.",
+      "The item Kittrell pointed at officers was recovered and examined afterward, revealing it to be a highly detailed replica airsoft version of a tan Glock 19 9mm handgun, not a functional firearm.",
+      "A joint investigation by the St. Joseph County and Mishawaka Police Departments, including ballistics testing, witness interviews, and body and in-car camera footage, was turned over to the St. Joseph County Prosecutor's Office.",
+      "The prosecutor's office ruled the shooting a justifiable homicide in August 2022, finding it could not prove beyond a reasonable doubt that the officers were not acting in self-defense or the defense of others, since they had no way of knowing the replica was not a real firearm; no charges were filed.",
+      "The family's attorney, Sean Drew, publicly stated that officers with proper mental health crisis training should have recognized Kittrell's statements and behavior as a suicidal crisis rather than a homicidal threat, and criticized the number of officers who responded as overwhelming for that kind of encounter."
+    ],
+    "unknown": [
+      "Whether a smaller, more specifically crisis-trained response could have de-escalated the encounter without gunfire, as the family's attorney has argued, was never independently tested or addressed in the prosecutor's justifiable-homicide finding, which focused only on whether the officers' subjective belief in a threat was reasonable at the moment they fired.",
+      "The specific individual roles and split-second decisions of each of the four officers who fired, as opposed to the general finding that the group's action was justified, have not been broken out in available public reporting.",
+      "Why 18 officers, including two dedicated crisis negotiators, were unable to de-escalate a declared suicidal crisis without gunfire in 45 minutes has not been addressed in any public departmental policy review located in the sources reviewed for this summary."
+    ],
+    "unanswered": [
+      "Why did a response that included two dedicated crisis negotiators end in gunfire rather than a successful de-escalation of a man who had repeatedly stated he wanted to die, not to hurt others?",
+      "What specific number and type of officers responding to a declared mental health crisis is considered appropriate by the department's own training standards, given community criticism that 18 officers was overwhelming for this kind of call?",
+      "What policy changes, if any, has the South Bend Police Department made to its mental health crisis response protocol since Kittrell's death?"
+    ],
+    "sources": [
+      {
+        "name": "WNDU \u2014 \u201cDeadly shooting of Dante Kittrell deemed police justifiable\u201d",
+        "url": "https://www.wndu.com/2022/08/24/deadly-shooting-dante-kittrell-deemed-police-justifiable/",
+        "verified": true
+      },
+      {
+        "name": "ABC57 \u2014 \u201cShooting of Dante Kittrell by police ruled justifiable homicide\u201d",
+        "url": "https://www.abc57.com/news/shooting-of-dante-kittrell-by-police-ruled-justifiable-homicide",
+        "verified": true
+      },
+      {
+        "name": "WVPE (NPR Michiana) \u2014 \u201cFatal July police shooting of Dante Kittrell ruled justified, prosecutor's office says\u201d",
+        "url": "https://www.wvpe.org/wvpe-news/2022-08-24/fatal-july-police-shooting-of-dante-kittrell-ruled-justified-prosecutors-office-says",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "mubarak-soulemane",
+    "caseNumber": "257",
+    "name": "Mubarak Soulemane",
+    "status": "unresolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 19,
+    "gender": "male",
+    "city": "West Haven",
+    "county": "New Haven County",
+    "state": "CT",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Mubarak Soulemane, 19, a community college student in the midst of a mental health crisis, was shot and killed by Connecticut State Trooper Brian North on January 15, 2020, while sitting behind the wheel of a stopped, suspected stolen car in West Haven. Police had pursued the vehicle after a report that Soulemane displayed a knife during an earlier carjacking; when the car came to a stop, North broke the driver's side window and fired seven shots through it, killing Soulemane, who was holding a kitchen knife but remained seated inside the car with the window rolled up at the moment he was shot. Connecticut's Inspector General found the shooting should not have happened, since North and other officers were not in imminent danger, and charged North with first-degree manslaughter, a charge carrying up to 40 years in prison. A jury acquitted North of that charge and two lesser counts in March 2024. No one has ever been convicted in Soulemane's death.",
+    "known": [
+      "The carjacking report, the pursuit, and the shooting, per the Connecticut Office of the Inspector General's investigative report and body camera footage introduced at trial.",
+      "Police began pursuing Soulemane's vehicle after a report that he had displayed a knife during an earlier carjacking in Norwalk; the pursuit ended when the car became boxed in by traffic in West Haven.",
+      "Trooper Brian North broke the driver's side window with his baton and fired seven shots through it in rapid succession, striking and killing Soulemane, who remained seated in the car holding a kitchen knife with the window rolled up at the time of the shooting.",
+      "Connecticut Inspector General Robert Devlin's office, in a rare independent finding, concluded the shooting should not have occurred because North and the other officers present were not in imminent danger given Soulemane's position inside the closed vehicle, and charged North with first-degree manslaughter in December 2021.",
+      "North's trial began in early 2024; the defense argued North reasonably believed Soulemane posed a lethal threat and might have used the knife or driven the car at officers.",
+      "A six-person jury in Milford acquitted North of first-degree manslaughter, second-degree manslaughter, and negligent homicide on March 15, 2024, after roughly a day and a half of deliberation.",
+      "Soulemane's family, who said they were devastated by the verdict, separately pursued a civil lawsuit against North and the other officers present at the scene."
+    ],
+    "unknown": [
+      "Whether Soulemane, seated inside the car with the window rolled up, posed the kind of imminent threat that would justify deadly force was directly disputed even within state government \u2014 the state's own Inspector General concluded the shooting should not have happened \u2014 yet a jury reached the opposite conclusion at trial, and the discrepancy between those two findings has never been reconciled.",
+      "The specific reasoning behind the jury's acquittal, beyond the public verdict itself, has not been made available, as jury deliberations are not a matter of public record.",
+      "The outcome of the Soulemane family's separate civil lawsuit against North and the other officers present was not confirmed in the sources reviewed for this summary."
+    ],
+    "unanswered": [
+      "Why did a jury reach the opposite conclusion from the state's own Inspector General, who had already formally found the shooting unjustified before charges were even filed?",
+      "Why did Trooper North break the car window and fire seven shots at a man seated inside a stopped vehicle with the window rolled up, rather than pursue other options to end the standoff?",
+      "What, if any, disciplinary consequences did North face within the Connecticut State Police following his acquittal?"
+    ],
+    "sources": [
+      {
+        "name": "Associated Press (via Press Reader) \u2014 \u201cTrooper acquitted in shooting death of Black college student\u201d",
+        "url": "https://www.pressreader.com/usa/marin-independent-journal/20240316/281663964989555",
+        "verified": true
+      },
+      {
+        "name": "CT Insider \u2014 \u201cCT trooper acquitted in fatal shooting of Mubarak Soulemane\u201d",
+        "url": "https://www.ctinsider.com/news/article/soulemane-north-verdict-trooper-trial-18730575.php",
+        "verified": true
+      },
+      {
+        "name": "CBS News \u2014 \u201cConnecticut state trooper acquitted in fatal shooting of Mubarak Soulemane\u201d",
+        "url": "https://www.cbsnews.com/newyork/news/mubarak-soulemane-trooper-brian-north-verdict/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "jamarion-robinson",
+    "caseNumber": "258",
+    "name": "Jamarion Robinson",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2016,
+    "age": 26,
+    "gender": "male",
+    "city": "East Point",
+    "county": "Fulton",
+    "state": "GA",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Jamarion Robinson, 26, a former college football player diagnosed with paranoid schizophrenia, was shot 59 times, leaving 76 wounds, by members of a U.S. Marshals-led fugitive task force serving an arrest warrant at his girlfriend's East Point, Georgia apartment on August 5, 2016. At least 14 heavily armed officers from seven agencies forced entry after Robinson refused to come out; no body camera footage exists, since U.S. Marshals were not permitted to wear them at the time, and the East Point vehicles present that day had no dash cameras installed. A Fulton County grand jury indicted task force members Eric Heinze and Kristopher Hutchens on felony murder and related charges in October 2021, five years after the shooting. The case was removed to federal court, where a judge ultimately dismissed the charges entirely in 2026, ruling the officers were immune from state prosecution because they were acting within federal duties; a federal appeals court separately rejected prosecutors' bid to bring the case back. No one has ever been convicted in Robinson's death.",
+    "known": [
+      "The warrant service, the raid, and the shooting, per Wikipedia's sourced case history, Fulton County grand jury records, and reporting from Fox 5 Atlanta, Vice News, and the Atlanta Journal-Constitution.",
+      "The warrant was obtained after Robinson, a Tuskegee University and Clark Atlanta University student who had paused his education, allegedly fired at an Atlanta police officer during a prior encounter days earlier.",
+      "At least 14 officers from seven different agencies, led by the U.S. Marshals Southeast Regional Fugitive Task Force and heavily armed including with submachine guns, forced entry into the apartment after Robinson refused to come out; a bystander's cellphone video captured nearly three minutes of continuous gunfire.",
+      "A medical examiner's report found Robinson was shot 59 times, causing 76 total wounds; the family's civil suit stated the gun police said Robinson fired was inoperable and had no fingerprints on it, and a private investigator hired by the family found evidence someone shot Robinson twice more while standing over him.",
+      "No body camera footage exists of the shooting, since U.S. Marshals were not permitted to wear them at the time, and the East Point police vehicles present that day were new models that had not yet had dash cameras installed.",
+      "A Fulton County grand jury indicted task force members Eric Heinze and Kristopher Hutchens on felony murder, burglary, aggravated assault, and making false statements in October 2021, five years after the shooting; both pleaded not guilty.",
+      "The case was removed to federal court after a judge determined Heinze and Hutchens were acting in their federal capacity at the time of the shooting; in 2026, a federal district judge granted their motions to dismiss the charges entirely, ruling they were immune from state prosecution.",
+      "Georgia prosecutors sought a limited remand to state court to pursue a superseding indictment; the Eleventh Circuit Court of Appeals rejected that request in 2026, finding it lacked jurisdiction over the state's appeal."
+    ],
+    "unknown": [
+      "Whether Robinson in fact fired the recovered handgun at officers, given the family's civil suit alleges the weapon was inoperable and bore no fingerprints, was never resolved at any criminal trial, since the case was dismissed before reaching one.",
+      "Whether Robinson was shot additional times by an officer standing over him after the initial gunfire, as a private investigator hired by the family found evidence to suggest, has never been independently confirmed or refuted by any official investigation.",
+      "The full reasoning behind the roughly five-year delay between the 2016 shooting and the 2021 indictment has been attributed by the family's advocates to federal resistance in turning over records, but has not been comprehensively documented in a single official accounting."
+    ],
+    "unanswered": [
+      "Why did it take five years to secure an indictment, and why were the resulting charges then dismissed entirely on immunity grounds a decade after the shooting?",
+      "Why did neither the U.S. Marshals task force members nor the East Point police vehicles present that day have any camera equipment capturing the shooting itself?",
+      "What specific policy changes, if any, has the U.S. Marshals Service made regarding body camera use on fugitive task force operations since Robinson's death?"
+    ],
+    "sources": [
+      {
+        "name": "Wikipedia \u2014 \u201cShooting of Jamarion Robinson\u201d (sourced case history)",
+        "url": "https://en.wikipedia.org/wiki/Shooting_of_Jamarion_Robinson",
+        "verified": true
+      },
+      {
+        "name": "Courthouse News Service \u2014 \u201c11th Circuit rejects additional charges for officers who shot Black man 76 times\u201d",
+        "url": "https://www.courthousenews.com/11th-circuit-rejects-additional-charges-for-officers-who-shot-black-man-76-times/",
+        "verified": true
+      },
+      {
+        "name": "The Atlanta Journal-Constitution \u2014 \u201cJudge dismisses case against officers charged in man's 2016 death in Fulton\u201d",
+        "url": "https://www.ajc.com/news/2026/08/judge-tosses-criminal-case-against-task-force-officers-in-shooting-death/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "maurice-gordon",
+    "caseNumber": "259",
+    "name": "Maurice Gordon",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 28,
+    "gender": "male",
+    "city": "Bass River",
+    "county": "Burlington",
+    "state": "NJ",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Maurice Gordon, 28, a Jamaican-born chemistry student experiencing a mental health crisis, was shot six times and killed by New Jersey State Police Sergeant Randall Wetzel on the Garden State Parkway on May 23, 2020, two days before the murder of George Floyd. Over roughly four hours that morning, Gordon had five separate encounters with law enforcement across New Jersey after his car repeatedly stalled; a friend had called 911 the day before to report him missing and in a \u201cpanicked state.\u201d Wetzel, the fifth officer to stop him, let Gordon wait in the back of his patrol car for a tow truck; when Gordon got out and tried twice to get into the driver's seat of the cruiser, Wetzel pepper-sprayed him, then shot him six times during a physical struggle. A state grand jury declined to indict Wetzel in May 2022. No one has ever been charged in Gordon's death.",
+    "known": [
+      "Gordon's five separate law enforcement encounters over roughly four hours and the shooting itself, per more than a dozen video and audio recordings the New Jersey Attorney General's Office released publicly in June 2020.",
+      "A friend of Gordon's called 911 on May 22, 2020 to report him missing from his home in Poughkeepsie, New York and in a \u201cpanicked state\u201d; an investigation later found Gordon had driven from New York through Connecticut into New Jersey overnight.",
+      "Gordon was stopped four times earlier that morning after his car ran out of gas or stalled; officers on each occasion arranged for a tow and let him go on his way without incident.",
+      "Sergeant Randall Wetzel stopped Gordon a fifth time at 6:26 a.m. for driving over 100 mph on the Garden State Parkway in Bass River; when Gordon's car would not restart, Wetzel patted him down and let him wait in the back seat of the patrol car for a tow truck, asking him more than 70 questions during the wait, to which Gordon gave few audible responses.",
+      "After roughly 21 minutes, Gordon got out of the patrol car and twice attempted to get into its driver's seat; Wetzel pepper-sprayed him on the first attempt, and during the second attempt a physical struggle broke out during which Wetzel fired six shots, killing Gordon at the scene.",
+      "Gordon's family said he had no criminal record and was suffering from psychiatric difficulties at the time of his death; the shooting drew national attention when video was released in June 2020, days after George Floyd's murder had already sparked nationwide protests.",
+      "A state grand jury declined to indict Wetzel on May 17, 2022, nearly two years after the shooting; the family's attorney said the outcome was \u201cnot a surprise\u201d given New Jersey's own data showing police used force against Black people at roughly eight times the rate used against white people in comparable encounters.",
+      "Gordon's parents filed a federal civil rights lawsuit in March 2021 alleging race was a factor in his death; a subsequent investigation, per Gothamist reporting, examined whether officers along Gordon's route that morning were adequately trained to recognize and respond to a mental health crisis."
+    ],
+    "unknown": [
+      "Whether Wetzel's account of the physical struggle justified deadly force, as opposed to de-escalation options given Gordon's documented psychiatric crisis and the roughly four hours of prior, incident-free encounters with other officers that morning, was never tested at any criminal trial since the grand jury declined to indict.",
+      "Whether any of the five separate law enforcement agencies that encountered Gordon that morning identified or flagged signs of a mental health crisis before Wetzel's fatal stop has not been comprehensively addressed in available public reporting.",
+      "The full reasoning behind the grand jury's decision not to indict, beyond the state attorney general's public announcement, has not been made available, as grand jury proceedings are sealed under New Jersey law."
+    ],
+    "unanswered": [
+      "Why, across five separate law enforcement encounters spanning roughly four hours and multiple documented signs of psychiatric distress, did the fifth encounter end in gunfire rather than the crisis-appropriate response the prior four had provided?",
+      "Why did it take nearly two years for a charging decision to be reached despite extensive video and audio evidence being available from the outset?",
+      "What outcome, if any, resulted from the Gordon family's federal civil rights lawsuit alleging race was a factor in his death?"
+    ],
+    "sources": [
+      {
+        "name": "NBC News \u2014 \u201cVideo released in fatal shooting of unarmed Black man by N.J. state trooper\u201d",
+        "url": "https://www.nbcnews.com/news/us-news/video-released-fatal-shooting-unarmed-black-man-n-j-state-n1228211",
+        "verified": true
+      },
+      {
+        "name": "Gothamist \u2014 \u201cA NJ State Trooper Fatally Shot A Black Man. Now The Case Raises Questions About Mental Health Training for Officers\u201d",
+        "url": "https://gothamist.com/news/nj-state-trooper-fatal-shooting-maurice-gordon",
+        "verified": true
+      },
+      {
+        "name": "Newsweek \u2014 \u201cNo Charges for Cop Randy Wetzel, Who Shot Unarmed Black Man Maurice Gordon\u201d",
+        "url": "https://www.newsweek.com/no-charges-cop-randy-wetzel-who-shot-unarmed-black-man-maurice-gordon-1707623",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "jaquyn-light",
+    "caseNumber": "260",
+    "name": "Jaquyn O'Neill Light",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2020,
+    "age": 20,
+    "gender": "male",
+    "city": "Graham",
+    "county": "Alamance",
+    "state": "NC",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Jaquyn O'Neill Light, 20, was shot and killed by Graham, North Carolina Police Officer Marcus Pollock on January 28, 2020, while officers were attempting to serve arrest warrants for misdemeanor assault and a felony probation violation at a residence where Light was believed to be staying. Light ran out the front door, unintentionally colliding with Pollock, who fired a single shot that struck Light in the abdomen; Light was unarmed, and no weapon was ever found on him. Pollock's body camera was not recording. Alamance County District Attorney Sean Boone announced in July 2020 that the shooting was either accidental or in self-defense, and that both explanations were consistent with the evidence, declining to file charges. No one has ever been charged in Light's death.",
+    "known": [
+      "The attempted warrant service, the collision, and the shooting, per Alamance County District Attorney Sean Boone's July 2020 public findings and a subsequent federal civil rights lawsuit filed by Light's estate.",
+      "Officers Brandon Land, Marcus Pollock, and Keith Scoggins arrived to serve warrants for misdemeanor assault and a felony probation violation for absconding; the front porch of the residence was covered in black plastic draping that blocked the entrance.",
+      "District Attorney Boone's investigation concluded Light likely heard officers inside the home and ran out the front door believing no police were positioned there, unintentionally colliding with Officer Pollock as he exited.",
+      "Pollock's gun discharged during or immediately after the collision, striking Light once in the left side of his abdomen; an autopsy by the Office of the Chief Medical Examiner found he died from blood loss caused by the single gunshot wound. Light was not shot in the back, Boone said, and no weapon was found on him.",
+      "Pollock's body camera was not recording during the encounter, a fact Light's mother said left her without a clear account of what actually happened despite the district attorney's briefing.",
+      "District Attorney Boone announced on July 17, 2020 that no criminal charges would be filed, stating the shooting was consistent with the evidence as either an accident or self-defense, and that he believed an accidental discharge to be the more likely explanation.",
+      "The North Carolina State Bureau of Investigation separately reviewed the shooting and reached the same conclusion in 2022, finding no evidence Pollock broke the law.",
+      "Light's estate filed a federal civil rights lawsuit against the City of Graham, then-Police Chief Jeff Prichard, and Officer Pollock; the city agreed in 2024 to a $725,000 settlement, with funds set aside for Light's daughter, born the same year he died."
+    ],
+    "unknown": [
+      "Whether the shooting was in fact an accidental discharge during a physical collision, as the district attorney concluded was most likely, or a deliberate act of self-defense, the other explanation the district attorney said was equally consistent with the evidence, was never resolved with certainty, and neither explanation was tested at any criminal trial since none was brought.",
+      "Why Officer Pollock's body camera was not recording during an attempted warrant service, despite department policy, has not been fully explained in available public reporting.",
+      "The full contents of the North Carolina State Bureau of Investigation's independent 2022 review, beyond its conclusion, have not been made comprehensively public."
+    ],
+    "unanswered": [
+      "Why was Officer Pollock's body camera not recording during a planned warrant service, and what policy, if any, was violated by that failure?",
+      "Why did the district attorney present two different explanations for the shooting \u2014 accident or self-defense \u2014 as equally consistent with the evidence, rather than determining which had actually occurred?",
+      "Why did it take roughly two years for the State Bureau of Investigation to complete its own independent review of the shooting?"
+    ],
+    "sources": [
+      {
+        "name": "FOX8 WGHP \u2014 \u201cOfficer shot Graham man accidentally or in self-defense, district attorney says; suspect was not armed\u201d",
+        "url": "https://myfox8.com/news/officer-shot-graham-man-accidentally-or-in-self-defense-district-attorney-says-suspect-was-not-armed/",
+        "verified": true
+      },
+      {
+        "name": "FOX8 WGHP \u2014 \u201cGraham officer did not break law by shooting, killing Jaquyn Light, SBI says\u201d",
+        "url": "https://myfox8.com/news/north-carolina/piedmont-triad/graham-officer-did-not-break-law-by-shooting-killing-jaquyn-light-sbi-says/",
+        "verified": true
+      },
+      {
+        "name": "Alamance News \u2014 \u201cCity of Graham ordered to pay $725K to settle wrongful death suit\u201d",
+        "url": "https://alamancenews.com/city-of-graham-ordered-to-pay-725k-to-settle-wrongful-death-suit/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "calvin-toney",
+    "caseNumber": "261",
+    "name": "Calvin Toney",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2017,
+    "age": 24,
+    "gender": "male",
+    "city": "Baton Rouge",
+    "county": "East Baton Rouge",
+    "state": "LA",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Calvin Toney, 24, was shot and killed by Baton Rouge Police Officer Darrell Carter Jr. on November 13, 2017, when Carter accompanied a state child welfare caseworker to Toney's apartment to investigate abuse allegations. Officers said Toney tried to flee, fought Carter during a struggle that lasted several minutes, and grabbed for the officer's Taser before Carter shot him once in the chest. Nearly two years later, East Baton Rouge District Attorney Hillar Moore III cleared Carter of any charges, and the department later awarded him a Medal of Valor for the encounter. Toney's family said police seized apartment complex surveillance footage of the shooting and never shared it with them, leaving them without an independent account of what happened. No one has ever been charged in Toney's death.",
+    "known": [
+      "The child-welfare escort, the struggle, and the shooting, per East Baton Rouge District Attorney Hillar Moore III's October 2019 public findings and contemporaneous Louisiana State Police statements.",
+      "A Department of Children and Family Services caseworker requested a police escort to interview Toney, whose prior record included a child abuse conviction, at the apartment he shared with his girlfriend; Toney's girlfriend had separately been arrested on child cruelty charges days earlier.",
+      "Officer Darrell Carter Jr. said Toney tried to flee as soon as he opened the door and saw the officer; a struggle followed that District Attorney Moore described as lasting several minutes and involving Carter's Taser, which Toney allegedly grabbed for.",
+      "Carter shot Toney once in the chest; Toney briefly fled again before being subdued and handcuffed, and died at the scene.",
+      "Louisiana State Police investigated the shooting, as is standard protocol for Baton Rouge Police Department-involved shootings, and turned its findings over to the district attorney's office.",
+      "District Attorney Hillar Moore III announced in October 2019, nearly two years after the shooting, that Carter would not face charges, characterizing the encounter as a chaotic struggle in which Toney reached for the officer's Taser.",
+      "Carter was later given the Baton Rouge Police Department's Medal of Valor for his actions during the encounter.",
+      "Toney's mother told The Appeal that apartment complex surveillance cameras had captured the shooting, but that police seized the footage and never released or shared it with the family, leaving them without any independent account of the incident a year after his death."
+    ],
+    "unknown": [
+      "Whether Toney in fact grabbed for the officer's Taser during the struggle, as the district attorney's account states, was never independently verified through the apartment complex's own surveillance footage, which police seized but the family says was never shared with them or made public.",
+      "The specific contents of Officer Carter's body camera footage from the encounter, reviewed by the district attorney but not made broadly public in the sources reviewed for this summary, remain largely undisclosed.",
+      "Why the charging decision took nearly two years to reach has not been fully explained beyond the general timeline of the state police investigation and district attorney review."
+    ],
+    "unanswered": [
+      "Why did police seize apartment complex surveillance footage of the shooting and never share or release it to Toney's family?",
+      "Why did the district attorney's charging decision take nearly two years, and what specifically was under review for that length of time?",
+      "Why was Officer Carter given a departmental award for valor for an encounter that killed an unarmed man during what began as a child-welfare check?"
+    ],
+    "sources": [
+      {
+        "name": "The Appeal \u2014 \u201cA Year After Police Shot Calvin Toney, His Family Still Doesn't Know What Happened\u201d",
+        "url": "https://theappeal.org/a-year-after-police-shot-calvin-toney-his-family-still-doesnt-know-what-happened/",
+        "verified": true
+      },
+      {
+        "name": "The Advocate (Baton Rouge) \u2014 \u201cBaton Rouge officer won't face charges for fatally shooting man amid 2017 child abuse investigation\u201d",
+        "url": "https://www.theadvocate.com/baton_rouge/news/crime_police/article_487d8352-fb3c-11e9-84e6-ff58903d295b.html",
+        "verified": true
+      },
+      {
+        "name": "WBRZ \u2014 \u201cDistrict Attorney Hillar Moore clears officer involved in shooting death of Calvin Toney\u201d",
+        "url": "https://www.wbrz.com/news/district-attorney-hillar-moore-clears-officer-involved-in-shooting-death-of-calvin-toney/",
+        "verified": true
+      },
+      {
+        "name": "Project Cold Case",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "Murder Accountability Project",
+        "url": "",
+        "verified": false
+      },
+      {
+        "name": "NamUs",
+        "url": "",
+        "verified": false
+      }
+    ],
+    "lastVerified": "2026-08-21"
+  },
+  {
+    "id": "bernard-monroe",
+    "caseNumber": "262",
+    "name": "Bernard Monroe",
+    "status": "unsolved",
+    "caseType": "homicide",
+    "year": 2009,
+    "age": 73,
+    "gender": "male",
+    "city": "Homer",
+    "county": "Claiborne Parish",
+    "state": "LA",
+    "caseSeries": null,
+    "dateAdded": "2026-09-25",
+    "summary": "Bernard Monroe Sr., 73, a retired power company lineman who had lost his voice to throat cancer, was shot and killed by Homer, Louisiana Police Officer Tim Cox on his own front porch during a family cookout on February 20, 2009. Two white officers had entered the Monroe family's property chasing Monroe's son, who was not wanted for any crime; as Monroe walked toward his front door to check on his elderly wife, Cox fired several shots through the screen door from inside the house, killing him. Multiple witnesses told reporters they saw the second officer pick up a handgun Monroe kept visibly on the porch and move it, using a latex glove, to a position near Monroe's body. A Claiborne Parish grand jury declined to indict Cox in 2010, and both officers subsequently resigned. No one has ever been charged in Monroe's death.",
+    "known": [
+      "The pursuit onto the Monroe property and the shooting, per contemporaneous reporting by the Chicago Tribune and NBC News, and the Southern Poverty Law Center's subsequent civil lawsuit.",
+      "Officers Tim Cox and Joseph Henry, both white, entered the Monroe family's property during a cookout attended by a dozen family members and grandchildren while chasing Monroe's son, Shaun Monroe, who was not wanted for any crime and was not arrested; witnesses said Homer police had a practice of targeting Shaun Monroe for stops without legal cause.",
+      "Henry shot Shaun Monroe in the back with a Taser as officers pursued him into the family home; the elder Monroe, unable to speak due to his cancer, walked toward his front door to check on his wife inside.",
+      "Cox, positioned inside the house, fired several shots through the screen door at Monroe without warning, according to the family's lawsuit; Monroe's wife, Louise, came out to find her husband alive but bleeding on the sidewalk, where he died.",
+      "Multiple witnesses at the scene told reporters they saw Officer Henry pick up a handgun Monroe kept visibly on the porch for protection, using a latex glove, and that the gun was later found next to Monroe's body; witnesses disputed the officers' account that Monroe had been armed and threatening.",
+      "The shooting drew the Louisiana State Police, the FBI, and the U.S. Department of Justice to the town, and prompted a march led by the Rev. Al Sharpton protesting the killing.",
+      "A Claiborne Parish grand jury, whose proceedings were handled by the state attorney general's office rather than the local district attorney, returned a \u201cno true bill\u201d in 2010, declining to indict Cox on any of the charges considered, including first-degree murder, second-degree murder, manslaughter, and negligent homicide.",
+      "Both Cox and Henry resigned from the Homer Police Department following the shooting; the Southern Poverty Law Center filed a wrongful death lawsuit on behalf of Monroe's family, which was settled with the town in August 2010."
+    ],
+    "unknown": [
+      "Whether Monroe was in fact armed and threatening, as the officers maintained, or whether a weapon was moved to the scene after the shooting, as multiple witnesses told reporters they saw happen, was never resolved by any criminal trial, since the grand jury declined to indict.",
+      "Whether Homer Police Department's documented practice of targeting Shaun Monroe for warrantless stops was itself ever formally reviewed or disciplined beyond the resignations of the two officers involved in his father's death has not been made public.",
+      "The full findings of the joint Louisiana State Police, FBI, and Department of Justice review of the shooting, beyond the state grand jury's declination, have not been made comprehensively public."
+    ],
+    "unanswered": [
+      "Why did multiple witnesses report seeing an officer move a handgun to the scene after the shooting, and was that allegation ever formally investigated?",
+      "Why were two officers pursuing Monroe's son onto private property during a family gathering in the first place, given he was wanted for no crime?",
+      "What specific findings, if any, did the FBI and Department of Justice reach in their separate review of the shooting, beyond the state grand jury's declination to indict?"
+    ],
+    "sources": [
+      {
+        "name": "Southern Poverty Law Center \u2014 \u201cSPLC Sues Homer, La., and Former Police Officers in Fatal Shooting of Elderly Black Man\u201d",
+        "url": "https://www.splcenter.org/resources/stories/splc-sues-homer-la-and-former-police-officers-fatal-shooting-elderly-black-man/",
+        "verified": true
+      },
+      {
+        "name": "NBC News \u2014 \u201cKilling of black man by police shakes La. town\u201d",
+        "url": "https://www.nbcnews.com/id/wbna30153011",
+        "verified": true
+      },
+      {
+        "name": "Fox News \u2014 \u201cGrand Jury Refuses to Indict White Cop Who Killed Black Man\u201d",
+        "url": "https://foxnews.com/story/grand-jury-refuses-to-indict-white-cop-who-killed-black-man.amp",
         "verified": true
       },
       {
