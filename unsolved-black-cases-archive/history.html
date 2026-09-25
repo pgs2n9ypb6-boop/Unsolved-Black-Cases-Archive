@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>History & Context | Unsolved Black Cases Archive</title>
+<meta name="description" content="A timeline of the history, laws, and media patterns that shaped how cases involving Black victims were investigated, covered, and left unsolved.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF0F3; --panel:#FFFFFF; --ink:#1E2433; --muted:#5A6275;
+  --rule:#C9CED8; --spine:#2F5D8A; --open:#B26B12; --closed:#2F5D8A;
+  --chip:#E1E5EC; --focus:#B26B12;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#171B25; --panel:#1F2431; --ink:#E7EAF0; --muted:#A3AABB;
+    --rule:#343B4C; --spine:#7FA7D1; --open:#E0A24A; --closed:#7FA7D1; --chip:#2A3040; --focus:#E0A24A;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;font-size:1.125rem;line-height:1.6}
+a{color:var(--spine)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+
+header{padding:1.25rem 0 0}
+.back{font-family:"Archivo",system-ui,sans-serif;font-size:.95rem;text-decoration:none}
+.back:hover{text-decoration:underline}
+
+.hero{padding:3rem 0 2rem;border-bottom:1px solid var(--rule)}
+.hero h1{font-family:"Archivo",system-ui,sans-serif;font-stretch:68%;font-weight:800;
+  font-size:clamp(2.6rem,9vw,4.6rem);line-height:.95;letter-spacing:-.01em;margin:0 0 1.25rem}
+.hero p{margin:0 0 1rem;max-width:36rem;color:var(--ink)}
+.hero .quiet{color:var(--muted);font-style:italic}
+
+.legend{display:flex;flex-wrap:wrap;gap:1.25rem;margin:1.5rem 0 0;padding:0;list-style:none;
+  font-family:"Archivo",system-ui,sans-serif;font-size:.9rem;color:var(--muted)}
+.legend li{display:flex;align-items:center;gap:.5rem}
+.dot{width:14px;height:14px;border-radius:50%;flex:none;display:inline-block}
+.dot.open{border:3px solid var(--open);background:var(--paper)}
+.dot.closed{background:var(--closed)}
+.dot.context{width:10px;height:10px;background:var(--muted);margin:0 2px}
+
+.filters{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);
+  padding:.9rem 0;border-bottom:1px solid var(--rule)}
+.filters .row{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none}
+.filters .row::-webkit-scrollbar{display:none}
+.chip{font-family:"Archivo",system-ui,sans-serif;font-size:.92rem;font-weight:600;white-space:nowrap;
+  border:1px solid transparent;background:var(--chip);color:var(--ink);padding:.5rem .9rem;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tools{padding:1.25rem 1.25rem .75rem;display:grid;gap:.9rem}
+.tools .row{display:flex;gap:.5rem;flex-wrap:wrap}
+.search{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:.95rem;display:grid;gap:.35rem}
+.search input{font:inherit;font-weight:400;font-size:1rem;color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:.7rem .8rem;width:100%}
+.jump{font-family:"Archivo",system-ui,sans-serif;font-stretch:75%;font-weight:700;font-size:1rem;white-space:nowrap;
+  background:none;border:0;border-bottom:2px solid transparent;color:var(--spine);padding:.35rem .5rem;cursor:pointer}
+.jump:hover{border-bottom-color:var(--spine)}
+.jump:disabled{color:var(--muted);opacity:.45;cursor:default;border-bottom-color:transparent}
+.count{font-family:"Archivo",system-ui,sans-serif;font-size:.9rem;color:var(--muted);margin:1.25rem 0 0}
+.empty{font-style:italic;color:var(--muted);padding:1rem 0 2rem}
+
+.timeline{position:relative;list-style:none;margin:0;padding:2rem 0 1rem}
+.timeline::before{content:"";position:absolute;left:7px;top:2rem;bottom:1rem;width:2px;background:var(--spine);opacity:.35}
+.entry{position:relative;padding-left:2.25rem;margin-bottom:1.75rem}
+.entry[hidden]{display:none}
+.entry .marker{position:absolute;left:0;top:.45rem}
+.entry.context .marker{left:2px;top:.6rem}
+.year{font-family:"Archivo",system-ui,sans-serif;font-stretch:68%;font-weight:800;
+  font-size:2rem;line-height:1;margin:0 0 .35rem;color:var(--spine)}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:6px}
+.card button.head{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:1rem 1.1rem}
+.card button.head:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.card h2{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:1.2rem;line-height:1.25;margin:0 0 .3rem}
+.card .sum{margin:0;color:var(--muted);font-size:1.02rem}
+.card .more{font-family:"Archivo",system-ui,sans-serif;font-size:.88rem;font-weight:600;color:var(--spine);margin-top:.5rem;display:block}
+.detail{padding:0 1.1rem 1.1rem;border-top:1px solid var(--rule)}
+.detail p{margin:.9rem 0 0}
+.why{background:var(--chip);border-radius:4px;padding:.8rem .95rem;margin-top:1rem}
+.why strong{font-family:"Archivo",system-ui,sans-serif;font-size:.95rem;display:block;margin-bottom:.2rem}
+.status{font-family:"Archivo",system-ui,sans-serif;font-size:.9rem;margin-top:.9rem;color:var(--muted)}
+.status b{color:var(--ink)}
+.caselink{display:inline-block;margin-top:.9rem;font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:.95rem}
+
+section.after{border-top:1px solid var(--rule);padding:2.5rem 0}
+section.after h2{font-family:"Archivo",system-ui,sans-serif;font-stretch:75%;font-weight:800;font-size:2rem;line-height:1.05;margin:0 0 .75rem}
+form{display:grid;gap:.9rem;margin-top:1.25rem}
+label{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:.95rem;display:grid;gap:.35rem}
+input,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:.7rem .8rem;width:100%}
+textarea{min-height:8rem;resize:vertical}
+.submit{font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:1rem;background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:.85rem 1.2rem;cursor:pointer;justify-self:start}
+.formnote{font-size:.95rem;color:var(--muted);margin:0}
+#formStatus{font-family:"Archivo",system-ui,sans-serif;font-size:.95rem;margin:0}
+.sources{font-size:1rem;color:var(--muted);padding-left:1.1rem}
+.sources li{margin-bottom:.35rem}
+footer{padding:1.5rem 0 3rem;font-family:"Archivo",system-ui,sans-serif;font-size:.9rem;color:var(--muted)}
+@media (prefers-reduced-motion: no-preference){
+  .detail{animation:open .2s ease-out}
+  @keyframes open{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><a class="back" href="index.html">Back to the archive</a></header>
+
+  <section class="hero">
+    <h1>Why so many cases went cold</h1>
+    <p>Every case in this archive happened somewhere, at a certain time, under certain laws, and in front of certain newsrooms. This timeline shows the history that shaped how cases involving Black victims were investigated, covered, and too often left unsolved.</p>
+    <p class="quiet">Tap any entry to read more.</p>
+    <ul class="legend" aria-label="Legend">
+      <li><span class="dot open" aria-hidden="true"></span>Case with no conviction</li>
+      <li><span class="dot closed" aria-hidden="true"></span>Case with a conviction, often decades later</li>
+      <li><span class="dot context" aria-hidden="true"></span>History, law, or media</li>
+    </ul>
+  </section>
+</div>
+
+<div class="wrap tools">
+  <label class="search">Search the timeline
+    <input id="search" type="search" placeholder="Try a name, city, or year" autocomplete="off">
+  </label>
+  <div class="row" id="filters" role="group" aria-label="Show only"></div>
+</div>
+
+<nav class="filters" aria-label="Jump to a time period">
+  <div class="wrap"><div class="row" id="jumps"></div></div>
+</nav>
+
+<main class="wrap">
+  <p class="count" id="count" role="status"></p>
+  <ol class="timeline" id="timeline"></ol>
+  <p class="empty" id="empty" hidden>No entries match. Try a different word, or choose Everything.</p>
+
+  <section class="after" id="tip">
+    <h2>Know something about a case?</h2>
+    <p>Many of these cases were solved decades later because someone finally spoke up, or because new DNA methods reopened old evidence. Your tip goes to the archive team. Leave your email only if you want a reply.</p>
+    <form id="tipForm" action="https://formspree.io/f/xnpqaddo" method="POST">
+      <input type="hidden" name="_subject" value="Tip from History & Context page">
+      <label>Case or era
+        <input name="case" type="text" placeholder="For example: Freeway Phantom, 1971">
+      </label>
+      <label>What you know
+        <textarea name="message" required></textarea>
+      </label>
+      <label>Email (optional)
+        <input name="email" type="email" autocomplete="email">
+      </label>
+      <button class="submit" type="submit">Send tip</button>
+      <p id="formStatus" role="status"></p>
+      <p class="formnote">If you have information about a crime, you can also contact the investigating police department or the FBI at tips.fbi.gov.</p>
+    </form>
+  </section>
+
+  <section class="after">
+    <h2>Sources and further reading</h2>
+    <ul class="sources">
+      <li>Report of the National Advisory Commission on Civil Disorders (Kerner Commission), 1968</li>
+      <li>The Washington Post, "Murder with Impunity" investigation, 2018</li>
+      <li>U.S. Department of Justice, Emmett Till Unsolved Civil Rights Crime Act reports to Congress</li>
+      <li>Isabel Wilkerson, <i>The Warmth of Other Suns</i> (on the Great Migration)</li>
+      <li>Black and Missing Foundation</li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap">Unsolved Black Cases Archive</div></footer>
+
+<script>
+const CATS = {all:"Everything", case:"Cases", law:"Justice & law", media:"Media & advocacy", place:"Where people lived"};
+
+const ENTRIES = [
+ {year:"1865", cat:"law", title:"The 13th Amendment and its loophole",
+  sum:"Slavery was abolished, except as punishment for a crime.",
+  body:"Southern states quickly passed Black Codes that made things like being unemployed or out after dark into crimes. Arrested Black men could then be leased out to farms, mines, and railroads in a system called convict leasing, which lasted into the 1900s.",
+  why:"From the start, the justice system was used to control Black Americans more than to protect them."},
+ {year:"1866", cat:"case", status:"open", title:"The Memphis Massacre, Tennessee",
+  sum:"White mobs, including police officers and firefighters, attacked Black neighborhoods for three days, killing 46 Black people.",
+  body:"They burned homes, churches, and schools. A congressional committee investigated and documented what happened, but local officials charged no one.",
+  why:"When the police themselves take part in the violence, victims have no one to report it to.",
+  result:"No one was ever prosecuted."},
+ {year:"1866", cat:"case", status:"open", title:"The New Orleans Massacre",
+  sum:"Police and a white mob attacked a meeting pushing for Black voting rights, killing dozens of Black people.",
+  body:"Black veterans and supporters had marched to the convention hall. Attackers fired into the building and shot people as they tried to escape. A congressional committee blamed local officials, but no one was prosecuted.",
+  why:"News of the killings in Memphis and New Orleans pushed Congress to pass stronger protections, showing how public attention can force change.",
+  result:"No one was ever prosecuted."},
+ {year:"1868", cat:"law", title:"The 14th Amendment",
+  sum:"The Constitution promised citizenship and equal protection of the laws to everyone born in the United States.",
+  body:"Passed after the Civil War, it was meant to protect newly freed Black Americans from states that denied them justice. For nearly a century, courts and states found ways around it.",
+  why:"Equal protection means a Black victim's case deserves the same effort as anyone else's. This timeline shows how long that promise went unkept."},
+ {year:"1870", cat:"law", title:"The 15th Amendment",
+  sum:"The Constitution barred states from denying the vote because of race.",
+  body:"Black men voted and won office across the South during Reconstruction. Within a few decades, states used poll taxes, literacy tests, and violence to take that right away.",
+  why:"Voting decided who became sheriff, prosecutor, and juror, so losing the vote meant losing a voice in the justice system."},
+ {year:"1871", cat:"law", title:"The Ku Klux Klan Act",
+  sum:"Congress gave the federal government power to prosecute Klan violence when states wouldn't.",
+  body:"President Ulysses S. Grant used the law to send troops and prosecutors into South Carolina, and hundreds of Klansmen were charged. Part of the law is still used today, letting people sue officials who violate their civil rights.",
+  why:"For a short time, federal action showed that racial violence could be stopped when the government chose to act."},
+ {year:"1873", cat:"case", status:"open", title:"The Colfax Massacre, Louisiana",
+  sum:"On Easter Sunday, a white militia killed dozens of Black men defending a courthouse after a disputed election.",
+  body:"Estimates of the dead range from about 60 to more than 150. Federal prosecutors won convictions against three men, but in 1876 the Supreme Court threw them out in United States v. Cruikshank, ruling that the federal government couldn't prosecute these attacks.",
+  why:"That ruling left protecting Black Americans to Southern states that wouldn't do it, and set a pattern that lasted for almost a century.",
+  result:"All convictions were overturned."},
+ {year:"1877", cat:"law", title:"The end of Reconstruction",
+  sum:"Federal troops pulled out of the South, and Southern states were left to govern themselves.",
+  body:"Within a few decades, those states passed Jim Crow laws and used poll taxes, literacy tests, and violence to keep Black citizens from voting. Because jurors were often chosen from voter rolls, Black residents were shut out of juries too.",
+  why:"This is when the system that let so many killers go free was built: white sheriffs, white prosecutors, and all-white juries."},
+ {year:"1880", cat:"law", title:"Strauder v. West Virginia",
+  sum:"The Supreme Court struck down a state law that allowed only white men to serve on juries.",
+  body:"It was a real win on paper. In practice, states kept Black people off juries in other ways, such as picking jurors from voter rolls that Black citizens were blocked from joining, or letting officials hand-pick jurors.",
+  why:"A law against discrimination means little when no one enforces it, a pattern that repeats across this timeline."},
+ {year:"1887", cat:"case", status:"open", title:"The Thibodaux Massacre, Louisiana",
+  sum:"White vigilantes killed Black sugarcane workers who had gone on strike for better pay.",
+  body:"Thousands of workers had joined the strike. A coroner's report confirmed only eight deaths, but historians estimate that 30 to 60 people were killed, and some estimates go much higher. Many victims are believed to be buried in an unmarked mass grave.",
+  why:"Black workers who organized for better lives could be killed without consequence, and the true number of victims may never be known.",
+  result:"No one was ever charged."},
+ {year:"1890", cat:"law", title:"The Mississippi Plan",
+  sum:"Mississippi rewrote its constitution with poll taxes and literacy tests designed to stop Black citizens from voting.",
+  body:"Other Southern states copied it. Within a few years, Black voter registration across the South collapsed.",
+  why:"Without the vote, Black citizens couldn't serve on most juries or choose the sheriffs and prosecutors who handled their cases."},
+ {year:"1892", cat:"media", title:"Ida B. Wells investigates lynching",
+  sum:"After a white mob lynched three of her friends in Memphis, journalist Ida B. Wells began documenting lynchings across the South.",
+  body:"She gathered facts case by case, often using white newspapers' own reports, and published them in pamphlets like Southern Horrors and The Red Record. A mob destroyed her newspaper office, and she was forced to leave Memphis. In 2020 she received a posthumous Pulitzer Prize citation.",
+  why:"Wells created one of the first archives of racial violence against Black Americans. This site follows in her footsteps."},
+ {year:"1896", cat:"law", title:"Plessy v. Ferguson",
+  sum:"The Supreme Court ruled that racial segregation was legal as long as facilities were \"separate but equal.\"",
+  body:"In reality, Black schools, hospitals, and neighborhoods got far less. The ruling stood until Brown v. Board of Education in 1954.",
+  why:"Segregation extended to police, courts, and newsrooms, which shaped whose cases got investigated and covered."},
+ {year:"1898", cat:"case", status:"open", title:"The Wilmington coup, North Carolina",
+  sum:"Armed white supremacists overthrew the city's elected government and killed Black residents.",
+  body:"They burned the office of the Daily Record, the city's Black-owned newspaper, and forced Black and white elected officials out of town. No official count exists. A state commission found that as many as 60 Black residents were killed, and some estimates run as high as 250. Historians call it the only successful coup in U.S. history.",
+  why:"The killers took over the government itself, so there was no one left to investigate them.",
+  result:"No one was ever punished."},
+ {year:"1899", cat:"case", status:"open", title:"Sam Hose, Newnan, Georgia",
+  sum:"A Black farmworker was lynched in front of a crowd of about 2,000 people.",
+  body:"He had been accused of murder and assault. Ida B. Wells and other Chicago activists hired a detective, Louis Le Vin, who concluded that Hose killed his employer in self-defense and that the assault accusation was added to stir up a mob. W.E.B. Du Bois later wrote that this lynching changed the direction of his work.",
+  why:"Independent investigation told a very different story than the accusations that got Sam Hose killed.",
+  result:"No one was ever charged."},
+ {year:"1906", cat:"case", status:"open", title:"The Atlanta Race Massacre",
+  sum:"After newspapers ran unproven stories about Black men attacking white women, white mobs killed at least 25 Black people over several days.",
+  body:"Crowds attacked Black workers, business owners, and passersby across downtown Atlanta. Some estimates of the dead are far higher. Afterward, the city became more strictly segregated.",
+  why:"This is a clear example of how false and sensational news coverage could lead directly to violence against Black communities."},
+ {year:"1909", cat:"media", title:"The NAACP is founded",
+  sum:"After a race riot in Springfield, Illinois, activists including W.E.B. Du Bois and Ida B. Wells formed the NAACP.",
+  body:"The group investigated lynchings, published the names of victims in its magazine The Crisis, and fought for decades for a federal anti-lynching law. In the South, its local leaders were often targets of violence themselves.",
+  why:"Much of what we know about early cases comes from records that the NAACP and the Black press kept when officials didn't."},
+ {year:"1910–1970", cat:"place", title:"The Great Migration",
+  sum:"About six million Black Americans left the rural South for cities in the North, Midwest, and West.",
+  body:"Families moved to places like Washington, D.C., Chicago, Detroit, and Los Angeles for work and to escape Jim Crow violence. They built churches, businesses, and entire neighborhoods, often in the only parts of the city where they were allowed to live.",
+  why:"Many cases in this archive took place in the neighborhoods the Great Migration built, and in cities that often gave those neighborhoods fewer public services."},
+ {year:"1915", cat:"media", title:"The Birth of a Nation",
+  sum:"A blockbuster film portrayed the Ku Klux Klan as heroes and Black men as dangerous.",
+  body:"It was screened at the White House and seen by millions. The NAACP protested it across the country. That same year, the Klan was refounded in Georgia and soon grew to millions of members.",
+  why:"Popular media helped make violence against Black Americans seem justified to many white audiences."},
+ {year:"1916", cat:"case", status:"open", title:"Jesse Washington, Waco, Texas",
+  sum:"After a trial that lasted about an hour and a jury that deliberated for four minutes, a Black teenager was seized by a mob and killed in front of a crowd of thousands.",
+  body:"Photos of the killing were sold as postcards. NAACP investigator Elisabeth Freeman went to Waco, gathered evidence, and her report was published nationwide in The Crisis.",
+  why:"Thousands watched and no one was charged. It shows how public these killings were, and how complete the silence afterward could be.",
+  result:"No one was ever charged."},
+ {year:"1917", cat:"media", title:"The Silent Parade, New York City",
+  sum:"About 10,000 Black New Yorkers marched down Fifth Avenue in silence to protest lynching and mob violence.",
+  body:"The NAACP organized the march weeks after white mobs killed dozens of Black residents in East St. Louis, Illinois. Children led in white, and men in dark suits carried signs asking the country why it allowed these killings.",
+  why:"When officials stayed silent, Black communities found ways to make the public see. It was one of the first large civil rights marches in the country."},
+ {year:"1918", cat:"case", status:"open", title:"Mary Turner, Brooks and Lowndes Counties, Georgia",
+  sum:"After a mob lynched her husband, Hayes Turner, Mary Turner spoke out and said she would have his killers arrested. The mob killed her too.",
+  body:"She was eight months pregnant. At least 11 Black people were killed by mobs in the area that week. Walter White of the NAACP investigated, identified people involved, and sent the names to Georgia's governor. No one was charged.",
+  why:"Speaking up for a murdered loved one could itself be a death sentence. It explains why so many families stayed silent, and why records like these matter now.",
+  result:"No one was ever charged."},
+ {year:"1919", cat:"case", status:"open", title:"Red Summer and Eugene Williams, Chicago",
+  sum:"White mobs attacked Black communities in dozens of cities. In Chicago, it began when a 17-year-old drowned after being stoned at a segregated beach.",
+  body:"Eugene Williams had drifted across an invisible color line in Lake Michigan. Witnesses pointed out the white man they said threw the rocks, but a police officer refused to arrest him. Days of violence followed, and dozens of people were killed.",
+  why:"When police refused to act on witnesses, Black communities learned that reporting a crime might not lead to justice.",
+  result:"No one was ever convicted of Eugene Williams's death."},
+ {year:"1919", cat:"case", status:"open", title:"The Elaine Massacre, Arkansas",
+  sum:"White mobs and soldiers killed Black sharecroppers who had organized a union. Estimates of the dead run into the hundreds.",
+  body:"Afterward, it was Black men who were put on trial. Twelve were sentenced to death after trials lasting minutes, with mobs outside. In 1923 the Supreme Court overturned their convictions in Moore v. Dempsey, ruling that a trial dominated by a mob isn't a fair trial.",
+  why:"The victims were blamed and prosecuted while the killers went free.",
+  result:"None of the killers were ever charged."},
+ {year:"1920", cat:"case", status:"open", title:"The Ocoee Massacre, Florida",
+  sum:"On Election Day, a white mob attacked Black residents who tried to vote.",
+  body:"The mob took July Perry, a prosperous Black farmer who had worked to register voters, from the county jail and lynched him. They burned homes, churches, and a lodge across the town's Black community. Estimates of the dead range from six to more than 30, and some are far higher. Within a year, every Black resident of Ocoee had been driven out.",
+  why:"An entire community disappeared, and with it the witnesses who could have told what happened.",
+  result:"No one was ever charged."},
+ {year:"1921", cat:"case", status:"open", title:"The Tulsa Race Massacre, Greenwood",
+  sum:"White mobs destroyed Tulsa's prosperous Black district of Greenwood over two days.",
+  body:"Homes, churches, and businesses across dozens of blocks were burned. Historians estimate that as many as 300 people were killed, and thousands were left homeless. For decades the massacre was left out of textbooks and official records. The city began searching for mass graves in 2020.",
+  why:"It is one of the largest unpunished killings of Black Americans, and many victims are still unidentified.",
+  result:"No one was ever prosecuted."},
+ {year:"1922", cat:"law", title:"The Dyer Anti-Lynching Bill",
+  sum:"The House passed a bill to make lynching a federal crime, but Southern senators blocked it with a filibuster.",
+  body:"Missouri congressman Leonidas Dyer's bill would have let the federal government prosecute lynchings and punish officials who failed to stop them. Similar bills failed again and again for the next hundred years.",
+  why:"Without a federal law, lynching cases stayed in the hands of local officials, who rarely charged anyone."},
+ {year:"1923", cat:"case", status:"open", title:"Rosewood, Florida",
+  sum:"A white mob destroyed the small Black town of Rosewood after an unproven accusation against a Black man.",
+  body:"The official death count was eight, but survivors believed many more were killed. Families fled into the swamps and never returned. In 1994, Florida passed a law compensating survivors, the first time a U.S. state paid reparations for racial violence.",
+  why:"Survivors' own accounts, not official records, kept the truth alive for 70 years.",
+  result:"No one was ever prosecuted."},
+ {year:"1930", cat:"case", status:"open", title:"Thomas Shipp and Abram Smith, Marion, Indiana",
+  sum:"A mob took two young Black men from a jail in Indiana and lynched them.",
+  body:"A third teenager, James Cameron, was nearly killed too but survived. A photo of the lynching spread nationwide and inspired a poem that became the song Strange Fruit. Cameron later founded America's Black Holocaust Museum in Milwaukee.",
+  why:"Lynching wasn't only a Southern crime. It happened in the North too, with the same silence afterward.",
+  result:"No one was ever convicted."},
+ {year:"1930s", cat:"place", title:"Redlining",
+  sum:"Federal maps marked Black neighborhoods as risky, steering loans and investment away for decades.",
+  body:"The Home Owners' Loan Corporation graded neighborhoods for lending, and areas with Black residents were routinely rated the worst. Banks and later federal housing programs followed those ratings, which helped lock in segregation and disinvestment.",
+  why:"Disinvested neighborhoods often got slower emergency response and less attention when residents went missing or were killed."},
+ {year:"1931", cat:"law", title:"The Scottsboro Boys, Alabama",
+  sum:"Nine Black teenagers were falsely accused of rape, and all-white juries convicted them.",
+  body:"One of the accusers later said the attack never happened. Their appeals led to two landmark Supreme Court rulings: defendants have a right to real legal help, and states can't keep Black people off juries. Several of the young men still spent years in prison. Alabama issued posthumous pardons in 2013.",
+  why:"All-white juries shaped who got convicted and who went free. That's why so many killers of Black victims were never held responsible."},
+ {year:"1934", cat:"case", status:"open", title:"Claude Neal, Jackson County, Florida",
+  sum:"A mob took a Black man from a jail in Alabama, brought him back to Florida, and announced when the lynching would happen. Newspapers and radio spread the word across the country.",
+  body:"Neal had been accused of killing a white woman. Thousands of people gathered after hearing the news. The NAACP sent investigator Howard Kester, whose report helped build support for a federal anti-lynching law.",
+  why:"Local media didn't just fail to protect Black residents. In some cases, it helped the killers gather a crowd.",
+  result:"No one was ever charged."},
+ {year:"1939", cat:"media", title:"Strange Fruit",
+  sum:"Billie Holiday recorded a haunting song about lynching that many radio stations refused to play.",
+  body:"It became one of her best-known songs, and she kept performing it despite pressure to stop. In 1999, Time magazine named it the song of the century.",
+  why:"Art made people feel the reality of violence that newspapers often ignored."},
+ {year:"1946", cat:"case", status:"open", title:"Isaac Woodard, Batesburg, South Carolina",
+  sum:"Hours after leaving the Army, a Black World War II veteran still in uniform was beaten and blinded by a local police chief.",
+  body:"The chief, Lynwood Shull, was tried in federal court. He admitted blinding Woodard, and an all-white jury still acquitted him after about half an hour. The case pushed President Truman to create a national committee on civil rights and, in 1948, to order the military desegregated.",
+  why:"Even a nationally known case with a clear attacker could end without a conviction.",
+  result:"The police chief was acquitted."},
+ {year:"1946", cat:"case", status:"open", title:"Moore's Ford Bridge, Walton County, Georgia",
+  sum:"A white mob killed two young Black couples: Roger and Dorothy Malcom, and George and Mae Murray Dorsey.",
+  body:"The couples were pulled from a car near a bridge and shot. President Truman sent the FBI, but local residents refused to talk and a grand jury indicted no one. Investigators reopened the case in the 2000s and still brought no charges.",
+  why:"Fear and silence in a community can keep a case open for generations, even when many people know what happened.",
+  result:"No one was ever charged."},
+ {year:"1946", cat:"case", status:"open", title:"Maceo Snipes, Taylor County, Georgia",
+  sum:"A World War II veteran was shot after becoming the only Black person to vote in his county's primary election.",
+  body:"A white man shot him the next day. At the hospital, he was refused a blood transfusion, and he died two days later. The shooter claimed self-defense, a coroner's jury agreed, and the case never went to a prosecutor.",
+  why:"Killings like this one were meant to send a message to a whole community, not just to punish one person.",
+  result:"No one was ever charged."},
+ {year:"1949", cat:"case", status:"open", title:"The Groveland Four, Lake County, Florida",
+  sum:"Four young Black men were falsely accused of rape. One was killed by a posse, and later the sheriff shot two others while driving them to court.",
+  body:"Sheriff Willis McCall said the men tried to escape. Samuel Shepherd died, and Walter Irvin survived to say they had been shot while handcuffed. Thurgood Marshall defended them. Florida pardoned the four in 2019, and a court cleared them in 2021.",
+  why:"When a sheriff is the one committing violence, no one investigates.",
+  result:"No one was ever charged in the killings."},
+ {year:"1951", cat:"case", status:"open", title:"Harry T. and Harriette Moore, Mims, Florida",
+  sum:"A bomb exploded under the home of two NAACP leaders on Christmas night, killing them both.",
+  body:"Harry Moore had registered thousands of Black voters and investigated lynchings. The FBI investigated but made no arrests. In 2006, Florida's attorney general named four Klansmen as likely responsible, all of whom had already died.",
+  why:"An official answer came 55 years later, too late for anyone to face a courtroom.",
+  result:"No one was ever charged."},
+ {year:"1955", cat:"case", status:"open", title:"Emmett Till, Money, Mississippi",
+  sum:"A 14-year-old from Chicago was abducted and murdered while visiting family.",
+  body:"An all-white jury acquitted the two men charged within about an hour. Protected from retrial, they later described the killing to a magazine. His mother's choice to hold an open-casket funeral forced the country to look.",
+  why:"The case became the symbol of killings that the justice system refused to punish, and decades later a federal cold-case law was named after him.",
+  result:"No one was ever convicted."},
+ {year:"1954", cat:"law", title:"Brown v. Board of Education",
+  sum:"The Supreme Court ruled that segregated public schools were unconstitutional.",
+  body:"The decision overturned Plessy v. Ferguson. Many Southern leaders promised massive resistance, and violence against civil rights activists grew in the years that followed.",
+  why:"Many of the killings in the 1950s and 60s on this timeline happened as communities fought back against this ruling and the changes it demanded."},
+ {year:"1955", cat:"case", status:"open", title:"Rev. George Lee, Belzoni, Mississippi",
+  sum:"A minister who helped Black residents register to vote was shot while driving his car.",
+  body:"He was one of the first Black people registered to vote in his county. The sheriff called it a traffic accident and claimed the lead pellets in his face were dental fillings. His widow held an open-casket funeral so people could see what happened.",
+  why:"A case can go cold on purpose, when officials refuse to call a murder a murder.",
+  result:"No one was ever charged."},
+ {year:"1955", cat:"media", title:"The Black press shows the world",
+  sum:"Jet magazine published photos of Emmett Till's body, and Black newspapers covered the trial when most white papers wouldn't.",
+  body:"Black-owned publications like Jet, the Chicago Defender, and many local papers sent reporters into dangerous places and ran stories that mainstream outlets ignored. The images in Jet reached millions of readers and helped spark the civil rights movement.",
+  why:"Black-owned media has long done the work of documenting cases others ignored, and this archive continues that tradition."},
+ {year:"1955", cat:"case", status:"open", title:"Lamar Smith, Brookhaven, Mississippi",
+  sum:"A voting rights organizer was shot dead on the courthouse lawn in broad daylight.",
+  body:"Dozens of people were nearby when he was killed, including, reports said, the sheriff. No witness would testify, and a grand jury refused to indict anyone.",
+  why:"A killing in front of a crowd can still go unsolved when witnesses fear for their own lives.",
+  result:"No one was ever indicted."},
+ {year:"1957", cat:"case", status:"open", title:"Willie Edwards Jr., Montgomery, Alabama",
+  sum:"Klansmen forced a young truck driver to jump from a bridge into the Alabama River at gunpoint.",
+  body:"They had wrongly believed he was dating a white woman. His body was found months later. Charges were filed in 1976 after one of the men confessed, but a judge dismissed them because no cause of death had been listed. In the late 1990s, his family pushed to have his body re-examined, and his death was ruled a homicide. A grand jury found that Klansmen had killed him but still returned no indictment, citing deaths of suspects and the old immunity deals.",
+  why:"A missing official finding, like a cause of death, can be enough to keep a case from going to trial.",
+  result:"No one was ever convicted."},
+ {year:"1959", cat:"case", status:"open", title:"Mack Charles Parker, Poplarville, Mississippi",
+  sum:"Days before his trial, a masked mob dragged a young Black man from the county jail and killed him.",
+  body:"Parker had been accused of raping a white woman, though she could not say for sure he was the man. The FBI got confessions from members of the mob and found that the jailer had handed over the keys. Still, no state or federal grand jury ever indicted anyone.",
+  why:"Even with the FBI's evidence, local grand juries could simply choose not to act.",
+  result:"No one was ever indicted."},
+ {year:"1961", cat:"case", status:"open", title:"Herbert Lee and Louis Allen, Amite County, Mississippi",
+  sum:"A farmer who helped with voter registration was shot dead by a state legislator. The man who saw it was later killed too.",
+  body:"A coroner's jury ruled Herbert Lee's killing self-defense the same day. Louis Allen, a witness, was pressured to back that story but later told federal agents the truth. After years of threats, he was shot dead outside his home in 1964.",
+  why:"When witnesses aren't protected, they stay silent or pay with their lives. That's a big reason cases like these stay cold.",
+  result:"No one was ever convicted of either killing."},
+ {year:"1963", cat:"case", status:"closed", title:"16th Street Baptist Church bombing, Birmingham",
+  sum:"A bomb killed four girls: Addie Mae Collins, Cynthia Wesley, Carole Robertson, and Carol Denise McNair.",
+  body:"Investigators identified suspects early, but no one was prosecuted for years. The case was reopened more than once.",
+  why:"It shows how long justice could be delayed even when suspects were known.",
+  result:"Convictions came in 1977, 2001, and 2002, up to 39 years later."},
+ {year:"1963", cat:"case", status:"closed", title:"Medgar Evers, Jackson, Mississippi",
+  sum:"The civil rights leader was shot in his own driveway.",
+  body:"Two trials in 1964 ended with all-white juries unable to reach a verdict. His widow, Myrlie Evers, kept pushing for the case to be reopened.",
+  why:"Persistence from family and new evidence can reopen a case that looks closed forever.",
+  result:"Byron De La Beckwith was convicted in 1994, 31 years later."},
+ {year:"1964", cat:"case", status:"closed", title:"Henry Dee and Charles Moore, Franklin County, Mississippi",
+  sum:"Two 19-year-olds were kidnapped and killed by Klansmen.",
+  body:"Their remains were found in the Mississippi River during the search for three missing civil rights workers. Local authorities dropped the charges, and the case sat for over 40 years until Moore's brother, Thomas Moore, pushed to reopen it.",
+  why:"Their bodies were found only because searchers were looking for someone else, which shows how little attention Black victims got at the time.",
+  result:"James Ford Seale was convicted in federal court in 2007."},
+ {year:"1964", cat:"case", status:"closed", title:"James Chaney, Andrew Goodman, and Michael Schwerner, Neshoba County, Mississippi",
+  sum:"Three civil rights workers registering Black voters were murdered by Klansmen, with help from local law enforcement.",
+  body:"The state refused to bring murder charges. In 1967 seven men were convicted of federal civil rights crimes, and none served more than six years.",
+  why:"When local officials were involved, federal pressure and national attention were often the only path to any justice.",
+  result:"Edgar Ray Killen was convicted of manslaughter in 2005, 41 years later."},
+ {year:"1964", cat:"case", status:"open", title:"Frank Morris, Ferriday, Louisiana",
+  sum:"A Black shoe repair shop owner died after attackers set his shop on fire with him inside.",
+  body:"Before he died four days later, he described the two men to the FBI. Decades later, local newspaper editor Stanley Nelson spent years investigating and named suspects in his reporting, which was a Pulitzer Prize finalist.",
+  why:"A determined local journalist uncovered more than official investigators did, like this archive tries to do.",
+  result:"Still unsolved."},
+ {year:"1965", cat:"case", status:"closed", title:"Jimmie Lee Jackson, Marion, Alabama",
+  sum:"A young deacon was shot by a state trooper while protecting his mother at a voting rights march.",
+  body:"He died days later. His death inspired the Selma to Montgomery marches, including Bloody Sunday. The trooper, James Bonard Fowler, was not charged for more than 40 years.",
+  why:"Even a small measure of accountability can come decades late, and only after reporters and advocates keep asking questions.",
+  result:"Fowler pleaded guilty to misdemeanor manslaughter in 2010 and served about six months."},
+ {year:"1965", cat:"case", status:"open", title:"Oneal Moore, Washington Parish, Louisiana",
+  sum:"One of the parish's first Black sheriff's deputies was shot and killed in an ambush while on patrol.",
+  body:"His partner, Creed Rogers, was wounded but survived. Moore and Rogers had been hired only a year earlier, and the Klan was active in the area. The FBI later reviewed the case under the Emmett Till Act.",
+  why:"Even a Black officer wearing a badge wasn't safe, and his killing was never solved.",
+  result:"Still unsolved."},
+ {year:"1965", cat:"law", title:"The Voting Rights Act",
+  sum:"Congress banned literacy tests and sent federal officials to register Black voters in the South.",
+  body:"Black voter registration rose sharply within a few years. Because many courts picked jurors from voter lists, more Black citizens also began serving on juries and winning local offices.",
+  why:"It slowly changed who investigated, prosecuted, and judged crimes against Black victims."},
+ {year:"1965–today", cat:"law", title:"Fewer murders get solved",
+  sum:"Police in the U.S. once made arrests in about 9 out of 10 homicides. In recent years, it's been closer to half.",
+  body:"National clearance rates, the share of cases closed with an arrest, have fallen for decades. The drop has been steepest in cities, and investigations have found that killings of Black victims are less likely to be solved than killings of white victims.",
+  why:"Every cold case on this site is part of that falling line."},
+ {year:"1966", cat:"case", status:"closed", title:"Vernon Dahmer, Hattiesburg, Mississippi",
+  sum:"A community leader who helped Black residents register to vote died after Klansmen firebombed his home.",
+  body:"Four Klansmen were convicted in the 1960s and another pleaded guilty. But the man accused of ordering the attack, Klan leader Sam Bowers, was tried four times, and every trial ended in a mistrial. Dahmer's family kept the case alive for more than 30 years.",
+  why:"Mistrials and all-white juries could stall a case for a generation.",
+  result:"Sam Bowers was convicted in 1998."},
+ {year:"1966", cat:"case", status:"closed", title:"Ben Chester White, Natchez, Mississippi",
+  sum:"Klansmen killed an elderly farmworker who had no connection to the civil rights movement.",
+  body:"Investigators later said the men hoped the killing would draw Martin Luther King Jr. to the area. A state jury acquitted one of the accused in 1967. Decades later, federal prosecutors found a way to bring the case: the killing happened in a national forest, which is federal land.",
+  why:"Creative legal thinking and persistent prosecutors can reopen cases everyone thought were over.",
+  result:"Ernest Avants was convicted in federal court in 2003."},
+ {year:"1967", cat:"case", status:"open", title:"Wharlest Jackson, Natchez, Mississippi",
+  sum:"An NAACP leader was killed when a bomb exploded in his truck on his way home from work.",
+  body:"Jackson had recently been promoted to a job at a tire plant that had been held only by white workers. The FBI investigated for years, and the case was reviewed again under the Emmett Till Act, but no one was charged.",
+  why:"Black workers who moved into jobs once kept for white workers could become targets.",
+  result:"Still unsolved."},
+ {year:"1967", cat:"case", status:"open", title:"The Algiers Motel, Detroit",
+  sum:"During the Detroit uprising, police killed three Black teenagers at a motel: Carl Cooper, Aubrey Pollard, and Fred Temple.",
+  body:"Others in the motel said officers lined them up and beat them. Officers were charged, but none were convicted in state or federal court.",
+  why:"Survivors' testimony was not enough to convict officers.",
+  result:"No one was convicted."},
+ {year:"1968", cat:"case", status:"open", title:"The Orangeburg Massacre, South Carolina",
+  sum:"State highway patrolmen fired on students protesting a segregated bowling alley, killing Samuel Hammond, Delano Middleton, and Henry Smith.",
+  body:"Dozens more were wounded, many shot in the back or side. The officers were tried in federal court and acquitted. The only person convicted was a protest organizer, who was pardoned 25 years later.",
+  why:"When the people firing were law enforcement, the justice system rarely held anyone responsible.",
+  result:"No officer was convicted."},
+ {year:"1968", cat:"media", title:"The Kerner Commission report",
+  sum:"A presidential commission found that American news coverage largely reflected a white point of view.",
+  body:"Studying the unrest of the 1960s, the commission warned the country was moving toward two separate and unequal societies, one Black and one white. It criticized newsrooms for rarely hiring Black journalists and rarely covering Black communities except during crises.",
+  why:"When newsrooms didn't cover Black neighborhoods, missing and murdered Black people rarely made the news, and fewer public tips came in."},
+ {year:"1969", cat:"case", status:"open", title:"Fred Hampton and Mark Clark, Chicago",
+  sum:"A 21-year-old Black Panther leader and a fellow member were killed in a predawn raid by officers working for the Cook County state's attorney, with help from Chicago police.",
+  body:"An FBI informant inside the Panthers gave authorities a floor plan of the apartment. Officials first described a shootout, but evidence showed that police fired nearly 100 shots and the Panthers fired once. No officer was ever charged with the killings. The state's attorney and other officials were later charged with obstructing justice and cleared. In 1982, the city, county, and federal government paid a $1.85 million settlement to survivors and families.",
+  why:"Families sometimes win in civil court even when no one is charged with a crime.",
+  result:"No one was convicted."},
+ {year:"1970", cat:"case", status:"open", title:"Jackson State, Mississippi",
+  sum:"Police fired into a women's dormitory at a historically Black college, killing Phillip Lafayette Gibbs and James Earl Green.",
+  body:"Green was a high school student walking home from work. The shooting happened eleven days after the Kent State shootings in Ohio, but it got a small fraction of the national coverage.",
+  why:"Two similar tragedies weeks apart got very different attention, which is the same coverage gap this archive exists to close.",
+  result:"No one was ever charged."},
+ {year:"1971–1972", cat:"case", status:"open", title:"The Freeway Phantom, Washington, D.C.",
+  sum:"Six Black girls and young women, ages 10 to 18, were abducted and killed.",
+  body:"Several of the victims were found near highways in and around the city. Despite a task force and many leads over the years, the killings have never been solved.",
+  why:"This series began only a few years after the Kerner report and shows many of the patterns on this page.",
+  result:"Still unsolved.", link:{href:"index.html", text:"Read Freeway Phantom cases 001–006"}},
+ {year:"1979–1981", cat:"case", status:"open", title:"The Atlanta child murders",
+  sum:"At least 28 Black children, teens, and young adults were killed over about two years.",
+  body:"Parents organized, searched, and demanded action before the killings drew national attention. Wayne Williams was convicted in 1982 of killing two adult victims, and police then closed many of the other cases without charges. In 2019 the city announced a new review of the evidence.",
+  why:"Families had to fight to be heard, and many never got an answer in court.",
+  result:"Most of the deaths never went to trial."},
+ {year:"1979", cat:"case", status:"open", title:"The Greensboro Massacre, North Carolina",
+  sum:"Klansmen and Nazis opened fire on an anti-Klan march, killing five people.",
+  body:"The shootings were caught on camera. All-white juries still acquitted the gunmen in both state and federal trials. In 1985, a civil jury found some of the attackers and Greensboro police liable for one of the deaths.",
+  why:"Even video evidence didn't lead to a criminal conviction.",
+  result:"No one was criminally convicted."},
+ {year:"1979–1980", cat:"case", status:"open", title:"Arthur McDuffie, Miami",
+  sum:"A Black insurance salesman and Marine veteran died after officers beat him following a motorcycle chase.",
+  body:"Officers tried to make it look like a crash. In 1980, an all-white jury acquitted them, and Miami erupted in protest.",
+  why:"When officers cover up their own violence, the truth depends on other officers coming forward.",
+  result:"The officers were acquitted."},
+ {year:"1981", cat:"case", status:"closed", title:"Michael Donald, Mobile, Alabama",
+  sum:"A 19-year-old was abducted and lynched by Klansmen.",
+  body:"Police first suggested the killing was drug-related. His mother, Beulah Mae Donald, refused to accept that and pushed for a real investigation. Three Klansmen were eventually convicted, and her civil lawsuit won a $7 million verdict in 1987 that bankrupted the United Klans of America.",
+  why:"One family's refusal to accept a false story changed the outcome and took down a hate group.",
+  result:"Henry Hays, James Knowles, and Benjamin Cox Jr. were convicted."},
+ {year:"1985", cat:"case", status:"open", title:"The MOVE bombing, Philadelphia",
+  sum:"Police dropped a bomb on a house in a Black neighborhood, and the fire killed 11 people, including five children.",
+  body:"Officials let the fire burn, and it destroyed 61 homes on the block. A city commission condemned the decision, but a grand jury declined to charge anyone. In 2021, it came out that some of the victims' remains had been kept for decades at the Penn Museum and the city medical examiner's office without their families' knowledge. More remains of a 12-year-old victim were found at the museum in 2024.",
+  why:"Even the victims' remains weren't treated with dignity, which shows how little their lives were valued by those in power.",
+  result:"No one was criminally charged."},
+ {year:"1986", cat:"case", status:"closed", title:"Michael Griffith, Howard Beach, New York",
+  sum:"A white mob chased a young Black man onto a highway, where he was hit by a car and killed.",
+  body:"Griffith and his friends had stopped for help after their car broke down. Three attackers were convicted of manslaughter after a special prosecutor took over the case.",
+  why:"Bringing in an outside prosecutor can change the outcome of a case.",
+  result:"Three men were convicted of manslaughter."},
+ {year:"1986", cat:"law", title:"The 100-to-1 crack cocaine rule",
+  sum:"Federal law punished crack cocaine 100 times more harshly than powder cocaine.",
+  body:"Crack was more common in poor Black neighborhoods, so the rule sent huge numbers of Black residents to prison. The Fair Sentencing Act of 2010 cut the gap to 18 to 1.",
+  why:"Researchers describe many Black neighborhoods as over-policed and under-protected: heavy enforcement for drug crimes, while killings of residents went unsolved at higher rates."},
+ {year:"1986", cat:"law", title:"Batson v. Kentucky",
+  sum:"The Supreme Court ruled that prosecutors can't remove potential jurors because of their race.",
+  body:"Before this ruling, prosecutors could quietly strike every Black person from a jury pool. Since then, studies have found that race-based strikes kept happening, because they're hard to prove.",
+  why:"Who sits on a jury affects whose killers are convicted, a pattern that runs through this whole timeline."},
+ {year:"1985–2007", cat:"case", status:"closed", title:"The \"Grim Sleeper,\" Los Angeles",
+  sum:"A serial killer targeted mostly Black women in South Los Angeles for more than two decades.",
+  body:"Community groups said police were slow to warn the public or connect the killings. An arrest finally came in 2010 after a familial DNA search linked a relative's sample to crime-scene evidence.",
+  why:"Victims' lives were often dismissed, and new DNA methods cracked a case that old methods had not.",
+  result:"Lonnie Franklin Jr. was convicted in 2016."},
+ {year:"1989", cat:"media", title:"The Central Park Five",
+  sum:"Five Black and Latino teenagers were wrongly convicted of a brutal attack after intense media coverage.",
+  body:"Their confessions were taken after long interrogations without lawyers. In 2002, the real attacker confessed and DNA confirmed it. The men were exonerated, and the city later paid a $41 million settlement.",
+  why:"When police and the media rush to blame Black suspects, the real attacker stays free."},
+ {year:"1989", cat:"case", status:"closed", title:"Yusuf Hawkins, Bensonhurst, Brooklyn",
+  sum:"A 16-year-old who came to look at a used car was surrounded by a white mob and shot dead.",
+  body:"The mob had been waiting for Black teenagers they thought were dating a local white girl. The shooter, Joseph Fama, was convicted of murder.",
+  why:"Witnesses and public pressure helped bring a conviction.",
+  result:"The shooter was convicted of murder."},
+ {year:"1989", cat:"media", title:"A false suspect in Boston",
+  sum:"A white man who killed his pregnant wife told police a Black man did it, and the city believed him.",
+  body:"Charles Stuart's story set off an aggressive police sweep of Boston's Black Mission Hill neighborhood, where Black men were stopped and searched, and an innocent man was named as a suspect. The story fell apart when Stuart's brother went to police.",
+  why:"When police and the media accept a racist story, they chase the wrong people and hurt a whole community."},
+ {year:"1991", cat:"case", status:"closed", title:"Latasha Harlins, Los Angeles",
+  sum:"A 15-year-old girl was shot and killed by a store owner during an argument over a bottle of orange juice.",
+  body:"A jury convicted the store owner of voluntary manslaughter, but the judge sentenced her to probation and no prison time. It happened less than two weeks after the Rodney King beating, and the sentence added to the anger behind the 1992 uprising.",
+  why:"A conviction doesn't always bring justice, and a light sentence can tell a community how little a Black girl's life was valued.",
+  result:"Convicted, but sentenced to probation with no prison time."},
+ {year:"1994", cat:"media", title:"Another invented Black suspect",
+  sum:"A South Carolina mother told police a Black man had carjacked her with her two sons in the back seat.",
+  body:"For nine days, the country searched for a man who didn't exist. Susan Smith later confessed that she had drowned her own children. Her story was believed partly because it fit a stereotype.",
+  why:"The same stereotypes that made false stories believable also made Black victims less likely to get sympathy and coverage."},
+ {year:"1998", cat:"case", status:"closed", title:"James Byrd Jr., Jasper, Texas",
+  sum:"Three white men killed a Black man by dragging him behind a truck.",
+  body:"Unlike many earlier cases, all three were quickly arrested and convicted, and two received death sentences. In 2009, a federal hate crimes law was named for him and for Matthew Shepard.",
+  why:"When a community and its officials treat a case seriously from the start, justice can come quickly."},
+ {year:"2004", cat:"media", title:"\"Missing white woman syndrome\"",
+  sum:"Journalist Gwen Ifill named a pattern many families already knew.",
+  body:"At a journalism conference, Ifill pointed out how intensely the news covered missing white women compared with missing women of color. Later studies found the same gap in how often and how long cases were covered.",
+  why:"Less coverage means fewer people see a missing person's photo, and fewer tips come in."},
+ {year:"Late 2000s", cat:"law", title:"NamUs, a national database for the missing",
+  sum:"The Justice Department created NamUs, a free public database of missing people and unidentified remains.",
+  body:"Families, police, and medical examiners can all enter and search cases. Before NamUs, a missing person reported in one state and unidentified remains found in another often never got matched.",
+  why:"Families can add their own loved ones' cases, which helps when local police haven't pushed a case forward."},
+ {year:"2008", cat:"media", title:"Black and Missing Foundation",
+  sum:"Sisters-in-law Derrica and Natalie Wilson started a nonprofit to spread the word about missing people of color.",
+  body:"The foundation shares cases, works with families, and pushes media and police to treat these cases with urgency.",
+  why:"Community-led projects, including this archive, fill gaps that official channels have left."},
+ {year:"2008", cat:"law", title:"The Emmett Till Unsolved Civil Rights Crime Act",
+  sum:"Congress directed the Justice Department to review unsolved racially motivated killings from before 1970.",
+  body:"The law funded investigations of old civil rights era cases, and it was extended in 2016. Many reviews ended without charges because suspects and witnesses had died, but they gave some families official answers.",
+  why:"It shows cold cases can be reopened when there is public pressure and funding."},
+ {year:"2009", cat:"case", status:"closed", title:"Imperial Avenue, Cleveland",
+  sum:"The remains of 11 Black women were found at the home of Anthony Sowell.",
+  body:"Families said that when they reported their loved ones missing, police did not take the reports seriously. A city commission later called for changes in how missing-person cases are handled.",
+  why:"Missing-person reports that aren't investigated can hide a serial killer for years.",
+  result:"Sowell was convicted in 2011."},
+ {year:"2015", cat:"media", title:"Say Her Name",
+  sum:"Advocates launched a campaign to draw attention to Black women and girls killed by police and violence.",
+  body:"Scholar Kimberlé Crenshaw and the African American Policy Forum started it after noticing how often Black women's deaths were left out of national conversations.",
+  why:"Saying victims' names is a way to keep them from being forgotten, which is the heart of this archive."},
+ {year:"2017", cat:"media", title:"Missing girls in Washington, D.C.",
+  sum:"Social media posts about missing Black and Latina girls in D.C. went viral and set off a national outcry.",
+  body:"Police said the number of missing-person reports hadn't actually gone up, and that they had simply started posting more cases online. Still, the attention pushed members of Congress to ask federal agencies for help, and it showed how rarely these cases had reached the public before.",
+  why:"Once cases were shared publicly, people paid attention. That's the idea behind this archive and its videos, in the same city as the Freeway Phantom cases."},
+ {year:"2018", cat:"media", title:"The National Memorial for Peace and Justice",
+  sum:"A memorial in Montgomery, Alabama, now honors more than 4,000 victims of lynching by name.",
+  body:"The Equal Justice Initiative researched lynchings county by county. Hanging steel monuments list victims' names and the counties where they were killed.",
+  why:"Public remembrance keeps these victims' names alive for future generations, like this archive does."},
+ {year:"2018–2022", cat:"case", status:"open", title:"Emmett Till's case is reopened",
+  sum:"The Justice Department reopened the Emmett Till case, and in 2022 an unserved 1955 arrest warrant was found in a courthouse basement.",
+  body:"The warrant named Carolyn Bryant, the woman whose accusation led to his murder. The federal review closed without charges in 2021, and a Mississippi grand jury declined to indict her in 2022.",
+  why:"Even with new evidence 67 years later, the system still didn't bring a charge.",
+  result:"No one was ever convicted."},
+ {year:"2018", cat:"law", title:"Where killings go unsolved",
+  sum:"A Washington Post study of about 52,000 homicides in 50 large cities found that roughly half ended without an arrest.",
+  body:"The investigation found that most victims in the unsolved killings were Black, and that low arrest rates clustered in the same neighborhoods.",
+  why:"The cases in this archive are not rare exceptions. They are part of a measurable pattern."},
+ {year:"2018", cat:"case", status:"closed", title:"Samuel Little's confessions",
+  sum:"A man already in prison confessed to killing 93 people over more than 30 years. Many of his victims were Black women.",
+  body:"Many of the deaths had first been ruled overdoses, accidents, or unknown causes, and some victims were never identified. In 2019 the FBI said it had confirmed about 50 of his confessions, called him the most prolific serial killer in U.S. history, and asked the public to help identify the remaining victims.",
+  why:"When victims are poor, Black, or on the margins, their deaths may never be treated as murders. Cases like these may still be hidden in records.",
+  result:"Little was convicted of three murders in 2014 and later confessed to many more."},
+ {year:"2019", cat:"case", status:"open", title:"Strangulation deaths of women, Chicago",
+  sum:"A nonprofit that tracks unsolved killings flagged 51 women strangled or smothered in Chicago since 2001, most of them Black.",
+  body:"The Murder Accountability Project said the pattern could point to one or more serial killers and urged police to take a closer look. After pressure from activists, Chicago police began reviewing the cases, though they said they had found no evidence connecting the deaths. Most of the cases remained unsolved.",
+  why:"Independent data work can spot patterns that no single case file shows, which is part of what an archive like this can do.",
+  result:"Most cases remain unsolved."},
+ {year:"2020", cat:"case", status:"closed", title:"Ahmaud Arbery, Brunswick, Georgia",
+  sum:"A young Black man out for a run was chased and shot by three white men.",
+  body:"No one was arrested for more than two months, until a video of the killing went public and set off national outrage. All three men were convicted of murder in 2021 and of federal hate crimes in 2022. Georgia passed its first hate crime law months after his death.",
+  why:"Public pressure turned a case that local officials had let sit into a conviction. Attention matters.",
+  result:"All three men were convicted."},
+ {year:"2021", cat:"media", title:"A national conversation about who gets covered",
+  sum:"Wall-to-wall coverage of one missing white woman led many people to ask why others got so little.",
+  body:"As the country followed the search for Gabby Petito, families and advocates pointed to thousands of missing Black and Indigenous people whose cases barely made the news. The phrase \"missing white woman syndrome\" spread to a new generation, largely on social media.",
+  why:"Social media gave families a way around newsrooms, which is where projects like this archive and its TikTok videos come in."},
+ {year:"2022", cat:"law", title:"The Emmett Till Antilynching Act",
+  sum:"Lynching finally became a federal hate crime, after more than 200 failed attempts in Congress over about a century.",
+  body:"The first federal anti-lynching bill was introduced in 1900. Bill after bill died, often blocked by Southern senators, while thousands of Black Americans were lynched.",
+  why:"The law came too late for the victims on this page, but it shows how long change can take and why keeping records matters."},
+ {year:"2023", cat:"media", title:"A national monument to Emmett Till and Mamie Till-Mobley",
+  sum:"Sites tied to Emmett Till's murder and his mother's fight for justice became a national monument.",
+  body:"The monument includes the Chicago church where his funeral was held and places in Mississippi connected to the case. It honors both Emmett and Mamie Till-Mobley, whose courage made the country look.",
+  why:"Remembering victims by name, in public, is one of the oldest forms of justice families have. This archive does the same."},
+ {year:"2018–today", cat:"law", title:"New tools for old cases",
+  sum:"Genetic genealogy and new DNA testing are solving cases decades old.",
+  body:"Investigators can now compare old crime-scene evidence with public DNA databases to find relatives of a suspect. Hundreds of cold cases have been solved this way, but it only works when evidence was kept and someone pushes for testing.",
+  why:"Pressure from families, advocates, and the public helps get evidence retested. Tips still matter too."}
+];
+
+const tl = document.getElementById('timeline');
+const fl = document.getElementById('filters');
+let current = 'all';
+
+function markerFor(e){
+  if(e.cat !== 'case') return '<span class="marker"><span class="dot context"></span></span>';
+  return `<span class="marker"><span class="dot ${e.status}"></span></span>`;
+}
+
+ENTRIES.forEach((e,i)=>{
+  const li = document.createElement('li');
+  li.className = 'entry' + (e.cat==='case' ? '' : ' context');
+  li.dataset.cat = e.cat;
+  li.dataset.text = [e.year,e.title,e.sum,e.body,e.why,e.result||''].join(' ').toLowerCase();
+  li.dataset.y = (e.year.match(/\d{4}/)||['0'])[0];
+  const id = 'd'+i;
+  li.innerHTML = `${markerFor(e)}
+    <p class="year">${e.year}</p>
+    <div class="card">
+      <button class="head" aria-expanded="false" aria-controls="${id}">
+        <h2>${e.title}</h2>
+        <p class="sum">${e.sum}</p>
+        <span class="more">Read more</span>
+      </button>
+      <div class="detail" id="${id}" hidden>
+        <p>${e.body}</p>
+        ${e.result ? `<p class="status"><b>Outcome:</b> ${e.result}</p>` : ''}
+        <div class="why"><strong>Why it matters for the archive</strong>${e.why}</div>
+        ${e.link ? `<a class="caselink" href="${e.link.href}">${e.link.text}</a>` : ''}
+      </div>
+    </div>`;
+  tl.appendChild(li);
+});
+
+tl.addEventListener('click', ev=>{
+  const btn = ev.target.closest('button.head'); if(!btn) return;
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!open));
+  document.getElementById(btn.getAttribute('aria-controls')).hidden = open;
+  btn.querySelector('.more').textContent = open ? 'Read more' : 'Show less';
+});
+
+Object.entries(CATS).forEach(([k,label])=>{
+  const b = document.createElement('button');
+  b.className='chip'; b.type='button'; b.textContent=label;
+  b.setAttribute('aria-pressed', String(k===current));
+  b.addEventListener('click', ()=>{
+    current = k;
+    fl.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+    applyFilters();
+  });
+  fl.appendChild(b);
+});
+
+const searchEl = document.getElementById('search');
+const countEl = document.getElementById('count');
+const emptyEl = document.getElementById('empty');
+const jumpsEl = document.getElementById('jumps');
+const ERAS = [
+  {label:"1800s", from:1800, to:1899},
+  {label:"1900–1949", from:1900, to:1949},
+  {label:"1950s", from:1950, to:1959},
+  {label:"1960s", from:1960, to:1969},
+  {label:"1970s", from:1970, to:1979},
+  {label:"1980s", from:1980, to:1989},
+  {label:"1990s–2000s", from:1990, to:2009},
+  {label:"2010s–today", from:2010, to:2100}
+];
+let searchTimer;
+
+function visibleEntries(){ return [...tl.querySelectorAll('.entry')].filter(li=>!li.hidden); }
+
+function applyFilters(){
+  const q = searchEl.value.trim().toLowerCase();
+  let shown = 0;
+  tl.querySelectorAll('.entry').forEach(li=>{
+    const okCat = current==='all' || li.dataset.cat===current;
+    const okText = !q || li.dataset.text.includes(q);
+    li.hidden = !(okCat && okText);
+    if(!li.hidden) shown++;
+  });
+  const total = ENTRIES.length;
+  countEl.textContent = shown===total ? `${total} entries` : `Showing ${shown} of ${total} entries`;
+  emptyEl.hidden = shown !== 0;
+  jumpsEl.querySelectorAll('.jump').forEach(j=>{
+    j.disabled = !visibleEntries().some(li=>{ const y=+li.dataset.y; return y>=+j.dataset.from && y<=+j.dataset.to; });
+  });
+}
+
+ERAS.forEach(era=>{
+  const j = document.createElement('button');
+  j.type='button'; j.className='jump'; j.textContent=era.label;
+  j.dataset.from=era.from; j.dataset.to=era.to;
+  j.addEventListener('click', ()=>{
+    const target = visibleEntries().find(li=>{ const y=+li.dataset.y; return y>=era.from && y<=era.to; });
+    if(!target) return;
+    const bar = document.querySelector('.filters').offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - bar - 12;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top, behavior: smooth ? 'smooth' : 'auto'});
+    const head = target.querySelector('button.head');
+    if(head) head.focus({preventScroll:true});
+  });
+  jumpsEl.appendChild(j);
+});
+
+searchEl.addEventListener('input', ()=>{ clearTimeout(searchTimer); searchTimer = setTimeout(applyFilters, 150); });
+applyFilters();
+
+const form = document.getElementById('tipForm');
+const statusEl = document.getElementById('formStatus');
+form.addEventListener('submit', async ev=>{
+  ev.preventDefault();
+  statusEl.textContent = 'Sending…';
+  try{
+    const res = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{Accept:'application/json'}});
+    if(res.ok){ form.reset(); statusEl.textContent = 'Tip sent. Thank you.'; }
+    else { statusEl.textContent = 'The tip didn\'t send. Check your connection and try again.'; }
+  }catch(err){
+    statusEl.textContent = 'The tip didn\'t send. Check your connection and try again.';
+  }
+});
+</script>
+</body>
+</html>
