@@ -1122,3 +1122,5 @@ body{ padding-bottom:58px; }
 @media (max-width:640px){
   .map-popup{ min-width:170px; max-width:220px; font-size:.9em; }
 }
+
+.story-card-img{ width:100%; height:auto; display:block; border:1px solid var(--border); border-radius:4px; margin:6px 0 8px; }

@@ -67,6 +67,10 @@
       return window.location.origin + "/cases/" + c.id + ".html";
     }
 
+    function cardUrl(c) {
+      return window.location.origin + "/social/cases/" + c.id + ".png";
+    }
+
     function openFallback(c) {
       if (!menu) return;
       var text = buildShareText(c);
@@ -76,6 +80,7 @@
       menu.innerHTML =
         '<a class="stat-popup-row" href="' + xUrl + '" target="_blank" rel="noopener noreferrer">Share on X</a>' +
         '<a class="stat-popup-row" href="' + fbUrl + '" target="_blank" rel="noopener noreferrer">Share on Facebook</a>' +
+        '<a class="stat-popup-row" href="' + cardUrl(c) + '" download="' + c.id + '-share-card.png">Download share card (image)</a>' +
         '<button type="button" class="stat-popup-row" data-copy-share-link style="width:100%; text-align:left; background:none; border:none; cursor:pointer; font:inherit;">Copy Link</button>';
       menu.hidden = false;
       var copyBtn = menu.querySelector("[data-copy-share-link]");
@@ -101,7 +106,16 @@
         var text = buildShareText(c);
         var url = caseUrl(c);
         if (navigator.share) {
-          navigator.share({ title: c.name + " \u2014 Unsolved Black Cases Archive", text: text, url: url }).catch(function () { /* user cancelled — no error needed */ });
+          var data = { title: c.name + " \u2014 Unsolved Black Cases Archive", text: text, url: url };
+          // Prefer sharing the image card along with the text where the
+          // browser supports file sharing; fall back to text + link.
+          fetch(cardUrl(c)).then(function (r) { return r.ok ? r.blob() : Promise.reject(); }).then(function (blob) {
+            var file = new File([blob], c.id + "-share-card.png", { type: "image/png" });
+            var withFile = { title: data.title, text: text + "\n" + url, files: [file] };
+            return (navigator.canShare && navigator.canShare(withFile)) ? withFile : data;
+          }).catch(function () { return data; }).then(function (d) {
+            return navigator.share(d);
+          }).catch(function () { /* user cancelled — no error needed */ });
         } else {
           openFallback(c);
         }

@@ -12226,7 +12226,7 @@ CASES = [
                             "https://hoodline.com/2025/09/second-deadlock-in-federal-civil-trial-over-police-shooting-of-alvin-cole-in-wauwatosa-third-trial-set-for-may-2026/", True)]),
     dict(id="vincent-belmonte", caseNumber="268", name="Vincent Belmonte",
          status="unsolved", caseType="homicide", year=2021, age=19, gender="male",
-         city="East Cleveland", county="Cuyahoga", state="OH", caseSeries=None,
+         city="Cleveland", county="Cuyahoga", state="OH", caseSeries=None,
          dateAdded="2026-09-25",
          summary="Vincent Belmonte, 19, was shot three or four times, including in the back of the head and "
                  "back, and killed by East Cleveland, Ohio Police Sergeant Larry McDonald on January 8, 2021, "
@@ -12418,6 +12418,756 @@ CASES = [
                             "https://www.fox5atlanta.com/news/johnny-hollman-death-lawsuit-atlanta-bodycam", True),
                         src("Black Star News \u2014 \u201cFamily Of Black Deacon Killed By Atlanta Police Calls For Justice March Saturday\u201d",
                             "https://blackstarnews.com/family-of-black-deacon-killed-by-atlanta-police-calls-for-justice-march-saturday/", True)]),
+    dict(id="jabari-peoples", caseNumber="271", name="Jabari Latrell Peoples",
+         status="unsolved", caseType="homicide", year=2025, age=18, gender="male",
+         city="Homewood", county="Jefferson", state="AL", caseSeries=None,
+         dateAdded="2026-09-30",
+         summary="Jabari Latrell Peoples, 18, a community college student, was shot in the back and killed by "
+                 "a Homewood, Alabama police officer on June 23, 2025, while sitting in a parked car with his "
+                 "girlfriend at a soccer complex. Police said the officer approached to arrest Peoples for "
+                 "suspected marijuana possession, a struggle followed, and the officer fired after Peoples "
+                 "broke free and grabbed a handgun from the car door; Peoples's family disputed that account "
+                 "entirely, saying he was unarmed and complied with the officer before being taken to the "
+                 "ground and shot within seconds. His family was not notified of his death by law enforcement "
+                 "at all, learning instead from the county coroner's office more than twelve hours later. "
+                 "Under Alabama law, the agency investigating the shooting was barred from releasing the body "
+                 "camera footage to the public or even to Peoples's parents; only his siblings were eventually "
+                 "shown it. Jefferson County District Attorney Danny Carr announced in August 2025 that no "
+                 "charges would be filed and the case would not be presented to a grand jury. No one has ever "
+                 "been charged in Peoples's death.",
+         known=["The attempted arrest, the struggle, and the shooting, per Jefferson County District Attorney "
+                "Danny Carr's August 2025 public announcement and reporting from the Associated Press and "
+                "Birmingham-area outlets.",
+                "A uniformed Homewood police officer approached Peoples's parked car at the Homewood Soccer "
+                "Complex around 9:30 p.m. and attempted to detain him after reportedly noticing marijuana and "
+                "a gun in the car door; police said a struggle ensued in which the officer was knocked to the "
+                "ground.",
+                "District Attorney Carr said body camera footage and other evidence showed Peoples grabbed the "
+                "gun from the car door with his right hand after breaking away from the officer, who then "
+                "fired a single shot that struck Peoples in the back.",
+                "Peoples's family released a public statement disputing the official account entirely, stating "
+                "he was not armed, that he complied with the officer, and that he was taken to the ground and "
+                "shot within seconds; they also said no life-saving measures were performed on him at the "
+                "scene, while police said backup officers began medical aid within 96 seconds of arriving.",
+                "Peoples's family was never directly notified of his death by police or medical personnel; "
+                "they learned of it when the Jefferson County Coroner's Office contacted them roughly twelve "
+                "hours after he was pronounced dead.",
+                "Under a 2023 Alabama law governing release of police recordings, only the Alabama Law "
+                "Enforcement Agency (ALEA), which took over the investigation, was authorized to release the "
+                "body camera footage; ALEA denied repeated requests from both Peoples's family and the City of "
+                "Homewood to release it.",
+                "Peoples's mother, represented by attorney Leroy Maxwell Jr., filed a court petition to compel "
+                "the City of Homewood to release the footage and the identities of officers present; civil "
+                "rights attorney Ben Crump later joined the family's legal team.",
+                "District Attorney Carr arranged for Peoples's siblings, though not his parents, to view the "
+                "footage in August 2025 before announcing no charges would be filed and that the case would "
+                "not be presented to a grand jury at all; his sister said afterward it was not clear from the "
+                "video that Peoples had a gun, and Crump said Peoples never pointed anything at the officer.",
+                "Regular protests were held in Homewood in the weeks following the shooting, with demonstrators "
+                "calling for transparency and the video's full public release."],
+         unknown=["Whether Peoples in fact grabbed a handgun from the car door before being shot, as the "
+                  "district attorney's account states, or was unarmed and compliant, as his family has "
+                  "maintained, was never tested at any criminal trial or even presented to a grand jury, and "
+                  "remains disputed even by family members who have since viewed the footage.",
+                  "Whether officers rendered aid to Peoples within 96 seconds, as police stated, or took no "
+                  "life-saving action, as the family's public statement said, has not been independently "
+                  "reconciled in available public reporting.",
+                  "The full body camera footage remains legally unreleased to the public as of the sources "
+                  "reviewed for this summary, meaning the only public accounts of its contents come from the "
+                  "district attorney's summary and the differing impressions of family members who were shown "
+                  "it."],
+         unanswered=["Why was Peoples's family not directly notified of his death by police, learning instead "
+                     "from the county coroner's office more than twelve hours later?",
+                     "Why does Alabama law bar the very agency investigating a police shooting from releasing "
+                     "body camera footage to the public, or even to the victim's own parents?",
+                     "Why did the district attorney decline to present the case to a grand jury at all, rather "
+                     "than let a jury of residents weigh the same evidence he reviewed alone?"],
+         extraSources=[src("Associated Press (via Yahoo News) \u2014 \u201cFamily seeks body camera footage from fatal police shooting of Jabari Peoples in Homewood\u201d",
+                            "https://whnt.com/news/alabama-news/family-seeks-body-camera-footage-from-fatal-police-shooting-of-jabari-peoples-in-homewood/", True),
+                        src("WVTM13 \u2014 \u201cThe latest in the death of Jabari Peoples: Homewood mayor releases statement after family sees video\u201d",
+                            "https://www.wvtm13.com/article/alabama-jabari-peoples-homewood-police-shooting-bodycam/65374781", True),
+                        src("Birmingham Times \u2014 \u201cDA: Jabari Peoples Reached for Gun Prior to Being Shot by Homewood Police Officer\u201d",
+                            "https://www.birminghamtimes.com/2025/08/da-jabari-peoples-reached-for-gun-prior-to-being-shot-by-homewood-police-officer/", True)]),
+    dict(id="pamela-turner", caseNumber="272", name="Pamela Turner",
+         status="unresolved", caseType="homicide", year=2019, age=44, gender="female",
+         city="Baytown", county="Harris", state="TX", caseSeries=None,
+         dateAdded="2026-10-05",
+         summary="Pamela Turner, 44, a Black woman whose family said she lived with mental illness, was shot "
+                 "five times and killed by Baytown, Texas Police Officer Juan Delacruz on May 13, 2019, in the "
+                 "parking lot of the apartment complex where both lived. Delacruz was attempting to arrest "
+                 "Turner on outstanding warrants; police said she resisted, grabbed his Taser, and used it "
+                 "against him before he opened fire. A bystander's video captured part of the encounter, "
+                 "including Turner shouting that she was pregnant moments before the shots. A Harris County "
+                 "grand jury indicted Delacruz on a first-degree felony charge of aggravated assault by a "
+                 "public servant in September 2020, and after a trial in October 2022, a jury found him not "
+                 "guilty. No one has ever been convicted in Turner's death.",
+         known=["The attempted arrest, the Taser struggle, and the shooting, per Texas Rangers and Harris "
+                "County District Attorney's Office investigations and trial coverage by KHOU, Click2Houston, "
+                "and Houston Public Media.",
+                "Delacruz encountered Turner while on patrol and knew she had outstanding warrants; police said "
+                "she resisted arrest, grabbed his Taser, and used it against him, at which point he fired.",
+                "A bystander's cellphone video shows Delacruz standing over Turner and reaching down for her "
+                "arms; Turner is heard yelling \u201cI'm pregnant,\u201d and moments later something flashes as "
+                "she reaches her arm toward the officer, who pulls away and fires five shots.",
+                "Turner's family said she suffered from mental illness; she and Delacruz lived in the same "
+                "apartment complex.",
+                "Delacruz returned to work within two weeks of the shooting, on administrative duty while the "
+                "Texas Rangers and the Harris County District Attorney's Civil Rights Division investigated.",
+                "A Harris County grand jury indicted Delacruz on September 14, 2020, on one count of aggravated "
+                "assault by a public servant, a first-degree felony carrying five years to life in prison, "
+                "roughly sixteen months after the shooting.",
+                "At the start of the trial, the family's attorney, Ben Crump, said a guilty verdict would be "
+                "the first time in American history a police officer was convicted in the killing of a Black "
+                "woman.",
+                "A Harris County jury found Delacruz not guilty on October 11, 2022; District Attorney Kim "
+                "Ogg said her office respected the verdict, while Turner's family and Crump expressed grief "
+                "and disappointment."],
+         unknown=["Whether Turner in fact grabbed and fired the Taser at Delacruz in a way that put his life "
+                  "at risk, as the defense maintained, or the flash visible on the bystander video reflected "
+                  "something less threatening, was contested at trial and resolved only by the not-guilty "
+                  "verdict, not by any conviction.",
+                  "How much the jury weighed Turner's documented mental illness, and Delacruz's knowledge of "
+                  "it as her neighbor, in reaching its verdict has not been made public, as jury deliberations "
+                  "are not a matter of public record.",
+                  "Whether any administrative or departmental discipline followed the acquittal has not been "
+                  "confirmed in the sources reviewed for this summary."],
+         unanswered=["Why was Delacruz, who lived in the same complex and had prior encounters with Turner, "
+                     "able to resolve an arrest on outstanding warrants only by deadly force?",
+                     "Why did it take sixteen months for a grand jury to be convened, and what accounted for "
+                     "that delay in a case with bystander video?",
+                     "What, if anything, changed in Baytown Police Department policy on arresting people known "
+                     "to have mental illness after Turner's death?"],
+         extraSources=[src("Click2Houston (KPRC) \u2014 \u201cHarris County jury finds Baytown officer not guilty in 2019 fatal shooting of Pamela Turner\u201d",
+                            "https://www.click2houston.com/news/local/2022/10/11/harris-county-jury-finds-baytown-officer-not-guilty-in-2019-fatal-shooting-of-pamela-turner/", True),
+                        src("Houston Public Media \u2014 \u201cBaytown Police Officer Indicted In 2019 Shooting Death Of Pamela Turner\u201d",
+                            "https://www.houstonpublicmedia.org/articles/news/criminal-justice/2020/09/14/381788/baytown-police-officer-indicted-in-2019-shooting-death-of-pamela-turner/", True),
+                        src("Al Jazeera \u2014 \u201cPamela Turner: Texas charges officer for fatal 2019 US shooting\u201d",
+                            "https://www.aljazeera.com/news/2020/9/14/pamela-turner-texas-charges-officer-for-fatal-2019-us-shooting", True)]),
+    dict(id="danny-ray-thomas", caseNumber="273", name="Danny Ray Thomas",
+         status="unresolved", caseType="homicide", year=2018, age=34, gender="male",
+         city="Houston", county="Harris", state="TX", caseSeries=None,
+         dateAdded="2026-10-05",
+         summary="Danny Ray Thomas, 34, an unarmed Black man whose family said he was struggling "
+                 "psychologically, was shot once in the chest and killed by Harris County Sheriff's Deputy "
+                 "Cameron Brewer on March 22, 2018, in Houston's Greenspoint area. Dashcam and bystander video "
+                 "showed Thomas, whose pants were around his ankles, walking toward Brewer as the deputy "
+                 "backed away with his gun aimed at Thomas's chest, shouting at him to get down. Brewer, who "
+                 "was carrying a Taser, fired a single shot. The Sheriff's Office fired Brewer for violating "
+                 "its use-of-force policy, and in October 2018 a Harris County grand jury indicted him on "
+                 "aggravated assault by a public servant, the first such indictment of a peace officer for an "
+                 "on-duty fatal shooting in Harris County in fifteen years. A jury acquitted him in August "
+                 "2019. No one has ever been convicted in Thomas's death.",
+         known=["The encounter and the shooting, per Houston Police Department investigators, the Harris "
+                "County Sheriff's Office's released dashcam video, bystander recordings, and trial coverage "
+                "by the Houston Chronicle and ABC13.",
+                "Brewer stopped his patrol car on Greens Road at Imperial Valley after seeing what appeared "
+                "to be a fight; Thomas had been involved in an altercation with a driver.",
+                "Video shows Thomas unarmed, with his pants down around his ankles, walking toward Brewer "
+                "as the deputy retreated with his gun pointed at Thomas's chest, yelling for him to get down "
+                "several times; Brewer fired once, striking Thomas in the chest.",
+                "Investigators said Brewer was carrying a Taser but chose to use his firearm; Brewer's "
+                "attorney said the deputy recognized that Thomas appeared to be high on PCP and knew from "
+                "past encounters that a Taser would not stop someone in that state.",
+                "Sheriff Ed Gonzalez fired Brewer in April 2018 after an internal investigation found he had "
+                "not followed the Sheriff's Office use-of-force policy.",
+                "A Harris County grand jury indicted Brewer on October 25, 2018, on a first-degree felony "
+                "charge of aggravated assault by a public servant, which carried a penalty of up to life in "
+                "prison; it was the first time in fifteen years that Harris County prosecutors secured an "
+                "indictment of a peace officer for an on-duty fatal shooting.",
+                "Brewer, who is also Black, went on trial in August 2019; a jury found him not guilty on "
+                "August 9, 2019, and the District Attorney's Office said it respected the verdict.",
+                "In 2020, the Sheriff's Civil Service Commission voted to reinstate Brewer; the Sheriff's "
+                "Office said it stood behind its decision to terminate him, and it was unclear whether or "
+                "when he would return to work."],
+         unknown=["Whether Brewer reasonably believed Thomas posed a lethal threat, as the defense argued, "
+                  "or used deadly force in violation of both the law and his department's policy, as the "
+                  "Sheriff's Office's own termination finding suggested, was resolved at trial only by a "
+                  "not-guilty verdict, and the jury's reasoning has not been made public.",
+                  "Whether Thomas was in fact intoxicated on PCP at the time, as Brewer's attorney stated, "
+                  "and how that bore on the use of force, was a defense claim and is not confirmed in the "
+                  "sources reviewed for this summary.",
+                  "Whether Brewer ever returned to work for the Sheriff's Office after the Civil Service "
+                  "Commission's reinstatement vote has not been confirmed in the sources reviewed."],
+         unanswered=["Why did the Sheriff's Office find Brewer violated its own use-of-force policy while a "
+                     "jury found no criminal liability for the same shooting?",
+                     "Why had Harris County gone fifteen years without indicting a peace officer for an "
+                     "on-duty fatal shooting before this case?",
+                     "Why did an officer carrying a Taser choose his firearm against an unarmed man who was "
+                     "visibly in distress and walking with his pants around his ankles?"],
+         extraSources=[src("Houston Chronicle \u2014 \u201cFormer deputy found not guilty in shooting of Danny Ray Thomas\u201d",
+                            "https://www.chron.com/news/houston-texas/houston/article/Jurors-deliberating-verdict-in-shooting-of-Danny-14291506.php", True),
+                        src("ABC13 (KTRK) \u2014 \u201cJury acquits ex-Harris County deputy in killing of unarmed man\u201d",
+                            "https://abc13.com/post/jury-acquits-ex-harris-county-deputy-in-killing-of-unarmed-man/5453747/", True),
+                        src("Houston Public Media \u2014 \u201cGrand Jury Indicts Former Sheriff's Deputy for Death of Danny Ray Thomas\u201d",
+                            "https://www.houstonpublicmedia.org/articles/news/2018/10/25/309368/grand-jury-indicts-former-sheriffs-deputy-for-death-of-danny-ray-thomas/", True),
+                        src("Houston Chronicle \u2014 \u201cCommission votes to reinstate Harris County deputy who shot, killed Danny Ray Thomas\u201d",
+                            "https://www.houstonchronicle.com/news/houston-texas/houston/article/Commission-votes-to-reinstate-Harris-County-15423984.php", True)]),
+    dict(id="tanisha-anderson", caseNumber="274", name="Tanisha Anderson",
+         status="unsolved", caseType="homicide", year=2014, age=37, gender="female",
+         city="Cleveland", county="Cuyahoga", state="OH", caseSeries=None,
+         dateAdded="2026-10-05",
+         summary="Tanisha Anderson, 37, a Black woman with bipolar disorder who had been discharged from a "
+                 "behavioral health facility weeks earlier, died on the night of November 12\u201313, 2014, "
+                 "after Cleveland police officers Scott Aldridge and Bryan Myers handcuffed her and took her "
+                 "to the ground outside her family's home. Her family had called police for help during a "
+                 "mental health episode; officers agreed to take her to a hospital for evaluation, but she "
+                 "became distressed at the patrol car and a struggle followed, ending with her prone on the "
+                 "ground in handcuffs. She lost consciousness and died. The county medical examiner first "
+                 "ruled her death a homicide associated with prone restraint, a finding later complicated by "
+                 "a second autopsy. The City of Cleveland settled a wrongful death suit for $2.25 million in "
+                 "2017, and in February 2018 a Cuyahoga County grand jury, hearing a case led by a special "
+                 "prosecutor from the Ohio Attorney General's office, declined to charge either officer. No "
+                 "one has ever been charged in Anderson's death.",
+         known=["The 911 calls, the encounter, and Anderson's death, per the Ohio Attorney General's review, "
+                "the Cuyahoga County Sheriff's investigative file, the Cuyahoga County Medical Examiner's "
+                "reports, and reporting by the Associated Press, Ideastream, and Mother Jones.",
+                "Anderson's brother called police around 8:15 p.m. on November 12, 2014, after she left the "
+                "Windsor Laurelwood Center for Behavioral Medicine; a second call came about 45 minutes "
+                "later saying she was trying to leave the house in a nightgown. Officers Scott Aldridge, a "
+                "training officer, and Bryan Myers, a rookie who had joined the department that year, "
+                "responded.",
+                "Officers and family members persuaded Anderson to go to a hospital; the Ohio Attorney "
+                "General's review found the officers' and witnesses' accounts of what happened next to be "
+                "disputed. The officers said she went to the ground on her own and kicked at them; her family "
+                "said she was claustrophobic, jumped from the patrol car, and was slammed to the ground and "
+                "kneed in the back while prone.",
+                "A law enforcement official familiar with the sheriff's investigation told Mother Jones that "
+                "Anderson was on the ground in handcuffs for roughly twenty minutes before EMS arrived; "
+                "Cleveland police's internal affairs review separately found the officers failed to provide "
+                "medical assistance.",
+                "The county medical examiner ruled her death a homicide, attributing it to sudden death "
+                "associated with physical restraint in a prone position, in association with ischemic heart "
+                "disease and bipolar disorder with agitation; obesity was also cited as a factor.",
+                "A county judge ordered the first page of that autopsy stricken from the record because it "
+                "contained material from the officers' compelled internal statements, and the Ohio Attorney "
+                "General's office ordered a second autopsy, which Cleveland Scene reported found she died of "
+                "heart disease and other health reasons.",
+                "The City of Cleveland agreed in early 2017 to a $2.25 million wrongful death settlement with "
+                "her family, and an outside consultant concluded the officers had used excessive force.",
+                "A Cuyahoga County grand jury, which began hearing testimony in late September 2017 in a case "
+                "presented by the Ohio Attorney General's special prosecutions chief, declined to indict "
+                "Aldridge and Myers in February 2018; the officers' attorney said the grand jury reached "
+                "the \u201cjust conclusion that these officers did nothing wrong.\u201d",
+                "In March 2018, Cleveland's safety director suspended Aldridge for ten days without pay and "
+                "issued Myers a written warning.",
+                "In November 2024, Cleveland City Council members introduced \u201cTanisha's Law,\u201d "
+                "legislation to codify co-responder teams pairing police with mental health professionals."],
+         unknown=["Whether Anderson's death was caused by prone restraint, as the first autopsy concluded, or "
+                  "by heart disease and other health conditions, as the second reportedly found, was never "
+                  "resolved at any trial, since no charges were brought.",
+                  "How long Anderson lay handcuffed and prone before medical help arrived has been described "
+                  "publicly only through an unnamed official's account to a reporter, and the full sheriff's "
+                  "investigative file has not been made comprehensively public.",
+                  "What the grand jury heard beyond what has been reported, and the reasoning behind its "
+                  "decision, is not public, as grand jury proceedings are secret under Ohio law."],
+         unanswered=["Why did two autopsies reach different conclusions, and what did it mean for the "
+                     "investigation that a judge had to strike part of the first one?",
+                     "Why did it take more than three years from Anderson's death for a grand jury to hear "
+                     "the case?",
+                     "Why was a woman whose family called for help during a mental health crisis left "
+                     "handcuffed and prone for an extended period before medical aid reached her?"],
+         extraSources=[src("Ideastream Public Media \u2014 \u201cGrand Jury Decides Not to Charge Officers in Death of Tanisha Anderson\u201d",
+                            "https://www.ideastream.org/news/community/2018-02-03/grand-jury-decides-not-to-charge-officers-in-death-of-tanisha-anderson", True),
+                        src("Mother Jones \u2014 \u201cQuestions Mount About a Mentally Ill Black Woman's Death in Police Custody\u201d",
+                            "https://www.motherjones.com/politics/2016/02/tanisha-anderson-death-cleveland-police-investigation/", True),
+                        src("Cleveland Scene \u2014 \u201cGrand Jury: No Charges for Cleveland Police Officers in Death of Tanisha Anderson\u201d",
+                            "https://www.clevescene.com/news/grand-jury-no-charges-for-cleveland-police-officers-in-death-of-tanisha-anderson-14744320/", True),
+                        src("WCBE / Associated Press \u2014 \u201cCleveland Cops Cleared Of Criminal Charges In Death Of Tanisha Anderson\u201d",
+                            "https://www.wcbe.org/news/2018-02-03/cleveland-cops-cleared-of-criminal-charges-in-death-of-tanisha-anderson", True)]),
+    dict(id="tony-robinson", caseNumber="275", name="Tony Robinson Jr.",
+         status="unsolved", caseType="homicide", year=2015, age=19, gender="male",
+         city="Madison", county="Dane", state="WI", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Tony Robinson Jr., 19, an unarmed Black teenager, was shot seven times and killed by Madison, "
+                 "Wisconsin Police Officer Matt Kenny on March 6, 2015, in the stairwell of an apartment "
+                 "building on Williamson Street. Kenny had responded to a call about a man behaving erratically; "
+                 "a friend had told 911 dispatchers that Robinson, who had taken psychedelic mushrooms and "
+                 "other substances, was not known to carry weapons. Kenny said Robinson attacked him at the top "
+                 "of the stairs and that he fired at point-blank range, but dashcam footage and forensic "
+                 "reports in the family's civil suit raised questions about whether some shots were fired after "
+                 "Robinson was already down. Dane County District Attorney Ismael Ozanne declined to charge "
+                 "Kenny in May 2015, the department cleared him, and the city's insurer settled the family's "
+                 "federal suit for $3.35 million in 2017. A 2023 effort to have a judge order charges ended "
+                 "when the judge ruled he lacked authority to appoint a special prosecutor. No one has ever "
+                 "been charged in Robinson's death.",
+         known=["The call, the shooting, and the investigative outcome, per reporting by the Cap Times, "
+                "Isthmus, CNN, and Channel 3000, and the Dane County District Attorney's public decision.",
+                "On March 6, 2015, Officer Matt Kenny responded to a call about Robinson, who had taken "
+                "psychedelic mushrooms and other substances; a friend told 911 dispatchers that Robinson was "
+                "not known to carry weapons, and Robinson was unarmed.",
+                "Kenny said Robinson attacked him at the top of the stairs at 1125 Williamson Street and that "
+                "he shot at point-blank range; he fired seven shots, and all seven struck Robinson.",
+                "Dashcam footage suggests some shots were fired after Robinson's feet appeared in the "
+                "doorway, indicating he may already have been on the ground; forensic reports filed in the "
+                "family's civil suit said shell casings were found at the bottom of the steps or outside the "
+                "apartment, which the family says contradicts Kenny's account.",
+                "On May 12, 2015, Dane County District Attorney Ismael Ozanne announced that Kenny would not "
+                "be charged, concluding he acted lawfully; the Madison Police Department separately cleared "
+                "Kenny of violating professional standards.",
+                "In 2017, the City of Madison's insurer settled the family's federal civil rights suit for "
+                "$3.35 million, the largest such settlement in Wisconsin history at the time; it included no "
+                "admission of wrongdoing and barred Robinson's mother from further action against Kenny.",
+                "In 2023, Robinson's grandmother, Sharon Irwin-Henry, used a rarely invoked Wisconsin statute "
+                "to ask a judge to find probable cause and issue a homicide complaint; seven judges recused "
+                "before Judge Stephen Ehlke heard it, and on June 30, 2023 he dismissed the petition, saying "
+                "that even assuming probable cause existed, he had neither the statutory nor inherent "
+                "authority to appoint the special prosecutor needed to bring the case.",
+                "As of March 2025, Kenny remained employed by the Madison Police Department in its training "
+                "division, where he has worked since the summer of 2015; Robinson's family planned to bring "
+                "a complaint before the Police and Fire Commission seeking his firing.",
+                "Robinson's death helped drive local changes, including a revised use-of-force policy "
+                "emphasizing preservation of life, a Police Civilian Oversight Board, an Office of the "
+                "Independent Monitor, and expanded de-escalation and crisis intervention training."],
+         unknown=["Whether Robinson attacked Kenny at the top of the stairs, as Kenny stated, or whether "
+                  "some or all of the shots were fired after Robinson was already down, as the family's "
+                  "forensic reports and the dashcam footage suggest, has never been tested at a criminal trial.",
+                  "Why shell casings were reportedly found at the bottom of the steps or outside the apartment, "
+                  "rather than where Kenny's account would place them, has not been resolved in any public "
+                  "proceeding.",
+                  "Whether any further legal avenue remains open to the family to seek criminal charges after "
+                  "the 2023 dismissal is not confirmed in the sources reviewed for this summary."],
+         unanswered=["Why were all seven shots fired at a 19-year-old with no weapon, when a friend had "
+                     "told dispatchers he was not known to carry weapons?",
+                     "How should the dashcam footage and the casing locations be reconciled with the officer's "
+                     "account that he was attacked and shot at point-blank range?",
+                     "Why does Wisconsin law let a judge find probable cause but leave no clear way to appoint "
+                     "a prosecutor to act on it?"],
+         extraSources=[src("Cap Times \u2014 \u201cThe story behind an eight-year fight for justice for Tony Robinson\u201d",
+                            "https://captimes.com/news/community/the-story-behind-an-eight-year-fight-for-justice-for-tony-robinson/article_0657f7d2-8d0a-5303-8356-6f98401f6aff.html", True),
+                        src("Channel 3000 \u2014 \u201cJudge dismisses petition to bring charges against officer who killed Tony Robinson\u201d",
+                            "https://www.channel3000.com/news/judge-dismisses-petition-to-bring-charges-against-officer-who-killed-tony-robinson/article_91e6a2dc-182d-11ee-a956-0f01d8974723.html", True),
+                        src("Isthmus \u2014 \u201cTony Robinson, 10 years gone\u201d",
+                            "https://isthmus.com/news/news/tony-robinson-10-years-gone/", True),
+                        src("CNN \u2014 \u201cProsecutor: No charges for officer in Tony Robinson case\u201d",
+                            "https://www.cnn.com/2015/05/12/us/tony-robinson-madison-killing-investigation", True)]),
+    dict(id="korryn-gaines", caseNumber="276", name="Korryn Gaines",
+         status="unsolved", caseType="homicide", year=2016, age=23, gender="female",
+         city="Randallstown", county="Baltimore", state="MD", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Korryn Gaines, 23, a Black mother, was shot and killed by Baltimore County, Maryland Police "
+                 "Officer Royce Ruby on August 1, 2016, at the end of an hours-long standoff in her "
+                 "Randallstown apartment, where police had come to serve a bench warrant after she missed a "
+                 "court date over a traffic violation. Her five-year-old son, Kodi, was in the apartment and "
+                 "was wounded by gunfire from the same encounter. Police said Gaines aimed a shotgun at "
+                 "officers and threatened to kill them; her family said Ruby fired out of frustration rather "
+                 "than fear. Baltimore County State's Attorney Scott Shellenberger declined to charge Ruby, "
+                 "writing that the shooting was “justified.” A civil jury later found the officer's use of "
+                 "force unreasonable and awarded the family roughly $37–38 million, but the trial judge "
+                 "overturned the verdict on qualified immunity, and the legal fight over the verdict, a "
+                 "settlement, and Kodi's own claim ran until the U.S. Supreme Court declined to hear the "
+                 "case in January 2025. No one has ever been charged in Gaines's death.",
+         known=["The standoff and shooting, per Baltimore County police statements, the State's Attorney's "
+                "public decision, civil trial coverage, and reporting by Time, CBS Baltimore, the Baltimore "
+                "Banner, and WMAR.",
+                "Police went to Gaines's Randallstown apartment on August 1, 2016, to serve a bench warrant "
+                "issued after she failed to appear in court on a minor traffic matter; the ACLU of Maryland "
+                "states that officers entered the apartment using a key obtained from the landlord, without "
+                "her consent.",
+                "Gaines was barricaded inside with her five-year-old son, Kodi, and the standoff lasted "
+                "roughly six hours; police said she aimed a shotgun at the officer and threatened to kill "
+                "him, and Officer Royce Ruby fired through a wall, killing her.",
+                "Kodi Gaines was struck by gunfire and injured; accounts of the wound differ, with Time "
+                "describing a non-life-threatening injury to his cheek and the ACLU of Maryland describing "
+                "a wound to his arm. The ACLU also states that Gaines was shot in the back.",
+                "On September 21, 2016, Baltimore County State's Attorney Scott Shellenberger announced no "
+                "charges, writing to the police department that “this shooting was justified” "
+                "because Ruby feared for his safety; the family, which had filed a civil suit the week "
+                "before, said Ruby shot out of frustration, not fear.",
+                "After a 14-day trial in February 2018, a jury found the officer's deadly force "
+                "unreasonable and awarded the family roughly $37–38 million; reporting differs on the exact "
+                "total and on how it was divided between Gaines's estate and Kodi.",
+                "In February 2019, Circuit Judge Mickey Norman overturned the verdict on qualified immunity "
+                "grounds and ordered the county to pay Kodi $400,000 plus interest; in mid-2020, an "
+                "appeals court rebuked the ruling and reinstated the jury's verdict.",
+                "In 2021, the family settled Korryn Gaines's own claims with Baltimore County, reported at "
+                "$3 million; Kodi's claims were not part of that settlement.",
+                "In June 2024, a divided Supreme Court of Maryland held that qualified immunity protected "
+                "Ruby from Kodi's claim, reasoning that Ruby did not intend to shoot the child and that the "
+                "shooting did not “shock the conscience”; the U.S. Supreme Court denied review of that "
+                "ruling on January 27, 2025."],
+         unknown=["Whether Gaines pointed a shotgun at officers at the moment Ruby fired, as police stated, "
+                  "or whether the shooting reflected frustration rather than a threat, as the family alleged "
+                  "and the 2018 civil jury's finding of unreasonable force suggests, was never tested in "
+                  "any criminal proceeding, since no charges were filed.",
+                  "Why a civil jury and a state's attorney, reviewing the same shooting, reached opposite "
+                  "conclusions about whether the force was reasonable has not been reconciled in any "
+                  "single public finding.",
+                  "The exact verdict total and its division between Gaines's estate and her son differ across "
+                  "the sources reviewed, and the settlement amounts beyond the reported $3 million for "
+                  "Gaines's own claims have not been confirmed."],
+         unanswered=["Why was a bench warrant over a minor traffic violation served in a way that led to a "
+                     "six-hour armed standoff with a child inside the apartment?",
+                     "How can a jury find deadly force unreasonable while no prosecutor, judge, or court of "
+                     "last resort ever assigns criminal or civil liability to the officer who fired?",
+                     "What accountability exists when qualified immunity shields an officer from a claim by "
+                     "the five-year-old his gunfire wounded?"],
+         extraSources=[src("Time — “No Charges Filed in Fatal Shooting of Korryn Gaines”",
+                            "https://time.com/4503374/korryn-gaines-shooting-no-charges/", True),
+                        src("ACLU of Maryland — “Demanding Accountability from the Police and Courts”",
+                            "https://www.aclu-md.org/news/demanding-accountability-police-and-courts/", True),
+                        src("WMAR 2 News — “Family of Korryn Gaines settles with Baltimore County, 5 years after deadly police shooting”",
+                            "https://www.wmar2news.com/news/local-news/family-of-korryn-gaines-settles-with-baltimore-county-5-years-after-deadly-police-shooting", True),
+                        src("The Baltimore Banner — “Lawyers in Korryn Gaines case appeal to US Supreme Court”",
+                            "https://www.thebanner.com/community/criminal-justice/korryn-gaines-baltimore-county-supreme-court-MPUZPYPGSBA4VPEJFNRDTHJD6M/", True),
+                        src("Supreme Court of the United States — Docket 24-578, Cunningham v. Baltimore County",
+                            "https://www.supremecourt.gov/docket/docketfiles/html/public/24-578.html", True)]),
+    dict(id="rumain-brisbon", caseNumber="277", name="Rumain Brisbon",
+         status="unsolved", caseType="homicide", year=2014, age=34, gender="male",
+         city="Phoenix", county="Maricopa", state="AZ", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Rumain Brisbon, 34, a Black father, was shot twice, including once in the back, and killed by "
+                 "Phoenix Police Officer Mark Rine on December 2, 2014, in the parking lot of his North Phoenix "
+                 "apartment complex. Rine had been following up on a report of drug sales from an SUV; he said "
+                 "Brisbon ran when ordered to raise his hands, that they struggled, and that he felt what he "
+                 "believed was a gun in Brisbon's pocket. It was a vial of oxycodone pills. Two witnesses "
+                 "disputed Rine's account. The Maricopa County Attorney's Office declined to charge Rine, "
+                 "finding the force appropriate, and in 2017 the City of Phoenix paid Brisbon's family $1.5 "
+                 "million to settle their lawsuit. Rine remained on the force with no duty restrictions. No "
+                 "one has ever been charged in Brisbon's death.",
+         known=["The encounter and the shooting, per Phoenix police statements, the Maricopa County "
+                "Attorney's Office decision, and reporting by ABC News, Phoenix New Times, KJZZ, and NBC News.",
+                "A caller reported a Black man selling drugs from a black Cadillac SUV near a 7-Eleven; the "
+                "SUV's license plate led Officer Mark Rine, then a 30-year-old white officer with seven years "
+                "on the force and no prior complaints, to Brisbon's apartment complex.",
+                "Phoenix New Times reported that Brisbon had gone out to get fast food for his girlfriend and "
+                "18-month-old daughter; he got out of the SUV, opened a rear door, and appeared to take out a "
+                "bag of food when Rine ordered him to raise his hands.",
+                "Rine said Brisbon reached toward his waistband and ran; the two struggled, stumbled into an "
+                "apartment, and Rine lost his grip. Rine said he felt what he believed was a gun in "
+                "Brisbon's pocket and fired.",
+                "The object in Brisbon's pocket was a vial of oxycodone pills. Police said a later search "
+                "found a gun in the SUV and a jar believed to contain marijuana.",
+                "Brisbon was shot twice; an autopsy reportedly showed one shot struck him in the back, and "
+                "Phoenix New Times described it as point-blank.",
+                "Two witnesses disputed Rine's account of what happened, according to Phoenix New Times.",
+                "The Maricopa County Attorney's Office declined to charge Rine; a spokesman said every "
+                "officer-involved shooting is reviewed and that the office found the force used was "
+                "appropriate.",
+                "Brisbon's family filed a lawsuit in May 2015, and in late June 2017 the Phoenix City Council "
+                "approved a $1.5 million settlement; two council members voted against it, one arguing "
+                "it set a bad precedent because he believed Rine had done nothing wrong.",
+                "Phoenix police confirmed Rine remained employed with no restrictions on his duty status; "
+                "the police union said in a statement that Brisbon “had the choice to live that "
+                "evening.” Protests followed the shooting, and at one march an officer apologized to "
+                "Brisbon's nine-year-old daughter, whose family attorney called the gesture nice but "
+                "unable to bring back her father."],
+         unknown=["Whether Brisbon reached toward his waistband in a way that reasonably suggested a weapon, "
+                  "as Rine said, or was reaching for the food and pill vial he actually had, was never "
+                  "tested at a criminal trial, and two witnesses disputed Rine's account.",
+                  "The precise date on which the Maricopa County Attorney's Office announced its decision, "
+                  "and the full reasoning behind it, are not stated in the sources reviewed for this "
+                  "summary.",
+                  "Whether any body camera or other video of the encounter exists is not stated in the "
+                  "sources reviewed."],
+         unanswered=["Why was a man walking to his car with a bag of fast food met with a drug-sales "
+                     "investigation that ended in a point-blank shooting over a pill vial?",
+                     "How did two witnesses' accounts differ from the officer's, and why did that not change "
+                     "the County Attorney's finding that the force was appropriate?",
+                     "Why was a $1.5 million settlement considered justified by the city while the "
+                     "underlying shooting was found to warrant no criminal charge?"],
+         extraSources=[src("ABC News — “How Phoenix Man's Death Became Latest Flashpoint in Police Relations”",
+                            "https://abcnews.com/US/unarmed-man-phoenix-latest-police-victim/story?id=27392797", True),
+                        src("Phoenix New Times — “Phoenix Cop Won't Face Charges for Fatally Shooting Unarmed Man”",
+                            "https://www.phoenixnewtimes.com/news/phoenix-cop-wont-face-charges-for-fatally-shooting-unarmed-man-6668041", True),
+                        src("Phoenix New Times — “Phoenix Approves $1.5 Million Settlement For Family of Rumain Brisbon, Unarmed Black Man Shot By Police”",
+                            "https://www.phoenixnewtimes.com/news/phoenix-approves-15-million-settlement-for-family-of-rumain-brisbon-unarmed-black-man-shot-by-police-9455485/", True),
+                        src("KJZZ — “Phoenix To Pay $1.5 Million To Family Of Unarmed Man Shot, Killed”",
+                            "https://kjzz.org/content/497553/phoenix-pay-15-million-family-unarmed-man-shot-killed", True),
+                        src("NBC News — “Cop Apologizes to Police Shooting Victim Rumain Brisbon's Daughter”",
+                            "https://www.nbcnews.com/news/amp/ncna265301", True)]),
+    dict(id="ramarley-graham", caseNumber="278", name="Ramarley Graham",
+         status="unsolved", caseType="homicide", year=2012, age=18, gender="male",
+         city="Bronx", county="Bronx", state="NY", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Ramarley Graham, 18, an unarmed Black teenager, was shot once in the chest and killed by New "
+                 "York City Police Officer Richard Haste on February 2, 2012, in the bathroom of his grandmother's "
+                 "Bronx home. Haste, a member of the NYPD's Street Narcotics Enforcement Unit, had followed "
+                 "Graham into the building after officers said they saw him tugging at what they believed was a "
+                 "gun in his waistband; no gun was ever found, and Graham was flushing a small amount of "
+                 "marijuana down the toilet. Haste was indicted on manslaughter charges in 2012, but a judge "
+                 "dismissed the indictment in May 2013 over flawed grand jury instructions, a second grand jury "
+                 "declined to re-indict him in August 2013, and federal prosecutors found insufficient evidence "
+                 "to bring civil rights charges in 2016. Haste resigned in March 2017, two days after an NYPD "
+                 "trial commissioner recommended he be fired. He has never stood trial.",
+         known=["The shooting, the state and federal reviews, and the NYPD disciplinary outcome, per reporting "
+                "by ABC7 New York, CBS New York, and the public record of the proceedings.",
+                "On February 2, 2012, around 3 p.m., officers from the Street Narcotics Enforcement Unit "
+                "pursued Graham; officers said they saw him tugging at a gun in his waistband, but no gun was "
+                "recovered. Video showed Graham walking into his grandmother's home, and Haste followed him "
+                "inside.",
+                "Graham ran to the bathroom and was flushing a small amount of marijuana wrapped in foil when "
+                "Haste shot him once; he died in front of his grandmother and, according to ABC7, his "
+                "six-year-old brother.",
+                "Haste said he fired because he mistakenly believed Graham was reaching for a gun; the "
+                "NYPD's firearms discharge review board ruled the shooting justified but found that Haste "
+                "had not used proper tactics.",
+                "A grand jury indicted Haste on manslaughter charges in June 2012; in May 2013 "
+                "Justice Steven Barrett vacated the indictment, ruling prosecutors had improperly instructed "
+                "grand jurors to disregard testimony from officers who had warned Haste that Graham might be "
+                "armed.",
+                "A second grand jury declined to re-indict Haste on August 8, 2013.",
+                "In January 2015 New York City settled the family's civil rights suit for $3.9 million.",
+                "On March 8, 2016, U.S. Attorney Preet Bharara announced there was insufficient evidence to "
+                "pursue federal civil rights charges; officials said the probe found nothing that undercut "
+                "Haste's account, and no witness accounts or physical evidence materially contradicted his "
+                "claim that he believed Graham was reaching for a gun.",
+                "After the federal review, an NYPD department trial commissioner found Haste guilty on all "
+                "disciplinary counts and on March 24, 2017 recommended termination; Police Commissioner "
+                "O'Neill concurred, and Haste resigned on March 26, 2017 before he could be fired.",
+                "Graham's mother, Constance Malcolm, said Haste “should have been in prison” and "
+                "criticized the city for allowing him to resign; Haste had remained on the force on modified "
+                "duty with union-guaranteed raises throughout the years of review."],
+         unknown=["Whether Haste could reasonably have believed Graham was armed, given that no gun was "
+                  "recovered but other officers had warned Haste that Graham might be, was never tested at a "
+                  "criminal trial, because the case ended before one occurred.",
+                  "What the second grand jury heard, and why it declined to re-indict, is secret under New "
+                  "York law and has not been made public.",
+                  "Whether the NYPD's own trial finding that Haste's conduct warranted termination bears on "
+                  "the criminal question has never been addressed in any court."],
+         unanswered=["Why was an officer who entered a home without permission and shot an unarmed teenager "
+                     "over a small amount of marijuana never put before a trial jury?",
+                     "How did the NYPD's internal process reach a finding of guilt on all charges five years "
+                     "after the shooting, while no court heard the case?",
+                     "Why did the officer remain on the force on modified duty, with raises, throughout the "
+                     "years the federal and internal reviews were pending?"],
+         extraSources=[src("ABC7 New York — “Justice Department finds insufficient evidence for federal charges in Ramarley Graham case”",
+                            "https://abc7ny.com/post/justice-department-insufficient-evidence-for-federal-charges-in-ramarley-graham-case/1236450/", True),
+                        src("CBS New York — “NYPD Officer Who Shot And Killed Ramarley Graham Resigns”",
+                            "https://cbsnews.com/newyork/news/nypd-officer-who-shot-killed-ramarley-graham-resigns", True)]),
+    dict(id="kimani-gray", caseNumber="279", name="Kimani Gray",
+         status="unsolved", caseType="homicide", year=2013, age=16, gender="male",
+         city="Brooklyn", county="Kings", state="NY", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Kimani Gray, 16, a Black teenager, was shot seven times and killed by two plainclothes New "
+                 "York City police officers from the Brooklyn South Anti-Crime Patrol on March 9, 2013, in "
+                 "East Flatbush, Brooklyn, as he was walking home from a party. Police said Gray left a group "
+                 "when he saw an unmarked car, acted suspiciously when the officers approached, and pointed a "
+                 ".38-caliber revolver at them; a revolver was recovered at the scene. Gray's family and "
+                 "neighbors said he was not armed, and some accused the officers of planting a “drop "
+                 "gun.” The medical examiner found wounds to the front and back of his body. The "
+                 "shooting set off several nights of protests and dozens of arrests. In July 2014, "
+                 "Brooklyn District Attorney Ken Thompson's office announced the officers would not be "
+                 "charged, and a source close to the case said prosecutors lacked enough evidence to "
+                 "indict. No one has ever been charged in Gray's death.",
+         known=["The shooting, the investigation, and the decision not to charge, per reporting by CBS New "
+                "York, the New York Amsterdam News, NBC News, and a Brooklyn College journalism report on "
+                "the family's civil suit.",
+                "Gray was shot on March 9, 2013, in East Flatbush by two plainclothes officers of the "
+                "Brooklyn South Anti-Crime Patrol, identified in later reporting as Sgt. Mourad Mourad and "
+                "Officer Jovaniel Cordova; Gray was 16 and was returning home from a party.",
+                "Police said Gray left a group when he saw an unmarked car, appeared suspicious as the "
+                "officers approached, grabbed for something at his waistband, and pointed a .38-caliber "
+                "revolver at them, and that both officers fired; a revolver was recovered at the scene.",
+                "The medical examiner found Gray was hit seven times, with wounds to the front and back of "
+                "his body; his family has pointed to the medical examiner's findings that most of his wounds "
+                "were to his back as inconsistent with the police claim that he aimed a gun at the officers.",
+                "Gray's family and neighbors said he was not in a gang and did not have a gun, said no "
+                "witnesses saw him pull one, and some accused the officers of planting the revolver; the "
+                "family demanded an independent investigation.",
+                "Then-Police Commissioner Raymond Kelly said the shooting appeared to fall within the "
+                "department's deadly-force guidelines, and the officers were placed on desk duty during the "
+                "investigation.",
+                "The shooting set off protests in East Flatbush that continued for several nights, with "
+                "dozens of arrests when some demonstrations turned violent.",
+                "In late July 2014, the Brooklyn District Attorney's office announced the officers would not "
+                "be charged; a source close to the case told the Amsterdam News that the office lacked "
+                "enough evidence to pursue an indictment and that some witnesses “would not talk.” "
+                "Gray's mother said the case should at least have gone to a grand jury and asked for "
+                "“a day in court.”",
+                "The family filed a federal wrongful death suit against the two officers and unnamed medics, "
+                "alleging among other things that Gray was denied prompt medical care; as of May 2015 "
+                "discovery was ongoing, a magistrate judge had urged the parties to discuss settlement, and "
+                "the city had paid $215,000 to settle earlier, unrelated lawsuits against the same two "
+                "officers."],
+         unknown=["Whether Gray pointed a revolver at the officers, as police said, or was unarmed, as his "
+                  "family maintains, was never tested at a criminal trial or put to a publicly reported "
+                  "grand jury, and was publicly disputed by the family, who questioned how the revolver "
+                  "came to be recovered.",
+                  "Whether the case was presented to a grand jury at all is not stated in the sources "
+                  "reviewed; the family said it should have been, and no indictment was ever "
+                  "announced.",
+                  "The outcome of the family's federal civil suit is not reported in the sources "
+                  "reviewed for this summary."],
+         unanswered=["Why were most of the wounds to Gray's body, according to his family, in the back if "
+                     "he was facing the officers and aiming a gun at them?",
+                     "Why did the district attorney's office decline to bring the case to a grand jury, and "
+                     "which witnesses “would not talk” and why?",
+                     "How was Gray's access to prompt medical care handled in the minutes after he was shot, "
+                     "as the family's lawsuit alleges?"],
+         extraSources=[src("CBS New York — “No Criminal Charges Coming For Officers Who Shot And Killed Kimani Gray, 16”",
+                            "https://www.cbsnews.com/newyork/news/no-criminal-charges-coming-for-officers-who-shot-and-killed-kimani-gray-16/", True),
+                        src("New York Amsterdam News — “No indictment in Kimani Gray case”",
+                            "https://amsterdamnews.com/news/2014/08/07/no-indictment-kimani-gray-case/", True),
+                        src("NBC News — “Funeral held for Brooklyn teen shot by police”",
+                            "https://www.nbcnews.com/news/us-news/funeral-held-brooklyn-teen-shot-police-flna1b9037656", True),
+                        src("Brooklyn College Journalism — “Family pursues lawsuit over Kimani Gray death”",
+                            "https://journalism.blog.brooklyn.edu/2015/05/family-pursues-lawsuit-over-kimani-gray-death/", True)]),
+
+    dict(id="roger-fortson", caseNumber="280", name="Roger Fortson",
+         status="unresolved", caseType="homicide", year=2024, age=23, gender="male",
+         city="Fort Walton Beach", county="Okaloosa", state="FL", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Roger Fortson, a 23-year-old Black U.S. Air Force airman, was shot and killed by "
+                 "Okaloosa County Sheriff's Deputy Eddie Duran at the door of his Fort Walton Beach apartment "
+                 "on May 3, 2024. Duran had been sent to the complex on a report that proved false; body-camera "
+                 "video shows him knocking, identifying himself, and firing when Fortson opened the door "
+                 "holding a legally owned handgun pointed at the floor. The sheriff's office first said Duran "
+                 "acted in self-defense, then concluded his life was not in danger and fired him. Duran was "
+                 "charged with manslaughter with a firearm and, on October 1, 2026, a jury found him not "
+                 "guilty. No one has been convicted in Fortson's death.",
+         known=["The shooting, the charge and the acquittal, per reporting by FOX 5 Atlanta, Good Morning "
+                "America, Task & Purpose, and La Nación.",
+                "Fortson, 23, was shot on May 3, 2024, in his apartment in Fort Walton Beach, Okaloosa County, "
+                "Florida; he was a member of the 4th Special Operations Squadron at Hurlburt Field and was "
+                "alone, on the phone with his girlfriend, when deputy Eddie Duran came to his door.",
+                "Duran was dispatched on a reported domestic disturbance, which authorities later found was "
+                "false; Duran's attorney described the visit as a response to a neighbor's complaint, and "
+                "Task & Purpose described it as a noise complaint.",
+                "Body-camera video shows Duran knocking, identifying himself, and shouting “Step back!” "
+                "before shooting when Fortson opened the door holding a semiautomatic pistol that he legally "
+                "owned. Task & Purpose reported that Duran shot him five times and that the video shows the "
+                "gun was not pointed at the deputy; Good Morning America reported most of the shots hit "
+                "Fortson's left arm.",
+                "The sheriff's office first said Duran “reacted in self-defense” after encountering "
+                "a 23-year-old man with a gun. An internal investigation later found his decision to shoot "
+                "was not objectively reasonable and that his life was not in danger, and he was fired less "
+                "than a month after the shooting.",
+                "Duran was charged with one count of manslaughter with a firearm, which carried up to 30 "
+                "years in prison, and pleaded not guilty.",
+                "At trial, prosecutor Mark Alderman argued Fortson posed “no threat” with his gun "
+                "pointed at the ground; defense attorney Rod Smith argued Duran faced an imminent threat and "
+                "followed his training, and Duran testified that he thought he was going to die when the "
+                "door opened.",
+                "A jury found Duran not guilty, reported on Thursday, October 1, 2026. Prosecutors said they "
+                "respected the verdict and believed the case warranted a jury.",
+                "Fortson's family, represented by attorney Ben Crump, has filed a federal civil rights suit "
+                "against Duran, former Sheriff Eric Aden and others, according to La Nación and FOX 5 "
+                "Atlanta (Task & Purpose said the family intended to file one)."],
+         unknown=["The exact origin of the call that brought Duran to Fortson's door: sources describe it "
+                  "variously as a domestic-disturbance report that proved false, a noise complaint, and a "
+                  "neighbor's complaint.",
+                  "The jury's reasoning, the length of its deliberations and its vote are not reported in the "
+                  "sources reviewed.",
+                  "The outcome of the family's federal civil rights suit is not reported in the sources "
+                  "reviewed."],
+         unanswered=["Who made the report that sent a deputy to the apartment of a man who was alone and on "
+                     "the phone, and why was it never shown to be true?",
+                     "If the sheriff's office concluded Duran's life was not in danger and his decision was "
+                     "not objectively reasonable, why did a jury still find no criminal liability?",
+                     "What accountability, beyond Duran's firing, will the sheriff's office and the county face "
+                     "for the shooting?"],
+         extraSources=[src("FOX 5 Atlanta — “Ex-deputy acquitted in killing of airman Roger Fortson”",
+                            "https://fox5atlanta.com/news/ex-deputy-acquitted-killing-airman-roger-fortson", True),
+                        src("Good Morning America — “Former sheriff's deputy Eddie Duran found not guilty of manslaughter”",
+                            "https://www.goodmorningamerica.com/news/story/former-sheriffs-deputy-eddie-duran-found-not-guilty-manslaughter-136930927", True),
+                        src("Task & Purpose — “Florida deputy acquitted in trial over shooting of Air Force special ops airman”",
+                            "https://taskandpurpose.com/news/roger-fortson-duran-deputy-acquitted/", True),
+                        src("La Nación (AP) — “Jury acquits fired Florida sheriff's deputy in killing of Black U.S. Air Force airman Roger Fortson”",
+                            "https://www.lanacion.com.ar/usa/jury-acquits-fired-florida-sheriffs-deputy-in-killing-of-black-us-airforce-airman-roger-fortson-nid02102026/", True)]),
+
+    dict(id="timothy-russell", caseNumber="281", name="Timothy Russell",
+         status="unresolved", caseType="homicide", year=2012, age=43, gender="male",
+         city="Cleveland", county="Cuyahoga", state="OH", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Timothy Russell, 43, a Black man, and Malissa Williams, 30, a Black woman (see the separate "
+                 "entry for Malissa Williams), were killed on November 29, 2012, when 13 Cleveland police "
+                 "officers fired 137 shots into their car at the end of a roughly 22-mile chase involving 62 "
+                 "police vehicles. The chase began after Russell's car backfired near police headquarters and "
+                 "was mistaken for gunfire. Russell was struck 23 times. Only one officer, Michael Brelo, "
+                 "who fired 49 shots including 15 while standing on the car's hood, was charged with "
+                 "voluntary manslaughter; in May 2015 a judge acquitted him, finding prosecutors could not "
+                 "prove his shots, rather than others', caused the deaths. No one has been convicted in "
+                 "Russell's death.",
+         known=["The shooting and the prosecutions, per reporting by NPR, the Associated Press (via FOX 11), "
+                "and WKYC and News 5 Cleveland on the supervisors' cases.",
+                "On November 29, 2012, a pursuit that reached about 100 mph and involved 62 marked and "
+                "unmarked cars ended with 13 officers firing 137 shots at Russell's 1979 Chevrolet Malibu; "
+                "Russell was hit 23 times and Williams 24 times.",
+                "The pursuit began when the car backfired while passing police headquarters; the report that "
+                "the occupants had fired from the car was wrong, per NPR.",
+                "AP described Russell and Williams as Black and said both were homeless and struggling with "
+                "mental illness and drug addiction.",
+                "Officer Michael Brelo, who is white, fired 49 shots, 15 of them while standing on the hood "
+                "of the car after it had stopped, over a span of about seven and a half seconds.",
+                "Brelo was the only officer charged in the shooting, with two counts of voluntary "
+                "manslaughter. On May 23, 2015, Cuyahoga County Common Pleas Judge John P. O'Donnell found "
+                "him not guilty in a bench trial, saying the state could not prove beyond a reasonable doubt "
+                "that Brelo's shots, and not those of the other officers, caused the deaths.",
+                "Five police supervisors were separately charged with misdemeanor dereliction of duty for "
+                "failing to control the chase. Cuyahoga County later dropped its case and East Cleveland "
+                "brought its own charges; Sgt. Patricia Coleman was found not guilty by an East Cleveland "
+                "jury in July 2019, and WKYC reported that charges against three others were dropped.",
+                "The U.S. Department of Justice later found a pattern of excessive force by Cleveland "
+                "police. The mayor said the other officers would face internal discipline."],
+         unknown=["Which officer's shots caused each fatal wound was never established, which is what "
+                  "the judge cited in acquitting Brelo.",
+                  "The outcome for the last supervisor still charged in East Cleveland, Sgt. Randolph "
+                  "Dailey (spelled “Daley” in one report), is not stated in the sources reviewed.",
+                  "The ages of the victims come from the AP account; NPR's report did not give them."],
+         unanswered=["If 13 officers fired and only one was charged, why was no other officer held "
+                     "criminally accountable for a barrage that NPR described as being fired at unarmed "
+                     "suspects?",
+                     "Why did a false report of gunfire set off a 22-mile chase involving 62 vehicles that "
+                     "ended with 137 shots?",
+                     "Why did the only criminal accountability sought beyond Brelo end in misdemeanor "
+                     "dereliction charges against supervisors that produced no conviction?"],
+         extraSources=[src("NPR — “Cleveland Officer Not Guilty In Fatal Shooting Of Unarmed Suspects”",
+                            "https://www.npr.org/sections/thetwo-way/2015/05/23/409003419/cleveland-officer-not-guilty-in-fatal-shooting-of-unarmed-suspects", True),
+                        src("Associated Press via FOX 11 — “Ohio patrolman acquitted in 2 deaths amid 137-shot barrage”",
+                            "https://fox11online.com/news/nation-world/ohio-patrolman-acquitted-in-2-deaths-amid-137-shot-barrage", True),
+                        src("Ideastream — “Judge dismisses charges against 5 Cleveland police supervisors”",
+                            "https://www.ideastream.org/2015-07-25/judge-dismisses-charges-against-5-cleveland-police-supervisors", True),
+                        src("WKYC — “Cleveland police supervisor found not guilty in connection with 137 shots case”",
+                            "https://wkyc.com/article/news/local/cleveland/cleveland-police-supervisor-found-not-guilty-in-connection-with-137-shots-case/95-963edbc0-d790-47a5-9680-74f66a5aa218", True),
+                        src("News 5 Cleveland — “Not guilty verdict reached in the 137 shots fired case”",
+                            "https://www.news5cleveland.com/news/137-shots/not-guilty-verdict-reached-in-the-137-shots-fired-case", True)]),
+
+    dict(id="malissa-williams", caseNumber="282", name="Malissa Williams",
+         status="unresolved", caseType="homicide", year=2012, age=30, gender="female",
+         city="Cleveland", county="Cuyahoga", state="OH", caseSeries=None,
+         dateAdded="2026-10-07",
+         summary="Malissa Williams, 30, a Black woman, was killed with Timothy Russell, 43 (see the separate "
+                 "entry for Timothy Russell), on November 29, 2012, when 13 Cleveland police officers fired 137 "
+                 "shots into their car at the end of a roughly 22-mile chase that began after the car "
+                 "backfired near police headquarters. Williams was struck 24 times. Only Officer Michael Brelo "
+                 "was charged with voluntary manslaughter; in May 2015 a judge found him not guilty, saying "
+                 "prosecutors could not prove his shots caused the deaths. Misdemeanor dereliction charges "
+                 "against police supervisors did not produce a conviction in the sources reviewed. No one has "
+                 "been convicted in Williams's death.",
+         known=["The shooting and the prosecutions, per reporting by NPR, the Associated Press (via FOX 11), "
+                "and WKYC and News 5 Cleveland.",
+                "On November 29, 2012, a pursuit involving 62 police vehicles ended with 13 officers "
+                "firing 137 shots at the Malibu in which Williams was a passenger; she was hit 24 times and "
+                "Russell 23 times. AP spelled her first name “Melissa” once; NPR and most reports "
+                "spell it “Malissa.”",
+                "AP described Williams and Russell as Black and said both were homeless and struggling with "
+                "mental illness and drug addiction.",
+                "Officer Michael Brelo fired 49 of the shots, 15 from the hood of the car, and was the only "
+                "officer charged. On May 23, 2015, Judge John P. O'Donnell acquitted him of two counts of "
+                "voluntary manslaughter, finding the state could not prove his shots, rather than others', "
+                "caused the deaths.",
+                "Five supervisors were charged with misdemeanor dereliction of duty; Cuyahoga County dropped "
+                "its case, East Cleveland refiled, and Sgt. Patricia Coleman was found not guilty by an East "
+                "Cleveland jury in July 2019, per News 5 Cleveland.",
+                "The U.S. Department of Justice found a pattern of excessive force by Cleveland police after "
+                "an 18-month civil rights investigation."],
+         unknown=["Which officers' shots struck Williams fatally was never established in court.",
+                  "The outcome for the last supervisor still charged, Sgt. Randolph Dailey, is not stated "
+                  "in the sources reviewed.",
+                  "The ages of the victims come from the AP account; NPR's report did not give them."],
+         unanswered=["Why was Brelo the only one of 13 officers who fired to face criminal charges?",
+                     "Why did a pursuit begun over a backfire mistaken for gunfire involve 62 vehicles and "
+                     "end in 137 shots?",
+                     "What accountability followed for the supervisors who were charged with failing to "
+                     "control the chase?"],
+         extraSources=[src("NPR — “Cleveland Officer Not Guilty In Fatal Shooting Of Unarmed Suspects”",
+                            "https://www.npr.org/sections/thetwo-way/2015/05/23/409003419/cleveland-officer-not-guilty-in-fatal-shooting-of-unarmed-suspects", True),
+                        src("Associated Press via FOX 11 — “Ohio patrolman acquitted in 2 deaths amid 137-shot barrage”",
+                            "https://fox11online.com/news/nation-world/ohio-patrolman-acquitted-in-2-deaths-amid-137-shot-barrage", True),
+                        src("Ideastream — “Judge dismisses charges against 5 Cleveland police supervisors”",
+                            "https://www.ideastream.org/2015-07-25/judge-dismisses-charges-against-5-cleveland-police-supervisors", True),
+                        src("News 5 Cleveland — “Not guilty verdict reached in the 137 shots fired case”",
+                            "https://www.news5cleveland.com/news/137-shots/not-guilty-verdict-reached-in-the-137-shots-fired-case", True)]),
 ]
 
 
@@ -12963,6 +13713,11 @@ def profile_panel(c):
     <div class="pp-row"><span class="label">Location</span><span class="value">{location_str(c)}</span></div>
     <div class="pp-row"><span class="label">Case Type</span><span class="value">{case_type}</span></div>
     {series_row}
+  </div>
+  <div class="pp-notes story-panel" id="visual-story-panel">
+    <div class="pp-notes-head">Visual Story</div>
+    <a href="{rel(1)}social/story/{c['id']}.png" target="_blank" rel="noopener"><img class="story-card-img" src="{rel(1)}social/story/{c['id']}.png" alt="Illustrated summary card for {html.escape(c['name'])}: the case facts laid out as comic-style panels" loading="lazy" width="1408" height="768"></a>
+    <p class="pp-notes-hint">The images are symbolic illustrations meant only to give a visual sense of what happened. They are not depictions of the real people or events. The facts on the card come from this case file and its sources.</p>
   </div>
   <div class="pp-notes" id="research-checklist-panel">
     <div class="pp-notes-head">Research Checklist</div>
@@ -13936,6 +14691,42 @@ def build_terms():
 # first. `case_id` links the entry to that case's file when applicable.
 # ---------------------------------------------------------------------------
 CORRECTIONS = [
+    dict(date="2026-10-07", case_id="timothy-russell",
+         text="New case added to the archive: Timothy Russell (East Cleveland, Ohio, 2012), sourced from NPR, "
+              "the Associated Press, Ideastream, WKYC, and News 5 Cleveland."),
+    dict(date="2026-10-07", case_id="malissa-williams",
+         text="New case added to the archive: Malissa Williams (East Cleveland, Ohio, 2012), sourced from NPR, "
+              "the Associated Press, Ideastream, and News 5 Cleveland."),
+    dict(date="2026-10-07", case_id="roger-fortson",
+         text="New case added to the archive: Roger Fortson (Fort Walton Beach, Florida, 2024), sourced from "
+              "FOX 5 Atlanta, Good Morning America, Task & Purpose, and La Nación (AP)."),
+    dict(date="2026-10-07", case_id="kimani-gray",
+         text="New case added to the archive: Kimani Gray (Brooklyn, New York, 2013), sourced from CBS New "
+              "York, the New York Amsterdam News, NBC News, and Brooklyn College Journalism."),
+    dict(date="2026-10-07", case_id="ramarley-graham",
+         text="New case added to the archive: Ramarley Graham (Bronx, New York, 2012), sourced from ABC7 New "
+              "York and CBS New York."),
+    dict(date="2026-10-07", case_id="rumain-brisbon",
+         text="New case added to the archive: Rumain Brisbon (Phoenix, Arizona, 2014), sourced from ABC News, "
+              "Phoenix New Times, KJZZ, and NBC News."),
+    dict(date="2026-10-07", case_id="korryn-gaines",
+         text="New case added to the archive: Korryn Gaines (Randallstown, Maryland, 2016), sourced from "
+              "Time, the ACLU of Maryland, WMAR, the Baltimore Banner, and the U.S. Supreme Court docket."),
+    dict(date="2026-10-07", case_id="tony-robinson",
+         text="New case added to the archive: Tony Robinson Jr. (Madison, Wisconsin, 2015), sourced from "
+              "the Cap Times, Channel 3000, Isthmus, and CNN."),
+    dict(date="2026-10-05", case_id="tanisha-anderson",
+         text="New case added to the archive: Tanisha Anderson (Cleveland, Ohio, 2014), sourced from "
+              "Ideastream Public Media, Mother Jones, Cleveland Scene, and the Associated Press (via WCBE)."),
+    dict(date="2026-10-05", case_id="danny-ray-thomas",
+         text="New case added to the archive: Danny Ray Thomas (Houston, Texas, 2018), sourced from the "
+              "Houston Chronicle, ABC13, and Houston Public Media."),
+    dict(date="2026-10-05", case_id="pamela-turner",
+         text="New case added to the archive: Pamela Turner (Baytown, Texas, 2019), sourced from "
+              "Click2Houston, Houston Public Media, and Al Jazeera."),
+    dict(date="2026-09-30", case_id="jabari-peoples",
+         text="New case added to the archive: Jabari Latrell Peoples (Homewood, Alabama, 2025), sourced "
+              "from the Associated Press, WVTM13, and the Birmingham Times."),
     dict(date="2026-09-30", case_id="johnny-hollman",
          text="New case added to the archive: Deacon Johnny Hollman Sr. (Atlanta, Georgia, 2023), sourced "
               "from CBS News, Fox 5 Atlanta, and Black Star News."),
