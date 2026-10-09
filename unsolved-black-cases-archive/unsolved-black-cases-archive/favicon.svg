@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#08090b"/>
+  <rect x="4" y="4" width="24" height="24" rx="3" fill="rgba(179,32,47,0.12)" stroke="#d43d4c" stroke-width="2"/>
+  <text x="16" y="21" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="10" font-weight="700"
+        fill="#ece9e4" text-anchor="middle">UBCA</text>
+</svg>

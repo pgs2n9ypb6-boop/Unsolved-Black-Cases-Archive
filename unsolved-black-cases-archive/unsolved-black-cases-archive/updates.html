@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corrections &amp; Updates · UBCA</title>
+<meta name="description" content="A dated public record of substantive corrections made to case files.">
+<link rel="canonical" href="https://www.unsolvedblackcases.com/updates.html">
+<link rel="alternate" type="application/rss+xml" title="UNSOLVED BLACK CASES ARCHIVE — Corrections &amp; Updates" href="https://www.unsolvedblackcases.com/feed.xml">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UBCA">
+<meta property="og:url" content="https://www.unsolvedblackcases.com/updates.html">
+<meta property="og:title" content="Corrections &amp; Updates · UBCA">
+<meta property="og:description" content="A dated public record of substantive corrections made to case files.">
+<meta property="og:image" content="https://www.unsolvedblackcases.com/og/updates.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Corrections &amp; Updates · UBCA">
+<meta name="twitter:description" content="A dated public record of substantive corrections made to case files.">
+<meta name="twitter:image" content="https://www.unsolvedblackcases.com/og/updates.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="top-header">
+  <div class="th-left">
+    <button class="th-btn th-menu-btn" data-menu-toggle aria-expanded="false" aria-controls="case-files-panel">≡ FILES</button>
+    <a class="th-logo" href="index.html">
+      <span class="th-monogram" aria-hidden="true">UBCA</span>
+      <span class="th-name">UNSOLVED BLACK CASES ARCHIVE<small>Case Research System</small></span>
+    </a>
+  </div>
+  <div class="th-center"><span class="dot" aria-hidden="true"></span> ARCHIVE ONLINE</div>
+  <nav class="th-right" aria-label="Utility">
+    <button class="th-btn" data-search-open>SEARCH</button>
+    <a class="th-btn hide-sm" href="cases/index.html">CASE INDEX</a>
+    <a class="th-btn hide-sm" href="about.html">ABOUT</a>
+  </nav>
+</header>
+<div class="search-overlay" role="dialog" aria-modal="true" aria-label="Search archive">
+  <div class="search-modal">
+    <label class="visually-hidden" for="global-search-input">Search victims, locations, or case details</label>
+    <input type="search" id="global-search-input" placeholder="Search victims, locations, or case details&hellip;">
+    <div class="search-results"></div>
+  </div>
+</div>
+<div class="records-overlay" role="dialog" aria-modal="true" aria-label="Public records request generator">
+  <div class="records-modal">
+    <div class="records-modal-head">
+      <span class="label">Public Records Request Generator</span>
+      <button type="button" class="records-close" data-records-close aria-label="Close">&times;</button>
+    </div>
+    <div class="records-modal-body">
+      <p class="records-intro">Every unreleased body camera clip, sealed grand jury summary, and unpublished internal
+      review in this archive started as something a records custodian could have handed over. This generates a
+      request letter you can send yourself &mdash; edit it, copy it, or download it as a text file. This is a
+      starting template, not legal advice; confirm your state's current deadlines and any fees before sending.</p>
+      <div class="records-field" data-records-case-field>
+        <label for="records-case-select">Case</label>
+        <select id="records-case-select"></select>
+      </div>
+      <div class="records-field">
+        <label>Who to contact <span class="records-optional">(these are search links, not a stored directory &mdash; agency contacts change, so this always points you to current results instead of a number that could be stale or wrong)</span></label>
+        <ul class="records-contact-list" data-records-contact-list></ul>
+      </div>
+      <div class="records-field-row">
+        <div class="records-field">
+          <label for="records-your-name">Your name</label>
+          <input type="text" id="records-your-name" placeholder="Jane Researcher">
+        </div>
+        <div class="records-field">
+          <label for="records-your-email">Your email</label>
+          <input type="email" id="records-your-email" placeholder="[email protected]">
+        </div>
+      </div>
+      <div class="records-field">
+        <label for="records-your-address">Your mailing address <span class="records-optional">(optional &mdash; some agencies require one)</span></label>
+        <input type="text" id="records-your-address" placeholder="123 Main St, City, State ZIP">
+      </div>
+      <div class="records-field">
+        <label for="records-letter-text">Generated letter <span class="records-optional">(edit freely before sending)</span></label>
+        <textarea id="records-letter-text" rows="16"></textarea>
+      </div>
+      <div class="records-actions">
+        <button type="button" class="records-btn primary" data-records-copy>Copy to Clipboard</button>
+        <button type="button" class="records-btn" data-records-download>Download as .txt</button>
+      </div>
+      <p class="records-copied" data-records-copied hidden>Copied.</p>
+    </div>
+  </div>
+</div>
+<main id="main" class="doc-shell">
+  <div class="doc-header"><span class="label">Accountability</span><h1>Corrections & Updates</h1></div>
+  <div class="doc-body">
+    <p>UNSOLVED BLACK CASES ARCHIVE corrects case files when new sourcing, official records, or documented errors
+    come to light. This page is a dated, public record of substantive corrections and additions — not
+    routine copyediting, but changes that affect what a reader would understand about a case: a corrected
+    date, a status update, a name added or removed, a source verified. Nothing is corrected quietly.</p>
+    <p>See <a href="research.html">How We Research</a> for our sourcing standards, or
+    <a href="submit.html">Submit a Tip</a> to flag something that needs review.</p>
+    <p><a href="feed.xml">📡 Subscribe via RSS</a> — follow new cases and corrections in a feed
+    reader without needing to check back here yourself.</p>
+    <h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-10-07</h2><ul><li><a href="cases/timothy-russell.html">Case #281 — Timothy Russell</a>: New case added to the archive: Timothy Russell (East Cleveland, Ohio, 2012), sourced from NPR, the Associated Press, Ideastream, WKYC, and News 5 Cleveland.</li>
+<li><a href="cases/malissa-williams.html">Case #282 — Malissa Williams</a>: New case added to the archive: Malissa Williams (East Cleveland, Ohio, 2012), sourced from NPR, the Associated Press, Ideastream, and News 5 Cleveland.</li>
+<li><a href="cases/roger-fortson.html">Case #280 — Roger Fortson</a>: New case added to the archive: Roger Fortson (Fort Walton Beach, Florida, 2024), sourced from FOX 5 Atlanta, Good Morning America, Task & Purpose, and La Nación (AP).</li>
+<li><a href="cases/kimani-gray.html">Case #279 — Kimani Gray</a>: New case added to the archive: Kimani Gray (Brooklyn, New York, 2013), sourced from CBS New York, the New York Amsterdam News, NBC News, and Brooklyn College Journalism.</li>
+<li><a href="cases/ramarley-graham.html">Case #278 — Ramarley Graham</a>: New case added to the archive: Ramarley Graham (Bronx, New York, 2012), sourced from ABC7 New York and CBS New York.</li>
+<li><a href="cases/rumain-brisbon.html">Case #277 — Rumain Brisbon</a>: New case added to the archive: Rumain Brisbon (Phoenix, Arizona, 2014), sourced from ABC News, Phoenix New Times, KJZZ, and NBC News.</li>
+<li><a href="cases/korryn-gaines.html">Case #276 — Korryn Gaines</a>: New case added to the archive: Korryn Gaines (Randallstown, Maryland, 2016), sourced from Time, the ACLU of Maryland, WMAR, the Baltimore Banner, and the U.S. Supreme Court docket.</li>
+<li><a href="cases/tony-robinson.html">Case #275 — Tony Robinson Jr.</a>: New case added to the archive: Tony Robinson Jr. (Madison, Wisconsin, 2015), sourced from the Cap Times, Channel 3000, Isthmus, and CNN.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-10-05</h2><ul><li><a href="cases/tanisha-anderson.html">Case #274 — Tanisha Anderson</a>: New case added to the archive: Tanisha Anderson (Cleveland, Ohio, 2014), sourced from Ideastream Public Media, Mother Jones, Cleveland Scene, and the Associated Press (via WCBE).</li>
+<li><a href="cases/danny-ray-thomas.html">Case #273 — Danny Ray Thomas</a>: New case added to the archive: Danny Ray Thomas (Houston, Texas, 2018), sourced from the Houston Chronicle, ABC13, and Houston Public Media.</li>
+<li><a href="cases/pamela-turner.html">Case #272 — Pamela Turner</a>: New case added to the archive: Pamela Turner (Baytown, Texas, 2019), sourced from Click2Houston, Houston Public Media, and Al Jazeera.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-30</h2><ul><li><a href="cases/jabari-peoples.html">Case #271 — Jabari Latrell Peoples</a>: New case added to the archive: Jabari Latrell Peoples (Homewood, Alabama, 2025), sourced from the Associated Press, WVTM13, and the Birmingham Times.</li>
+<li><a href="cases/johnny-hollman.html">Case #270 — Johnny Hollman Sr.</a>: New case added to the archive: Deacon Johnny Hollman Sr. (Atlanta, Georgia, 2023), sourced from CBS News, Fox 5 Atlanta, and Black Star News.</li>
+<li><a href="cases/randy-martin.html">Case #269 — Randy Martin</a>: New case added to the archive: Randy Martin (Galveston, Texas, 2026), sourced from Atlanta Black Star, Houston Public Media, and The Galveston County Daily News.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-25</h2><ul><li><a href="cases/vincent-belmonte.html">Case #268 — Vincent Belmonte</a>: New case added to the archive: Vincent Belmonte (East Cleveland, Ohio, 2021), sourced from Ideastream Public Media, WOIO (Cleveland 19 News), and The Marshall Project.</li>
+<li><a href="cases/alvin-cole.html">Case #267 — Alvin Cole</a>: New case added to the archive: Alvin Cole (Wauwatosa, Wisconsin, 2020), sourced from the Wisconsin Examiner, CBS News, and Hoodline.</li>
+<li><a href="cases/gregory-hill-jr.html">Case #266 — Gregory Hill Jr.</a>: New case added to the archive: Gregory Hill Jr. (Fort Pierce, Florida, 2014), sourced from CBC News, The Washington Informer, and Global News.</li>
+<li><a href="cases/jamal-sutherland.html">Case #265 — Jamal Sutherland</a>: New case added to the archive: Jamal Sutherland (North Charleston, South Carolina, 2021), sourced from The Post and Courier, NBC News, and ABC News.</li>
+<li><a href="cases/marquise-jones.html">Case #264 — Marquise Jones</a>: New case added to the archive: Marquise Jones (San Antonio, Texas, 2014), sourced from the San Antonio Report and KSAT.</li>
+<li><a href="cases/kevin-matthews.html">Case #263 — Kevin Matthews</a>: New case added to the archive: Kevin Matthews (Detroit, Michigan, 2015), sourced from the Arab American News, Fox 2 Detroit, and WXYZ-TV Detroit.</li>
+<li><a href="cases/bernard-monroe.html">Case #262 — Bernard Monroe</a>: New case added to the archive: Bernard Monroe Sr. (Homer, Louisiana, 2009), sourced from the Southern Poverty Law Center, NBC News, and Fox News.</li>
+<li><a href="cases/calvin-toney.html">Case #261 — Calvin Toney</a>: New case added to the archive: Calvin Toney (Baton Rouge, Louisiana, 2017), sourced from The Appeal, The Advocate (Baton Rouge), and WBRZ.</li>
+<li><a href="cases/jaquyn-light.html">Case #260 — Jaquyn O&#x27;Neill Light</a>: New case added to the archive: Jaquyn O'Neill Light (Graham, North Carolina, 2020), sourced from FOX8 WGHP and the Alamance News.</li>
+<li><a href="cases/maurice-gordon.html">Case #259 — Maurice Gordon</a>: New case added to the archive: Maurice Gordon (Bass River, New Jersey, 2020), whose death occurred two days before George Floyd's murder. Sourced from NBC News, Gothamist, and Newsweek.</li>
+<li><a href="cases/jamarion-robinson.html">Case #258 — Jamarion Robinson</a>: New case added to the archive: Jamarion Robinson (East Point, Georgia, 2016), sourced from Wikipedia's citation trail, Courthouse News Service, and The Atlanta Journal-Constitution's coverage of the case's 2026 dismissal.</li>
+<li><a href="cases/mubarak-soulemane.html">Case #257 — Mubarak Soulemane</a>: New case added to the archive: Mubarak Soulemane (West Haven, Connecticut, 2020), sourced from the Associated Press, CT Insider, and CBS News.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-24</h2><ul><li><a href="cases/millbrook-twins.html">Case #132 — Dannette &amp; Jeannette Millbrook</a>: Case file substantially updated: added the investigated connection between the twins' disappearance and convicted serial killer Joseph Patrick Washington, who had ties to the girls' father, and a DNA comparison against unidentified remains found in Louisiana in 1993 that was ongoing as of a January 2026 report. Also added a verified NamUs case record.</li>
+<li><a href="cases/barbara-dreher.html">Case #131 — Barbara Jean Dreher</a>: Case file updated: confirmed the 2018 skeletal remains examined for a possible DNA match to Barbara Dreher were identified that same year as three unrelated women (Jewel Marquita King, Verdell Jefferson, and Dorothy Jean Butts) who disappeared from the same neighborhood in 2006 — a separate case, ruling out any connection to Dreher. Also added a documented detail about the man found driving her car, and a verified NamUs case record.</li>
+<li><a href="cases/brown-family.html">Case #128 — Carolyn, Sheketah, Barry &amp; Brandon Brown</a>: Classification correction: Carolyn, Sheketah, Barry & Brandon Brown was reclassified from Unsolved to Unresolved — No Conviction. A jury did in fact reach a verdict — not guilty by reason of insanity — in the deaths of Carolyn and Sheketah specifically, which is a genuine trial outcome distinct from Barry and Brandon's deaths, for which no charges were ever filed. The underlying facts are unchanged: no family member has ever been found, and no one has ever been convicted.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-22</h2><ul><li><a href="cases/dante-kittrell.html">Case #256 — Dante Kittrell</a>: New case added to the archive: Dante Kittrell (South Bend, Indiana, 2022), sourced from WNDU, ABC57, and WVPE (NPR Michiana).</li>
+<li><a href="cases/bobby-james-brown.html">Case #255 — Bobby James Brown</a>: New case added to the archive: Bobby James Brown (Jacksonville, Florida, 2022), sourced from Action News Jax and The Florida Times-Union.</li>
+<li><a href="cases/terrance-franklin.html">Case #254 — Terrance Franklin</a>: New case added to the archive: Terrance Franklin (Minneapolis, Minnesota, 2013), sourced from TIME magazine, MPR News, and CBS News Minnesota.</li>
+<li><a href="cases/ariane-mccree.html">Case #253 — Ariane McCree</a>: New case added to the archive: Ariane McCree (Chester, South Carolina, 2019), sourced from the South Carolina Attorney General's Office, The Post and Courier, and WCNC Charlotte.</li>
+<li><a href="cases/pitts-mcfarland-marshall.html">Case #252 — Albert Pitts Jr., David Lee Pitts, Earnest McFarland &amp; Alfred “Monk” Marshall</a>: New case added to the archive: Albert Pitts Jr., David Lee Pitts, Earnest McFarland & Alfred “Monk” Marshall (Monroe, Louisiana, 1960), whose deaths were investigated in depth by the LSU Cold Case Project in reporting recognized as a Goldsmith Prize for Investigative Reporting semifinalist.</li>
+<li><a href="cases/ed-johnson.html">Case #251 — Ed Johnson</a>: New case added to the archive: Ed Johnson (Chattanooga, Tennessee, 1906), whose lynching led to the only criminal trial ever held by the U.S. Supreme Court itself. Sourced from the Supreme Court Historical Society, the National Endowment for the Humanities, and the Friends of the Ed Johnson Memorial.</li>
+<li><a href="cases/fanta-bility.html">Case #250 — Fanta Bility</a>: New case added to the archive: Fanta Bility (Sharon Hill, Pennsylvania, 2021), an 8-year-old killed by police gunfire, sourced from The Philadelphia Inquirer and WHYY.</li>
+<li><a href="cases/desman-laduke.html">Case #249 — Desman LaDuke</a>: New case added to the archive: Desman LaDuke (Nicholasville, Kentucky, 2022), sourced from the AP (via Register-Herald), LEX 18, and The Black Wall Street Times.</li>
+<li><a href="cases/bennie-edwards.html">Case #248 — Bennie Edwards</a>: New case added to the archive: Bennie Edwards (Oklahoma City, Oklahoma, 2020), sourced from ABC News, KGOU, and NonDoc.</li>
+<li><a href="cases/jordan-neely.html">Case #247 — Jordan Neely</a>: New case added to the archive: Jordan Neely (New York, New York, 2023). Sourced from PBS News, CNN, and Al Jazeera's coverage of Daniel Penny's December 2024 trial and acquittal.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-17</h2><ul><li><a href="cases/patrick-warren-sr.html">Case #246 — Patrick Warren Sr.</a>: New case added to the archive: Patrick Warren Sr. (Killeen, Texas, 2021), sourced from KWTX, Law & Crime, and KXXV.</li>
+<li><a href="cases/paul-oneal.html">Case #245 — Paul O&#x27;Neal</a>: New case added to the archive: Paul O'Neal (Chicago, Illinois, 2016), sourced from the Chicago Tribune and CBS News Chicago.</li>
+<li><a href="cases/jaheim-mcmillan.html">Case #244 — Jaheim McMillan</a>: New case added to the archive: Jaheim McMillan (Gulfport, Mississippi, 2022), sourced from the Mississippi Free Press, WLOX, and Newsweek.</li>
+<li><a href="cases/xzavier-hill.html">Case #243 — Xzavier Hill</a>: New case added to the archive: Xzavier Hill (Goochland County, Virginia, 2021), sourced from Newsweek, WRIC (ABC 8News), and VPM.</li>
+<li><a href="cases/tyrea-pryor.html">Case #242 — Tyrea Pryor</a>: New case added to the archive: Tyrea Pryor (Independence, Missouri, 2022), sourced from KCUR, NBC News, and the Kansas City Star (via AOL News).</li>
+<li><a href="cases/donnie-sanders.html">Case #241 — Donnie Sanders</a>: New case added to the archive: Donnie Sanders (Kansas City, Missouri, 2020), whose case is connected to a later, well-documented pattern of the same officer going on to kill two more people. Sourced from CNN, KCUR, and NBC News.</li>
+<li><a href="cases/damian-daniels.html">Case #240 — Damian Daniels</a>: New case added to the archive: Damian Daniels (San Antonio, Texas, 2020), sourced from KSAT, the San Antonio Report, and Newsweek.</li>
+<li><a href="cases/kevin-peterson-jr.html">Case #239 — Kevin Peterson Jr.</a>: New case added to the archive: Kevin Peterson Jr. (Vancouver, Washington, 2020), sourced from OPB, KATU, and FOX 13 Seattle.</li>
+<li><a href="cases/roshad-mcintosh.html">Case #238 — Roshad McIntosh</a>: New case added to the archive: Roshad McIntosh (Chicago, Illinois, 2014), sourced from the Chicago Sun-Times, CNN, and the People's Law Office's press release on the family's federal lawsuit.</li>
+<li><a href="cases/frank-tyson.html">Case #237 — Frank Tyson</a>: New case added to the archive: Frank Tyson (Canton, Ohio, 2024), sourced from CBS News, Ideastream Public Media, and Yahoo News/The Repository's coverage of the August 2026 plea deals.</li>
+<li><a href="cases/colfax-massacre.html">Case #236 — The Colfax Massacre</a>: New case added to the archive: The Colfax Massacre (Colfax, Louisiana, 1873), the deadliest single incident of racial violence during Reconstruction, whose resulting Supreme Court case (United States v. Cruikshank) overturned real convictions and curtailed federal civil rights enforcement for decades. Sourced from BlackPast.org, 64 Parishes, and the Supreme Court Historical Society.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-15</h2><ul><li><a href="cases/bunk-richardson.html">Case #235 — Bunk Richardson</a>: New case added to the archive: Bunk Richardson (Gadsden, Alabama, 1906), lynched despite never being charged with any crime. Sourced from the Equal Justice Initiative's own account, AL.com, and The Gadsden Times.</li>
+<li><a href="cases/dexter-reed.html">Case #234 — Dexter Reed</a>: New case added to the archive: Dexter Reed (Chicago, Illinois, 2024). Sourced from WTTW, the Chicago Sun-Times, and Courthouse News Service's coverage of the August 2025 charging decision.</li>
+<li><a href="cases/allen-brooks.html">Case #233 — Allen Brooks</a>: New case added to the archive: Allen Brooks (Dallas, Texas, 1910). Sourced from The New York Times, KERA News, and CBS News Texas.</li>
+<li><a href="cases/mary-and-hayes-turner.html">Case #232 — Mary Turner &amp; Hayes Turner</a>: New case added to the archive: Mary Turner & Hayes Turner (Brooks County, Georgia, 1918), whose deaths directly prompted the 1922 Dyer Anti-Lynching Bill. Sourced from BlackPast.org, the Equal Justice Initiative, and Wikipedia's citation trail.</li>
+<li><a href="cases/james-lanier.html">Case #231 — James Lanier</a>: New case added to the archive: James Lanier (Wallace, North Carolina, 2023), sourced from WITN, FOX8 WGHP, and Emancipate North Carolina.</li>
+<li><a href="cases/darryl-tyree-williams.html">Case #230 — Darryl Tyree Williams</a>: New case added to the archive: Darryl Tyree Williams (Raleigh, North Carolina, 2023), sourced from ABC11 Raleigh-Durham, WRAL, and WUNC's coverage of the December 2025 settlement.</li>
+<li><a href="cases/kemonte-cobbs.html">Case #229 — Kemonte Cobbs</a>: New case added to the archive: Kemonte Cobbs (Gary, Indiana, 2017), sourced from The Times of Northwest Indiana and the Chicago Tribune/Post-Tribune.</li>
+<li><a href="cases/david-jones.html">Case #228 — David Jones</a>: New case added to the archive: David Jones (Philadelphia, Pennsylvania, 2017), sourced from The Philadelphia Inquirer, WHYY, and the City of Philadelphia's Citizens Police Oversight Commission.</li>
+<li><a href="cases/shipp-and-smith.html">Case #227 — Thomas Shipp &amp; Abram Smith</a>: New case added to the archive: Thomas Shipp & Abram Smith (Marion, Indiana, 1930), whose lynching produced the most widely reproduced lynching photograph in American history and directly inspired “Strange Fruit.” Sourced from NPR and the Indiana Historical Bureau's own history blog and America's Black Holocaust Museum.</li>
+<li><a href="cases/ricky-cobb-ii.html">Case #226 — Ricky Cobb II</a>: New case added to the archive: Ricky Cobb II (Minneapolis, Minnesota, 2023), sourced from Wikipedia's citation trail, CBS News Minnesota, and the Star Tribune.</li>
+<li><a href="cases/luke-stewart.html">Case #225 — Luke Stewart</a>: New case added to the archive: Luke Stewart (Euclid, Ohio, 2017), sourced from News 5 Cleveland's coverage of both the grand jury decision and the 2022 civil verdict, and the ACLU of Ohio.</li>
+<li><a href="cases/jalen-randle.html">Case #224 — Jalen Randle</a>: New case added to the archive: Jalen Randle (Houston, Texas, 2022), sourced from Houston Public Media, KHOU 11, and ABC13 Houston.</li>
+<li><a href="cases/daquain-johnson.html">Case #223 — Da&#x27;Quain Johnson</a>: New case added to the archive: Da'Quain Johnson (Grand Rapids, Michigan, 2026), sourced from Wikipedia's citation trail, The Trace, and FOX 17 West Michigan.</li>
+<li>Classification pass: following the correction to Trayvon Martin's case, we reviewed every other case in the archive for the same issue — a genuine criminal trial that reached a final disposition without a conviction, mislabeled simply as “Unsolved.” 28 cases were reclassified to “Unresolved — No Conviction”: Isaiah Nixon, the Orangeburg Massacre (Samuel Hammond, Henry Smith & Delano Middleton), Henry “Dickie” Marrow Jr., Timothy Thomas, James T. Scott, Clinton Melton, Joseph Dumas, Samuel Younge Jr., James Earl Motley, Emmett Till, Amadou Diallo, Sean Bell, Rekia Boyd, Philando Castile, Terence Crutcher, Jonathan Ferrell, Manuel Ellis, Jahi Turner, the Clinton Avenue Five, Anthony Lamar Smith, Ta'Kiya Young, Antwon Rose II, Michael Dean, Tommie McGlothen Jr., Delrawn Small, Yvette Smith, William Green, and Freddie Gray. Four cases that surfaced in this review were deliberately left as “Unsolved” because no genuine criminal trial occurred: Willie Countryman and Maceo Snipes were each cleared only by a coroner's inquest, not a criminal trial; Breonna Taylor's own killing was never charged by any grand jury (a separate officer's federal conviction was for endangering her neighbors, not for her death); and Alteria Woods's actual shooters, three sheriff's deputies, were never charged at all — only her boyfriend was, under a different legal theory, and he was acquitted. In every case above, the underlying facts are unchanged: no one has ever been convicted.</li>
+<li><a href="cases/najee-seabrooks.html">Case #222 — Najee Seabrooks</a>: New case added to the archive: Najee Seabrooks (Paterson, New Jersey, 2023), sourced from the New Jersey Monitor, CNN, and AP/Yahoo News's coverage of the released body camera footage.</li>
+<li><a href="cases/trayvon-martin.html">Case #098 — Trayvon Martin</a>: Classification correction: introduced a new status, “Unresolved — No Conviction,” distinct from “Unsolved.” Trayvon Martin's case was reclassified from Unsolved to this new status, since George Zimmerman was in fact charged and tried, and a jury reached a verdict (acquittal) — unlike the majority of cases in this archive, where no charges were ever filed. The underlying facts are unchanged: the medical examiner's homicide finding stands, and no one has ever been convicted in Martin's death. This correction was prompted by a reader.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-09-08</h2><ul><li><a href="cases/frederick-cox-jr.html">Case #221 — Frederick Cox Jr.</a>: New case added to the archive: Frederick Cox Jr. (High Point, North Carolina, 2020), sourced from WFMY News 2 and FOX8 WGHP's coverage of both the grand jury decision and the 2025 settlement.</li>
+<li><a href="cases/winston-smith-jr.html">Case #220 — Winston Boogie Smith Jr.</a>: New case added to the archive: Winston Boogie Smith Jr. (Minneapolis, Minnesota, 2021), sourced from NPR, NBC News, and the Star Tribune.</li>
+<li><a href="cases/moores-ford-lynchings.html">Case #219 — Roger Malcom, Dorothy Malcom, George Dorsey &amp; Mae Murray Dorsey</a>: New case added to the archive: the Moore's Ford lynchings — Roger Malcom, Dorothy Malcom, George Dorsey & Mae Murray Dorsey (Monroe, Georgia, 1946), known as “the last mass lynching in America.” Sourced from the Southern Poverty Law Center, Wikipedia's citation trail, and NBC News.</li>
+<li><a href="cases/omar-edwards.html">Case #218 — Omar Edwards</a>: New case added to the archive: Omar Edwards (New York, New York, 2009), sourced from NBC News and TheGrio.</li>
+<li><a href="cases/deandre-brunston.html">Case #217 — Deandre Brunston</a>: New case added to the archive: Deandre Brunston (Compton, California, 2003), sourced from Wikipedia's citation trail, the San Francisco Chronicle, and the Fatal Encounters database.</li>
+<li><a href="cases/trey-pringle.html">Case #216 — Trey Pringle</a>: New case added to the archive: Trey Pringle (Seabrook, South Carolina, 2018), sourced from WTOC, WSAV, and FITSNews's coverage of the chokehold allegation.</li>
+<li><a href="cases/jeremy-mcdole.html">Case #215 — Jeremy McDole</a>: New case added to the archive: Jeremy McDole (Wilmington, Delaware, 2015), sourced from Wikipedia's citation trail, 6abc Philadelphia, and CBS News Philadelphia.</li>
+<li><a href="cases/joshua-ruffin.html">Case #214 — Joshua Ruffin</a>: New case added to the archive: Joshua Ruffin (Columbia, South Carolina, 2020), sourced from The Post and Courier, WIS10, and AP/WLOS.</li>
+<li><a href="cases/decynthia-clements.html">Case #213 — DeCynthia Clements</a>: New case added to the archive: DeCynthia Clements (Elgin, Illinois, 2018), sourced from CNN, the Daily Herald, and Romanucci & Blandin's press release on the family's federal lawsuit.</li>
+<li><a href="cases/kenneth-ross-jr.html">Case #212 — Kenneth Ross Jr.</a>: New case added to the archive: Kenneth Ross Jr. (Gardena, California, 2018), sourced from the LA County DA's own Justice System Integrity Division report, ABC7 Los Angeles, and NBC News.</li>
+<li><a href="cases/linus-phillip.html">Case #211 — Linus Phillip</a>: New case added to the archive: Linus Phillip (Largo, Florida, 2018), sourced from the Tampa Bay Times, CBS News, and WFLA.</li>
+<li><a href="cases/omari-cryer.html">Case #210 — Omari Cryer</a>: New case added to the archive: Omari Cryer (Louisville, Kentucky, 2022), sourced from Louisville Public Media, WAVE 3 News, and WHAS11.</li>
+<li><a href="cases/jordell-richardson.html">Case #209 — Jor&#x27;Dell Richardson</a>: New case added to the archive: Jor'Dell Richardson (Aurora, Colorado, 2023), sourced from CPR News, CBS News Colorado, and 9NEWS (KUSA).</li>
+<li><a href="cases/christopher-deandre-mitchell.html">Case #208 — Christopher DeAndre Mitchell</a>: New case added to the archive: Christopher DeAndre Mitchell (Torrance, California, 2018), sourced from the LA County District Attorney's own statement, NBC Los Angeles, and FOX 11 Los Angeles's coverage of the April 2026 dismissal.</li>
+<li><a href="cases/anthony-lowe-jr.html">Case #207 — Anthony Lowe Jr.</a>: New case added to the archive: Anthony Lowe Jr. (Huntington Park, California, 2023), sourced from the Los Angeles County District Attorney's own statement, Police1, and ABC7 Los Angeles.</li>
+<li><a href="cases/william-green.html">Case #206 — William Green</a>: New case added to the archive: William Green (Landover, Maryland, 2020), sourced from The Washington Post, WUSA9, and the AFRO American Newspapers' coverage of the December 2023 acquittal.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-31</h2><ul><li><a href="cases/vincent-truitt.html">Case #205 — Vincent Truitt</a>: New case added to the archive: Vincent Truitt (Marietta, Georgia, 2020), sourced from WSB-TV, 11Alive, and 13WMAZ's coverage of the dismissed federal lawsuit.</li>
+<li><a href="cases/oshae-terry.html">Case #204 — O&#x27;Shae Terry</a>: New case added to the archive: O'Shae Terry (Arlington, Texas, 2018), sourced from KERA News, Reason, and WFAA's coverage of the 2023 deferred-adjudication plea.</li>
+<li><a href="cases/robert-lawrence-white.html">Case #203 — Robert Lawrence White</a>: New case added to the archive: Robert Lawrence White (Silver Spring, Maryland, 2018), sourced from The Washington Post, WTOP News, and CourtListener's record of the dismissed federal lawsuit.</li>
+<li><a href="cases/charly-keunang.html">Case #202 — Charly “Africa” Keunang</a>: New case added to the archive: Charly “Africa” Keunang (Los Angeles, California, 2015), sourced from LAist, CBS Los Angeles, and CBC News.</li>
+<li><a href="cases/yvette-smith.html">Case #201 — Yvette Smith</a>: New case added to the archive: Yvette Smith (Camp Swift, Texas, 2014), sourced from the Austin American-Statesman, KXAN, and Fox 7 Austin.</li>
+<li><a href="cases/delrawn-small.html">Case #200 — Delrawn Small</a>: New case added to the archive, bringing the total to 200 cases: Delrawn Small (Brooklyn, New York, 2016), sourced from ABC7 New York, NBC New York, and the NAACP Legal Defense Fund.</li>
+<li><a href="cases/aaron-bailey.html">Case #199 — Aaron Bailey</a>: New case added to the archive: Aaron Bailey (Indianapolis, Indiana, 2017), sourced from WTHR, Fox 59, and the Indianapolis Recorder.</li>
+<li><a href="cases/sahleem-tindle.html">Case #198 — Sahleem Tindle</a>: New case added to the archive: Sahleem Tindle (Oakland, California, 2018), sourced from the San Francisco Chronicle, East Bay Express, and NBC Bay Area's coverage of the 2020 civil verdict.</li>
+<li><a href="cases/miles-jackson.html">Case #197 — Miles Jackson</a>: New case added to the archive: Miles Jackson (Westerville, Ohio, 2021), sourced from 10TV (WBNS), AP/CBS News Pittsburgh, and the Franklin County Prosecutor's Office's own statement.</li>
+<li><a href="cases/charleena-lyles.html">Case #196 — Charleena Lyles</a>: New case added to the archive: Charleena Lyles (Seattle, Washington, 2017), sourced from The Seattle Times, KIRO 7, and KING 5.</li>
+<li><a href="cases/george-tillman.html">Case #195 — George Tillman III</a>: New case added to the archive: George Tillman III (South Ozone Park, New York, 2016), sourced from QNS, DNAinfo, and Jurimatic's coverage of the 2025 civil verdict.</li>
+<li><a href="cases/thurman-blevins.html">Case #194 — Thurman Blevins</a>: New case added to the archive: Thurman Blevins (Minneapolis, Minnesota, 2018), sourced from the Star Tribune, MPR News, and PBS NewsHour.</li>
+<li><a href="cases/christopher-whitfield.html">Case #193 — Christopher Whitfield</a>: New case added to the archive: Christopher Whitfield (Ethel, Louisiana, 2019), sourced from The Advocate, The Washington Times/AP, and WBRZ.</li>
+<li><a href="cases/willie-tillman.html">Case #192 — Willie Tillman</a>: New case added to the archive: Willie Tillman (Fayetteville, Arkansas, 2016), sourced from the Arkansas Democrat-Gazette and KNWA/FOX24.</li>
+<li><a href="cases/tommie-mcglothen-jr.html">Case #191 — Tommie McGlothen Jr.</a>: New case added to the archive: Tommie McGlothen Jr. (Shreveport, Louisiana, 2020), sourced from KSLA, KTBS, and Yahoo News/AP.</li>
+<li><a href="cases/dejuan-guillory.html">Case #190 — DeJuan Guillory</a>: New case added to the archive: DeJuan Guillory (Mamou, Louisiana, 2017), sourced from CNN, KLFY, and The Advocate.</li>
+<li><a href="cases/alteria-woods.html">Case #189 — Alteria Woods</a>: New case added to the archive: Alteria Woods (Gifford, Florida, 2017), sourced from CBS12, WPTV, and Vero News's coverage of the grand jury and the 2021 trial.</li>
+<li><a href="cases/mickel-lewis-sr.html">Case #188 — Mickel Lewis Sr.</a>: New case added to the archive: Mickel Lewis Sr. (Mojave, California, 2020), sourced from KGET 17 News and the Davis Vanguard's coverage of the 2025 civil verdict.</li>
+<li><a href="cases/deon-kay.html">Case #187 — Deon Kay</a>: New case added to the archive: Deon Kay (Washington, D.C., 2020), sourced from The Washington Post, WUSA9, and The Washington Informer's coverage of the 2026 settlement.</li>
+<li><a href="cases/natasha-mckenna.html">Case #186 — Natasha McKenna</a>: New case added to the archive: Natasha McKenna (Fairfax, Virginia, 2015), a jail in-custody death, sourced from Wikipedia's citation trail, WAMU, and WTOP News.</li>
+<li><a href="cases/jamycheal-mitchell.html">Case #185 — Jamycheal Mitchell</a>: New case added to the archive: Jamycheal Mitchell (Portsmouth, Virginia, 2015), a jail in-custody death, sourced from the ACLU, WAVY, and 13News Now (WVEC).</li>
+<li><a href="cases/marvin-scott-iii.html">Case #184 — Marvin Scott III</a>: New case added to the archive: Marvin Scott III (McKinney, Texas, 2021), a jail in-custody death, sourced from The Texas Tribune, CNN, and CBS News Texas.</li>
+<li><a href="cases/michael-dean.html">Case #183 — Michael Dean</a>: New case added to the archive: Michael Dean (Temple, Texas, 2019), sourced from KWTX and 6 News (KCEN)'s coverage of the 2023 acquittal and the ongoing civil lawsuit.</li>
+<li><a href="cases/byron-williams.html">Case #182 — Byron Williams</a>: New case added to the archive: Byron Williams (Las Vegas, Nevada, 2019), sourced from the Las Vegas Review-Journal, Nevada Current, and Courthouse News Service's coverage of the 2024 civil ruling.</li>
+<li><a href="cases/walter-wallace-jr.html">Case #181 — Walter Wallace Jr.</a>: New case added to the archive: Walter Wallace Jr. (Philadelphia, Pennsylvania, 2020), sourced from The Philadelphia Inquirer's coverage of both his life and the 2021 settlement, and WHYY.</li>
+<li><a href="cases/kajuan-raye.html">Case #180 — Kajuan Raye</a>: New case added to the archive: Kajuan Raye (Chicago, Illinois, 2016), sourced from the Chicago Sun-Times and CBS News Chicago's coverage of the 2020 civil verdict.</li>
+<li><a href="cases/dreasjon-reed.html">Case #179 — Dreasjon “Sean” Reed</a>: New case added to the archive: Dreasjon “Sean” Reed (Indianapolis, Indiana, 2020), sourced from NPR, the Indianapolis Recorder, and TheGrio.</li>
+<li><a href="cases/jamee-johnson.html">Case #178 — Jamee Johnson</a>: New case added to the archive: Jamee Johnson (Jacksonville, Florida, 2019), sourced from News4Jax and First Coast News's coverage of both the family's lawsuit and the $200,000 settlement.</li>
+<li><a href="cases/terrence-sterling.html">Case #177 — Terrence Sterling</a>: New case added to the archive: Terrence Sterling (Washington, D.C., 2016), sourced from The Washington Post's coverage of both the federal declination and the internal MPD review, and WTOP News.</li>
+<li><a href="cases/crooms-and-pierce.html">Case #176 — Angelo Crooms &amp; Sincere Pierce</a>: New case added to the archive: Angelo Crooms & Sincere Pierce (Cocoa, Florida, 2020), sourced from Fox 35 Orlando, Click Orlando (WKMG), and Yahoo News/AP.</li>
+<li><a href="cases/antwon-rose-ii.html">Case #175 — Antwon Rose II</a>: New case added to the archive: Antwon Rose II (East Pittsburgh, Pennsylvania, 2018), sourced from Wikipedia's citation trail, CBS News Pittsburgh, and Pittsburgh's Public Source.</li>
+<li><a href="cases/devon-bailey.html">Case #174 — De&#x27;Von Bailey</a>: New case added to the archive: De'Von Bailey (Colorado Springs, Colorado, 2019), sourced from NBC News, Colorado Public Radio, and 9NEWS Denver's coverage of the 2022 settlement.</li>
+<li><a href="cases/steven-taylor.html">Case #173 — Steven Taylor</a>: New case added to the archive: Steven Taylor (San Leandro, California, 2020), sourced from ABC7 San Francisco, the San Francisco Chronicle, and CBS News San Francisco's coverage of the December 2025 dismissal.</li>
+<li><a href="cases/kayla-moore.html">Case #172 — Kayla Moore</a>: New case added to the archive: Kayla Moore (Berkeley, California, 2013), sourced from KQED, the San Francisco Chronicle, and Courthouse News Service.</li>
+<li><a href="cases/ej-bradford-jr.html">Case #171 — Emantic “E.J.” Bradford Jr.</a>: New case added to the archive: Emantic “E.J.” Bradford Jr. (Hoover, Alabama, 2018), sourced from the Alabama Attorney General's own report, NBC News, and CNN.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-27</h2><ul><li><a href="cases/julian-lewis.html">Case #170 — Julian Lewis</a>: New case added to the archive: Julian Lewis (Sylvania, Georgia, 2020), sourced from Wikipedia's citation trail, WSAV-TV, and AP/Yahoo News's coverage of the federal review.</li>
+<li><a href="cases/osaze-osagie.html">Case #169 — Osaze Osagie</a>: New case added to the archive: Osaze Osagie (State College, Pennsylvania, 2019), sourced from Spotlight PA, WITF, and StateCollege.com's coverage of the dismissed federal lawsuit.</li>
+<li><a href="cases/chinedu-okobi.html">Case #168 — Chinedu Okobi</a>: New case added to the archive: Chinedu Okobi (Millbrae, California, 2018), sourced from KQED, the San Francisco Chronicle, and coverage of the 2023 $4.5 million settlement.</li>
+<li><a href="cases/darius-tarver.html">Case #167 — Darius Tarver</a>: New case added to the archive: Darius Tarver (Denton, Texas, 2020), sourced from The Dallas Morning News, Dallas Observer, and WFAA.</li>
+<li><a href="cases/alonzo-smith.html">Case #166 — Alonzo Smith</a>: New case added to the archive: Alonzo Smith (Washington, D.C., 2015), sourced from the DOJ/U.S. Attorney's Office's official statement, FOX 5 DC, and The Washington Post.</li>
+<li><a href="cases/ronald-greene.html">Case #165 — Ronald Greene</a>: New case added to the archive: Ronald Greene (Monroe, Louisiana, 2019), sourced from CNN's coverage of both the 2024 dropped charges and the plea deal, and CBS News.</li>
+<li><a href="cases/john-neville.html">Case #164 — John Neville</a>: New case added to the archive: John Neville (Winston-Salem, North Carolina, 2019), sourced from NBC News, WFDD, and WFMY News 2's coverage of the charges against the nurse being dropped.</li>
+<li><a href="cases/tyre-king.html">Case #163 — Tyre King</a>: New case added to the archive: Tyre King (Columbus, Ohio, 2016), sourced from CNN, Colorlines, and WOSU Public Media's coverage of the 2023 federal civil verdict.</li>
+<li><a href="cases/jonathan-sanders.html">Case #162 — Jonathan Sanders</a>: New case added to the archive: Jonathan Sanders (Stonewall, Mississippi, 2015), sourced from Wikipedia's citation trail, the Southern Poverty Law Center, and Fox News/AP.</li>
+<li><a href="cases/miles-hall.html">Case #161 — Miles Hall</a>: New case added to the archive: Miles Hall (Walnut Creek, California, 2019), sourced from CNN, KTVU FOX 2, and SFBay.</li>
+<li><a href="cases/kendrec-mcdade.html">Case #160 — Kendrec McDade</a>: New case added to the archive: Kendrec McDade (Pasadena, California, 2012), sourced from NBC News, CBS Los Angeles, and the family's attorney's case summary.</li>
+<li><a href="cases/terrance-kellom.html">Case #159 — Terrance Kellom</a>: New case added to the archive: Terrance Kellom (Detroit, Michigan, 2015), sourced from CBS News, WXYZ Detroit's investigation into the officer's changed testimony, and The Detroit News.</li>
+<li><a href="cases/aura-rosser.html">Case #158 — Aura Rosser</a>: New case added to the archive: Aura Rosser (Ann Arbor, Michigan, 2014), sourced from the ACLU of Michigan, The Michigan Daily, and AAIHS.</li>
+<li><a href="cases/aiyana-stanley-jones.html">Case #157 — Aiyana Stanley-Jones</a>: New case added to the archive: Aiyana Stanley-Jones (Detroit, Michigan, 2010), sourced from The Detroit News, CBS News's coverage of both mistrials, and Reuters.</li>
+<li><a href="cases/andrew-brown-jr.html">Case #156 — Andrew Brown Jr.</a>: New case added to the archive: Andrew Brown Jr. (Elizabeth City, North Carolina, 2021), sourced from NPR, ABC News, and The Washington Post.</li>
+<li><a href="cases/amir-locke.html">Case #155 — Amir Locke</a>: New case added to the archive: Amir Locke (Minneapolis, Minnesota, 2022), sourced from CBS News and Al Jazeera's coverage of both the charging decision and the family's lawsuit.</li>
+<li><a href="cases/rayshard-brooks.html">Case #154 — Rayshard Brooks</a>: New case added to the archive: Rayshard Brooks (Atlanta, Georgia, 2020), sourced from NPR, CNN, and Wikipedia's citation trail.</li>
+<li><a href="cases/patrick-lyoya.html">Case #153 — Patrick Lyoya</a>: New case added to the archive: Patrick Lyoya (Grand Rapids, Michigan, 2022), sourced from Michigan Advance, Wikipedia's citation trail, and WOOD TV8's coverage of the pending civil case.</li>
+<li><a href="cases/takiya-young.html">Case #152 — Ta&#x27;Kiya Young</a>: New case added to the archive: Ta'Kiya Young (Blendon Township, Ohio, 2023), sourced from AP News/NBC News, Wikipedia's citation trail, and The 19th/Capital B's coverage of the November 2025 acquittal.</li>
+<li><a href="cases/jayland-walker.html">Case #151 — Jayland Walker</a>: New case added to the archive: Jayland Walker (Akron, Ohio, 2022), sourced from NPR, CNN, and PBS NewsHour's coverage of the settlement.</li>
+<li><a href="cases/india-kager.html">Case #150 — India Kager</a>: New case added to the archive: India Kager (Virginia Beach, Virginia, 2015), sourced from Amnesty International USA, WTKR, and 13News Now.</li>
+<li><a href="cases/alfred-olango.html">Case #149 — Alfred Olango</a>: New case added to the archive: Alfred Olango (El Cajon, California, 2016), sourced from Wikipedia's citation trail, LAist, and 10News San Diego.</li>
+<li><a href="cases/jason-harrison.html">Case #148 — Jason Harrison</a>: New case added to the archive: Jason Harrison (Dallas, Texas, 2014), sourced from ABC News, CNN, and the Dallas Morning News.</li>
+<li><a href="cases/jamar-clark.html">Case #147 — Jamar Clark</a>: New case added to the archive: Jamar Clark (Minneapolis, Minnesota, 2015), sourced from NBC News, CNN, and BlackPast.org.</li>
+<li><a href="cases/jerame-reid.html">Case #146 — Jerame Reid</a>: New case added to the archive: Jerame Reid (Bridgeton, New Jersey, 2014), sourced from the DOJ's own closing statement, Wikipedia's citation trail, and NBC10 Philadelphia.</li>
+<li><a href="cases/dontre-hamilton.html">Case #145 — Dontre Hamilton</a>: New case added to the archive: Dontre Hamilton (Milwaukee, Wisconsin, 2014), sourced from NBC News's coverage of both the county and federal charging decisions, and Wikipedia's citation trail.</li>
+<li><a href="cases/stephon-watts.html">Case #144 — Stephon Watts</a>: New case added to the archive: Stephon Watts (Calumet City, Illinois, 2012), sourced from NWI Times, the Chicago Reader, and HuffPost Chicago.</li>
+<li><a href="cases/mansur-ball-bey.html">Case #143 — Mansur Ball-Bey</a>: New case added to the archive: Mansur Ball-Bey (St. Louis, Missouri, 2015), sourced from St. Louis Public Radio and KSDK's coverage of both the 2016 charging decision and the 2025 civil verdict.</li>
+<li><a href="cases/ronell-foster.html">Case #142 — Ronell Foster</a>: New case added to the archive: Ronell Foster (Vallejo, California, 2018), sourced from ProPublica, the San Francisco Chronicle, and the Vallejo Sun. Linked in Case Connections to Willie McCoy — same officer, same department.</li>
+<li><a href="cases/marcus-david-peters.html">Case #141 — Marcus-David Peters</a>: New case added to the archive: Marcus-David Peters (Richmond, Virginia, 2018), sourced from PBS NewsHour/AP, Richmond Magazine, and WRIC ABC 8News.</li>
+<li><a href="cases/willie-mccoy.html">Case #140 — Willie McCoy</a>: New case added to the archive: Willie McCoy (Vallejo, California, 2019), sourced from NBC News, KTVU, and The Guardian's coverage of the officer's internal firing.</li>
+<li><a href="cases/legrier-and-jones.html">Case #139 — Quintonio LeGrier &amp; Bettie Jones</a>: New case added to the archive: Quintonio LeGrier & Bettie Jones (Chicago, Illinois, 2015), sourced from NBC Chicago, ABC7 Chicago, and CBS Chicago.</li>
+<li><a href="cases/vonderrit-myers-jr.html">Case #138 — VonDerrit Myers Jr.</a>: New case added to the archive: VonDerrit Myers Jr. (St. Louis, Missouri, 2014), sourced from St. Louis Public Radio, the St. Louis American, and CBS News.</li>
+<li><a href="cases/kajieme-powell.html">Case #137 — Kajieme Powell</a>: New case added to the archive: Kajieme Powell (St. Louis, Missouri, 2014), sourced from St. Louis Public Radio, St. Louis Magazine, and the St. Louis Post-Dispatch.</li>
+<li><a href="cases/christian-taylor.html">Case #136 — Christian Taylor</a>: New case added to the archive: Christian Taylor (Arlington, Texas, 2015), sourced from BlackPast.org, NBC 5 Dallas-Fort Worth, and the National Police Accountability Project.</li>
+<li><a href="cases/anthony-lamar-smith.html">Case #135 — Anthony Lamar Smith</a>: New case added to the archive: Anthony Lamar Smith (St. Louis, Missouri, 2011), sourced from NPR, CBS News, and BlackPast.org.</li>
+<li><a href="cases/clinton-avenue-five.html">Case #134 — The Clinton Avenue Five</a>: New case added to the archive: The Clinton Avenue Five (Newark, New Jersey, 1978), a missing persons case, sourced from Wikipedia's citation trail, CBS News's coverage of the 2011 acquittal, and Local Talk Weekly's coverage of the 2025 civil appeal.</li>
+<li><a href="cases/pshara-jones.html">Case #133 — Pshara Marie Jones</a>: New case added to the archive: Pshara Marie Jones (Claremore, Oklahoma, 2015), a missing persons case, sourced from The Charley Project and a family-maintained case site.</li>
+<li><a href="cases/millbrook-twins.html">Case #132 — Dannette &amp; Jeannette Millbrook</a>: New case added to the archive: Dannette & Jeannette Millbrook (Augusta, Georgia, 1990), a missing persons case, sourced from Wikipedia's citation trail, NBC News/Dateline, and WFXG.</li>
+<li><a href="cases/barbara-dreher.html">Case #131 — Barbara Jean Dreher</a>: New case added to the archive: Barbara Jean Dreher (Washington, D.C., 1984), a missing persons case, sourced from The Washington Post, The Charley Project, and The Deck podcast.</li>
+<li><a href="cases/tasha-wright.html">Case #130 — Tasha Shante Wright</a>: New case added to the archive: Tasha Shante Wright (Dallas, Texas, 1989), a missing persons case, sourced from The Charley Project, Solve the Case, and The Doe Network.</li>
+<li><a href="cases/jalesa-reynolds.html">Case #129 — Jalesa Chantell Reynolds</a>: New case added to the archive: Jalesa Chantell Reynolds (Scotland Neck, North Carolina, 2010), a missing persons case, sourced from The Charley Project.</li>
+<li><a href="cases/brown-family.html">Case #128 — Carolyn, Sheketah, Barry &amp; Brandon Brown</a>: New case added to the archive: Carolyn, Sheketah, Barry & Brandon Brown (Port St. Lucie, Florida, 1985), a missing persons case, sourced from The Charley Project and The Doe Network.</li>
+<li><a href="cases/anwar-green.html">Case #127 — Anwar Green</a>: New case added to the archive: Anwar Green (Newark, New Jersey, 2001), a missing persons case, sourced from The Charley Project.</li>
+<li><a href="cases/jahi-turner.html">Case #126 — Jahi Turner</a>: New case added to the archive: Jahi Turner (San Diego, California, 2002), a missing persons case, sourced from KPBS's coverage of both the 2016 arrest and the 2018 mistrial and dismissal, and ABC7 Los Angeles.</li>
+<li><a href="cases/nakyla-williams.html">Case #125 — Nakyla Williams</a>: New case added to the archive: Nakyla Williams (Indianapolis, Indiana, 2021), a missing persons case, sourced from NewsNation, WTHR, and NBC News.</li>
+<li><a href="cases/kierra-coles.html">Case #124 — Kierra Coles</a>: New case added to the archive: Kierra Coles (Chicago, Illinois, 2018), a missing persons case, sourced from CBS News Chicago, ABC News, and the Chicago Sun-Times.</li>
+<li><a href="cases/keeshae-jacobs.html">Case #123 — Keeshae Jacobs</a>: New case added to the archive: Keeshae Jacobs (Richmond, Virginia, 2016), a missing persons case, sourced from NBC News/Dateline, WWBT NBC12, and CBS News.</li>
+<li><a href="cases/asha-degree.html">Case #122 — Asha Degree</a>: New case added to the archive: Asha Degree (Shelby, North Carolina, 2000), a missing persons case, sourced from the FBI's official case appeal, ABC11 Raleigh-Durham, and CrimeOnline.</li>
+<li><a href="cases/relisha-rudd.html">Case #121 — Relisha Rudd</a>: New case added to the archive: Relisha Rudd (Washington, D.C., 2014), a missing persons case, sourced from the FBI's official case listing, the Metropolitan Police Department via Solve the Case, and WTOP News.</li>
+<li><a href="cases/manuel-ellis.html">Case #120 — Manuel Ellis</a>: New case added to the archive: Manuel Ellis (Tacoma, Washington, 2020), sourced from The Seattle Times, CNN, and NBC News's coverage of the officers' post-acquittal separation payments.</li>
+<li><a href="cases/daniel-prude.html">Case #119 — Daniel Prude</a>: New case added to the archive: Daniel Prude (Rochester, New York, 2020), sourced from the New York Attorney General's official statement, CNN, and CBS News.</li>
+<li><a href="cases/miriam-carey.html">Case #118 — Miriam Carey</a>: New case added to the archive: Miriam Carey (Washington, D.C., 2013), sourced from the DOJ/U.S. Attorney's Office's official statement, The Washington Post, and NPR.</li>
+<li><a href="cases/milton-hall.html">Case #117 — Milton Hall</a>: New case added to the archive: Milton Hall (Saginaw, Michigan, 2012), sourced from the ACLU of Michigan, the DOJ's own archived press release, and CNN's ongoing coverage.</li>
+<li><a href="cases/jonathan-ferrell.html">Case #116 — Jonathan Ferrell</a>: New case added to the archive: Jonathan Ferrell (Charlotte, North Carolina, 2013), sourced from NBC News's coverage of both the mistrial and the decision not to retry, and Slate.</li>
+<li><a href="cases/kenneth-chamberlain-sr.html">Case #115 — Kenneth Chamberlain Sr.</a>: New case added to the archive: Kenneth Chamberlain Sr. (White Plains, New York, 2011), sourced from the DOJ's own closing statement, Democracy Now!, and ABC7 New York's coverage of the 2023 settlement.</li>
+<li><a href="cases/danroy-henry-jr.html">Case #114 — Danroy Henry Jr.</a>: New case added to the archive: Danroy Henry Jr. (Thornwood, New York, 2010), sourced from ABC7 New York, CBS News, and a 2023 report on Westchester's independent re-review of the case.</li>
+<li><a href="cases/ezell-ford.html">Case #113 — Ezell Ford</a>: New case added to the archive: Ezell Ford (Los Angeles, California, 2014), sourced from CBS News, the LA County DA's own charging decision letter, and the ACLU of Southern California.</li>
+<li><a href="cases/keith-lamont-scott.html">Case #112 — Keith Lamont Scott</a>: New case added to the archive: Keith Lamont Scott (Charlotte, North Carolina, 2016), sourced from CNN, ABC News, and the NAACP Legal Defense Fund.</li>
+<li><a href="cases/samuel-dubose.html">Case #111 — Samuel DuBose</a>: New case added to the archive: Samuel DuBose (Cincinnati, Ohio, 2015), sourced from NPR, NBC News, and Essence's coverage of the two mistrials and eventual dismissal.</li>
+<li><a href="cases/terence-crutcher.html">Case #110 — Terence Crutcher</a>: New case added to the archive: Terence Crutcher (Tulsa, Oklahoma, 2016), sourced from CNN, NBC News, and the NAACP Legal Defense Fund's analysis of the acquittal.</li>
+<li><a href="cases/sandra-bland.html">Case #109 — Sandra Bland</a>: New case added to the archive: Sandra Bland (Prairie View, Texas, 2015), sourced from NBC News, The Texas Tribune, and Community Impact.</li>
+<li><a href="cases/john-crawford-iii.html">Case #108 — John Crawford III</a>: New case added to the archive: John Crawford III (Beavercreek, Ohio, 2014), sourced from NBC News, NPR, and Democracy Now!'s contemporaneous coverage.</li>
+<li><a href="cases/alton-sterling.html">Case #107 — Alton Sterling</a>: New case added to the archive: Alton Sterling (Baton Rouge, Louisiana, 2016), sourced from Al Jazeera, NBC News, and the NAACP Legal Defense Fund's statement on the DOJ's decision.</li>
+<li><a href="cases/michael-brown.html">Case #106 — Michael Brown</a>: New case added to the archive: Michael Brown (Ferguson, Missouri, 2014), sourced from PBS NewsHour, NBC News, and CBS News's coverage of all three declined-charges decisions.</li>
+<li><a href="cases/stephon-clark.html">Case #105 — Stephon Clark</a>: New case added to the archive: Stephon Clark (Sacramento, California, 2018), sourced from the California DOJ's own report, NPR, and NBC News.</li>
+<li><a href="cases/philando-castile.html">Case #104 — Philando Castile</a>: New case added to the archive: Philando Castile (Falcon Heights, Minnesota, 2016), sourced from CNN, NBC News, and MPR News's ongoing case coverage.</li>
+<li><a href="cases/tamir-rice.html">Case #103 — Tamir Rice</a>: New case added to the archive: Tamir Rice (Cleveland, Ohio, 2014), sourced from NPR's coverage of both the 2015 grand jury decision and the 2020 DOJ decision, and NBC News's reporting on Officer Loehmann's 2017 firing.</li>
+<li><a href="cases/eric-garner.html">Case #102 — Eric Garner</a>: New case added to the archive: Eric Garner (Staten Island, New York, 2014), sourced from NBC News, NBC New York, and NY1's coverage of the NYPD disciplinary trial.</li>
+<li><a href="cases/rekia-boyd.html">Case #101 — Rekia Boyd</a>: New case added to the archive: Rekia Boyd (Chicago, Illinois, 2012), sourced from WTTW News, the Chicago Sun-Times, and Fox News/AP coverage of the case.</li>
+<li><a href="cases/breonna-taylor.html">Case #100 — Breonna Taylor</a>: New case added to the archive: Breonna Taylor (Louisville, Kentucky, 2020), sourced from the DOJ's own press release on the Brett Hankison conviction, Al Jazeera, and PBS NewsHour/AP coverage.</li>
+<li><a href="cases/freddie-gray.html">Case #099 — Freddie Gray</a>: New case added to the archive: Freddie Gray (Baltimore, Maryland, 2015), sourced from the DOJ's archived statement declining federal prosecution, ABC News, and NPR.</li>
+<li><a href="cases/trayvon-martin.html">Case #098 — Trayvon Martin</a>: New case added to the archive: Trayvon Martin (Sanford, Florida, 2012), sourced from CNN, NPR, and Al Jazeera's trial coverage.</li>
+<li><a href="cases/sean-bell.html">Case #097 — Sean Bell</a>: New case added to the archive: Sean Bell (Queens, New York, 2006), sourced from NPR, ABC7 New York, and Democracy Now!'s coverage of the acquittal.</li>
+<li><a href="cases/amadou-diallo.html">Case #096 — Amadou Diallo</a>: New case added to the archive: Amadou Diallo (Bronx, New York, 1999), sourced from HISTORY, NY1, and EBSCO Research Starters.</li>
+<li><a href="cases/fred-hampton.html">Case #095 — Fred Hampton</a>: New case added to the archive: Fred Hampton (Chicago, Illinois, 1969), sourced from Encyclopaedia Britannica, HISTORY, and The Real News Network's interview with the family's civil rights attorney.</li>
+<li><a href="cases/malcolm-x.html">Case #094 — Malcolm X</a>: New case added to the archive: Malcolm X (New York, New York, 1965), sourced from NPR, the Innocence Project via WilmerHale, and NBC News coverage of the 2021 exonerations.</li>
+<li><a href="cases/emmett-till.html">Case #093 — Emmett Till</a>: New case added to the archive: Emmett Till (Money, Mississippi, 1955), sourced from the DOJ's 2021 closing statement, CNN's coverage of the 2022 grand jury decision, and Mississippi Free Press.</li>
+<li><a href="cases/kierre-davies.html">Case #092 — Kierre Davies</a>: New case added to the archive: Kierre Davies (Fargo, North Dakota, 2022), sourced from InForum and the City of Fargo's own press conference summary.</li>
+<li><a href="cases/julius-dubouse.html">Case #091 — Julius Dubouse</a>: New case added to the archive: Julius Dubouse (Anchorage, Alaska, 1998), sourced from Crime Solvers Central and the Anchorage Police Department's Cold Case Section page.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-26</h2><ul><li><a href="cases/quincy-booker.html">Case #090 — Quincy Booker</a>: New case added to the archive: Quincy Booker (Albuquerque, New Mexico, 2011), sourced from the Albuquerque Police Department via Project Cold Case and a 2011 KOAT report.</li>
+<li><a href="cases/nacomie-freeman.html">Case #089 — Nacomie Freeman</a>: New case added to the archive: Nacomie Freeman (Phoenix, Arizona, 2004), sourced from the Maricopa County Sheriff's Office via Project Cold Case and a 2004 Arizona Republic article.</li>
+<li><a href="cases/alexis-patterson.html">Case #088 — Alexis Patterson</a>: New case added to the archive: Alexis Patterson (Milwaukee, Wisconsin, 2002), sourced from the FBI's case listing, the Milwaukee Police Department via Solve the Case, and WUWM.</li>
+<li><a href="cases/frank-andrews.html">Case #087 — Frank Andrews</a>: New case added to the archive: Frank Andrews (Lisman, Alabama, 1964), sourced from the DOJ's Civil Rights Division closing memorandum, PBS Frontline's “Unresolved” project, and Alabama Reflector.</li>
+<li><a href="cases/isaiah-henry.html">Case #085 — Isaiah Henry</a>: New case added to the archive: Isaiah Henry (Greensburg, Louisiana, 1954), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/john-earl-reese.html">Case #086 — John Earl Reese</a>: New case added to the archive: John Earl Reese (Mayflower, Texas, 1955), sourced from the DOJ's Notice to Close File and The Dallas Morning News.</li>
+<li><a href="cases/james-earl-motley.html">Case #083 — James Earl Motley</a>: New case added to the archive: James Earl Motley (Wetumpka, Alabama, 1966), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's Notice to Close File.</li>
+<li><a href="cases/thad-christian.html">Case #084 — Thad Christian</a>: New case added to the archive: Thad Christian (Anniston, Alabama, 1965), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's Notice to Close File.</li>
+<li><a href="cases/maceo-snipes.html">Case #082 — Maceo Snipes</a>: New case added to the archive: Maceo Snipes (Butler, Georgia, 1946), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the Georgia Civil Rights Cold Cases Project at Emory University. This case directly connects to Isaiah Nixon's case, documented in this archive as case #030 — both men were killed for voting-related activity in the same Georgia region two years apart.</li>
+<li><a href="cases/isaiah-nixon.html">Case #030 — Isaiah Nixon</a>: Updated the case's unanswered questions to reference Maceo Snipes's case, newly added to this archive, which shares the same regional and thematic connection.</li>
+<li><a href="cases/herbert-lee.html">Case #079 — Herbert Lee</a>: New case added to the archive: Herbert Lee (Liberty, Mississippi, 1961), sourced from the DOJ's Notice to Close File. This case directly connects to Louis Allen's case, documented in this archive as case #018 — Allen witnessed Lee's killing, later recanted his corroborating testimony to the FBI, and was himself murdered in 1964.</li>
+<li><a href="cases/louis-allen.html">Case #018 — Louis Allen</a>: Updated the case's unanswered questions to reference Herbert Lee's case, newly added to this archive, which Allen witnessed and later gave conflicting testimony about.</li>
+<li><a href="cases/samuel-younge-jr.html">Case #080 — Samuel Younge Jr.</a>: New case added to the archive: Samuel Younge Jr. (Tuskegee, Alabama, 1966), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/isaiah-taylor.html">Case #081 — Isaiah Taylor</a>: New case added to the archive: Isaiah Taylor (Ruleville, Mississippi, 1964), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/jimmie-lee-jackson.html">Case #074 — Jimmie Lee Jackson</a>: New case added to the archive: Jimmie Lee Jackson (Marion, Alabama, 1965), sourced from the DOJ's Notice to Close File. This case produced the only conviction the Emmett Till Act's cold case review process has generated since 2008, and is directly referenced in this archive's Cold Case Quiz.</li>
+<li><a href="cases/thomas-brewer.html">Case #075 — Dr. Thomas Brewer</a>: New case added to the archive: Dr. Thomas Brewer (Columbus, Georgia, 1956), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/ernest-jells.html">Case #076 — Ernest Jells</a>: New case added to the archive: Ernest Jells (Clarksdale, Mississippi, 1963), sourced from the DOJ's 2010 Notice to Close File.</li>
+<li><a href="cases/benjamin-brown.html">Case #077 — Benjamin Brown</a>: New case added to the archive: Benjamin Brown (Jackson, Mississippi, 1967), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/larry-payne.html">Case #078 — Larry Payne</a>: New case added to the archive: Larry Payne (Memphis, Tennessee, 1968), sourced from the DOJ's Notice to Close File.</li>
+<li><a href="cases/joseph-dumas.html">Case #072 — Joseph Dumas</a>: New case added to the archive: Joseph Dumas (Perry, Florida, 1962), sourced from the DOJ's 2010 Notice to Close File.</li>
+<li><a href="cases/vincent-dahmon.html">Case #073 — Vincent Dahmon</a>: New case added to the archive: Vincent Dahmon (Natchez, Mississippi, 1966), sourced from the DOJ's 2010 Notice to Close File. His killing occurred during the period of James Meredith's 1966 March Against Fear.</li>
+<li><a href="cases/ed-smith.html">Case #070 — Ed Smith</a>: New case added to the archive: Ed Smith (State Line, Mississippi, 1958), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's 2009 Notice to Close File.</li>
+<li><a href="cases/lamar-smith.html">Case #071 — Lamar Smith</a>: New case added to the archive: Lamar Smith (Brookhaven, Mississippi, 1955), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the Equal Justice Initiative. His killing was cited in the NAACP's own 1955 pamphlet alongside the killings of Rev. George Lee and Emmett Till, both also documented in this archive.</li>
+<li><a href="cases/willie-countryman.html">Case #067 — Willie Countryman</a>: New case added to the archive: Willie Countryman (Dawson, Georgia, 1958), sourced from the Georgia Civil Rights Cold Cases Project at Emory University and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/donald-raspberry.html">Case #068 — Donald Raspberry</a>: New case added to the archive: Donald Raspberry (Okolona, Mississippi, 1965), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's 2010 Notice to Close File.</li>
+<li><a href="cases/william-henry-lee.html">Case #069 — William Henry Lee</a>: New case added to the archive: William Henry Lee (Goshen Springs, Mississippi, 1965), sourced from the DOJ's Civil Rights Division case file.</li>
+<li><a href="cases/charles-brown.html">Case #066 — Charles Brown</a>: New case added to the archive: Charles Brown (Benton, Mississippi, 1957), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's 2010 Notice to Close File.</li>
+<li><a href="cases/dan-carter-sanders.html">Case #065 — Dan Carter Sanders</a>: New case added to the archive: Dan Carter Sanders (Cleveland Township, North Carolina, 1946), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the DOJ's 2019 Notice to Close File.</li>
+<li><a href="cases/felix-hall.html">Case #064 — Felix Hall</a>: New case added to the archive: Felix Hall (Fort Benning, Georgia, 1941), sourced from The Washington Post's 2016 investigation and the U.S. Army's 2021 memorial plaque text. This remains the only known lynching to have occurred on a U.S. military base.</li>
+<li><a href="cases/leonard-mccowin.html">Case #063 — Leonard McCowin</a>: New case added to the archive: Leonard McCowin (Center, Texas, 1947), sourced from the Civil Rights Cold Case Records Review Board's official federal case file and Capital B News's 2025 investigative reporting.</li>
+<li><a href="cases/thomas-coleman.html">Case #062 — Thomas Coleman</a>: New case added to the archive: Thomas Coleman (Salt Lake City, Utah, 1866), sourced from the University of Utah's “Racial Lynching in Utah” and “Century of Black Mormons” exhibits. This case is directly connected to William “Sam Joe” Harvey's case, documented in this archive as case #061 — both men were killed in Salt Lake City, 17 years apart, and were jointly memorialized in a 2022 ceremony.</li>
+<li><a href="cases/william-harvey.html">Case #061 — William “Sam Joe” Harvey</a>: New case added to the archive: William “Sam Joe” Harvey (Salt Lake City, Utah, 1883), sourced from the University of Utah's Marriott Library exhibit on racial lynching in Utah and the Utah State Historical Society. This is the first Utah case documented in the archive.</li>
+<li><a href="cases/timothy-pettis.html">Case #060 — Timothy Pettis</a>: New case added to the archive: Timothy Pettis (Coos Bay, Oregon, 1924), sourced from Oregon Historical Quarterly and OPB's “Oregon Experience” documentary. This case directly connects to Alonzo Tucker's case, documented in this archive as case #059 — both men were killed in the same Coos Bay waters, twenty-two years apart.</li>
+<li><a href="cases/alonzo-tucker.html">Case #059 — Alonzo Tucker</a>: New case added to the archive: Alonzo Tucker (Coos Bay, Oregon, 1902), sourced from the Equal Justice Initiative's historical marker and the Oregon Remembrance Project. This is the first Oregon case documented in the archive, and remains the only documented lynching of a Black person in the state's history.</li>
+<li><a href="cases/clinton-melton.html">Case #058 — Clinton Melton</a>: New case added to the archive: Clinton Melton (Glendora, Mississippi, 1955), sourced from the DOJ's Civil Rights Division case file and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/carol-jenkins.html">Case #056 — Carol Jenkins</a>: New case added to the archive: Carol Jenkins (Martinsville, Indiana, 1968), sourced from PBS FRONTLINE's “Un(re)solved” case summary and the African American Registry.</li>
+<li><a href="cases/john-wesley-wilder.html">Case #057 — John Wesley Wilder</a>: New case added to the archive: John Wesley Wilder (Ruston, Louisiana, 1965), sourced from the DOJ's 2011 Notice to Close File and Type Investigations' 2023 investigative report.</li>
+<li><a href="cases/darrion-carrington.html">Case #055 — Darrion “Pritz” Carrington</a>: New case added to the archive: Darrion “Pritz” Carrington (Boston, Massachusetts, 2008), sourced from the Boston Police Department's official unsolved homicides list and Boston 25 News. This is the first Massachusetts case documented in the archive.</li>
+<li><a href="cases/jeffery-zolliecoffer.html">Case #054 — Jeffery “Jo Jo” Zolliecoffer</a>: New case added to the archive: Jeffery “Jo Jo” Zolliecoffer (Waterloo, Iowa, 1989), sourced from Iowa Cold Cases, the Iowa Attorney General's cold case files, and a contemporaneous news photograph from the 2015 “Gone Cold: Exploring Iowa's Unsolved Murders” statewide newspaper project.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-25</h2><ul><li><a href="cases/samuel-johnson.html">Case #053 — Samuel Johnson (“Mingo Jack”)</a>: New case added to the archive: Samuel Johnson, known as “Mingo Jack” (Eatontown, New Jersey, 1886), sourced from research by local historian Gary Saretzky, published by the New Jersey Social Justice Remembrance Committee. This is the first New Jersey case documented in the archive.</li>
+<li><a href="cases/george-white.html">Case #051 — George White</a>: New case added to the archive: George White (Wilmington, Delaware, 1903), sourced from the Delaware Public Archives' official historical marker and the Equal Justice Initiative. This is the first Delaware case documented in the archive, and is generally regarded as the only documented lynching in the state's history.</li>
+<li><a href="cases/preston-porter-jr.html">Case #052 — Preston Porter Jr.</a>: New case added to the archive: Preston Porter Jr. (Limon, Colorado, 1900), sourced from History Colorado and the Colorado Encyclopedia. This is the first Colorado case documented in the archive.</li>
+<li><a href="cases/james-t-scott.html">Case #049 — James T. Scott</a>: New case added to the archive: James T. Scott (Columbia, Missouri, 1923), sourced from the State Historical Society of Missouri. This is the first Missouri case documented in the archive.</li>
+<li><a href="cases/george-tompkins.html">Case #050 — George Tompkins</a>: New case added to the archive: George Tompkins (Indianapolis, Indiana, 1922), sourced from CNN and Wikipedia. This is the first Indiana case documented in the archive; his death certificate was formally corrected from suicide to homicide in 2022.</li>
+<li><a href="cases/tulsa-race-massacre.html">Case #047 — Tulsa Race Massacre</a>: New case added to the archive: Tulsa Race Massacre (Tulsa, Oklahoma, 1921), sourced from the DOJ Civil Rights Division's January 2025 review and evaluation, released under the Emmett Till Unsolved Civil Rights Crime Act. This is the first Oklahoma case documented in the archive, and represents an estimated 75 to 300 victims rather than a single named individual.</li>
+<li><a href="cases/john-henry-james.html">Case #048 — John Henry James</a>: New case added to the archive: John Henry James (Charlottesville, Virginia, 1898), sourced from Encyclopedia Virginia. This is the first Virginia case documented in the archive.</li>
+<li><a href="cases/duluth-lynchings.html">Case #045 — Elias Clayton, Elmer Jackson &amp; Isaac McGhie</a>: New case added to the archive: Elias Clayton, Elmer Jackson & Isaac McGhie (Duluth, Minnesota, 1920), sourced from the Minnesota Historical Society and Smithsonian Magazine. This is the first Minnesota case documented in the archive.</li>
+<li><a href="cases/wade-hampton.html">Case #046 — Wade Hampton</a>: New case added to the archive: Wade Hampton (Rock Springs, Wyoming, 1917), sourced from WyoHistory.org's account drawn from the original coroner's inquest transcript. This is the first Wyoming case documented in the archive.</li>
+<li><a href="cases/whitfield-and-whitney.html">Case #043 — Ed Whitfield &amp; Earl Whitney</a>: New case added to the archive: Ed Whitfield & Earl Whitney (Chapmanville, West Virginia, 1919), sourced from the West Virginia Encyclopedia and The Clio. This is the first West Virginia case documented in the archive.</li>
+<li><a href="cases/will-brown.html">Case #044 — Will Brown</a>: New case added to the archive: Will Brown (Omaha, Nebraska, 1919), sourced from History Nebraska (the state historical society) and PBS's American Experience. This is the first Nebraska case documented in the archive.</li>
+<li><a href="cases/lester-mitchell.html">Case #041 — Lester Mitchell</a>: New case added to the archive: Lester Mitchell (Dayton, Ohio, 1966), sourced from the Dayton Daily News and BlackPast.org. This is the first Ohio case documented in the archive.</li>
+<li><a href="cases/timothy-thomas.html">Case #042 — Timothy Thomas</a>: New case added to the archive: Timothy Thomas (Cincinnati, Ohio, 2001), sourced from The Washington Post and the IAED Journal's case retrospective.</li>
+<li><a href="cases/matthew-williams.html">Case #039 — Matthew Williams</a>: New case added to the archive: Matthew Williams (Salisbury, Maryland, 1931), sourced from the Maryland State Archives and the International Center for Transitional Justice. This is the first Maryland case documented in the archive.</li>
+<li><a href="cases/carl-hampton.html">Case #040 — Carl Hampton</a>: New case added to the archive: Carl Hampton (Houston, Texas, 1970), sourced from the Houston Chronicle and Liberation News.</li>
+<li><a href="cases/james-powell.html">Case #037 — James Powell</a>: New case added to the archive: James Powell (Manhattan, New York, 1964), sourced from extensive contemporaneous and historical reporting on the Harlem riot of 1964. This is the first New York case documented in the archive.</li>
+<li><a href="cases/rogers-hamilton.html">Case #038 — Rogers Hamilton</a>: New case added to the archive: Rogers Hamilton (Hayneville, Alabama, 1957), sourced from the DOJ's 2016 Notice to Close File and Alabama Reporter's 2025 investigative follow-up.</li>
+<li><a href="cases/eddie-cook.html">Case #035 — Eddie Cook</a>: New case added to the archive: Eddie Cook (Detroit, Michigan, 1965), sourced from the DOJ's 2020 Notice to Close File and PBS FRONTLINE's “Un(re)solved” case summary. This is the first Michigan case documented in the archive.</li>
+<li><a href="cases/lee-edward-culbreath.html">Case #036 — Lee Edward Culbreath</a>: New case added to the archive: Lee Edward Culbreath (Portland, Arkansas, 1965), sourced from the DOJ's 2019 Notice to Close File and the Encyclopedia of Arkansas.</li>
+<li><a href="cases/elbert-williams.html">Case #034 — Elbert Williams</a>: New case added to the archive: Elbert Williams (Brownsville, Tennessee, 1940), sourced from the DOJ's Civil Rights Division case file and BlackPast.org. This is the first Tennessee case documented in the archive, and the earliest case tied to formal NAACP civil rights organizing.</li>
+<li><a href="cases/henry-marrow.html">Case #032 — Henry &quot;Dickie&quot; Marrow Jr.</a>: New case added to the archive: Henry “Dickie” Marrow Jr. (Oxford, North Carolina, 1970), sourced from the DOJ's Civil Rights Division case file and the North Carolina Department of Natural and Cultural Resources. This is the first North Carolina case documented in the archive.</li>
+<li><a href="cases/donna-ann-reason.html">Case #033 — Donna Ann Reason</a>: New case added to the archive: Donna Ann Reason (Chester, Pennsylvania, 1970), sourced from the DOJ's February 2025 Notice to Close File and PBS FRONTLINE's “Un(re)solved” case summary. This is the first Pennsylvania case documented in the archive.</li>
+<li><a href="cases/isaiah-nixon.html">Case #030 — Isaiah Nixon</a>: New case added to the archive: Isaiah Nixon (Alston, Georgia, 1948), sourced from the Georgia Civil Rights Cold Cases Project at Emory University and the federal Civil Rights Cold Case Records Review Board. This is the first Georgia case documented in the archive.</li>
+<li><a href="cases/orangeburg-massacre.html">Case #031 — Samuel Hammond, Henry Smith &amp; Delano Middleton</a>: New case added to the archive: Samuel Hammond, Henry Smith & Delano Middleton (Orangeburg, South Carolina, 1968), sourced from BlackPast.org and the Lowcountry Digital History Initiative. This is the first South Carolina case documented in the archive.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-24</h2><ul><li><a href="cases/frank-morris.html">Case #015 — Frank Morris</a>: Expanded the case summary with detail from the DOJ's Notice to Close File: the file names four Silver Dollar Group members — E.D. Morace, Tommie Lee Jones, Thor Lee Torgersen, and James Lee Scarborough — identified by FBI informants, and links this case to the same Klan cell as Wharlest Jackson Sr. and Joseph Edwards. Previously this connection was not named.</li>
+<li><a href="cases/john-allen.html">Case #028 — John Allen</a>: New case added to the archive: John Allen (Des Moines, Iowa, 1864), sourced from Iowa Unsolved Murders: Historic Cases, drawing on contemporary newspaper accounts and an 1898 county history. This is the first Iowa case documented in the archive.</li>
+<li><a href="cases/nicholas-a-brown.html">Case #029 — Nicholas A. Brown</a>: New case added to the archive: Nicholas A. Brown (Davenport, Iowa, 2021), sourced from the Iowa Attorney General's office and the Quad-City Times.</li>
+<li><a href="cases/brandon-mcclelland.html">Case #027 — Brandon McClelland</a>: New case added to the archive: Brandon McClelland (Paris, Texas, 2008), sourced from contemporaneous news reporting and court records. This is currently the most recent case documented in the archive after Alonzo Brooks (2004), filling a gap in the archive's 1970s–2000s coverage.</li>
+<li><a href="cases/claude-neal.html">Case #026 — Claude Neal</a>: New case added to the archive: Claude Neal (Greenwood, Florida, 1934), sourced from the DOJ's Civil Rights Division case file and Explore Southern History. This is currently the earliest case documented in the archive.</li>
+<li><a href="cases/samuel-oquinn.html">Case #025 — Samuel O&#x27;Quinn</a>: New case added to the archive: Samuel O'Quinn (Centreville, Mississippi, 1959), sourced from the DOJ's 2012 Notice to Close File and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/willie-edwards-jr.html">Case #021 — Willie Edwards Jr.</a>: New case added to the archive: Willie Edwards Jr. (Montgomery, Alabama, 1957), sourced from the DOJ's Civil Rights Division case file and its 2013 Notice to Close File.</li>
+<li><a href="cases/isadore-banks.html">Case #022 — Isadore Banks</a>: New case added to the archive: Isadore Banks (Marion, Arkansas, 1954), sourced from the DOJ's Civil Rights Division case file and the Encyclopedia of Arkansas.</li>
+<li><a href="cases/mack-charles-parker.html">Case #023 — Mack Charles Parker</a>: New case added to the archive: Mack Charles Parker (Poplarville, Mississippi, 1959), sourced from PBS FRONTLINE's “Un(re)solved” case summary and Mississippi Today.</li>
+<li><a href="cases/joseph-edwards.html">Case #024 — Joseph Edwards</a>: New case added to the archive: Joseph Edwards (Vidalia, Louisiana, 1964), sourced from the DOJ's Civil Rights Division case file and its 2013 Notice to Close File.</li>
+<li><a href="cases/louis-allen.html">Case #018 — Louis Allen</a>: New case added to the archive: Louis Allen (Liberty, Mississippi, 1964), sourced from the DOJ's Civil Rights Division case file and its 2015 Notice to Close File.</li>
+<li><a href="cases/oneal-moore.html">Case #019 — Oneal Moore</a>: New case added to the archive: Oneal Moore (Varnado, Louisiana, 1965), sourced from the DOJ's Civil Rights Division case file and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/clifton-walker.html">Case #020 — Clifton Walker</a>: New case added to the archive: Clifton Walker (Woodville, Mississippi, 1964), sourced from the DOJ's Civil Rights Division case file and its 2013 Notice to Close File.</li>
+<li><a href="cases/johnnie-mae-chappell.html">Case #017 — Johnnie Mae Chappell</a>: New case added to the archive: Johnnie Mae Chappell (Jacksonville, Florida, 1964), sourced from the DOJ's 2014 Notice to Close File and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/wharlest-jackson-sr.html">Case #014 — Wharlest Jackson Sr.</a>: New case added to the archive: Wharlest Jackson Sr. (Natchez, Mississippi, 1967), sourced from the DOJ's Civil Rights Division case file and PBS FRONTLINE's “American Reckoning.”</li>
+<li><a href="cases/frank-morris.html">Case #015 — Frank Morris</a>: New case added to the archive: Frank Morris (Ferriday, Louisiana, 1964), sourced from the DOJ's Civil Rights Division case file and PBS FRONTLINE's “Un(re)solved” case summary.</li>
+<li><a href="cases/george-lee.html">Case #016 — Rev. George Lee</a>: New case added to the archive: Rev. George Lee (Belzoni, Mississippi, 1955), sourced from the DOJ's Civil Rights Division case file and the Southern Poverty Law Center's case summary.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-22</h2><ul><li><a href="cases/harry-and-harriette-moore.html">Case #007 — Harry T. Moore &amp; Harriette Moore</a>: Added a verified, public-domain photograph of Harry T. Moore, sourced directly from the State Archives of Florida (Florida Memory). No verified photograph of Harriette Moore alone has been located yet.</li></ul><h2 style="font-size:1.05rem; font-family:var(--mono); letter-spacing:.04em; border-top:1px solid var(--border); margin-top:2em; padding-top:.6em;">2026-08-21</h2><ul><li>Five cases from the archive's original launch batch — Carol Denise Spinks, Diane Denise Williams, Nenomoshia Yates, Edwin Pratt, and Roman Ducksworth Jr. — were added to the site at launch but were not individually logged here at the time. Logged now, at their original launch date, for the sake of this page's own record.</li>
+<li><a href="cases/darlenia-denise-johnson.html">Case #002 — Darlenia Denise Johnson</a>: Corrected the location of her summer job, previously conflated with her home neighborhood. She lived in Congress Heights; she was on her way to work at the Oxon Hill Recreation Center, a separate location, when she was abducted.</li>
+<li><a href="cases/brenda-faye-crockett.html">Case #003 — Brenda Faye Crockett</a>: Added her exact disappearance date, July 27, 1971, previously recorded only as “July 1971.”</li>
+<li><a href="cases/brenda-denise-woodard.html">Case #005 — Brenda Denise Woodard</a>: Added her exact abduction date and circumstances — the night of November 15, 1971, after leaving night school — which were not previously on record.</li>
+<li><a href="cases/harry-and-harriette-moore.html">Case #007 — Harry T. Moore &amp; Harriette Moore</a>: Added that the FBI reviewed the case again in 2008 under the Emmett Till Unsolved Civil Rights Crime Act, and that the DOJ formally closed the file in 2011.</li>
+<li><a href="cases/hattie-debardelaben.html">Case #009 — Hattie DeBardelaben</a>: Added the names of the three federal officers present at the search, previously described only generically as “three federal officers.” Also added that an undertaker reportedly found signs consistent with a broken neck, contradicting the officially recorded cause of death (heart attack).</li>
+<li><a href="cases/alberta-jones.html">Case #011 — Alberta Jones</a>: Corrected case status. This file previously stated the DOJ's cold-case review “remains open”; the DOJ in fact formally closed the file in August 2023 without identifying a suspect. Updated the summary accordingly.</li>
+<li><a href="cases/alonzo-brooks.html">Case #012 — Alonzo Brooks</a>: Corrected status from Cold Case to Unsolved to reflect the active federal hate-crime investigation. Added the exact body-recovery date, May 1, 2004, previously recorded only as “about a month later.” Added a verified FBI photograph.</li>
+<li><a href="cases/diamond-and-tionda-bradley.html">Case #013 — Diamond and Tionda Bradley</a>: Added verified FBI photographs of both sisters, and the FBI's specific published reward amount ($10,000), previously described only as “a reward.”</li></ul>
+  </div>
+  
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>UBCA</h4>
+      <p style="font-size:.85rem; color:var(--text-dim); max-width:34ch;">A public-record research archive documenting unsolved cases involving Black victims.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Archive</h4>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="cases/index.html">Case Index</a></li>
+        <li><a href="cases/freeway-phantom.html">Freeway Phantom Series</a></li><li><a href="cases/silver-dollar-group.html">Silver Dollar Group Series</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="saved.html">Researcher's Dashboard</a></li>
+        <li><a href="records-request.html">Public Records Request Generator</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="compare.html">Compare Cases</a></li>
+        <li><a href="data.html">Data & Downloads</a></li>
+        <li><a href="statistics.html">Archive Statistics</a></li>
+        <li><a href="quiz.html">Cold Case Quiz</a></li>
+        <li><a href="research.html">How We Research</a></li>
+        <li><a href="updates.html">Corrections & Updates</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="submit.html">Submit a Tip</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+        <a class="btn-support small btn-cashapp" href="https://cash.app/$ColdWorldPTS" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 8.2c-.7-.7-1.8-1.1-3-1.1-2 0-3.3 1-3.3 2.4 0 1.3 1 1.9 2.6 2.3l1 .2c1.9.4 3.2 1.2 3.2 2.8 0 1.8-1.6 3-4 3-1.5 0-2.8-.5-3.6-1.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 5.6v1.4M12 17v1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Donate with Cash App</span></a><a class="btn-support small btn-youtube" href="https://youtube.com/@coldworldtone?si=KnIWozFL52ocj-TD" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.3v5.4l4.8-2.7-4.8-2.7Z" fill="currentColor"/></svg><span>Subscribe on YouTube</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; UNSOLVED BLACK CASES ARCHIVE. Public-record research archive.</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="disclaimer.html">Disclaimer</a></span>
+    <span id="site-visit-counter" style="color:var(--text-dim); font-size:.8rem;">Site visits: <span id="site-visit-count">…</span></span>
+    <span id="site-visit-today-counter" style="color:var(--text-dim); font-size:.8rem;">Today: <span id="site-visit-today-count">…</span></span>
+    <span id="site-live-counter" style="color:var(--text-dim); font-size:.8rem;" title="An estimate, not an exact real-time count &mdash; based on page loads in the last few minutes">● <span id="site-live-count">…</span> active now</span>
+  </div>
+</footer>
+
+<nav class="bottom-nav" aria-label="Primary mobile navigation">
+  <a class="bn-item" href="index.html" data-bn-path="index.html">
+    <span class="bn-icon" aria-hidden="true">⌂</span><span>Home</span>
+  </a>
+  <a class="bn-item" href="cases/index.html" data-bn-path="cases/index.html">
+    <span class="bn-icon" aria-hidden="true">☷</span><span>Cases</span>
+  </a>
+  <button type="button" class="bn-item bn-search" data-search-open>
+    <span class="bn-icon" aria-hidden="true">⚲</span><span>Search</span>
+  </button>
+  <a class="bn-item" href="saved.html" data-bn-path="saved.html">
+    <span class="bn-icon" aria-hidden="true">★</span><span>Research</span>
+  </a>
+  <a class="bn-item" href="quiz.html" data-bn-path="quiz.html">
+    <span class="bn-icon" aria-hidden="true">?</span><span>Quiz</span>
+  </a>
+</nav>
+<script src="js/cases-data.js"></script>
+<script src="js/connections-data.js"></script>
+<script src="js/corrections-data.js"></script>
+<script src="js/us-states-paths.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/saved-cases.js"></script>
+<script src="js/records-request.js"></script>
+<script src="js/compare-cases.js"></script>
+<script src="js/research-checklist.js"></script>
+<script src="js/case-map.js"></script>
+<script src="js/research-packet.js"></script>
+<script src="js/share-case.js"></script>
+<script src="js/submit-form.js"></script>
+</body>
+</html>
